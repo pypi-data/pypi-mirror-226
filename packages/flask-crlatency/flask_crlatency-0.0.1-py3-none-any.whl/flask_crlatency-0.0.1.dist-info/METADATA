@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: flask-crlatency
+Version: 0.0.1
+Summary: A flask extension to log route latency 
+Home-page: https://github.com/Agent-Hellboy/flask-crlatency
+Author: Prince Roshan
+Author-email: princekrroshan01@gmail.com
+License: MIT
+Keywords: flask-extension,log-route-latency
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+
+flask-crlatency (flask-check-route-latency)
+===========================================
+
+A flask extension to log route latency
+
+Example
+-------
+
+.. code:: py 
+
+    app = Flask(__name__) 
+    app.config["SECRET_KEY"] ="your_secret_key" 
+    app.config["DEBUG"] = True
+    
+    latency_logger = RouteLatencyLogger(app)
+    
+    @app.route("/") 
+    def index(): return "Hello, World!"
+
+    if __name__ == "__main__": 
+        app.run()
+
+    response:
+    
+    [2023-08-10 21:52:54,341] INFO in **init**: Latency for route index:
+    0.000188 seconds 127.0.0.1 - - [10/Aug/2023 21:52:54] “GET / HTTP/1.1”
+    200 -
