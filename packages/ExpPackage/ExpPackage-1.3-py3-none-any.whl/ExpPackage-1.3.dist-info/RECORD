@@ -1,0 +1,8 @@
+SamplePackage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SamplePackage/anotherModule.py,sha256=lsqY0p2OI2Jl-_IGPiGfuxh8iZBhbWuDtkIyf6fST64,93
+SamplePackage/someModule.py,sha256=XJkpJs4Z3bBPjRTuW3ACJ8B8H_VgwRnjz36US7gUdDk,397
+ExpPackage-1.3.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ExpPackage-1.3.dist-info/METADATA,sha256=BeMVsK3YyhLvRagt28SCVi-_N2BJx1gm17q7YwAtFkY,97
+ExpPackage-1.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+ExpPackage-1.3.dist-info/top_level.txt,sha256=5G-NdEYGqJWcsjILROMOcBSezINotUnyEVrrjFJ5LgA,14
+ExpPackage-1.3.dist-info/RECORD,,
