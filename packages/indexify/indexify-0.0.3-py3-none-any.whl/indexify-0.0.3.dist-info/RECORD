@@ -1,0 +1,13 @@
+indexify/__init__.py,sha256=bqinywn8AgiujXVYQiS7_5HXUYPzaJW-MpkzQAc6z3k,482
+indexify/client.py,sha256=o8e9vElIfeAqTzoqQ9pXZiaXudKQR4LfRlN1DdFwnT0,1081
+indexify/data_containers.py,sha256=db5qJRN7Wm3yLzxhovxrr71Cx-yNHTOzi05xO8kjvkU,887
+indexify/extractor.py,sha256=dM8cCQpv9lAxUUSM9NyAaobU3bP1tS8Vw-WzUMlUhWM,725
+indexify/index.py,sha256=GIgmgfQPZhAAfPH2uUfbi57PiOEBLisgz3Fx-Umt-Rg,1002
+indexify/memory.py,sha256=FlV73TM4egAfniPeW7XqqEFo6ybV-nAElgU0PuuHt68,1965
+indexify/repository.py,sha256=0N2cMELrkhgWHHQ5Ahlk0N4Gp_zKd25Vbzo_z2JP-8w,6070
+indexify/settings.py,sha256=yzWAEZkrTjykSMj3hrFU7l_jUoUCOUsgPVW1nU-qzJQ,46
+indexify/utils.py,sha256=HBnm2a7F3ML3BcfverDe8lwkZs4xihjN0wDXr3GTt-c,881
+indexify-0.0.3.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+indexify-0.0.3.dist-info/METADATA,sha256=6kv-vvTqZeBvXYxH-L1fOB1tlky5u3JdALJLbR6aOMI,1350
+indexify-0.0.3.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+indexify-0.0.3.dist-info/RECORD,,
