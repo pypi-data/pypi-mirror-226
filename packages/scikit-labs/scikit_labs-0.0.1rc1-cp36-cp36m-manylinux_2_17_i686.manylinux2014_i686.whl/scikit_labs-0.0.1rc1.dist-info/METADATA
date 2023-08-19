@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: scikit-labs
+Version: 0.0.1rc1
+Summary: LABS: Linear-time Adaptive Best-subset Selection
+Home-page: UNKNOWN
+Author: Junxian Zhu, Jin Zhu, Junhao Huang, Heping Zhang, Xueqin Wang
+License: GPL-3
+Download-URL: https://pypi.python.org/pypi/scikit-labs
+Project-URL: Bug Tracker, https://github.com/abess-team/scikit-labs/issues
+Project-URL: Source Code, https://github.com/abess-team/scikit-labs
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn (>=0.24)
+
+# `scikit-labs`: Linear-time Adaptive Best-subset Selection
+
+![pypi](https://img.shields.io/pypi/v/scikit-labs?logo=Pypi)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/scikit-labs?logo=python)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/scikit-labs)
+![GitHub Issues](https://img.shields.io/github/issues/abess-team/scikit-labs)
+![GitHub License](https://img.shields.io/github/license/abess-team/scikit-labs)
+
+## Overview
+
+Best-subset selection plays a vital role in regression analysis, aiming to identify a parsimonious subset of variables that maximizes prediction accuracy within the resulting linear model. This process is important in various scientific fields, including physics, biology, and medicine, where extensive datasets are routinely generated. Nevertheless, the computational complexity of selecting the best subset from massive datasets presents a formidable challenge, given the problem's well-known NP-hard nature.
+
+To address this challenge, we introduce a new tuning-free iterative algorithm `scikit-labs` that capitalizes on a novel subset splicing procedure. Remarkably, under mild conditions, our algorithm demonstrates provable identification of the best subset while maintaining a linear time complexity, achieving optimality in computation and statistics simultaneously. The power of `scikit-labs` is numerically certified by extensive test cases.
+
+## Quick Start
+
+### Installation
+
+Install the stable `scikit-labs` Python package from Pypi:
+
+```bash
+pip install scikit-labs
+```
+
+And then the package can be imported as:
+
+```python
+import sklabs
+```
+
+### Example
+
+Best subset selection for linear regression on a simulated dataset in Python:
+
+```python
+from sklabs.datasets import make_glm_data
+from sklabs.linear import LinearRegression
+sim_dat = make_glm_data(n = 350, p = 500, k = 6, family = "gaussian")
+model = LinearRegression()
+model.fit(sim_dat.x, sim_dat.y)
+```
+
+## Open source software
+
+`scikit-labs` is a free software and its source code are publicly available in Github. The core framework is programmed in C++, and user-friendly Python interfaces are offered. You can redistribute it and/or modify it under the terms of the GPL-v3 License. We welcome contributions for `scikit-labs`, especially stretching `scikit-labs` to the other best subset selection problems.
+
+## Citation
+
+## References
+
+
