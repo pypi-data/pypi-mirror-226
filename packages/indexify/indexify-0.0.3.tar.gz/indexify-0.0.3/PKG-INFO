@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: indexify
+Version: 0.0.3
+Summary: Python Client for Indexify
+Home-page: https://github.com/diptanu/indexify
+License: Apache 2.0
+Author: Diptanu Gon Choudhury
+Author-email: diptanuc@gmail.com
+Requires-Python: >=3.10.0,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.4,<4.0)
+Project-URL: Repository, https://github.com/diptanu/indexify
+Description-Content-Type: text/markdown
+
+# Indexify Python Client
+
+## Installation
+
+This is the Python client for interacting with the Indexify service.
+
+To install it, simply run:
+
+```shell
+pip install indexify
+```
+
+## Usage
+
+See the [getting started](https://getindexify.com/getting_started/) guide for examples of how to use the client.
+
+## Development
+
+For first time setup, follow the steps [here](https://getindexify.com/develop/).
+
+### Steps for restarting dev server after updating server code
+
+```shell
+./install_python_deps.sh
+# use `-e`` if you're developing extractors
+(cd extractors && pip install -e .)
+# use `-e`` if you're developing sdk-py
+(cd sdk-py && pip install -e .)
+
+cargo build
+make local-dev
+
+# start the server
+./target/debug/indexify start-server -d -c local_config.yaml
+```
+
