@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+./README.md
+MarchingCubes.egg-info/PKG-INFO
+MarchingCubes.egg-info/SOURCES.txt
+MarchingCubes.egg-info/dependency_links.txt
+MarchingCubes.egg-info/top_level.txt
+marchingcubes/__init__.py
+marchingcubes/constants.py
+marchingcubes/shape.py
+marchingcubes.egg-info/PKG-INFO
+marchingcubes.egg-info/SOURCES.txt
+marchingcubes.egg-info/dependency_links.txt
+marchingcubes.egg-info/top_level.txt
