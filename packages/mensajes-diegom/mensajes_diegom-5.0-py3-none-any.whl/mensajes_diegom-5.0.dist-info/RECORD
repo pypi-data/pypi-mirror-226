@@ -1,0 +1,12 @@
+Mensajes/__init__.py,sha256=-8H5W0Sre1mNWvNSdpdOYRdi5LSaVou3nOvKVscdAa8,37
+Mensajes/adios/__init__.py,sha256=Vx5y-gnL_hUYdZJIb8pQLt6byGFyO6KjJms4xK9QLOQ,46
+Mensajes/adios/despedidas.py,sha256=-R-JWPE3ZlwNy_wQvzMVzzILHizJhchECbu_I7MZr4g,183
+Mensajes/hola/__init__.py,sha256=3XQIgStjjAkG5Gcap8VHMbJADF5ElVCicEE73WIHsr8,45
+Mensajes/hola/saludos.py,sha256=LQREJq2qMriNGax1pv2QyPhMiZHOSXMDSjBlobGwfhU,549
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_hola.py,sha256=ouDOSHWSGIhQKma_k4Ov7ZJXerxF0v_dRQTmibGEQWM,525
+mensajes_diegom-5.0.dist-info/LICENSE,sha256=zrIsSU9UKeLZH4IcY-ns2k3TCFZpxB-RmYT6vasZvAI,1095
+mensajes_diegom-5.0.dist-info/METADATA,sha256=GHk5zEShtHqiVCFvStTk5e2-oKPWsKYdVXq-hCbK8M4,739
+mensajes_diegom-5.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+mensajes_diegom-5.0.dist-info/top_level.txt,sha256=L2XZfSNTbJMxH5QCs9HCgaQEvHh44N4rYDkCNjVJRzg,15
+mensajes_diegom-5.0.dist-info/RECORD,,
