@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: papermc-updater
+Version: 0.1.0
+Summary: A command-line tool to update PaperMC server .jar file (in-place)
+Author-email: Travis Kessler <travis.j.kessler@gmail.com>
+Project-URL: Homepage, https://github.com/tjkessler/papermc-updater
+Project-URL: Bug Tracker, https://github.com/tjkessler/papermc-updater/issues
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# papermc-updater
+A command-line tool to update PaperMC server .jar file (in-place)
