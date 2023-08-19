@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: omron
+Version: 0.1.1
+Summary: A library to communicate with Omron devices
+Home-page: https://aphyt.com
+Author: Joseph Ryan
+Author-email: jr@aphyt.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Stay Tuned
+
+We will have some libraries shortly
