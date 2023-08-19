@@ -1,0 +1,10 @@
+stack_composed/__init__.py,sha256=GnnoS2E89zwD6Hr9MO67esduuTBA5cGVvhdlhjGmo6c,538
+stack_composed/image.py,sha256=JJpQErN3loNZl589fxxERbWAvlMEsX8FUhC-ygJh7Vo,5649
+stack_composed/parse.py,sha256=3MDhPnk3_LN470p-uosgOHzMsmL57RBCSO4UCo8wnWk,3277
+stack_composed/stack_composed.py,sha256=aJLrRMy0DF-EjbD0SPTXop2GMGjqVq0w9KZramkFrKQ,13870
+stack_composed/stats.py,sha256=o_61gtMeloPVheqmLbH0Ua3BngfK0bENNEs6HRBVAck,10889
+stack_composed-23.8.data/scripts/stack-composed,sha256=weZya7MWUse-q1W9vsTiiHEjjVrfriIPh0ejPBJVUkU,3225
+stack_composed-23.8.dist-info/METADATA,sha256=IDD5TWjsP5YB_nnxXI-lR95vsVTJMu-74T5CyTqMCJU,2487
+stack_composed-23.8.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+stack_composed-23.8.dist-info/top_level.txt,sha256=dRdn-Nt_6XItQPd6sA4LKHdBjtu3ahws_xLOg0Fjkd0,15
+stack_composed-23.8.dist-info/RECORD,,
