@@ -1,0 +1,9 @@
+sts_select/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sts_select/gensim.py,sha256=K2ch0kB4QDV94fI5NXH899CSzkwrSNuEYi8WfDPmqCI,2396
+sts_select/mrmr.py,sha256=wV48JIYgXbp-7KXd_NWni-pJwtrbOCl7--sYsJ8Wp1M,3967
+sts_select/scoring.py,sha256=lMW49JYclsJQte4NoYBImMRnQnLrdild87Rf0wPpY7U,10283
+sts_select/target_sel.py,sha256=Quh1HWmWM4sajcqgmKSFXuZXce_TDli3MdPt-WKw-5s,3162
+sts_select-0.0.1.dist-info/METADATA,sha256=VshmqMslaRwW7MK_oa5y2ASE-8BTCYyXNaMlpiXMJTw,3491
+sts_select-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+sts_select-0.0.1.dist-info/licenses/LICENSE,sha256=vyxu3sd08GpVVyBlhfOYbBVTQKwYNB1xgvdhIY9M5JU,1147
+sts_select-0.0.1.dist-info/RECORD,,
