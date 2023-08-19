@@ -1,0 +1,8 @@
+source/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+source/math_utils.py,sha256=CBT7eyu9I9A0d3-3VBamgX_nyv77cO7XqLuKtb-2Akw,166
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_math_utils.py,sha256=geJRSGe93bxVbnlT59A7jPtOCc6nwoEFjeobOrTRHBU,151
+math_utilsvik-0.1.dist-info/METADATA,sha256=n6NTJDBvPJdlvjVuHjaH5kWjogZYOwPcFQNSy1qfqfU,256
+math_utilsvik-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+math_utilsvik-0.1.dist-info/top_level.txt,sha256=BqYZ1ZMe01jBY8kLNgfGcae4HTOnpoTmWp8eYoM8rnY,13
+math_utilsvik-0.1.dist-info/RECORD,,
