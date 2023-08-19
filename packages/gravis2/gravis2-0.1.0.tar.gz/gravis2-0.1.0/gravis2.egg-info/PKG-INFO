@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: gravis2
+Version: 0.1.0
+Summary: Interactive graph visualizations with Python and HTML/CSS/JS. This is a clone of the gravis package with some stylistic updates.
+Home-page: https://github.com/jonschneid7/gravis2
+Author: Jonathan
+Author-email: jon-dev@tine.dev
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.5
