@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mensajes_diegom
+Version: 6.0
+Summary: Un paquete para saludar y despedir
+Home-page: http://ejemplo.com
+Author: Diego Merino Correa
+Author-email: diegom.correa0@gmail.com
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mensajes
+
+
+el paquete de mensajeria para prueba de Diego Merino Correa
