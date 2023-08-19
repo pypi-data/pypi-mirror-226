@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+nvidia_monitor/__init__.py
+nvidia_monitor/queries.py
+nvidia_monitor.egg-info/PKG-INFO
+nvidia_monitor.egg-info/SOURCES.txt
+nvidia_monitor.egg-info/dependency_links.txt
+nvidia_monitor.egg-info/not-zip-safe
+nvidia_monitor.egg-info/top_level.txt
