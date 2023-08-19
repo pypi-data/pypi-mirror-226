@@ -1,0 +1,2 @@
+[console_scripts]
+cuda2mlu = cuda2mlu:cmd

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: cuda2mlu
+Version: 0.0.1
+Summary: rewrites torch CUDA device to use MLU
+Requires-Python: >=3.6
+
+A package that rewrites torch device CUDA to use MLU
