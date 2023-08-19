@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include CMakeLists.txt
+include setup.py
+
+recursive-include include *
+recursive-include src *
+recursive-include sklabs *
