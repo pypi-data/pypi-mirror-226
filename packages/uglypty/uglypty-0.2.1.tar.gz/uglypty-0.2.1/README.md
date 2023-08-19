@@ -1,0 +1,43 @@
+# UglyPTY
+
+UglyPTY is a graphical terminal emulator built with Python and PyQt6. It provides a user-friendly interface for managing and establishing SSH connections, with features such as a session manager, credentials manager, and more.
+
+This is a VERY beta release - with a lot of functionality.
+
+## Features
+
+- **Session Manager**: Create, edit, or delete sessions with specific settings such as host, user credentials, and log file path. Supports password and key based auth. The same sessions you use in your Terminal environment can be leveraged in your automation script. Examples included ;)
+- **Credentials Manager**: Manage user credentials (passwords encrypted), with functionalities to fetch all credentials or a specific credential by ID from a SQLite database (`settings.sqlite`).
+- **Themed Views**: Switch between multiple theme modes such as light mode, dark mode, light-dark mode, and dark-light mode.
+- **Tab Management**: Manage multiple SSH connections in different tabs.
+
+
+## Installation
+
+1. Make sure that Python 3.9.13 for Windows is installed on your system. Other versions may work, however, Winpty requires Python 3.9 or higher.
+2. Clone this repository. Then change into the resulted "UglyPty" folder/directory.
+3. Install the required packages using pipenv (requirements.txt included if you prefer pip/venv):
+
+    ```
+    pipenv shell
+    pipenv install
+    ```
+   
+After that, to start the application, navigate to the application directory and run the following command. There are standalone modules, but all can be launched from UglyPTY:
+
+    ```
+    python uglypty.py
+    ```
+
+Enjoy using UglyPTY!
+
+## Screenshots
+
+Here are some screenshots of UglyPTY in action:
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+  <img src="screen_shots/uglydark.PNG" alt="UglyPTY Dark" style="max-width: 600px;">
+  <img src="screen_shots/uglylight.png" alt="UglyPTY Light Splash" style="max-width: 600px;">
+  <img src="screen_shots/darklight.png" alt="UglyPTY darklight" style="max-width: 600px;">
+  <img src="screen_shots/lightdark.png" alt="UglyPTY Lightdark" style="max-width: 600px;">
+</div>
