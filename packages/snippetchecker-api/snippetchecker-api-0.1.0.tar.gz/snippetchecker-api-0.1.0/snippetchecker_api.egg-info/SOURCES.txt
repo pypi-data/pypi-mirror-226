@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+snippetchecker/__init__.py
+snippetchecker/api.py
+snippetchecker/support.py
+snippetchecker/scripts/__init__.py
+snippetchecker/scripts/initial.py
+snippetchecker_api.egg-info/PKG-INFO
+snippetchecker_api.egg-info/SOURCES.txt
+snippetchecker_api.egg-info/dependency_links.txt
+snippetchecker_api.egg-info/top_level.txt
+test/test.py
