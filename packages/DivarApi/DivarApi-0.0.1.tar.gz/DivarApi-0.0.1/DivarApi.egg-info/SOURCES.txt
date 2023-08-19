@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+DivarApi/__init__.py
+DivarApi/core.py
+DivarApi.egg-info/PKG-INFO
+DivarApi.egg-info/SOURCES.txt
+DivarApi.egg-info/dependency_links.txt
+DivarApi.egg-info/requires.txt
+DivarApi.egg-info/top_level.txt
