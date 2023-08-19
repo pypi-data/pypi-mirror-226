@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nvidia-monitor
+Version: 0.0.1
+Summary: NVIDIA GPU monitoring package written by KwangryeolPark
+Home-page: https://github.com/KwangryeolPark/PyPI.nvidia-monitor.git
+Author: pkr7098
+Author-email: pkr7098@gmail.com
+Keywords: nvidia-smi,gpu,monitor,nvidia,nvidia-monitor
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+License-File: LICENSE
