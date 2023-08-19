@@ -1,0 +1,16 @@
+scikit_labs-0.0.1rc1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scikit_labs-0.0.1rc1.dist-info/top_level.txt,sha256=opfgDCUjjgMcckYMO4G2kBZ_taDtyHh9R2wtySnc1Do,7
+scikit_labs-0.0.1rc1.dist-info/RECORD,,
+scikit_labs-0.0.1rc1.dist-info/METADATA,sha256=K5k9gbEks5HkGQNj8cgJf9tAmsIBtZQq3XPeQXYDjjo,3713
+scikit_labs-0.0.1rc1.dist-info/WHEEL,sha256=gk0_Ddak1h8oar51ftev3vSgqEbFvKls6S8oQ4O5p5w,109
+sklabs/functions.py,sha256=AfCF7PbTRUKRINAwGmT6RAM5z0gNdWuYKoKJkSFk9zU,7635
+sklabs/linear.py,sha256=0K9QkPO1kgct-z5qvNafJUQnTdpSjYTeE-WB6GJFIKY,34946
+sklabs/bess_base.py,sha256=mA3A7Z3gACQMsu0iDdEtmftGDIuMmjIBT5adA7ySkdQ,15848
+sklabs/pybind_cabess.cpython-38-i386-linux-gnu.so,sha256=lBm1qSvb-XcXzexa4w58R7bBYxtHMRQW_8MkB-W5aEw,628792
+sklabs/utilities.py,sha256=NILMu2-zeyar2j2b6AKPlS0yOBBelxu5PL4Inpjbz2w,2378
+sklabs/datasets.py,sha256=thvVCYDvMm0jBGfteVxC7FyXGCRUB8ZCOZiP533L54E,17086
+sklabs/metrics.py,sha256=y8HxXczcqqevpCYg5_h5Skojli-mWLmOrDxyh9Ix0uI,6220
+sklabs/__init__.py,sha256=dbHMdkDl24V_21HulIDnhWKhwsOVpXS3t-yjYC6xRno,799
+scikit_labs.libs/libstdc++-8baf04f9.so.6.0.28,sha256=7dHa2sV5CgWXjdC4QqxbCNsm-pN9kkmNNqxtn5AaAvs,2428960
+scikit_labs.libs/libgomp-41890ef0.so.1.0.0,sha256=v1S9wI3pI7LI5wKB6AvV6AdAUscM_zZ95LWxXvmoAN8,195208
+scikit_labs.libs/libgcc_s-8b50eaaa.so.1,sha256=aEf1qbEV-lDljbUGr6ql8FAfnxyJlKTeEsHNdrBlAHM,101648
