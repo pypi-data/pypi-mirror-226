@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: TopOutput
+Version: 0.0.1
+Summary: Package for developing insits for the top 10/20 percent for the data which is available.
+Home-page: UNKNOWN
+Author: Aaryan Nair
+Author-email: nairaaryan23@gmail.com
+License: MIT
+Description: This is library that will calculate the top most priroty data that will give more insites.
+        
+        Change Log
+        =============
+        
+        0.0.1 (18/08/2023)
+        ---------------------------
+         - First Release
+Keywords: top
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

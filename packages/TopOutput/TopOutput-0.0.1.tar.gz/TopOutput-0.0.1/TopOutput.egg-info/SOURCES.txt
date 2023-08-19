@@ -1,0 +1,10 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+__init__.py
+get_top_data.py
+setup.py
+TopOutput.egg-info/PKG-INFO
+TopOutput.egg-info/SOURCES.txt
+TopOutput.egg-info/dependency_links.txt
+TopOutput.egg-info/top_level.txt
