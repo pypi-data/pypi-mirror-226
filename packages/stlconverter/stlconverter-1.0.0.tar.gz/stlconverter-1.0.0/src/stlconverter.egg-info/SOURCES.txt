@@ -1,0 +1,10 @@
+pyproject.toml
+src/stlconverter/__init__.py
+src/stlconverter/__main__.py
+src/stlconverter.egg-info/PKG-INFO
+src/stlconverter.egg-info/SOURCES.txt
+src/stlconverter.egg-info/dependency_links.txt
+src/stlconverter.egg-info/top_level.txt
+src/stlconverter/modules/__init__.py
+src/stlconverter/modules/conversion.py
+src/stlconverter/modules/input_handling.py
