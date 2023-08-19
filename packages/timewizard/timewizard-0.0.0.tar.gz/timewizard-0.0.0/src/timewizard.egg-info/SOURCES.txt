@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/timewizard/__init__.py
+src/timewizard/perievent.py
+src/timewizard/util.py
+src/timewizard.egg-info/PKG-INFO
+src/timewizard.egg-info/SOURCES.txt
+src/timewizard.egg-info/dependency_links.txt
+src/timewizard.egg-info/not-zip-safe
+src/timewizard.egg-info/requires.txt
+src/timewizard.egg-info/top_level.txt
+tests/test_timeseries_utils.py
+tests/test_utils.py
