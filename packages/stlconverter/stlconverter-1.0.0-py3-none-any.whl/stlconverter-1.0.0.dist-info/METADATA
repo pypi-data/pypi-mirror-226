@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: stlconverter
+Version: 1.0.0
+Summary: STL/STLA file conversion utility.
+Author-email: Paulo Sanchez <dev.szblzpaulo@gmail.com>
+Maintainer-email: Paulo Sanchez <dev.szblzpaulo@gmail.com>
+Project-URL: Homepage, https://github.com/erlete/stl-converter
+Project-URL: Bug Tracker, https://github.com/erlete/stl-converter/issues
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.13
+Description-Content-Type: text/markdown
+

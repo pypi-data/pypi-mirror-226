@@ -1,0 +1,9 @@
+stlconverter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stlconverter/__main__.py,sha256=YwBNsMHrARj62cNdSRwtCnsRwrCnFr538c_Nf5k1o94,2213
+stlconverter/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stlconverter/modules/conversion.py,sha256=vE_rrff4bhT13VIN0AF7mkiGqVgAP15w2xRInsxY518,10859
+stlconverter/modules/input_handling.py,sha256=iCaCfBiyPEyp8yQKFwqnC1Zoo2ucUQYf7zzdN1JaYP0,2950
+stlconverter-1.0.0.dist-info/METADATA,sha256=gTGtC8g2nhWQPEOBWy-kPXCaquWNMWD1gGgz0hxJxv0,632
+stlconverter-1.0.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+stlconverter-1.0.0.dist-info/top_level.txt,sha256=0RvGnFOJ-eOSOz0iyCasITU55C68odmm6sHdSZ1CkR0,13
+stlconverter-1.0.0.dist-info/RECORD,,
