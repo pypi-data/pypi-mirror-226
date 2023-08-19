@@ -1,0 +1,10 @@
+README.md
+setup.py
+math_utilsvik.egg-info/PKG-INFO
+math_utilsvik.egg-info/SOURCES.txt
+math_utilsvik.egg-info/dependency_links.txt
+math_utilsvik.egg-info/top_level.txt
+source/__init__.py
+source/math_utils.py
+tests/__init__.py
+tests/test_math_utils.py
