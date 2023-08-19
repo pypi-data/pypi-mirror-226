@@ -1,0 +1,12 @@
+pygrab/__init__.py,sha256=p92c83lfRHghVEnEu4g2PN_MGWKBlVEqwr2-IUMqLFI,21
+pygrab/pygrab.py,sha256=fY4o25p11_hrXy1kqTIYEgw2CVJOUX0-MWjd9mZ9nHg,22584
+pygrab/session.py,sha256=YS5aytzRGaEGdgLNn3esys-wC3PWxbzpiMRvLtJX4UI,11138
+pygrab/test.py,sha256=vmbWx3tjPLPwZOOZub4i2tCOYiV3lMQA8uC1nW3r_eo,268
+pygrab/tester.py,sha256=8GYqrfEH80V0HsGv6LAbl3URHRsBBApechGzjWUdHdk,8054
+pygrab/tor.py,sha256=rk9Pl7QaklL1KdC-Yf77G0x1prwr-PBCaW82N5ZU0_w,5530
+pygrab/tor_rotation.py,sha256=6nM2XrA-17-t8UGEpawMMl5C5zhrrdCMR73QMkWcaY8,46
+pygrab/warning.py,sha256=ZplDgPZMSFX1kgfFfdrbGc6Ql04kc4rpNLASfLX5QZo,242
+pygrab-2.0.8.dist-info/METADATA,sha256=bWElh-cEUcZnpHkzf82c0lwRRZnlCZDPe_CnA8fuuQk,2636
+pygrab-2.0.8.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+pygrab-2.0.8.dist-info/top_level.txt,sha256=ekuxU3WUMyv8uTaqyMvSLaPT5OXiaySxz3f-5cDIzZQ,7
+pygrab-2.0.8.dist-info/RECORD,,
