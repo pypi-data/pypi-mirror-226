@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: survey-factory
+Version: 0.1
+Summary: A factory for generating mock survey data to train machine learning models.
+Home-page: https://github.com/chatrli/survey_factory
+Author: Chatrli
+Author-email: chatrli@proton.me
+License: CC0 1.0 Universal
+License-File: LICENSE
+
