@@ -1,0 +1,12 @@
+bia_bob/__init__.py,sha256=nya1c7oruq1sF6h-drz5Ocw8ivF4wcfH2PU3BncOP1k,360
+bia_bob/_machinery.py,sha256=8ZLrSqbuiAprsHxVbsPJwp3L2TeLGnXS5lk9h13qTeI,3201
+bia_bob/_speak.py,sha256=m4wKGbNBK-A0p_bYhF6-fBhMXEfQx-mWg78BQKxL5jY,938
+bia_bob/_speech_recognition.py,sha256=21HDLQ1A3rDdYzmZZOrTrPBy-WUzDlBc_SwnRrvoS9U,1482
+bia_bob/_tools.py,sha256=YoLIvwYHDRgstQDpkmxrJwHMI83u2bXSAL71_nlOWPw,16440
+bia_bob/_utilities.py,sha256=Fdmva59rhQr5xJVMgElPcruB1KsVd2VrQ-iuCgrLVIs,1562
+bia_bob/_tests/__init__.py,sha256=QNSEDdZvE5B8NuVasnkmp4FJsr5Sxc6jDcDY4B8biNU,31
+bia_bob-0.2.3.dist-info/LICENSE,sha256=2ftxKPhVjuDs7Cj6B_bffBidxojJGM87fP953NDyYec,1527
+bia_bob-0.2.3.dist-info/METADATA,sha256=NuI67s1tQdZIOmtSPMuveNcALoiUmf9gIpRlLoeb5Kk,5296
+bia_bob-0.2.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+bia_bob-0.2.3.dist-info/top_level.txt,sha256=XsOEYj2eu4_lj5BBoCRWEUHq5hjSEC1Yavb66vMOS5s,8
+bia_bob-0.2.3.dist-info/RECORD,,
