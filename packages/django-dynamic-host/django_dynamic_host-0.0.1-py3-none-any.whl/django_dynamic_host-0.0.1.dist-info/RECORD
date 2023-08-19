@@ -1,0 +1,14 @@
+dynamic_host/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_host/apps.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_host/conf.py,sha256=5nvMcs_mJ4BoBCOy1D-XC6QLyY3jZZsf1YTP-60cchs,939
+dynamic_host/helpers.py,sha256=wj5v1RXncMJGgS43fv-q1SDsKa6c_GYGAub3uIeCjYA,1057
+dynamic_host/middleware.py,sha256=ox9znx5-aseCVt6KBFTQgxHZa-1DqQIjzZD64uQkIIE,1518
+dynamic_host/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_host/tests/test_middleware.py,sha256=mFlILHyP2-ZbbzpYz9xWSIPb3hW90ryF1O47FhUl6NM,4401
+dynamic_host/tests/test_resolver.py,sha256=-FSIPlDXQKBS5I2xISul3vY1zIjrv4dia_8DsClVIfw,77
+dynamic_host/tests/test_settings.py,sha256=4KkwsyVaH49UnAWLb24uTms5zXM-uel-D-jfml6u758,383
+django_dynamic_host-0.0.1.dist-info/LICENCE,sha256=OqbrPRxaFegfXH9jT_RUEsro9SJosLEI8yZrxLDTMy8,1077
+django_dynamic_host-0.0.1.dist-info/METADATA,sha256=Mf-4s_UQoUBUDMU49N6QfrBp7w3MRe8vBRRquW1oqto,5457
+django_dynamic_host-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+django_dynamic_host-0.0.1.dist-info/top_level.txt,sha256=MSd4uEzrYTOOsvsAKjo2vibS7uK4OrAq-Y7P3SGaDSE,13
+django_dynamic_host-0.0.1.dist-info/RECORD,,
