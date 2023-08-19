@@ -1,0 +1,6 @@
+[console_scripts]
+rec_index = pystdf.scripts.rec_index:main
+stdf2excel = pystdf.scripts.stdf2excel:main
+stdf2text = pystdf.scripts.stdf2text:main
+stdf2xml = pystdf.scripts.stdf2xml:main
+stdf_slice = pystdf.scripts.stdf_slice:main
