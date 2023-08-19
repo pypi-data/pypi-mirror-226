@@ -1,0 +1,194 @@
+# PEP 518/517, 621
+
+[project]
+name = "curldl"
+dynamic = ["version"]
+description = "Safely and reliably download files with PycURL"
+keywords = ["cURL", "PycURL", "download"]
+
+readme = "README.md"
+license = {text = "LGPL-3.0-or-later"}
+
+authors = [{name = "Michael Orlov", email = "orlovm@noexec.org"}]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: File Transfer Protocol (FTP)",
+    "Topic :: System :: Networking"
+]
+
+requires-python = ">=3.8"
+dependencies = [
+    "pycurl>=7.44.0",       # PycURL wrapper for cURL library
+    "tenacity>=6.2.0",      # retry policies
+    "tqdm>=4.50.0"          # console progress bar
+]
+
+[project.optional-dependencies]
+minimal = [
+    "pycurl==7.44.0",       # need CURLINFO_CONDITION_UNMET
+    "tenacity==6.2.0",      # need type hinting and no-warnings asyncio (also requires six)
+    "tqdm==4.50.0"          # need colour parameter (also requires colorama on win32)
+]
+
+test = [
+    "bandit[toml]",         # security issues checks
+    "pytest",               # pytest testing framework
+    "pytest-black-ng",      # code formatter (--black)
+    "pytest-cov",           # code coverage (--cov)
+    "pytest-httpserver",    # HTTP server fixture
+    "pytest-isort",         # imports sorter (--isort)
+    "pytest-mock",          # mocker fixtures for monkey patching
+    "pytest-mypy",          # type hinting verifier (--mypy)
+    "pytest-pylint",        # static code analysis (--pylint)
+    "pytest-repeat",        # repeating tests (@pytest.mark.repeat)
+    "pytest-sugar",         # look-and-feel for pytest progress
+    "pytest-xdist[psutil]", # distributed tests (-n logical --no-pylint)
+    "setuptools-scm[toml]", # git tags-based versioning in editable install
+    "types-pycurl",         # external type annotations: pycurl
+    "types-tqdm"            # external type annotations: tqdm
+]
+
+dev = [
+    "build",                # packaging build frontend
+    "ipython",              # interactive Python environment
+    "pipdeptree",           # show packages dependency tree
+    "pip-autoremove",       # remove unused package dependencies
+    "pip-review",           # upgrade outdated packages
+    "towncrier",            # producing changelogs
+    "twine",                # PyPI package publishing
+    "wheel"                 # build system, support PEP 518 installs
+]
+
+doc = [
+    "myst-parser[linkify]", # Markdown MyST parser
+    "sphinx>=7",            # documentation generator
+    "sphinx-copybutton",    # "copy" button for code blocks
+    "furo"                  # Sphinx HTML theme
+]
+
+[project.urls]
+"Homepage" = "https://github.com/noexec/curldl"
+"Documentation" = "https://curldl.readthedocs.io/"
+"Bug Tracker" = "https://github.com/noexec/curldl/issues"
+"Changelog" = "https://github.com/noexec/curldl/blob/develop/docs/CHANGELOG.md"
+
+[project.scripts]
+curldl = "curldl.cli:main"
+
+
+[build-system]
+requires = ["setuptools>=45", "setuptools-scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.package-data]
+"curldl" = ["py.typed"]         # PEP 561
+
+
+[tool.setuptools_scm]
+version_scheme = "no-guess-dev"
+write_to = "src/curldl/_version.py"
+
+
+[tool.towncrier]
+directory = "docs/changelog.d"
+filename = "docs/CHANGELOG.md"
+
+title_format = "curldl {version} ({project_date})"
+issue_format = "[#{issue}](https://github.com/noexec/curldl/pull/{issue})"
+
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=10 --mypy --pylint --black --isort --cov --cov-report=term --cov-report=html --cov-report=xml"
+testpaths = ["tests", "src"]    # "src" required for pylint and mypy (whereas cov considers imported files)
+cache_dir = "build/tests/pytest_cache"
+
+filterwarnings = [
+    "default",
+    "ignore::DeprecationWarning:pytest_pylint.plugin",          # pytest-pylint 0.19.0
+    "ignore::DeprecationWarning:pytest_pylint.pylint_util"      # pytest-pylint 0.19.0
+]
+
+
+[tool.pylint.main]
+py-version = "3.8"
+ignore-paths = ["src/curldl/_version.py"]
+extension-pkg-allow-list = ["pycurl"]
+
+[tool.pylint.format]
+expected-line-ending-format = "LF"
+max-line-length = 88
+
+[tool.pylint.basic]
+good-names-rgxs = "^(dl)$"
+
+[tool.pylint.design]
+min-public-methods = 1
+max-args = 10
+max-attributes = 15
+max-locals = 20
+
+[tool.pylint.miscellaneous]
+notes = ["FIXME", "XXX"]
+
+
+[tool.mypy]
+warn_unused_configs = true
+cache_dir = "build/tests/mypy_cache"
+
+allow_redefinition = true
+warn_unreachable = true
+
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+warn_incomplete_stub = true
+
+disallow_any_explicit = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+warn_return_any = true
+
+
+[tool.black]
+exclude = '[\\/]_version\.py$'
+
+
+[tool.isort]
+profile = "black"
+
+
+[tool.coverage.run]
+data_file = "build/tests/coverage.sqlite"
+omit = ["/etc/*"]
+
+branch = true
+dynamic_context = "test_function"
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+skip_covered = true
+
+[tool.coverage.html]
+directory = "build/tests/coverage"
+show_contexts = true
+skip_covered = false
+
+[tool.coverage.xml]
+output = "build/tests/coverage/coverage.xml"
+
+
+[tool.bandit]
+skips = ["B101"]
