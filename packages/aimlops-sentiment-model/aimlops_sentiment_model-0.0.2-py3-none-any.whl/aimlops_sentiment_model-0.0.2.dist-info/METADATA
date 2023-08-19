@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: aimlops-sentiment-model
+Version: 0.0.2
+Summary: Sentiment Model for assessing sentiment. It is a classification model package 
+Home-page: UNKNOWN
+Author: Ajay Singh
+Author-email: ajaytevatia@gmail.com
+License: BSD-3
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.11.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas ==1.5.3
+Requires-Dist: pydantic ==1.10.10
+Requires-Dist: strictyaml ==1.6.2
+Requires-Dist: ruamel.yaml ==0.17.32
+Requires-Dist: joblib ==1.3.1
+Requires-Dist: tensorflow ==2.12.0
+Requires-Dist: nltk
+Requires-Dist: scikit-learn ==1.3.0
+Requires-Dist: twine
+
+Sentiment Model for assessing sentiment. It is a classification model package 
+
