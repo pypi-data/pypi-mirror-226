@@ -1,0 +1,15 @@
+generate_completions.sh,sha256=3yIXsu32N4nJIZIXGvGw5m2yNQFTNGWs62V2r0H59NE,1513
+tldr_man/__init__.py,sha256=AIBIgyBhffDtrAhcJyK6PDC4sev3tuv-deGWSiteUXo,28
+tldr_man/__main__.py,sha256=cpKnibdvV2P5VC-NDo-coSpwcRm8ha3caSN3otOu098,37
+tldr_man/languages.py,sha256=McXxePwocLaQ0G2kvyJETVYK7BPl8ctu_u-lLs5Nhe0,3329
+tldr_man/main.py,sha256=gF-l77-n4n8j1AJkfjagGFFLMt3acocnuZAoP4-ba2I,6163
+tldr_man/pages.py,sha256=do-mRSJ0pYxDe3gZ0QCNPMhicBJX-CDIb9oGwwclENI,13182
+tldr_man/platforms.py,sha256=1oXSjTOpHXkSn5dOtyOZJVOtNc5v7b1uyU8CzMQQFoA,1614
+tldr_man/shell_completion.py,sha256=277O5NZoYKmG5eJ0pOsEUDmvW1Q2OBDg8StN8zViFCQ,1792
+tldr_man/util.py,sha256=EddQo-hEtmVTq5AE3d0wiMsnStLbKyuP6ZRuQjWdSN8,1359
+tldr-man.1,sha256=GZXeqTphjhpRRc3iu9CIrT73ek4ifQBk6uV2LK3HqnE,6832
+tldr_man-1.4.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tldr_man-1.4.0.dist-info/METADATA,sha256=dYmD6MGRI9UaTA4tY5rhUEp1iqGywkstkkjC0A9SfoE,5055
+tldr_man-1.4.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+tldr_man-1.4.0.dist-info/entry_points.txt,sha256=Lst4KnI2TeTbSANL6NGufkLIvpY4Nb4qJwb380V4mdU,59
+tldr_man-1.4.0.dist-info/RECORD,,
