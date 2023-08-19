@@ -1,0 +1,2 @@
+trendup_config
+trendup_storage
