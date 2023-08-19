@@ -1,0 +1,14 @@
+winloop/__init__.py,sha256=PtnA3GE0iduD6j6qYoT9VtpCthQATPelhv81z1u3III,1591
+winloop/_noop.py,sha256=bWL9DB8pe-Ba4gJkHpUTLb-ozdspQIqjabn-JnDiWwc,91
+winloop/_testbase.py,sha256=Uo7ZP7xVl4eXErOP3113bt29schzXVNuXLhqVYXHCsU,15908
+winloop/loop.c,sha256=xXalK50BXUAIAj4XI5w-oPWZd6iBWT7azKwkqKK2nfQ,8852456
+winloop/loop.cp310-win_amd64.pyd,sha256=BejvJnjO_Nzg0BC6jsYnApVheKkxlzBxx3HRC-_zIAc,1398272
+winloop/includes/__init__.py,sha256=BXxmCyPQko5G4fTfklZbQasgbmjKwYABnLAmMp7t_1c,384
+winloop/includes/context.h,sha256=PkAF5ie8a9i6Zo-9UwhH1eSVZgygBsJO-Es6DHRSAPk,717
+winloop/includes/socketpair.h,sha256=O6HsLVlgh4SlZ-eqx13sOdKf2AHbTYnERNZ-HVy7qMQ,7153
+winloop-0.0.8.dist-info/LICENSE-APACHE,sha256=u62c6KOeQnd2Wx11LXdvxMUIYtgQWQ4AJAKYwPZ_ZHM,11680
+winloop-0.0.8.dist-info/LICENSE-MIT,sha256=qwvN33XRe5TsO285vAzR0RwUG2AxbDrAc7A0FwJzSp0,1145
+winloop-0.0.8.dist-info/METADATA,sha256=YcY6bc8KrpntsmKnWQwYHwa3S7sCD63MGyvsvOwtGw4,13885
+winloop-0.0.8.dist-info/WHEEL,sha256=Wb1el1iP4ORW7FiLElw7HfxLpDiHzwvd2B382b2Idl0,102
+winloop-0.0.8.dist-info/top_level.txt,sha256=NEA6EMyyXN4qgQCxb0-VeDpaWljfQ3ottpfEszI0Klo,8
+winloop-0.0.8.dist-info/RECORD,,
