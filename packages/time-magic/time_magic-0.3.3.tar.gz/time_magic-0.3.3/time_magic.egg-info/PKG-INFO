@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: time-magic
+Version: 0.3.3
+Summary: python tools all about time
+Home-page: https://github.com/liujuanjuan1984/time_magic
+Author: liujuanjuan1984
+Author-email: qiaoanlu@163.com
+Project-URL: Github Repo, https://github.com/liujuanjuan1984/time_magic
+Project-URL: Bug Tracker, https://github.com/liujuanjuan1984/time_magic/issues
+Project-URL: About Quorum, https://github.com/rumsystem/quorum
+Keywords: python,timebill,time_magic
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# time_magic
+all about time.

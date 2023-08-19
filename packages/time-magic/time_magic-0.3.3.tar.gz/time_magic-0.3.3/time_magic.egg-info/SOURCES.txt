@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+time_magic/__init__.py
+time_magic/life_in_weeks.py
+time_magic/seven_years_circle.py
+time_magic/timebill.py
+time_magic.egg-info/PKG-INFO
+time_magic.egg-info/SOURCES.txt
+time_magic.egg-info/dependency_links.txt
+time_magic.egg-info/requires.txt
+time_magic.egg-info/top_level.txt
