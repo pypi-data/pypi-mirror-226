@@ -1,0 +1,16 @@
+resources/defaultconfig.yaml,sha256=P_ajZblMijZ7CEFEWSh00OJfC1UszHIRSOj-41GElTk,3531
+square/__init__.py,sha256=VOR2WxW5t5iz9__zbcoguulwc4cG5MfVATCrJ2oTgPs,1379
+square/__main__.py,sha256=dqeJT1PtIEejuiL2tIOI_Bkt3iss1RK3FPG4tgeoTuk,203
+square/callbacks.py,sha256=KDLDpeloXiTBeqs4s0qf9HIcUBRSez-ut8M9PNPnfvs,4314
+square/cfgfile.py,sha256=DSCTnpmOs3dVCjh4URWrG4msVmEKfZosPXlFWbUVnnw,3780
+square/dtypes.py,sha256=AXPxQwFogSYwJ4wk4DUk-k2tnr_EZ1QQ8vo3p0NwwoQ,10555
+square/k8s.py,sha256=qDVWmRtcaWSh07ZiPWPedfhWkrZQt8y7pH2Ha9E9ckY,31879
+square/main.py,sha256=j14jiG14YAbmMDCczlvp5DJ9jlNbOwDQEK-uVW3McwQ,14954
+square/manio.py,sha256=Z6i6PZh4NzY85isAnrLbvdsczxnzvVJpfP8pXfdfahQ,37280
+square/square.py,sha256=AFmZ-6_NLfwiK1uP-0jPToM7AQYb9sWH2NYMB6vB4_Y,33537
+square/yaml_io.py,sha256=POuFnTzwKtVSidaN6H8Z6KDcdBaG8YGMfpUrQAECAOI,2068
+kubernetes_square-2.0.0rc0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kubernetes_square-2.0.0rc0.dist-info/METADATA,sha256=wHZg7w1RD0m_lGlgWydbH8nmEMfybDoWST5koRIbsTY,16041
+kubernetes_square-2.0.0rc0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+kubernetes_square-2.0.0rc0.dist-info/entry_points.txt,sha256=GHSD8ASMw7tyF8n04S8RMrftWU-xb-O3zaohFe3OMoU,43
+kubernetes_square-2.0.0rc0.dist-info/RECORD,,
