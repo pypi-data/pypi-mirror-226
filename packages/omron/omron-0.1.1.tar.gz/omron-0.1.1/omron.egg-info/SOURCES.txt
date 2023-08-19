@@ -1,0 +1,7 @@
+README.md
+main.py
+setup.py
+omron.egg-info/PKG-INFO
+omron.egg-info/SOURCES.txt
+omron.egg-info/dependency_links.txt
+omron.egg-info/top_level.txt
