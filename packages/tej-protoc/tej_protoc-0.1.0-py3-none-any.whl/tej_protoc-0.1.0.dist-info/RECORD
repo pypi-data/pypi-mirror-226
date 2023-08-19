@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tej_protoc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tej_protoc/client.py,sha256=8w0oX-aoRInCfdL_rCDS24SjJLR7bSgo_efuNqz5NBw,1671
+tej_protoc/exceptions.py,sha256=VTL8Ldw4q9IQhIR5W536Njc3LbhqlZmFDNlXOKSlyNk,243
+tej_protoc/protocol.py,sha256=PvL81vflmoSNa-ur6-na8JFd-V3kCnEd3CiJBdw9cNo,7255
+tej_protoc/serve.py,sha256=MuWTkYuyMsTF9n2691fJTnMW-KURVuhFJzMKpvBRZ5c,4190
+tej_protoc-0.1.0.dist-info/METADATA,sha256=M57N0AE-hinfrrEY2ULLbFZRevlsHCYtFsjtAH4FdMw,4024
+tej_protoc-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+tej_protoc-0.1.0.dist-info/top_level.txt,sha256=4Nf_2VQuZYZK3cs4MPFmRP239AElL_vjUmfie77GZdI,20
+tej_protoc-0.1.0.dist-info/RECORD,,
