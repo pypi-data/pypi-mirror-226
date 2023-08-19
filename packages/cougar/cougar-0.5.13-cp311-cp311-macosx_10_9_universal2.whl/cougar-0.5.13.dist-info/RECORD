@@ -1,0 +1,10 @@
+cougar/__init__.py,sha256=GpLhlb3t-antirNyXQ1w9K4n_u2IWz3QIqG5FHxynBQ,288
+cougar/rolling.cpython-311-darwin.so,sha256=NTsRPYdNUWoC52C6X3u-g_UOXdFHtaYmjdiTWvCO7yo,353754
+cougar/numpy/__init__.py,sha256=QsZLoNOPzs17hbkFTJowo2Ik_wJ55Nl9OreWblIHQPk,26
+cougar/numpy/functional.py,sha256=FNCwsDBA6e0HKxeZ_-VYzNqvpXtWGdveoJzHfrWmv88,1999
+cougar/pandas/__init__.py,sha256=0sPrsHqPTr3e8A3Tvwau1SX9BeiR_3u9K8fmJYZebSo,3983
+cougar-0.5.13.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cougar-0.5.13.dist-info/METADATA,sha256=P0h8FZWnVQITEgzkcob22MYknrEQRW7zoQYU6DnPfNc,3129
+cougar-0.5.13.dist-info/WHEEL,sha256=7Ed3z-yB3vQUkbRjoU0MKMR75UT8LROJ2seN9kBnZo8,115
+cougar-0.5.13.dist-info/top_level.txt,sha256=8nd877JWAGP4vvnI_DC5DtsM0fQeqr_niM1OXSAZkLY,7
+cougar-0.5.13.dist-info/RECORD,,
