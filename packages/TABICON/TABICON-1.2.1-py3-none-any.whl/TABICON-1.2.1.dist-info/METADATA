@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: TABICON
+Version: 1.2.1
+Summary: Clases para el PLN y desarrollo de componentes
+Home-page: https://gitlab.com/ugarciacalderon/Servicio_Social.git
+Author: Ulises Garcia Calderón
+Author-email: ugarciacalderon@gmail.com
+License: GPL
+License-File: LICENSE.txt
+
+# TABICON Python
+
+## DescripciÃ³n
+Biblioteca en Python para el desarrollo de componentes.
+
+Requisitos
+--------------------------------------------------------------------------------
+-python 3.6.6 o 3.+
+
+-pip >=19.0.1
+
+-paquete .whl
+
+
+Instalacion
+--------------------------------------------------------------------------------
+1.- Descargar paquete .whl: 
+    
+    sudo pip install -i https://user:123@pypi-repo-mike.appspot.com/pypi tabicon-cp37 --no-cache-dir
+    
+2.- Mostrara un mensaje que el paquete ha sido instalado de manera correcta
+    
+    Looking in indexes: https://user:123@pypi-repo-mike.appspot.com/pypi
+    Collecting tabicon
+    Installing collected packages: tabicon
+    Successfully installed tabicon-1.0
+
+2.- Importara paquete:
+
+    from TABICON37.Libreria import *
+    
+    ejemplo
+    
+    from TABICON37.ManejoArchivos import *
