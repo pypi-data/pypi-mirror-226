@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pymecht/MCMC.py
+pymecht/MatModel.py
+pymecht/ParamFitter.py
+pymecht/RandomParameters.py
+pymecht/SampleExperiment.py
+pymecht/__init__.py
+pymecht.egg-info/PKG-INFO
+pymecht.egg-info/SOURCES.txt
+pymecht.egg-info/dependency_links.txt
+pymecht.egg-info/requires.txt
+pymecht.egg-info/top_level.txt
