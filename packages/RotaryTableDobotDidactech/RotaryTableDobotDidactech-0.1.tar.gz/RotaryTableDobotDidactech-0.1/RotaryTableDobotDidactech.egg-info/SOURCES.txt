@@ -1,0 +1,8 @@
+README.md
+setup.py
+RotaryTableDobotDidactech/RotaryTableDobot.py
+RotaryTableDobotDidactech/__init__.py
+RotaryTableDobotDidactech.egg-info/PKG-INFO
+RotaryTableDobotDidactech.egg-info/SOURCES.txt
+RotaryTableDobotDidactech.egg-info/dependency_links.txt
+RotaryTableDobotDidactech.egg-info/top_level.txt

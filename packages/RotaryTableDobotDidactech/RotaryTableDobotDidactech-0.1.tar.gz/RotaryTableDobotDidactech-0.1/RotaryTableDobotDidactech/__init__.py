@@ -1,0 +1,1 @@
+from RotaryTableDobotDidactech.RotaryTableDobot import RotaryTable
