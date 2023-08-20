@@ -1,0 +1,13 @@
+ucla_cli/__about__.py,sha256=IHDGYTY6a04LhhOHVkYen9q4261PZpczOqWYdsyrEyE,132
+ucla_cli/__init__.py,sha256=6INqFYi8R5IFNu13YNO-JOxPfHnv3-KgmnR_wWHXzQA,146
+ucla_cli/__main__.py,sha256=Sf-K8PX46ZPtkrzEvuOlf5CYrXddxewPLg3wtrycBhE,5607
+ucla_cli/course_titles_view.py,sha256=1L7Su8ne1FSqBOuG2jk3ldWldn753oaE-fF2q00B2mM,6168
+ucla_cli/decode.py,sha256=TxlFotmRNN0W2pk6TKQ_fEiFNAlljVBcYtZN5JKucCY,138
+ucla_cli/get_course_summary.py,sha256=p8BuTIQvoNB0JUlsHjbnuRGi9ceW5Em9KWfwo9WS9Us,1607
+ucla_cli/glssd.py,sha256=4NNLRdUCwNFXVSRV8-E-jy13-Jq3Tfg2YIpb1fzVGlM,715
+ucla_cli/results.py,sha256=l7H6fRIm0GmpN0cxBi6qSi69YIW9cOXeX4rNEQQraYQ,701
+ucla_cli-0.0.6.dist-info/METADATA,sha256=1ofoDL-34QkW6db8UUHaU__zDDrpg6Z5VvvgLA8e4G8,3245
+ucla_cli-0.0.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+ucla_cli-0.0.6.dist-info/entry_points.txt,sha256=JX-A5CYc84qWwdCWQKaXDrfHZRHMSV1XyDVsB-UzNKc,39
+ucla_cli-0.0.6.dist-info/licenses/LICENSE.txt,sha256=M3i4t2vPuFhQQXgdZqtm1OYmun741e25bmjeNx6eGmU,1102
+ucla_cli-0.0.6.dist-info/RECORD,,
