@@ -1,0 +1,10 @@
+pysimpler/__init__.py,sha256=bI7m8qRh9OHq2WdLVhpfGDz68dclNt0tX5kL5y9-A1M,77
+pysimpler/caches.py,sha256=wevUm7j_afekZQVaCikIAd1kLXnGH_JrsEAgOcKxaIY,730
+pysimpler/errors.py,sha256=MSFM31BM17Go6wjTD40C6COa-N_4G_BpA9aC-Sy5go8,554
+pysimpler/requirements.txt,sha256=emQjU9_99KfD3jE3lRyGUXdaSAkkkPWT5yOi5pcvprY,6
+pysimpler/timers.py,sha256=iurBmgj-I129P6OI6kw9UJCwgdHk-kR2__OAjt2dBqg,543
+pysimpler-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pysimpler-0.0.1.dist-info/METADATA,sha256=6Rdx_h6b0CK3l8KVwWRKcFyfBSn9ppI8Dp76kNUOdS0,400
+pysimpler-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+pysimpler-0.0.1.dist-info/top_level.txt,sha256=wDhBzlv0tF2tngewKQFnwXihuLg1wR0JPlnfUtj3o64,10
+pysimpler-0.0.1.dist-info/RECORD,,
