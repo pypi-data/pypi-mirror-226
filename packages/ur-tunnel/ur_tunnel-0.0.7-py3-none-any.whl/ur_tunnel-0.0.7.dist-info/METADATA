@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ur-tunnel
+Version: 0.0.7
+Requires-Dist: aiohttp
+Requires-Dist: certifi
+Requires-Dist: websockets
+Requires-Dist: requests
+Requires-Dist: pip
+Requires-Dist: packaging
+
