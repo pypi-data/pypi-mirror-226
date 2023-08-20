@@ -1,0 +1,24 @@
+site_name: Energy Logger docs
+site_author: Marcel Blijleven
+site_description: Docs for the Energy Logger project
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.sections
+#    - navigation.tabs
+    - navigation.tracking
+    - toc.follow
+    - toc.integrate
+
+repo_url: https://github.com/marcelblijleven/energy-logger
+
+nav:
+  - 'index.md'
+  - Installation:
+      - 'installation/index.md'
+      - Development: 'installation/development.md'
+  - Inputs:
+      - HomeWizard:
+          - P1: 'inputs/homewizard/p1.md'

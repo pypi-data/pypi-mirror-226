@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: energy-logger
+Version: 0.0.1
+Summary: Energy logger
+Project-URL: Documentation, https://github.com/unknown/energy-logger#readme
+Project-URL: Issues, https://github.com/unknown/energy-logger/issues
+Project-URL: Source, https://github.com/unknown/energy-logger
+Author-email: Marcel Blijleven <marcelblijleven@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.11
+Requires-Dist: httpx==0.24.1
+Requires-Dist: pydantic-settings==2.0.3
+Requires-Dist: pydantic==2.1.1
+Requires-Dist: trio==0.22.2
+Provides-Extra: docs
+Requires-Dist: mkdocs-material==9.1.21; extra == 'docs'
+Requires-Dist: mkdocs==1.5.2; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest-httpx==0.23.1; extra == 'test'
+Requires-Dist: pytest==7.4.0; extra == 'test'
+Requires-Dist: ruff==0.0.284; extra == 'test'
+Description-Content-Type: text/markdown
+
+# energy-logger
+
+[![PyPI - Version](https://img.shields.io/pypi/v/energy-logger.svg)](https://pypi.org/project/energy-logger)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/energy-logger.svg)](https://pypi.org/project/energy-logger)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+Energy Logger is a way to log 'energy inputs' to data outputs periodically. The inputs and outputs
+are declared in the `config.toml` file. At least one input and one output should be present in the
+configuration file.
+
+Energy Logger can be run on its own, or included as a module in other projects.
+
+## Installation
+
+```console
+pip install energy-logger
+```
+
+### Local installs
+
+```console
+pip install .
+```
+
+#### Testing
+
+```console
+pip install '.[test]'
+```
+
+#### Docs
+
+```console
+pip install '.[docs]'
+```
+
+
+## License
+
+`energy-logger` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
