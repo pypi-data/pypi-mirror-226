@@ -1,0 +1,7 @@
+setup.py
+dycGroup/DycGroup.py
+dycGroup.egg-info/PKG-INFO
+dycGroup.egg-info/SOURCES.txt
+dycGroup.egg-info/dependency_links.txt
+dycGroup.egg-info/requires.txt
+dycGroup.egg-info/top_level.txt
