@@ -1,0 +1,7 @@
+setup.py
+qsketchmetric/__init__.py
+qsketchmetric/renderer.py
+qsketchmetric.egg-info/PKG-INFO
+qsketchmetric.egg-info/SOURCES.txt
+qsketchmetric.egg-info/dependency_links.txt
+qsketchmetric.egg-info/top_level.txt
