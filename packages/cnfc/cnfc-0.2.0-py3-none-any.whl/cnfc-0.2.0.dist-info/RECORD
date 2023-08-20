@@ -1,0 +1,11 @@
+cnfc/__init__.py,sha256=YVPot16PQKlg5NV2DsAUopvknluf46ewZluI4FasKqc,50
+cnfc/buffer.py,sha256=75YsOfXpmj_q7zy1zb_ywxiEH0ix4Yz6CXRrPmCWdPE,903
+cnfc/cache.py,sha256=Q9sI4aDba5ItD3IgZ6pIxEeSFu5KvqakHqTiPOiuQD8,561
+cnfc/cardinality.py,sha256=599OtgYmT2Ikp-lMUw2lo-y7gCMKPRdy14yJuDlJ7JE,3548
+cnfc/formula.py,sha256=ab9cc7QJYIsbdlwZMkaKYtwnz7qRTkkIm1XlixCr2PA,1425
+cnfc/model.py,sha256=4nCSzYqS3jTum0luFaYlv-iMRiVBu5c9Ai2x-kivWYM,13207
+cnfc/tuples.py,sha256=V34Fdny3GE1n6RX5o3H8dl7BiD9KAuBE85PKvqhovRc,637
+cnfc-0.2.0.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+cnfc-0.2.0.dist-info/METADATA,sha256=NqzBRqcT7k3VsmSpcQssllwWQ_Dz8QQ8X94Rp5l_eQY,2415
+cnfc-0.2.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+cnfc-0.2.0.dist-info/RECORD,,
