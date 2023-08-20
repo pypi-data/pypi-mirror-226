@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bondai
+Version: 0.2.1
+Summary: An AI-powered console assistant with a versatile API for seamless integration into applications.
+Home-page: https://github.com/krohling/bondai
+Author: Kevin Rohling
+Author-email: kevin@kevinrohling.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+BondAI
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
