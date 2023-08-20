@@ -1,0 +1,7 @@
+cacheline-0.0.1.dev1.dist-info/WHEEL,sha256=-go1t_gA6Nje_8nbQtrBhzEt0Am6xlrw6s5rC6us1l8,149
+cacheline-0.0.1.dev1.dist-info/METADATA,sha256=4ZhOAQaupqW2a6R7Ft3Z9rCulEDNaenVKo7JQwuYTaU,546
+cacheline-0.0.1.dev1.dist-info/RECORD,,
+cacheline/__init__.py,sha256=Sn6dM0IGngPbSNelJJKlD_ykncn1-4FRwiwfJtQf9Cc,64
+cacheline/add.cpython-310-x86_64-linux-gnu.so,sha256=2xziSt48uJ0eijWhZoRlrISDseXc-rR1WPMouWBdreo,331816
+cacheline/tests/test_module.py,sha256=zzD1vT2gaJLcP2E0oppagYGSnTvsfRLXRr6nibSBAQU,70
+cacheline/tests/test_add.py,sha256=hRetATBOvF4enyLm1Ky_rP79GNuYjWTDZZaqlZajLeA,89
