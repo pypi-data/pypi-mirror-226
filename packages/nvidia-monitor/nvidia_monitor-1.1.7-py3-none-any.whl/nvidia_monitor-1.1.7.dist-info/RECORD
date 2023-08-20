@@ -1,0 +1,11 @@
+nvidia-monitor/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+nvidia_monitor/__init__.py,sha256=UQCBE6dm5Y7FvRTH26278eQw-wWxHjPDia7J_u4TNqU,150
+nvidia_monitor/process.py,sha256=W2AJvvlJ3_1C8OGSc6kgpzx8Yt--wjTIC5OH5T7J3NE,4926
+nvidia_monitor/queries.py,sha256=irKKE-3PqcwDmlOXLtmhqTOTRAsVUfuU1MF0iDUB22Y,548
+nvidia_monitor/status.py,sha256=BW4ohc06Eo_Ls1AfCUC6nl6bXBsE9Hm32zeaPUkHG-Y,2027
+nvidia_monitor/test.py,sha256=8uhESBSV-LNGNonJhMWhSFOTsEXu0xeI5g7qwMwZXfQ,287
+nvidia_monitor-1.1.7.dist-info/LICENSE,sha256=YMIYicT33iK3d26wWs7vsO_UIFqXnwdjb0JkXt3JWtA,1066
+nvidia_monitor-1.1.7.dist-info/METADATA,sha256=KqYeh1gTeqJxzrR5ObmICuGPpSUHFV3kIiupU0F8RS0,541
+nvidia_monitor-1.1.7.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+nvidia_monitor-1.1.7.dist-info/top_level.txt,sha256=Swug01WgWI7hMozcqS_3ZLpG_Q1PNwgm8IiMJWo5_vo,15
+nvidia_monitor-1.1.7.dist-info/RECORD,,
