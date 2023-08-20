@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: if-dsl-gui-ai
+Version: 0.0.5
+Summary: For generating and playing IF games
+Home-page: https://github.com/SimicAleksa/pythonProject
+Author: Simic Aleksa
+Author-email: aleksadsimic@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate ==0.21.0
+Requires-Dist: Arpeggio ==2.0.2
+Requires-Dist: certifi ==2023.7.22
+Requires-Dist: charset-normalizer ==3.2.0
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: diffusers ==0.19.0
+Requires-Dist: filelock ==3.12.2
+Requires-Dist: fsspec ==2023.6.0
+Requires-Dist: huggingface-hub ==0.16.4
+Requires-Dist: idna ==3.4
+Requires-Dist: importlib-metadata ==6.8.0
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: networkx ==3.1
+Requires-Dist: numpy ==1.25.1
+Requires-Dist: packaging ==23.1
+Requires-Dist: Pillow ==10.0.0
+Requires-Dist: psutil ==5.9.5
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: regex ==2023.6.3
+Requires-Dist: requests ==2.31.0
+Requires-Dist: safetensors ==0.3.1
+Requires-Dist: sympy ==1.12
+Requires-Dist: textX ==3.1.1
+Requires-Dist: tokenizers ==0.13.3
+Requires-Dist: torch ==2.0.1+cu118
+Requires-Dist: torchaudio ==2.0.2+cu118
+Requires-Dist: torchvision ==0.15.2+cu118
+Requires-Dist: tqdm ==4.65.0
+Requires-Dist: transformers ==4.31.0
+Requires-Dist: typing-extensions ==4.7.1
+Requires-Dist: urllib3 ==2.0.4
+Requires-Dist: zipp ==3.16.2
+
+#  Jezik i alat za kreiranje IF (Interactive Fiction) igara sa grafickim korisnickim interfejsom uz dodatak generisanja slika na osnovu teksta
+
+## Struktura projekta
+
+- `gameFrame.py`: Ova datoteka sadrži kod koji upravlja grafickim interfejsom za igranje igrica.
+
+- `gameInterpreter.py`: U ovom fajlu se kreiraju Python klase interpretiranjem informacije dobijenih parsiranjem igrica napisanih u gameWorldDSL.tx.
+
+- `gui.py`: Ova datoteka sadrži kod za graficki interfejs koji se sastoji od pocetnog ekrana, dela za kreiranje IF, dela za
+     ucitavanje koda igrica i izbora igara za igranje.
+
+- `simpleGame.game`: Ovo je primer jedne igre napisane u gameWorldDSL.tx-u.
+
+- `gameWorldDSL.tx`: Ova datoteka sadrži opis Domain-Specific Language (DSL) kojim je moguce pisati igre.
+
+- `dslClasses.py`: Ovaj fajl sadrži Python interpretaciju klasa definisanih u gameWorldDSL.tx formatu.
+
+## Uputstvo za pokretanje projekta
+
+- Pokrenuti main.py
+- Za pregled svih igara i biranje za igranje birate Library
+- Za kreiranje novih IF igrica birate CreateFiction
+- Ukoliko nemate Stable Diffusion instaliran lokalno cheackbox za igranje sa slikama ostavite u neotkacenom stanju
+
+## Zavisnosti
+
+- stable-diffusion-v1-5 lokalno instaliran
+- Pillow~=10.0.0
+- diffusers~=0.19.0
+- textX~=3.1.1
+- pip install transformers
+- pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+  (gpu sa CUDA jezgrima)
+- pip install accelerate
