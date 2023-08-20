@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: senstile-utils
+Version: 0.1.1
+Summary: A set of common utils modules and functions for Senstile Python Api development
+Author: Jose Alejandro Concepcion Alvarez
+Author-email: pepe@senstile.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: requests ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+
+# Senstile Utils Package
+
+Senstile Utils is a collection of utility functions and classes designed to simplify some common operations in Python.
+
+## Table of Contents
+
+- [Senstile Utils Package](#senstile-utils-package)
+  - [Table of Contents](#table-of-contents)
+  - [Retry Utilities](#retry-utilities)
+    - [Key Features](#key-features)
+    - [Usage Examples](#usage-examples)
+  - [Event Emitter](#event-emitter)
+    - [Key Features](#key-features-1)
+    - [Usage Examples](#usage-examples-1)
+
+---
+
+## Retry Utilities
+
+The `retry` module provides functionality to automatically retry function calls, both synchronous and asynchronous, in the event of exceptions. This is particularly useful when interacting with systems that might temporarily fail and then succeed upon retry.
+
+### Key Features
+
+- `retry_call`: A function to automatically retry a synchronous function call upon exception.
+- `retry_call_async`: The asynchronous counterpart to `retry_call`, for retrying asynchronous functions.
+
+### Usage Examples
+
+**`retry_call`:**
+
+```python
+from senstile_utils.retry import retry_call
+import random
+
+def sometimes_fail():
+    if random.random() > 0.5:
+        raise ValueError("Failed!")
+    return "Success!"
+
+# Use retry_call to attempt the function multiple times before giving up
+result = retry_call(sometimes_fail, max_trials=5, delay_ms=500)
+print(result)
+```
+
+**`retry_call_async`:**
+
+```python
+import asyncio
+from senstile_utils.retry import retry_call_async
+import random
+
+async def sometimes_fail_async():
+    if random.random() > 0.5:
+        raise ValueError("Failed!")
+    return "Async Success!"
+
+# Use retry_call_async to attempt the async function multiple times
+result = asyncio.run(retry_call_async(sometimes_fail_async, max_trials=5, delay_ms=500))
+print(result)
+```
+
+## Event Emitter
+
+The `EventEmitter` class provides a mechanism to implement the publish-subscribe pattern in Python. This design allows components of a system to communicate with each other without requiring them to be tightly coupled. Subscribers can react to events without direct knowledge of the publisher.
+
+### Key Features
+
+- **subscribe**: Subscribe to a specific topic and register a callback to be invoked when an event is emitted for that topic.
+- **emit**: Emit an event to a specific topic, causing all registered callbacks for that topic to be invoked.
+- **unsubscribe**: Unsubscribe a callback from a specific topic, preventing it from being invoked for future events on that topic.
+
+### Usage Examples
+
+```python
+from senstile_utils.event import EventEmitter
+
+# Instantiate an EventEmitter
+emitter = EventEmitter()
+
+# Define callback functions
+def on_data_received(topic, data):
+    print(f"Data received on topic {topic}: {data}")
+
+def another_callback(topic, data):
+    print(f"Another callback for topic {topic}: {data}")
+
+# Subscribe callbacks to a topic
+subscription1 = emitter.subscribe("topic1", on_data_received)
+subscription2 = emitter.subscribe("topic1", another_callback)
+
+# Emit an event to a topic
+emitter.emit("topic1", {"message":"Data received",data:[1,0.9,0,1,2],user:"user@example.com"})
+
+# Unsubscribe a callback from a topic
+subscription1.unsubscribe()
+```
