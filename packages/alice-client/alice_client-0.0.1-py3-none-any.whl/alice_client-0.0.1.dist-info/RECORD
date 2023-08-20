@@ -1,0 +1,9 @@
+alice/client/api.py,sha256=qgmYToZ52iDvh1XAryT4XLNek86o5kZ54hBgbTSFb7U,1740
+alice/client/models/__init__.py,sha256=LFpstAToF-ZNCwOlDsVf2dEIaulzuvGBB1Ej5zhfYBc,128
+alice/client/models/dto.py,sha256=xQFfLsf7O-ueEB5AukgEdUah69Cwb972VIfd9WTbxQw,2289
+alice/client/models/llm.py,sha256=OdwtkM-awrkFKYjI6cA4IJpnRKQJpEO37unmSeOG5K4,907
+alice_client-0.0.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+alice_client-0.0.1.dist-info/METADATA,sha256=_Ghxrv5FW5brcXimlmUwmRXJEvL3SMP7KkNPGD5k_OU,661
+alice_client-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+alice_client-0.0.1.dist-info/top_level.txt,sha256=-HFl4wWw98SCTTgGQ0-dCQlhCiVkGrh3PPkqSMnXdnA,6
+alice_client-0.0.1.dist-info/RECORD,,
