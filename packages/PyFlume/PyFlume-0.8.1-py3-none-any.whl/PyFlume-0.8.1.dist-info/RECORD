@@ -1,0 +1,14 @@
+pyflume/__init__.py,sha256=ygZeKIFF0uCDKe0l49QvND3Y8GLYTenGVAX528hbi74,484
+pyflume/auth.py,sha256=rffqPkI4YHFLuoEovNZoowo_dt5iZ5-kkKycfQ7LMJg,4718
+pyflume/constants.py,sha256=J1nmw1nxDR1Wk3lzj3F-JZdHtEOe_qtTCAMDXpLAxq4,673
+pyflume/data.py,sha256=SG7OnpqzCHd7MbxhdA6n3P6-RhlyNBlzcnwwOpE86Sw,6915
+pyflume/devices.py,sha256=LJrMhq-VZ5mkCZtqa5FiE9z3E8HckDuhgb04-UrI7fg,1683
+pyflume/leak.py,sha256=2AYS7clyYQViF05WDHcCKGOKVe9kVM4UUpaxOxxscpg,2113
+pyflume/notifications.py,sha256=PCs_R8E93bB3YxxH6gK1dvZwAIBRfooLc6f_x2aW58A,2040
+pyflume/usage.py,sha256=-yeS-ky_XLKzaKAFeM-VNRcqZAEeNXVhjlrtqvZ9Dks,1953
+pyflume/utils.py,sha256=YscLfryH04RIs5qyYSlxcV7VGRJH3qVjd6Q7JllGcwI,3189
+PyFlume-0.8.1.dist-info/LICENSE,sha256=UOT9i7zM-lizUhUVzbIEP9JJGCLB9X81qXIcuqZihmI,1091
+PyFlume-0.8.1.dist-info/METADATA,sha256=XOO68DRQYZSMPQlP-DuHKSZnJcTqz3ej8oc1Le8h-7k,2583
+PyFlume-0.8.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+PyFlume-0.8.1.dist-info/top_level.txt,sha256=RtPYwHpLrv5ugCdYrO7ckyNJeFyrmzcpw7cWyHxIPU8,8
+PyFlume-0.8.1.dist-info/RECORD,,
