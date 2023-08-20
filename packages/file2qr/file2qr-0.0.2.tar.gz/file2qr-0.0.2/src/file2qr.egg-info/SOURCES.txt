@@ -1,0 +1,15 @@
+pyproject.toml
+setup.cfg
+src/file2qr.egg-info/PKG-INFO
+src/file2qr.egg-info/SOURCES.txt
+src/file2qr.egg-info/dependency_links.txt
+src/file2qr.egg-info/entry_points.txt
+src/file2qr.egg-info/requires.txt
+src/file2qr.egg-info/top_level.txt
+src/file_to_qr/__init__.py
+src/file_to_qr/main.py
+src/qr_to_file/__init__.py
+src/qr_to_file/assembler.py
+src/qr_to_file/main.py
+src/qr_to_file/protocol.py
+src/qr_to_file/qr.py
