@@ -1,0 +1,4 @@
+include lyg/*.so
+include lyg/*.pyd
+include bin/*
+include lib/*
