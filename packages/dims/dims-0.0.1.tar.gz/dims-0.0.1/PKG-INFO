@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: dims
+Version: 0.0.1
+Summary: Did I miss something
+Project-URL: Documentation, https://github.com/unknown/dims#readme
+Project-URL: Issues, https://github.com/unknown/dims/issues
+Project-URL: Source, https://github.com/unknown/dims
+Author-email: Marcel Blijleven <marcelblijleven@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: click
+Description-Content-Type: text/markdown
+
+# dims
+
+[![PyPI - Version](https://img.shields.io/pypi/v/dims.svg)](https://pypi.org/project/dims)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dims.svg)](https://pypi.org/project/dims)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install dims
+```
+
+## License
+
+`dims` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
