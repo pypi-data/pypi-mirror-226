@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fatoora-einvoice
+Version: 1.1.0
+Summary: Digitally Signing Xml using private key certificate invoice and get Qrcdoe invoice hash for zatca phase2, It is takes informations and parameters from the user and returns the singed xml in base64 ready to submit to zatca
+Home-page: https://github.com/bilaljmal/fatoora_einvoice
+Author: Muhammad Bilal
+Author-email: bilaljmal@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+Requires-Dist: jpype1
+
