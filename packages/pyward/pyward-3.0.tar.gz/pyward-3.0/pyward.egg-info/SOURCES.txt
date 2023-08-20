@@ -1,0 +1,7 @@
+setup.py
+pyward/__init__.py
+pyward.egg-info/PKG-INFO
+pyward.egg-info/SOURCES.txt
+pyward.egg-info/dependency_links.txt
+pyward.egg-info/requires.txt
+pyward.egg-info/top_level.txt
