@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "bicscan_engine"
+version = "0.1.0"
+description = ""
+authors = ["Ethan-ahnlabio <ethan@ahnlab.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+web3 = "^6.6.1"
+pydantic = "1.10.2"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+moralis = "^0.1.37"
+aiohttp = "^3.8.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
