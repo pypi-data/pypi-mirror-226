@@ -1,0 +1,14 @@
+srp
+beautifulsoup4
+requests
+selenium
+
+[dev]
+flake8
+reuse
+bumpver
+build
+twine
+pip
+setuptools
+wheel
