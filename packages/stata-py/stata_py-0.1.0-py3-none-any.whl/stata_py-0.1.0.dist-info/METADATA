@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: stata-py
+Version: 0.1.0
+Summary: stata for python
+Home-page: https://github.com/dmenares93/stata_py
+Author: Tu Nombre
+Author-email: dmenares@fen.uchile.cl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# stata_py
+common stata commands for python.
+
+
