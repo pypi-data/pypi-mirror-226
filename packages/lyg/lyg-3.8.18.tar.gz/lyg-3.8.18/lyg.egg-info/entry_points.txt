@@ -1,0 +1,3 @@
+[console_scripts]
+LYG_TX-server = lyg:main_function
+
