@@ -1,0 +1,17 @@
+_pynear.cp37-win_amd64.pyd,sha256=SvuLHp0JyqPVy_chJwwb4RUcViNfoY_4NfD9GkjktP0,228864
+pynear/__init__.py,sha256=vC3Pqasah9Db0yCXUpCGq86usQkn6vN_CMY6Zrdbbcs,128
+pynear/_version.py,sha256=MalDy9_4RmQv59oP7MnXXcPzCenPNfZorTPhjS-v-2E,146
+pynear/logging.py,sha256=drXaZlYVneT1ZIR5f3Ri5wyV6mVD7V6fK694d6LJaUs,558
+pynear/benchmark/__init__.py,sha256=NDqmM8xOkL37J181bXuGf5TazsUnn1qhOW2lPTSHfyU,140
+pynear/benchmark/benchmark.py,sha256=g0pMeP1jly8M0EK5_oFlMHoLBH2U0Ftvp7FN6qkRJlM,6571
+pynear/benchmark/dataset.py,sha256=e4a_YURxH9xWyy2B-Dfsyi9bzfmYidJDttWy7E4VENo,6176
+pynear/benchmark/generate_datasets.py,sha256=xvdvXe9BEl9tgjZcj_52wmLfl_vG-gug5T3qfybBieo,430
+pynear/benchmark/run_benchmarks.py,sha256=Elbm7-oVusrHQMA2qrZVVHTwkvLtE20j_pYd2_mqn_U,2959
+pynear/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynear/tests/test_serialization.py,sha256=h1W8pEh0eGu3OMrfjZUgy0vTCIByHQpMriCXb3FLhdY,1902
+pynear/tests/test_vptree.py,sha256=FNcAolCuvqyOUu3ItksCGykDkKG61i7cxBIUi5aHmu8,11361
+pynear-0.1.0.dist-info/LICENSE,sha256=HA6q4Lefzbd7xQJmREKd-9egobv_LPjdrUmweIalAbc,1098
+pynear-0.1.0.dist-info/METADATA,sha256=GSFkAtEIAaDlnNfrot72F250Y_PBZV-39Q0HkzxIUjI,6577
+pynear-0.1.0.dist-info/WHEEL,sha256=XjgoyucPba5KIJKeQEOuBejIax_ghuoOXGkTW4ghWp8,101
+pynear-0.1.0.dist-info/top_level.txt,sha256=gThuafOrDWlq3gFzqZ0Jfvrhnz9PCYGthrQQLfrDipI,15
+pynear-0.1.0.dist-info/RECORD,,
