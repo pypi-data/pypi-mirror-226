@@ -1,0 +1,6 @@
+license.txt
+setup.py
+ala_addin.egg-info/PKG-INFO
+ala_addin.egg-info/SOURCES.txt
+ala_addin.egg-info/dependency_links.txt
+ala_addin.egg-info/top_level.txt
