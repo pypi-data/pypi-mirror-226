@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "magic_assistant"
+version = "0.0.1"
+description = "An AI agent framework."
+authors = ["luguanglong <luguang_long@163.com>"]
+readme = "README.md"
+packages = [{include = "magic_assistant"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyyaml = "^6.0"
+fastapi = "^0.100.0"
+uvicorn = "^0.22.0"
+llama-cpp-python = "^0.1.68"
+case-converter = "^1.1.0"
+sqlalchemy = "^2.0.19"
+pgvector = "^0.2.0"
+loguru = "^0.7.0"
+transformers = "^4.31.0"
+sqlalchemy-utils = "^0.41.1"
+torch = "^2.0.1"
+nvidia-cublas-cu11 = "11.10.3.66"
+sentence-transformers = "^2.2.2"
+rich = "^13.5.2"
+accelerate = "^0.21.0"
+psycopg2 = "^2.9.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+#设置poetry包管理工具的自定义pypi镜像源配置
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

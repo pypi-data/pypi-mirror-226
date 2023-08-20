@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: magic-assistant
+Version: 0.0.1
+Summary: An AI agent framework.
+Author: luguanglong
+Author-email: luguang_long@163.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: accelerate (>=0.21.0,<0.22.0)
+Requires-Dist: case-converter (>=1.1.0,<2.0.0)
+Requires-Dist: fastapi (>=0.100.0,<0.101.0)
+Requires-Dist: llama-cpp-python (>=0.1.68,<0.2.0)
+Requires-Dist: loguru (>=0.7.0,<0.8.0)
+Requires-Dist: nvidia-cublas-cu11 (==11.10.3.66)
+Requires-Dist: pgvector (>=0.2.0,<0.3.0)
+Requires-Dist: psycopg2 (>=2.9.7,<3.0.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: rich (>=13.5.2,<14.0.0)
+Requires-Dist: sentence-transformers (>=2.2.2,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.19,<3.0.0)
+Requires-Dist: sqlalchemy-utils (>=0.41.1,<0.42.0)
+Requires-Dist: torch (>=2.0.1,<3.0.0)
+Requires-Dist: transformers (>=4.31.0,<5.0.0)
+Requires-Dist: uvicorn (>=0.22.0,<0.23.0)
+Description-Content-Type: text/markdown
+
+# Intro
+Magic-Assistant is an open source AI agent framework. You can use it to develop multiple types of agent. Now support 4
+types of agent:
+## chat
+Chat agent chats with you like a human. It is the most normal and simple type.
+## execute_cmd
+Execute cmd agent uses built-in plugins to try to accomplish your task. This agent type applies to simple tasks which 
+can be accomplished by one plugin.
+## plan
+Plan agent makes a plan and use built-in plugins to execute plan items according to try to accomplish your task. Agent evaluate 
+the result of execution and adjust plan if necessary. This agent type applies to complicated tasks which can not be 
+accomplished by one plugin.
+## role_play
+Role play agent usually does not work alone. Each agent has its own name, role and memory. They coordinate with each other in 
+your defined sandbox. This agent type is inspired by "Generative Agents: Interactive Simulacra of Human Behavior"
+(https://arxiv.org/abs/2304.03442).
+
+# Install
+Magic-Assistant supports two installation types: metal and docker.
+## llm
+Magic-Assistant has been developed and tested with the model 'vicuna'(https://github.com/lm-sys/FastChat.git). You need to 
+prepare the llm model in advance and configure the llm model path in the config/magic_assistant.yml. More llm modules will
+be integrated. If you want to use a llm which has not been integrated yet, you can integrate it yourself in the magic_assistant/model/llm
+directory.
+
+## metal
+1, Setup your own python environment, require python3.10+. For example, execute "conda create -n mojing python=3.10" in shell;
+2, Install python packages. In shell, cd to the directory of Magic-Assistant and execute " pip3 install -e .".
+## docker
+The Magic-Assistant docker image has already installed the python dependencies and Magic-Assistant and starts up in restful_api mode.
+If you want to use it in cli mode, you can execute "docker exec -ti $docker_name /bin/bash" and execute "python3 -m magic_assistant.main $ args".
+
+
+# usage
+Magic-Assistant supports two usage types: cli and restful_api. If you want to use or test Magic-Assistant in shell, choose the
+cli type. If you want to integrate Magic-Assistant into own products, choose the restful_api type.
+## cli
+Execute "python3 -m magic_assistant.main --help" to show the supported args. Refer to the examples in the "Magic-Assistant/examples"
+directory. For example, you can execute "python3 -m magic_assistant.main --gui_type cli --agent_type plan" to start a plan agent
+## restful api
+Will support soon.
