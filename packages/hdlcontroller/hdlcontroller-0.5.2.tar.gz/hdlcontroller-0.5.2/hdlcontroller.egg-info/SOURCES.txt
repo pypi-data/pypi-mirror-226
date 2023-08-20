@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+hdlcontroller/__init__.py
+hdlcontroller/__main__.py
+hdlcontroller/cli.py
+hdlcontroller/hdlcontroller.py
+hdlcontroller.egg-info/PKG-INFO
+hdlcontroller.egg-info/SOURCES.txt
+hdlcontroller.egg-info/dependency_links.txt
+hdlcontroller.egg-info/entry_points.txt
+hdlcontroller.egg-info/requires.txt
+hdlcontroller.egg-info/top_level.txt
