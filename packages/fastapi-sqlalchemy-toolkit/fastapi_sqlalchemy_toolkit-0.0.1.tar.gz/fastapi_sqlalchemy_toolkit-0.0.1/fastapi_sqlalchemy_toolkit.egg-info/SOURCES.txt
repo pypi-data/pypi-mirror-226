@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+fastapi_sqlalchemy_toolkit/__init__.py
+fastapi_sqlalchemy_toolkit/base_model.py
+fastapi_sqlalchemy_toolkit/db_crud.py
+fastapi_sqlalchemy_toolkit/filters.py
+fastapi_sqlalchemy_toolkit/ordering.py
+fastapi_sqlalchemy_toolkit/utils.py
+fastapi_sqlalchemy_toolkit.egg-info/PKG-INFO
+fastapi_sqlalchemy_toolkit.egg-info/SOURCES.txt
+fastapi_sqlalchemy_toolkit.egg-info/dependency_links.txt
+fastapi_sqlalchemy_toolkit.egg-info/top_level.txt
