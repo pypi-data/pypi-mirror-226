@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+arithmetic_eval/__init__.py
+arithmeval.egg-info/PKG-INFO
+arithmeval.egg-info/SOURCES.txt
+arithmeval.egg-info/dependency_links.txt
+arithmeval.egg-info/top_level.txt
