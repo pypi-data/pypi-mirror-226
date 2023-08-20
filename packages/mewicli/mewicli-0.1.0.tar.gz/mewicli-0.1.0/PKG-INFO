@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mewicli
+Version: 0.1.0
+Summary: Mewicli is simple CLI for uploading and downloading pages to MediaWiki.
+Home-page: https://gitlhub.com/maartenq/mewicli
+License: MIT
+Keywords: mediawiki
+Author: Maarten
+Author-email: ikmaarten@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 2 Pre-Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://gitlhub.com/maartenq/mewicli
+Description-Content-Type: text/markdown
+
+# Mewicli
+
+Mewicli is simple CLI for uploading and downloading pages to MediaWiki.
+

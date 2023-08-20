@@ -1,0 +1,121 @@
+# pyproject.toml
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "mewicli"
+version = "0.1.0"
+description = "Mewicli is simple CLI for uploading and downloading pages to MediaWiki."
+authors = ["Maarten <ikmaarten@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://gitlhub.com/maartenq/mewicli"
+repository = "https://gitlhub.com/maartenq/mewicli"
+keywords = ["mediawiki",]
+classifiers = [
+    "Development Status :: 2 Pre-Alpha",
+    "Environment :: Console",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.9.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+ipython = "^8.14.0"
+types-requests = "^2.31.0.2"
+tox = "^4.9.0"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pre-commit = "^3.3.3"
+black = "^23.7.0"
+
+[tool.poetry.scripts]
+mewicli = "mewicli.cli:app"
+
+[tool.poetry_bumpversion.file."src/mewicli/__init__.py"]
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[tool.black]
+line-length = 79
+preview = true
+target-version = ['py311']
+
+[tool.ruff]
+target-version = "py311"
+line-length = 79
+fix = true
+select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
+]
+ignore = [
+    "PGH003",
+    "PGH004",
+]
+
+[tool.mypy]
+python_version = 3.11
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+
+[tool.coverage.run]
+branch = true
+source = ["config", "mewicli"]
+
+[tool.coverage.report]
+omit = [
+    "*/migrations/*",
+    "*/__init__.py",
+]
+exclude_lines = [
+    "\\# pragma: no cover\\b",
+    "^\\s*raise AssertionError\\b",
+    "^\\s*raise NotImplementedError\\b",
+    "^\\s*return NotImplemented\\b",
+]
