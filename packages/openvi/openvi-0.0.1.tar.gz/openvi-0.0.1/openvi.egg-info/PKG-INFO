@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: openvi
+Version: 0.0.1
+Summary: No-code platform for computer vision
+Home-page: https://github.com/openvi-team/openvi
+Author: OpenVI Team
+License: Apache-2.0 license
+Keywords: opencv node-editor onnx onnxruntime dearpygui
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# OpenVI - Open Vision Intelligence
+
+![](openvi.drawio.svg)
+
+- Python 3.9
+
+```bash
+pip install Cython numpy==1.23.0
+pip install -r requirements.txt
+```
+
+## Run
+
+```bash
+python main.py
+```
+
+## References
+
+We used some code from the following repositories:
+
+- [Image-Processing-Node-Editor](https://github.com/Kazuhito00/Image-Processing-Node-Editor).
