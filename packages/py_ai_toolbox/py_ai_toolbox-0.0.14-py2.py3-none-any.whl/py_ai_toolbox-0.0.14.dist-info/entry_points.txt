@@ -1,0 +1,3 @@
+[console_scripts]
+ait-hf-download=ai_toolbox.hf_download:run
+
