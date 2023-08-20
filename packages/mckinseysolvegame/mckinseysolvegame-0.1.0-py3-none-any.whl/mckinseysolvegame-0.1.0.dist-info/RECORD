@@ -1,0 +1,13 @@
+mckinseysolvegame/__init__.py,sha256=_KH31iVK7T_NPi5MGkPAoL9IevFshSIqFddgX_hd2iQ,166
+mckinseysolvegame/_version.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+mckinseysolvegame/domain/__init__.py,sha256=yZajmRKoGAkyI1y3_F96-3uI9Hife44cWglFqnHPab4,200
+mckinseysolvegame/domain/models.py,sha256=hAw14tQAiQBf0rjgqmd_x_v9cmL7sZ_n3ixmop8M2XQ,3983
+mckinseysolvegame/domain/services/__init__.py,sha256=ZnElklpJjD6DkYlgigTkdjFNrNNnI0k0ADSsRqQ2rN0,105
+mckinseysolvegame/domain/services/optimization_service.py,sha256=3MakXjcAtZiW88NTnhkO7un3GKLh1ofpfFnllDY_zSk,2160
+mckinseysolvegame/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mckinseysolvegame/tests/tests_models.py,sha256=8Bts1qskMnbMqiJS79icW9jsCB43g-qJRJ2K8sxYhj0,6086
+mckinseysolvegame/tests/tests_optimization_service.py,sha256=IIXWSmzR44DrH7Mr92N4HBpqz2BfQ3ccAEd42ShEvFI,11722
+mckinseysolvegame-0.1.0.dist-info/METADATA,sha256=jsXYLJEEfnpJWZMF7n3ISzIxkEld7gSY2TGhp9RZmX0,3712
+mckinseysolvegame-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+mckinseysolvegame-0.1.0.dist-info/top_level.txt,sha256=d-JeKKNCdH5AtOx58fz8gc0-1iEW1P-xEoVVhsTPCNk,18
+mckinseysolvegame-0.1.0.dist-info/RECORD,,
