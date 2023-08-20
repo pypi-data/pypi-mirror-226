@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools >= 65", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vec_geohash"
+dynamic = ["version"]
+description = "Vectorized functions for transforming latitude and longitude coordinates to Map Tile coordinates, Map Pixel coordinates or QuadKeys"
+license = {file = "LICENSE.txt"}
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["quadkeys", "tiles", "gis", "geohash", "geohash gis", "geo tiles", "map tile system"]
+authors = [
+    {name = "Filip Jakovljevic", email = "fillix96@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "numpy",
+    'importlib_metadata; python_version < "3.8"',
+]
+
+[project.urls]
+homepage = "https://github.com/FJakovljevic/vec_geohash"
+
+[tool.setuptools_scm]
+write_to = "vec_geohash/_version.py"
+
+[tool.black]
+line-length = 130
+
+[tool.ruff]
+line-length = 130
+
+[tool.ruff.pycodestyle]
+ignore-overlong-task-comments = true
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report term-missing"
