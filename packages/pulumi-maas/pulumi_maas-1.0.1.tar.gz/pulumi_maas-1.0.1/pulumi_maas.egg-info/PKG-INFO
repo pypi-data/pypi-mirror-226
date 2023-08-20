@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pulumi-maas
+Version: 1.0.1
+Summary: A Pulumi package for creating and managing Canonical Metal-As-A-Service (MAAS) resources.
+Home-page: https://www.pulumi.com
+License: Apache-2.0
+Project-URL: Repository, https://github.com/juhnny5/pulumi-maas-python
+Keywords: pulumi maas category/cloud
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# pulumi_maas
+
+A Pulumi package for creating and managing Canonical Metal-As-A-Service (MAAS) resources.
