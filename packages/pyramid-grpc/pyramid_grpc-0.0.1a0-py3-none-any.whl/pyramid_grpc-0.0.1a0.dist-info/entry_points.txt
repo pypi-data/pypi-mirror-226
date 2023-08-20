@@ -1,0 +1,3 @@
+[console_scripts]
+grpc-server=grpc.grpc.server:run
+
