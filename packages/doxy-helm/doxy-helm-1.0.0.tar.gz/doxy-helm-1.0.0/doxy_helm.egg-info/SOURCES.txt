@@ -1,0 +1,6 @@
+setup.py
+doxy_helm.egg-info/PKG-INFO
+doxy_helm.egg-info/SOURCES.txt
+doxy_helm.egg-info/dependency_links.txt
+doxy_helm.egg-info/requires.txt
+doxy_helm.egg-info/top_level.txt
