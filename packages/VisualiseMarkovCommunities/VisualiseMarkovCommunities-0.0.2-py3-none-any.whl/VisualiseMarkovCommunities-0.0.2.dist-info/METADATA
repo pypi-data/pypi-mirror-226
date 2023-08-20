@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: VisualiseMarkovCommunities
+Version: 0.0.2
+Summary: PyMOL visualisation of Markov communities within biological molecules.
+Author-email: Ryan Reese <thenewteadrinker@gmail.com>
+Project-URL: Homepage, https://github.com/Ryan-Reese/VMC
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mypy
+Requires-Dist: tqdm
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: networkx
+
+# VMC
+Visualise Markov Communities
