@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "telegramlangtags"
+version = "1.0.0"
+description = "Telegram language codes by IETF language tag ISO-639-1"
+authors = ["yeghorkikhai <yeghorkikhai@gmail.com>"]
+license = "GNU"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
