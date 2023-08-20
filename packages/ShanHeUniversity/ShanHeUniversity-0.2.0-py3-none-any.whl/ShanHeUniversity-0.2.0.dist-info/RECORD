@@ -1,0 +1,17 @@
+ShanHeUniversity/__init__.py,sha256=j5sLZb8EH9_7N2_EvTF9XPqwlNR9PDaTiJDolROwzF0,22
+ShanHeUniversity/MobAI/__init__.py,sha256=GZQTLojTSd-gE9PpNGmlPDtejr6GmLM1cRMJ_WgxqCg,21
+ShanHeUniversity/MobAI/webapi/__init__.py,sha256=ltTVHPvm02qPtSHmLnPb9FCl60DmpkjmBhIBcesIWNY,36
+ShanHeUniversity/MobAI/webapi/v1/ApiData.py,sha256=_-M57XWW_NsJJg0-3ogvgmYKjGMXK9HgFr2pLosw3LA,2244
+ShanHeUniversity/MobAI/webapi/v1/__init__.py,sha256=sOdz2vcbXbVX95et_bldLAsRrA50TS0TSQ8VZpuS5JY,83
+ShanHeUniversity/MobAI/webapi/v1/api.py,sha256=eg1WjYcZYZ_tI_iw_1RlKf4vNn6Rb0tHi2234V1XPn0,3351
+ShanHeUniversity/MobAI/webapi/v1/common.py,sha256=0_jNztQs4XHhs9s2t6SP3JYWpSRXOu6s8El_cl_mfq8,699
+ShanHeUniversity/MobAI/webapi/v1/error.py,sha256=YRKV4LxTYSLA6pVd9cTKw3-d4bGUC32uQN4C5Wghasc,216
+ShanHeUniversity/MobAI/webapi/v2/ApiData.py,sha256=JwsFSsC2W8_keO220voDqfbIEfEOeRpMWQmm9_1_M7Y,2474
+ShanHeUniversity/MobAI/webapi/v2/__init__.py,sha256=sOdz2vcbXbVX95et_bldLAsRrA50TS0TSQ8VZpuS5JY,83
+ShanHeUniversity/MobAI/webapi/v2/api.py,sha256=XgztThu-iBq-geqeF8KS0caP1zSYpDFthzCUrEQTJ58,3357
+ShanHeUniversity/MobAI/webapi/v2/common.py,sha256=QK91tUpcw64nPUxzYhuZyKKsSd1Tqu4YdUE8Kcsnyuk,702
+ShanHeUniversity/MobAI/webapi/v2/error.py,sha256=YRKV4LxTYSLA6pVd9cTKw3-d4bGUC32uQN4C5Wghasc,216
+ShanHeUniversity-0.2.0.dist-info/METADATA,sha256=4avCGb7-GvcVSJdsp5x6N4FgkMgTNIn11OLA5bSzAq4,12495
+ShanHeUniversity-0.2.0.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+ShanHeUniversity-0.2.0.dist-info/top_level.txt,sha256=dVvXh2CbnECwTd4i0DSrJTR8RH4_uPMPRYdto2k-2V0,17
+ShanHeUniversity-0.2.0.dist-info/RECORD,,
