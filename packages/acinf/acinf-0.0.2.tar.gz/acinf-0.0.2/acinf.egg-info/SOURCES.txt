@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+acinf/__main__.py
+acinf.egg-info/PKG-INFO
+acinf.egg-info/SOURCES.txt
+acinf.egg-info/dependency_links.txt
+acinf.egg-info/entry_points.txt
+acinf.egg-info/requires.txt
+acinf.egg-info/top_level.txt
