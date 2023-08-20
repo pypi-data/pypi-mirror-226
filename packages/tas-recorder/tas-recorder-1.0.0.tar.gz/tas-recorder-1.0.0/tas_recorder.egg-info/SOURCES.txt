@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+tas/__init__.py
+tas/constants.py
+tas/playback.py
+tas/recorder.py
+tas/utils.py
+tas_recorder.egg-info/PKG-INFO
+tas_recorder.egg-info/SOURCES.txt
+tas_recorder.egg-info/dependency_links.txt
+tas_recorder.egg-info/requires.txt
+tas_recorder.egg-info/top_level.txt
+tests/test.py
