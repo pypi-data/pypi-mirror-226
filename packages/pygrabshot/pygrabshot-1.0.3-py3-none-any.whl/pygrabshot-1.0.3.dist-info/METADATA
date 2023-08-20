@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pygrabshot
+Version: 1.0.3
+Summary: cross-platform library to take screenshots
+Author-email: media.hr@execs.com
+License: Eclipse Public License 2.0
+License-File: LICENSE.txt
+
+Documentation: https://github.com/kittyplot/pygrabshot
