@@ -1,0 +1,9 @@
+detectron2_layers/__init__.py,sha256=24xe9rsP7cz0ocz1fE6EHvRNZFA-WlnMWG5asWNirnM,94
+detectron2_layers/batch_norm.py,sha256=4oNz2Sb9JUoBsiKCvkylbkQFhrBf0auk51WV9KrKRc4,13801
+detectron2_layers/blocks.py,sha256=GE7bLk_JLrFKk2prFb0fWBRn_qUEx1YecqoUC08ibt4,3023
+detectron2_layers/utils.py,sha256=XHMua2uqMHNgJL3X0ZKFcJxqjOxqZITx-qwKvQvrSOk,282
+detectron2_layers/wrappers.py,sha256=fqDHRsIGuGzJdOKLdBjAiEsDhQwahgN7TKjlNlUkFUM,5517
+detectron2_layers-0.0.5.dist-info/METADATA,sha256=XA204S9S0DaWEP1yb4sixG5NWUSZuViR-Mqo3vIPS2I,259
+detectron2_layers-0.0.5.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+detectron2_layers-0.0.5.dist-info/top_level.txt,sha256=t3CoyCShbHeSYmaBUXQE1JHmbfSaAnL1YiMA3KM5jlw,18
+detectron2_layers-0.0.5.dist-info/RECORD,,
