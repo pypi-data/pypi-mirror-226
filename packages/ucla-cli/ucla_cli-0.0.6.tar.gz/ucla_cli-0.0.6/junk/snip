@@ -1,0 +1,12 @@
+<script type="text/javascript">
+        uclaSaSetTitleSafe( "Search " + "results for: 2023, Fall, Mathematics (MATH)", 0);
+
+    window.addEventListener('load', function () {
+        SearchPanel.SearchData = JSON.stringify({"subj_area_cd":"MATH   ","search_by":"Subject","term_cd":"23F","SubjectAreaName":"Mathematics (MATH)","ActiveEnrollmentFlag":"n","HasData":"True"});
+        SearchPanel.SearchBy = "subject";
+        currentActiveTerm = '23F';
+        if ($('#btn_enrollmentAction_Enable').length != 0) {
+            $('#btn_enrollmentAction_Enable').attr("disabled", "disabled");
+        }
+    })
+</script>
