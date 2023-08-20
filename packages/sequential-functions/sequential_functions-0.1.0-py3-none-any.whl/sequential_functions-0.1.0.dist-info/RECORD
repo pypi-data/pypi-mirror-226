@@ -1,0 +1,9 @@
+sequential_functions/__init__.py,sha256=88cSpbmLjCqBkIfnm4mbn1gGBdKV_GBxAxrbnQk-bZM,62
+sequential_functions/batch.py,sha256=nMMhZEWrc1QvbqUCZbDVi5v2NlNwnU4VeFN3UBiy_FY,1009
+sequential_functions/callable.py,sha256=M9RXhNuv3juWEs-kwS-eO1NTywxvEnrRc-r3yyKSTA4,22
+sequential_functions/compose.py,sha256=OYayQLY-keHDTf7G68EqC4dgw1C-PjxVCXb5PuDfPlA,5624
+sequential_functions-0.1.0.dist-info/LICENSE,sha256=ys0m_JgsJmu0JLegM1dtrZW9pZq0i3T8QNy21lYyO4E,1072
+sequential_functions-0.1.0.dist-info/METADATA,sha256=O5NgSSPi6ZGXqashLQN8xbbnEsjBopr6y6CsJHBzRsY,8807
+sequential_functions-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+sequential_functions-0.1.0.dist-info/top_level.txt,sha256=0iHUAW6DmKv-bw5NImcmN9CkSW3_9e2Bb-nRS4p0tvo,21
+sequential_functions-0.1.0.dist-info/RECORD,,
