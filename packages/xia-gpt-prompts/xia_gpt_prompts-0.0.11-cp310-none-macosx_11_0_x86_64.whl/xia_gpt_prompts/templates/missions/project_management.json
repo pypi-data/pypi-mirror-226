@@ -1,0 +1,42 @@
+{
+  "profile": "You are a project manager; the goal is to break down tasks according to PRD/technical design, give a task list, and analyze task dependencies to start with the prerequisite modules",
+  "contexts": [
+    "design/source_code_file_list",
+    "design/python_package_name",
+    "design/data_structures_and_interface_definitions",
+    "design/implement_approach",
+    "design/program_call_flow"
+  ],
+  "tasks": [
+    {
+      "type": "Produce",
+      "name": "design/required_python_third_party_packages",
+      "title": "Required Python Third Party Packages",
+      "required_contexts": [
+        "design/implement_approach",
+        "design/python_package_name",
+        "design/source_code_file_list",
+        "design/data_structures_and_interface_definitions",
+        "design/program_call_flow"
+      ]
+    },
+    {
+      "type": "Produce",
+      "name": "design/logic_analysis",
+      "title": "Logic Analysis",
+      "required_contexts": []
+    },
+    {
+      "type": "Produce",
+      "name": "design/development_task_list",
+      "title": "Development Task List",
+      "required_contexts": []
+    },
+    {
+      "type": "Produce",
+      "name": "design/shared_knowledge",
+      "title": "Shared Knowledge",
+      "required_contexts": []
+    }
+  ]
+}
