@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: uglypty
+Version: 0.3.1
+Summary: UglyPTY - A PyQt6-based SSH client.
+Home-page: https://github.com/scottpeterman/UglyPTY
+Author: Scott Peterman
+Author-email: scottpeterman@gmail.com
+License: GPL
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# UglyPTY
+
+UglyPTY is a graphical terminal emulator built with Python and PyQt6. It provides a user-friendly interface for managing and establishing SSH connections, with some great productivity of features. This is the base product of many Network Engineering automation tools currently in development. The best network automation tools are in python ...
+
+### Python needed a native SSH GUI Terminal
+This application does NOT wrap a backend web server like Webssh. It DOES use xterm.js for terminal emulation.
+
+> **Note**: This is a VERY beta release with a lot of functionality.
+
+## Features
+
+- **Session Manager**: Leverage the sessions you use in your Terminal environment in your automation scripts (examples included).
+  - Create, edit, or delete sessions with specific settings.
+  - Supports password and key based authentication.
+  
+- **Credentials Manager**: Safely manage your user credentials.
+  - Passwords are encrypted.
+  - Fetch all credentials or a specific credential by ID from a SQLite database (`settings.sqlite`).
+  
+- **Themed Views**: Multiple theme modes - light, dark, light-dark, and dark-light.
+  
+- **Tab Management**: Handle multiple SSH connections across different tabs.
+
+## External Libraries
+
+UglyPTY uses the widget library from [UglyWidgets](https://github.com/scottpeterman/UglyWidgets).
+- UglyWidgets is a collection of useful PyQt6 re-usable widgets for building automation GUI interfaces. The POC application provides a graphical interface for full embedded ssh client with xterm.js support, a fully functional embedded windows terminal - supports cmd.exe, powershell.exe or wsl.exe, FileTree browsing files and editing files, based on the ACE.js editor, built using the PyQt6 framework.
+
+### Paramiko to xterm.js communication
+<div align="center">
+  <img src="screen_shots\sshwidget_keystroke_flow_bidi.png" alt="Communication Flow" width="400px">
+</div>
+
+## Installation
+
+1. Tested with Python 3.9.13 for Windows in venv, and pipenv. Other versions might work.
+2. Use PyPi unless you want to contribute.
+3. Using `pipenv` (or use `pip` with an activated venv):
+
+    ```bash
+    pipenv shell
+    pipenv install uglypty
+    ```
+
+To start the application, navigate to the activated virtual directory, local keys, your session database, and log files will be here:
+
+    python or pythonw -m uglypty
+
+## A special thanks to those whose efforts this tool is built on (shoulders of giants and all that)
+- Qt   https://www.qt.io/
+- PyQt6    https://www.riverbankcomputing.com/software/pyqt/   Yes I could have used PySide6, and maybe will add that. I've used PyQt to fix my own problems for years, and I just love it!
+- Netmiko  Kirk - you are awesome! (Network Engineers - his classes are awesome as well)
+- Paramiko  Most don't know just how much automation has been enabled by this project (Ansible, looking at you over the years)
+- TTP  Very few outside the network automation space know of this, but it transformed the ability to automate legacy network equipment, much of which still wont do a simple "show blah | json". I have literally worked with it since ver 0.0.1 - this guy is amazing: https://github.com/dmulyalin/ttp
+
+
+## Screenshots
+
+Here are some snapshots of UglyPTY in action:
+
+<div align="center">
+  <img src="screen_shots\uglydark.PNG" alt="UglyPTY Dark" width="400px">
+  <hr><img src="screen_shots\uglylight.png" alt="UglyPTY Light Splash" width="400px">
+  <hr><img src="screen_shots\darklight.png" alt="UglyPTY darklight" width="400px">
+  <hr><img src="screen_shots\lightdark.png" alt="UglyPTY Lightdark" width="400px">
+</div>
+
+---
+
+**Enjoy using UglyPTY!**
+
+
+## Package Distribution
+
+```python
+# Create a source distribution and a wheel
+python setup.py sdist bdist_wheel
+
+# Set up a new virtual environment
+python -m venv test_env
+
+# Activate the virtual environment
+source test_env/bin/activate  # On Linux/Mac
+test_env\Scripts\activate     # On Windows
+
+# Install the wheel
+pip install dist/uglypty-0.1-py3-none-any.whl
+
+# Test your script
+python or pythonw -m uglypty
