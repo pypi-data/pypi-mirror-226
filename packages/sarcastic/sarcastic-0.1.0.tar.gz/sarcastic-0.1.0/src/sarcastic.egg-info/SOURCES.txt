@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/sarcastic/__init__.py
+src/sarcastic/__main__.py
+src/sarcastic.egg-info/PKG-INFO
+src/sarcastic.egg-info/SOURCES.txt
+src/sarcastic.egg-info/dependency_links.txt
+src/sarcastic.egg-info/entry_points.txt
+src/sarcastic.egg-info/top_level.txt
