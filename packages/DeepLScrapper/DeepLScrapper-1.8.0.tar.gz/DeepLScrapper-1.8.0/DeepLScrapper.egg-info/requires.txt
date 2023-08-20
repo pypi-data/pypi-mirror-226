@@ -1,0 +1,5 @@
+selenium
+beautifulsoup4
+fake-useragent
+sqlite3
+flask

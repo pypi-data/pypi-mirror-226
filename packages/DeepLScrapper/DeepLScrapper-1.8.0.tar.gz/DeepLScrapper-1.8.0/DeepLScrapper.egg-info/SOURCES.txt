@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+DeepLScrapper/__init__.py
+DeepLScrapper/translator.py
+DeepLScrapper/webapp.py
+DeepLScrapper.egg-info/PKG-INFO
+DeepLScrapper.egg-info/SOURCES.txt
+DeepLScrapper.egg-info/dependency_links.txt
+DeepLScrapper.egg-info/requires.txt
+DeepLScrapper.egg-info/top_level.txt
