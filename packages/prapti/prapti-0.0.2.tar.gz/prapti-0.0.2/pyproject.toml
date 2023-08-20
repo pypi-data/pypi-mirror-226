@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prapti"
+dynamic = ["version"]
+description = "Converse with LLMs directly in markdown files"
+requires-python = ">=3.10"
+license = {text = "MIT License"}
+readme = "README.md"
+authors = [
+  {name = "Ross Bencina"},
+  {name = "Scott Brewer"},
+]
+keywords = ["ai", "ChatGPT", "markdown"]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: End Users/Desktop",
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Text Processing :: Markup :: Markdown"
+]
+dependencies = [
+    "pydantic >= 2.1.1",
+    "requests >= 2.28.1",
+    "openai >= 0.27.6",
+    "tiktoken >= 0.4.0",
+    "gpt4all >= 1.0.2"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "prapti.__version__.__version__"}
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4",
+    "pytest-check-links>=0.9"
+]
+
+[project.urls]
+Homepage = "https://github.com/prapti-ai/prapti"
+Documentation = "https://github.com/prapti-ai/prapti"
+Repository = "https://github.com/prapti-ai/prapti.git"
+
+[project.scripts]
+prapti = "prapti.tool:main"
+
+[project.entry-points."prapti.plugin"]
+"prapti.test.test_config" = "prapti.plugins.prapti_test_config:prapti_plugin"
+"prapti.test.test_responder" = "prapti.plugins.prapti_test_responder:prapti_plugin"
+"prapti.test.test_actions" = "prapti.plugins.prapti_test_actions:prapti_plugin"
+
+"openai.chat" = "prapti.plugins.endpoints.openai_chat_responder:prapti_plugin"
+"koboldcpp.text" = "prapti.plugins.endpoints.koboldcpp_text_responder:prapti_plugin"
+"local.openai.chat" = "prapti.plugins.endpoints.local_openai_chat_responder:prapti_plugin"
+"experimental.gpt4all.chat" = "prapti.plugins.endpoints.gpt4all_chat_responder:prapti_plugin"
+
+"prapti.include" = "prapti.plugins.include:prapti_plugin"
+
+"prapti.experimental.agents" = "prapti.plugins.experimental_agents:prapti_plugin"
+"prapti.experimental.gitlog" = "prapti.plugins.experimental_gitlog:prapti_plugin"
+
+[tool.setuptools]
+include-package-data = true # ensure that template markdown files are included
+
+[tool.setuptools.packages]
+find = {} # default project directory scan
+
+# Why no setup.py?
+# pip editable installs without a setup.py require pip v21.1 or later.
+# pip v21.1 was released April 1, 2021. Python 3.10.0 was released October 4, 2021
+# We require python 3.10, thus we assume you have pip >= v21.1
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+testpaths = [
+    "tests"
+]
+addopts = [
+    "--import-mode=importlib",
+]
+python_classes = "!Test"
