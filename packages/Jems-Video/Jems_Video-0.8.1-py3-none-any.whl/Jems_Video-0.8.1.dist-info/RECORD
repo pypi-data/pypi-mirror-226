@@ -1,0 +1,12 @@
+stable_diffusion_videos/__init__.py,sha256=RCXZz19p-pXQn6kpdoCgacl55ZS7uDnkQFtL6j_5y_k,3350
+stable_diffusion_videos/app.py,sha256=jUda_YhijnzSiXn7eYxyweRofHumEWpGLPyZv6ykf68,4747
+stable_diffusion_videos/flax_stable_diffusion_pipeline.py,sha256=Mfai4oH8tzSR3lq6Pl-oXftYQ8t5D0YS2dT_Ol0yJv8,39846
+stable_diffusion_videos/image_generation.py,sha256=pflsbU2g4HHJKa1EHsZi0P0WsBoiD29isAr93ULdMNE,14293
+stable_diffusion_videos/stable_diffusion_pipeline.py,sha256=uZ4M02m0VGHP8PkZMc9nEEgdfkw7gh4CK7_xw3L6Om8,41627
+stable_diffusion_videos/upsampling.py,sha256=0E3PZxWFM93PyaN7H9tfukCnMrWBhVBFHevuzivemLM,4427
+stable_diffusion_videos/utils.py,sha256=MqQtvPzOkLvtEi6xokMThDusL8TCeDtko9XepnAmkL4,4223
+Jems_Video-0.8.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+Jems_Video-0.8.1.dist-info/METADATA,sha256=VMwGkXXS-ZnVi1WIEwLzKQZ1sb9P8O53mYsveSZ72lI,5400
+Jems_Video-0.8.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Jems_Video-0.8.1.dist-info/top_level.txt,sha256=frIQxdD-9G2fhuO591BBhjMd2DfVx3oUAVcSXrad7eY,24
+Jems_Video-0.8.1.dist-info/RECORD,,
