@@ -1,0 +1,8 @@
+vec_geohash/__init__.py,sha256=lrnZ_angQfTSsAcM8Q28xKTbqn4O66UVCNaKTO13lJA,1080
+vec_geohash/_version.py,sha256=ecxYgYmVW6voOj3t8NqL_62765FAcc-gUSyum7oXnIg,160
+vec_geohash/vec_geohash.py,sha256=jC88LPMsDKaQR8Cpji3dckiwA-d__gd4dsHKQ4qD_GM,9838
+vec_geohash-0.0.3.dist-info/LICENSE.txt,sha256=G2xYHwDqcfHb7cOqKSSx-0nCQnJZqxROR01-iRMvx_4,1083
+vec_geohash-0.0.3.dist-info/METADATA,sha256=QsRdvOnr8xIpmpvc4hCMf105e3OnGRvcCM1jveWDcwE,4740
+vec_geohash-0.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+vec_geohash-0.0.3.dist-info/top_level.txt,sha256=sg32HiJqLMm62XEz9bdtYfJ52XEge5BD9SDJyVjuFzo,12
+vec_geohash-0.0.3.dist-info/RECORD,,
