@@ -1,0 +1,2 @@
+[console_scripts]
+k2dg = k2dg._cli:run_cli
