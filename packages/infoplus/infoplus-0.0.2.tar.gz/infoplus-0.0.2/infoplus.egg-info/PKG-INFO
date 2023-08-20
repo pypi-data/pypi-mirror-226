@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: infoplus
+Version: 0.0.2
+Summary: torchinfoplus for pytorch and mindsporeinfoplus for mindspore
+Home-page: https://github.com/pzy2000
+Author: Yanzhou Mu, Xuance Zhou, Zhiyuan Peng
+Author-email: 522022000027@smail.nju.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is torchinfoplus for pytorch and mindsporeinfoplus for mindspore.
+
+Powered by Yanzhou Mu, Xuance Zhou and Zhiyuan Peng.
