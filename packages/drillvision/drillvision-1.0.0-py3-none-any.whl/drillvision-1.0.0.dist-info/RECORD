@@ -1,0 +1,14 @@
+neural_network_model/VERSION,sha256=klIfw8vZZL3J9YSpkbif3apXVO0cyW1tQkRTOGacEwU,5
+neural_network_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neural_network_model/bit_vision.py,sha256=IyeNlxxyiOP9tvR937n9LI4sN6Dym7k-kFHnjJXtHH8,29125
+neural_network_model/model.py,sha256=agkYlsX_DvqquIfBC2pJu_L3LV-8r-W9GA4xUJoQZ3A,9013
+neural_network_model/plot_results.py,sha256=0v-VIWyPz1Xm8aAx_Cy2suX8X4moOwL1YgHJFLkl7mA,7070
+neural_network_model/process_data.py,sha256=K4oo7Ze5se4kk6SGBb70q-DJv7-_Cqyv8m3zAd1Ki-0,15039
+neural_network_model/s3.py,sha256=JO7u5DDXYF9o6EgWT6rDugs5FpgAxmEBBecpMhhqFSM,2843
+neural_network_model/script_run_all.py,sha256=3reZNY699lSQI11nYC3eRSEw75z7cVTH1Zg-Abt2_0E,2044
+neural_network_model/transfer_learning.py,sha256=SFzNvikq2RfwD-rF4InRNhQo7XfM0q5MK5xGe9Oz6zQ,36321
+neural_network_model/visual_insights.py,sha256=XbraQeamfITANXcXSmkCpIDzMFnkT0sFHdkk4xJX3UQ,62584
+drillvision-1.0.0.dist-info/METADATA,sha256=3mGvlwWb5W1RSuOMiK5C1CulO4QJQOd-LxuRaSBA4lE,14385
+drillvision-1.0.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+drillvision-1.0.0.dist-info/top_level.txt,sha256=kQnnl8vwWu3-zJJu0sYn3zcPUtoXOhAWiipv1w9cJeY,21
+drillvision-1.0.0.dist-info/RECORD,,
