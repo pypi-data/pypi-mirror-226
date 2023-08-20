@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: robopy2
+Version: 0.1.0
+Summary: Lightweight pure python robotics package
+Home-page: https://github.com/Tarnarmour/RoboPy2
+Author: John Morrell
+Author-email: Tarnarmour@gmail.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.25.2
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
+# RoboPy2
+Second release of the RoboPy library
+
+## Dependencies
+
+### Runtime dependencies
+- numpy 1.25.2
+
+### development dependencies
+- pytest 7.4.0
+
+## Installation
+Just install it instantly and everywhere
+
+## Getting Started
+Make an arm and have fun

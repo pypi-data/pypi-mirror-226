@@ -1,0 +1,9 @@
+robopy2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robopy2/kinematics.py,sha256=NQbwS_VchDVUNs35-JeXIV0RRpLIRHwQrIixHa2NGYA,595
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_kinematics.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robopy2-0.1.0.dist-info/LICENSE,sha256=TcjuXPfTalgEo36p6df_4VGvpgLWOulk3kFOY8qj7Bc,1090
+robopy2-0.1.0.dist-info/METADATA,sha256=SQlDNxJNliLWk4keoD020UspSf8e3M8Ne3fPyg85aLY,665
+robopy2-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+robopy2-0.1.0.dist-info/top_level.txt,sha256=05MI3FThZtGbECxbxPnQoliao652cOUx_Lssxgwen5Y,14
+robopy2-0.1.0.dist-info/RECORD,,
