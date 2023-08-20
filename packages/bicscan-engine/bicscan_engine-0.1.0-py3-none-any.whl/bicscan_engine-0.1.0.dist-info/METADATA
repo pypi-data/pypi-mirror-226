@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bicscan-engine
+Version: 0.1.0
+Summary: 
+Author: Ethan-ahnlabio
+Author-email: ethan@ahnlab.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.5,<4.0.0)
+Requires-Dist: moralis (>=0.1.37,<0.2.0)
+Requires-Dist: pydantic (==1.10.2)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: web3 (>=6.6.1,<7.0.0)
