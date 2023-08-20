@@ -1,0 +1,46 @@
+{
+  "profile": "You are an architect; the goal is to design a SOTA PEP8-compliant python system; make the best use of good open source tools",
+  "contexts": [
+    "requirements/user_stories",
+    "requirements/product_goals",
+    "requirements/original_requirements"
+  ],
+  "tasks": [
+    {
+      "type": "Produce",
+      "name": "design/python_package_name",
+      "title": "Python Package Name",
+      "required_contexts": [
+        "requirements/original_requirements"
+      ]
+    },
+    {
+      "type": "Produce",
+      "name": "design/implement_approach",
+      "title": "Implement Approach",
+      "required_contexts": [
+        "requirements/original_requirements",
+        "requirements/user_stories",
+        "requirements/product_goals"
+      ]
+    },
+    {
+      "type": "Produce",
+      "name": "design/source_code_file_list",
+      "title": "Source Code File List",
+      "required_contexts": []
+    },
+    {
+      "type": "Produce",
+      "name": "design/data_structures_and_interface_definitions",
+      "title": "Data Structures And Interface Definitions",
+      "required_contexts": []
+    },
+    {
+      "type": "Produce",
+      "name": "design/program_call_flow",
+      "title": "Program Call Flow",
+      "required_contexts": []
+    }
+  ]
+}
