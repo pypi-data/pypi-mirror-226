@@ -1,0 +1,5 @@
+setup.py
+jokerapi.egg-info/PKG-INFO
+jokerapi.egg-info/SOURCES.txt
+jokerapi.egg-info/dependency_links.txt
+jokerapi.egg-info/top_level.txt
