@@ -1,0 +1,9 @@
+semiformal-0.7.0.dist-info/LICENSE,sha256=8E236J9IWFMXkjYLbV1RGpXb0EzsYSi3qRG-vJODmyw,1069
+semiformal-0.7.0.dist-info/top_level.txt,sha256=E_sk2VTUxrcUHoyDmRq5PZDhgVyTjM2xL5QwGXPh31s,11
+semiformal-0.7.0.dist-info/RECORD,,
+semiformal-0.7.0.dist-info/METADATA,sha256=2Ib47efZ472qP3ZOdmujei7NZ6Dx_7Hxp5hbJNfueoI,948
+semiformal-0.7.0.dist-info/WHEEL,sha256=Rd2z1QYVrlfExp_0x6wC8PgkRn7zfKGJqKO_3X4vZ7I,111
+semiformal/_tokenizer.cpython-311-i386-linux-musl.so,sha256=bukbbbE9NHdQT29apgGUVRD14s1y7DF9Qm1eQCQLFZU,19050076
+semiformal/tokenizer.py,sha256=NnAropO5GNeESlngFU_t0vz0BZnzogtS6NNZDLjc5YA,669
+semiformal/token_types.py,sha256=2QLbIhFfzWeSH-MZTTGb7p4ZSOBdtTdiZJRoqr_FYjY,999
+semiformal/__init__.py,sha256=CwQAd3UNZXao61UvA562Xk3fK9_Xc_ipbQVjIJPvmYw,90
