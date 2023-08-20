@@ -1,0 +1,5 @@
+pigs-0.1.0.dist-info/METADATA,sha256=iT4q0bS43COMbMc6NBASIfpXUY299wCZwXtr-3nn_4w,445
+pigs-0.1.0.dist-info/WHEEL,sha256=GF8OoguhZNrfDrCAYiL6K_r_rDgDp3WgXOVWklDSZ0Y,95
+pigs/__init__.py,sha256=sBBr1dUjRT7RTJgMqW4GfOG4lxlsp9Uoc45QG10UZRQ,99
+pigs/pigs.cp310-win_amd64.pyd,sha256=YkK1qg1B3g1jTfasg8uYXFrLOlhY-0h5o8myCqSIKMk,239104
+pigs-0.1.0.dist-info/RECORD,,
