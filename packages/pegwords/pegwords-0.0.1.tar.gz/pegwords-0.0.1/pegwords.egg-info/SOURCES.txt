@@ -1,0 +1,13 @@
+README.md
+digits-to-words.py
+setup.py
+words-to-digits.py
+pegwords/__init__.py
+pegwords/utils.py
+pegwords/words.py
+pegwords.egg-info/PKG-INFO
+pegwords.egg-info/SOURCES.txt
+pegwords.egg-info/dependency_links.txt
+pegwords.egg-info/top_level.txt
+test/test_utils.py
+test/test_words.py
