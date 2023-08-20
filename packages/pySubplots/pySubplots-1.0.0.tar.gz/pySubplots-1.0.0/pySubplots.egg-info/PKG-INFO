@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pySubplots
+Version: 1.0.0
+Summary: A python script for plotting multiple subplots.
+Home-page: https://github.com/kimariyb/py-subplots
+Author: Kimariyb, Ryan Hsiun
+Author-email: kimariyb@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pySubplots
+
+## 安装
+
+## 使用
+
+## 许可证
+
