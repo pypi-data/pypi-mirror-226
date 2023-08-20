@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+ammarpyasa/__init__.py
+ammarpyasa/asagame.py
+ammarpyasa.egg-info/PKG-INFO
+ammarpyasa.egg-info/SOURCES.txt
+ammarpyasa.egg-info/dependency_links.txt
+ammarpyasa.egg-info/not-zip-safe
+ammarpyasa.egg-info/top_level.txt
