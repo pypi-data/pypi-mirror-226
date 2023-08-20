@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tlcpack_nightly.egg-info/PKG-INFO
+tlcpack_nightly.egg-info/SOURCES.txt
+tlcpack_nightly.egg-info/dependency_links.txt
+tlcpack_nightly.egg-info/not-zip-safe
+tlcpack_nightly.egg-info/top_level.txt
