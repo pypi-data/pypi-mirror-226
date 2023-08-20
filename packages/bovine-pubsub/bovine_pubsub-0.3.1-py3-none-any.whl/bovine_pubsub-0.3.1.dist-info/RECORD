@@ -1,0 +1,10 @@
+bovine_pubsub/__init__.py,sha256=5V6SDqsAAmLtDyxn_7MitNkJCUPCuvc9YaefR2odRPI,875
+bovine_pubsub/amqp.py,sha256=ZV33zldN6_IAZL0B5q6sZcOONSZWWBVB1zkpYyJcBT8,1663
+bovine_pubsub/amqp_iterator.py,sha256=Qsze8HBEXjIj6TOQrmwdFEfdSI5QZsJTS75xN_eLEEM,763
+bovine_pubsub/amqp_manager.py,sha256=51MJVNzbvalGrWkFox5uTjkBKi-ZpjwHu_8uYK9RSvw,1420
+bovine_pubsub/queue.py,sha256=6Z1sV-_jDiWdKVipt__4q6TKgkOHCfc00ITiyeYUz9M,868
+bovine_pubsub/redis.py,sha256=fWoYMZaI1HThVSN6N4ajYULmWEXhqm-cyNMNTi8-PNU,1091
+bovine_pubsub/test_app.py,sha256=ZhNTLbB-nGRgYcBhpUkOo0pIdr0K3tr_B2tzHzzNKEk,1100
+bovine_pubsub-0.3.1.dist-info/METADATA,sha256=dxu3ux33Bt17AzQpxMHnHzt43H8aLr0jUqLoXOsmezQ,2523
+bovine_pubsub-0.3.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+bovine_pubsub-0.3.1.dist-info/RECORD,,
