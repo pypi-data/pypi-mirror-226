@@ -1,0 +1,16 @@
+uniTbrow/__init__.py,sha256=62Ghj_97x7k8zBoYtd5Cf8NJQ9ZsFSCBYXuJ-jxHUdg,152
+uniTbrow/constants/__init__.py,sha256=1htVWPEGeQKIp0vPLcQJ_Rqs0Kpi7Q7apCG4Pem6yBA,114
+uniTbrow/constants/constants.py,sha256=xYKunXRekbjpCLMBsGPGT0j0H6qcMxwM7ZQzZLjHHMo,2889
+uniTbrow/conversions/__init__.py,sha256=IHMU2ggS6fa8tdNpbYOXnJxWbfHbJfUP0KQUQOXsbRg,135
+uniTbrow/conversions/base_unit_systems.py,sha256=fYJuk_i9Gf6cb5LprL6qW_DkzDkGhPt6wcf_W3K4dMc,920
+uniTbrow/conversions/unit_conversions.py,sha256=8MmvWyaeG3XZ4rPHrBXQPYj1Js1IDfK-AZscMt4IjG0,419
+uniTbrow/dimensions/__init__.py,sha256=WKsmBGAa9gv3gREHtmGWCawnU_9IDNSm-ZF65L362lU,26
+uniTbrow/dimensions/dimensions.py,sha256=UzVPXg5wa0UUEyxFz7nw0vXP0Xffcgfd6uhifGyEuIU,2216
+uniTbrow/parsers/__init__.py,sha256=vJstNC7z3EQmxB-D6nqbgg8k7lj8e2uPYRPVTcAuuyo,37
+uniTbrow/parsers/unit_parser.py,sha256=_025292DxYHjBCC3a66rjqZld4Id5K9zRMiS5pIRuTo,292
+uniTbrow/units/__init__.py,sha256=m-oqitzCmvPVINQuhR5VriX06sri-OeUlE7FpyK_87Y,21
+uniTbrow/units/units.py,sha256=r-1CGCfcN-arc2lkJhhY3QdJthKSVWsuOsKy4Nzm6PI,19024
+unitbrow-0.2.8.dist-info/METADATA,sha256=Hh8aNPvtk8ukOlSLyD208tvU3-Sf9cZawjTGCxsSVbs,682
+unitbrow-0.2.8.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+unitbrow-0.2.8.dist-info/licenses/LICENSE,sha256=tKe2WPWUfRLgIm3FmJN8LLfITlyRZ6EK5FlKZJ_K7zU,9521
+unitbrow-0.2.8.dist-info/RECORD,,
