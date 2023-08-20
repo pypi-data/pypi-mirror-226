@@ -1,0 +1,2 @@
+[console_scripts]
+scheduler = scheduler.__main__:main
