@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: acinf
+Version: 0.0.1
+License-File: LICENSE.txt
+Requires-Dist: wrapt-timeout-decorator
+Requires-Dist: crccheck
+Requires-Dist: tenacity
+Requires-Dist: bleak
+
