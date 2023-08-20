@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+termii_sdk/__init__.py
+termii_sdk/core.py
+termii_sdk/error.py
+termii_sdk/insights_api.py
+termii_sdk/messaging_api.py
+termii_sdk/token_api.py
+termii_sdk.egg-info/PKG-INFO
+termii_sdk.egg-info/SOURCES.txt
+termii_sdk.egg-info/dependency_links.txt
+termii_sdk.egg-info/requires.txt
+termii_sdk.egg-info/top_level.txt
