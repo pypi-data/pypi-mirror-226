@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: xbrl-filings-api
+Version: 0.0.1
+Summary: Python API for filings.xbrl.org XBRL report repository.
+Project-URL: Homepage, https://github.com/lsalmela/xbrl-filings-api
+Project-URL: Documentation, https://github.com/lsalmela/xbrl-filings-api#readme
+Project-URL: Source, https://github.com/lsalmela/xbrlfilingsapi
+Project-URL: Issues, https://github.com/lsalmela/xbrl-filings-api/issues
+Author-email: Lauri Salmela <lauri.m.salmela@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: AFR,ESEF,ESMA,EU,European Single Electronic Format,European Union,Extensible Business Reporting Language,IFRS,Inline XBRL,JSON,JSON-API,XBRL,accounting,accounting quality,annual financial report,consolidated,consolidation,financial analysis,financial statement,financial statement analysis,iXBRL,listed company,regulated markets,stock exchange,structured data,transparency
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: Flake8
+Classifier: Framework :: Hatch
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: SQL
+Classifier: Topic :: File Formats :: JSON
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# XBRL Filings API
+
+Python API for filings.xbrl.org XBRL report repository.
+
+> **Note**
+> This library is still under development.
+
+The library is not connected to XBRL International.
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install xbrl-filings-api
+```
+
+## License
+
+`xbrl-filings-api` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
