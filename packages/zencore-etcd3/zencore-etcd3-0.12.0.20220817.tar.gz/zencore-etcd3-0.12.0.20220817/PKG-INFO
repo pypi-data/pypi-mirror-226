@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: zencore-etcd3
+Version: 0.12.0.20220817
+Summary: Python client for the etcd3 API
+Home-page: https://github.com/kragniz/python-etcd3
+Author: Louis Taylor
+Author-email: louis@kragniz.eu
+License: Apache Software License 2.0
+Keywords: etcd3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+# zencore-etcd3
+
+`etcd3`的副本。
+
+## 原项目说明
+
+- 本项目是原项目`etcd3`的副本。
+- 原项目pypi页面是：https://pypi.org/project/etcd3/
+- 原项目github页面是：https://github.com/kragniz/python-etcd3/
+- 相关文档、代码及问题讨论，都请使用原项目相关链接。
+
+## 关于本项目
+
+- 使用`pip install etcd3`安装的最新版本是0.12.0，但都不能正常使用。
+- 其依赖的第三方包都已经升级更新，但通过`pip install etcd3`安装的代码与最新包都不兼容。
+- 测试发现，通过源代码安装，却可以与这些最新的第三方包配合工作。
+- 但不知道什么原因，原项目负责人并没有将这些源代码更新，制作成新版本，发布到pip上。
+- 本项目旨在将最新源代码进行打包，并发布到pypi上，方便自己的项目使用。
+
+## 版本管理
+
+- 在原项目版本的基础上，加上最新源代码的最后提交日期。
+
+## 版本历史
+
+### v0.12.0.20220817
+
+- 项目创建。
+
+
+=======
+History
+=======
+
+0.1.0 (2016-09-30)
+------------------
+
+* First release on PyPI.
