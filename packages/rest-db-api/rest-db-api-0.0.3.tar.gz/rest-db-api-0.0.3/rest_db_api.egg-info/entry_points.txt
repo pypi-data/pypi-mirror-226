@@ -1,0 +1,5 @@
+[shillelagh.adapter]
+myrestadapter = rest_db_api.rest_api_adapter:RestAdapter
+
+[sqlalchemy.dialects]
+rest = rest_db_api.rest_api_dialect:RestApiDialect
