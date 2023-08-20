@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rgb-gradient"
+version = "0.0.2"
+authors = [
+    { name="Ewan Humbert", email="xeway@protonmail.com" },
+]
+description = "Easily create gradients under the form of a list with given-input colors"
+keywords = ["rgb", "gradient", "color", "colors"]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "numpy",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Xeway/rgb-gradient"
+"Bug Tracker" = "https://github.com/Xeway/rgb-gradient/issues"
