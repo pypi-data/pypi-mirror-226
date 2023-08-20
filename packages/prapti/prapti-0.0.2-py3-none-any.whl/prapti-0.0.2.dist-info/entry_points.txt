@@ -1,0 +1,14 @@
+[console_scripts]
+prapti = prapti.tool:main
+
+[prapti.plugin]
+experimental.gpt4all.chat = prapti.plugins.endpoints.gpt4all_chat_responder:prapti_plugin
+koboldcpp.text = prapti.plugins.endpoints.koboldcpp_text_responder:prapti_plugin
+local.openai.chat = prapti.plugins.endpoints.local_openai_chat_responder:prapti_plugin
+openai.chat = prapti.plugins.endpoints.openai_chat_responder:prapti_plugin
+prapti.experimental.agents = prapti.plugins.experimental_agents:prapti_plugin
+prapti.experimental.gitlog = prapti.plugins.experimental_gitlog:prapti_plugin
+prapti.include = prapti.plugins.include:prapti_plugin
+prapti.test.test_actions = prapti.plugins.prapti_test_actions:prapti_plugin
+prapti.test.test_config = prapti.plugins.prapti_test_config:prapti_plugin
+prapti.test.test_responder = prapti.plugins.prapti_test_responder:prapti_plugin
