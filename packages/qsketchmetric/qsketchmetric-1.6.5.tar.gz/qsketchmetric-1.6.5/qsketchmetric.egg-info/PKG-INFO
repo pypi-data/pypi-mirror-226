@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qsketchmetric
+Version: 1.6.5
+Summary: Parametric 2D CAD
+Author: Franciszek Łajszczak
+Author-email: franciszek@lajszczak.dev
+License: MIT
+Keywords: CAD,QCAD,2D,parametric,drawing,renderer,python renderer,python CAD,python 2d CAD,ppython 2d drawing,python parametric drawing,python parametric CAD,python QCAD,QCAD python,parametric QCAD python,parametric QCAD,QCAD parametric,QCAD python parametric,QCAD python 2d,
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+Parametric 2D drawings renderer using QCAD Professional
