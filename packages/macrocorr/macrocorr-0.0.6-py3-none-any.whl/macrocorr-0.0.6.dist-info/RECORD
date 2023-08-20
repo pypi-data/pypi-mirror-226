@@ -1,0 +1,9 @@
+macrocorr/macrocorr/__init__.py,sha256=Bb-16Yhqa8Tfb6EbBs8A0TwT0M0DojxkCX-K7aqnc9o,146
+macrocorr/macrocorr/correlator.py,sha256=G-aczcZIlGx2vCoexk7piaSE6MEh4gLwNSnsx_GT58Y,7880
+macrocorr/macrocorr/macroIndicator.py,sha256=vX44pjVAi8iKrbWRA9FszXvy-lrnbpUHOH-jh3dJyeY,6357
+macrocorr/macrocorr/utils.py,sha256=DIZNhAPGt-KaGH4cr_Ni_ZbiQ16Nns7q9xRv1ghMcPc,2705
+macrocorr-0.0.6.dist-info/LICENSE.txt,sha256=ERN_1WssjV-eJXTAsSiVpnLs0zF0GdtnkcnQL_j42Q0,1070
+macrocorr-0.0.6.dist-info/METADATA,sha256=_hm1ukKRSBDgk4Rps0phq_j1hFusv51SzV4ujpOrYr4,4073
+macrocorr-0.0.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+macrocorr-0.0.6.dist-info/top_level.txt,sha256=fjlPf2Z8w7UG1bSSurJK_MAfcmC_jetRHlyyVDLSDvA,10
+macrocorr-0.0.6.dist-info/RECORD,,
