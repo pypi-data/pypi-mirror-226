@@ -1,0 +1,11 @@
+setup.py
+detectron2_layers/__init__.py
+detectron2_layers/batch_norm.py
+detectron2_layers/blocks.py
+detectron2_layers/utils.py
+detectron2_layers/wrappers.py
+detectron2_layers.egg-info/PKG-INFO
+detectron2_layers.egg-info/SOURCES.txt
+detectron2_layers.egg-info/dependency_links.txt
+detectron2_layers.egg-info/requires.txt
+detectron2_layers.egg-info/top_level.txt
