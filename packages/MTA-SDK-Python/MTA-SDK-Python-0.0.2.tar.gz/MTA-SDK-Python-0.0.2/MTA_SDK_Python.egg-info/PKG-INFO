@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: MTA-SDK-Python
+Version: 0.0.2
+Summary: A Python SDK To MTA
+Author: Lucas Camargo de Andrade
+Author-email: lucas.camargo.de.andrade15@gmail.com
+License: MIT License
+Keywords: MTA SDK Python
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python SDK Para o MTA ( Multi Theft Auto ) 
