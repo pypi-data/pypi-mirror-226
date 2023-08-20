@@ -1,0 +1,5 @@
+[fugue_ml.plugins]
+hnswlib = fugue_ml.integrations.hnswlib.registry [hnswlib]
+huggingface = fugue_ml.integrations.huggingface.registry [huggingface]
+openai = fugue_ml.integrations.openai.registry [openai]
+
