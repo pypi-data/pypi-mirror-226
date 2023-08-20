@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tas-recorder
+Version: 1.0.0
+Summary: A TAS or macro recording tool.
+Home-page: https://github.com/sabifiedsab/tas-recorder
+Author: SabifiedSab
+License: MIT
+Keywords: python,tas,macro recorder,tool assist
+License-File: LICENSE
+Requires-Dist: pynput
+
+A really simple tool for creating tool-assisted content or simple macros
