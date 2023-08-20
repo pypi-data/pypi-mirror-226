@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+robopy2/__init__.py
+robopy2/kinematics.py
+robopy2.egg-info/PKG-INFO
+robopy2.egg-info/SOURCES.txt
+robopy2.egg-info/dependency_links.txt
+robopy2.egg-info/requires.txt
+robopy2.egg-info/top_level.txt
+tests/__init__.py
+tests/test_kinematics.py
