@@ -1,0 +1,2 @@
+[console_scripts]
+prapti = prapti.tool:main
