@@ -1,0 +1,11 @@
+rest_db_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rest_db_api/db_engine_specs.py,sha256=poJSA7tFGA2dYYT-dKuCQjHOP3RgxSrw30LYsAwQO6U,321
+rest_db_api/rest_api_adapter.py,sha256=8YDCQhwwuzrSEvQ3Pohgux-M6zNZ7XGrmvYKxmfvOro,6004
+rest_db_api/rest_api_dialect.py,sha256=Y_pFx9-oFuXe8YqkBicsbi21ye6AEBzxVtZEeIq-zlo,1401
+rest_db_api/utils.py,sha256=WuzKrMWzQCB9dTp0Kk8Ak4ReLIMkTE_xvc-OiibvP_Q,1986
+rest_db_api-0.0.2.dist-info/LICENSE,sha256=KU1bob6mQuDsvNzGqxW37Y4U9ExD-ffeQYjpFXiQ3Ak,1068
+rest_db_api-0.0.2.dist-info/METADATA,sha256=yCdmwjj1zT4Qas4Ihtdj5yBQfAqW8KDWoP6TeAcOW_E,7756
+rest_db_api-0.0.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+rest_db_api-0.0.2.dist-info/entry_points.txt,sha256=6vUOT2IqEPol7kCg8ICHeA9CrPnzKlubTDpIN3PwhWk,152
+rest_db_api-0.0.2.dist-info/top_level.txt,sha256=ySVevlLCO8ccl9m-JHLuZxA6vse75DEJKcF7JZJeFmA,12
+rest_db_api-0.0.2.dist-info/RECORD,,
