@@ -1,0 +1,12 @@
+pydepot/__about__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+pydepot/__init__.py,sha256=-v-BzAMXopKcP6PlaIhfllku4cPuM3Q01i5vkgi786s,213
+pydepot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydepot/store.py,sha256=cBfmjj7W9C_X-C7H_J5ybkRGNuC52jCXgiUglpx8lTU,4078
+pydepot/abc/__init__.py,sha256=9zPtV-B5rsgIJISD433aAV2x_Mi4nwRb3g4OqvuK4yo,148
+pydepot/abc/action.py,sha256=3t8i-_dxV43X4eaf1-4aiaaKykt3naqm7bEFgGiAPDc,615
+pydepot/abc/reducer.py,sha256=QJhfEudbi5PA8ypUR_5d4cHapEQscvaZ8LMjwgnLRVg,2060
+pydepot/abc/subscriber.py,sha256=lFfwJ9yBdOlvl6cWqxxYADflO4_OXinXO2d1qLUzn3E,714
+pydepot-0.1.0.dist-info/METADATA,sha256=lY1DW-YkEPcgBzPWMwcOjwJl1UuFLIiedioVT3aHgr4,3809
+pydepot-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pydepot-0.1.0.dist-info/licenses/LICENSE,sha256=6d9MTk5kuBaKccPGdmjc_6u-j8oR1KxKfVSCVizRZ5w,34524
+pydepot-0.1.0.dist-info/RECORD,,
