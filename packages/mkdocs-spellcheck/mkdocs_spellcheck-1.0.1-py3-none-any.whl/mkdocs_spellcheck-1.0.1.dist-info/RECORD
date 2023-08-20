@@ -1,0 +1,13 @@
+mkdocs_spellcheck-1.0.1.dist-info/METADATA,sha256=0DbijRWaNkGEt1POl1ojfNFwYCiazmc2gCcpSYMZUNE,4200
+mkdocs_spellcheck-1.0.1.dist-info/WHEEL,sha256=bbAwydobi_oZ_0rI4gBBovxINCqHVHcC26TV6S2A2Io,90
+mkdocs_spellcheck-1.0.1.dist-info/entry_points.txt,sha256=iCOe1La1MhSzt_DAUQFtDUeK3gq0aETms6Jk5KJSVp4,73
+mkdocs_spellcheck-1.0.1.dist-info/licenses/LICENSE,sha256=eZQBcJKqlN0QepmOi0u09hlqKMPFdzWjY6NUWYeJGZs,754
+mkdocs_spellcheck/__init__.py,sha256=r4hUh-PNV3NSylH2_LPoaARGFO-H3ICf3jnMgwBMtXg,131
+mkdocs_spellcheck/backends/__init__.py,sha256=YEi9dhGiC7LWWtSWx8QI_Mj7MdLULAoWhPbC1IF6O90,908
+mkdocs_spellcheck/backends/codespell.py,sha256=lRR0SHIO9v0XITv4K60IAp3lNstJZs0N8Tt7BeRJE1k,1851
+mkdocs_spellcheck/backends/symspellpy.py,sha256=QS7drhjgTaeyups8-j_w2ob9_SfFsHLALt1kpwKsyB0,1615
+mkdocs_spellcheck/loggers.py,sha256=f9G4DF_kS5KG4mNeMnM1G5W6R1QXK0xtmiTbzp1yPHA,726
+mkdocs_spellcheck/plugin.py,sha256=_taxFC1pvshF389lQt1RDimFCc3cu3W6wda1AekqlLQ,4191
+mkdocs_spellcheck/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_spellcheck/words.py,sha256=f21qBN7k9TvvMD8mt7pp-lFmNRNfxHevEu93xBKiT7c,2975
+mkdocs_spellcheck-1.0.1.dist-info/RECORD,,
