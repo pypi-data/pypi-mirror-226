@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: odysseusai
+Version: 0.2
+Summary: A package to log LLM models
+Home-page: https://github.com/chziakas/odysseus_ai
+Author: Christos Ziakas
+Author-email: chziakas@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# odysseus_ai
+
