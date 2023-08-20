@@ -1,0 +1,12 @@
+mirrors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mirrors/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+mirrors/apps.py,sha256=l74uqIcsVCJk1VZWVPy-QFLICS1LrQ7FlKOnUWI-jm8,152
+mirrors/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mirrors/models.py,sha256=4OVMcDDx9fVgBEJ91B7dfMEG2Ni1LRSLJOKzIkVPsKo,60
+mirrors/templates/mirrors.html,sha256=j2LcaLuaqLPKZLJwTbObHmR4EDV3oj_Wv-gCn5uuhL8,1289
+mirrors/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+mirrors/urls.py,sha256=yhmyeY5H4Qzt1yyfH1P4wxo8qzialRrQJcLqCseOtq8,134
+mirrors/views.py,sha256=vQoh_BjvJ0EsL9V88qyG01gb2mksVVCZW2cS-4IwqNA,1479
+django_mirrors-1.0.0.dist-info/METADATA,sha256=3KtIQdXXeSj16yhhQOC1nKUbmIXuUJU5Hm2fDL-w6JM,803
+django_mirrors-1.0.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+django_mirrors-1.0.0.dist-info/RECORD,,
