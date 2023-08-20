@@ -1,0 +1,8 @@
+README.md
+setup.py
+multiform_validator.egg-info/PKG-INFO
+multiform_validator.egg-info/SOURCES.txt
+multiform_validator.egg-info/dependency_links.txt
+multiform_validator.egg-info/top_level.txt
+src/__init__.py
+src/calculator.py
