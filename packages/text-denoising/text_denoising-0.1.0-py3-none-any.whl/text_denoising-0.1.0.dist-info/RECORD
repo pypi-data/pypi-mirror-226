@@ -1,0 +1,7 @@
+text_denoising/__init__.py,sha256=-Sat7d7iWUNR4kdnhoCU606vHbyngIfLhAsBcyDnhSI,42
+text_denoising/collate_fn.py,sha256=NSEFj7nM4yYBfCPWyVzkhkhoV8gV0_oa3DD2czPxLGw,9980
+text_denoising/utils.py,sha256=mRZrKP_m7drVbIVOvWBIZp7vAHDVYi4RdD1xgQ0MXUg,5818
+text_denoising-0.1.0.dist-info/METADATA,sha256=Q3BaZMplWDhgRB6tuouyJN1U_19qnBoWY9J5pBAGuPI,3913
+text_denoising-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+text_denoising-0.1.0.dist-info/top_level.txt,sha256=OcbBczeD5X7-9PaK93LFgH_WMhqqoqAPzhll64hVoi8,15
+text_denoising-0.1.0.dist-info/RECORD,,
