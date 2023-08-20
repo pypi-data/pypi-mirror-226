@@ -1,0 +1,8 @@
+README.md
+setup.py
+nullindustries/__init__.py
+nullindustries.egg-info/PKG-INFO
+nullindustries.egg-info/SOURCES.txt
+nullindustries.egg-info/dependency_links.txt
+nullindustries.egg-info/requires.txt
+nullindustries.egg-info/top_level.txt
