@@ -1,0 +1,9 @@
+README.md
+setup.py
+fatoora_einvoice.egg-info/PKG-INFO
+fatoora_einvoice.egg-info/SOURCES.txt
+fatoora_einvoice.egg-info/dependency_links.txt
+fatoora_einvoice.egg-info/requires.txt
+fatoora_einvoice.egg-info/top_level.txt
+fatoora_einvoice_zatca_phase2/__init__.py
+fatoora_einvoice_zatca_phase2/zatca_signing_service.py
