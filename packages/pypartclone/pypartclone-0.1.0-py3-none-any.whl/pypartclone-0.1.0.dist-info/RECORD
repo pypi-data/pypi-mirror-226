@@ -1,0 +1,13 @@
+partclone/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+partclone/__main__.py,sha256=DnjyNwD9dlcD8LiTovoG4wR-9_KZ4slUdHioZUABv8s,3451
+partclone/bitmap.py,sha256=XFexd6vFe65Sop5BOpvO_v44afOkzQkfnRrKOlHK_Xw,6636
+partclone/blockio.py,sha256=gKA9zaR_8vq7VuPcZ6M75coYzHQ3wBE53ff3oMd7CKw,2402
+partclone/blocks.py,sha256=Oo9F7tq2zeLIw7zg6UFyp8E_hSeMhu0n9QU_2EBT4Os,4050
+partclone/fuse.py,sha256=pFOrivsEwgAI808zpVgq_aGFTfiaMhimRj3mblj6mJA,7204
+partclone/header.py,sha256=VOuMr-loSRkj4V6DySqe2WKM5NfPPwrUZIOeXuUD2PM,10566
+pypartclone-0.1.0.dist-info/LICENSE,sha256=ph2ny11mK4NW5146NPaDhw9fPHo-uY3OI0plQTZnXtU,1067
+pypartclone-0.1.0.dist-info/METADATA,sha256=-KVTJCnkZbKFKevElPdPV3hIr6hlOLUpzjX8HOKcRHg,12652
+pypartclone-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+pypartclone-0.1.0.dist-info/entry_points.txt,sha256=tQBr25ObavVrtddsDYo_q3j7gA7cAgyPTUgJfaoY98c,55
+pypartclone-0.1.0.dist-info/top_level.txt,sha256=qHgaZF2WDq6xYHHUBbUwawcRSjuAv6qUZu7Weby9GPM,10
+pypartclone-0.1.0.dist-info/RECORD,,
