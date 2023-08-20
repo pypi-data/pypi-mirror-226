@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/rgb_gradient/__init__.py
+src/rgb_gradient/main.py
+src/rgb_gradient.egg-info/PKG-INFO
+src/rgb_gradient.egg-info/SOURCES.txt
+src/rgb_gradient.egg-info/dependency_links.txt
+src/rgb_gradient.egg-info/requires.txt
+src/rgb_gradient.egg-info/top_level.txt
