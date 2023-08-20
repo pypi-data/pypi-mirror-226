@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: df-to-rs
+Version: 0.1.2
+Summary: A package to upload Pandas DataFrame to Redshift
+Home-page: https://github.com/yourusername/df_to_rs
+Author: Ankit Goel
+Author-email: ankitgoel888@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# df_to_rs
+
+`df_to_rs` is a Python package that provides a seamless way to copy data from a pandas DataFrame to Amazon Redshift via Amazon S3.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install df_to_rs
+```
+
+## Usage
+
+Here's a simple example of how to use `df_to_rs` to copy data from a DataFrame to Redshift:
+
+```python
+from df_to_rs import df_to_rs
+import psycopg2
+
+# Create a Redshift connection
+redshift_c = psycopg2.connect(dbname='more', host="hostname.ap-south-1.redshift.amazonaws.com", port=1433, user='username', password='password')
+redshift_c.set_session(autocommit=True)
+
+# Initialize df_to_rs
+uploader = df_to_rs(
+    region_name='ap-south-1',
+    s3_bucket='your-s3-bucket',
+    aws_access_key_id='YOUR_ACCESS_KEY',
+    aws_secret_access_key='YOUR_SECRET_KEY',
+    redshift_c=redshift_c
+)
+
+# Upload DataFrame to Redshift
+uploader.upload_to_redshift(df, dest='analytics.ship_pen')
+```
+
+## Parameters
+
+### `df_to_rs` class
+
+- `region_name`: AWS region name, e.g., 'ap-south-1'.
+- `s3_bucket`: Name of the S3 bucket to upload CSV files.
+- `aws_access_key_id`: AWS access key ID.
+- `aws_secret_access_key`: AWS secret access key.
+- `redshift_c`: psycopg2 connection object to Redshift.
+
+### `upload_to_redshift` method
+
+- `df`: pandas DataFrame to be uploaded.
+- `dest`: Redshift destination table, including schema, e.g., 'analytics.ship_pen'.
+
+## License
+
+MIT License
+
+## Author
+
+Ankit Goel - ankitgoel888@gmail.com
