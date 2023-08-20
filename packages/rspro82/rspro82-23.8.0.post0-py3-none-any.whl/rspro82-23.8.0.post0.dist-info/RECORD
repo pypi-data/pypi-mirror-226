@@ -1,0 +1,10 @@
+rspro82/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rspro82/__main__.py,sha256=gH_dngxwJi2YCo-ntYcn0v_QltRPCmBhEF75k2eDEHI,516
+rspro82/channels.py,sha256=ZB3zkKXXewbLXqmtn6vwvKw1dTDGqqCSEuWA8JZxtIU,731
+rspro82/message.py,sha256=GvdYfWkCvbn_IRihw0DkckPvhc8XvEhMWv8tONLRxJY,2810
+rspro82-23.8.0.post0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+rspro82-23.8.0.post0.dist-info/METADATA,sha256=KjnBe9dWvjlR5Zcb0s-LJGy_QKldGx5d-G_P9CHe42w,2743
+rspro82-23.8.0.post0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+rspro82-23.8.0.post0.dist-info/entry_points.txt,sha256=GwVrhCux2Z7ir21NY5fxYzjxEEwfaVI0P_mH4Si52_U,56
+rspro82-23.8.0.post0.dist-info/top_level.txt,sha256=9r8icB2SwhqhZj0AxqOFnMpHId0s2lo9emAlJwvsMak,8
+rspro82-23.8.0.post0.dist-info/RECORD,,
