@@ -1,0 +1,6 @@
+wagtail>=4.0
+
+[test]
+pytest
+pytest-django
+wagtail-factories
