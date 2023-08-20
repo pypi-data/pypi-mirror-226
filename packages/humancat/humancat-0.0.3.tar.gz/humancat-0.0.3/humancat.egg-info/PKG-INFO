@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: humancat
+Version: 0.0.3
+Summary: GitHub Action Build Test Sample
+Home-page: https://github.com/jihyungSong/github-action-course
+Author: jihyung
+Author-email: bluese05@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: sample,cat,human
+Platform: UNKNOWN
+Requires-Python: >=3.8
