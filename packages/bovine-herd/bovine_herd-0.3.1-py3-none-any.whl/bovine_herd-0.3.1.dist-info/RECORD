@@ -1,0 +1,11 @@
+bovine_herd/__init__.py,sha256=0jQU2PviGVk6Xd09hod4b9soEgKtpo5ZHMB_cjOKytk,1788
+bovine_herd/server/__init__.py,sha256=ebX0yeNqtLuUyA52bGYqSUyF721D596GwHEzXreB5LQ,275
+bovine_herd/server/activitypub.py,sha256=RGj1n9s6wBFTGuLVY3_tkibHCFW1umY_ryu2SA4xEU8,1473
+bovine_herd/server/endpoints.py,sha256=a297G1SkSWEVI5V1GibyMnTui3BGF4cbE4LHe_f89JA,5876
+bovine_herd/server/wellknown.py,sha256=9pk1z9B_cULY_7AtJQC5Yprn3EvY-qpwJTcicdCWams,2067
+bovine_herd/utils/__init__.py,sha256=i_bt7yZot1EIJ8ywWRl01-qAgOPWMO8C9NpriEBe3R0,521
+bovine_herd/utils/test/__init__.py,sha256=1q9ZVLKiRmKrrtAjFIjqXeqpvIDSWNn8U5fmvPkCmW0,1797
+bovine_herd/utils/test_utils.py,sha256=n_A6yDXWNpw-W5yOrEh3PrsPl-0e6sgNgF07T_DWduE,274
+bovine_herd-0.3.1.dist-info/METADATA,sha256=G3yJi__kNBkgbB_6X3I2gDeHalD4m-qlb0bdc9PZjMg,2175
+bovine_herd-0.3.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+bovine_herd-0.3.1.dist-info/RECORD,,
