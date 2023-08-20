@@ -1,0 +1,6 @@
+README.md
+setup.py
+panax.egg-info/PKG-INFO
+panax.egg-info/SOURCES.txt
+panax.egg-info/dependency_links.txt
+panax.egg-info/top_level.txt
