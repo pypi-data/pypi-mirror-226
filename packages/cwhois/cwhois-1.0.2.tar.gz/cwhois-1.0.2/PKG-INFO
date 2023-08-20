@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cwhois
+Version: 1.0.2
+Summary: Python interface for executing rfc1036 whois
+Home-page: http://github.com/damemay/cwhois/
+Author: Mariusz Krzyzok, Marco d'Itri
+License: GPL-2.0
+Keywords: whois,tld,domain,registrar
+Platform: All
+Requires-Python: >=3.5
+License-File: COPYING
