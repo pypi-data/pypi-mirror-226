@@ -1,0 +1,15 @@
+dkd/__init__.py,sha256=EU4ofb_YfCjblAt-YFFGsY1NhK8Bp0_YLmAVDEUTQ_0,1852
+dkd/factory.py,sha256=eazKBCtIgtpkFzC7pPll5k_qewqPG589-kdizT0hZek,8061
+dkd/protocol/__init__.py,sha256=Zyays9Og-wfIvVR1OyLqTiYNEDs5Bjdb9et7_CEwZQ4,2154
+dkd/protocol/content.py,sha256=huWYknBZlWnSuWKYxoKoL62Z-Mb6OjheJDjOaSIGW7g,3887
+dkd/protocol/envelope.py,sha256=hubO4FwziXeBNmrHy6KSkCIsfAUmcQGp2MqiaJCviVU,4851
+dkd/protocol/instant.py,sha256=60Ebny_cXywHD7-frqo_WYDcZdskxgQctNdC4in_q-U,7594
+dkd/protocol/message.py,sha256=1rJyUYsgdCOAA7SQ4DnLqCbJA1whmWf50v-N00Aua4U,3912
+dkd/protocol/reliable.py,sha256=obhAgRDPDUb_EBfg00c8B2qDT2I2e2eBzfnpiPvXHdk,5865
+dkd/protocol/secure.py,sha256=yCAKIecSb-fnaBJDqDd1A7PgePBXlbR24oO9mIRRF8U,9237
+dkd/protocol/types.py,sha256=CaMSBQaOvfKrqT7b9X4W0O9dCMblm4IPCVqryVUnGFY,5130
+dkd-0.12.8.dist-info/LICENSE,sha256=f9RfCc6rHcYMkHraf6QV05J_AIkRVXVMHw_N9IMJ_RA,1068
+dkd-0.12.8.dist-info/METADATA,sha256=sV6q-8XRO8ENVhLWfCCWy4gzWXhU-Z8kRi2Ma7eKuxA,6199
+dkd-0.12.8.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+dkd-0.12.8.dist-info/top_level.txt,sha256=-JgwIa4yfVBzLuS84OT3ZvEaX4AJXkX6h9ggTG-kV1Q,4
+dkd-0.12.8.dist-info/RECORD,,
