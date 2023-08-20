@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+schirmshots/README.MD
+schirmshots/__init__.py
+schirmshots/requirements.txt
+schirmshots/thirdparty.json
+schirmshots.egg-info/PKG-INFO
+schirmshots.egg-info/SOURCES.txt
+schirmshots.egg-info/dependency_links.txt
+schirmshots.egg-info/requires.txt
+schirmshots.egg-info/top_level.txt

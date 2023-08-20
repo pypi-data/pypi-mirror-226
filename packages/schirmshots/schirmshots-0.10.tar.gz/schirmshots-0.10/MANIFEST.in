@@ -1,0 +1,3 @@
+include schirmshots/requirements.txt
+include schirmshots/thirdparty.json
+include schirmshots/README.MD
