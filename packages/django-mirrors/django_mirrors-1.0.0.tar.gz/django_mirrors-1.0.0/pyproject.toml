@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "django-mirrors"
+version = "1.0.0"
+description = ""
+authors = ["jawide <596929059@qq.com>"]
+readme = "README.md"
+packages = [{include = "mirrors"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

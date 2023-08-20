@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirrors</title>
+</head>
+<body>
+<b>Directory listing for {{ path }}</b>
+<hr>
+{% if user.is_authenticated %}
+    <form action="{{ full_path }}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="files" type="file" multiple/>
+        <button type="submit">Upload Files</button>
+    </form>
+
+    <form action="{{ full_path }}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>
+            Folder Name
+            <input name="name" type="text"/>
+        </label>
+        <button type="submit">Create Folder</button>
+    </form>
+{% endif %}
+<ul>
+    <li><a href="{{ parent }}">Parent Directory</a></li>
+    {% for file in files %}
+        <li>
+            {% if user.is_authenticated %}
+                <button onclick="fetch('{{ file.url }}', {
+                        method: 'DELETE', headers: {'X-CSRFToken': '{{ csrf_token }}'}
+                        }).then(() => location.href = location['href'])">
+                    Delete
+                </button>
+            {% endif %}
+            <a href="{{ file.url }}">{{ file.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<hr>
+</body>
+</html>
