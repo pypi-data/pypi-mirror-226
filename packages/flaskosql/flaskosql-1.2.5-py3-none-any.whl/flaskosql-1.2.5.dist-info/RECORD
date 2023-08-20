@@ -1,0 +1,10 @@
+flaskosql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flaskosql/db.py,sha256=qaTlK3zQpPZNVJjtEtI6rGOVrkpP_P7gvraMflumE3o,631
+flaskosql/field.py,sha256=HgyqLuvL_j4EHkfqM3yoEluScZ0PvfIQBgw6CDOKBGA,887
+flaskosql/main.py,sha256=sNQNPYbpR9itUmZTiJs3Wbo76UztqPfC_oqYwtTsIYU,1347
+flaskosql/model.py,sha256=PYNcFaElFi75SdPiSqN4PWZWTpuF5D17qxEQXvAhEzI,20437
+flaskosql-1.2.5.dist-info/LICENSE,sha256=pgCFTQifw8xPgf3-3RGM9OVcrHkkV3_YjT-ALZhT6sI,1091
+flaskosql-1.2.5.dist-info/METADATA,sha256=5r82V2Atg-z7w62tSug8iqMutmtL2cX4PKl3s7nbvxo,4824
+flaskosql-1.2.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+flaskosql-1.2.5.dist-info/top_level.txt,sha256=2zzVO2QzOVPARxBr9glbwCo1j_YqUWyeYcKZCLKUO1s,10
+flaskosql-1.2.5.dist-info/RECORD,,
