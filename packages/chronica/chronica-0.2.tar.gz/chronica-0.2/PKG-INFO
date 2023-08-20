@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: chronica
+Version: 0.2
+Summary: A data-imbalance-aware scheduler for distributed deep learning
+Author: Sogang University
+Project-URL: homepage, https://github.com/9rum/chronica
+Keywords: distributed deep learning,straggler,scheduler,data imbalance
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
