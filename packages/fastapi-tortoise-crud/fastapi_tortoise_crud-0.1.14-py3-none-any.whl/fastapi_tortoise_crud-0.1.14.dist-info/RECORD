@@ -1,0 +1,11 @@
+fastapi_tortoise_crud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_tortoise_crud/__pycache__/__init__.cpython-310.pyc,sha256=a5TTAeTuDPFx0KxGZ0N9A7VStUOXQdcWUowdsjV1Lcc,158
+fastapi_tortoise_crud/__pycache__/crud.cpython-310.pyc,sha256=fRm31lc4rba2Pgc8ZXVKmYRKxSzcol19_GLRy-sexNA,6830
+fastapi_tortoise_crud/__pycache__/model.cpython-310.pyc,sha256=hWxDUV4pdClVBet_4vy3RWxY-hTAIOCXNi7bcwTuEMU,4467
+fastapi_tortoise_crud/__pycache__/response.cpython-310.pyc,sha256=iIrnUOf-FKSA4zHrDpq4HsBjuMGnLhsqmvIvwqiGtu0,621
+fastapi_tortoise_crud/crud.py,sha256=2qBNKvLGzY0yWK_YPh5bLBSdlEB2YQxwTjiabx_uUdE,7119
+fastapi_tortoise_crud/model.py,sha256=WpuVS4fa4b3wRv1SWSHfv5obm6FGjDeDxFWPzFQgDk8,3606
+fastapi_tortoise_crud/response.py,sha256=nr9OkZWxYn4JsJFWxrQcFLkwhDiFj7MGam763dB_0SQ,274
+fastapi_tortoise_crud-0.1.14.dist-info/WHEEL,sha256=B19PGBCYhWaz2p_UjAoRVh767nYQfk14Sn4TpIZ-nfU,87
+fastapi_tortoise_crud-0.1.14.dist-info/METADATA,sha256=6R1XFOsrSm5PBT978U3nFv1tP4utt25iwQ1_D6YCPas,1633
+fastapi_tortoise_crud-0.1.14.dist-info/RECORD,,
