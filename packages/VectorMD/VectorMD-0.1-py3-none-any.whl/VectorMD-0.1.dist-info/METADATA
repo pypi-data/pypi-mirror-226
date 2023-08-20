@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: VectorMD
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: datasets
+Requires-Dist: torch
+Requires-Dist: questionary
+Requires-Dist: faiss-cpu
+Requires-Dist: transformers
+Requires-Dist: sentence-transformers
+Requires-Dist: InstructorEmbedding
+Requires-Dist: pandas
+Requires-Dist: requests
+
+UNKNOWN
+
