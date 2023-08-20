@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+supertriplets/__init__.py
+supertriplets/dataset.py
+supertriplets/distance.py
+supertriplets/eval.py
+supertriplets/index.py
+supertriplets/loss.py
+supertriplets/sample.py
+supertriplets.egg-info/PKG-INFO
+supertriplets.egg-info/SOURCES.txt
+supertriplets.egg-info/dependency_links.txt
+supertriplets.egg-info/requires.txt
+supertriplets.egg-info/top_level.txt
