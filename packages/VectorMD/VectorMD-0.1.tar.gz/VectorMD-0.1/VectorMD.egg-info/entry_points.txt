@@ -1,0 +1,4 @@
+[console_scripts]
+vmd = vectormd.vmd:query_cli
+vmd-init = vectormd.vmd:setup_cli
+

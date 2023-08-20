@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+VectorMD.egg-info/PKG-INFO
+VectorMD.egg-info/SOURCES.txt
+VectorMD.egg-info/dependency_links.txt
+VectorMD.egg-info/entry_points.txt
+VectorMD.egg-info/requires.txt
+VectorMD.egg-info/top_level.txt
+vectormd/__init__.py
+vectormd/vmd.py

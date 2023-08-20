@@ -1,0 +1,9 @@
+datasets
+torch
+questionary
+faiss-cpu
+transformers
+sentence-transformers
+InstructorEmbedding
+pandas
+requests
