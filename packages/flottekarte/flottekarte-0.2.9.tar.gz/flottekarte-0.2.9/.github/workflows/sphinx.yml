@@ -1,0 +1,54 @@
+name: Sphinx build
+
+on:
+  push:
+    branches:
+      - 'v*.*.*'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build FlotteKarte
+      run: |
+          sudo apt-get install -y libproj-dev libboost-dev \
+                                  build-essential git openssh-client ssh \
+                                  python3-sphinx ninja-build
+          pip install numpy matplotlib pyproj meson
+          # Fix a weird bug on Ubuntu 22.04 that leads to package UNKNOWN:
+          # https://github.com/pypa/setuptools/issues/3269#issuecomment-1104943440
+          pip install --upgrade --user pip
+          sudo apt purge python3-setuptools
+          python -m pip install --user .
+    - name: Build HTML v2
+      run: |
+          cd docs
+          make html
+          cd ..
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-docs
+        path: docs/_build/html/
+    - name: Upload Website
+      uses: actions/upload-pages-artifact@v1
+      with:
+        # Upload website:
+        path: 'docs/_build/html'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@main

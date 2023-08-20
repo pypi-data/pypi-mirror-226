@@ -1,0 +1,3 @@
+build/*
+flottekarte/extensions/libflottekarte.so
+flottekarte/extensions/subprojects/libprojwrap
