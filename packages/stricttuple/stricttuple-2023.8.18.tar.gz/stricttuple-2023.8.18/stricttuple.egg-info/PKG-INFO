@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: stricttuple
+Version: 2023.8.18
+Summary: rule based data containers
+Home-page: https://github.com/CodyKochmann/stricttuple
+Download-URL: https://github.com/CodyKochmann/stricttuple/tarball/2023.8.18
+Author: Cody Kochmann
+Author-email: kochmanncody@gmail.com
+Keywords: stricttuple,namedtuple,tuple,design,contract,assurance,strict,rule,typedtuple
+License-File: LICENSE

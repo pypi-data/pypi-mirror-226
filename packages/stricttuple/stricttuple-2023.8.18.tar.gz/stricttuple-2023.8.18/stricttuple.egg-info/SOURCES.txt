@@ -1,0 +1,10 @@
+LICENSE
+README
+setup.cfg
+setup.py
+stricttuple/__init__.py
+stricttuple.egg-info/PKG-INFO
+stricttuple.egg-info/SOURCES.txt
+stricttuple.egg-info/dependency_links.txt
+stricttuple.egg-info/requires.txt
+stricttuple.egg-info/top_level.txt
