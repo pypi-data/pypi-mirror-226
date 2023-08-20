@@ -1,0 +1,74 @@
+# UglyPTY
+
+UglyPTY is a graphical terminal emulator built with Python and PyQt6. It provides a user-friendly interface for managing and establishing SSH connections, with some great productivity of features. 
+
+> **Note**: This is a VERY beta release with a lot of functionality.
+
+## Features
+
+- **Session Manager**: Leverage the sessions you use in your Terminal environment in your automation scripts (examples included).
+  - Create, edit, or delete sessions with specific settings.
+  - Supports password and key based authentication.
+  
+- **Credentials Manager**: Safely manage your user credentials.
+  - Passwords are encrypted.
+  - Fetch all credentials or a specific credential by ID from a SQLite database (`settings.sqlite`).
+  
+- **Themed Views**: Multiple theme modes - light, dark, light-dark, and dark-light.
+  
+- **Tab Management**: Handle multiple SSH connections across different tabs.
+
+## External Libraries
+
+UglyPTY uses the widget library from [UglyWidgets](https://github.com/scottpeterman/UglyWidgets).
+- UglyWidgets is a collection of useful PyQt6 re-usable widgets for building automation GUI interfaces. The POC application provides a graphical interface for full embedded ssh client with xterm.js support, a fully functional embedded windows terminal - supports cmd.exe, powershell.exe or wsl.exe, FileTree browsing files and editing files, based on the ACE.js editor, built using the PyQt6 framework.
+
+## Installation
+
+1. Tested with Python 3.9.13 for Windows. Other versions might work.
+2. Use PyPi
+3. Install the required packages using `pipenv` (or use `requirements.txt` with pip/venv):
+
+    ```bash
+    pipenv shell
+    pipenv install uglypty
+    ```
+
+To start the application, navigate to the activated virtual directory, local keys, your session database, and log files will be here:
+
+    python or pythonw -m uglypty
+
+## Screenshots
+
+Here are some snapshots of UglyPTY in action:
+
+<div align="center">
+  <img src="screen_shots\uglydark.PNG" alt="UglyPTY Dark" width="400px">
+  <hr><img src="screen_shots\uglylight.png" alt="UglyPTY Light Splash" width="400px">
+  <hr><img src="screen_shots\darklight.png" alt="UglyPTY darklight" width="400px">
+  <hr><img src="screen_shots\lightdark.png" alt="UglyPTY Lightdark" width="400px">
+</div>
+
+---
+
+**Enjoy using UglyPTY!**
+
+
+## Package Distribution
+
+```python
+# Create a source distribution and a wheel
+python setup.py sdist bdist_wheel
+
+# Set up a new virtual environment
+python -m venv test_env
+
+# Activate the virtual environment
+source test_env/bin/activate  # On Linux/Mac
+test_env\Scripts\activate     # On Windows
+
+# Install the wheel
+pip install dist/uglypty-0.1-py3-none-any.whl
+
+# Test your script
+python or pythonw -m uglypty
