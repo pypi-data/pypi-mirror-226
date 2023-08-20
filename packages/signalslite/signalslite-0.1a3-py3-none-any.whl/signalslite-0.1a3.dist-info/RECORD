@@ -1,0 +1,15 @@
+signalslite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signalslite/constants.py,sha256=D7ukRih3iWeMIu_fsXoZdYFzVl5FuSt9c9YqIFFN9Cs,1140
+signalslite/data_downloader.py,sha256=wEIlzW3Gjz6m8LawUXuaz2xqpaJGiwd4slHuo4en2Vw,12508
+signalslite/data_utils.py,sha256=nC4ps-FWAD7dtPJmdw63tScrvtg0wJzeIdlA7QZ_zX4,3331
+signalslite/merge_targets.py,sha256=Htgd3Brs37LvPMBCujl9X6W4BDpzkB38W0C1KTHRbP0,3253
+signalslite/primary_features.py,sha256=q3ide_PxmQwX0ds-9cmS5PEonVppF1_zAEnpGUt_BcE,6446
+signalslite/run_pipeline.py,sha256=J5uh-PNQ6rXsh6TYZhk63g1gqxF4fyAsgSI25RGFjSw,778
+signalslite/scale_data.py,sha256=ZoE5SC4zs8cd0lVT3NrEw57tFXSqjZLQKg5Uq6g1Td4,3541
+signalslite/secondary_features.py,sha256=1w34ScdlBGXIoj2oWMU7fnxnMsgZWnDwAm_UIhD_Zf0,4297
+signalslite/technical_features.py,sha256=ZwEsdlJBPcBWhWoBAT-g9FXUOP19Ojds3Lxbc5SCA4c,1595
+signalslite-0.1a3.dist-info/LICENSE,sha256=42pNeOtrq44PZas-Oc4sMqRkf2Jzya5btmhN6rOk0ig,1068
+signalslite-0.1a3.dist-info/METADATA,sha256=tzcBc1J-2O_k7GJ31Q6JMJOvI1E0g9MC8zMmGDoO8n0,1398
+signalslite-0.1a3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+signalslite-0.1a3.dist-info/top_level.txt,sha256=9P0VnyTJ9UOG45CDMBEkhICi-opbvP4tig-z8M2h70A,12
+signalslite-0.1a3.dist-info/RECORD,,
