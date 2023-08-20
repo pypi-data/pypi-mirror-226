@@ -1,0 +1,9 @@
+xia_user/__init__.py,sha256=l66_kC3v8T0SK0UXJ_zxC8PZ7vbFrIGPQjbdKOyx9Go,363
+xia_user/messages.cp310-win_amd64.pyd,sha256=XH6gtdETstBruJ0IdkI7EbhuwvpvtAHUvvtvxeAqvD8,278528
+xia_user/role_matrix.cp310-win_amd64.pyd,sha256=ycHjrvFTXvhCkhz1C4Ojg0lmM66Ib5z6pu7X35BiSqY,392704
+xia_user/user.cp310-win_amd64.pyd,sha256=x_2BxOAW8Au35VavuThu_HQxNKRJ0zF4ejY7rwCjaTo,513024
+xia_user-0.1.33.dist-info/LICENSE.txt,sha256=oADRlh2Ea7_hXQgXrAb8iEYk_JX2PiXUFKdfYybTQgA,153
+xia_user-0.1.33.dist-info/METADATA,sha256=VytfdItj2ajs7YrOGcqigxraJkPIMK2fhRs4IdL5iiQ,698
+xia_user-0.1.33.dist-info/WHEEL,sha256=kolUYyAuE6ut8zey19a5dD-9OJXpdVbQiTZkpOLR1WY,100
+xia_user-0.1.33.dist-info/top_level.txt,sha256=83bMsRCwFtrpI8U1LNGqnyMAROolkm0ssQ1MveXgEBo,9
+xia_user-0.1.33.dist-info/RECORD,,
