@@ -1,0 +1,12 @@
+setup.py
+Alika.egg-info/PKG-INFO
+Alika.egg-info/SOURCES.txt
+Alika.egg-info/dependency_links.txt
+Alika.egg-info/requires.txt
+Alika.egg-info/top_level.txt
+alika/__init__.py
+alika/app_functionality.py
+alika/auth_service.py
+alika/user_service.py
+alika/api/api_responses.py
+alika/api/api_service.py
