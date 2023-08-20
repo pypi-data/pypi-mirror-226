@@ -1,0 +1,6 @@
+setup.py
+myFuncBank.egg-info/PKG-INFO
+myFuncBank.egg-info/SOURCES.txt
+myFuncBank.egg-info/dependency_links.txt
+myFuncBank.egg-info/requires.txt
+myFuncBank.egg-info/top_level.txt
