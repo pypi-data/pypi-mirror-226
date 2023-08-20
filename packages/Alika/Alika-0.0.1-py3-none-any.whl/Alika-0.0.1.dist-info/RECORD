@@ -1,0 +1,10 @@
+alika/__init__.py,sha256=nT03hS82eArEiM8aMCXpUqf5oe_g3FGYlHTddh5lRb0,596
+alika/app_functionality.py,sha256=i_hExn57F8D3LD2nUb3ObKPeEvcSEGRD2ZITS1ot3Q0,410
+alika/auth_service.py,sha256=HUmZe7l_bpV0kt8TiuHCLxwKK-Yv9mYscj7jU5uvTA0,609
+alika/user_service.py,sha256=CUJngMjGa6jjrWAVnTzx7d7I9B5qsqdeizGU1O5X9LE,523
+alika/api/api_responses.py,sha256=UDGVAcOwNn5JeeBD1KYWARliJ4tZ3nY_Re_KSz-Ds7M,2479
+alika/api/api_service.py,sha256=uhEengIDRhHid3Y35SsZLJpGxeQA8uMkJmCDiXaYS_w,2255
+Alika-0.0.1.dist-info/METADATA,sha256=UcxlwENeACS39tB9HP6ToYVAih025l8WVQ-naDIMev4,224
+Alika-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+Alika-0.0.1.dist-info/top_level.txt,sha256=2IhZJX0dBLhDfaRgDFcRNXPm1yPtEEVYzTO_u0i1LNM,16
+Alika-0.0.1.dist-info/RECORD,,
