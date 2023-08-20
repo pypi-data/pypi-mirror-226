@@ -1,0 +1,13 @@
+npc_sessions/__init__.py,sha256=YCz-Mf1AVVYE4zEQOaC85pgGpbBcEGUCq8toE_eIcVI,129
+npc_sessions/nwb.py,sha256=9A2oapnQsSWsAnu11WY48wWvuatz4JnhENEU69w1UsE,1566
+npc_sessions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npc_sessions/session.py,sha256=6WfdgoHd9wwJFIBbkR8Q4QT47p4560hrRdM7HFTEVyM,13790
+npc_sessions/utils.py,sha256=5aez0LAHcdKjmKNFzyREIY6AT9K-7FQlmIcNrw-KYb8,1605
+npc_sessions/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npc_sessions/components/ephys_utils.py,sha256=2rkcRLQyOvaAtzBg8y5UM0RHLK70a9ulhymEU9qTNkk,12266
+npc_sessions/components/parse_settings_xml.py,sha256=qcIs8V8Xc6HYAv5hPGnAg9Vv_ThtDBmCpmJOZZ4WSIs,5022
+npc_sessions/components/sync_dataset.py,sha256=oRvBKHP_ZVDLdRDpKG--94FvAyekJsUDQo86lqBhnBQ,26698
+npc_sessions-0.0.5.dist-info/METADATA,sha256=G9zAzW1LiBh-ssih6doGA4VEvyhYEKkZ1lL191ZU_3M,1948
+npc_sessions-0.0.5.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+npc_sessions-0.0.5.dist-info/top_level.txt,sha256=sINSkGd2uN3tgQLmF04klz1SgPPWULPySnjV2Pnii7U,13
+npc_sessions-0.0.5.dist-info/RECORD,,
