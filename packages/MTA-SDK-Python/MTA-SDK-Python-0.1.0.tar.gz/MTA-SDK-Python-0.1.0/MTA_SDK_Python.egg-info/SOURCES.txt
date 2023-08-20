@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+MTA_SDK_Python.egg-info/PKG-INFO
+MTA_SDK_Python.egg-info/SOURCES.txt
+MTA_SDK_Python.egg-info/dependency_links.txt
+MTA_SDK_Python.egg-info/requires.txt
+MTA_SDK_Python.egg-info/top_level.txt
+mtasdk/__init__.py
+mtasdk/mtasdk.py
