@@ -1,0 +1,5 @@
+setup.py
+bewe_alpha_seeker.egg-info/PKG-INFO
+bewe_alpha_seeker.egg-info/SOURCES.txt
+bewe_alpha_seeker.egg-info/dependency_links.txt
+bewe_alpha_seeker.egg-info/top_level.txt
