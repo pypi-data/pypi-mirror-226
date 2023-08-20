@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+surprise_similarity/__init__.py
+surprise_similarity/string_encoder.py
+surprise_similarity/surprise_similarity.py
+surprise_similarity.egg-info/PKG-INFO
+surprise_similarity.egg-info/SOURCES.txt
+surprise_similarity.egg-info/dependency_links.txt
+surprise_similarity.egg-info/not-zip-safe
+surprise_similarity.egg-info/requires.txt
+surprise_similarity.egg-info/top_level.txt
