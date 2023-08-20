@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: faa-wechat
+Version: 0.1.0a1
+Summary: FastAPI-Amis-Admin is a high-performance, efficient and easily extensible FastAPI admin framework. Inspired by Django-admin, and has as many powerful functions as Django-admin. 
+Keywords: fastapi,fastapi-admin,fastapi-amis-admin,django-admin,sqlmodel,sqlalchemy
+Author-email: Atomi <1456417373@qq.com>
+Maintainer-email: Atomi <1456417373@qq.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Framework :: FastAPI
+Classifier: Environment :: Web Environment
+Classifier: Topic :: System :: Systems Administration
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: uvicorn[standard] >=0.19.0,<1.0
+Requires-Dist: loguru>=0.6.0
+Requires-Dist: wechatpy>=1.8.18
+Requires-Dist: wechatpayv3>=1.2.39
+Requires-Dist: fastapi-amis-admin[cli]>=0.6.4
+Requires-Dist: fastapi-user-auth>=0.6.0a4
+Requires-Dist: fastapi-config>=0.1.1
+Requires-Dist: faa-utils>=0.1.0a4
+Requires-Dist: pre-commit>=2.20.0 ; extra == "dev"
+Requires-Dist: ruff>=0.0.261 ; extra == "dev"
+Requires-Dist: uvicorn[standard] >=0.19.0,<1.0 ; extra == "test"
+Requires-Dist: pytest >=6.2.4 ; extra == "test"
+Requires-Dist: aiosqlite>=0.15.0 ; extra == "test"
+Requires-Dist: pytest-asyncio>=0.17 ; extra == "test"
+Requires-Dist: httpx>=0.24.0,<1.0 ; extra == "test"
+Requires-Dist: jinja2 >=2.11.2,<4.0.0 ; extra == "test"
+Requires-Dist: ujson>=4.0.1 ; extra == "test"
+Requires-Dist: requests>=2.28.1 ; extra == "test"
+Project-URL: Documentation, http://docs.amis.work/
+Project-URL: Source, https://github.com/amisadmin/fastapi_amis_admin
+Provides-Extra: dev
+Provides-Extra: test
+
+## 项目介绍
+
+微信API插件，用于微信小程序、微信公众号的开发。
+
+### 使用说明
+
+1. pip install faa-wechat
+2. 通过`install_apps`安装需要的应用包
+3. 在管理后台配置微信的相关信息
+4. 访问接口文档.
+
+```shell
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://pypi.org/simple
+```
