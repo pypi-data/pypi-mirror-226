@@ -1,0 +1,4 @@
+wrapt-timeout-decorator
+crccheck
+tenacity
+bleak
