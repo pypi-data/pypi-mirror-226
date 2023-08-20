@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+kuttle/__init__.py
+kuttle.egg-info/PKG-INFO
+kuttle.egg-info/SOURCES.txt
+kuttle.egg-info/dependency_links.txt
+kuttle.egg-info/top_level.txt
