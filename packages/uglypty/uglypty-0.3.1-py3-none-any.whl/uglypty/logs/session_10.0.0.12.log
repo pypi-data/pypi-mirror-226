@@ -1,0 +1,48 @@
+Welcome to Ubuntu 22.04 LTS (GNU/Linux 6.2.0-26-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+287 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Last login: Fri Aug 18 18:59:51 2023 from 10.0.0.149
+
+
+[?2004h
+]0;speterman@N40: ~speterman@N40:~$ 
+
+[K]0;speterman@N40: ~speterman@N40:~$ 
+h
+t
+o
+p
+
+[?2004l
+
+[?1049h[22;0;0t[1;32r(B[m[4l[?7h[?1h=
+[?25l[39;49m[?1006;1000h
+[39;49m(B[m[H[2J[2d  [36m  0[39m(B[0;1m[[30m[42X[2;49H0.0%[39m](B[m   [36mTasks: (B[0;1m[36m117(B[0m[36m, (B[0;1m[32m257(B[0m[32m thr[36m; (B[0;1m[32m1(B[0m[36m running[3;3H  1[39m(B[0;1m[(B[0m[31m||||||||||||||||||||||||||||||||||||||||100.0%[39m(B[0;1m](B[m   [36mLoad average: [39m(B[0;1m0.01 [36m0.02 (B[0m[36m0.00 [4;3H
+Mem[39m(B[0;1m[(B[0m[32m||||||||||||[34m||[33m||||||||||||||||||||||948M/3.(B[0;1m[30m64G[39m](B[m   [36mUptime: (B[0;1m[36m4 days, 14:06:30[5;3H(B[0m[36mSwp[39m(B[0;1m[(B[0m[31m|(B[0;1m[30m[34X[5;42H2.75M/2.00G[39m]
+[7d(B[0m[30m[42m    PID USER      PRI  NI  VIRT   RES   SHR S [30m[46mCPU%▽[30m[42mMEM%   TIME+  Command[K
+[8d[30m[46m  25746 speterman  20   0 19748  4608  3456 R 133.  0.1  0:00.08 htop[K[9;7H
+[39;49m(B[m1 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 164M 13[39m(B[m676 [36m 8[39m(B[m300 S  0.0  0.4  0:14.66 /sbin/init splash[10;5H205 (B[0;1m[30mroot      [39m(B[m 19 [31m -1 [36m65[39m(B[m180 [36m18[39m(B[m592 [36m17[39m(B[m028 S  0.0  0.5  0:02.69 /lib/systemd/systemd-journald[11;5H264 (B[0;1m[30mroot      [39m(B[m 20   0 [36m27[39m(B[m092 [36m 6[39m(B[m616 [36m 4[39m(B[m184 S  0.0  0.2  0:01.37 /lib/systemd/systemd-udevd[12;5H390 (B[0;1m[30msystemd-o [39m(B[m 20   0 [36m14[39m(B[m824 [36m 6[39m(B[m784 [36m 6[39m(B[m016 S  0.0  0.2 15:21.44 /lib/systemd/systemd-oomd[13;5H
+392 (B[0;1m[30msystemd-r [39m(B[m 20   0 [36m25[39m(B[m660 [36m13[39m(B[m924 [36m 9[39m(B[m600 S  0.0  0.4  0:44.51 /lib/systemd/systemd-resolved[14;5H393 (B[0;1m[30msystemd-t [39m(B[m 20   0 [36m89[39m(B[m708 [36m 7[39m(B[m808 [36m 6[39m(B[m912 S  0.0  0.2  0:01.33 /lib/systemd/systemd-timesyncd[15;5H439 (B[0;1m[30msystemd-t [39m(B[m 20   0 [36m89[39m(B[m708 [36m 7[39m(B[m808 [36m 6[39m(B[m912 S  0.0  0.2  0:00.00 [32m/lib/systemd/systemd-timesyncd[16;5H[39m(B[m563 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 244M  9[39m(B[m904 [36m 6[39m(B[m832 S  0.0  0.3  0:15.02 /usr/libexec/accounts-daemon[17;5H564 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 2[39m(B[m812 [36m 1[39m(B[m920 [36m 1[39m(B[m792 S  0.0  0.1  0:00.00 /usr/sbin/acpid[18;5H567 (B[0;1m[30mavahi     [39m(B[m 20   0 [36m 7[39m(B[m712 [36m 4[39m(B[m096 [36m 3[39m(B[m584 S  0.0  0.1  0:15.74 avahi-daemon: running [N40.local][19;5H568 (B[0;1m
+[30mroot      [39m(B[m 20   0 [36m10[39m(B[m592 [36m 5[39m(B[m120 [36m 4[39m(B[m736 S  0.0  0.1  0:00.10 /usr/lib/bluetooth/bluetoothd[20;5H570 (B[0;1m[30mroot      [39m(B[m 20   0 [36m18[39m(B[m148 [36m 2[39m(B[m816 [36m 2[39m(B[m688 S  0.0  0.1  0:01.35 /usr/sbin/cron -f -P[21;5H572 (B[0;1m[30mmessagebu [39m(B[m 20   0 [36m11[39m(B[m320 [36m 7[39m(B[m168 [36m 4[39m(B[m096 S  0.0  0.2  0:32.62 @dbus-daemon --system --address=systemd: --nofor[22;5H573 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 335M 20[39m(B[m132 [36m16[39m(B[m292 S  0.0  0.5  2:58.58 /usr/sbin/NetworkManager --no-daemon[23;5H581 (B[0;1m[30mroot      [39m(B[m 20   0 [36m82[39m(B[m764 [36m 3[39m(B[m840 [36m 3[39m(B[m584 S  0.0  0.1  1:03.30 /usr/sbin/irqbalance --foreground[24;5H587 (B[0;1m[30mroot      [39m(B[m 20   0 [36m49[39m(B[m672 [36m21[39m(B[m120 [36m11[39m(B[m648 S  0.0  0.6  0:00.15 /usr/bin/python3 /usr/bin/networkd-dispatcher --
+[25;5H588 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 246M 12[39m(B[m224 [36m 7[39m(B[m372 S  0.0  0.3  0:09.96 /usr/libexec/polkitd --no-debug[26;5H591 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 242M  7[39m(B[m552 [36m 6[39m(B[m912 S  0.0  0.2  0:00.05 /usr/libexec/power-profiles-daemon[27;5H592 (B[0;1m[30msyslog    [39m(B[m 20   0 [36m 217M  6[39m(B[m144 [36m 4[39m(B[m352 S  0.0  0.2  0:00.32 /usr/sbin/rsyslogd -n -iNONE[28;5H598 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 246M 12[39m(B[m224 [36m 7[39m(B[m372 S  0.0  0.3  0:00.00 [32m/usr/libexec/polkitd --no-debug[29;5H[39m(B[m601 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 928M 45[39m(B[m696 [36m21[39m(B[m888 S  0.0  1.2  1:03.47 /usr/lib/snapd/snapd[30;5H602 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 246M 12[39m(B[m224 [36m 7[39m(B[m372 S  0.0  0.3  0:01.58 [32m/usr/libexec/polkitd --no-debug[31;5H[39m(B[m603 (B[0;1m[30mroot      [39m(B[m 20   0 [36m 239M  6
+[39m(B[m784 [36m 6[39m(B[m272 S  0.0  0.2  0:00.03 /usr/libexec/switcheroo-control
+[32dF1[30m[46mHelp  [39;49m(B[mF2[30m[46mSetup [39;49m(B[mF3[30m[46mSearch[39;49m(B[mF4[30m[46mFilter[39;49m(B[mF5[30m[46mTree  [39;49m(B[mF6[30m[46mSortBy[39;49m(B[mF7[30m[46mNice -[39;49m(B[mF8[30m[46mNice +[39;49m(B[mF9[30m[46mKill  [39;49m(B[mF10[30m[46mQuit[K[H[39;49m(B[m
+[13;31r[13;1HM[1;32r[9;13r[9;1H[2T[1;32r[3;7H[32m|[31m|(B[0;1m[30m[40X[3;49H2.0%[4;80H[36m1[8;29H(B[0m[30m[46m888  4736  3584 R  1.3[8;63H10[9;5H
+[39;49m(B[m390 (B[0;1m[30msystemd-o [39m(B[m 20   0 [36m14[39m(B[m824 [36m 6[39m(B[m784 [36m 6[39m(B[m016 S  0.7  0.2 15:21.45 /lib/systemd/systemd-oomd[10;4H
+1594 speterman  20   0 [32m3[36m697M  224M 99[39m(B[m908 S  0.7  6.0 32:08.50 /usr/bin/gnome-shell[H
+[32d[J[?12l[?25h[?1006;1000l[32;1H[?1049l[23;0;0t
+[?1l>
+[?2004h]0;speterman@N40: ~speterman@N40:~$ 
+ex
+it
+
+[?2004l
+
+Channel closed...
