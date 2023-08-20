@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: nullindustries
+Version: 0.1.0
+Summary: Null Industries Utility Package
+Author: Null Industries (Nothsa)
+Requires-Dist: colorama
+
