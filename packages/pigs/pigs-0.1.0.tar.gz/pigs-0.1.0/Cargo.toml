@@ -1,0 +1,30 @@
+[package]
+name = "pigs"
+version = "0.1.0"
+edition = "2021"
+authors = ["HunLuanZhiZhu <zhuyihe@petalmail.com>"]
+description = "Common optimization algorithms"
+license = "MIT OR Apache-2.0"
+keywords = ["opt","optimize","PSO"]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pigs"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+pyo3 = {  version = "0.19.2", features = [
+    "num-complex","rust_decimal",
+    "auto-initialize","num-bigint"
+]}
+
+
+rand = "0.8.5"
+rayon = {version =  "1.7.0" ,features = [] }
+
+
+num-complex = { version="0.4.3" ,features = ["rand","std"]  }
+num-bigint = { version = "0.4.3", features = ["rand","std"] }
+rust_decimal = { version = "1.29.1", features = ["rand","std"]  }
