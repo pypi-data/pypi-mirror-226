@@ -1,0 +1,9 @@
+deploy/__init__.py,sha256=U-ns-uNdQChJEOU_LNAzJ5nagCbAuTpKkQnzt7NRyb4,48
+deploy/deploy.py,sha256=nLrQignnlyJNy2YX87ecmzjVJ8gsuDjBHsKcSDiVYu0,4936
+deploy/deploy_utils.py,sha256=cKr5_8jIweCG-Nn_JrpHw-3ee0Dk9ONpVSX2mC4T7uc,18708
+deploy/ssh_client.py,sha256=Kz2bys7o4zq0_Pcb06PjOiOvDlYbs7XYhmEObXRBaLw,8452
+minimalistic_deploy-0.0.0.data/scripts/deploy,sha256=9e3BV64PXrO3OtpsRKT_9MtHxInIDcJRkrcz6QzShYA,73
+minimalistic_deploy-0.0.0.dist-info/METADATA,sha256=qmCe51K7jykPyb8jN5BXdjuZ7Mt1HSqBaDzQ21euqRw,806
+minimalistic_deploy-0.0.0.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+minimalistic_deploy-0.0.0.dist-info/top_level.txt,sha256=xvFnZzSzWjwmJ0zc3txKNOrT0LgVq20Gr9SlilW68Tw,7
+minimalistic_deploy-0.0.0.dist-info/RECORD,,

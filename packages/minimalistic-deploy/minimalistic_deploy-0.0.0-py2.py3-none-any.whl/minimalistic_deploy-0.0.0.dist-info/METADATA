@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: minimalistic-deploy
+Version: 0.0.0
+Summary: Minimalistic support to deploy a Django project via SSH
+Home-page: https://github.com/morlandi/easy-deploy
+Author: Mario Orlandi
+Author-email: morlandi@brainstorm.it
+License: MIT
+Keywords: deployment
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django :: 4.0
+Classifier: Topic :: System :: Software Distribution
+Description-Content-Type: text/markdown
+
+# easy-deploy
+
+Minimalistic support to deploy a Django project via SSH
+
+Purposes:
+
+- ...
+
+## Installation
+
+```bash
+pip install easy-deploy
+```
+
+
+## Sample usage
+
+```
+...
+```
+
+
+## Sample config file
+
+```
+...
+```
+
+
+
+## History
+
+### v0.0.0
+
+- initial release
