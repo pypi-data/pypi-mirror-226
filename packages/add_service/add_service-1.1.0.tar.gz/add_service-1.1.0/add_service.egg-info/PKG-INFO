@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: add-service
+Version: 1.1.0
+Summary: Effortlessly create and manage systemd startups with just one command.
+Home-page: https://github.com/DIYer22/add_service
+Author: DIYer22
+Author-email: ylxx@live.com
+License: UNKNOWN
+Description: Effortlessly create and manage systemd startups with just one command.
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
