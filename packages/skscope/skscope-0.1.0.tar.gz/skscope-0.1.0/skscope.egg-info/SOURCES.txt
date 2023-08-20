@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+skscope/__init__.py
+skscope/base_solver.py
+skscope/layer.py
+skscope/numeric_solver.py
+skscope/skmodel.py
+skscope/solver.py
+skscope.egg-info/PKG-INFO
+skscope.egg-info/SOURCES.txt
+skscope.egg-info/dependency_links.txt
+skscope.egg-info/requires.txt
+skscope.egg-info/top_level.txt
