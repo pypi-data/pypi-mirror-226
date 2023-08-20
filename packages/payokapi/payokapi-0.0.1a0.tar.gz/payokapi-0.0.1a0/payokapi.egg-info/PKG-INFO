@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: payokapi
+Version: 0.0.1a0
+Summary: Asynchronous library for work with PayOk.io API
+Home-page: https://github.com/denzyve0/payok-api
+Author: Denzyve
+Author-email: solda740@gmail.com
+License: GPLv3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+
+# payok-api
+Asynchronous library for work with Payok.io API

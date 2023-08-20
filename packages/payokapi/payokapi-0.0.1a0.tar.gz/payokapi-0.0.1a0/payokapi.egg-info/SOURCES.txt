@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+payokapi.egg-info/PKG-INFO
+payokapi.egg-info/SOURCES.txt
+payokapi.egg-info/dependency_links.txt
+payokapi.egg-info/requires.txt
+payokapi.egg-info/top_level.txt
