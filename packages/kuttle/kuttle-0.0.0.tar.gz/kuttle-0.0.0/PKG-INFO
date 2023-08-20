@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: kuttle
+Version: 0.0.0
+Summary: A simple deployment package for ML.
+Home-page: https://github.com/kuttleio/kuttle
+Author: Dima Solodukha
+Author-email: ds@ktl.ai
+Description-Content-Type: text/markdown
+License-File: LICENSE
