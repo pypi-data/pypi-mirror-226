@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+pyproject.toml
+src/__init__.py
+src/pytest_bdd_report.py
+src/collector/__init__.py
+src/collector/scenario_aggregator.py
+src/collector/scenario_result_merger.py
+src/collector/step_details.py
+src/pytest_bdd_report.egg-info/PKG-INFO
+src/pytest_bdd_report.egg-info/SOURCES.txt
+src/pytest_bdd_report.egg-info/dependency_links.txt
+src/pytest_bdd_report.egg-info/top_level.txt
+src/summary/__init__.py
+src/summary/summary.py
+src/utils/json_util.py
