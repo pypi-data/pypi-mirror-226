@@ -1,0 +1,9 @@
+datawindow/__init__.py,sha256=EwXFr5DPeTRpocye6ikLLXhL0uxfq3CBARK-cMhwgpU,130
+datawindow/load.py,sha256=WkJnns130n8VLQWu10t-CVm9kEQ2K-wB_ryXmr_cdLw,1527
+datawindow/model.py,sha256=hue-xLnoU-DNpl42VhB9pI-_oEG8K23EzP-LQ12N11k,5478
+datawindow/preprocess.py,sha256=-YGy87AO38y8bH9u4dzPH9dM1t-nbRtpZ1uB8yCrviw,19449
+datawindow-0.0.7.dist-info/LICENSE.txt,sha256=xZf2nwjVCWzKqcyHfFi-BUIAbMdnA1d-0ajtRjGhmgw,1067
+datawindow-0.0.7.dist-info/METADATA,sha256=nosgN53VUPSAZdTWPygKXGIdOr-lYlFC0uWeEpCEYtI,3644
+datawindow-0.0.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+datawindow-0.0.7.dist-info/top_level.txt,sha256=qku9k-IVeVzePkZVGpx_rbT4HdstOwH81H2JzJY1r8A,11
+datawindow-0.0.7.dist-info/RECORD,,
