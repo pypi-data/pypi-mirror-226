@@ -1,0 +1,2 @@
+[console_scripts]
+usumbufu-client = confini.runnable.client:main
