@@ -1,0 +1,3 @@
+[console_scripts]
+unigridchain-cli = unigridchain.cli:cli
+
