@@ -1,0 +1,12 @@
+nanugo/__init__.py,sha256=vhxAoS8wdX6uMxmrv8iK80zOcMgUA8gPZ2CdI5YveZI,51
+nanugo/cli.py,sha256=hFnWaQow21EsTeOqZ4YwwftRyoL3BsLVFLUqnOuCqEs,3423
+nanugo/log.py,sha256=CEDvRU2CzjVzl2RJJQgdDRGex7HN08VQKXr4kYQxLmw,540
+nanugo/nanugo.py,sha256=Oj7LAlXNNMGj7qtTgc-lbk1HPbxoXdUmWCX8VP8i5dc,4849
+nanugo/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nanugo/tools/images.py,sha256=EXOaoa5xTyyFc-MlVxMqeHUhSAImzpLkDq9ustkjZJA,2365
+nanugo/tools/validations.py,sha256=hvkhmpTkhgnKj-Dx2LWLfJh1KVW-PO_uzdeHIgdXGmE,1422
+nanugo-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nanugo-0.1.2.dist-info/METADATA,sha256=JT3dck9xaJDZk5CTxOs9yRVtNFxSWijxsVvsX-Nvf8Q,2988
+nanugo-0.1.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+nanugo-0.1.2.dist-info/entry_points.txt,sha256=2U-JfMr-SuT2Vi9xJyKbSK4Tm5eAfa5wOGcWOGdS1cg,42
+nanugo-0.1.2.dist-info/RECORD,,
