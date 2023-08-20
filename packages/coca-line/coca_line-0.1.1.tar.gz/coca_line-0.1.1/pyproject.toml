@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "coca-line"
+version = "0.1.1"
+description = ""
+authors = ["Hiroyuki Ikuno <sam2kaikaramegusuri@gmail.com>"]
+readme = "README.md"
+packages = [{include = "coca_line"}]
+license = "MIT"
+homepage = "https://github.com/CocaButon60s/coca_line"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-env = "^0.8.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
