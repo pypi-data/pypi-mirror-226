@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: phasik
+Version: 1.3.1
+Summary: Tools to build temporal networks and infer temporal phases from them
+Home-page: https://gitlab.com/habermann_lab/phasik
+Author: Maxime Lucas
+Author-email: maxime.lucas.work@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy (>=1.20)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: pandas (>=1.3)
+Requires-Dist: networkx (>=2.4)
+Requires-Dist: matplotlib (>=3.3)
+Requires-Dist: seaborn (>=0.11)
+Requires-Dist: scikit-learn (>=0.21)
+Provides-Extra: all
+Requires-Dist: phasik ; extra == 'all'
+Requires-Dist: sphinx-automodapi ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2) ; extra == 'all'
+Requires-Dist: pytest-cov (>=4.0) ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: twine (>=3.4) ; extra == 'all'
+Requires-Dist: github-changelog ; extra == 'all'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'all'
+Requires-Dist: pandas ; extra == 'all'
+Requires-Dist: isort (==5.10.1) ; extra == 'all'
+Requires-Dist: black[jupyter] (==22.3.0) ; extra == 'all'
+Requires-Dist: seaborn (>=0.10) ; extra == 'all'
+Requires-Dist: pillow (>=8.2) ; extra == 'all'
+Requires-Dist: networkx ; extra == 'all'
+Requires-Dist: matplotlib (>=3.3) ; extra == 'all'
+Requires-Dist: sphinx-copybutton ; extra == 'all'
+Requires-Dist: pytest (>=7.2) ; extra == 'all'
+Requires-Dist: seaborn ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: nb2plots ; extra == 'all'
+Requires-Dist: nbsphinx (>=0.4.2) ; extra == 'all'
+Requires-Dist: scikit-learn ; extra == 'all'
+Requires-Dist: jupyter (>=1.0) ; extra == 'all'
+Requires-Dist: numpydoc (>=1.1) ; extra == 'all'
+Requires-Dist: wheel (>=0.36) ; extra == 'all'
+Requires-Dist: codecov (>=2.1) ; extra == 'all'
+Requires-Dist: sphinx (~=4.0) ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Provides-Extra: developer
+Requires-Dist: black[jupyter] (==22.3.0) ; extra == 'developer'
+Requires-Dist: isort (==5.10.1) ; extra == 'developer'
+Provides-Extra: documentation
+Requires-Dist: nbsphinx (>=0.4.2) ; extra == 'documentation'
+Requires-Dist: nb2plots ; extra == 'documentation'
+Requires-Dist: numpydoc (>=1.1) ; extra == 'documentation'
+Requires-Dist: pillow (>=8.2) ; extra == 'documentation'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'documentation'
+Requires-Dist: sphinx (~=4.0) ; extra == 'documentation'
+Requires-Dist: sphinx-copybutton ; extra == 'documentation'
+Requires-Dist: sphinx-automodapi ; extra == 'documentation'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2) ; extra == 'documentation'
+Requires-Dist: matplotlib ; extra == 'documentation'
+Requires-Dist: networkx ; extra == 'documentation'
+Requires-Dist: numpy ; extra == 'documentation'
+Requires-Dist: pandas ; extra == 'documentation'
+Requires-Dist: phasik ; extra == 'documentation'
+Requires-Dist: scipy ; extra == 'documentation'
+Requires-Dist: seaborn ; extra == 'documentation'
+Requires-Dist: scikit-learn ; extra == 'documentation'
+Provides-Extra: release
+Requires-Dist: twine (>=3.4) ; extra == 'release'
+Requires-Dist: wheel (>=0.36) ; extra == 'release'
+Requires-Dist: github-changelog ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: pytest (>=7.2) ; extra == 'test'
+Requires-Dist: pytest-cov (>=4.0) ; extra == 'test'
+Requires-Dist: codecov (>=2.1) ; extra == 'test'
+Provides-Extra: tutorial
+Requires-Dist: jupyter (>=1.0) ; extra == 'tutorial'
+Requires-Dist: matplotlib (>=3.3) ; extra == 'tutorial'
+Requires-Dist: seaborn (>=0.10) ; extra == 'tutorial'
+
+Tools to build temporal networks and infer temporal phases from them. Build temporal networks from time series data. Cluster snapshots to infer the multiscale temporal organisation of the network.
+
