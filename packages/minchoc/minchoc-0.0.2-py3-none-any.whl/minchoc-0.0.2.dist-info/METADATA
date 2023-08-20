@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: minchoc
+Version: 0.0.2
+Summary: Short description of project for PyPI etc.
+License: MIT
+Author: Andrew Udvare
+Author-email: audvare@gmail.com
+Requires-Python: >=3.10,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: defusedxml (>=0.7.1,<0.8.0)
+Requires-Dist: django (>=4.2.4,<5.0.0)
+Requires-Dist: django-stubs-ext (>=4.2.2,<5.0.0)
+Requires-Dist: django-types (>=0.17.0,<0.18.0)
+Requires-Dist: loguru (>=0.7.0,<0.8.0)
+Requires-Dist: ply (>=3.11,<4.0)
+Requires-Dist: psycopg (>=3.1.10,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Minimal Chocolatey-compatible NuGet server in a Django app
+
+See above.
+
+## Installation
+
+```shell
+pip install minchoc
+```
+
+```python
+INSTALLED_APPS = ['minchoc']
+ALLOW_PACKAGE_DELETION = False
+WANT_NUGET_HOME = False
+```
+
