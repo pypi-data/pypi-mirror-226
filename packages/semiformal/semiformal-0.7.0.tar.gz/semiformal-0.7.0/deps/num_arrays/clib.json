@@ -1,0 +1,20 @@
+{
+  "name": "num_arrays",
+  "version": "0.3.1",
+  "repo": "goodcleanfun/num_arrays",
+  "keywords": ["vector", "array", "standard", "numeric"],
+  "dependencies": {
+    "goodcleanfun/vector": "*"
+  },
+  "license": "MIT",
+  "src": [
+    "src/double_array.h",
+    "src/float_array.h",
+    "src/int32_array.h",
+    "src/int64_array.h",
+    "src/nop.h",
+    "src/uint32_array.h",
+    "src/uint64_array.h"
+  ]
+}
+

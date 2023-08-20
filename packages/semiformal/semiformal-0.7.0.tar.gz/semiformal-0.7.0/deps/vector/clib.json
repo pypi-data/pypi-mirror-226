@@ -1,0 +1,12 @@
+{
+  "name": "vector",
+  "version": "0.6.1",
+  "repo": "goodcleanfun/vector",
+  "description": "Generic vectors in C",
+  "keywords": ["vector", "array", "generic"],
+  "license": "MIT",
+  "dependencies": {
+    "goodcleanfun/sorting": "*"
+  },
+  "src": ["src/vector.h", "src/numeric.h"]
+}

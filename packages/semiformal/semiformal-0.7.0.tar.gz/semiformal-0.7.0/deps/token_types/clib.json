@@ -1,0 +1,9 @@
+{
+  "name": "token_types",
+  "version": "0.1.1",
+  "repo": "goodcleanfun/token_types",
+  "description": "Basic token types for lexing general unicode text",
+  "keywords": ["tokenization", "strings", "tokens"],
+  "license": "MIT",
+  "src": ["src/token_types.h"]
+}

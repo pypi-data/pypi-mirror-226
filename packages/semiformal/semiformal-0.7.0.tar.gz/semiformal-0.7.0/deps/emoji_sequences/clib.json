@@ -1,0 +1,9 @@
+{
+  "name": "emoji_sequences",
+  "version": "0.1.6",
+  "repo": "goodcleanfun/emoji_sequences",
+  "description": "Word breaks",
+  "keywords": ["regex", "unicode", "tokenization", "emoji"],
+  "license": "MIT",
+  "src": ["emoji_sequences.re"]
+}
