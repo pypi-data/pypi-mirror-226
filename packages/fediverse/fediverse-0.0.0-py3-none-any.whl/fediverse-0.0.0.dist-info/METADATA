@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fediverse
+Version: 0.0.0
+Summary: A server of Jupyverse servers
+Project-URL: Homepage, https://github.com/davidbrochart/fediverse
+Author-email: David Brochart <david.brochart@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: jupyter
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# fediverse
