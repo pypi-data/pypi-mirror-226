@@ -1,0 +1,8 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/my_func_bank.py,sha256=Qk-AbRi3q8S0apVMqaZSMttt1dzvj4wPIEuh2uKeabk,855
+src/setup.py,sha256=rocNPXH19-dCr-O8gcF58YCcmj_72A4kuiijEu5HmJw,573
+myfuncbank_alex-1.0.4.dist-info/METADATA,sha256=mQpGxGh0SUG3x6NP7QmFTTONRwRuoppaZ2cO86nBqio,678
+myfuncbank_alex-1.0.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+myfuncbank_alex-1.0.4.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+myfuncbank_alex-1.0.4.dist-info/RECORD,,
