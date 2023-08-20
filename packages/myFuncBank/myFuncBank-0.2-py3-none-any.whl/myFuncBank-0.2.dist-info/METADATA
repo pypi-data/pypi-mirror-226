@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: myFuncBank
+Version: 0.2
+Summary: This is my private function bank package
+Home-page: https://github.com/yourusername/mypackage
+Author: Alex Han
+Author-email: Mr.Alex.usa@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas
+
