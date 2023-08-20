@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: my-final-llm
+Version: 0.1.0
+Summary: looks good
+Author: Amir
+Author-email: amir.nagri@gmail.com
+Requires-Python: >=3.8.1,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: bodhisearch (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# my final llm
+
+
+[![image](https://img.shields.io/pypi/v/my_final_llm.svg)](https://pypi.python.org/pypi/my_final_llm)
+[![image](https://img.shields.io/travis/anagri/my_final_llm.svg)](https://travis-ci.com/anagri/my_final_llm)
+[![Documentation Status](https://readthedocs.org/projects/my-final-llm/badge/?version=latest)]( https://my-final-llm.readthedocs.io/en/latest/?version=latest )
+
+
+looks good
+
+
+* Free software: MIT license
+* Documentation: https://my-final-llm.readthedocs.io.
+
+
+## Features
+
+* TODO
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) forked at [BodhiSearch/cookiecutter-plugin-template](https://github.com/BodhiSearch/cookiecutter-plugin-template).
+
+
