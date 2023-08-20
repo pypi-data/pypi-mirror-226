@@ -1,0 +1,6 @@
+setup.py
+app/__init__.py
+sistema_bancario.egg-info/PKG-INFO
+sistema_bancario.egg-info/SOURCES.txt
+sistema_bancario.egg-info/dependency_links.txt
+sistema_bancario.egg-info/top_level.txt

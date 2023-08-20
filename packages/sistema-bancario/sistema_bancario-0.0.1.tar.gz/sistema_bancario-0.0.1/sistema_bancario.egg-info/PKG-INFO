@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: sistema-bancario
+Version: 0.0.1
+Summary: Meu sistema Bancario
+Home-page: https://github.com/MarcusViniciusBarcelos/sistema_bancario
+Author: Marcus Vinicius Barcelos
+Author-email: marcusbarcelos2001@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Sistema BancÃ¡rio em Python - Atualizado com PrincÃ­pios SOLID
+
+Este projeto oferece uma versÃ£o atualizada e simplificada de um sistema bancÃ¡rio em Python, incorporando os princÃ­pios do SOLID e seguindo as melhores prÃ¡ticas de design orientado a objetos. A aplicaÃ§Ã£o proporciona funcionalidades bÃ¡sicas para gerenciamento de contas bancÃ¡rias, incluindo depÃ³sitos, saques e a visualizaÃ§Ã£o de extratos, tudo isso atravÃ©s de uma interface de texto amigÃ¡vel.
+
+## Principais CaracterÃ­sticas e PrincÃ­pios
+
+- **OrganizaÃ§Ã£o Modular:** O projeto foi dividido em diferentes arquivos, cada um com um propÃ³sito especÃ­fico e seguindo o princÃ­pio da Responsabilidade Ãšnica (SRP).
+- **Classes e HeranÃ§a:** O uso de heranÃ§a foi aplicado para criar uma estrutura mais coesa e reutilizÃ¡vel. As classes foram organizadas para facilitar a extensÃ£o de funcionalidades.
+- **Interfaces Claras:** As interfaces foram definidas de forma clara para cada classe, seguindo o princÃ­pio da SegregaÃ§Ã£o de Interfaces (ISP), permitindo que cada classe implemente somente o que Ã© relevante.
+- **ValidaÃ§Ãµes Refinadas:** As operaÃ§Ãµes, como saques, foram implementadas com validaÃ§Ãµes que respeitam as regras de negÃ³cio e mantÃªm o cÃ³digo coeso e seguro.
+- **Menu Intuitivo:** O arquivo "main.py" apresenta um menu de interaÃ§Ã£o intuitivo, possibilitando login, acesso ao menu administrativo e realizaÃ§Ã£o de operaÃ§Ãµes bancÃ¡rias.
+- **PrincÃ­pio do Open/Closed:** A estrutura do projeto foi planejada de modo a ser facilmente estendida sem a necessidade de modificar as classes existentes.
+  
+## InstruÃ§Ãµes
+
+1. Execute o arquivo "main.py" para iniciar a aplicaÃ§Ã£o.
+2. Utilize o menu para fazer login, realizar operaÃ§Ãµes bancÃ¡rias e explorar as funcionalidades disponÃ­veis.
+3. Aproveite para analisar o cÃ³digo-fonte, entender a implementaÃ§Ã£o dos princÃ­pios SOLID e fazer ajustes de acordo com suas necessidades.
+
+Este projeto exemplifica o uso dos princÃ­pios SOLID para criar um cÃ³digo mais robusto, extensÃ­vel e de fÃ¡cil manutenÃ§Ã£o. Ao explorar o cÃ³digo, vocÃª terÃ¡ a oportunidade de aprender nÃ£o apenas as funcionalidades bancÃ¡rias, mas tambÃ©m as boas prÃ¡ticas de programaÃ§Ã£o orientada a objetos.
+
+**ObservaÃ§Ã£o:** Este projeto foi desenvolvido como um exercÃ­cio didÃ¡tico e nÃ£o Ã© adequado para uso em ambientes de produÃ§Ã£o ou para tratamento de informaÃ§Ãµes financeiras reais.
+
+Desfrute da jornada de aprendizado e aproveite as vantagens de desenvolver com os princÃ­pios SOLID!
+
+## Estrutura do Projeto
+
+O projeto segue uma estrutura baseada na Clean Architecture, onde a organizaÃ§Ã£o em camadas facilita a separaÃ§Ã£o de responsabilidades e a escalabilidade do sistema. Abaixo estÃ¡ a descriÃ§Ã£o das principais pastas e arquivos do projeto:
+
+- **app/domain/models:** ContÃ©m as classes de modelos de domÃ­nio, como `Cliente`, `ContaBancaria` e `Transacao`.
+- **app/domain/repositories:** ResponsÃ¡vel por interagir com o banco de dados e realizar operaÃ§Ãµes CRUD nas entidades.
+- **app/domain/use_cases:** ContÃ©m os casos de uso da aplicaÃ§Ã£o, que encapsulam a lÃ³gica de negÃ³cios.
+- **app/interfaces:** ContÃ©m as interfaces de interaÃ§Ã£o com o usuÃ¡rio, como o menu do cliente e do administrador.
+- **app/persistence/database.py:** ResponsÃ¡vel pela configuraÃ§Ã£o do banco de dados e pela inicializaÃ§Ã£o da sessÃ£o.
+
+O arquivo principal **main.py** Ã© o ponto de entrada da aplicaÃ§Ã£o, onde o banco de dados Ã© inicializado e os casos de uso sÃ£o instanciados para possibilitar a interaÃ§Ã£o do usuÃ¡rio com o sistema.
+
+Lembre-se de explorar cada arquivo e entender como eles se relacionam para formar a estrutura geral do projeto.
+
+
