@@ -1,0 +1,44 @@
+---
+includes:
+  - has_namespace.yaml
+
+type: object
+additionalProperties: false
+required: []
+
+properties:
+  source_dir:
+    type: array
+    default: [src]
+    items:
+      type: string
+
+  output_dir:
+    type: array
+    default: [generated]
+    items:
+      type: string
+
+  test_dir:
+    type: array
+    default: [apps]
+    items:
+      type: string
+
+  command:
+    type: string
+    default: "\\"
+
+  structs:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      "^[a-zA-Z0-9-_.]+$":
+        $ref: package://ifgen/schemas/Struct.yaml
+
+  enums:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      "^[a-zA-Z0-9-_.]+$":
+        $ref: package://ifgen/schemas/Enum.yaml
