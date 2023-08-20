@@ -1,0 +1,31 @@
+[project]
+name = "dynrender-skia-opt"
+version = "0.3.3"
+description = "使用skia-python将BiliBili动态渲染为图片"
+authors = [
+    { name = "BalconyJH", email = "balconyjh@gmail.com" },
+    { name = "DMC", email = "lzxder@outlook.com" },
+]
+dependencies = [
+    "skia-python<88.0,>=87.5",
+    "httpx<1.0.0,>=0.24.1",
+    "emoji<3.0.0,>=2.6.0",
+    "dynamicadaptor<1.0.0,>=0.4.9",
+    "bilirpc<2.0.0,>=1.4",
+]
+requires-python = ">=3.8,<4.0"
+readme = "README.md"
+
+[project.license]
+text = "GNU GPLv3"
+
+[tool.pdm.build]
+includes = [
+    "dynrender_skia",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
