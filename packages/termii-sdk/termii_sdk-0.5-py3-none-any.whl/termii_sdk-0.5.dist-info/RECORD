@@ -1,0 +1,11 @@
+termii_sdk/__init__.py,sha256=0irJtXw9U6uCEQ9nvbNS2jVeRTuWvxKsh86ZCNno67U,5286
+termii_sdk/core.py,sha256=2MPiHayNvHDMgG7OaybeXPPkTpwmL4MLoqJU0AAw6gw,3220
+termii_sdk/error.py,sha256=hFk0wZHPHV0qO0RQ-g5RrVEL-i9yub1EJoDGfO8cygw,104
+termii_sdk/insights_api.py,sha256=yU5i7XZVVKtA_lyOK-PqW1oy8wAnOLSVj9fvRHLS9Fg,5074
+termii_sdk/messaging_api.py,sha256=a4Bez5H23ubvGTP90IY_ehPC2oqyX6YNf-xdT9LpDnI,15948
+termii_sdk/token_api.py,sha256=mzvKSrmCWu5omKxWCYVouu5wQEzjbFauLyy8mu57biQ,7088
+termii_sdk-0.5.dist-info/LICENSE,sha256=JYB6iunor1APk87DFuv7Flog9MywjINsGCxKc0tNKvY,1097
+termii_sdk-0.5.dist-info/METADATA,sha256=Jro5pOYagLHQ2d3cuE2_DuVKzlQdNpmYkZ-DlgNY0M0,6758
+termii_sdk-0.5.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+termii_sdk-0.5.dist-info/top_level.txt,sha256=72LHwi7UWBPpR4QVKB7YvOE80wAmfi5j6WLRMOjlcjg,11
+termii_sdk-0.5.dist-info/RECORD,,
