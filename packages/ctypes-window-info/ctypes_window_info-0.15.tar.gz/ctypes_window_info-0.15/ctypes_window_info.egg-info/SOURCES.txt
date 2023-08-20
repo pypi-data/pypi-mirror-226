@@ -1,0 +1,13 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ctypes_window_info/README.MD
+ctypes_window_info/__init__.py
+ctypes_window_info/requirements.txt
+ctypes_window_info/thirdparty.json
+ctypes_window_info.egg-info/PKG-INFO
+ctypes_window_info.egg-info/SOURCES.txt
+ctypes_window_info.egg-info/dependency_links.txt
+ctypes_window_info.egg-info/top_level.txt
