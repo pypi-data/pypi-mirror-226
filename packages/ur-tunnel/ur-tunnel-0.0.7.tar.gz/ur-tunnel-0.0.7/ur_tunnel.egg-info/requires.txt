@@ -1,0 +1,6 @@
+aiohttp
+certifi
+websockets
+requests
+pip
+packaging
