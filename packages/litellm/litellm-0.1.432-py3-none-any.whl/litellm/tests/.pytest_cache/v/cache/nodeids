@@ -1,0 +1,10 @@
+[
+  "test_completion.py::test_completion_azure",
+  "test_completion.py::test_completion_claude",
+  "test_completion.py::test_completion_cohere",
+  "test_completion.py::test_completion_openai",
+  "test_completion.py::test_completion_openai_with_functions",
+  "test_completion.py::test_completion_openai_with_more_optional_params",
+  "test_completion.py::test_completion_openai_with_optional_params",
+  "test_completion.py::test_completion_openai_with_stream"
+]
