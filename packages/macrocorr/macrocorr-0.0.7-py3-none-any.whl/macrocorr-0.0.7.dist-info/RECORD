@@ -1,0 +1,10 @@
+macrocorr/macrocorr/__init__.py,sha256=UvHn58r-SNmWti3U8v9wJmqXjJ9ZEv461I859HpsuqI,73
+macrocorr/macrocorr/correlator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+macrocorr/macrocorr/correlator/correlator.py,sha256=BV0R9PhYo2p7fKTeaqp1Fyuwr_71a-_pnAZwNbGxKLc,7902
+macrocorr/macrocorr/correlator/macroIndicator.py,sha256=aeFFhIWK1tPides4ewhXgUsyNfFPUpZD3XjOswx8ToY,6368
+macrocorr/macrocorr/correlator/utils.py,sha256=DIZNhAPGt-KaGH4cr_Ni_ZbiQ16Nns7q9xRv1ghMcPc,2705
+macrocorr-0.0.7.dist-info/LICENSE.txt,sha256=ERN_1WssjV-eJXTAsSiVpnLs0zF0GdtnkcnQL_j42Q0,1070
+macrocorr-0.0.7.dist-info/METADATA,sha256=LpQHDhA1ZlKvBPY13kqrrbDHN2OQODeXonP5Sf9Orak,4073
+macrocorr-0.0.7.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+macrocorr-0.0.7.dist-info/top_level.txt,sha256=fjlPf2Z8w7UG1bSSurJK_MAfcmC_jetRHlyyVDLSDvA,10
+macrocorr-0.0.7.dist-info/RECORD,,
