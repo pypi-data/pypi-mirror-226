@@ -1,0 +1,10 @@
+beautifulsoup4>=4.12.2
+requests
+
+[dev]
+black
+mypy
+pep517
+pylint
+types-beautifulsoup4
+types-requests
