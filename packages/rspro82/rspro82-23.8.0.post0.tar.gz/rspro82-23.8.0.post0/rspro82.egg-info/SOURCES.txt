@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+rspro82/__init__.py
+rspro82/__main__.py
+rspro82/channels.py
+rspro82/message.py
+rspro82.egg-info/PKG-INFO
+rspro82.egg-info/SOURCES.txt
+rspro82.egg-info/dependency_links.txt
+rspro82.egg-info/entry_points.txt
+rspro82.egg-info/requires.txt
+rspro82.egg-info/top_level.txt
+tests/test_message.py

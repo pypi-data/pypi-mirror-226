@@ -1,0 +1,2 @@
+[console_scripts]
+rspro82 = rspro82.__main__:entrypoint
