@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fastapi-sqlalchemy-toolkit
+Version: 0.0.1
+Summary: FastAPI SQLAlchemy Toolkit
+Author-email: Egor Kondrashov <e.kondr01@gmail.com>
+Project-URL: Homepage, https://github.com/e-kondr01/fastapi-sqlalchemy-toolkit
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FastAPI SQLAlchemy Toolkit
