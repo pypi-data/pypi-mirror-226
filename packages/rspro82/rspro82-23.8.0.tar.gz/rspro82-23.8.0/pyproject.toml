@@ -1,0 +1,35 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[project]
+authors = [{ name = "Tim D. Smith", email = "tim@tds.xyz" }]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dependencies = ["attrs", "pandas", "pyserial", "typer", "typing_extensions"]
+description = "Support for US Swimming SDIF v3 files"
+name = "rspro82"
+readme = "README.md"
+requires-python = ">=3.9"
+version = "23.8.0"
+
+[project.optional-dependencies]
+dev = ["black", "pip-tools", "pyright", "pytest"]
+
+[project.urls]
+repository = "https://github.com/tdsmith/rspro82"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+
+[tool.pyright]
+pythonPlatform = "All"
+pythonVersion = "3.9"
+
+[tool.setuptools.package-data]
+sdif = ["py.typed"]
+
+[project.scripts]
+rspro82 = "rspro82.__main__:entrypoint"

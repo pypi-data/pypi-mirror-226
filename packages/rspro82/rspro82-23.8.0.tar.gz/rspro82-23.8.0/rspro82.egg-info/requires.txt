@@ -1,0 +1,11 @@
+attrs
+pandas
+pyserial
+typer
+typing_extensions
+
+[dev]
+black
+pip-tools
+pyright
+pytest
