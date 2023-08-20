@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: python-carrier-infinity
+Version: 0.0.2
+Summary: A Python library for accessing Carrier Infinity thermostats
+Project-URL: Documentation, https://github.com/mileswu/python-carrier-infinity#readme
+Project-URL: Issues, https://github.com/mileswu/python-carrier-infinity/issues
+Project-URL: Source, https://github.com/mileswu/python-carrier-infinity
+Author-email: "@mileswu" <mileswu@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: aiohttp~=3.8
+Requires-Dist: oauthlib~=3.2
+Requires-Dist: python-dateutil~=2.8
+Description-Content-Type: text/markdown
+
+# python-carrier-infinity
+
+[![PyPI - Version](https://img.shields.io/pypi/v/python-carrier-infinity.svg)](https://pypi.org/project/python-carrier-infinity)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-carrier-infinity.svg)](https://pypi.org/project/python-carrier-infinity)
+[![Coverage Status](https://coveralls.io/repos/github/mileswu/python-carrier-infinity/badge.svg)](https://coveralls.io/github/mileswu/python-carrier-infinity)
+
+A Python library for accessing Carrier Infinity thermostats
+
+---
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install python-carrier-infinity
+```
+
+## License
+
+`python-carrier-infinity` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
