@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pubsub-library
+Version: 0.3.0
+Summary: Lib para gerenciar filas de mensagens
+Home-page: https://github.com/caiquilipe/pubsub-library.git
+Author: Caiqui Fhelipe
+Author-email: caiqui_lipe@hotmail.com
+Requires-Dist: aio-pika ==9.2.2
+Requires-Dist: aioredis ==2.0.1
+Requires-Dist: azure-core ==1.29.2
+Requires-Dist: azure-servicebus ==7.11.1
+
