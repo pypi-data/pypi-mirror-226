@@ -1,0 +1,4 @@
+click
+requests
+openai-spec-validator
+openai

@@ -1,0 +1,8 @@
+README.md
+setup.py
+dakka.egg-info/PKG-INFO
+dakka.egg-info/SOURCES.txt
+dakka.egg-info/dependency_links.txt
+dakka.egg-info/entry_points.txt
+dakka.egg-info/requires.txt
+dakka.egg-info/top_level.txt
