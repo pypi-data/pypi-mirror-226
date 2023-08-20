@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: newspipe
+Version: 0.1.0
+Summary: A web news aggregator with visualization improvements and powered by Artificial Intelligence (IA)
+Home-page: https://github.com/Nekmo/newspipe/
+Download-URL: https://github.com/Nekmo/newspipe/archive/master.zip
+Author: Nekmo
+Author-email: contacto@nekmo.com
+License: MIT license
+Keywords: newspipe
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: SunOS/Solaris
+Classifier: Operating System :: POSIX :: BSD
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+License-File: LICENSE
+Requires-Dist: Django
+Requires-Dist: django-debug-toolbar
+Requires-Dist: django-extensions
+Requires-Dist: gunicorn
+Requires-Dist: psycopg2
+Requires-Dist: django-redis-cache
+Requires-Dist: djangorestframework
+Requires-Dist: django-filter
+Requires-Dist: django-crispy-forms
+Requires-Dist: python-dotenv
+Requires-Dist: factory-boy
+Requires-Dist: flake8
+Requires-Dist: mypy
+Requires-Dist: black
+Requires-Dist: tox
+Requires-Dist: raven
+Requires-Dist: celery
+Requires-Dist: flower
+Requires-Dist: Sphinx
+
+########
+NewsPipe
+########
+
+.. image:: https://img.shields.io/pypi/v/newspipe.svg?style=flat-square
+  :target: https://pypi.org/project/newspipe/
+  :alt: Latest PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/newspipe.svg?style=flat-square
+  :target: https://pypi.org/project/newspipe/
+  :alt: Python versions
+
+.. image:: https://img.shields.io/codeclimate/maintainability/Nekmo/newspipe.svg?style=flat-square
+  :target: https://codeclimate.com/github/Nekmo/newspipe
+  :alt: Code Climate
+
+.. image:: https://img.shields.io/codecov/c/github/Nekmo/newspipe/master.svg?style=flat-square
+  :target: https://codecov.io/github/Nekmo/newspipe
+  :alt: Test coverage
+
+.. image:: https://img.shields.io/requires/github/Nekmo/newspipe.svg?style=flat-square
+  :target: https://requires.io/github/Nekmo/newspipe/requirements/?branch=master
+  :alt: Requirements Status
+
+
+A web news aggregator with visualization improvements and powered by Artificial Intelligence (IA)
+
+Development commands
+====================
+
+Type checks
+-----------
+
+Running type checks with mypy::
+
+  $ mypy newspipe
+
+
+Test coverage
+-------------
+
+To run the tests, check your test coverage, and generate an HTML coverage report::
+
+    $ coverage run -m pytest
+    $ coverage html
+    $ open htmlcov/index.html
+
+
+Celery
+------
+
+This app comes with Celery. To run a celery worker:
+
+.. code-block:: bash
+
+    celery -A newspipe worker -l info

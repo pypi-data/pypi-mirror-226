@@ -1,0 +1,14 @@
+newspipe/__init__.py,sha256=V9nRW5N-BrsFNQF6RpVRDc3DfBFAguyhAEy-5KWVb88,78
+newspipe/apps.py,sha256=8mpBkfxLkeZHB4dlDZhHLzN0feDXgzF713p5cqU7m6Q,206
+newspipe/celery.py,sha256=1sw4-zSSnoMfo85HM1bHgpyrnmFsNVGoaib0p5DbRhs,566
+newspipe/urls.py,sha256=f_blK9IGRnVJEWbh_O2jVGv8HFgmcIppcXW4lP38_q4,363
+newspipe/wsgi.py,sha256=dctbVF_evCZQzoA90wsAlM8G-OMmjZqW3FLYt-c2Q9I,397
+newspipe/settings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newspipe/settings/defaults.py,sha256=xaDBbji8B_6dZHTarpKu99tCUeDJxV0qza0_fnKux9A,6971
+newspipe/settings/develop.py,sha256=kXpQZg3y0IknNJgwOhrRKh_sTU4WZZ-nFY86WQ5wiVA,267
+newspipe/settings/production.py,sha256=mYLQNZqDETLWXF9HX0ZOclsbVsmkBkK87gfdIOcKnBQ,5737
+newspipe-0.1.0.dist-info/LICENSE,sha256=GNJEyHXkWtd5VBBsfoFOSfT9WgkqXziB8JjQf04nr28,1074
+newspipe-0.1.0.dist-info/METADATA,sha256=jeYa1oGErCCLsnPO8qp1ub5rb84RZ2j-sJNxryddiOg,3001
+newspipe-0.1.0.dist-info/WHEEL,sha256=m9WAupmBd2JGDsXWQGJgMGXIWbQY3F5c2xBJbBhq0nY,110
+newspipe-0.1.0.dist-info/top_level.txt,sha256=9wyqem_gnn3P3SR_V0q5lmyS53n4-YwAIHLdiK22iJc,9
+newspipe-0.1.0.dist-info/RECORD,,
