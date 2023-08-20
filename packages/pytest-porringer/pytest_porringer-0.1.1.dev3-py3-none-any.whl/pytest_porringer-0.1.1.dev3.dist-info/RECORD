@@ -1,0 +1,10 @@
+pytest_porringer-0.1.1.dev3.dist-info/METADATA,sha256=UlNQWynrp3H2q9dWWCTBovV8DrAbebZY2eTqiwOGQu8,569
+pytest_porringer-0.1.1.dev3.dist-info/WHEEL,sha256=bbAwydobi_oZ_0rI4gBBovxINCqHVHcC26TV6S2A2Io,90
+pytest_porringer-0.1.1.dev3.dist-info/entry_points.txt,sha256=zjf88q6_h-422SFoghp3pd-h3lwwotkrxYQmVzr-tBc,129
+pytest_porringer-0.1.1.dev3.dist-info/licenses/LICENSE.md,sha256=wUELBJ0UKnpv6gI6lccpfQn9LyXZRT0vaLfW-pZDIuc,1073
+pytest_porringer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/mock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/mock/environment.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/plugin.py,sha256=Kk-YizaHcu7Kb_SYFas4zsMBQwuwzL0InTVcLhgwNhw,13
+pytest_porringer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer-0.1.1.dev3.dist-info/RECORD,,
