@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: alice-client
+Version: 0.0.1
+Summary: Client for the Alice AI virtual assistant server.
+Home-page: https://github.com/AliceHomeAI/alice-server
+Author: Jordan Maxwell
+Maintainer: Jordan Maxwell
+License: GNU General Public License v2.0
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<img src="https://avatars.githubusercontent.com/u/142627166?s=200&v=4" align="right" width="200">
+
+Alice AI Server
+===============
+
+# License
+
+Alice server is licensed under the "GNU General Public License v2.0". For more info, refer to the [LICENSE](LICENSE) file in the repository root.

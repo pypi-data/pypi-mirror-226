@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+alice/client/api.py
+alice/client/models/__init__.py
+alice/client/models/dto.py
+alice/client/models/llm.py
+alice_client.egg-info/PKG-INFO
+alice_client.egg-info/SOURCES.txt
+alice_client.egg-info/dependency_links.txt
+alice_client.egg-info/top_level.txt
