@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pegwords
+Version: 0.0.2
+Summary: Python library and scripts for converting digits to mnemonic pegwords and back.
+Home-page: https://github.com/terrycojones/pegwords
+Download-URL: https://github.com/terrycojones/pegwords
+Author: Terry C. Jones
+Author-email: terry@jon.es
+Maintainer: Terry C. Jones
+Maintainer-email: terry@jon.es
+License: MIT
+Keywords: pegwords
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
