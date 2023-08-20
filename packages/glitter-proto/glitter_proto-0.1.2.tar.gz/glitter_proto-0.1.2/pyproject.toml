@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "glitter.proto"
+version = "0.1.2"
+description = ""
+authors = ["Glitter Protocol <ted@glitterprotocol.io>"]
+readme = "README.md"
+packages = [{include = "glitter_proto"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
