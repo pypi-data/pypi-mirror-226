@@ -1,0 +1,9 @@
+text.highcharts-credits {
+    display: none;
+}
+.highcharts-exporting-group {
+    display: none;
+}
+div[class*="chartMenu"] {
+    display: none;
+}
