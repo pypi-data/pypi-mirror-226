@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: CellStar
+Version: 2.0.3
+Summary: Algorithm for round cells identification in the brightfield microscopy images.
+Home-page: https://github.com/Fafa87/cellstar
+Author: Filip Mroz
+Author-email: fafafft@gmail.com
+License: BSD
+Keywords: brightfield,yeast,segmentation,adapting
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy (>=1.16)
+Requires-Dist: scipy (>=1.2.3)
+Requires-Dist: pillow (<=6.2.2)
+Requires-Dist: matplotlib (<=2.2.5)
+Requires-Dist: imageio (<=2.6.1)
+Requires-Dist: pathlib
+
+CellStar
+========
+.. image:: https://github.com/Fafa87/cellstar/actions/workflows/run_tests.yml/badge.svg?branch=master
+   :target: https://github.com/Fafa87/cellstar/actions/workflows/run_tests.yml
+.. image:: https://img.shields.io/pypi/v/cellstar.svg 
+   :target: https://pypi.org/project/CellStar/
+.. image:: https://img.shields.io/pypi/pyversions/cellstar
+   :target: https://pypi.org/project/CellStar/
+.. image:: https://img.shields.io/badge/platform-windows%20%7C%20osx%20%7C%20ubuntu-lightgrey 
+   :target: https://pypi.org/project/CellStar/
+
+
+Introduction
+------------
+Automatic tracking of cells in time-lapse microscopy is required to investigate a multitude of biological questions. To limit manipulations during cell line preparation and phototoxicity during imaging, brightfield imaging is often considered. Since the segmentation and tracking of cells in brightfield images is considered to be a difficult and complex task, a number of software solutions have been already developed.
+
+CellStar is one of such algorithms. It is optimized to segment and track images of budding yeast cells growing in monolayer (e.g. images from microfluidic chambers), however the algorithm can be also used to track other round objects (in brightfield as well as fluorescent images).
+
+The important part of that solution is parameter fitting mechanism which allows to train and use CellStar for many different types of imagery.
+
+Please visit our website http://www.cellstar-algorithm.org/ for more details.
+
+Distributions
+-------------
+There are three ways of using CellStar:
+
+- python package https://github.com/Fafa87/cellstar (`pip install cellstar`)
+
+- plugin for CellProfiler http://cellstar-algorithm.strikingly.com/#download
+    The plugin allows to simply auto-adapt cellstar parameters to the input imagery that you want to segment.
+    The package includes not only the plugin itself but also examples of its usage to guide users on how to achieve best segmentation on a given type of imagery.
+    The latest version is:
+    - 2.0.2 for CellProfiler 4.2.4 available `here <https://drive.google.com/u/0/uc?id=1mhmwUuuYg4ZZQ80rCvmgCGiNHTsq5W6s&export=download>`_.
+
+
+- matlab version for manual curation http://cellstar-algorithm.strikingly.com/#download
+
+
+How to use package
+------------------
+
+.. code-block:: python
+
+    import cellstar
+    input_image = imageio.imread("input_images/sample_brightfield.tif")
+    segmentator = cellstar.Segmentation(segmentation_precision=9, avg_cell_diameter=35)
+    segmentator.set_frame(input_image)
+    segmentation, snakes = segmentator.run_segmentation()
+
+See and run examples/use_cellstar.py as well as tests for more details.
+
+Wide range of example usages
+----------------------------
+During the testing phase of our plugin it turned out that combining parameter fitting and CellProfiler pipeline flow can result in a very flexible solution. In order to show that and also provide a quick starting point for users the `Official user guide <https://drive.google.com/file/d/0B3to8FwFxuTHNnJZbXRIdTdWTFE/view?usp=share_link&resourcekey=0-ii-gxvLOwkdY_ZQhvfGMKA>`_ was prepared. It is also a part of CellProfiler plugin package.
+
+It contains the ready to use segmentation solution for a wide range of various imagery which includes:
+
+- complete pipeline description
+
+- method selection discussions
+
+- CellProfiler Analyst usage for advanced filtering
+
+The pipelines listed in the document along with the actual imagery are available as a part of plugin version. Every case can be easily to recreate the results.
+
+.. image:: https://user-images.githubusercontent.com/9865688/62827684-7ca28f80-bbd4-11e9-9ff7-f9ee7591d732.png
+
+
