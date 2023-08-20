@@ -1,0 +1,12 @@
+pycmarkgfm/__init__.py,sha256=C0Una-J7eRsFCn0FEhoH9cwVZVLqPKmfizTwWAEWEwM,395
+pycmarkgfm/_cmark.pyd,sha256=s7OrF-IjMcCgw9c7SkvIP0FNsWF7gAHcsmbpSIhQ0U0,246272
+pycmarkgfm/build_cmark.py,sha256=QpbvrPhDEiyJ2h8BjX2oH8muwMyUU4u4sQ8fK3FqUzQ,2637
+pycmarkgfm/cmark.cffi.h,sha256=NQ_9pI6uQd6xz9zsBsiT1dBoztM_sDK1-JVYazJex4s,3437
+pycmarkgfm/cmark.py,sha256=JRzQ85RzKGSOnNT1mWgoEzKvQOBQg-T3c1vM41YC5I4,7472
+pycmarkgfm/cmark_module.h,sha256=utNs-0yHL0vn7LGjiqWmjZET6KbKwIh8FznEIUXTPP8,280
+pycmarkgfm/options.py,sha256=ZXdzFgOyyw3Wa0Q58ehXAAi4Pl0KuB54xqsE9oJh4gU,1874
+pycmarkgfm-1.2.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pycmarkgfm-1.2.1.dist-info/METADATA,sha256=w4UHaFlOHdPjuSxUrXZh0w0JIM36F2WfLGEYQ8k_n6c,5008
+pycmarkgfm-1.2.1.dist-info/WHEEL,sha256=7ZXx6xbfqHPd62Znb0xrpRpdgnbHbS6AovUcQnLmei8,96
+pycmarkgfm-1.2.1.dist-info/top_level.txt,sha256=ULI_iHJYOEs5BL79arasGQ0Ae963_0JUVN_25qb5WBU,11
+pycmarkgfm-1.2.1.dist-info/RECORD,,
