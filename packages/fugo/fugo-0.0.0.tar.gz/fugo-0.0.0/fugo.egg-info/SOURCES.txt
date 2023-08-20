@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+fugo/__init__.py
+fugo.egg-info/PKG-INFO
+fugo.egg-info/SOURCES.txt
+fugo.egg-info/dependency_links.txt
+fugo.egg-info/top_level.txt
