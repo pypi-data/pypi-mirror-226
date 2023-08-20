@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: whatsapp-message-sender
+Version: 0.2.0
+Summary: A tool for sending WhatsApp messages to clients with pending payments
