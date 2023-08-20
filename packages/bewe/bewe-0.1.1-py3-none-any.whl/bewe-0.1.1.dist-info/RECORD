@@ -1,0 +1,12 @@
+bewe/__init__.py,sha256=zUb6TixlmqFqJ5zObfABYuEbxQYVD8aSwWi-Y2SiR6s,58
+bewe/alpha_seeker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bewe/alpha_seeker/base_data.py,sha256=EGv3K2tFEkDjNdUtXLssWR0-s_qtqP2kWQLXNQ9RUcU,628
+bewe/alpha_seeker/base_strategy.py,sha256=Ifs96YK1u6J0F3PZCTy1YYNo8PnFukdke9YwLt5Z8gc,579
+bewe/backtest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bewe/backtest/backtester.py,sha256=ntrkHpfwLmmNu1FnPXo9kAnmZ9rekTVj6OsUUs9Sheg,300
+bewe/backtest/holder.py,sha256=d2mAK4uvQ4DTx7k1iXSbbXuAAab_pxSJjpJ9hUe6rR4,3797
+bewe/backtest/holder_test.py,sha256=xfiCGCLCVTp1nQRxFdZaf084Q0JqCazlPcGhstwT8fg,239
+bewe-0.1.1.dist-info/METADATA,sha256=2ORetZFDwu08Q9LX13GABojLZ9YF1vkZmRJTDhtMpnU,209
+bewe-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bewe-0.1.1.dist-info/top_level.txt,sha256=w4jhySpSEMYIrAmjQ7rNZS0JnODsBmX0I9V2L0sLBH0,5
+bewe-0.1.1.dist-info/RECORD,,
