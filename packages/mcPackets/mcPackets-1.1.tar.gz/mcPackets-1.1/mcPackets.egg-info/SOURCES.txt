@@ -1,0 +1,10 @@
+README.md
+setup.py
+mcPackets/Packets.py
+mcPackets/__init__.py
+mcPackets/algorithm.py
+mcPackets.egg-info/PKG-INFO
+mcPackets.egg-info/SOURCES.txt
+mcPackets.egg-info/dependency_links.txt
+mcPackets.egg-info/requires.txt
+mcPackets.egg-info/top_level.txt
