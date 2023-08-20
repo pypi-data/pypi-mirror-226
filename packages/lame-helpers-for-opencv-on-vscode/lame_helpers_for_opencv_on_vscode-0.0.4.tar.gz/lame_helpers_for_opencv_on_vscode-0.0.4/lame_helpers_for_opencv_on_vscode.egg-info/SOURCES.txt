@@ -1,0 +1,8 @@
+setup.py
+lame_helpers_for_opencv_on_vscode/__init__.py
+lame_helpers_for_opencv_on_vscode/main.py
+lame_helpers_for_opencv_on_vscode.egg-info/PKG-INFO
+lame_helpers_for_opencv_on_vscode.egg-info/SOURCES.txt
+lame_helpers_for_opencv_on_vscode.egg-info/dependency_links.txt
+lame_helpers_for_opencv_on_vscode.egg-info/requires.txt
+lame_helpers_for_opencv_on_vscode.egg-info/top_level.txt

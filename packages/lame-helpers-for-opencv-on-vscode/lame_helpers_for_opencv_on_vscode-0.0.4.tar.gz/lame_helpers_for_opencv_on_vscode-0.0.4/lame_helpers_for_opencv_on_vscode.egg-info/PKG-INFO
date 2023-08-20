@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lame-helpers-for-opencv-on-vscode
+Version: 0.0.4
+Summary: Lame tools to practice with opencv on VScode in place of Jupyter Notebooks.
+Home-page: UNKNOWN
+Author: tms1991
+Author-email: <youremail@email.com>
+License: UNKNOWN
+Keywords: opencv,vscode
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+
+The objects in this package are useful to practice with python opencv on VScode.
+
+Generally, it is preferable to usa Jupiter Notebook to practice with opencv.
+This is because JN allows easy ways to manage and display images.
+But in case one wants to do the practice with VScode instead of JN, here comes this library.
+
+This is a 'lame' library because the code is not efficient and can be very CPU and RAM consuming.
+
+
