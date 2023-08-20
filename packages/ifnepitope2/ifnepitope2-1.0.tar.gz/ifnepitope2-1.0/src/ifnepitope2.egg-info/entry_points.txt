@@ -1,0 +1,2 @@
+[console_scripts]
+ifnepitope2 = ifnepitope2.python_scripts.ifnepitope2:main
