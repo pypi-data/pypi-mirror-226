@@ -1,0 +1,3 @@
+include konfigleser/requirements.txt
+include konfigleser/thirdparty.json
+include konfigleser/README.MD

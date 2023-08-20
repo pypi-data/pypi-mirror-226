@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+konfigleser/README.MD
+konfigleser/__init__.py
+konfigleser/requirements.txt
+konfigleser/thirdparty.json
+konfigleser.egg-info/PKG-INFO
+konfigleser.egg-info/SOURCES.txt
+konfigleser.egg-info/dependency_links.txt
+konfigleser.egg-info/requires.txt
+konfigleser.egg-info/top_level.txt
