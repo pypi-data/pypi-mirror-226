@@ -1,0 +1,13 @@
+kernelpatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kernelpatch/__main__.py,sha256=A1huFAdtnSLSSst6bhuiYEHVcv6K3hsuPSmY7q4I9CA,1002
+kernelpatch/diff.py,sha256=-649mda4Y--7RWwqEBZeT014s_IaPl1usXVcGFctGnM,2368
+kernelpatch/file.py,sha256=8GajS3timsRbYZldY5tUgEMW46cx90drEZ1cpcayX2U,172
+kernelpatch/find.py,sha256=z0yh0AsX3sNqiLD67RipPnxhXL0K6GUdzdobla_Bfhs,15490
+kernelpatch/json.py,sha256=5R37F9rqHm-WDUOMsIhlHx32tnJj1_c1FA8Xcyff92g,393
+kernelpatch/patch.py,sha256=pC0LEOXvtcVDjPZKhpm6n-KLZLsmc5vSEQ0yJu_A-RU,2951
+kernelpatch/patterns.py,sha256=pJ2hRSbDIMwOE_2oif1EvV3UBj9fTE9WUxfmQfJtRgA,5411
+kernelpatch/utils.py,sha256=fE7hBUUzEjUsi0J2TiL2BhUJNKWFYbwuxq7Jb5kK_bM,154
+pykernelpatch-1.dist-info/LICENSE,sha256=q8GL6Z0ZELUE7G1vBaCB7nHaKV63q1_WIux0vbn9nak,1069
+pykernelpatch-1.dist-info/METADATA,sha256=WN5xZ4MwGfIMmW-Vah7cMtJO04SMicgEVFpVHbP2qZY,2735
+pykernelpatch-1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pykernelpatch-1.dist-info/RECORD,,
