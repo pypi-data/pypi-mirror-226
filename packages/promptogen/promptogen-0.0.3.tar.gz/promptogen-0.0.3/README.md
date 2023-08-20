@@ -1,0 +1,4 @@
+# PromptoGen
+## ライセンス
+
+MITライセンス
