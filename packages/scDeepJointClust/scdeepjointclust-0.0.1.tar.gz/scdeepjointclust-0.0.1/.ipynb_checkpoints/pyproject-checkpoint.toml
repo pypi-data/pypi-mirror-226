@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scDeepJointClust"
+version = "0.0.1"
+authors = [
+  { name="Zhenjiang Fan", email="fanzhenjiang00@gmail.com" },
+]
+description = "A method that addresses the limitations by jointly training on both types of information using a deep neural network (DNN) approach."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ZhenjiangFan/scDeepJointClust"
+"Bug Tracker" = "https://github.com/ZhenjiangFan/scDeepJointClust/issues"

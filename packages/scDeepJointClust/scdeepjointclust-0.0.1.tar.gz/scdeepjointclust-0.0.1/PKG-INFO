@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: scDeepJointClust
+Version: 0.0.1
+Summary: A method that addresses the limitations by jointly training on both types of information using a deep neural network (DNN) approach.
+Project-URL: Homepage, https://github.com/ZhenjiangFan/scDeepJointClust
+Project-URL: Bug Tracker, https://github.com/ZhenjiangFan/scDeepJointClust/issues
+Author-email: Zhenjiang Fan <fanzhenjiang00@gmail.com>
+License-File: LICENSE.txt
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# scDeepJointClust:
+
+A method that addresses the limitations by jointly training on both types of information using a deep neural network (DNN) approach. GitHub repository is allocated at
+[here](https://github.com/ZhenjiangFan/scDeepJointClust/).
