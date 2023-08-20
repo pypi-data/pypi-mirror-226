@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: alcheonengine
+Version: 0.1.0
+Summary: ALCHEON Game Engine
+Author: Andrii Murha
+Author-email: flat.assembly@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10

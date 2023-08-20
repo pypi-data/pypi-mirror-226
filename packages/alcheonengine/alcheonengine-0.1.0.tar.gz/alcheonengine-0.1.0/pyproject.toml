@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "alcheonengine"
+version = "0.1.0"
+description = "ALCHEON Game Engine"
+authors = ["Andrii Murha <flat.assembly@gmail.com>"]
+build = 'build.py'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+
+
+[build-system]
+requires = ["poetry>=0.12", "cython"]
+build-backend = "poetry.masonry.api"
