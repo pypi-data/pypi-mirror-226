@@ -1,0 +1,15 @@
+VMC/__init__.py,sha256=_0gvQEzAgTtT60vcbO8-9r_eYMicaRqzoUd97Ht0lsg,57
+VMC/cleaning.py,sha256=SgraCtjSdIFUwZY6nMVJvejEs3o3kIEFyUCbkivOgOk,2508
+VMC/colouring.py,sha256=1ON0m_irWki55TmWM5RmrbQhmLAjoR68FDQKWTwJxsI,1546
+VMC/compile.py,sha256=RiSC5xTtBs2nJdSAm0vPvPsxwWYTIHWfKp3CkND29X4,7594
+VMC/helpers.py,sha256=6-_h3LlpIKWlqMERG4Cn5yC1eLpLYU3y9lB_IKNs50c,2219
+VMC/init_options.py,sha256=XVj2xigsB6WJetQ0Hzf0rAaItYVpw33nT_TYJdd4GV4,866
+VMC/plot.py,sha256=30tVtFje9IZGDdun--7pjyMdJV4eiZM-3UQtf28XNpk,8829
+VMC/precompute_A.py,sha256=YQcJHvzTtsfyQsxZdlkG3t37yFFwpGX1AXCCFns6Zyo,7007
+VMC/protein.py,sha256=0DiQ1cqntnxIEqq4ega4Vque71n-rhqCQ4qg2WXh94w,15341
+VMC/results.py,sha256=ukGwDHDEcgUXN4ZOIEdIhxDJgHLE6uMcQ_xDBIDxi4M,9081
+VisualiseMarkovCommunities-0.0.1.dist-info/LICENSE,sha256=qaxLqTiFNYmTLUCJXDt5yVd6B_Emhu-PfPPPS_S-tWM,1088
+VisualiseMarkovCommunities-0.0.1.dist-info/METADATA,sha256=x8br0c5Q_HVMEj7T5wj8x84OnoKShAwIaMAfmkqGys8,711
+VisualiseMarkovCommunities-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+VisualiseMarkovCommunities-0.0.1.dist-info/top_level.txt,sha256=g1R-vznJlQ6Lpo6NEj6fuD2u7qzvdYwbLcaIa_4Z7JE,4
+VisualiseMarkovCommunities-0.0.1.dist-info/RECORD,,
