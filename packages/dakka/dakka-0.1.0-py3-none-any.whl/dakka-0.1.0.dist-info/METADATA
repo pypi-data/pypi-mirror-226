@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dakka
+Version: 0.1.0
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: openai-spec-validator
+Requires-Dist: openai
+
