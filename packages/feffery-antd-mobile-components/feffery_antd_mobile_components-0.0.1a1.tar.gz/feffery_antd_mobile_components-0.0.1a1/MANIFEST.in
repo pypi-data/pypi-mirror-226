@@ -1,0 +1,11 @@
+include feffery_antd_mobile_components/feffery_antd_mobile_components.min.js
+include feffery_antd_mobile_components/feffery_antd_mobile_components.min.js.map
+include feffery_antd_mobile_components/async-*.js
+include feffery_antd_mobile_components/async-*.js.map
+include feffery_antd_mobile_components/*-shared.js
+include feffery_antd_mobile_components/*-shared.js.map
+include feffery_antd_mobile_components/metadata.json
+include feffery_antd_mobile_components/package-info.json
+include README.md
+include LICENSE
+include package.json
