@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: shimport
+Version: 2023.8.20.19.31
+Summary: Import tools for python projects
+Home-page: https://github.com/elo-enterprises/shimport/
+Author: elo
+License: MIT
+Project-URL: Documentation, https://github.com/elo-enterprises/shimport/
+Project-URL: Source, https://github.com/elo-enterprises/shimport/
+Project-URL: Download, https://github.com/elo-enterprises/shimport/#files
+Platform: any
+Classifier: Programming Language :: Python
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: testing
+Provides-Extra: lint
+Provides-Extra: publish
+
+<!--- This is a markdown file.  Comments look like this --->
+<table>
+  <tr>
+    <td colspan=2><strong>
+    shimport
+      </strong>&nbsp;&nbsp;&nbsp;&nbsp;
+      <small><small>
+      </small></small>
+    </td>
+  </tr>
+  <tr>
+    <td width=15%><img src=img/icon.png style="width:150px"></td>
+    <td>
+    Import utilities for python
+    <br/><br/>
+    <a href=https://pypi.python.org/pypi/shimport/><img src="https://img.shields.io/pypi/l/shimport.svg"></a>
+    <a href=https://pypi.python.org/pypi/shimport/><img src="https://badge.fury.io/py/shimport.svg"></a>
+    <a href="https://github.com/elo-enterprises/shimport/actions/workflows/python-test.yml"><img src="https://github.com/elo-enterprises/shimport/actions/workflows/python-test.yml/badge.svg"></a>
+    </td>
+  </tr>
+</table>
+
+  * [Overview](#overview)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Simple lazy modules](#simple-lazy-modules)
+    * [Filtering module contents](#filtering-module-contents)
+    * [Automatically importing submodules](#automatically-importing-submodules)
+
+
+---------------------------------------------------------------------------------
+
+## Overview
+
+Import utilities for python 
+
+---------------------------------------------------------------------------------
+
+## Installation
+
+See [pypi](https://pypi.org/project/shimport/) for available releases.
+
+```
+pip install shimport
+```
+
+---------------------------------------------------------------------------------
+
+## Usage
+
+### Simple lazy modules
+
+```
+import shimport 
+pathlib = shimport.lazy('pathlib')
+print(pathlib.Path('.').absolute())
+```
+
+### Filtering module contents
+
+```
+import typing
+import shimport 
+wrapper = shimport.wrapper("os.path")
+namespace = wrapper.prune(
+        exclude_private=True,
+        filter_module_origin=True,
+        filter_instances=typing.FunctionType,
+    )
+
+namespace.map(lambda k, v: print([k,v]))
+```
+
+
+
+### Automatically importing submodules
+
+```
+...
+```
+
+---------------------------------------------------------------------------------
