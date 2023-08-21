@@ -1,0 +1,2 @@
+def cambur():
+    print("cambur")
