@@ -1,0 +1,9 @@
+pandas==2.0.*
+numpy
+tqdm
+psutil
+dython==0.7.3
+seaborn
+matplotlib
+scikit-learn
+scipy
