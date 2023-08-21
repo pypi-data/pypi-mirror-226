@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+testeCryptoguardian/__init__.py
+testeCryptoguardian/testeCryptoguardian.py
+testeCryptoguardian.egg-info/PKG-INFO
+testeCryptoguardian.egg-info/SOURCES.txt
+testeCryptoguardian.egg-info/dependency_links.txt
+testeCryptoguardian.egg-info/requires.txt
+testeCryptoguardian.egg-info/top_level.txt
