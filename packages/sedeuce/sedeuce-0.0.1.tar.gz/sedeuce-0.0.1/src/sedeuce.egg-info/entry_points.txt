@@ -1,0 +1,4 @@
+[console_scripts]
+sed = sedeuce.__main__:main
+sedeuce = sedeuce.__main__:main
+
