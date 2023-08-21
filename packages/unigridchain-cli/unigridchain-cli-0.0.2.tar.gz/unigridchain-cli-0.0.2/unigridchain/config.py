@@ -1,0 +1,12 @@
+_hedgehog_repo = "https://github.com/unigrid-project/hedgehog"
+_daemons_path = "/usr/local/bin"
+_hedgehog_path = "/usr/local/bin/hedgehog.bin"
+_unigridchain_repo = "https://github.com/unigrid-project/chain-testing"
+_base_unigridchain_name = "cosmos-daemond"
+_base_hedgehog_name = "hedgehog"
+_GENESIS_URL = "https://raw.githubusercontent.com/unigrid-project/chain-testing/master/genesis.json"
+_GENESIS_CHECKSUM = "16cd83f53ae0dbbaf5b0acfe9ba7a64db468f80782a463601b915bac9759c864"
+_HEDGEHOG_PORT = 52883
+_UNIGRIDCHAIN__gRPC_PORT = 9090
+_UNIGRIDCHAIN__REST_PORT = 1317
+_UNIGRIDCHAIN__BFT_PORT = 26657
