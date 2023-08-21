@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: shell-ai
+Version: 0.1.0
+Author: Rick Lamers
+License-File: LICENSE
+Requires-Dist: langchain ==0.0.268
+Requires-Dist: InquirerPy ~=0.3
+Requires-Dist: openai ~=0.27
+Provides-Extra: dev
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
