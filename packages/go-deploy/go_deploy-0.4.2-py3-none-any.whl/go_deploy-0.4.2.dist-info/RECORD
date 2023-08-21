@@ -1,0 +1,10 @@
+go/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+go/deploy.py,sha256=Q_AGzjU4moa4Jzdvi_0qFqSHUWFuTDa5_sqEHn4JxRE,9369
+go/ssh_helper.py,sha256=lGAulovWKpnEvHPXlDgNo-3ARI7bCy7jbnGZsaaSCqI,1319
+go/utils.py,sha256=EI2Xr5I3fxJgD1eQvlersJed-DLRWP1IIJW0dA4VvkI,5952
+go_deploy-0.4.2.dist-info/LICENSE,sha256=O2isb-ule3q_7-MvLKrX9fSinHyoSsnhvimAcjnF0RU,1536
+go_deploy-0.4.2.dist-info/METADATA,sha256=H-dOmIcoHkypwhu3wPpnRDoXxk0BOgR2MLV0FZ_XdTQ,1209
+go_deploy-0.4.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+go_deploy-0.4.2.dist-info/entry_points.txt,sha256=MT_d5pPDcNMU3jkLk8vcZSi_iOv0TMyWW5AZxvd10VM,45
+go_deploy-0.4.2.dist-info/top_level.txt,sha256=wvw1XytS4B6mcNyLJ_HI86Jo1otLOZoM-RVEy5dXkt8,3
+go_deploy-0.4.2.dist-info/RECORD,,
