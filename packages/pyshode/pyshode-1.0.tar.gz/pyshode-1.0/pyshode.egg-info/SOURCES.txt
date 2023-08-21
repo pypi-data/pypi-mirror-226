@@ -1,0 +1,7 @@
+setup.py
+pyshade/__init__.py
+pyshade/pyshode.py
+pyshode.egg-info/PKG-INFO
+pyshode.egg-info/SOURCES.txt
+pyshode.egg-info/dependency_links.txt
+pyshode.egg-info/top_level.txt
