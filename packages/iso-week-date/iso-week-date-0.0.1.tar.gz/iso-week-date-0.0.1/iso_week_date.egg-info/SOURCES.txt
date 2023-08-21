@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+iso_week_date/__init__.py
+iso_week_date/isoweek.py
+iso_week_date/pandas_utils.py
+iso_week_date/polars_utils.py
+iso_week_date/py.typed
+iso_week_date.egg-info/PKG-INFO
+iso_week_date.egg-info/SOURCES.txt
+iso_week_date.egg-info/dependency_links.txt
+iso_week_date.egg-info/requires.txt
+iso_week_date.egg-info/top_level.txt
