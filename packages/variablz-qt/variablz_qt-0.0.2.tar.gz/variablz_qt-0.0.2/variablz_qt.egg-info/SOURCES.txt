@@ -1,0 +1,9 @@
+README.md
+setup.py
+variablz_qt/Table.py
+variablz_qt/__init__.py
+variablz_qt.egg-info/PKG-INFO
+variablz_qt.egg-info/SOURCES.txt
+variablz_qt.egg-info/dependency_links.txt
+variablz_qt.egg-info/requires.txt
+variablz_qt.egg-info/top_level.txt
