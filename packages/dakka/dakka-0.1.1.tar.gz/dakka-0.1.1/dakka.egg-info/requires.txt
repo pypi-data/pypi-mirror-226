@@ -1,0 +1,6 @@
+click
+requests
+openapi_spec_validator
+openapi_spec_pydantic
+openai
+termcolor
