@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: qiskit-cold-atom
+Version: 0.2.0
+Summary: Integration of cold atomic experiments into the Qiskit SDK.
+Home-page: https://github.com/qiskit-community/qiskit-cold-atom
+Author: Qiskit cold atom development team
+Author-email: hello@qiskit.org
+License: Apache 2.0
+Keywords: qiskit sdk quantum cold atoms
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: qiskit-terra (>=0.17.1)
+Requires-Dist: qiskit-nature (>=0.1.3)
+Requires-Dist: qiskit-aer (>=0.8.0)
+Requires-Dist: matplotlib (>=3.3)
+
+Qiskit cold atom is an open-source library to describe cold atomic quantum 
+experiments in a gate- and circuit-based framework.
