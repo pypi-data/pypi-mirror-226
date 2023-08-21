@@ -1,0 +1,24 @@
+1. Create your app and place at some location
+   e.g Create a Python app named as memory_usage.py and place it in /var/aafak
+2. Create a .service file in /usr/lib/systemd/system/
+   e.g vim /usr/lib/systemd/system/my-memory-monitoring.service
+3. systemctl daemon-reload
+4. systemctl start my-memory-monitoring
+5. systemctl status my-memory-monitoring
+
+
+Restart Behavior:
+[root@rmc-aug13 aafak]# ps -aux | grep memory_usa
+root     32134 45.0  2.5 591440 407820 ?       Ss   10:38   0:03 /usr/bin/python memory_usage.py
+root     32144  0.0  0.0 112708   980 pts/0    S+   10:38   0:00 grep --color=auto memory_usa
+[root@rmc-aug13 aafak]# kill -9 32134
+[root@rmc-aug13 aafak]# ps -aux | grep memory_usa
+root     32162  0.0  0.0 112708   980 pts/0    S+   10:38   0:00 grep --color=auto memory_usa
+[root@rmc-aug13 aafak]# ps -aux | grep memory_usa
+root     32165  0.0  0.0 112708   980 pts/0    S+   10:38   0:00 grep --color=auto memory_usa
+[root@rmc-aug13 aafak]# ps -aux | grep memory_usa
+root     32168  0.0  0.0 112708   976 pts/0    S+   10:38   0:00 grep --color=auto memory_usa
+[root@rmc-aug13 aafak]# ps -aux | grep memory_usa  # After 5 sec came up, if you define
+root     32170  0.0  2.2 537908 354656 ?       Rs   10:38   0:00 /usr/bin/python memory_usage.py
+root     32172  0.0  0.0 112708   980 pts/0    S+   10:38   0:00 grep --color=auto memory_usa
+

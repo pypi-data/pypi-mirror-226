@@ -1,0 +1,3 @@
+$ pip3 install --proxy=http://web-proxy.in.hpecorp.net:8080 taskflow
+$ pip3 uninstall --proxy=http://web-proxy.in.hpecorp.net:8080 networkx
+$ pip3 install --proxy=http://web-proxy.in.hpecorp.net:8080 networkx==1.10

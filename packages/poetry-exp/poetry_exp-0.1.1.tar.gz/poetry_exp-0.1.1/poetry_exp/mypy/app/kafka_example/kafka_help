@@ -1,0 +1,86 @@
+https://www.interviewbit.com/blog/rabbitmq-vs-kafka/
+Kafka; a distributed publish-subscribe messaging system.
+Kafka offers much higher performance than message brokers like RabbitMQ.
+Unlike rabbitMQ, It uses the pull based approach, hence messages can be replay at any time by consumers
+
+Kafka is a distributed system comprised of servers and clients that communicate through
+a TCP network protocol. The system allows us to read, write, store, and process events.
+We can think of an event as an independent piece of information that needs to be relayed
+from a producer to a consumer
+
+Topics are partitioned, meaning a topic is spread over a number of "buckets"
+located on different Kafka brokers. This distributed placement of your data is very important
+for scalability because it allows client applications to both read and write the data
+from/to many brokers at the same time.
+
+
+Kafka offers much higher performance than message brokers like RabbitMQ.
+It uses sequential disk I/O to boost performance, making it a suitable option for implementing queues.
+It can achieve high throughput (millions of messages per second)
+It uses the pull based approach, hence messages can be replay at any time by consumers
+
+Unlike RabbitMQ, Kafka is a framework implementation of a software bus using a pub-sub model
+of stream-processing, which means it is a distributed publish-subscribe messaging system.
+However, instead of using data packets, it uses a data stream to deliver the messages.
+These data streams are suitable for both offline and online message consumption.
+
+Kafka is an open-source software platform developed by the Apache Software Foundation written
+in Scala and Java. The project aims to provide a unified, high-throughput,
+low-latency platform for real-time handling data feeds—many companies for high-performance data pipelines,
+streaming analytics, data integration, and mission-critical applications.
+
+Features of Kafka
+Kafka aims to provide solutions for large scale event-driven systems. The top features of Kafka are Scalability, High-Volume, Data Transformations, Fault Tolerance, Reliability, Durability, Performance, Zero Downtime, Extensibility and Replication. In other words, everything a large scale event management platform would require. For each feature, Kafka implements them in the following way:
+
+High-Volume
+Kafka works with a considerable volume of data in the data streams.
+
+When to use kafka:
+When there is a need to replay messages, the consumer can directly replay them.
+Replay makes it so that you don’t lose any events if there is a bug in the consumer
+or the consumer is overloaded or otherwise not ready. You can simply fix the issue,
+bring the consumer to a ready state, and replay the messages.
+When you need to consume messages very quickly, Kafka should be your go-to event handling platform.
+
+
+Apache Kafka: Pull-based approach
+Kafka uses a pull-based model with a smart consumer, which means that the consumer has
+to request batches of messages from a specific offset. Kafka permits long-pooling
+(the ability to configure the time interval a Kafka producer sends you another batch of events),
+allowing different consumers to consume events at a different pace.
+It also prevents tight loops when there is no message past the offset.
+
+When there are no contending consumers, the Kafka log preserves the order of messages in a single partition,
+making it necessary to use a pull model. Long-pooling also allows users to leverage the batching
+of messages for effective message delivery and higher throughput.
+
+
+
+Create a free new cluster using https://customer.cloudkarafka.com/signup
+Created with username: email/@CB32
+
+Create an instance: e.g kafka-test-instance
+
+Download the certificate: will give you a file with name env
+
+instance username: vz78igft
+instance password: 1OLEUHHixm-66QZ4Xz5XjpGLjl57RAY9
+
+Create the topic: topic prefix is username-:  (vz78igft-)
+
+vz78igft-click
+vz78igft-upload
+
+Servers/Brokers:
+rocket-01.srvs.cloudkafka.com:9094
+rocket-02.srvs.cloudkafka.com:9094
+rocket-03.srvs.cloudkafka.com:9094
+
+https://api.cloudkarafka.com/console/3759dd75-4256-4dbb-8877-310444a167be/browser
+https://api.cloudkarafka.com/console/3759dd75-4256-4dbb-8877-310444a167be/details
+
+install python package:
+$ pip3 install --proxy=http://web-proxy.in.hpecorp.net:8080 confluent_kafka
+Collecting confluent_kafka
+  Downloading confluent_kafka-1.9.0-cp36-cp36m-win32.whl (2.5 MB)
+Installing collected packages: confluent-kafka

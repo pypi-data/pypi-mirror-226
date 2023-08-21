@@ -1,0 +1,40 @@
+Explain what is REST and RESTFUL?
+
+REST represents REpresentational  State Transfer; it is a relatively new aspect of writing web API.
+
+RESTFUL is referred for web services written by applying REST architectural concept are called RESTful services,
+it focuses on system resources and how state of resource should be transported over HTTP protocol to different
+ clients written in different language.  In RESTFUL web service HTTP methods like GET, POST,
+  PUT and DELETE can be used to perform CRUD operations.
+
+2) Explain the architectural style for creating web API?
+
+The architectural style for creating web api are
+
+HTTP for client server communication(HTTP is a set of protocols designed to enable communication between clients and servers.
+ It works as a request-response protocol between a client and server)
+XML/JSON as formatting language
+Simple URI as the address for the services
+Stateless communication
+
+Mention some key characteristics of REST?
+
+Some key characteristics of REST includes
+
+REST is stateless, therefore the SERVER has no state (or session data)
+With a well-applied REST API, the server could be restarted between two calls as every data is passed to the server
+Web service mostly uses POST method to make operations, whereas REST uses GET to access resources
+
+What is the purpose and format of URI in REST architecture?
+Ans: Purpose of URI is to locate resources on the server that are hosting web services.
+Format of URI: <protocol>://<service-name>/<ResourceType>/<ResourceID>
+
+Advantage of statelessness:
+Each and every method requests are treated independently.
+Application design is simplified as it does not maintain client’s previous interaction.
+Works with HTTP protocol as it shares the feature of being statelessness.
+
+The disadvantage of statelessness includes
+
+Every time client interaction takes place, web services are to be provided with
+extra information about each request so that they can interpret the client’s state.

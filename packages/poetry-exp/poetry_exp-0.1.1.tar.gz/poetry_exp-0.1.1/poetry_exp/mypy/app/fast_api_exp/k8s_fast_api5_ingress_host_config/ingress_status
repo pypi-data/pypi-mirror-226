@@ -1,0 +1,211 @@
+# reopened with the relevant failures.
+#
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"nginx.ingress.kubernetes.io/rewrite-target":"/$1"},"name":"test-ingress2","namespace":"default"},"spec":{"ingressClassName":"nginx","rules":[{"http":{"paths":[{"backend":{"service":{"name":"fastapiapp","port":{"number":8000}}},"path":"/(users(?:/|$).*)","pathType":"ImplementationSpecific"}]}}]}}
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  creationTimestamp: "2022-07-29T12:17:26Z"
+  generation: 1
+  name: test-ingress2
+  namespace: default
+  resourceVersion: "3023139"
+  uid: f6a82f86-e830-4828-8149-f4aa78177b8b
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: fastapiapp
+            port:
+              number: 8000
+        path: /(users(?:/|$).*)
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.107.82.191
+
+
+Services are Kubernetes resources that enable network access to Pods. In this article,
+we will look deeply into the concepts of Kubernetes Services and its different types.
+We will also look into Kubernetes Ingress, which is not a service but is another way of
+routing traffic to your services and your cluster.
+
+Kubernetes Services
+As we know, a Kubernetes cluster consists of a set of node machines, running containerized applications
+inside objects named Pods. The pods are grouped based on the type of service they provide into various groups. Pods must be able to accept connections in some way, from your cluster or from outside your cluster.
+
+In the case of external access, we know that pods inside the cluster are present inside an internal pod network and cannot be accessed by the node’s IP address. A user should be able to communicate with the application using the IP address of the node.
+
+In the case of internal communication, we know that each pod in the system is assigned with its own unique IP known as Pod IP. But these IPs are not static, as we know the pods can go down any time and new pods are created all the time in a cluster. So we cannot rely on these IPs for Internal communication.
+
+So we need something that is consistent so that things outside or inside the cluster might be able to access it persistently. A Service is a Kubernetes object that acts as an endpoint for enabling the communication between various components within and outside the application. In other words, a service is a stable address for pods. The three important Service types in Kubernetes are:
+
+ClusterIP
+NodePort
+LoadBalancer
+ClusterIP
+A full-stack web application typically is made up of different kinds of pods hosting different parts of the application. It may have a set of pods running a backend server, a set of pods running the front-end web server and a set of pods running a database, and so on. All these sets of pods need to communicate with each other. As we discussed, we can’t depend on the IP addresses of pods, since they are not static.
+
+ClusterIP is a Kubernetes service type that is used to group pods together and provide a single interface to access them. For example, an incoming request by another service will be forwarded to one of the pods in the ClusterIP randomly.
+
+Now let’s look at an example. Before creating the ClusterIP service we can start by creating a simple pod based on a definition file.
+
+front-end-pod-definition.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+name: myapp-pod
+labels:
+ app: myapp
+ type: front-end
+spec:
+containers:
+ - name: nginx-container
+  image: nginx
+As we can see our pod is simply a container that has the Nginx web server behind it. We have added labels app and type. Pod will be grouped into the type front-end. Next, we need to run the create command to create the pod.
+
+kubectl create -f frontend-pod-definition.yml
+Let's look at the ClusterIP service definition:
+
+fe-clusterip-service-definition.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+name: front-end-service
+spec:
+type: ClusterIP
+selector:
+ app: myapp
+ type: front-end
+ports:
+ - targetPort: 80
+  port: 80
+The Service definition has type as ClusterIP (it's not mandatory, as by default services are of kind ClusterIP). We can see that we have used the selector to link the service to a set of pods. Under ports, we have a target port and port.
+
+The target port is the port where the front-end service is exposed which in this case is 80 and the port is where the ClusterIP service is exposed which is also 80.
+
+Now we can create the service by the create command.
+
+kubectl create -f clusterip-service-definition.yml
+Let’s look at the service created
+
+
+We can see that in addition to the default Kubernetes ClusterIP a new ClusterIP of the name front-end-service is created with an IP address. The name of the service can be used by other pods to access it.
+
+NodePort
+NodePort is a Kubernetes service type that listens on a port on the node and forward requests on that port to a pod on the node. Let's look at an example.
+
+We have a node with IP address 10.1.3.4.
+The internal pod network of the node is in the range 10.244.0.0
+The pod itself has an IP of 10.244.0.2.
+The actual web server is running on port 80 in the pod.
+Essentially, we want to forward requests coming to 10.1.3.4 to the pod.
+
+When we create a NodePort service, the service is assigned a high port on all nodes. When a request comes in for node:port, it will act as a built-in load balancer and send the request to one of the pods at random.
+
+Let’s create a NodePort service to forward the incoming request to the node to port 80 of the pod. Let’s start by creating a service definition:
+
+nodeport-service-definition.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+name: myapp-service
+spec:
+type: NodePort
+selector:
+ app: myapp
+ type: front-end
+ports:
+ - targetPort: 80
+ port: 80
+ nodePort: 32593
+We can see three values in the ports section.
+
+targetPort: The port on the pod where the actual web server is running, that is 80 in this case. Service forwards the requests to the target port. If no ports are provided in the spec, it will default to 80
+
+port: Like all Kubernetes objects, the Service is a virtual server inside the node. Inside the cluster, it will have its own IP address. The ‘port’ is the port exposed to the NodePort service itself. This value is mandatory.
+
+nodePort: The port on the node which is used to access the web server externally. These ports can only be in a valid range from 30000 to 32767. This is not a mandatory field, if it is not provided a free port from the range is selected.
+
+Now we can create the service by the command,
+
+kubectl create -f nodeport-service-definition.yml
+Let's check if the service is created.
+
+
+Let's try to access the service using the IP of the node
+
+Since I am using Minikube, the IP of the node is different from the local IP of the system. To get that value, type the command below  in the terminal
+
+minikube ip
+Let's use curl to access the app using the NodePort in this IP
+
+curl 192.168.99.101:32593
+
+Great! We got a response from the pod.
+
+LoadBalancer
+Using nodePort we were able to expose our web app to the internet. However, there’s a problem - multiple instances of the web app can be deployed across multiple nodes in our cluster. To access this web app, we’d need to provide both a node IP and the node port to the user. In real life, it’s difficult to determine which node IP and node port should be provided to the user, manually. Instead, we need to have a load balancer to expose our web app to the internet.
+
+A LoadBalancer is a service that provides (as you may have guessed) a load balancer for our application, in supported cloud providers. The service becomes accessible through a provided load balancer service. Most cloud providers like AWS, GCP, Azure offer this functionality. Once you create a service of type LoadBalancer, cloud providers will create a load balancer in the backend and generate a public IP address. This public IP can be used to access our web app from the public internet.
+
+This is the standard way to directly expose a service to the Internet. It is similar to the NodePort where all the traffic on the port we specify will be forwarded to the service. Almost all kinds of traffic like HTTP, TCP, UDP, Websockets, gRPC etc can be sent to this service.
+
+Let's look at an example definition file:
+
+apiVersion: v1
+kind: Service
+metadata:
+name: my-service
+spec:
+selector:
+ app: myapp
+type: LoadBalancer
+ports:
+ - nodePort: 31000
+ port: 80
+ targetPort: 9376
+We can see that this is almost the same as a NodePort definition file.
+
+Let's create the service with create command
+
+kubectl create -f load-balancer-service-definition.yml
+Now let's look at the service that got created using the command.
+
+kubectl get services
+
+You can see that since I am using Minikube the value of the external IP is shown as <pending>. However, in an actual cloud setup, the IP will be generated and can be used to access the application. This is the IP that can be used by our users to access our web app from the internet.</pending>
+
+
+
+
+
+
+Ingress Networking
+We have seen in the Kubernetes services sections on how to expose our application to the outside world using the NodePort and LoadBalancer. If we only have to have a single service port we can use NodePort. In the case of multiple instances of the same service, we have to use the LoadBalancer.
+
+But what if we have to add one more service to our node and access it from another URL. In this case, we will have to add another load balancer to our cluster. This means that each service exposed with a LoadBalancer will get its own IP address and we will have to pay for each of these load balancers which can be quite expensive.
+
+An Ingress is used when we have multiple services on our cluster and we want the user request routed to the service based on their path. Consider an example, I have two services foo and bar in our cluster. When we type www.example.com/foo we should be routed to the foo service and www.example.com/bar should be routed to bar service. These routings will be performed by an Ingress. Unlike NodePort or LoadBalancer, Ingress is not actually a type of service. Instead, it is an entry point that sits in front of multiple services in the cluster. It can be defined as a collection of routing rules that govern how external users access services running inside a Kubernetes cluster.
+
+Ingress is most useful if you want to expose multiple services under the same IP address, and these services all use the same L7 protocol (typically HTTP). You only pay for one load balancer if you are using the native GCP integration, and because Ingress is “smart” you can get a lot of features out of the box (like SSL, Auth, Routing, etc)
+
+Ingress can be considered as the best way to expose multiple services under the same IP. Also, we should only pay for a single load balancer.
+
+Let's see how Ingress works. Before we implement the Ingress we need to deploy a supported reverse proxy or load balancing solution like Nginx, Haproxy, or Trafik. Then we need to specify a set of rules to configure the Ingress. The solution we deploy is called an ingress controller and the set of rules that we configure are called as ingress resources. Ingress resources are created using definition files like the ones we used to create pods and deployments.
+
+Ingress Controller
+The Ingress controller is not a part of the Kubernetes cluster by default. So we cannot simply create an Ingress resource and expect it to work. There are a number of solutions available for Ingress. A few of them being GCE which is Google’s layers of HTTP load balancer Nginx, Contour, Haproxy Traefik, and Istio. Out of this, GCE and Nginx are currently being supported and maintained by the Kubernetes project.
+
+The Ingress Controller is not just another load balancer or a reverse proxy service. They have additional components that monitor the Kubernetes cluster for new definitions and Ingress resources and configure the service accordingly.
+
+We will be looking at Nginx as an example. Nginx controllers can be deployed just like another deployment into Kubernetes. Here is a sample definition file:

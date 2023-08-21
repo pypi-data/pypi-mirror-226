@@ -1,0 +1,13 @@
+save: Save a single array to a binary file in NumPy format.
+
+savetxt: Save an array to a file as plain text.
+
+savez: Save several arrays into a single file in uncompressed .npz format.
+
+savez_compressed: Save several arrays into a compressed .npz archive
+
+
+
+numpy.load(file, mmap_mode=None, allow_pickle=False, fix_imports=True, encoding='ASCII'):
+Load arrays or pickled objects from .npy, .npz or pickled files.
+

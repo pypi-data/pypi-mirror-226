@@ -1,0 +1,22 @@
+---
+- name: Getting inventory details from VMWare vCenter
+  hosts: localhost 
+  gather_facts: no
+  vars:
+    timeout: 600
+    ansible_timeout: 600
+    vcenter_hostname: 172.17.29.162
+    vcenter_username: administrator@vsphere.local
+    vcenter_password: 12rmc*Help
+    proxy_env:
+      http_proxy: http://web-proxy.in.hpecorp.net:8080
+      https_proxy: http://web-proxy.in.hpecorp.net:8080
+
+  tasks:
+    - name: Gather resource pool facts about all resource pools available
+      vmware_resource_pool_facts:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        validate_certs: false
+      register: rp_facts

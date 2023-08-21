@@ -1,0 +1,316 @@
+import time
+from elasticsearch_exp.es_inventory import es_utils
+from elasticsearch_exp.es_inventory import constants
+from elasticsearch_exp.es_inventory import es_const
+from elasticsearch_exp.es_inventory.es_enventory_base import ESInventoryBase
+
+from elasticsearch_exp.es_inventory.inventory_samples.sample1\
+    import build_sample1
+from elasticsearch_exp.es_inventory.inventory_samples.sample2\
+    import build_sample2
+from elasticsearch_exp.es_inventory.inventory_samples.sample3\
+    import build_sample3
+from elasticsearch_exp.es_inventory.inventory_samples.sample4\
+    import build_sample4
+
+from elasticsearch_exp.es_inventory.inventory_samples.inventory_sample_dict_builder\
+    import build_inventory_sample
+
+
+class ESInventoryBuildHelper(ESInventoryBase):
+    def __init__(self, vcenter_dict):
+        super(ESInventoryBuildHelper, self).__init__(vcenter_dict)
+        self.folder_moref_map = dict()
+
+    def _build_folder_docs(self, folders, parent_info, datacenter_info):
+        folders_info = []
+        for folder in folders:
+            folder.pop('parent', None)
+            folder.update({
+                'parentInfo': parent_info,
+                'datacenterInfo': datacenter_info,
+                'vcenterInfo': self.vcenter_info
+            })
+            folder_id = es_utils.generate_new_doc_id()
+            folder_info = {
+                'id': folder_id,
+                'name': folder['name']
+            }
+            folders_info.append(folder_info)
+
+            sub_folders = folder.pop('sub_folder', [])
+            self.folder_moref_map[folder['moref']] = folder_info
+            sub_folders_info = []
+            if sub_folders:
+                sub_folders_info.extend(
+                    self._build_folder_docs(
+                        sub_folders, folder_info, datacenter_info
+                    )
+                )
+
+            self.bulk_docs.append(
+                es_utils.build_index_details(
+                    es_const.INDEX_FOLDERS, folder_id,
+                    es_const.INDEX
+                )
+            )
+            folder['subFolders'] = sub_folders_info
+            self.bulk_docs.append(folder)
+
+        return folders_info
+
+    def _build_bulk_docs(self):
+        """
+        Build the data in following format:
+        {"index": {"_index": "vms", "_id":
+        "a91a2c87-daea-4c71-9cd5-297945a4adc3"}}
+
+        {"moref": "vm-3", "name": "vm3",
+         "dsInfo": [{"id": "6782a57e-a573-4a81-b1d0-b14c38fa4b4e",
+         "name": "Datastore1"}], "vcenterInfo":
+         {"id": "220584f9-35f4-49c5-b8a4-acfb4dafb2df",
+         "name": "vcenter1"}, "folderInfo":
+         {"id": "1ad95dee-50ef-452f-aeca-64b18eb91a79",
+         "name": "vmFolder2"}}
+
+        {"index": {"_index": "datastores",
+         "_id": "74562e68-eee3-4ac0-967d-fc6d488743c0"}}
+
+        {"moref": "ds-2", "name": "Datastore2",
+         "esxInfo": {"id": "02617490-b254-4158-b2f7-4d4934e247cd",
+         "name": "Host1"}, "vcenterInfo":
+         {"id": "220584f9-35f4-49c5-b8a4-acfb4dafb2df",
+         "name": "vcenter1"}, "folderInfo":
+         {"id": "4de275b3-8ca5-4aee-b334-b0782041bf83",
+         "name": "dsFolder1"}}
+
+        """
+        vm_ds_map = dict()
+        ds_esx_map = dict()
+
+        datacenters = self.vcenter_dict.get('datacenters', [])
+        if not datacenters:
+            print('No datacenters found.')
+
+        for datacenter in datacenters:
+            datacenter_info = {
+                'moref': datacenter['moref'],
+                'name': datacenter['name']
+            }
+            folders = datacenter.pop('folders', [])
+            self._build_folder_docs(
+                folders,
+                constants.VMWARE_ROOT_FOLDER_INFO,
+                datacenter_info)
+
+            hosts = datacenter.pop('hosts', [])
+
+            for esx in hosts:
+                clusters_info = esx.pop('cluster', None)
+                esx_id = es_utils.generate_new_doc_id()
+                esx_details = {
+                    'id': esx_id,
+                    'name': esx['name']
+                }
+                datastores = esx.pop('datastores', [])
+                self.bulk_docs.append(
+                    es_utils.build_index_details(
+                        es_const.INDEX_ESXS, esx_id,
+                        es_const.INDEX
+                    )
+                )
+                esx.update({
+                    'vcenterInfo': self.vcenter_info,
+                    'datacenterInfo': datacenter_info,
+                    'clusterInfo': clusters_info
+                })
+                self.bulk_docs.append(esx)
+
+                for datastore in datastores:
+                    if ds_esx_map.get(datastore['moref']):
+                        # This check is because, one esx may belogs
+                        # to multiple esx, so that datastore will
+                        # come multiple times
+                        ds_details = ds_esx_map[datastore['moref']]
+                        ds_esx_info = ds_details['esxInfo']
+                        ds_esx_info.append(esx_details)
+
+                        self.bulk_docs.append(
+                            es_utils.build_index_details(
+                                es_const.INDEX_DATASTORES,
+                                ds_details['id'],
+                                es_const.UPDATE, retry=True
+                            )
+                        )
+                        self.bulk_docs.append({
+                            "doc": {
+                                'esxInfo': ds_esx_info
+                            }
+                        })
+                    else:
+                        ds_id = es_utils.generate_new_doc_id()
+                        ds_info = {
+                            'id': ds_id,
+                            'name': datastore['name']
+                        }
+                        ds_esx_map[datastore['moref']] = {
+                            'esxInfo': [esx_details],
+                            'id': ds_id
+                        }
+                        vms = datastore.pop('vms', [])
+                        ds_folder_info = datastore.pop('folder', None)
+                        folder_info = self.folder_moref_map.get(
+                            ds_folder_info['moref'])
+                        if folder_info is None and\
+                                ds_folder_info['name'] == 'datastore':
+                            folder_info = constants.VMWARE_ROOT_FOLDER_INFO
+
+                        self.bulk_docs.append(
+                            es_utils.build_index_details(
+                                es_const.INDEX_DATASTORES,
+                                ds_id,
+                                es_const.INDEX
+                            )
+                        )
+                        datastore.update({
+                            'datacenterInfo': datacenter_info,
+                            'clusterInfo': clusters_info,
+                            'esxInfo': [esx_details],
+                            'vcenterInfo': self.vcenter_info,
+                            'folderInfo': folder_info
+                        })
+                        self.bulk_docs.append(datastore)
+
+                        for vm in vms:
+                            vm_folder_info = vm.pop('folder', None)
+                            folder_info = self.folder_moref_map.get(
+                                vm_folder_info['moref'])
+                            if folder_info is None and \
+                                    vm_folder_info['name'] == 'vm':
+                                folder_info = constants.VMWARE_ROOT_FOLDER_INFO
+
+                            if vm_ds_map.get(vm['moref']):
+                                # print('VM moref : {0}  found, updating'
+                                #       ' existing one'.format(vm['moref']))
+                                # already added to persist,
+                                # need to update only dsInfo
+                                vm_details = vm_ds_map.get(vm['moref'])
+                                vm_ds_info = vm_details['dsInfo']
+                                vm_ds_info.append(ds_info)
+
+                                self.bulk_docs.append(
+                                    es_utils.build_index_details(
+                                        es_const.INDEX_VMS,
+                                        vm_details['id'],
+                                        es_const.UPDATE,
+                                        retry=True
+                                    )
+                                )
+                                self.bulk_docs.append({
+                                    "doc": {
+                                        'dsInfo': vm_ds_info
+                                    }
+                                })
+                            else:
+                                # print('VM moref : {0} not found,
+                                # adding new'.format(
+                                #     vm['moref']))
+                                vm_id = es_utils.generate_new_doc_id()
+                                vm_ds_map[vm['moref']] = {
+                                    'dsInfo': [ds_info],
+                                    'id': vm_id
+                                }
+
+                                self.bulk_docs.append(
+                                    es_utils.build_index_details(
+                                        es_const.INDEX_VMS,
+                                        vm_id,
+                                        es_const.INDEX
+                                    )
+                                )
+                                vm.update({
+                                    'vcenterInfo': self.vcenter_info,
+                                    'datacenterInfo': datacenter_info,
+                                    'clusterInfo': clusters_info,
+                                    'esxInfo': esx_details,
+                                    'dsInfo': [ds_info],
+                                    'folderInfo': folder_info
+                                })
+                                self.bulk_docs.append(vm)
+
+    def build_inventory(self):
+        t1 = time.time()
+        self._build_bulk_docs()
+        t2 = time.time()
+        print('Time took to build bulk docs is {0} sec'.format(
+            t2 - t1))
+        self._update_bulk_docs()
+        t2 = time.time()
+        print('Total time build and update bulk docs is {0} sec'.format(
+            t2 - t1))
+
+
+def build_es_inventory(vcenter_dict):
+    es_inventry_builder = ESInventoryBuildHelper(vcenter_dict)
+    es_inventry_builder.build_inventory()
+
+
+def delete_es_inventory():
+    es_utils.delete_indices(
+        [es_const.INDEX_ESXS,
+         es_const.INDEX_DATASTORES,
+         es_const.INDEX_VMS,
+         es_const.INDEX_FOLDERS
+         ]
+    )
+
+
+if __name__ == '__main__':
+    vcenter_dict = build_sample2.BUILD_SAMPLE2
+    # build_es_inventory(vcenter_dict)
+    delete_es_inventory()
+
+    # 2 Datacenter with 2 clusters, each cluster has 2 hosts
+    # Total 8 hosts in 4 clusters, each host has 5 datastore
+    # total datastore = 40 (8(hosts)*5(datastrore), each datastore has 250 VMS
+    # Total VMs = 10k(40(dastore)*250(vms))
+    # Total VMs = 20k(40(dastore)*500(vms))
+
+    INVENTORY_OBJ_COUNT = {
+        "datacenters": {
+            "count": 2,
+            "clusters": {
+                "count": 2,
+                "hosts": {
+                    "count": 2,
+                    "datastores": {
+                        "count": 5,
+                        "vms": {
+                            "count": 250
+                        }
+                    }
+                }
+            }
+        }
+    }
+    # vcenter_dict = build_inventory_sample(
+    #     inventory_obj_count=INVENTORY_OBJ_COUNT)
+    # build_es_inventory(vcenter_dict)
+
+    # build_es_inventory(build_sample3.BUILD_SAMPLE3)
+    build_es_inventory(build_sample4.BUILD_SAMPLE4)
+
+
+"""
+
+10K VMs build and update time:
+Time took to build bulk docs is 0.12734079360961914 sec
+Time took to ES bulk update is 2.310126304626465 sec
+Total time build and update bulk docs is 2.6580519676208496 sec
+
+
+20K VMs build and update time:
+Time took to build bulk docs is 0.3479282855987549 sec
+Time took to ES bulk update is 3.555567502975464 sec
+Total time build and update bulk docs is 4.525169372558594 sec
+"""

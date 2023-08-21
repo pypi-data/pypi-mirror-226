@@ -1,0 +1,7 @@
+create :
+     virtualenv test_api
+
+activate:
+
+cd \path\to\your\virtualenv\
+.\Scripts\bin\activate

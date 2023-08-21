@@ -1,0 +1,143 @@
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ sudo -H pip3.6 install pep8
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ sudo -H pip3.6 install pycodestyle
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ pycodestyle --statistics -qq .
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ pycodestyle . > /home/aafak2/python_code_style_error.txt
+
+sudo -H  pip3.6 install pylint
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ pylint VideoIngestion/VideoIngestion.py
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ pylint **/*.py > /home/aafak2/static_analysis_by_pylint.txt
+
+
+https://gitlab.devtools.intel.com/users/sign_in
+https://github.intel.com/ElephantTrunkArch/IEdgeInsights/wiki/Github-Workflow
+
+Add ssh key:
+aafak2@aafak-ubuntu:~$ ssh-keygen -o -t rsa -C "aafakx.mohammad@intel.com" -b 4096
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/aafak2/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/aafak2/.ssh/id_rsa.
+Your public key has been saved in /home/aafak2/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:PMSbVbqFlVB1Ct8QSWI/9hBLDnOZ+mrYZHEY5M0Jmoc aafakx.mohammad@intel.com
+The key's randomart image is:
++---[RSA 4096]----+
+|          .+%+O=.|
+|       .   @o#+O |
+|        o E ++& .|
+|       o + ++..+ |
+|        S .  +  .|
+|         .  o .  |
+|           = .   |
+|          . +    |
+|           .     |
++----[SHA256]-----+
+
+Step1: Clone the repo:
+aafak2@aafak-ubuntu:~$mkdir repos
+aafak2@aafak-ubuntu:~$cd repos
+aafak2@aafak-ubuntu:~/repos/$ git clone https://gitlab.devtools.intel.com/Indu/IEdgeInsights/IEdgeInsights.git
+Username for 'https://gitlab.devtools.intel.com': <username>
+Password for 'https://aafakmox@gitlab.devtools.intel.com':
+aafak2@aafak-ubuntu:~$cd IEdgeInsights
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git config --global user.email "Aafakx.Mohammad@intel.com"
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git config --global user.name "Aafak Mohammad"
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git config --global core.editor vim
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git config credential.helper store
+
+
+Step2 : Create a new branch:
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git checkout -b feature/aafakmox/test_feature
+Switched to a new branch 'feature/aafakmox/test_feature'
+
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git status
+On branch feature/aafakmox/test_feature
+nothing to commit, working directory clean
+
+Step3: Start making your changes, lets say add new file
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ touch feature.test
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git status
+On branch feature/aafakmox/test_feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	feature.test
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Step4: Add you changes to git
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git add feature.test
+
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git status
+On branch feature/aafakmox/test_feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   feature.test
+
+Step5 : Now Push your changes to local branch:
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git commit -s
+test: this is test commit
+
+Signed-off-by: Aafak Mohammad <Aafakx.Mohammad@intel.com>
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch feature/aafakmox/test_feature
+# Changes to be committed:
+#       new file:   feature.test
+#
+ISA Essentials ( Course ID 2001 6726 )
+NCO ( Course ID 1000 1830 )
+
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ sudo ln -s ./algos/algo_config docker_setup/config/algo_config
+ln -s <path/to/real/file-or-folder> <symlink path>
+
+save this file using wq
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git commit -s
+[feature/aafakmox/test_feature d4742e1] test: this is test commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature3.test
+
+Step6: Now push your changes to remote branch
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights git
+
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ git push origin feature/aafakmox/test_feature
+Username for 'https://gitlab.devtools.intel.com': <username>
+Password for 'https://aafakmox@gitlab.devtools.intel.com':
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 446 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote:
+remote: To create a merge request for feature/aafakmox/test_feature, visit:
+remote:   https://gitlab.devtools.intel.com/Indu/IEdgeInsights/IEdgeInsights/merge_requests/new?merge_request%5Bsource_branch%5D=feature%2Faafakmox%2Ftest_feature
+remote:
+To https://gitlab.devtools.intel.com/Indu/IEdgeInsights/IEdgeInsights.git
+   2c30e2e..d4742e1  feature/aafakmox/test_feature -> feature/aafakmox/test_feature
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$
+
+
+Step7: Browse the URl to create the Pull request:
+https://gitlab.devtools.intel.com/Indu/IEdgeInsights/IEdgeInsights/merge_requests/new?merge_request%5Bsource_branch%5D=feature%2F<username>%2Ftest_feature
+
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ openssl x509 -in /etc/ssl/streamsublib/streamsublib_server_certificate.pem -text
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ cp cert-tool/Certificates/factorySi/factorySi_server_key.pem /etc/ssl/streamsublib/streamsublib_server_key.pem
+aafak2@aafak-ubuntu:~/repos/IEdgeInsights$ cp cert-tool/Certificates/factorySi/factorySi_server_certificate.pem /etc/ssl/streamsublib/streamsublib_server_certificate.pem
+
+
+If one notices any conflicts after creating a pull request, just apply the latest master to your <branch_name> by running commands:
+
+git checkout master - with your current branch being <branch_name>
+git pull - pull latest remote master commits to your local master branch
+git checkout <branch_name> - Get back to your branch
+git rebase master - rebase your branch with latest master
+
+After addressing code review comments, just add in a new commit message for re-push by following above 4.i and 4.ii (Please try to avoid doing git commit --amend).
+
+
+If one wants to amend the previous command by running git commit --amend and try to push, you will see a failure. In that case, just use command: git push -f origin <branch_name> to forcefully push your changes.
+
+

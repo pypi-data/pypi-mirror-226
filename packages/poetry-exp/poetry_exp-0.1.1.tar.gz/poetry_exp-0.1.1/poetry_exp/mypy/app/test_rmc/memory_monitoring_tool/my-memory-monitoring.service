@@ -1,0 +1,21 @@
+[Unit]
+Description=My Memory Monitoring Service
+After = network.target
+
+[Service]
+Environment=SECRET_KEY=secret
+PermissionsStartOnly = true
+PIDFile = /var/aafak/memory_monitoring_service.pid
+Environment=CACHEPORT=8000
+WorkingDirectory=/var/aafak
+# In below option --ssl-version=5, 5 represents ssl.PROTOCOL_TLSv1_2
+# Maximum number of concurrent request are workers * threads
+# ExecStart=/usr/bin/python3 /usr/local/bin/gunicorn --workers=1 --threads=5 --ssl-version=5 -c /etc/rmv/rmcv_app_v2_gunicorn.conf rmcv_app_v2.wsgi:application
+ExecStart=/usr/bin/python  memory_usage.py
+ExecStop = /usr/bin/kill -s TERM $MAINPID
+Restart=always
+PrivateTmp = true
+RestartSec=5s
+[Install]
+WantedBy=multi-user.target
+

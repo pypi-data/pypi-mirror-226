@@ -1,0 +1,109 @@
+start:
+C:\Users\aafakmoh\Downloads\prometheus\prometheus-2.36.2.windows-amd64/prometheus.exe
+
+http://localhost:9090/graph
+
+start python program and search the metrics
+
+Browse grafana:
+http://localhost:3000/
+admin/Hpe@1234
+
+
+https://devapo.io/blog/technology/how-to-set-up-prometheus-on-kubernetes-with-helm-charts/
+helm install -f prometheus.yaml prometheus prometheus-community/prometheus
+
+Metrics relabeling, dropping:
+https://www.robustperception.io/relabel_configs-vs-metric_relabel_configs/
+So as a simple rule of thumb: relabel_config happens before the scrape,
+metric_relabel_configs happens after the scrape. And if one doesn't work you can always try the other!
+
+https://valyala.medium.com/how-to-use-relabeling-in-prometheus-and-victoriametrics-8b90fc22c4b2
+
+https://faun.pub/how-to-drop-and-delete-metrics-in-prometheus-7f5e6911fb33
+
+
+
+
+
+In the context of Prometheus, "scrape metrics" refer to the process of collecting data
+from target endpoints by making HTTP requests to their respective metrics endpoints.
+Prometheus is an open-source monitoring and alerting toolkit designed to monitor systems
+ and applications, and it follows a pull-based model to gather data.
+
+Here's how the scrape metrics process works in Prometheus:
+
+Targets and Exporters: Prometheus collects metrics from various targets,
+which can be applications, services, or systems that expose metrics in a specific format.
+These targets are typically instrumented with an exporter, which is a piece of software
+responsible for exposing metrics in a format that Prometheus can understand.
+
+Configuration: In Prometheus, you define a set of targets and their corresponding
+scrape configurations in the prometheus.yml configuration file.
+Each target specifies a URL where Prometheus should scrape metrics from.
+
+Scrape Interval: Prometheus periodically scrapes metrics from the configured targets
+ at a defined interval. The default scrape interval is usually 15 seconds.
+
+Metrics Collection: When the scrape request is made, the target's exporter responds
+ with the current metric values, usually in the Prometheus exposition format, which is a simple text-based format for time-series data.
+
+Metric Storage: Prometheus stores the collected metrics in its time-series database,
+ associating each metric with its labels and timestamp.
+
+Query and Alerting: Once the data is stored in Prometheus, you can query it using
+the PromQL (Prometheus Query Language) to create custom graphs and visualizations.
+Additionally, you can set up alerting rules based on specific conditions and thresholds
+in the data to trigger alerts when anomalies or issues are detected.
+
+Scrape metrics are crucial in Prometheus because they allow you to monitor the health and
+performance of your applications and infrastructure. It enables you to gain insights
+ into the behavior of your systems over time, allowing you to identify trends,
+  troubleshoot issues, and make data-driven decisions for your operations.
+
+http://localhost:9090/config
+global:
+  scrape_interval: 5s  # how frequently prometheus fetches the metrics from application
+  scrape_timeout: 5s
+  evaluation_interval: 5s
+alerting:
+  alertmanagers:
+  - follow_redirects: true
+    enable_http2: true
+    scheme: http
+    timeout: 10s
+    api_version: v2
+    static_configs:
+    - targets: []
+scrape_configs:
+- job_name: prometheus
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  enable_http2: true
+  static_configs:
+  - targets:
+    - localhost:9090
+- job_name: fast_api_py_app
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  enable_http2: true
+  metric_relabel_configs:
+  - source_labels: [hypervisor_manager]
+    separator: ;
+    regex: vmware
+    replacement: $1
+    action: drop
+  static_configs:
+  - targets:
+    - localhost:8080
+    - localhost:8081
+    - localhost:8082
+    - localhost:8083

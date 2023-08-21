@@ -1,0 +1,35 @@
+ESXi supports five different storage technologies as of version 5.5
+
+1. DAS ( Direct attached storage) or Local storage
+2. ISCSI( Internet small computer system interface)
+3. FC (Fiber channel)
+4. FcoE ( Fiber channel over ethernet)
+5. NAS ( Network attached storage)
+
+
+There are two type of datastore:
+1. VMFS Based
+2. NFS Bsed
+
+Datastores are a place where you can place your virtual machine files, iso images and VM templates.
+- VMFS datastores are backed by either disks or Luns which are block level.
+- A folder you create, publish over network and mount it on ESXi is called
+NFS ( Network file system), which is file level storage.
+
+Diff:
+
+1. VMFS :
+Creating VMFS DataStore : First connectivity is made from ESX host to storage by using FC or iSCSI or FCoE protocols.
+ Once connectivity is established to the storage array, we can use the vSphere Web Client to browse the available LUNs,
+ and to create a VMFS-formated Datastore. And now, we have space that's suitable to store our virtual machines.
+ So this file system is created by the ESXi Host i.e. VMFS. Support many vSphere features,
+ like high availability, vMotion and DRS.
+
+
+2. NFS :
+
+Creating NFS DataStore : Here ESX host make connectivity using standard TCP network protocol to NFS device(NAS device),
+NFS device owns and operates file system. NFS device share folder(NFS file system) to EXS host and ESX host creates NFS
+datastore on that folder means storage and file system is in control of NFS device.
+NFS also supports features like high availability, vMotion and DRS.
+There are two key features that are not supported, and those are Raw Device Mappings and Boot from SAN.

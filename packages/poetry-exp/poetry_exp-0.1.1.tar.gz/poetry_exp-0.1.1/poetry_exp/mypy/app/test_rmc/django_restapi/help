@@ -1,0 +1,130 @@
+https://www.agiliq.com/blog/2014/12/building-a-restful-api-with-django-rest-framework/
+https://www.andreagrandi.it/2016/09/28/creating-production-ready-api-python-django-rest-framework-part-1/
+https://dzone.com/articles/create-a-simple-api-using-django-rest-framework-in
+https://dzone.com/articles/create-a-simple-api-using-django-rest-framework-in
+https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/apis-without-drf.html
+
+Proxy setting in ubuntu:
+For browser:
+In the newtwork setting, proxy->manual
+
+Create or update the following content in file /etc/environment
+http_proxy="http://web-proxy.in.hpecorp.net:8080/"
+https_proxy="http://web-proxy.in.hpecorp.net:8080/"
+ftp_proxy="http://web-proxy.in.hpecorp.net:8080/"
+no_proxy="localhost,127.0.0.0/8,::1"
+HTTP_PROXY="http://web-proxy.in.hpecorp.net:8080/"
+HTTPS_PROXY="http://web-proxy.in.hpecorp.net:8080/"
+FTP_PROXY="http://web-proxy.in.hpecorp.net:8080/"
+NO_PROXY="localhost,127.0.0.0/8,::1"
+
+For apt upadte to work do following:
+Create or update the following content in file /etc/apt/apt.conf
+Acquire::http::proxy "http://web-proxy.in.hpecorp.net:8080/";
+Acquire::ftp::proxy "ftp://web-proxy.in.hpecorp.net:8080/";
+Acquire::https::proxy "https://web-proxy.in.hpecorp.net:8080/";
+
+aafak@ubuntu:~/.local/lib/python3.6/site-packages$ sudo apt install python3.7
+aafak@ubuntu:~/.local/lib/python3.6/site-packages$ sudo apt install python3-pip
+aafak@ubuntu:~/.local/lib/python3.6/site-packages$ sudo apt install virtualenv
+aafak@ubuntu:~/.local/lib/python3.6/site-packages$ python3.7 -m pip install flask  # will install lib in 3.7
+
+aafak@ubuntu:~/study/django_test$ virtualenv --python=python3.7 django_demo
+aafak@ubuntu:~/study/django_test$ cd django_demo/
+aafak@ubuntu:~/study/django_test/django_demo$ ls
+bin  lib  share
+aafak@ubuntu:~/study/django_test/django_demo$ source bin/activate
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo$
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo$ pip install djangorestframework
+
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source$ pip freeze
+Django==2.2.4
+djangorestframework==3.10.2
+pkg-resources==0.0.0
+pytz==2019.2
+sqlparse==0.3.0
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source$ cd ..
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo$ ls
+bin  lib  share  source
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo$ cd bin
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/bin$ ls
+activate      activate.fish     django-admin     easy_install      pip   pip3.7       python   python3.7      sqlformat
+activate.csh  activate_this.py  django-admin.py  easy_install-3.7  pip3  __pycache__  python3  python-config  wheel
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/bin$
+
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source$ ../bin/django-admin startproject mycloudproject
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source$ ls
+mycloudproject
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source$ cd mycloudproject/
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ ls
+manage.py  mycloudproject
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py startapp backuprestapiapp
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ ls
+backuprestapiapp  manage.py  mycloudproject
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ cd backuprestapiapp/
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject/backuprestapiapp$ ls
+admin.py  apps.py  __init__.py  migrations  models.py  tests.py  views.py
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject/backuprestapiapp$ vim views.py
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject/backuprestapiapp$ vim ../mycloudproject/settings.py
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject/backuprestapiapp$
+django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ vim mycloudproject/urls.py
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+August 23, 2019 - 12:00:03
+Django version 2.2.4, using settings 'mycloudproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+comes here...
+[23/Aug/2019 12:00:07] "GET /policy/ HTTP/1.1" 200 32
+
+
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+
+
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py createsuperuser
+Username (leave blank to use 'aafak'):
+Email address: aafak.mohammad@hpe.com
+Password:
+Password (again): Hpe@1234
+Superuser created successfully.
+(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$
+
+Now Browse:
+http://127.0.0.1:8000/admin
+http://127.0.0.1:8000/policy/
+
+
+If you create the new model,
+ (django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py makemigrations
+C(django_demo) aafak@ubuntu:~/study/django_test/django_demo/source/mycloudproject$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, backuprestapiapp, contenttypes, sessions
+Running migrations:
+  Applying backuprestapiapp.0001_initial... OK

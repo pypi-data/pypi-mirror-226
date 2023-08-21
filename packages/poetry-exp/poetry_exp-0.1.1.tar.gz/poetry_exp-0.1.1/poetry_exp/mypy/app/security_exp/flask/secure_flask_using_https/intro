@@ -1,0 +1,41 @@
+The encryption and security functionality for HTTP is implemented through the Transport Layer Security (TLS) protocol.
+Basically put, TLS defines a standard way to make any network communication channel secure
+
+
+Basic API Authentication w/ TLS:
+Basic API authentication is the easiest of the three to implement, because the majority of the time,
+it can be implemented without additional libraries. Everything needed to implement basic authentication
+is usually included in your standard framework or language library.
+
+The problem with basic authentication is that it is, it offers the lowest security options of the common protocols.
+There are no advanced options for using this protocol, so you are just sending a username and password that
+is Base64 encoded.
+Basic authentication should never be used without TLS (formerly known as SSL) encryption
+because the username and password combination can be easily decoded otherwise.
+
+
+OAuth1.0a
+OAuth 1.0a is the most secure of the three common protocols.
+OAuth1 is a widely-used, tested, secure, signature-based protocol.
+The protocol uses a cryptographic signature, (usually HMAC-SHA1) value that combines the token secret,
+nonce, and other request based information.
+The great advantage of OAuth 1 is you never directly pass the token secret across the wire,
+which completely eliminates the possibility of anyone seeing a password in transit.
+This is the only of the three protocols that can be safely used without SSL
+(although you should still use SSL if the data transferred is sensitive).
+However, this level of security comes with a price: generating and validating signatures can be a complex process.
+You have to use specific hashing algorithms with a strict set of steps.
+However, this complexity isn’t often an issue anymore as every major programming language has a library to handle this for you.
+
+OAuth2
+OAuth2 sounds like an evolution of OAuth1, but in reality it is a completely different take on authentication
+that attempts to reduce complexity. OAuth2’s current specification removes signatures,
+so you no longer need to use cryptographic algorithms to create, generate, and validate signatures.
+All the encryption is now handled by TLS, which is required.
+There are not as many OAuth2 libraries as there are OAuth1a libraries,
+so leveraging this protocol for REST API security may be more challenging.
+
+Last year, the lead author and editor of the OAuth2 standard resigned, with this informative post..
+Because of this instability in the spec committee and because OAuth2’s default settings are less secure than OAuth1
+(no digital signature means you can’t verify if contents have been tampered with before or after transit), we recommend OAuth1 over OAuth2 for sensitive data applications.
+OAuth2 could make sense for less sensitive environments, like some social networks.

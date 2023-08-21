@@ -1,0 +1,30 @@
+What is circuit breaker pattern in microservices?
+Answer: The circuit breaker pattern is a design pattern that is used to handle
+failures in microservices. It provides a way to detect and isolate failures,
+preventing cascading failures in the system.
+
+Suppose you have a microservice that relies on another microservice to provide a service. In a traditional approach, if the service provider microservice becomes unavailable, the client microservice will continue making requests to the service provider, which can result in a cascading failure and ultimately bring down the entire system.
+
+To prevent this, you can implement the circuit breaker pattern. The circuit breaker pattern is a design pattern that allows you to detect failures in a microservice and isolate it, preventing cascading failures in the system.
+
+Here's how the circuit breaker pattern works in a microservices architecture:
+
+The client microservice makes a request to the service provider microservice.
+The circuit breaker monitors the response from the service provider microservice. If the response meets certain criteria, the circuit breaker assumes that the service provider is healthy and allows requests to continue.
+If the response does not meet the criteria, the circuit breaker opens and prevents any further requests to the service provider microservice.
+While the circuit breaker is open, the client microservice can take alternative actions such as retrying the request, using a cached response, or returning a default response.
+After a specified amount of time, the circuit breaker can enter a half-open state, allowing a limited number of requests to the service provider microservice to test if it has recovered.
+If the requests to the service provider microservice succeed, the circuit breaker closes and normal operation resumes.
+If the requests continue to fail, the circuit breaker remains open, preventing further requests to the service provider microservice.
+By using the circuit breaker pattern, you can prevent cascading failures in a microservices architecture, improving the overall resilience of the system.
+
+
+
+The circuit breaker is a design pattern that can be implemented within a
+microservice to improve resilience and fault tolerance. It is not another service
+ or third-party tool, but rather a programming technique that can be used to handle
+  failures and prevent cascading failures in distributed systems.
+
+In a microservices architecture, a circuit breaker can be implemented within each microservice that makes calls to other microservices. When a microservice makes a request to another microservice and the response time exceeds a specified threshold, the circuit breaker can be triggered to open and prevent further requests to the failing microservice. This can help to prevent the overloading of a failing microservice and reduce the risk of cascading failures in the system.
+
+The circuit breaker pattern can be implemented using programming libraries or frameworks that provide support for it,

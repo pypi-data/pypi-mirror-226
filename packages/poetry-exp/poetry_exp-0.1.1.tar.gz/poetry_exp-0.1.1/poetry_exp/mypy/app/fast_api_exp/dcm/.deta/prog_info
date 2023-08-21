@@ -1,0 +1,1 @@
+{"id":"2486b24d-379e-4894-aac9-350798818a1b","space":31202,"runtime":"python3.9","name":"dcm","path":"89tixy","project":"d0rayprx","account":"144798365827","region":"ap-south-1","deps":["fastapi","uvicorn","SQLAlchemy","passlib","bcrypt","alembic","python-jose","python-multipart","deta"],"envs":null,"public":true,"log_level":"debug","cron":""}

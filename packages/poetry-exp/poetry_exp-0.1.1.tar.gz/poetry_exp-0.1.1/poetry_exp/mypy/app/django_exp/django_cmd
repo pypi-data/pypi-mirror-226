@@ -1,0 +1,148 @@
+$ django-admin startproject myproject
+This will create a "myproject" folder with the following structure −
+
+myproject/
+   manage.py
+   myproject/
+      __init__.py
+      settings.py
+      urls.py
+      wsgi.py
+	  
+The “myproject” subfolder − This folder is the actual python package of your project. It contains four files −
+
+__init__.py − Just for python, treat this folder as package.
+
+settings.py − As the name indicates, your project settings.
+
+urls.py − All links of your project and the function to call. A kind of ToC of your project.
+
+wsgi.py − If you need to deploy your project over WSGI.	  
+
+Setting Up Your Project
+Your project is set up in the subfolder myproject/settings.py. Following are some important options you might need to set −
+
+DEBUG = True
+This option lets you set if your project is in debug mode or not. Debug mode lets you get more information about your project's error. Never set it to ‘True’ for a live project. However, this has to be set to ‘True’ if you want the Django light server to serve static files. Do it only in the development mode.
+
+DATABASES = {
+   'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': 'database.sql',
+      'USER': '',
+      'PASSWORD': '',
+      'HOST': '',
+      'PORT': '',
+   }
+}
+Database is set in the ‘Database’ dictionary. The example above is for SQLite engine. As stated earlier, Django also supports −
+
+MySQL (django.db.backends.mysql)
+PostGreSQL (django.db.backends.postgresql_psycopg2)
+Oracle (django.db.backends.oracle) and NoSQL DB
+MongoDB (django_mongodb_engine)
+Before setting any new engine, make sure you have the correct db driver installed.
+
+You can also set others options like: TIME_ZONE, LANGUAGE_CODE, TEMPLATE…
+
+Now that your project is created and configured make sure it's working −
+
+$ python manage.py runserver
+Validating models...
+
+0 errors found
+September 03, 2015 - 11:41:50
+Django version 1.6.11, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+
+
+....................................Now creates the Apps:..................................
+$ python manage.py startapp myapp
+You just created myapp application and like project, Django create a “myapp” folder with the application structure −
+myapp/
+   __init__.py
+   admin.py
+   models.py
+   tests.py
+   views.py
+   
+__init__.py − Just to make sure python handles this folder as a package.
+
+admin.py − This file helps you make the app modifiable in the admin interface.
+
+models.py − This is where all the application models are stored.
+
+tests.py − This is where your unit tests are.
+
+views.py − This is where your application views are.   
+
+
+...............Now Get the Project to Know About Your Application..........................
+At this stage we have our "myapp" application, now we need to register it with our Django project "myproject". To do so, update INSTALLED_APPS tuple in the settings.py file of your project (add your app name) −
+
+INSTALLED_APPS = (
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+   'django.contrib.messages',
+   'django.contrib.staticfiles',
+   'myapp',
+)
+
+
+Django provides a ready-to-use user interface for administrative activities. We all know how an admin interface is important for a web project. Django automatically generates admin UI based on your project models.
+
+Starting the Admin Interface
+The Admin interface depends on the django.countrib module. To have it working you need to make sure some modules are imported in the INSTALLED_APPS and MIDDLEWARE_CLASSES tuples of the myproject/settings.py file.
+
+For INSTALLED_APPS make sure you have −
+
+INSTALLED_APPS = (
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+   'django.contrib.messages',
+   'django.contrib.staticfiles',
+   'myapp',
+)
+For MIDDLEWARE_CLASSES −
+
+MIDDLEWARE_CLASSES = (
+   'django.contrib.sessions.middleware.SessionMiddleware',
+   'django.middleware.common.CommonMiddleware',
+   'django.middleware.csrf.CsrfViewMiddleware',
+   'django.contrib.auth.middleware.AuthenticationMiddleware',
+   'django.contrib.messages.middleware.MessageMiddleware',
+   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+Before launching your server, to access your Admin Interface, you need to initiate the database −
+
+$ python manage.py migrate
+syncdb will create necessary tables or collections depending on your db type, necessary for the admin interface to run. Even if you don't have a superuser, you will be prompted to create one.
+
+If you already have a superuser or have forgotten it, you can always create one using the following code −
+
+$ python manage.py createsuperuser
+Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface.
+ Open the myproject/url.py and you should have something like −
+
+from django.conf.urls import patterns, include, url
+
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+   # Examples:
+   # url(r'^$', 'myproject.views.home', name = 'home'),
+   # url(r'^blog/', include('blog.urls')),
+
+   url(r'^admin/', include(admin.site.urls)),
+)
+Now just run the server.
+
+$ python manage.py runserver
+And your admin interface is accessible at: http://127.0.0.1:8000/admin/

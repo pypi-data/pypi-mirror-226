@@ -1,0 +1,4 @@
+PUT is idempotent meaning, invoking it any number of times will not have an impact on resources.
+However, POST is not idempotent, meaning if you invoke POST multiple times it keeps creating more resources
+“PUT” puts a file or resource at a particular URI and exactly at that URI.
+If there is already a file or resource at that URI, PUT changes that file or resource.  If there is no resource or file there, PUT makes one

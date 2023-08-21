@@ -1,0 +1,61 @@
+global:
+  resolve_timeout: 5m
+  http_config:
+    proxy_url: 'http://hpeproxy.its.hpecorp.net:8080'
+
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'email-me'
+  #receiver: 'slack-notifications'
+  #receiver: 'web.hook'
+
+# vakcuudnkgawpoos   # app password https://myaccount.google.com/apppasswords
+receivers:
+  - name: 'web.hook'
+    webhook_configs:
+      - url: 'http://127.0.0.1:5001/'
+  - name: email-me
+    email_configs:
+      - send_resolved: true
+        to: aafak-mohammad@hpe.com
+        from: aafak-mohammad@hpe.com
+        smarthost: smtp-ext.its.hpecorp.net:25
+        auth_username: "aafak.mitsmca09@gmail.com"
+        auth_identity: "aafak.mitsmca09@gmail.com"
+        auth_password: "vakcuudnkgawpoos"
+  - name: slack-notifications
+    slack_configs:
+      - channel: '#cds-vmware-alerts'
+        api_url: 'https://hooks.slack.com/services/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'
+        send_resolved: false
+        icon_url: https://avatars3.githubusercontent.com/u/3380462
+        title: |-
+         [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ .CommonLabels.alertname }} for {{ .CommonLabels.job }}
+         {{- if gt (len .CommonLabels) (len .GroupLabels) -}}
+           {{" "}}(
+           {{- with .CommonLabels.Remove .GroupLabels.Names }}
+             {{- range $index, $label := .SortedPairs -}}
+                 {{ if $index }}, {{ end }}
+                 {{- $label.Name }}="{{ $label.Value -}}"
+             {{- end }}
+           {{- end -}}
+           )
+         {{- end }}
+        text: >-
+          {{ range .Alerts -}}
+          *Alert:* {{ .Annotations.summary }}{{ if .Labels.severity }} - `{{ .Labels.severity }}`{{ end }}
+          *Description:* {{ .Annotations.description }}
+          *Details:*
+            {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
+            {{ end }}
+          {{ end }}
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']

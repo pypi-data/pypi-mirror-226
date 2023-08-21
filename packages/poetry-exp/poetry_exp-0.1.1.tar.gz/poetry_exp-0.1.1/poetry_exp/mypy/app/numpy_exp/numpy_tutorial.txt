@@ -1,0 +1,237 @@
+﻿NumPy is a Python package. It stands for 'Numerical Python'.
+
+It is a library consisting of multidimensional array objects and a collection of routines for processing of array.
+
+
+Using NumPy, a developer can perform the following operations −
+ 
+ - Mathematical and logical operations on arrays.
+ 
+ - Fourier transforms and routines for shape manipulation.
+
+ - Operations related to linear algebra.
+
+NumPy has in-built functions for linear algebra and random number generation.
+
+
+
+>>> import numpy as np
+
+>>> a= np.array([1,2,3])
+
+>>> a
+array([1, 2, 3])
+
+>>> type(a)
+<class 'numpy.ndarray'
+>
+>>> 
+
+# numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)
+
+# It creates an ndarray from any object exposing array interface, or from any method that returns an array.
+
+
+
+The most important object defined in NumPy is an N-dimensional array type called ndarray.
+
+It describes the collection of items of the same type. Items in the collection can be accessed using a zero-based index.
+
+
+Every item in an ndarray takes the same size of block in the memory.
+
+Each element in ndarray is an object of data-type object (called dtype).
+
+
+Any item extracted from ndarray object (by slicing) is represented by a Python object of one of array scalar types
+
+object:
+ Any object exposing the array interface method returns an array, or any (nested)
+ sequence
+dtype: Desired data type of array, optional
+copy: Optional. 
+By default (true), the object is copied
+order: C (row major) or F (column major) or A (any) (default)
+
+ndmin: Specifies minimum dimensions of resultant array
+subok:By default, returned array forced to be a base class array. If true, sub-classes passed through
+
+
+>>> a = np.array([[1,2,3],[4,5,6]])
+>>> a
+array([[1, 2, 3],
+       [4, 5, 6]])
+
+>>> l=[1,2,3]
+>>> a=np.array(l)
+>>> a
+array([1, 2, 3])
+
+# Dict
+>>> d={"a":1, "b":2}
+>>> a=np.array(d)
+>>> a
+array({'b': 2, 'a': 1}, dtype=object)
+
+# Touple
+>>> t=(1,2,3)
+>>> a=np.array(t)
+>>> a
+array([1, 2, 3])
+
+# Set
+>>> s={1,2,3}
+>>> a=np.array(s)
+>>> a
+array({1, 2, 3}, dtype=object)
+
+# Int
+>>> a=np.array(10)
+>>> a
+array(10)
+
+>>> a=np.array("abc")
+>>> a
+array('abc', dtype='<U3')
+>>> 
+
+
+# Modify source object
+>>> l=[1,2,3,4]
+>>> a=np.array(l)
+>>> a
+array([1, 2, 3, 4])
+>>> l.append(5)
+>>> l
+[1, 2, 3, 4, 5]  
+>>> a
+array([1, 2, 3, 4]) # not modified by source
+>>> 
+
+
+
+# Multiple type
+>>> l=[1,2,3,4, 5.6]
+>>> a=np.array(l)
+>>> a
+array([1. , 2. , 3. , 4. , 5.6])
+>>> type(a[0])
+<class 'numpy.float64'>
+>>> 
+
+>>> l=[1,2,3,4, 5.6, "a"]
+>>> a=np.array(l)
+>>> a
+array(['1', '2', '3', '4', '5.6', 'a'], dtype='<U32')
+>>> 
+
+
+>>> l=[1,2,3,4, 5.6, "a", 3]
+>>> a=np.array(l)
+>>> a
+array(['1', '2', '3', '4', '5.6', 'a', '3'], dtype='<U32')
+>>> 
+>>> l
+[1, 2, 3, 4, 5.6, 'a', 3]
+>>> 
+
+
+# Using ndmin
+>>> l=[1,2,3,4, 5,6,7,8]
+>>> a=np.array(l, ndmin=1)
+>>> a
+array([1, 2, 3, 4, 5, 6, 7, 8])
+>>> a=np.array(l, ndmin=2)
+>>> a
+array([[1, 2, 3, 4, 5, 6, 7, 8]])
+>>> a=np.array(l, ndmin=3)
+>>> a
+array([[[1, 2, 3, 4, 5, 6, 7, 8]]])
+>>> 
+
+
+#Using dtype
+>>> a=np.array(l, dtype=complex)
+>>> a
+array([1.+0.j, 2.+0.j, 3.+0.j, 4.+0.j, 5.+0.j, 6.+0.j, 7.+0.j, 8.+0.j])
+
+>>> a=np.array(l, dtype=float)
+>>> a
+array([1., 2., 3., 4., 5., 6., 7., 8.])
+
+>>> a=np.array(l, dtype=dict)
+>>> a
+array([1, 2, 3, 4, 5, 6, 7, 8], dtype=object)
+>>> 
+
+>>> a=np.array(l, dtype=set)
+>>> a
+array([1, 2, 3, 4, 5, 6, 7, 8], dtype=object)
+
+>>> a=np.array(l, dtype=int)
+>>> a
+array([1, 2, 3, 4, 5, 6, 7, 8])
+>>> l = [1.2,2.3,1.4]
+
+>>> a=np.array(l, dtype=int)
+>>> a
+array([1, 2, 1])
+>>> 
+
+>>> l = [1.2,2.3,1.4, 0]
+>>> a=np.array(l, dtype=bool)
+>>> a
+array([ True,  True,  True, False])
+>>> 
+
+
+>>> a=np.array(l, dtype=touple)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'touple' is not defined
+>>> 
+
+
+>>> a=np.array(l, dtype=string)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'string' is not defined
+
+
+
+Data Type Objects (dtype)
+A data type object describes interpretation of fixed block of memory corresponding to an array, depending on the following aspects −
+	Type of data (integer, float or Python object)
+	Size of data
+	Byte order (little-endian or big-endian)
+	In case of structured type, the names of fields, data type of each field and part of the memory block taken by each field.
+	If data type is a subarray, its shape and data type
+
+The byte order is decided by prefixing '<' or '>' to data type. '<' means that encoding is little-endian (least significant is stored in smallest address). '>' means that encoding is big-endian (most significant byte is stored in smallest address).
+
+
+A dtype object is constructed using the following syntax −
+
+numpy.dtype(object, align, copy)
+The parameters are −
+
+Object − To be converted to data type object
+Align − If true, adds padding to the field to make it similar to C-struct
+Copy − Makes a new copy of dtype object. If false, the result is reference to builtin data type object
+
+>>> dt = np.dtype(np.int32)
+>>> dt
+dtype('int32')
+>>> dt = np.dtype(20)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: data type not understood
+>>> dt = np.dtype('i4')
+>>> dt
+dtype('int32')
+>>> 
+# #int8, int16, int32, int64 can be replaced by equivalent string 'i1', 'i2','i4', etc. 
+
+he following examples show the use of structured data type. Here, the field name and the corresponding scalar data type is to be declared.
+
+

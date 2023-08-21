@@ -1,0 +1,109 @@
+FROM docker.io/python:3.6.8-slim
+ENV PYTHONUNBUFFERED 1
+ENV http_proxy http://proxy.houston.hpecorp.net:8080/
+ENV https_proxy http://proxy.houston.hpecorp.net:8080/
+RUN apt-get update
+RUN apt-get -y install libsasl2-dev python-dev libldap2-dev libssl-dev
+######
+RUN apt-get -y install gcc
+######
+
+
+
+# For debugging purpose
+RUN apt-get -y install vim
+
+
+
+# required for converting pot files to mo file
+RUN apt-get -y install gettext
+
+
+
+# Set the working directory
+WORKDIR /usr/local/lib/python3.6/site-packages/rmcs
+
+
+
+COPY rmcs .
+# Copy mo script
+COPY mo_generator /root/
+RUN chmod +x /root/mo_generator
+
+
+
+RUN pip3 install --upgrade pip
+#RUN yum install -y python3-devel.x86_64
+#RUN apt-get install python3-dev libmysqlclient-dev
+#RUN pip3 install mysqlclient
+#RUN pip3 install mysql-connector
+RUN pip3 install configparser
+#RUN echo "Y" | apt -f --reinstall install python-configparser
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+
+
+
+# Create log directory
+RUN mkdir -p /var/log/atlas/atlas-sql-app/
+
+
+
+RUN mkdir -p /etc/atlas-sql/
+
+
+
+COPY atlas-sql/atlas-sql.conf /etc/atlas-sql/
+COPY atlas-sql/atlas-sql.conf.sample /etc/atlas-sql/
+COPY atlas-sql/logging_sample.conf /etc/atlas-sql/
+COPY atlas-sql/policy.json /etc/atlas-sql/
+COPY atlas-sql/rootwrap.conf /etc/atlas-sql/
+COPY atlas-sql/rootwrap.d /etc/atlas-sql/
+
+
+
+
+COPY atlas-sql-app /usr/bin/
+
+
+
+RUN mkdir /usr/local/lib/python3.6/site-packages/app_catalog
+COPY app_catalog /usr/local/lib/python3.6/site-packages/app_catalog
+RUN mkdir /usr/local/lib/python3.6/site-packages/atlcom
+COPY atlcom /usr/local/lib/python3.6/site-packages/atlcom
+RUN mkdir /usr/local/lib/python3.6/site-packages/task_track
+COPY task_tracker /usr/local/lib/python3.6/site-packages/task_tracker
+
+
+
+RUN pip3 install Django==2.2.9
+
+
+
+RUN mkdir /usr/local/lib/python3.6/site-packages/nebula
+COPY nebula /usr/local/lib/python3.6/site-packages/nebula
+
+
+
+RUN pip3 install jsonschema==2.6.0
+RUN pip3 install jwt==1.0.0
+RUN pip3 install requests==2.25.1
+RUN pip3 install psycopg2==2.7.7
+
+
+
+RUN mkdir -p /etc/atlas/.keys
+COPY key /etc/atlas/.keys
+
+
+
+RUN pip3 uninstall -y pycryptodome
+RUN pip3 install pycrypto==2.6.1
+RUN pip3 install pyOpenSSL==19.0.0
+RUN pip3 install dnspython==1.16.0
+
+
+
+RUN mkdir -p /catalogue/appendages/
+ENV http_proxy=
+ENV https_proxy=

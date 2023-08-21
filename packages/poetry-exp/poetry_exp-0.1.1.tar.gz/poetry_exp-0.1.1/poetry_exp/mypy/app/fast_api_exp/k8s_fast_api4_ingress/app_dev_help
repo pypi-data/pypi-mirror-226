@@ -1,0 +1,236 @@
+What is an Ingress?
+In Kubernetes, an Ingress is an object that allows access to your Kubernetes services
+from outside the Kubernetes cluster. You configure access by creating a collection
+of rules that define which inbound connections reach which services.
+
+This lets you consolidate your routing rules into a single resource.
+For example, you might want to send requests to example.com/api/v1/ to an api-v1 service,
+and requests to example.com/api/v2/ to the api-v2 service. With an Ingress,
+you can easily set this up without creating a bunch of LoadBalancers or exposing each service on the Node.
+
+Kubernetes Ingress vs LoadBalancer vs NodePort
+These options all do the same thing. They let you expose a service to external network requests.
+They let you send a request from outside the Kubernetes cluster to a service inside the cluster.
+
+
+ngress refers to the act of entering, Ingress refers to the act of entering
+Kubernetes Ingress is an API object that provides routing rules to manage access to the services within a Kubernetes cluster. This typically uses HTTPS and HTTP protocols to facilitate the routing. Ingress is the ideal choice for a production environment
+A Kubernetes Ingress is a robust way to expose your services outside the cluster. It lets you consolidate your routing rules to a single resource, and gives you ...
+
+Unlike NodePort or LoadBalancer, Ingress is not actually a type of service. Instead, it is an entry point that sits in front of multiple services in the cluster. It can be defined as a collection of routing rules that govern how external users access services running inside a Kubernetes cluster.
+With external service, you can access the service from outside the cluster using NodeIP and port, but not using domain, so in production environment, we need to acces a service using a domain not by IP, so we need to use the ingress. So first your request reaches to ingres(Which is again a service(external)) and ingres forword the request to internal services and then end up eaching to a pod
+http://172.17.80.38:31005/backup_and_recovery_assets/
+
+172.17.80.38 is master IP:
+k8admin@tia-goku-8038:~$ kubectl get svc
+NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
+ingress-nginx-controller             NodePort    10.107.33.63     <none>        80:31005/TCP,443:31392/TCP      242d
+
+
+k8admin@tia-goku-8038:~$ kubectl get ingress -n appdm
+NAME               CLASS    HOSTS   ADDRESS        PORTS   AGE
+atlas-ui-ingress   <none>   *       172.17.80.40   80      172d
+k8admin@tia-goku-8038:~$
+
+k8admin@tia-goku-8038:~$ kubectl edit ingress -n appdm
+
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: nb-rest-template
+            port:
+              number: 8000
+        path: /(api/v1/protection-policies(?:/|$).*)
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: nb-rest-opemgr
+            port:
+              number: 8080
+        path: /(api/v1/app-data-management-on-prem-engines(?:/|$).*)
+        pathType: ImplementationSpecific
+
+
+.................Install ingress:
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+"ingress-nginx" has been added to your repositories
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ helm install ingress --namespace ingress --create-namespace --set rbac.create=true,controller.kind=DaemonSet,controller.service.type=ClusterIP,controller.hostNetwork=true ingress-nginx/ingress-nginx
+NAME: ingress
+LAST DEPLOYED: Tue Dec  6 12:06:17 2022
+NAMESPACE: ingress
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+The ingress-nginx controller has been installed.
+Get the application URL by running these commands:
+  export POD_NAME=$(kubectl --namespace ingress get pods -o jsonpath="{.items[0].metadata.name}" -l "app=ingress-nginx,component=controller,release=ingress")
+  kubectl --namespace ingress port-forward $POD_NAME 8080:80
+  echo "Visit http://127.0.0.1:8080 to access your application."
+
+An example Ingress that makes use of the controller:
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: example
+    namespace: foo
+  spec:
+    ingressClassName: nginx
+    rules:
+      - host: www.example.com
+        http:
+          paths:
+            - pathType: Prefix
+              backend:
+                service:
+                  name: exampleService
+                  port:
+                    number: 80
+              path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    tls:
+      - hosts:
+        - www.example.com
+        secretName: example-tls
+
+If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided:
+
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: example-tls
+    namespace: foo
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get pods -n ingress
+NAME                                     READY   STATUS    RESTARTS   AGE
+ingress-ingress-nginx-controller-wfkjs   1/1     Running   0          105s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get svc -n ingress
+NAME                                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+ingress-ingress-nginx-controller             ClusterIP   10.111.70.159    <none>        80/TCP,443/TCP   115s
+ingress-ingress-nginx-controller-admission   ClusterIP   10.108.117.137   <none>        443/TCP          115s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$
+
+
+................. Using INgress
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl apply -f deploy/
+deployment.apps/fastapi-app created
+ingress.networking.k8s.io/fastapi-app-ingress created
+service/fastapi-app-service created
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get deployment
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+fastapi-app   1/1     1            1           16s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get svc
+NAME                  TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+fastapi-app-service   ClusterIP   10.105.157.219   <none>        80/TCP    21s
+kubernetes            ClusterIP   10.96.0.1        <none>        443/TCP   158d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get ing
+NAME                  CLASS   HOSTS   ADDRESS   PORTS   AGE
+fastapi-app-ingress   nginx   *                 80      27s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get ing
+NAME                  CLASS   HOSTS   ADDRESS   PORTS   AGE
+fastapi-app-ingress   nginx   *                 80      33s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get ing
+NAME                  CLASS   HOSTS   ADDRESS         PORTS   AGE
+fastapi-app-ingress   nginx   *       10.111.70.159   80      53s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl describe  ing
+Name:             fastapi-app-ingress
+Namespace:        default
+Address:          10.111.70.159
+Default backend:  fastapi-app-service:8000 (10.244.0.33:8000)
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *
+              /users   fastapi-app-service:8000 (10.244.0.33:8000)
+Annotations:  ingressClassName: nginx
+Events:
+  Type    Reason  Age                From                      Message
+  ----    ------  ----               ----                      -------
+  Normal  Sync    41s (x2 over 75s)  nginx-ingress-controller  Scheduled for sync
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl describe svc fastapi-app-service
+Name:              fastapi-app-service
+Namespace:         default
+Labels:            service=fastapi-service
+Annotations:       <none>
+Selector:          app=fastapiapp
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.105.157.219
+IPs:               10.105.157.219
+Port:              <unset>  80/TCP
+TargetPort:        8000/TCP
+Endpoints:         10.244.0.33:8000
+Session Affinity:  None
+Events:            <none>
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl get pods -o wide
+NAME                           READY   STATUS    RESTARTS   AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+fastapi-app-64b58b4d49-v7jdv   1/1     Running   0          97s   10.244.0.33   aafak-rnd-vm   <none>           <none>
+
+
+Here you can note that, the Endpoints  "10.244.0.33:8000" in service and
+ backends in ingress "fastapi-app-service:8000 (10.244.0.33:8000)"
+they are ultimately reaching to pod IP "10.244.0.33" and the port "8000" exposed by it.
+Hence client request interacting with ingress, and ingress pointing(forwarding the request) to service and service pointing(forwarding the request) to pod
+
+Browse:  172.17.81.12 is the master IP, now we are able to browse without any port
+ http://172.17.81.12/users
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ curl -X GET http://172.17.81.12/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl logs -f fastapi-app-64b58b4d49-v7jdv
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.244.0.1:41502 - "GET /users HTTP/1.1" 200 OK
+INFO:     10.244.0.1:41504 - "GET /users HTTP/1.1" 200 OK
+^C
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$ kubectl logs -f ingress-ingress-nginx-controller-wfkjs -n ingress
+I1206 06:58:48.213725       7 event.go:285] Event(v1.ObjectReference{Kind:"Pod", Namespace:"ingress", Name:"ingress-ingress-nginx-controller-wfkjs", UID:"566dff88-2136-481a-9989-52eee609c7f6", APIVersion:"v1", ResourceVersion:"8512548", FieldPath:""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration
+172.17.160.160 - - [06/Dec/2022:06:58:49 +0000] "GET /users HTTP/1.1" 200 49 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" 467 0.019 [default-fastapi-app-service-8000] [] 10.244.0.33:8000 49 0.019 200 a30dd3c786ad9119aed0ab33e26b2836
+I1206 06:59:18.715159       7 status.go:299] "updating Ingress status" namespace="default" ingress="fastapi-app-ingress" currentValue=[] newValue=[{IP:10.111.70.159 Hostname: Ports:[]}]
+I1206 06:59:18.730941       7 event.go:285] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"default", Name:"fastapi-app-ingress", UID:"5b1f198f-7c03-466e-a9e1-0b93597218a4", APIVersion:"networking.k8s.io/v1", ResourceVersion:"8514434", FieldPath:""}): type: 'Normal' reason: 'Sync' Scheduled for sync
+
+172.17.160.160 - - [06/Dec/2022:06:59:33 +0000] "GET /users HTTP/1.1" 200 49 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" 441 0.006 [default-fastapi-app-service-8000] [] 10.244.0.33:8000 49 0.006 200 df713cfdb548924955fc1184d4cb03f7
+
+
+
+NAME                                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+ingress-ingress-nginx-controller             NodePort    10.111.70.159    <none>        80:32690/TCP,443:32206/TCP   32m
+ingress-ingress-nginx-controller-admission   ClusterIP   10.108.117.137   <none>        443/TCP                      32m
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api4_ingress$
+
+
+Port 80
+HTTP Port-80 is used for HTTP (Hyper Text Transfer Protocol) connection by default.
+It is a popular and widely used port across the globe. Port 80 was introduced by Tim Berners-Lee in 1991
+in the HTTP 0.9 document. The document states that if there is no port assigned for HTTP connection,
+Port 80 is used by default. It connects you to the worldwide web (WWW).
+A user, with the help of this port, can connect to webpages available on the internet.
+It means unencoded data exchange takes place between the user’s browser and the server using this port.
+This port relates to TCP (Transfer Control Protocol- a protocol used in data transmission).
+
+Port 443
+HTTPS (Hypertext Transfer Protocol Secure) is a secured HTTP version where all traffic is bind
+with strong encryption that passes through 443. This port is also connected with TCP protocol and
+creates a secure connection between the webpages and browser. HTTPS Port 443 was officially published
+in RFC 1700 and solicited by “Kipp E.B. Hickman”. The main difference between Port 80 and Port 443
+is strong security. Port-443 allows data transmission over a secured network, while Port 80 enables data
+transmission in plain text. Users will get an insecure warning if he tries to access a non-HTTPS web page.
+Port 443 encrypts network data packets before data transmission takes place. The security over port 443
+is used by the SSL protocol (secure socket layer).

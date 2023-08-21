@@ -1,0 +1,110 @@
+Install go in ububtu:
+https://golang.org/doc/install?download=go1.11.5.linux-amd64.tar.gz
+
+afak@aafak-ubuntu:~/Downloads$ curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz
+afak@aafak-ubuntu:~/Downloads$ tar -xvf go1.11.2.linux-amd64.tar.gz
+aafak@aafak-ubuntu:~/Documents/go-workspace/src$ sudo cp -r go /usr/local
+aafak@aafak-ubuntu:~$ vim .bashrc
+Ad following line
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/Documents/wipro/go-workspace/src
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$GOROOT/bin:$GOPATH/bin/"
+
+save file and close the terminal
+aafak@aafak-ubuntu:~$ echo $PATH
+/home/aafak/bin:/home/aafak/.local/bin:/home/aafak/bin:/home/aafak/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/aafak/Documents/go-workspace/src/bin/
+aafak@aafak-ubuntu:~$
+
+aafak@aafak-ubuntu:~/Documents/go-workspace/src$ go run test.go
+Hello Go
+
+aafak2@aafak-ubuntu:~/Documents/wipro/go-workspace$ go get github.com/gorilla/mux
+aafak@aafak-ubuntu:~/Documents/go-workspace/src$ ls
+pkg  src  test.go
+
+
+
+Install GOland:
+https://www.jetbrains.com/go/download/#section=linux
+
+1. Unpack the GoLand distribution archive that you downloaded to
+     where you wish to install the program. We will refer to this destination
+     location as your {installation home} below.
+
+  2. Open a console and cd into "{installation home}/bin" and type:
+
+       ./goland.sh
+
+
+
+
+
+Install light IDE:
+Ubuntu 16.04 Qt5
+## Install Qt5 ##
+$ sudo apt-get update
+$ sudo apt-get install qt5-default
+
+## Git clone and build liteide ##
+$ git clone https://github.com/visualfc/liteide.git
+$ cd liteide/build
+$ ./update_pkg.sh
+$ ./build_linux_qt5.sh
+
+## Run it: ##
+$ cd liteide/build/liteide/bin
+$ ./liteide
+
+## Deploy it: ##
+$ cd liteide/build
+$ ./deploy_linux_x64_qt5.sh
+## 32 bit
+$ ./deploy_linux_x32_qt5.sh
+
+
+
+GOPATH is discussed in the cmd/go documentation:
+
+The GOPATH environment variable lists places to look for Go code. On Unix, the value is a colon-separated string.
+On Windows, the value is a semicolon-separated string. On Plan 9, the value is a list.
+
+GOPATH must be set to get, build and install packages outside the standard Go tree.
+
+GOROOT is discussed in the installation instructions:
+
+The Go binary distributions assume they will be installed in  /usr/local/go (or c:\Go under Windows), but it is possible to install the Go tools to a different location. In this case you must set the  GOROOT environment variable to point to the directory in which it was installed.
+
+For example, if you installed Go to your home directory you should add the following commands to $HOME/.profile:
+
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+Note: GOROOT must be set only when installing to a custom location.
+
+
+# LightIDE env variable
+# native compiler linux 386
+
+GOROOT=/usr/local/go
+GOBIN=$GOROOT/bin
+#GOARCH=386
+#GOOS=linux
+#CGO_ENABLED=1
+GOPATH=$HOME/Documents/wipro/go-workspace/src/
+PATH=$GOROOT/bin:$PATH:$GOPATH
+
+LITEIDE_GDB=gdb
+LITEIDE_MAKE=make
+LITEIDE_TERM=/usr/bin/gnome-terminal
+LITEIDE_TERMARGS=
+LITEIDE_EXEC=/usr/bin/xterm
+LITEIDE_EXECOPT=-e
+
+LITEIDE_SHELL=gnome-terminal;lxterminal;konsole;xfce4-terminal;xterm
+
+# OPC UA install
+$ pip3 install freeopcua
+$ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+$ pip3 install cryptography
+
+https://influxdb-python.readthedocs.io/en/latest/examples.html
+

@@ -1,0 +1,1 @@
+{"id":"d2dfde42-dd66-4502-9cdb-933f88e6bca9","space":31202,"runtime":"python3.9","name":"deta_cloud_deploy_fastapi_app","path":"y35njl","project":"d0rayprx","account":"144798365827","region":"ap-south-1","deps":["fastapi","uvicorn"],"envs":null,"public":true,"log_level":"off","cron":""}

@@ -1,0 +1,13 @@
+Hello
+Following are the emails:
+
+company:
+aafak.mohammad@cloudbyte.com
+personal:
+aafak.mitsmca09@gmail.com
+secondry:
+aafak@yahoo.com
+notused:
+ aafakit@tahoo.com
+code:
+    code.cloydbyte@gamil.com

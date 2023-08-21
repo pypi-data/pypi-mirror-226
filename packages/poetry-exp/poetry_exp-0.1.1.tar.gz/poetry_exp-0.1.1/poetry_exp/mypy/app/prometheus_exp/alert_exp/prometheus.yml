@@ -1,0 +1,52 @@
+# my global config
+global:
+  scrape_interval: 5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - localhost:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  - "alert.rules.yml"
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+    
+     
+  - job_name: "fast_api_py_app"
+    static_configs:
+      - targets: ["localhost:8080", "localhost:8081", "localhost:8082",  "localhost:8083"]    
+    metric_relabel_configs:
+   
+    #- source_labels: [hypervisor_manager]
+    #  regex: "vmware"
+    #  target_label: hypervisor_manager
+    #  replacement: ""
+    
+    # Drop the matrics having a label 'hypervisor_manager' with value 'vmware'
+    - action: drop
+      source_labels: [hypervisor_manager]
+      regex: "vmware"
+      
+    #- action: labeldrop
+    #  regex: "customer.+"
+    
+    #- action: labelkeep
+    #  regex: "customer_id"

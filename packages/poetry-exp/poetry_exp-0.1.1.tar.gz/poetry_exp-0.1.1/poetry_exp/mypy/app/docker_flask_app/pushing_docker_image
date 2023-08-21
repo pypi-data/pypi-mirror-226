@@ -1,0 +1,80 @@
+# https://www.geeksforgeeks.org/dockerize-your-flask-app/
+# https://towardsdatascience.com/how-to-deploy-a-flask-api-in-kubernetes-and-connect-it-with-other-micro-services-af16965b67fe
+
+# docker build -t flask_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+
+aafak@aafak-virtual-machine:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED          SIZE
+flask_app                                   v1        5cc6d03cebe7   36 minutes ago   956MB
+
+
+aafak@aafak-virtual-machine:~$ docker tag flask_app:v1 aafak/flask_app:v1
+
+aafak@aafak-virtual-machine:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED          SIZE
+aafak/flask_app                             v1        5cc6d03cebe7   50 minutes ago   956MB
+flask_app                                   v1        5cc6d03cebe7   50 minutes ago   956MB
+
+
+aafak@aafak-virtual-machine:~$ sudo docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+aafak@aafak-virtual-machine:~$ sudo docker push aafak/flask_app:v1
+The push refers to repository [docker.io/aafak/flask_app]
+8d092c8e8192: Pushed
+11fc15f76cf9: Pushed
+e043908ac93d: Pushed
+7ee2be8b015c: Pushed
+5e8c55794f87: Mounted from library/python
+5209cb9bf83c: Mounted from library/python
+9ff63dadc07e: Mounted from library/python
+6cb051b7bcc1: Mounted from library/python
+7cf0f434f498: Mounted from library/python
+8555e663f65b: Mounted from library/python
+d00da3cd7763: Mounted from library/python
+4e61e63529c2: Mounted from library/python
+799760671c38: Pushed
+v1: digest: sha256:1b1d2761106ec36dc04502e1caff8b47ac39a779d764291909cd5d1a7911a37e size: 3052
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl create deployment flask-app --image=aafak/flask_app:v1
+deployment.apps/flask-app created
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              0/1     1            0           11s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              0/1     1            0           37s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              1/1     1            1           90s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+NAME                                    READY   STATUS    RESTARTS      AGE
+flask-app-58c448696b-58bwx              1/1     Running   0             3m57s
+kubernetes-bootcamp2-8448dfd6dd-r8kwl   1/1     Running   1 (22h ago)   23h
+aafak@aafak-virtual-machine:~$
+
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ sudo docker run -p 5001:5001 -d flask_app:v1
+a3bb2ec48624a7f3282ecad15e7859364726266433fa42135cb735686e54614b
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ docker ps
+CONTAINER ID   IMAGE          COMMAND            CREATED         STATUS         PORTS                                       NAMES
+a3bb2ec48624   flask_app:v1   "python3 app.py"   3 seconds ago   Up 2 seconds   0.0.0.0:5001->5001/tcp, :::5001->5001/tcp   hopeful_boyd
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ curl -X GET http://127.0.0.1:5001/home
+Welcome to Flask Appaafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$

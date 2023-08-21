@@ -1,0 +1,68 @@
+Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX
+It’s a pre-fork worker model ported from Ruby’s Unicorn project.
+ The Gunicorn server is broadly compatible with various web frameworks, simply implemented,
+ light on server resources, and fairly speedy.
+
+The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface(WSGI) HTTP server.
+
+(Will not work on windows) gives import error for fcntl
+fcntl module is not available on Windows
+
+Features:
+Natively supports WSGI, Django, and Paster
+Automatic worker process management
+Simple Python configuration
+Multiple worker configurations
+Various server hooks for extensibility
+Compatible with Python 3.x >= 3.5
+
+aafak@aafak-virtual-machine:~$ pip3 install --proxy=http://web-proxy.in.hpecorp.net:8080 gunicorn
+Collecting gunicorn
+  Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Requirement already satisfied: setuptools>=3.0 in /usr/lib/python3/dist-packages (from gunicorn) (45.2.0)
+Installing collected packages: gunicorn
+Successfully installed gunicorn-20.1.0
+aafak@aafak-virtual-machine:~$ gunicorn --help
+usage: gunicorn [OPTIONS] [APP_MODULE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -c CONFIG, --config CONFIG
+                        The Gunicorn config file. [./gunicorn.conf.py]
+  -b ADDRESS, --bind ADDRESS
+                        The socket to bind. [['127.0.0.1:8000']]
+  --backlog INT         The maximum number of pending connections. [2048]
+  -w INT, --workers INT
+                        The number of worker processes for handling requests. [1]
+  -k STRING, --worker-class STRING
+                        The type of workers to use. [sync]
+  --threads INT         The number of worker threads for handling requests. [1]
+  --worker-connections INT
+                        The maximum number of simultaneous clients. [1000]
+  --max-requests INT    The maximum number of requests a worker will process before restarting. [0]
+
+  --max-requests-jitter INT
+                        The maximum jitter to add to the *max_requests* setting. [0]
+  -t INT, --timeout INT
+                        Workers silent for more than this many seconds are killed and restarted. [30]
+
+
+Basic usage:
+
+$ gunicorn [OPTIONS] [WSGI_APP]
+Where WSGI_APP is of the pattern $(MODULE_NAME):$(VARIABLE_NAME).
+The module name can be a full dotted path. The variable name refers to a WSGI callable that
+should be found in the specified module.
+
+
+NUM_WORKERS=3
+TIMEOUT=120
+
+exec gunicorn ${DJANGO_WSGI_MODULE}:application \
+--name $NAME \
+--workers $NUM_WORKERS \
+--timeout $TIMEOUT \
+--log-level=debug \
+--bind=127.0.0.1:9000 \
+--pid=$PIDFILE

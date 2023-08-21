@@ -1,0 +1,131 @@
+"""
+- Perform validation of all inputs on the server from SQL injection attacks.
+- Perform user’s session based authentication whenever a request is made.
+- Never use sensitive data like username, session token password, etc through URL. These should be passed via POST method.
+- Methods like GET, POST, PUT, DELETE, etc should be executed with proper restrictions.
+- HTTP generic error message should be invoked wherever required.
+- Use pagination for restricting results
+- provide related links
+- Handling error with proper https code
+- use sub-resources for relations(Sub resources are used to link one resource with another, so use sub resources to represent the relation.Sub resources are used to link one resource with another, so use sub resources to represent the relation.
+- Result Filtering and sorting- using query string
+- Use TLS/SSL for security
+        use TLS by default for all communication
+        To secure your web API authentication, all authentications should use SSL.
+        OAuth2 requires the authorization server and access token credentials to use TLS
+- Rate limiting:
+      By implementing rate limit to your API you can protect server from being overloaded
+      and maintain high quality of service to clients.
+        At a minimum, include the following headers.
+        - X-Rate-Limit-Limit- The number of allowed requests in the current period
+        - X-Rate-Limit-Remaining – The number of remaining requests in the current period
+        - X-Rate-Limit-Reset – The number of seconds left in the current period
+
+- Use Put for updating resource:
+            - The client sends a PUT request to the element URL /employee/21.
+               The HTTP body of the request contains the updated attribute values (the new name “Bruce” of the employee 21).
+            - The REST service updates the name of the employee with the ID 21 and confirms the changes with the HTTP status code 200
+            - We can also return the updated object in resource, so that user can see how resource look likes after update(avoid one more get call)
+
+- Use post for creating new Resource:
+    - The client sends a POST request to the collection URL /employees. The HTTP body contains the attributes of the new resource “Harry Porter”.
+    - The RESTFUL web service generates an ID for the new employee, creates the employee in its internal model and sends a response to the client.
+    - This response contains a Location HTTP header that indicates the URL under which the created resource is accessible.
+
+- Use verb for non-resource like calculate, convert, execute
+- Use content-type and accept header: to keep your API flexible and extendable for future
+        if a user sends a request using text/xml, you could send back an XML response while another user
+         could send an application/JSON request and you could reply with JSON.
+- Cache the result
+
+- Aliases for common queries
+- Use CamelCase for Attribute name: Becase java script use this convention
+- Use Plurals
+- API Document
+
+
+
+***********************Use nouns but no verbs**********************
+Resource	GET                      POST                       PUT                        DELETE
+            read	                 create                     update                     delete
+
+/cars	    Returns a list of cars	Create a new car	        Bulk update of cars	        Delete all cars
+/cars/711	Returns a specific car	Method not allowed (405)	Updates a specific car	    Deletes a specific car
+
+DO NOT USE:
+/getAllCars
+/createNewCar
+/deleteAllRedCars
+
+********************Version your API**************************
+Make the API Version mandatory and do not release an unversioned API.
+Use a simple ordinal number and avoid dot notation such as 2.5.
+/blog/api/v1
+
+
+******************************Use plural nouns********************
+/cars instead of /car
+/users instead of /user
+/products instead of /product
+/settings instead of /setting
+
+
+*************************Use sub-resources for relations**************************
+GET /cars/711/drivers/ Returns a list of drivers for car 711
+GET /cars/711/drivers/4 Returns driver #4 for car 711
+
+**********************Handle Errors with HTTP status codes***************************************
+The HTTP standard provides over 70 status codes to describe the return values.
+ We dont need them all, but  there should be used at least a mount of 10.
+
+200 – OK – Eyerything is working
+201 – OK – New resource has been created
+204 – OK – The resource was successfully deleted
+
+304 – Not Modified – The client can use cached data
+
+400 – Bad Request – The request was invalid or cannot be served. The exact error should be explained in the error payload.
+ E.g. The JSON is not valid
+401 – Unauthorized – The request requires an user authentication
+403 – Forbidden – The server understood the request, but is refusing it or the access is not allowed.
+        when an access token is valid, but requires more privileges
+404 – Not found – There is no resource behind the URI.
+422 – Unprocessable Entity – Should be used if the server cannot process the enitity,
+    e.g. if an image cannot be formatted or mandatory fields are missing in the payload.
+
+500 – Internal Server Error – API developers should avoid this error. If an error occurs in the global catch blog,
+     the stracktrace should be logged and not returned as response.
+
+Use error payloads
+
+All exceptions should be mapped in an error payload. Here is an example how a JSON payload should look like.
+{
+  "errors": [
+   {
+    "userMessage": "Sorry, the requested resource does not exist",
+    "internalMessage": "No car found in the database",
+    "code": 34,
+    "more info": "http://dev.mwaysolutions.com/blog/api/v1/errors/12345"
+   }
+  ]
+}
+"""
+
+
+****************************Provide filtering, sorting, field selection and paging for collections***********************
+Filtering: Use a unique query parameter for all fields or a query language for filtering.
+    GET /cars?color=red Returns a list of red cars
+    GET /cars?seats<=2 Returns a list of cars with a maximum of 2 seats
+
+Sorting: Allow ascending and descending sorting over multiple fields.
+        GET /cars?sort=-manufactorer,+model
+        This returns a list of cars sorted by descending manufacturers and ascending models
+
+Field selection: Mobile clients display just a few attributes in a list. They dont need all attributes of a resource.
+                Give the API consumer the ability to choose returned fields. This will also reduce the network
+                 traffic and speed up the usage of the API.
+                 GET /cars?fields=manufacturer,model,id,color
+Paging: Use limit and offset. It is flexible for the user and common in leading databases.
+        The default should be limit=20 and offset=0
+
+        GET /cars?offset=10&limit=5

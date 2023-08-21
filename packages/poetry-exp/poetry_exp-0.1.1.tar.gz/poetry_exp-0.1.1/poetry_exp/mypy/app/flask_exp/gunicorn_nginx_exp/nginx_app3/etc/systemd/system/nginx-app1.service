@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn app3 instance to serve myproject
+After=network.target
+
+[Service]
+User=aafak
+Group=www-data
+WorkingDirectory=/home/aafak/nginx_apps/nginx_app3
+Environment="PATH=/home/aafak/nginx_apps/nginx_app3/nginx_app3_env/bin"
+ExecStart=/home/aafak/nginx_apps/nginx_app3/nginx_app3_venv/bin/gunicorn --workers 3 --bind 0.0.0.0:5003 -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

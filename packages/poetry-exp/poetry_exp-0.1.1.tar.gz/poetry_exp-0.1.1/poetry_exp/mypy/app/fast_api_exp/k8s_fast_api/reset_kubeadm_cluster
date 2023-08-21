@@ -1,0 +1,220 @@
+Solution to following error:
+aafak@aafak-virtual-machine:~$ kubectl get pods
+The connection to the server 172.17.29.165:6443 was refused - did you specify the right host or port?
+
+
+aafak@aafak-virtual-machine:~$ sudo kubeadm reset
+[sudo] password for aafak:
+[reset] Reading configuration from the cluster...
+[reset] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+W0104 11:18:18.447082   14165 reset.go:101] [reset] Unable to fetch the kubeadm-config ConfigMap from cluster: failed to get config map: Get "https://172.17.29.165:6443/api/v1/namespaces/kube-system/configmaps/kubeadm-config?timeout=10s": dial tcp 172.17.29.165:6443: connect: connection refused
+[reset] WARNING: Changes made to this host by 'kubeadm init' or 'kubeadm join' will be reverted.
+[reset] Are you sure you want to proceed? [y/N]: y
+[preflight] Running pre-flight checks
+W0104 11:18:21.509086   14165 removeetcdmember.go:80] [reset] No kubeadm config, using etcd pod spec to get data directory
+[reset] Stopping the kubelet service
+[reset] Unmounting mounted directories in "/var/lib/kubelet"
+[reset] Deleting contents of config directories: [/etc/kubernetes/manifests /etc/kubernetes/pki]
+[reset] Deleting files: [/etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/bootstrap-kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf]
+[reset] Deleting contents of stateful directories: [/var/lib/etcd /var/lib/kubelet /var/lib/dockershim /var/run/kubernetes /var/lib/cni]
+
+The reset process does not clean CNI configuration. To do so, you must remove /etc/cni/net.d
+
+The reset process does not reset or clean up iptables rules or IPVS tables.
+If you wish to reset iptables, you must do so manually by using the "iptables" command.
+
+If your cluster was setup to utilize IPVS, run ipvsadm --clear (or similar)
+to reset your system's IPVS tables.
+
+The reset process does not clean your kubeconfig files and you must remove them manually.
+Please, check the contents of the $HOME/.kube/config file.
+
+aafak@aafak-virtual-machine:~$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+aafak@aafak-virtual-machine:~$ mkdir -p $HOME/.kube
+aafak@aafak-virtual-machine:~$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+[sudo] password for aafak:
+cp: overwrite '/home/aafak/.kube/config'? y
+aafak@aafak-virtual-machine:~$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$ wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+--2023-01-04 11:29:41--  https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+Resolving web-proxy.in.hpecorp.net (web-proxy.in.hpecorp.net)... 16.242.46.30
+Connecting to web-proxy.in.hpecorp.net (web-proxy.in.hpecorp.net)|16.242.46.30|:8080... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 4621 (4.5K) [text/plain]
+Saving to: ‘kube-flannel.yml’
+
+kube-flannel.yml               100%[====================================================>]   4.51K  --.-KB/s    in 0.002s
+
+2023-01-04 11:29:42 (2.68 MB/s) - ‘kube-flannel.yml’ saved [4621/4621]
+
+aafak@aafak-virtual-machine:~$ kubectl apply -f kube-flannel.yml
+namespace/kube-flannel created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds created
+aafak@aafak-virtual-machine:~$ kubectl get nodes
+NAME                    STATUS   ROLES                  AGE   VERSION
+aafak-virtual-machine   Ready    control-plane,master   10m   v1.22.2
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$ kubectl get pods
+No resources found in default namespace.
+
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ kubectl taint nodes  aafak-virtual-machine  node-role.kubernetes.io/master-
+node/aafak-virtual-machine untainted
+aafak@aafak-virtual-machine:~/bring_postgres$
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ cat config-postgres.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    group: db
+data:
+  POSTGRES_DB: atlas
+  POSTGRES_USER: atlas
+  POSTGRES_PASSWORD: atlas
+
+aafak@aafak-virtual-machine:~/bring_postgres$ cat postgres.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+    group: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+        group: db
+    spec:
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: postgres-pvc
+      containers:
+      - name: postrges
+        image: postgres:9.6-alpine
+		imagePullPolicy: Never
+        ports:
+          - containerPort: 5432
+        envFrom:
+          - configMapRef:
+              name: postgres-config
+        volumeMounts:
+          - name: postgres-storage
+            mountPath: /var/lib/postgresql/data
+
+aafak@aafak-virtual-machine:~/bring_postgres$ ls
+config-postgres.yaml  postgres.tar  postgres.yaml  pvc-postgres.yaml  pv-postgresl.yaml  svc-postgresql.yaml
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ cat pv-postgres.yaml
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres-pv
+spec:
+  capacity:
+   storage: 1Gi
+  accessModes:
+   - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+  storageClassName: standard
+
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ cat pvc-postgres.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pvc
+  labels:
+    app: postgres
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+aafak@aafak-virtual-machine:~/bring_postgres$ cat svc-postgresql.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-svc
+  labels:
+    group: db
+spec:
+  type: NodePort
+  selector:
+      app: postgres
+  ports:
+    - port: 5432  # out of ClusterIP
+      targetPort: 5432 # port exposed by pod
+      nodePort: 32712
+aafak@aafak-virtual-machine:~/bring_postgres$
+
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ kubectl apply -f .
+configmap/postgres-config created
+deployment.apps/postgres created
+persistentvolume/postgres-pv created
+persistentvolumeclaim/postgres-pvc created
+service/postgres-svc created
+aafak@aafak-virtual-machine:~/custom_images/postgres$
+
+aafak@aafak-virtual-machine:~/bring_postgres$ kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+postgres-684d99dd44-xpm5s   1/1     Running   0          29s
+aafak@aafak-virtual-machine:~/bring_postgres$
+
+
+aafak@aafak-virtual-machine:~/bring_postgres$ kubectl get service
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP          5m41s
+postgres-svc   NodePort    10.111.207.35   <none>        5432:32712/TCP   3m57s
+
+aafak@aafak-virtual-machine:~/bring_postgres$ psql -d atlas -h 172.17.29.165 -p 32712  -U atlas -W atlas
+psql: warning: extra command-line argument "atlas" ignored
+Password: atlas
+psql (12.12 (Ubuntu 12.12-0ubuntu0.20.04.1), server 9.6.19)
+Type "help" for help.
+
+atlas=#
+
+
+CREATE DATABASE atlas_virtualization;
+create user atlas ;
+ALTER USER atlas with password 'atlas';
+GRANT ALL PRIVILEGES ON DATABASE atlas_virtualization to atlas;
+
+\c atlas_virtualization;
+
+CREATE TABLE IF NOT EXISTS hypervisor_managers(
+customer_id varchar(36) NOT NULL,
+id varchar(36) NOT NULL,
+ope_id varchar(36) NOT NULL,
+deleted BOOLEAN,
+details JSONB,
+PRIMARY KEY (customer_id, id, ope_id)
+);
+ALTER TABLE hypervisor_managers OWNER TO atlas;

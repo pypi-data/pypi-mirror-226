@@ -1,0 +1,60 @@
+import datetime
+from functools import wraps
+import time
+import sys
+import traceback
+"""
+https://www.webcodegeeks.com/python/python-decorator-tutorial/
+https://www.javacodegeeks.com/2016/03/10-awesome-python-tutorials-kick-start-projects.html
+https://www.webcodegeeks.com/python/python-logging-example/
+
+"""
+def log_time(function):
+  @wraps(function)
+  def wrapper(*args, **kwargs):
+    startTime = datetime.datetime.now()
+    error = None 
+    result = None
+    try:
+      result = function(*args, **kwargs)
+    except Exception as e:
+       error = str(e)
+       print "Method: "+str(function.__name__)+" failed, error:"
+       traceback.print_exc(sys.exc_info()[2])
+       raise Exception(error)
+
+    endTime = datetime.datetime.now()
+    spent_time = endTime - startTime
+    print "Method: "+str(function.__name__)+" completed in "+str(spent_time.seconds) + " seconds"
+     
+    return result
+  return wrapper
+
+@log_time
+def myFun1():
+  #try:  
+				i = 0
+				while i<5:
+				  time.sleep(1)
+				  print "fun1, i is :" + str(i)
+				  i+=1
+
+				k = 0
+				while k<5:
+				  time.sleep1(1)
+				  print "fun1, k is :" + str(i)
+				  k+=1
+  #except Exception as e:
+  #  traceback.print_exc(sys.exc_info()[2])
+
+@log_time
+def myFun2(a):
+  i = 0
+  while i<10:
+    time.sleep(1)
+    print "myFun2, i is :" + str(i)
+    i+=1
+
+myFun1()
+myFun2(10)
+

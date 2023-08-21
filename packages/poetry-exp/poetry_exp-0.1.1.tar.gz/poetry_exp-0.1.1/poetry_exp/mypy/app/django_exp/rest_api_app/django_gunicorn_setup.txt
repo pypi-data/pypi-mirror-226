@@ -1,0 +1,251 @@
+aafak@aafak-virtual-machine:~$ pwd
+/home/aafak
+aafak@aafak-virtual-machine:~$ mkdir rest_api_app
+aafak@aafak-virtual-machine:~$ cd rest_api_app/
+aafak@aafak-virtual-machine:~/rest_api_app$ python -m venv rest_api_app_venv
+
+aafak@aafak-virtual-machine:~/rest_api_app$ python3 -m venv rest_api_app_venv
+aafak@aafak-virtual-machine:~/rest_api_app$ ls
+rest_api_app_venv
+aafak@aafak-virtual-machine:~/rest_api_app$ source rest_api_app_venv/bin/activate
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ pip install django gunicorn
+Collecting django
+  Using cached Django-4.0.3-py3-none-any.whl (8.0 MB)
+Collecting gunicorn
+  Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Collecting backports.zoneinfo; python_version < "3.9"
+  Using cached backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl (74 kB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.2-py3-none-any.whl (42 kB)
+Collecting asgiref<4,>=3.4.1
+  Using cached asgiref-3.5.0-py3-none-any.whl (22 kB)
+Requirement already satisfied: setuptools>=3.0 in ./rest_api_app_venv/lib/python3.8/site-packages (from gunicorn) (44.0.0)
+Installing collected packages: backports.zoneinfo, sqlparse, asgiref, django, gunicorn
+Successfully installed asgiref-3.5.0 backports.zoneinfo-0.2.1 django-4.0.3 gunicorn-20.1.0 sqlparse-0.4.2
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ pip freeze > requirements.txt
+ls
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ ls
+requirements.txt  rest_api_app_venv
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ cat requirements.txt
+asgiref==3.5.0
+backports.zoneinfo==0.2.1
+Django==4.0.3
+gunicorn==20.1.0
+sqlparse==0.4.2
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ django-admin startproject app ~/rest_api_app
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ ls
+app  manage.py  requirements.txt  rest_api_app_venv
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ vim app/settings.py
+
+ALLOWED_HOSTS = ['172.17.29.165', 'localhost', '127.0.0.1']
+
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+'''
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ vim app/urls.py
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ cat app/urls.py
+"""app URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/4.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+#from django.contrib import admin
+from django.urls import path
+from .views.users import Users
+urlpatterns = [
+    #path('admin/', admin.site.urls),
+    path('api/v1/users', Users.as_view(), name='UserView')
+
+]
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ cp -r /home/aafak/nginx_apps/django_project_dir/django_project/views app/
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ cat app/views/users.py
+from django.views import View
+from django.http import HttpResponse, JsonResponse
+import json
+from uuid import uuid4
+
+
+class Users(View):
+    http_method_names = ['get', 'post']
+
+    def __init__(self):
+        pass
+
+    def get(self, request):
+        users = [
+            {
+                'id': 1,
+                'name': 'Ajay'
+            },
+            {
+                'id': 2,
+                'name': 'Aman'
+            }
+        ]
+        return JsonResponse(users, safe=False, status=200)
+
+    def post(self, request):
+        request_body = json.loads(request.body)
+        name = request_body['user']['name']
+        id = uuid4()
+        user = {
+            'id': str(id),
+            'name': name
+        }
+        # return HttpResponse(json.dumps(user), 200)
+        return JsonResponse(user, safe=False, status=200)
+
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 01, 2022 - 05:20:12
+Django version 4.0.3, using settings 'app.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Error: That port is already in use.
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$
+
+
+
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ gunicorn --bind 0.0.0.0:8001 app.wsgi
+[2022-04-01 10:51:58 +0530] [133576] [INFO] Starting gunicorn 20.1.0
+[2022-04-01 10:51:58 +0530] [133576] [INFO] Listening at: http://0.0.0.0:8001 (133576)
+[2022-04-01 10:51:58 +0530] [133576] [INFO] Using worker: sync
+[2022-04-01 10:51:58 +0530] [133578] [INFO] Booting worker with pid: 133578
+
+
+Browse: http://172.17.29.165:8001/api/v1/users
+Will not reachbel from outside
+
+Stop it and
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ sudo ufw allow 8001
+Rule added
+Rule added (v6)
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ gunicorn --bind 0.0.0.0:8001 app.wsgi
+[2022-04-01 10:53:48 +0530] [134998] [INFO] Starting gunicorn 20.1.0
+[2022-04-01 10:53:48 +0530] [134998] [INFO] Listening at: http://0.0.0.0:8001 (134998)
+[2022-04-01 10:53:48 +0530] [134998] [INFO] Using worker: sync
+[2022-04-01 10:53:48 +0530] [135000] [INFO] Booting worker with pid: 135000
+Not Found: /favicon.ico
+
+Now browse: Browse: http://172.17.29.165:8001/api/v1/users
+
+[{"id": 1, "name": "Ajay"}, {"id": 2, "name": "Aman"}]
+
+
+(rest_api_app_venv) aafak@aafak-virtual-machine:~/rest_api_app$ deactivate
+
+aafak@aafak-virtual-machine:~/rest_api_app$ cat /etc/systemd/system/rest-api-app.service
+[Unit]
+Description=Djangoi REST API App
+After=network.target
+
+[Service]
+User=aafak
+Group=www-data
+WorkingDirectory=/home/aafak/rest_api_app/
+ExecStart=/home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind 0.0.0.0:8001 \
+          app.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+aafak@aafak-virtual-machine:~/rest_api_app$
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo systemctl start rest-api-app.service
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo systemctl status rest-api-app.service >service.log
+aafak@aafak-virtual-machine:~/rest_api_app$ cat service.log
+● rest-api-app.service - Djangoi REST API App
+     Loaded: loaded (/etc/systemd/system/rest-api-app.service; disabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-04-01 11:01:41 IST; 44s ago
+   Main PID: 139923 (gunicorn)
+      Tasks: 4 (limit: 11872)
+     Memory: 86.3M
+     CGroup: /system.slice/rest-api-app.service
+             ├─139923 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             ├─139925 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             ├─139926 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             └─139927 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+
+Apr 01 11:01:41 aafak-virtual-machine systemd[1]: Started Djangoi REST API App.
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139923]: [2022-04-01 11:01:42 +0530] [139923] [INFO] Starting gunicorn 20.1.0
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139923]: [2022-04-01 11:01:42 +0530] [139923] [INFO] Listening at: http://0.0.0.0:8001 (139923)
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139923]: [2022-04-01 11:01:42 +0530] [139923] [INFO] Using worker: sync
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139925]: [2022-04-01 11:01:42 +0530] [139925] [INFO] Booting worker with pid: 139925
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139926]: [2022-04-01 11:01:42 +0530] [139926] [INFO] Booting worker with pid: 139926
+Apr 01 11:01:42 aafak-virtual-machine gunicorn[139927]: [2022-04-01 11:01:42 +0530] [139927] [INFO] Booting worker with pid: 139927
+Apr 01 11:02:07 aafak-virtual-machine gunicorn[139926]: 172.17.160.160 - - [01/Apr/2022:05:32:07 +0000] "GET /api/v1/users HTTP/1.1" 200 54 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"
+
+
+Now browse:
+http://172.17.29.165:8001/api/v1/users
+
+[{"id": 1, "name": "Ajay"}, {"id": 2, "name": "Aman"}]
+
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo systemctl enable rest-api-app.service
+Created symlink /etc/systemd/system/multi-user.target.wants/rest-api-app.service → /etc/systemd/system/rest-api-app.service.
+aafak@aafak-virtual-machine:~/rest_api_app$
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo vim /etc/nginx/sites-available/rest-api-app
+
+aafak@aafak-virtual-machine:~/rest_api_app$ cat /etc/nginx/sites-available/rest-api-app
+server {
+    location / {
+        proxy_pass http://localhost:8001/;
+    }
+}
+aafak@aafak-virtual-machine:~/rest_api_app$
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo service  nginx restart
+aafak@aafak-virtual-machine:~/rest_api_app$ sudo service  rest-api-app restart
+aafak@aafak-virtual-machine:~/rest_api_app$
+
+
+aafak@aafak-virtual-machine:~/rest_api_app$ cat service.log
+● rest-api-app.service - Djangoi REST API App
+     Loaded: loaded (/etc/systemd/system/rest-api-app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-04-01 11:10:06 IST; 1min 0s ago
+   Main PID: 145068 (gunicorn)
+      Tasks: 4 (limit: 11872)
+     Memory: 86.0M
+     CGroup: /system.slice/rest-api-app.service
+             ├─145068 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             ├─145072 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             ├─145441 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+             └─145442 /home/aafak/rest_api_app/rest_api_app_venv/bin/python3 /home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn --access-logfile - --workers 3 --bind 0.0.0.0:8001 app.wsgi:application
+
+Apr 01 11:10:07 aafak-virtual-machine gunicorn[145070]: [2022-04-01 11:10:07 +0530] [145070] [INFO] Booting worker with pid: 145070
+Apr 01 11:10:07 aafak-virtual-machine gunicorn[145071]: [2022-04-01 11:10:07 +0530] [145071] [INFO] Booting worker with pid: 145071
+Apr 01 11:10:07 aafak-virtual-machine gunicorn[145072]: [2022-04-01 11:10:07 +0530] [145072] [INFO] Booting worker with pid: 145072
+
+Now browse:
+

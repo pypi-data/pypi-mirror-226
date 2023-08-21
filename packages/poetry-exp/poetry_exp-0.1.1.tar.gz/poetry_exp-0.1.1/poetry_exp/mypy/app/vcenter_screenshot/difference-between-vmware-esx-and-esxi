@@ -1,0 +1,16 @@
+ESX (Elastic Sky X) is the VMware’s enterprise server virtualization platform.
+In ESX, VMkernel is the virtualization kernel which is managed by a console operating system
+which is also called as Service console. Which is Linux based and its main purpose is it to provide
+a Management interface for the host and lot of management agents and other third-party software agents
+are installed on the service console to provide the functionalists like hardware management and monitoring of ESX hypervisor.
+
+
+ESXi (Elastic sky X Integrated) is also the VMware’s enterprise server virtualization platform.
+In ESXi, Service console is removed. All the VMware related agents and third party agents
+such as management and monitoring agents can also run directly on the VMkernel.
+ESXi is a ultra-thin architecture which is highly reliable and its small code-base
+allows it to be more secure with fewer codes to patch.
+ESXi uses Direct Console User Interface (DCUI) instead of a service console
+to perform management of ESXi server. ESXi installation will happen very quickly as compared to ESX installation.
+
+

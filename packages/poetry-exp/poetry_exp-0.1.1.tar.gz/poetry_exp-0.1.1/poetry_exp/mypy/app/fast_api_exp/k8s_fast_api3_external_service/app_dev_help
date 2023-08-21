@@ -1,0 +1,58 @@
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ sudo docker images | grep fastapi
+fastapi_app                                          v1        971e6ede9719   5 months ago    983MB
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$
+
+if above image is not there, build using following command:
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ sudo docker build -t fastapi_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl apply -f deploy/
+deployment.apps/fastapi-app created
+service/fastapi-app-service created
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl get svc
+NAME                                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+fastapi-app-service                  LoadBalancer   10.99.89.125    <pending>     80:32000/TCP                 6s
+ingress-nginx-controller             NodePort       10.107.82.191   <none>        80:32479/TCP,443:31177/TCP   129d
+ingress-nginx-controller-admission   ClusterIP      10.97.61.206    <none>        443/TCP                      129d
+kubernetes                           ClusterIP      10.96.0.1       <none>        443/TCP                      158d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl get pods
+NAME                                        READY   STATUS    RESTARTS        AGE
+fastapi-app-64b58b4d49-xzbwj                1/1     Running   0               15s
+ingress-nginx-controller-55dcf56b68-9lvg8   1/1     Running   1 (5d23h ago)   129d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl get deployments
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+fastapi-app                1/1     1            1           23s
+ingress-nginx-controller   1/1     1            1           129d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl get svc
+NAME                                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+fastapi-app-service                  LoadBalancer   10.99.89.125    <pending>     80:32000/TCP                 41s
+ingress-nginx-controller             NodePort       10.107.82.191   <none>        80:32479/TCP,443:31177/TCP   129d
+ingress-nginx-controller-admission   ClusterIP      10.97.61.206    <none>        443/TCP                      129d
+kubernetes                           ClusterIP      10.96.0.1       <none>        443/TCP                      158d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$
+
+NAME                                        READY   STATUS    RESTARTS        AGE     IP            NODE           NOMINATED NODE   READINESS GATES
+fastapi-app-64b58b4d49-xzbwj                1/1     Running   0               2m43s   10.244.0.24   aafak-rnd-vm   <none>           <none>
+ingress-nginx-controller-55dcf56b68-9lvg8   1/1     Running   1 (5d23h ago)   129d    10.244.0.19   aafak-rnd-vm   <none>           <none>
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$ kubectl describe service fastapi-app-service
+Name:                     fastapi-app-service
+Namespace:                default
+Labels:                   service=fastapi-service
+Annotations:              <none>
+Selector:                 app=fastapiapp
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.99.89.125
+IPs:                      10.99.89.125
+Port:                     <unset>  80/TCP
+TargetPort:               8000/TCP
+NodePort:                 <unset>  32000/TCP
+Endpoints:                10.244.0.24:8000
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api3_external_service$
+
+
+Browser: Hit:  172.17.81.12 is master IP
+http://172.17.81.12:32000/users  will forward the request to 10.244.0.24:8000

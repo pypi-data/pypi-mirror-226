@@ -1,0 +1,292 @@
+https://www.tutorialworks.com/container-networking/
+
+A bridge network gives you simple communication between containers on the same host.
+When Docker starts up, it will create a default network called… bridge.
+It should start automatically, without any configuration required by you.
+From that point onwards, all containers are added into to the bridge network, unless you say otherwise.
+
+In a bridge network, each container is assigned its own IP address.
+So containers can communicate with each other by IP.
+
+
+
+If you only use the default bridge network, then all your containers can
+see and access other containers’ ports. This isn’t always what you want!
+
+Another “feature” of the default bridge network, is that containers can only talk
+to each other by their IP address. Obviously, this is a bit brittle, because IP addresses can change.
+
+The second option, the user-defined bridge, lets you have a bit more control.
+
+Get more control, with a user-defined bridge
+To let Docker containers communicate with each other by name,
+you can create a user-defined bridge network.
+In a user-defined bridge network, you can be more explicit about who joins the network, and you get an added bonus:
+
+…containers can be addressed by their name or alias.
+
+In a user-defined bridge network, you control which containers are in the network,
+and they can address each other by hostname
+
+Docker gives each container a unique name, but you can choose your own name or alias
+for a Docker container when it starts.
+
+When these containers are joined to the user-defined bridge network, they can address each other by this name.
+This means you don’t need to worry about keeping track of containers’ IP addresses, which can frequently change.
+
+
+Create a user-defined bridge network:
+Create your own custom bridge network first using docker network create.
+Under the hood, Docker sets up the relevant networking tables on your operating system.
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker network ls
+NETWORK ID     NAME       DRIVER    SCOPE
+a8087e7fb82f   bridge     bridge    local
+681a9704b7a9   host       host      local
+784971f64267   minikube   bridge    local
+06e37eab8b65   none       null      local
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker network create my_network
+af318abd51c49e04ac7adc08613bf517e11cc563513824a55df6fe2ea88309e9
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker network ls
+NETWORK ID     NAME         DRIVER    SCOPE
+a8087e7fb82f   bridge       bridge    local
+681a9704b7a9   host         host      local
+784971f64267   minikube     bridge    local
+af318abd51c4   my_network   bridge    local
+06e37eab8b65   none         null      local
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$
+
+
+Build and run the DB server:
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ docker build -t db_server:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+Sending build context to Docker daemon  5.632kB
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> 24f7553f3872
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> 4cd7e7ec44f7
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> a44756607c13
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/db_server
+ ---> Using cache
+ ---> f3128bc9ca4f
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> e3fdf92c4168
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> e5aaac8346dd
+Step 9/11 : ADD ./db_server.py $APP_ROOT_DIR/db_server.py
+ ---> 1e93927311f6
+Step 10/11 : EXPOSE 5002
+ ---> Running in 6bda834035b6
+Removing intermediate container 6bda834035b6
+ ---> 15534dd8c0c6
+Step 11/11 : ENTRYPOINT ["python3", "db_server.py"]
+ ---> Running in 30289719efbf
+Removing intermediate container 30289719efbf
+ ---> 305c20627541
+Successfully built 305c20627541
+Successfully tagged db_server:v1
+
+
+aafak@aafak-virtual-machine:~/docker_apps$ cd cont_comm_using_user_defined_bridge_nw/
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw$ ls
+apiserver  dbserver  docker_help  __init__.py
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw$ cd dbserver/
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ docker run -p 5002:5002 -d --name db_server --net my_network db_server:v1
+22a1d36f2108150976cfb2dd98dd851bf78fd62ef4f2b281230eb14e6a19cb57
+
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ docker logs db_server
+Starting the DB Server on port 5002
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ docker network ls
+NETWORK ID     NAME         DRIVER    SCOPE
+a8087e7fb82f   bridge       bridge    local
+681a9704b7a9   host         host      local
+784971f64267   minikube     bridge    local
+af318abd51c4   my_network   bridge    local
+06e37eab8b65   none         null      local
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ docker network inspect my_network
+[
+    {
+        "Name": "my_network",
+        "Id": "af318abd51c49e04ac7adc08613bf517e11cc563513824a55df6fe2ea88309e9",
+        "Created": "2021-09-28T15:22:46.650914045+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.25.0.0/16",
+                    "Gateway": "172.25.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "22a1d36f2108150976cfb2dd98dd851bf78fd62ef4f2b281230eb14e6a19cb57": {
+                "Name": "db_server",
+                "EndpointID": "85e1e1e170aa66b5251e845b66f88635d49d655863260cdf4030517a3f37be74",
+                "MacAddress": "02:42:ac:19:00:02",
+                "IPv4Address": "172.25.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$ curl -X GET http://127.0.0.1:5002/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/dbserver$
+
+
+
+**************Now build and run the Api server
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker build -t api_server:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+Sending build context to Docker daemon  6.656kB
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> 24f7553f3872
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> b54a55d46a9f
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> 8fd18b772430
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/api_server
+ ---> Using cache
+ ---> 995bfff8bd2d
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> 7b3d917a5247
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> 0f9618aabc0a
+Step 9/11 : ADD ./api_server.py $APP_ROOT_DIR/api_server.py
+ ---> 800e252fd7fe
+Step 10/11 : EXPOSE 5003
+ ---> Running in 68b88699fa7b
+Removing intermediate container 68b88699fa7b
+ ---> 5a96b72680eb
+Step 11/11 : ENTRYPOINT ["python3", "api_server.py"]
+ ---> Running in 26f117775b9b
+Removing intermediate container 26f117775b9b
+ ---> ef3b74c95c50
+Successfully built ef3b74c95c50
+Successfully tagged api_server:v1
+
+
+Start your container as normal. Add it to your user-defined bridge network using the --net option
+When two containers are joined to the same user-defined bridge network, one container is able to address
+another by using its name (as the hostname).
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker run -p 5003:5003 -d --name api_server --net my_network api_server:v1
+6ce722c1e90a33e044daf60c66eb77993fc54967c0076db7cbd24ff73467d5d7
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker logs api_server
+Starting the Api Server on port 5003
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker network inspect my_network
+[
+    {
+        "Name": "my_network",
+        "Id": "af318abd51c49e04ac7adc08613bf517e11cc563513824a55df6fe2ea88309e9",
+        "Created": "2021-09-28T15:22:46.650914045+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.25.0.0/16",
+                    "Gateway": "172.25.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "22a1d36f2108150976cfb2dd98dd851bf78fd62ef4f2b281230eb14e6a19cb57": {
+                "Name": "db_server",
+                "EndpointID": "85e1e1e170aa66b5251e845b66f88635d49d655863260cdf4030517a3f37be74",
+                "MacAddress": "02:42:ac:19:00:02",
+                "IPv4Address": "172.25.0.2/16",
+                "IPv6Address": ""
+            },
+            "6ce722c1e90a33e044daf60c66eb77993fc54967c0076db7cbd24ff73467d5d7": {
+                "Name": "api_server",
+                "EndpointID": "84c1cb202bf3ef62ca9abb3fa8c0b9c2e5ba6afa9effe7b203ea1af39b66f32f",
+                "MacAddress": "02:42:ac:19:00:03",
+                "IPv4Address": "172.25.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$
+
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ curl -X GET http://127.0.0.1:5003/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker logs api_server
+Starting the Api Server on port 5003
+[ApiServer]: Fetching the page from server1 running n another container....
+[ApiServer]: Response from server1: <Response [200]>, [{"id": 1, "name": "Admin"}]
+172.25.0.1 - - [2021-09-28 10:14:48] "GET /users HTTP/1.1" 200 144 0.017992
+
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker logs db_server
+Starting the DB Server on port 5002
+[DBServer]: Fetching the users....
+172.25.0.1 - - [2021-09-28 10:05:45] "GET /users HTTP/1.1" 200 144 0.005438
+[DBServer]: Fetching the users....
+172.25.0.3 - - [2021-09-28 10:14:48] "GET /users HTTP/1.1" 200 144 0.002644
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                                                  NAMES
+6ce722c1e90a   api_server:v1                         "python3 api_server.…"   10 minutes ago   Up 10 minutes   0.0.0.0:5003->5003/tcp, :::5003->5003/tcp                                                                                              api_server
+22a1d36f2108   db_server:v1                          "python3 db_server.py"   21 minutes ago   Up 21 minutes   0.0.0.0:5002->5002/tcp, :::5002->5002/tcp                                                                                              db_server
+3d6686c048b7   gcr.io/k8s-minikube/kicbase:v0.0.27   "/usr/local/bin/entr…"   5 days ago       Up 4 days       127.0.0.1:49167->22/tcp, 127.0.0.1:49166->2376/tcp, 127.0.0.1:49165->5000/tcp, 127.0.0.1:49164->8443/tcp, 127.0.0.1:49163->32443/tcp   minikube
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker exec -it api_server /bin/bash
+root@6ce722c1e90a:/usr/src/api_server# exit
+exit
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker exec -it api_server /bin/bash
+root@6ce722c1e90a:/usr/src/api_server# ls
+api_server.py
+root@6ce722c1e90a:/usr/src/api_server# exit
+exit
+aafak@aafak-virtual-machine:~/docker_apps/cont_comm_using_user_defined_bridge_nw/apiserver$ docker exec -it db_server /bin/bashroot@22a1d36f2108:/usr/src/db_server# ls
+db_server.py
+root@22a1d36f2108:/usr/src/db_server#

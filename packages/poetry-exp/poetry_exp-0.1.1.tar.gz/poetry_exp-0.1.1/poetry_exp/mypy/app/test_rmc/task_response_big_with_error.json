@@ -1,0 +1,168 @@
+{
+  "index": -1,
+  "task": {
+    "taskErrors": "None",
+    "taskStatus": "Ok",
+    "taskUri": "/rest/rm-central/v2/tasks/055c539d-f8e9-405a-83e7-c825aa3559a1",
+    "subTasks": {
+      "count": 3,
+      "tasks": [
+        {
+          "taskErrors": "None",
+          "taskStatus": "Ok",
+          "taskUri": "/rest/rm-central/v2/tasks/3aabbfaa-bd0f-4f49-8c4a-8e320c945763",
+          "subTasks": {
+            "count": 3,
+            "tasks": [
+              {
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "taskUri": "/rest/rm-central/v2/tasks/b5a2ce52-7d90-466e-b403-e4d63e9f9c61",
+                "taskState": "Completed"
+
+              },
+              {
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "taskUri": "/rest/rm-central/v2/tasks/e52fb56f-8d02-4216-8c49-8ef4343c7363",
+                "taskState": "Completed",
+                "parentResourceId": "None",
+                "action": "Create Recovery Sets"
+              },
+              {
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "taskUri": "/rest/rm-central/v2/tasks/0845e0cd-5cb3-4f23-aaa3-be7beb2266bf",
+                "taskState": "Completed"
+              }
+            ]
+          },
+          "name": "Mounting snapshot on Esxi",
+          "parentResourceName": "DS-Banglore-Dev2",
+          "resourceType": "Snapshot",
+          "taskState": "Completed",
+          "parentResourceId": "None",
+          "action": "Mount Snapshot"
+        },
+        {
+          "taskOutput": "None",
+          "owner": "RMC-V User",
+          "duration": 13777.013,
+          "updatedAt": "2019-06-26T05:33:50.961960Z",
+          "taskErrors": [
+            {
+              "errorDetails": "Instant Virtual Machine Recovery Task Failed: Failed to lock the file",
+              "errorCode": "1",
+              "errorSource": "RMCV",
+              "errorMessage": "An error occurred. Please check error details for more information",
+              "recommendedActions": [
+                
+              ]
+            }
+          ],
+          "taskStatus": "Error",
+          "id": "d92c5790-d428-4500-b6e5-83c6e508139e",
+          "createdAt": "2019-06-26T05:33:37.184947Z",
+          "associatedData": "None",
+          "taskProgress": [
+            {
+              "timeStamp": "2019-06-26T05:33:37.596794Z",
+              "message": "Initiate Virtual Machine Instant Recovery..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:38.028782Z",
+              "message": "Registering Virtual Machine [clone_VM-Bangalore-Dev3_20190626110337] with ESXi host [172.17.6.2]..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:40.443518Z",
+              "message": "Consolidate Virtual Machine..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:43.001715Z",
+              "message": "Powering On  Virtual Machine [clone_VM-Bangalore-Dev3_20190626110337]..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:50.699813Z",
+              "message": "Instant Virtual Machine Recovery Task Failed : Initiate clean-up. Remove Virtual Machine from ESXi host..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:50.941922Z",
+              "message": "Instant Virtual Machine Recovery Task Failed: Failed to lock the file"
+            }
+          ],
+          "nativeJob": "False",
+          "priority": "None",
+          "parentTaskId": "055c539d-f8e9-405a-83e7-c825aa3559a1",
+          "completedPercentage": 100,
+          "associatedResource": {
+            "resourceName": "clone_VM-Bangalore-Dev3_20190626110337",
+            "resourceUri": "49cd2d62-5fb4-4c7f-956c-874fb99d9e99"
+          },
+          "taskUri": "/rest/rm-central/v2/tasks/d92c5790-d428-4500-b6e5-83c6e508139e",
+          "initiator": "VMware",
+          "name": "Registering the VM on the Datastore",
+          "parentResourceName": "VM-Bangalore-Dev3",
+          "resourceType": "Clone",
+          "taskState": "Failed",
+          "parentResourceId": "None",
+          "action": "Create Clone"
+        },
+        {
+          "taskOutput": "None",
+          "owner": "RMC-V User",
+          "duration": 18329.039,
+          "updatedAt": "2019-06-26T05:34:09.615539Z",
+          "taskErrors": "None",
+          "taskStatus": "Ok",
+          "id": "330aff32-6514-41e0-ab7c-47eae9acff54",
+          "createdAt": "2019-06-26T05:33:51.286500Z",
+          "associatedData": "None",
+          "taskProgress": [
+            {
+              "timeStamp": "2019-06-26T05:33:51.670338Z",
+              "message": "Initiate Virtual Machine Instant Recovery..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:52.033417Z",
+              "message": "Registering Virtual Machine [clone_Windows2008_R2-SP1_20190626110351] with ESXi host [172.17.6.2]..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:33:55.943069Z",
+              "message": "Consolidate Virtual Machine..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:34:03.603687Z",
+              "message": "Powering On  Virtual Machine [clone_Windows2008_R2-SP1_20190626110351]..."
+            },
+            {
+              "timeStamp": "2019-06-26T05:34:09.618832Z",
+              "message": "Instant Virtual Machine Recovery Task Completed Successfully"
+            }
+          ],
+          "nativeJob": "False",
+          "priority": "None",
+          "parentTaskId": "055c539d-f8e9-405a-83e7-c825aa3559a1",
+          "completedPercentage": 100,
+          "associatedResource": {
+            "resourceName": "clone_Windows2008_R2-SP1_20190626110351",
+            "resourceUri": "49cd2d62-5fb4-4c7f-956c-874fb99d9e99"
+          },
+          "taskUri": "/rest/rm-central/v2/tasks/330aff32-6514-41e0-ab7c-47eae9acff54",
+          "initiator": "VMware",
+          "name": "Registering the VM on the Datastore",
+          "parentResourceName": "Windows2008_R2-SP1",
+          "resourceType": "Clone",
+          "taskState": "Completed",
+          "parentResourceId": "None",
+          "action": "Create Clone"
+        }
+      ]
+    },
+    "name": "RMC-V Snapshot Create Clone",
+    "parentResourceName": "Vmware",
+    "resourceType": "Clone",
+    "taskState": "Completed",
+    "parentResourceId": "None",
+    "action": "Create Clone"
+  }
+}

@@ -1,0 +1,72 @@
+Pod1.py:
+C:\Python3\python.exe "C:/Users/aafakmoh/OneDrive - Hewlett Packard Enterprise/mypy/app/redis_exp/multiple_process_exp/app_in_pod1.py"
+[pid: 6784] Acquired backup lock for resource:res-uuid-1
+[pid: 6784] Creating backup for resource: res-uuid-1...
+[pid: 6784] Successfully created the backup for resource: res-uuid-1
+[pid: 6784] Released backup lock for resource:res-uuid-1
+Waiting...
+[pid: 6784] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod3", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:39.236844"}'
+[pid: 6784] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 6784] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod2", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:56.328769"}'
+[pid: 6784] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 6784] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod2", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:56.328769"}'
+[pid: 6784] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 6784] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod3", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:44:14.240607"}'
+[pid: 6784] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+
+Process finished with exit code -1
+
+
+
+
+pod2.py
+
+C:\Python3\python.exe "C:/Users/aafakmoh/OneDrive - Hewlett Packard Enterprise/mypy/app/redis_exp/multiple_process_exp/app_in_pod2.py.py"
+[pid: 25196] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod1", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:22.791162"}'
+[pid: 25196] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 25196] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod1", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:22.791162"}'
+[pid: 25196] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 25196] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod3", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:39.236844"}'
+[pid: 25196] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 25196] Acquired backup lock for resource:res-uuid-1
+[pid: 25196] Creating backup for resource: res-uuid-1...
+[pid: 25196] Successfully created the backup for resource: res-uuid-1
+[pid: 25196] Released backup lock for resource:res-uuid-1
+Waiting...
+[pid: 25196] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod3", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:44:14.240607"}'
+[pid: 25196] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+
+Process finished with exit code -1
+
+
+
+
+pod3.py:
+C:\Python3\python.exe "C:/Users/aafakmoh/OneDrive - Hewlett Packard Enterprise/mypy/app/redis_exp/multiple_process_exp/app_in_pod3.py.py"
+[pid: 24472] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod1", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:22.791162"}'
+[pid: 24472] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 24472] Acquired backup lock for resource:res-uuid-1
+[pid: 24472] Creating backup for resource: res-uuid-1...
+[pid: 24472] Successfully created the backup for resource: res-uuid-1
+[pid: 24472] Released backup lock for resource:res-uuid-1
+Waiting...
+[pid: 24472] Error: Resource: res-uuid-1 is already locked for backup creation, res_bkp_lock_info: b'{"lockByPod": "Pod2", "resourceId": "res-uuid-1", "createdAt": "2022-08-17 10:43:56.328769"}'
+[pid: 24472] Failed to create the backup for resource:res-uuid-1, error: Failed to acquired backup lock for resource: res-uuid-1
+Waiting...
+[pid: 24472] Acquired backup lock for resource:res-uuid-1
+[pid: 24472] Creating backup for resource: res-uuid-1...
+[pid: 24472] Successfully created the backup for resource: res-uuid-1
+[pid: 24472] Released backup lock for resource:res-uuid-1
+Waiting...
+
+Process finished with exit code -1
+

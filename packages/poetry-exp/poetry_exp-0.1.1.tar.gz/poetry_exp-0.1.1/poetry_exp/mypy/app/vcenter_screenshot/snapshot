@@ -1,0 +1,9 @@
+A VMware snapshot is a copy of the virtual machine's disk file (VMDK) at a given point in time.
+Snapshots provide a change log for the virtual disk and are used to restore a VM to a particular point in time
+when a failure or system error occurs.
+
+
+A snapshot preserves the state and data of a virtual machine at a specific point in time.
+The state includes the virtual machine’s power state (for example, powered-on, powered-off, suspended).
+The data includes all of the files that make up the virtual machine.
+This includes disks, memory, and other devices, such as virtual network interface cards.

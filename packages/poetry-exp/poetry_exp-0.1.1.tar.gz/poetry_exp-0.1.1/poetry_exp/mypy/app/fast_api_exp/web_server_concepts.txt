@@ -1,0 +1,140 @@
+**************************ASGI:  https://asgi.readthedocs.io/en/latest/
+ASGI (Asynchronous Server Gateway Interface) is a spiritual successor to WSGI,
+intended to provide a standard interface between async-capable Python web servers,
+frameworks, and applications. Where as WSGI provided a standard for synchronous Python apps,
+
+https://www.uvicorn.org/
+Uvicorn is an ASGI web server implementation for Python. That means uvicorn providing the implemetion from
+seb server side where as FastAPi from proving the implementation from application side
+
+ASGI servers:    Uvicvorn, Hypercorn, Daphne
+ASGI frameworks: FastAPI, Starlette, Squart, Falcon, Muffin, Django Channels
+
+# main.py
+import uvicorn
+
+async def app(scope, receive, send):
+    ...
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=5000, log_level="info")
+
+this 'app' variable can be any ASGI framework instance(e.g app=FastAPI())
+
+uvicorn listens on a socket, receives the connection,
+does a bit processing and hands the request over to FastAPI, according to the ASGI interface.
+
+https://fastapi.tiangolo.com/async/
+Concurrency is different than parallelism. And it is better on specific scenarios
+that involve a lot of waiting. Because of that, it generally is a lot better
+than parallelism for web application development. But not for everything.
+
+
+Modern versions of Python have support for "asynchronous code" using
+something called "coroutines", with async and await syntax.
+
+When you declare a path operation function with normal def instead of async def,
+it is run in an external threadpool that is then awaited, instead of being called directly
+(as it would block the server).
+
+
+Server Machine and Server Program: There's a small detail about names to have in mind.
+
+The word "server" is commonly used to refer to both the remote/cloud computer (the physical or virtual machine) and also the program that is running on that machine (e.g. Uvicorn).
+
+Just have that in mind when you read "server" in general, it could refer to one of those two things.
+
+When referring to the remote machine, it's common to call it server, but also machine, VM (virtual machine), node. Those all refer to some type of remote machine, normally running Linux, where you run programs.
+
+
+https://medium.com/analytics-vidhya/difference-between-wsgi-and-asgi-807158ed1d4c
+
+WSGI stands for Web Server Gateway Interface, and ASGI stands for Asynchronous Server Gateway interface. They both specify the interface and sit in between the web server and a Python web application or framework. One of their jobs is to handle incoming requests from the client, but they go about it in different ways
+
+WSGI
+WSGI is a standard interface which allows to seperate server code from the application code where you add your business logic. WSGI succeeded in allowing much more freedom and innovation in the Python web space.
+
+In WSGI applications takes a single request and returns response at a time. This single and synchronous callable limits WSGI for long lived connections like websocket connections. Even if we made the application asynchronous callable it only has a single path to provide request.
+
+WSGI (stands for Web Server Gateway Interface) is simple where you can define your application as a callable that takes two arguments the first argument environ describes the request and the environment the server running in and the second argument is a synchronous callable which you call to start the response to yield the body.
+
+There are a lots of WSGI frameworks Bottle, Flask, Falcon, Django etc. 
+There are WSGI servers like Gunicorn, uWSGI, Apache.
+
+Limitations of WSGI?
+With the advancement of web servers around it WSGI started to show its age. It doesn’t have the ability to officially deal with Web Sockets. Wsgi.websocket is an unofficial work around though. WSGI can’t also work with HTTP/2. We also can’t use async or await with WSGI as I already mentioned.
+
+HTTP/2:
+As opposed to HTTP/1.1, which keeps all requests and responses in plain text format, HTTP/2 uses the binary framing layer to encapsulate all messages in binary format, while still maintaining HTTP semantics, such as verbs, methods, and headers
+
+These limitation lead to the motivation for async Web frameworks.
+
+Same as the story before…. Python had a wide variety of async web application frameworks such as Sanic, blacksheep, Japronto etc. (Some are not maintained right now). But the problem was for new python users when they have to chose a frame work which limit their choice of usable web servers, vice versa. Thus the framework ASGI is released.
+
+**************************ASGI:  https://asgi.readthedocs.io/en/latest/
+ASGI (Asynchronous Server Gateway Interface) is a spiritual successor to WSGI,
+intended to provide a standard interface between async-capable Python web servers,
+frameworks, and applications. Where as WSGI provided a standard for synchronous Python apps,
+
+
+What’s wrong with WSGI?
+You may ask “why not just upgrade WSGI”? This has been asked many times over the years, and the problem usually ends up being that WSGI’s single-callable interface just isn’t suitable for more involved Web protocols like WebSocket.
+
+WSGI applications are a single, synchronous callable that takes a request and returns a response; this doesn’t allow for long-lived connections, like you get with long-poll HTTP or WebSocket connections.
+
+Even if we made this callable asynchronous, it still only has a single path to provide a request, so protocols that have multiple incoming events (like receiving WebSocket frames) can’t trigger this.
+
+How does ASGI work?
+ASGI is structured as a single, asynchronous callable. It takes a scope, which is a dict containing details about the specific connection, send, an asynchronous callable, that lets the application send event messages to the client, and receive, an asynchronous callable which lets the application receive event messages from the client.
+
+This not only allows multiple incoming events and outgoing events for each application, but also allows for a background coroutine so the application can do other things (such as listening for events on an external trigger, like a Redis queue).
+
+In its simplest form, an application can be written as an asynchronous function, like this:
+
+async def application(scope, receive, send):
+    event = await receive()
+    ...
+    await send({"type": "websocket.send", ...})
+Every event that you send or receive is a Python dict, with a predefined format. It’s these event formats that form the basis of the standard, and allow applications to be swappable between servers.
+
+These events each have a defined type key, which can be used to infer the event’s structure. Here’s an example event that you might receive from receive with the body from a HTTP request:
+
+{
+    "type": "http.request",
+    "body": b"Hello World",
+    "more_body": False,
+}
+And here’s an example of an event you might pass to send to send an outgoing WebSocket message:
+
+{
+    "type": "websocket.send",
+    "text": "Hello world!",
+}
+
+As I mentioned ASGI is a successor of the successful WSGI. ASGI’s goal is to continue become the standard compatibility between web servers, frameworks and applications like WSGI in asynchronous python.
+
+
+In ASGI there are three arguments the scope which is similar to the environ in WSGI which gives an idea about the specific connection. Receive and Send where you as an application has to receive and send messages both are asynchronous callable. This allows multiple incoming events and outgoing events for each application . The main advantage is that it allows background coroutine so the application is able to do other things such listening for events on an external trigger like a redis queue.
+
+
+I think the one major downside you will find is that the ASGI servers are newer and therefore tested less, may have less features, fewer in number, and probably have a smaller community behind them. However, I use an ASGI server (Daphne) for everything and feel that websockets offer so much in terms of user experience that everything will eventually shift to ASGI.
+
+Being able to use asyncio in your code is a major benefit for web programming. Instead of running 10 queries one after the other and waiting for each one to come back, you can run 10 queries at the same time, while hitting your cache and making a HTTP request simultaneously on a single thread.
+
+
+When deploying applications you will probably want to have some replication of processes to take advantage of multiple cores and to be able to handle more requests.
+
+
+Gunicorn is mainly an application server using the WSGI standard. That means that Gunicorn can serve applications like Flask and Django. Gunicorn by itself is not compatible with FastAPI, as FastAPI uses the newest ASGI standard.
+
+
+https://fastapi.tiangolo.com/async/
+https://www.starlette.io/
+
+
+https://fastapi.tiangolo.com/deployment/manually/
+
+uvicorn is an ASGI (async server gateway interface) compatible web server. It's (simplified) the binding element that handles the web connections from the browser or api client and then allows FastAPI to serve the actual request.
+
+uvicorn listens on a socket, receives the connection,
+does a bit processing and hands the request over to FastAPI, according to the ASGI interface.

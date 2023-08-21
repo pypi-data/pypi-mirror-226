@@ -1,0 +1,225 @@
+# GET / poc - vms / _search?size = 1 & filter_path = hits.hits
+{
+    "hits": {
+        "hits": [
+            {
+                "_index": "poc-vms",
+                "_type": "_doc",
+                "_id": "1f5e2769-e38b-4ee5-a8be-0400200e56ea",
+                "_score": 1.0,
+                "_source": {
+                    "name": "vm2",
+                    "moref": "vm-2",
+                    "vcenterInfo": {
+                        "id": "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name": "vcenter1"
+                    },
+                    "datacenterInfo": {
+                        "moref": "datacenter-1",
+                        "name": "Datacenter1"
+                    },
+                    "clusterInfo": {
+                        "moref": "domain-c1",
+                        "name": "Cluster1"
+                    },
+                    "esxInfo": {
+                        "id": "a623598b-8af8-41bd-8f00-568affb68d90",
+                        "name": "Host1"
+                    },
+                    "dsInfo": [
+                        {
+                            "id": "9c291e97-f6a4-4a33-b611-83109da25880",
+                            "name": "Datastore1"
+                        }
+                    ],
+                    "folderInfo": {
+                        "id": "92f3af8a-954e-47ce-a5c0-2101d7f064ae",
+                        "name": "vmFolder1"
+                    }
+                }
+            }
+        ]
+    }
+}
+
+GET / poc - vms / _search?size = 100 & filter_path = aggregations
+{
+
+    "aggs": {
+        "vms": {
+            "terms": {
+                "field": "folderInfo.name.keyword"
+            }
+        }
+    }
+}
+
+{
+    "aggregations": {
+        "vms": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "vmFolder2",
+                    "doc_count": 4  # Total no. of vms under the folder 'vmFolder2'
+                },
+                {
+                    "key": "vmFolder3",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder4",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder5",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder6",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder7",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder1",
+                    "doc_count": 3
+                },
+                {
+                    "key": "vmFolder8",
+                    "doc_count": 3
+                },
+                {
+                    "key": "vmFolder9",
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}
+
+GET / poc - vms / _search?size = 100 & filter_path = aggregations
+{
+
+    "aggs": {
+        "vms": {
+            "terms": {
+                "field": "datacenterInfo.name.keyword"
+            }
+        }
+    }
+}
+
+{
+    "aggregations": {
+        "vms": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "Datacenter1",
+                    "doc_count": 15
+                },
+                {
+                    "key": "Datacenter2",
+                    "doc_count": 15
+                },
+                {
+                    "key": "Datacenter3",
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}
+
+GET / poc - vms / _search?size = 100 & filter_path = aggregations
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"terms": {
+                    "datacenterInfo.name.keyword": [
+                        "Datacenter1"
+                    ]
+                }}
+            ]
+        }
+    },
+
+    "aggs": {
+        "vms": {
+            "terms": {
+                "field": "datacenterInfo.name.keyword"
+            }
+        }
+    }
+}
+
+{
+    "aggregations": {
+        "vms": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "Datacenter1",
+                    "doc_count": 15
+                }
+            ]
+        }
+    }
+}
+
+GET / poc - vms / _search?size = 100 & filter_path = aggregations
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"terms": {
+                    "datacenterInfo.name.keyword": [
+                        "Datacenter2"
+                    ]
+                }}
+            ]
+        }
+    },
+
+    "aggs": {
+        "vms": {
+            "terms": {
+                "field": "folderInfo.name.keyword"
+            }
+        }
+    }
+}
+
+{
+    "aggregations": {
+        "vms": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "vmFolder5",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder6",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder7",
+                    "doc_count": 4
+                },
+                {
+                    "key": "vmFolder8",
+                    "doc_count": 3
+                }
+            ]
+        }
+    }
+}

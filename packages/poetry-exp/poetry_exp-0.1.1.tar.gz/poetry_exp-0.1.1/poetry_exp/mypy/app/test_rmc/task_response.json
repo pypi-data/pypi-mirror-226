@@ -1,0 +1,256 @@
+{
+  "index": -1,
+  "task": {
+    "taskOutput": "none",
+    "owner": "RMC-V User",
+    "duration": 101931.027,
+    "updatedAt": "2019-06-26T03:22:04.222620Z",
+    "taskErrors": [
+      {
+        "errorDetails": "Clone creation was unsuccessful",
+        "errorCode": "1",
+        "errorSource": "RMCV",
+        "errorMessage": "An error occurred. Please check error details for more information",
+        "recommendedActions": [
+          
+        ]
+      }
+    ],
+    "taskStatus": "Error",
+    "id": "7923b4d9-6c9a-4cd7-8e96-0c93e90e0bcc",
+    "createdAt": "2019-06-26T03:20:22.291593Z",
+    "associatedData": "None",
+    "taskProgress": [
+      {
+        "timeStamp": "2019-06-26T03:20:22.474444Z",
+        "message": "Initiate create clone"
+      },
+      {
+        "timeStamp": "2019-06-26T03:22:04.204589Z",
+        "message": "Clone creation was unsuccessful"
+      }
+    ],
+    "nativeJob": "False",
+    "priority": "None",
+    "parentTaskId": "f0a922e8-ab02-47b6-842d-3d68eb7a055f",
+    "completedPercentage": 100,
+    "associatedResource": {
+      "resourceName": "",
+      "resourceUri": ""
+    },
+    "taskUri": "/rest/rm-central/v2/tasks/7923b4d9-6c9a-4cd7-8e96-0c93e90e0bcc",
+    "initiator": "VMware",
+    "subTasks": {
+      "count": 1,
+      "tasks": [
+        {
+          "taskOutput": "None",
+          "owner": "RMC-V User",
+          "duration": 98174.43299999999,
+          "updatedAt": "2019-06-26T03:22:00.695415Z",
+          "taskErrors": "None",
+          "taskStatus": "Ok",
+          "id": "564be96a-530c-4f44-a824-4aa308147fa0",
+          "createdAt": "2019-06-26T03:20:22.520982Z",
+          "associatedData": "None",
+          "taskProgress": [
+            {
+              "timeStamp": "2019-06-26T03:20:22.705049Z",
+              "message": "Start Snapshot volume mounting"
+            },
+            {
+              "timeStamp": "2019-06-26T03:20:41.796735Z",
+              "message": "Exporting LUN to the host."
+            },
+            {
+              "timeStamp": "2019-06-26T03:20:54.820330Z",
+              "message": "LUN exported successfully."
+            },
+            {
+              "timeStamp": "2019-06-26T03:20:58.402243Z",
+              "message": "Rescanning HBAs to identify unresolved vmfs volume(s) from Snapshot lun(s)."
+            },
+            {
+              "timeStamp": "2019-06-26T03:21:41.666441Z",
+              "message": "Mounting unresolved volumes."
+            },
+            {
+              "timeStamp": "2019-06-26T03:22:00.527332Z",
+              "message": "Successfully mounted volume"
+            },
+            {
+              "timeStamp": "2019-06-26T03:22:00.698712Z",
+              "message": "Successfully mounted unresolved volumes"
+            }
+          ],
+          "nativeJob": "False",
+          "priority": "None",
+          "parentTaskId": "7923b4d9-6c9a-4cd7-8e96-0c93e90e0bcc",
+          "completedPercentage": 100,
+          "associatedResource": {
+            "resourceName": "Snapshot",
+            "resourceUri": "ce7cd50c-489a-4a36-9714-a5a6db44d088"
+          },
+          "taskUri": "/rest/rm-central/v2/tasks/564be96a-530c-4f44-a824-4aa308147fa0",
+          "initiator": "VMware",
+          "subTasks": {
+            "count": 3,
+            "tasks": [
+              {
+                "taskOutput": "None",
+                "owner": "3c4a35e65d9847509b2aa0eedda35eef",
+                "duration": 1525.1999999999998,
+                "updatedAt": "2019-06-26T03:20:24.705126Z",
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "id": "76e3a851-2046-42d3-a35b-5161c70dbf9b",
+                "createdAt": "2019-06-26T03:20:23.179926Z",
+                "associatedData": "None",
+                "taskProgress": [
+                  {
+                    "timeStamp": "2019-06-26T03:20:23.312137Z",
+                    "message": "Snapshot set parameters are validated."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:23.388040Z",
+                    "message": "Refreshing snapshot set."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:23.768070Z",
+                    "message": "Snapshot set details are fetched from the database."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:24.706822Z",
+                    "message": "Successfully refreshed snapshot set."
+                  }
+                ],
+                "nativeJob": "False",
+                "priority": "None",
+                "parentTaskId": "564be96a-530c-4f44-a824-4aa308147fa0",
+                "completedPercentage": 100,
+                "associatedResource": {
+                  "resourceName": "s2",
+                  "resourceUri": "/rest/rm-central/v1/snapshot-sets/237ce13a-dc20-4fce-854d-71e7d7516346"
+                },
+                "taskUri": "/rest/rm-central/v2/tasks/76e3a851-2046-42d3-a35b-5161c70dbf9b",
+                "initiator": "Volumes",
+                "name": "Refresh_Snapshotset",
+                "parentResourceName": "None",
+                "resourceType": "Snapshot",
+                "taskState": "Completed",
+                "parentResourceId": "None",
+                "action": "Refresh Snapshot"
+              },
+              {
+                "taskOutput": "None",
+                "owner": "3c4a35e65d9847509b2aa0eedda35eef",
+                "duration": 6516.0650000000005,
+                "updatedAt": "2019-06-26T03:20:36.841242Z",
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "id": "a8c2b6c8-5a92-4d53-af8d-b2642f7a8b0e",
+                "createdAt": "2019-06-26T03:20:30.325177Z",
+                "associatedData": "None",
+                "taskProgress": [
+                  {
+                    "timeStamp": "2019-06-26T03:20:30.620626Z",
+                    "message": "Recovery Set parameters are validated."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:31.092396Z",
+                    "message": "Initiating clone creation with existing snapshots."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:32.407711Z",
+                    "message": "Successfully created snapshots for recovery set."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:34.084152Z",
+                    "message": "Successfully fetched the volumes details."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:36.844098Z",
+                    "message": "Successfully created Recovery Set."
+                  }
+                ],
+                "nativeJob": "False",
+                "priority": "None",
+                "parentTaskId": "564be96a-530c-4f44-a824-4aa308147fa0",
+                "completedPercentage": 100,
+                "associatedResource": {
+                  "resourceName": "RMCV_cloned_RS_20190626085029",
+                  "resourceUri": "/rest/rm-central/v1/recovery-sets/844c60fc-8ea3-4927-86c3-e27c7f66a979"
+                },
+                "taskUri": "/rest/rm-central/v2/tasks/a8c2b6c8-5a92-4d53-af8d-b2642f7a8b0e",
+                "initiator": "Volumes",
+                "name": "Create Volumeset",
+                "parentResourceName": "None",
+                "resourceType": "Recovery Sets",
+                "taskState": "Completed",
+                "parentResourceId": "None",
+                "action": "Create Recovery Sets"
+              },
+              {
+                "taskOutput": "None",
+                "owner": "3c4a35e65d9847509b2aa0eedda35eef",
+                "duration": 3137.0170000000003,
+                "updatedAt": "2019-06-26T03:20:48.166647Z",
+                "taskErrors": "None",
+                "taskStatus": "Ok",
+                "id": "c06a9984-7110-4720-b8c3-e6a2e294c6c5",
+                "createdAt": "2019-06-26T03:20:45.029630Z",
+                "associatedData": "None",
+                "taskProgress": [
+                  {
+                    "timeStamp": "2019-06-26T03:20:45.308318Z",
+                    "message": "Recovery Set parameters are validated."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:45.735254Z",
+                    "message": "Successfully fetched the recovery set details."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:45.892513Z",
+                    "message": "Recovery-set attach data prepared."
+                  },
+                  {
+                    "timeStamp": "2019-06-26T03:20:48.169640Z",
+                    "message": "Recovery-set attach operation is successful."
+                  }
+                ],
+                "nativeJob": "False",
+                "priority": "None",
+                "parentTaskId": "564be96a-530c-4f44-a824-4aa308147fa0",
+                "completedPercentage": 100,
+                "associatedResource": {
+                  "resourceName": "RMCV_cloned_RS_20190626085029",
+                  "resourceUri": "/rest/rm-central/v1/recovery-sets/844c60fc-8ea3-4927-86c3-e27c7f66a979"
+                },
+                "taskUri": "/rest/rm-central/v2/tasks/c06a9984-7110-4720-b8c3-e6a2e294c6c5",
+                "initiator": "Volumes",
+                "name": "Attach_Recoveryset",
+                "parentResourceName": "None",
+                "resourceType": "Recovery Sets",
+                "taskState": "Completed",
+                "parentResourceId": "None",
+                "action": "Attach Recovery Sets"
+              }
+            ]
+          },
+          "name": "Mounting snapshot on Esxi",
+          "parentResourceName": "DS-Banglore-Dev2",
+          "resourceType": "Snapshot",
+          "taskState": "Completed",
+          "parentResourceId": "None",
+          "action": "Mount Snapshot"
+        }
+      ]
+    },
+    "name": "RMC-V Snapshot Create Clone",
+    "parentResourceName": "Vmware",
+    "resourceType": "Clone",
+    "taskState": "Failed",
+    "parentResourceId": "None",
+    "action": "Create Clone"
+  }
+}

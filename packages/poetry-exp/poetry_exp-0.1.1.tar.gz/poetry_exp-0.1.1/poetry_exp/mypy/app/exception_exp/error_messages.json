@@ -1,0 +1,14 @@
+{
+    "404": {
+       "msg": "Resource {0} not found.",
+       "recommendedActions": []
+    },
+    "499": {
+       "msg": "Host {0} is not reachable",
+       "recommendedActions": []
+    },
+    "500": {
+        "msg": "Internal Error: {}. Contact your support.",
+        "recommendedActions": []
+    }
+}

@@ -1,0 +1,944 @@
+aafak@aafak-virtual-machine:~$ kubectl version
+Client Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.2", GitCommit:"8b5a19147530eaac9476b0ab82980b4088bbc1b2", GitTreeState:"clean", BuildDate:"2021-09-15T21:38:50Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.2", GitCommit:"8b5a19147530eaac9476b0ab82980b4088bbc1b2", GitTreeState:"clean", BuildDate:"2021-09-15T21:32:41Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ minikube version
+minikube version: v1.23.2
+commit: 0a0ad764652082477c00d51d2475284b5d39ceed
+aafak@aafak-virtual-machine:~$
+
+
+
+aafak@aafak-virtual-machine:~$ minikube start
+
+
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl get nodes
+NAME       STATUS   ROLES                  AGE     VERSION
+minikube   Ready    control-plane,master   7m35s   v1.22.2
+aafak@aafak-virtual-machine:~$
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+deployment.apps/kubernetes-bootcamp created
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+kubernetes-bootcamp2   1/1     1            1           52m
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+NAME                                    READY   STATUS             RESTARTS   AGE
+kubernetes-bootcamp2-8448dfd6dd-r8kwl   0/1     ImagePullBackOff(Means image could not pull)   0          9m27s
+aafak@aafak-virtual-machine:~$
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+NAME                                    READY   STATUS    RESTARTS       AGE
+kubernetes-bootcamp2-8448dfd6dd-r8kwl   1/1     Running   1 (164m ago)   3h35m
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl proxy
+Starting to serve on 127.0.0.1:8001
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl logs -f kubernetes-bootcamp2-8448dfd6dd-r8kwl
+Kubernetes Bootcamp App Started At: 2021-09-23T07:06:13.226Z | Running On:  kubernetes-bootcamp2-8448dfd6dd-r8kwl
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl exec kubernetes-bootcamp2-8448dfd6dd-r8kwl -- env
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=kubernetes-bootcamp2-8448dfd6dd-r8kwl
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+KUBERNETES_PORT_443_TCP_PORT=443
+KUBERNETES_PORT_443_TCP_ADDR=10.96.0.1
+KUBERNETES_SERVICE_HOST=10.96.0.1
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_SERVICE_PORT_HTTPS=443
+KUBERNETES_PORT=tcp://10.96.0.1:443
+KUBERNETES_PORT_443_TCP=tcp://10.96.0.1:443
+NPM_CONFIG_LOGLEVEL=info
+NODE_VERSION=6.3.1
+HOME=/root
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl exec -it kubernetes-bootcamp2-8448dfd6dd-r8kwl -- bash
+root@kubernetes-bootcamp2-8448dfd6dd-r8kwl:/# ls
+bin  boot  core  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  server.js  srv  sys  tmp  usr  var
+root@kubernetes-bootcamp2-8448dfd6dd-r8kwl:/#
+root@kubernetes-bootcamp2-8448dfd6dd-r8kwl:/# cat server.js
+var http = require('http');
+var requests=0;
+var podname= process.env.HOSTNAME;
+var startTime;
+var host;
+var handleRequest = function(request, response) {
+  response.setHeader('Content-Type', 'text/plain');
+  response.writeHead(200);
+  response.write("Hello Kubernetes bootcamp! | Running on: ");
+  response.write(host);
+  response.end(" | v=1\n");
+  console.log("Running On:" ,host, "| Total Requests:", ++requests,"| App Uptime:", (new Date() - startTime)/1000 , "seconds", "| Log Time:",new Date());
+}
+var www = http.createServer(handleRequest);
+www.listen(8080,function () {
+    startTime = new Date();;
+    host = process.env.HOSTNAME;
+    console.log ("Kubernetes Bootcamp App Started At:",startTime, "| Running On: " ,host, "\n" );
+});
+root@kubernetes-bootcamp2-8448dfd6dd-r8kwl:/#
+
+
+
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl describe pods
+Name:         kubernetes-bootcamp2-8448dfd6dd-r8kwl
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Thu, 23 Sep 2021 11:43:58 +0530
+Labels:       app=kubernetes-bootcamp2
+              pod-template-hash=8448dfd6dd
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/kubernetes-bootcamp2-8448dfd6dd
+Containers:
+  kubernetes-bootcamp:
+    Container ID:   docker://ef83b4b230ad74289a9d3e350b3341cfb5d79f78b63531f4446f92891ac78d0c
+    Image:          gcr.io/google-samples/kubernetes-bootcamp:v1
+    Image ID:       docker-pullable://gcr.io/google-samples/kubernetes-bootcamp@sha256:0d6b8ee63bb57c5f5b6156f446b3bc3b3c143d233037f3a2f00e279c8fcc64af
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Thu, 23 Sep 2021 12:36:12 +0530
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Thu, 23 Sep 2021 12:02:23 +0530
+      Finished:     Thu, 23 Sep 2021 12:35:30 +0530
+    Ready:          True
+    Restart Count:  1
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-87qd2 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-87qd2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>
+aafak@aafak-virtual-machine:~$
+
+
+
+aafak@aafak-virtual-machine:~$ curl -X GET  http://127.0.0.1:8001/api/v1/namespaces/default/pods/kubernetes-bootcamp2-8448dfd6dd-r8kwl
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "kubernetes-bootcamp2-8448dfd6dd-r8kwl",
+    "generateName": "kubernetes-bootcamp2-8448dfd6dd-",
+    "namespace": "default",
+    "uid": "7733cd4c-c56a-4de1-9704-af430b39219b",
+    "resourceVersion": "6573",
+    "creationTimestamp": "2021-09-23T06:13:58Z",
+    "labels": {
+      "app": "kubernetes-bootcamp2",
+      "pod-template-hash": "8448dfd6dd"
+    },
+    "ownerReferences": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "kubernetes-bootcamp2-8448dfd6dd",
+        "uid": "fad8dd36-5f56-41d9-94b3-c7617cccb27f",
+        "controller": true,
+        "blockOwnerDeletion": true
+      }
+    ],
+    "managedFields": [
+      {
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2021-09-23T06:13:58Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {"f:metadata":{"f:generateName":{},"f:labels":{".":{},"f:app":{},"f:pod-template-hash":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"fad8dd36-5f56-41d9-94b3-c7617cccb27f\"}":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"kubernetes-bootcamp\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:enableServiceLinks":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}
+      },
+      {
+        "manager": "kubelet",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2021-09-23T07:06:12Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {"f:status":{"f:conditions":{"k:{\"type\":\"ContainersReady\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Initialized\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Ready\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:containerStatuses":{},"f:hostIP":{},"f:phase":{},"f:podIP":{},"f:podIPs":{".":{},"k:{\"ip\":\"172.17.0.2\"}":{".":{},"f:ip":{}}},"f:startTime":{}}},
+        "subresource": "status"
+      }
+    ]
+  },
+  "spec": {
+    "volumes": [
+      {
+        "name": "kube-api-access-87qd2",
+        "projected": {
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "name": "kube-root-ca.crt",
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ]
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "path": "namespace",
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "defaultMode": 420
+        }
+      }
+    ],
+    "containers": [
+      {
+        "name": "kubernetes-bootcamp",
+        "image": "gcr.io/google-samples/kubernetes-bootcamp:v1",
+        "resources": {
+
+        },
+        "volumeMounts": [
+          {
+            "name": "kube-api-access-87qd2",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "IfNotPresent"
+      }
+    ],
+    "restartPolicy": "Always",
+    "terminationGracePeriodSeconds": 30,
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccountName": "default",
+    "serviceAccount": "default",
+    "nodeName": "minikube",
+    "securityContext": {
+
+    },
+    "schedulerName": "default-scheduler",
+    "tolerations": [
+      {
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      },
+      {
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      }
+    ],
+    "priority": 0,
+    "enableServiceLinks": true,
+    "preemptionPolicy": "PreemptLowerPriority"
+  },
+  "status": {
+    "phase": "Running",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2021-09-23T06:13:58Z"
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2021-09-23T07:06:12Z"
+      },
+      {
+        "type": "ContainersReady",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2021-09-23T07:06:12Z"
+      },
+      {
+        "type": "PodScheduled",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2021-09-23T06:13:58Z"
+      }
+    ],
+    "hostIP": "192.168.49.2",
+    "podIP": "172.17.0.2",
+    "podIPs": [
+      {
+        "ip": "172.17.0.2"
+      }
+    ],
+    "startTime": "2021-09-23T06:13:58Z",
+    "containerStatuses": [
+      {
+        "name": "kubernetes-bootcamp",
+        "state": {
+          "running": {
+            "startedAt": "2021-09-23T07:06:12Z"
+          }
+        },
+        "lastState": {
+          "terminated": {
+            "exitCode": 255,
+            "reason": "Error",
+            "startedAt": "2021-09-23T06:32:23Z",
+            "finishedAt": "2021-09-23T07:05:30Z",
+            "containerID": "docker://2478090f9ee4ed3416a26b671cd7ef64372ff83289162cce3be6f11883610fea"
+          }
+        },
+        "ready": true,
+        "restartCount": 1,
+        "image": "gcr.io/google-samples/kubernetes-bootcamp:v1",
+        "imageID": "docker-pullable://gcr.io/google-samples/kubernetes-bootcamp@sha256:0d6b8ee63bb57c5f5b6156f446b3bc3b3c143d233037f3a2f00e279c8fcc64af",
+        "containerID": "docker://ef83b4b230ad74289a9d3e350b3341cfb5d79f78b63531f4446f92891ac78d0c",
+        "started": true
+      }
+    ],
+    "qosClass": "BestEffort"
+  }
+}aafak@aafak-virtual-machine:~$ curl -X GET  http://127.0.0.1:8001/api/v1/namespaces/default/pods/kubernetes-bootcamp2-8448dfd6dd-r8kwl/proxy
+aafak@aafak-virtual-machine:~$
+
+
+
+
+aafak@aafak-virtual-machine:~$ minikube ssh
+docker@minikube:~$ docker image
+docker@minikube:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED        SIZE
+k8s.gcr.io/kube-apiserver                   v1.22.2   e64579b7d886   8 days ago     128MB
+k8s.gcr.io/kube-controller-manager          v1.22.2   5425bcbd23c5   8 days ago     122MB
+k8s.gcr.io/kube-proxy                       v1.22.2   873127efbc8a   8 days ago     104MB
+k8s.gcr.io/kube-scheduler                   v1.22.2   b51ddc1014b0   8 days ago     52.7MB
+kubernetesui/dashboard                      v2.3.1    e1482a24335a   3 months ago   220MB
+k8s.gcr.io/etcd                             3.5.0-0   004811815584   3 months ago   295MB
+kubernetesui/metrics-scraper                v1.0.7    7801cfc6d5c0   3 months ago   34.4MB
+k8s.gcr.io/coredns/coredns                  v1.8.4    8d147537fb7d   3 months ago   47.6MB
+gcr.io/k8s-minikube/storage-provisioner     v5        6e38f40d628d   5 months ago   31.5MB
+k8s.gcr.io/pause                            3.5       ed210e3e4a5b   6 months ago   683kB
+gcr.io/google-samples/kubernetes-bootcamp   v1        8fafd8af70e9   5 years ago    211MB
+docker@minikube:~$
+
+
+
+
+First, note that when you execute the command docker images  from your local prompt, it will display the images present in your local Docker environment.
+
+Now we point local Docker environment to minikube using the following command:
+
+aafak@aafak-virtual-machine:~$ eval $(minikube docker-env)
+aafak@aafak-virtual-machine:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED        SIZE
+k8s.gcr.io/kube-apiserver                   v1.22.2   e64579b7d886   8 days ago     128MB
+k8s.gcr.io/kube-controller-manager          v1.22.2   5425bcbd23c5   8 days ago     122MB
+k8s.gcr.io/kube-proxy                       v1.22.2   873127efbc8a   8 days ago     104MB
+k8s.gcr.io/kube-scheduler                   v1.22.2   b51ddc1014b0   8 days ago     52.7MB
+kubernetesui/dashboard                      v2.3.1    e1482a24335a   3 months ago   220MB
+k8s.gcr.io/etcd                             3.5.0-0   004811815584   3 months ago   295MB
+kubernetesui/metrics-scraper                v1.0.7    7801cfc6d5c0   3 months ago   34.4MB
+k8s.gcr.io/coredns/coredns                  v1.8.4    8d147537fb7d   3 months ago   47.6MB
+gcr.io/k8s-minikube/storage-provisioner     v5        6e38f40d628d   5 months ago   31.5MB
+k8s.gcr.io/pause                            3.5       ed210e3e4a5b   6 months ago   683kB
+gcr.io/google-samples/kubernetes-bootcamp   v1        8fafd8af70e9   5 years ago    211MB
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED        STATUS        PORTS                                                                                                                                  NAMES
+3d6686c048b7   gcr.io/k8s-minikube/kicbase:v0.0.27   "/usr/local/bin/entr…"   28 hours ago   Up 25 hours   127.0.0.1:49157->22/tcp, 127.0.0.1:49156->2376/tcp, 127.0.0.1:49155->5000/tcp, 127.0.0.1:49154->8443/tcp, 127.0.0.1:49153->32443/tcp   minikube
+aafak@aafak-virtual-machine:~$ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED        STATUS        PORTS                                                                                                                                  NAMES
+3d6686c048b7   gcr.io/k8s-minikube/kicbase:v0.0.27   "/usr/local/bin/entr…"   28 hours ago   Up 25 hours   127.0.0.1:49157->22/tcp, 127.0.0.1:49156->2376/tcp, 127.0.0.1:49155->5000/tcp, 127.0.0.1:49154->8443/tcp, 127.0.0.1:49153->32443/tcp   minikube
+aafak@aafak-virtual-machine:~$ minikube stop
+* Stopping node "minikube"  ...
+* Powering off "minikube" via SSH ...
+* 1 nodes stopped.
+aafak@aafak-virtual-machine:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+aafak@aafak-virtual-machine:~$
+
+
+
+
+
+
+aafak@aafak-virtual-machine:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED          SIZE
+flask_app                                   v1        5cc6d03cebe7   36 minutes ago   956MB
+
+
+aafak@aafak-virtual-machine:~$ docker tag flask_app:v1 aafak/flask_app:v1
+
+aafak@aafak-virtual-machine:~$ docker images
+REPOSITORY                                  TAG       IMAGE ID       CREATED          SIZE
+aafak/flask_app                             v1        5cc6d03cebe7   50 minutes ago   956MB
+flask_app                                   v1        5cc6d03cebe7   50 minutes ago   956MB
+
+
+aafak@aafak-virtual-machine:~$ sudo docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+aafak@aafak-virtual-machine:~$ sudo docker push aafak/flask_app:v1
+The push refers to repository [docker.io/aafak/flask_app]
+8d092c8e8192: Pushed
+11fc15f76cf9: Pushed
+e043908ac93d: Pushed
+7ee2be8b015c: Pushed
+5e8c55794f87: Mounted from library/python
+5209cb9bf83c: Mounted from library/python
+9ff63dadc07e: Mounted from library/python
+6cb051b7bcc1: Mounted from library/python
+7cf0f434f498: Mounted from library/python
+8555e663f65b: Mounted from library/python
+d00da3cd7763: Mounted from library/python
+4e61e63529c2: Mounted from library/python
+799760671c38: Pushed
+v1: digest: sha256:1b1d2761106ec36dc04502e1caff8b47ac39a779d764291909cd5d1a7911a37e size: 3052
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl create deployment flask-app --image=aafak/flask_app:v1
+deployment.apps/flask-app created
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              0/1     1            0           11s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              0/1     1            0           37s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$
+aafak@aafak-virtual-machine:~$ kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app              1/1     1            1           90s
+kubernetes-bootcamp2   1/1     1            1           23h
+aafak@aafak-virtual-machine:~$
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+NAME                                    READY   STATUS    RESTARTS      AGE
+flask-app-58c448696b-58bwx              1/1     Running   0             3m57s
+kubernetes-bootcamp2-8448dfd6dd-r8kwl   1/1     Running   1 (22h ago)   23h
+aafak@aafak-virtual-machine:~$
+
+
+
+
+
+
+
+**********************App deployment**********************8
+export HTTP_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+export HTTPS_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+export NO_PROXY=localhost,127.0.0.1,127.0.0.2,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24
+aafak@aafak-virtual-machine:~$ minikube start
+* minikube v1.23.2 on Ubuntu 20.04
+* Using the docker driver based on existing profile
+
+X The requested memory allocation of 2200MiB does not leave room for system overhead (total system memory: 2990MiB). You may face stability issues.
+* Suggestion: Start minikube with less memory allocated: 'minikube start --memory=2200mb'
+
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+* Restarting existing docker container for "minikube" ...
+* Found network options:
+  - HTTP_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+! You appear to be using a proxy, but your NO_PROXY environment does not include the minikube IP (192.168.49.2).
+* Please see https://minikube.sigs.k8s.io/docs/handbook/vpn_and_proxy/ for more details
+  - HTTPS_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+  - NO_PROXY=localhost,127.0.0.1,127.0.0.2,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24
+* Preparing Kubernetes v1.22.2 on Docker 20.10.8 ...
+  - env HTTP_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+  - env HTTPS_PROXY=http://web-proxy.sdc.hpecorp.net:8080
+  - env NO_PROXY=localhost,127.0.0.1,127.0.0.2,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: default-storageclass, storage-provisioner
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+
+
+aafak@aafak-virtual-machine:~$ kubectl create deployment flask-app-demo --image=aafak/flask_app:v2 --port=5001
+deployment.apps/flask-app-demo created
+aafak@aafak-virtual-machine:~$ kubectl describe pods
+Name:         flask-app-demo-69b4b66755-9fdf2
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Fri, 24 Sep 2021 15:28:02 +0530
+Labels:       app=flask-app-demo
+              pod-template-hash=69b4b66755
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/flask-app-demo-69b4b66755
+Containers:
+  flask-app-bp454:
+    Container ID:   docker://f45f67ed0af96e562da95435e7ff43cdbd9c381956905368bdecf5c3cdc68fdd
+    Image:          aafak/flask_app:v2
+    Image ID:       docker-pullable://aafak/flask_app@sha256:8e9abc01131e921a32dd395025606fdc2af63fd4a82004080656fd6eb768977e
+    Port:           5001/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 24 Sep 2021 15:28:04 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2cljz (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-2cljz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  44s   default-scheduler  Successfully assigned default/flask-app-demo-69b4b66755-9fdf2 to minikube
+  Normal  Pulled     44s   kubelet            Container image "aafak/flask_app:v2" already present on machine
+  Normal  Created    44s   kubelet            Created container flask-app-bp454
+  Normal  Started    43s   kubelet            Started container flask-app-bp454
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl create deployment flask-app3 --image=aafak/flask_app:v2
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+NAME                          READY   STATUS    RESTARTS   AGE
+flask-app3-69c8c8f599-7vg6x   1/1     Running   0          6m42s
+aafak@aafak-virtual-machine:~$ kubectl logs flask-app3-69c8c8f599-7vg6x
+Starting the server
+aafak@aafak-virtual-machine:~$
+
+aafak@aafak-virtual-machine:~$ kubectl exec -it flask-app3-69c8c8f599-7vg6x -- bash
+root@flask-app3-69c8c8f599-7vg6x:/usr/src/flask_app# ls
+app.py
+root@flask-app3-69c8c8f599-7vg6x:/usr/src/flask_app#
+
+
+
+
+
+
+****************************88 Create service
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ minikube service list
+|-------------|---------------------|--------------|---------------------------|
+|  NAMESPACE  |        NAME         | TARGET PORT  |            URL            |
+|-------------|---------------------|--------------|---------------------------|
+| default     | flask-service       |         5001 | http://192.168.49.2:31626 |
+| default     | flaskapi-deployment |         5001 | http://192.168.49.2:30663 |
+| default     | kubernetes          | No node port |
+| kube-system | kube-dns            | No node port |
+|-------------|---------------------|--------------|---------------------------|
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl delete service  flask-service
+service "flask-service" deleted
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl delete service  flaskapi-deployment
+service "flaskapi-deployment" deleted
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ minikube service list
+|-------------|------------|--------------|-----|
+|  NAMESPACE  |    NAME    | TARGET PORT  | URL |
+|-------------|------------|--------------|-----|
+| default     | kubernetes | No node port |
+| kube-system | kube-dns   | No node port |
+|-------------|------------|--------------|-----|
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl get deployments
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+flaskapi-deployment   0/3     3            0           4m37s
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl delete deployment flaskapi-deployment
+deployment.apps "flaskapi-deployment" deleted
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ ls
+app.py  Dockerfile  flaskapp-deployment.yml  __init__.py  requirements.txt
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ cat app.py
+from flask import Flask
+from gevent.pywsgi import WSGIServer
+
+app = Flask(__name__)
+
+
+@app.route("/home")
+def home_page():
+    print ("Fetching the page....")
+    return "Welcome to Flask App"
+
+
+if __name__ == '__main__':
+    server = WSGIServer(('0.0.0.0', 5001), app)
+    print('Starting the server')
+    server.serve_forever()
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ cat Dockerfile
+# docker build -t flask_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+#  docker run -d flask_app:v1 -p 5005:5005 --network=host
+FROM python:3.8
+ENV PYTHONUNBUFFERED 1
+ARG PROXY_SERVER=$http_proxy
+
+# RUN apt-get update
+
+# Install all the requirements using pip
+ADD requirements.txt requirements.txt
+RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+
+# App directory
+ARG APP_ROOT_DIR=/usr/src/flask_app
+
+# Prepare working directory
+WORKDIR $APP_ROOT_DIR
+ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+
+ADD ./app.py $APP_ROOT_DIR/app.py
+EXPOSE 5001
+
+ENTRYPOINT ["python3", "app.py"]
+#ENTRYPOINT ["/bin/bash"]
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ cat  flaskapp-deployment.yml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapi-deployment
+  labels:
+    app: flaskapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flaskapi
+  template:
+    metadata:
+      labels:
+        app: flaskapi
+    spec:
+      containers:
+        - name: flaskapi
+          image: aafak/flask_app:v2
+          ports:
+            - containerPort: 5001
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+spec:
+  ports:
+  - port: 5001
+    protocol: TCP
+    targetPort: 5001
+  selector:
+    app: flaskapi
+  type: LoadBalanceraafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl create -f flaskapp-deployment.yml
+deployment.apps/flaskapi-deployment created
+service/flask-service created
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl get deployments
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+flaskapi-deployment   3/3     3            3           9s
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+flaskapi-deployment-77944b87bf-6krs5   1/1     Running   0          17s
+flaskapi-deployment-77944b87bf-t2sbn   1/1     Running   0          17s
+flaskapi-deployment-77944b87bf-tbj5g   1/1     Running   0          17s
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ minikube service list
+|-------------|---------------|--------------|---------------------------|
+|  NAMESPACE  |     NAME      | TARGET PORT  |            URL            |
+|-------------|---------------|--------------|---------------------------|
+| default     | flask-service |         5001 | http://192.168.49.2:30757 |
+| default     | kubernetes    | No node port |
+| kube-system | kube-dns      | No node port |
+|-------------|---------------|--------------|---------------------------|
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ curl -X GET http://192.168.49.2:30757/home
+Welcome to Flask App
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl describe deployments
+Name:                   flaskapi-deployment
+Namespace:              default
+CreationTimestamp:      Fri, 24 Sep 2021 16:32:14 +0530
+Labels:                 app=flaskapi
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=flaskapi
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=flaskapi
+  Containers:
+   flaskapi:
+    Image:        aafak/flask_app:v2
+    Port:         5001/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   flaskapi-deployment-77944b87bf (3/3 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  8m34s  deployment-controller  Scaled up replica set flaskapi-deployment-77944b87bf to 3
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$ kubectl describe pods
+Name:         flaskapi-deployment-77944b87bf-6krs5
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Fri, 24 Sep 2021 16:32:14 +0530
+Labels:       app=flaskapi
+              pod-template-hash=77944b87bf
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+IPs:
+  IP:           172.17.0.4
+Controlled By:  ReplicaSet/flaskapi-deployment-77944b87bf
+Containers:
+  flaskapi:
+    Container ID:   docker://7397452e4e0badbbd55acb5e9c510d4ac80a60de9a9302e13fdfad37a495ca24
+    Image:          aafak/flask_app:v2
+    Image ID:       docker-pullable://aafak/flask_app@sha256:8e9abc01131e921a32dd395025606fdc2af63fd4a82004080656fd6eb768977e
+    Port:           5001/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 24 Sep 2021 16:32:16 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wj4vl (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-wj4vl:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m53s  default-scheduler  Successfully assigned default/flaskapi-deployment-77944b87bf-6krs5 to minikube
+  Normal  Pulled     6m52s  kubelet            Container image "aafak/flask_app:v2" already present on machine
+  Normal  Created    6m52s  kubelet            Created container flaskapi
+  Normal  Started    6m51s  kubelet            Started container flaskapi
+
+
+Name:         flaskapi-deployment-77944b87bf-t2sbn
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Fri, 24 Sep 2021 16:32:14 +0530
+Labels:       app=flaskapi
+              pod-template-hash=77944b87bf
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.5
+IPs:
+  IP:           172.17.0.5
+Controlled By:  ReplicaSet/flaskapi-deployment-77944b87bf
+Containers:
+  flaskapi:
+    Container ID:   docker://f8f4cfab66fda1faac3e870da66e47f27c50cf046d02d59b4de9a20a58accf71
+    Image:          aafak/flask_app:v2
+    Image ID:       docker-pullable://aafak/flask_app@sha256:8e9abc01131e921a32dd395025606fdc2af63fd4a82004080656fd6eb768977e
+    Port:           5001/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 24 Sep 2021 16:32:15 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2dwz8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-2dwz8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m53s  default-scheduler  Successfully assigned default/flaskapi-deployment-77944b87bf-t2sbn to minikube
+  Normal  Pulled     6m52s  kubelet            Container image "aafak/flask_app:v2" already present on machine
+  Normal  Created    6m52s  kubelet            Created container flaskapi
+  Normal  Started    6m51s  kubelet            Started container flaskapi
+
+
+Name:         flaskapi-deployment-77944b87bf-tbj5g
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Fri, 24 Sep 2021 16:32:14 +0530
+Labels:       app=flaskapi
+              pod-template-hash=77944b87bf
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/flaskapi-deployment-77944b87bf
+Containers:
+  flaskapi:
+    Container ID:   docker://59bd7c99052f613c675b424b109adc88f74fd244f93e90cface95f977647a257
+    Image:          aafak/flask_app:v2
+    Image ID:       docker-pullable://aafak/flask_app@sha256:8e9abc01131e921a32dd395025606fdc2af63fd4a82004080656fd6eb768977e
+    Port:           5001/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 24 Sep 2021 16:32:15 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-dmfnl (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-dmfnl:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m53s  default-scheduler  Successfully assigned default/flaskapi-deployment-77944b87bf-tbj5g to minikube
+  Normal  Pulled     6m52s  kubelet            Container image "aafak/flask_app:v2" already present on machine
+  Normal  Created    6m52s  kubelet            Created container flaskapi
+  Normal  Started    6m51s  kubelet            Started container flaskapi
+aafak@aafak-virtual-machine:~/docker_apps/docker_flask_app$

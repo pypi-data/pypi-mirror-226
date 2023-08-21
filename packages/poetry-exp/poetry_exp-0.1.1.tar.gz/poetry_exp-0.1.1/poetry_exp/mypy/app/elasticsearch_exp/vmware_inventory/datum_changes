@@ -1,0 +1,143 @@
+aafakmoh@WHDCIS4TDR MINGW64 ~/OneDrive - Hewlett Packard Enterprise/github-repos/atlas/datum (vms_and_ds_api)
+$ git status
+On branch vms_and_ds_api
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   app_catalog/es_data/common/constants.py
+        modified:   app_catalog/es_data/common/resource_transformer_mapper.py
+        modified:   app_catalog/es_data/core/manager.py
+        modified:   app_catalog/es_data/core/settings/mapping.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app_catalog/es_data/core/settings/datastores.py
+        app_catalog/es_data/core/settings/esxs.py
+        app_catalog/es_data/core/settings/folders.py
+        app_catalog/es_data/core/settings/vms.py
+        app_catalog/es_data/transformer/specs/datastores.yml
+        app_catalog/es_data/transformer/specs/esxs.yml
+        app_catalog/es_data/transformer/specs/folders.yml
+        app_catalog/es_data/transformer/specs/vms.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+aafakmoh@WHDCIS4TDR MINGW64 ~/OneDrive - Hewlett Packard Enterprise/github-repos/atlas/datum (vms_and_ds_api)
+$ git diff
+diff --git a/app_catalog/es_data/common/constants.py b/app_catalog/es_data/common/constants.py
+index 53fb18d..0a40f2d 100644
+--- a/app_catalog/es_data/common/constants.py
++++ b/app_catalog/es_data/common/constants.py
+@@ -124,13 +124,20 @@ ES_RES_POLICIES = 'policies'
+ ES_RES_SCHEDULE_JOBS = 'schedule-jobs'
+ ES_RES_POLICY_JOBS = 'policy-jobs'
+
++# VMWare resources
++ES_RES_VMS = 'vms'
++ES_RES_DATASTORES = 'datastores'
++ES_RES_ESXS = 'esxs'
++ES_RES_FOLDERS = 'folders'
++
+ ES_RESOURCES = [ES_RES_CREDENTIALS, ES_RES_TAGS, ES_RES_PROJECTS,
+                 ES_RES_STORAGE_POOLS, ES_RES_STORAGE_SYSTEMS,
+                 ES_RES_VOLUME_SETS, ES_RES_VOLUME_SETS_SNAPSHOTS,
+                 ES_RES_ASSET_GROUPS, ES_RES_HOSTS, ES_RES_DATABASES,
+                 ES_RES_SNAPSHOTS, ES_RES_DIAGNOSTIC_REPORTS,
+                 ES_RES_SUPPORT_BUNDLES, ES_RES_POLICIES,
+-                ES_RES_POLICY_JOBS, ES_RES_SCHEDULE_JOBS]
++                ES_RES_POLICY_JOBS, ES_RES_SCHEDULE_JOBS,
++                ES_RES_VMS, ES_RES_DATASTORES, ES_RES_ESXS, ES_RES_FOLDERS]
+
+ # Alias names of resources
+ # Since alias and index can't have same name, adding suffix.
+@@ -152,6 +159,13 @@ ALIAS_POLICIES = ES_RES_POLICIES + ALIAS_SUFFIX
+ ALIAS_SCHEDULE_JOBS = ES_RES_SCHEDULE_JOBS + ALIAS_SUFFIX
+ ALIAS_POLICY_JOBS = ES_RES_POLICY_JOBS + ALIAS_SUFFIX
+
++# VMWare resources
++ALIAS_VMS = ES_RES_VMS + ALIAS_SUFFIX
++ALIAS_DATASTORES = ES_RES_DATASTORES + ALIAS_SUFFIX
++ALIAS_ESXS = ES_RES_ESXS + ALIAS_SUFFIX
++ALIAS_FOLDERS = ES_RES_FOLDERS + ALIAS_SUFFIX
++
++
+ UPDATE_TYPE_DOC = 'doc'
+ UPDATE_TYPE_SCRIPT = 'script'
+
+diff --git a/app_catalog/es_data/common/resource_transformer_mapper.py b/app_catalog/es_data/common/resource_transformer_mapper.py
+index 946bd8e..51a3990 100644
+--- a/app_catalog/es_data/common/resource_transformer_mapper.py
++++ b/app_catalog/es_data/common/resource_transformer_mapper.py
+@@ -51,5 +51,17 @@ RESOURCE_TRANSFORMER_MAPPER = \
+         },
+         '/' + constants.ALIAS_SCHEDULE_JOBS: {
+             'spec': 'schedule_jobs'
+-        }
++        },
++        '/' + constants.ALIAS_VMS: {
++            'spec': 'vms'
++        },
++        '/' + constants.ALIAS_DATASTORES: {
++            'spec': 'datastores'
++        },
++        '/' + constants.ALIAS_ESXS: {
++            'spec': 'esxs'
++        },
++        '/' + constants.ALIAS_FOLDERS: {
++            'spec': 'folders'
++        },
+     }
+diff --git a/app_catalog/es_data/core/manager.py b/app_catalog/es_data/core/manager.py
+index 6f3e609..0272a78 100644
+--- a/app_catalog/es_data/core/manager.py
++++ b/app_catalog/es_data/core/manager.py
+@@ -171,6 +171,13 @@ class ESDataManager():
+         uri = constants.BULK_URI + constants.EXPLICIT_REFRESH_URI
+         es_client.es_request(uri, formatted_data, 'POST')
+
++    def process_bulk_docs(self, doc_list):
++        # Convert data to line delimited json data.
++        formatted_data = '\n'.join(json.dumps(data) for data in doc_list)
++        formatted_data += '\n'
++        uri = constants.BULK_URI + constants.EXPLICIT_REFRESH_URI
++        es_client.es_request(uri, formatted_data, 'POST')
++
+     def sync(self):
+         '''
+         Hook for Initiating any sync activity.
+diff --git a/app_catalog/es_data/core/settings/mapping.py b/app_catalog/es_data/core/settings/mapping.py
+index 924ca06..342531c 100644
+--- a/app_catalog/es_data/core/settings/mapping.py
++++ b/app_catalog/es_data/core/settings/mapping.py
+@@ -4,7 +4,7 @@ from app_catalog.es_data.core.settings import \
+     storage_pools, storage_systems, \
+     volume_sets, databases, volume_set_snapshots, projects, snapshots, \
+     support_bundles, policies, diagnostic_reports, policy_jobs, \
+-    schedule_jobs
++    schedule_jobs, vms, datastores, folders, esxs
+
+
+ # Add the relevant index setting mapping definitions here.
+@@ -43,6 +43,10 @@ MAPPING_LIST = \
+             policy_jobs.POLICY_JOBS_INDEX_MAPPING_DEFINITION,
+         schedule_jobs.MAPPING_URI:
+             schedule_jobs.SCHEDULER_JOBS_INDEX_MAPPING_DEFINITION,
++        vms.MAPPING_URI: vms.VMS_INDEX_MAPPING_DEFINITION,
++        datastores.MAPPING_URI: datastores.DATASTORES_INDEX_MAPPING_DEFINITION,
++        esxs.MAPPING_URI: esxs.ESXS_INDEX_MAPPING_DEFINITION,
++        folders.MAPPING_URI: folders.FOLDERS_INDEX_MAPPING_DEFINITION,
+     }
+
+ GET_ALL_PARAMS_MAPPING = {
+@@ -62,4 +66,8 @@ GET_ALL_PARAMS_MAPPING = {
+     diagnostic_reports.MAPPING_URI: diagnostic_reports.GET_ALL_PARAMS,
+     policy_jobs.MAPPING_URI: policy_jobs.GET_ALL_PARAMS,
+     schedule_jobs.MAPPING_URI: schedule_jobs.GET_ALL_PARAMS,
++    vms.MAPPING_URI: vms.GET_ALL_PARAMS,
++    datastores.MAPPING_URI: datastores.GET_ALL_PARAMS,
++    esxs.MAPPING_URI: esxs.GET_ALL_PARAMS,
++    folders.MAPPING_URI: folders.GET_ALL_PARAMS,
+ }
+(END)

@@ -1,0 +1,11 @@
+#Python does not support function overloading
+
+def fun1(a,b):
+  print "a=%s, b=%s" %(a,b)
+
+def fun1(a): #Latest defination for fun1
+  print "a=%s" %(a,) 
+
+fun1(10)
+fun1(10,20) #TypeError: fun1() takes exactly 1 argument (2 given)
+

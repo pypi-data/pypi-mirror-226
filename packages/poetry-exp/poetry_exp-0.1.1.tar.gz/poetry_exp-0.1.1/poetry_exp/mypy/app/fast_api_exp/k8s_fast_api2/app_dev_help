@@ -1,0 +1,111 @@
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get svc
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+fastapiapp                           ClusterIP   10.104.5.137    <none>        8000/TCP                     157d
+ingress-nginx-controller             NodePort    10.107.82.191   <none>        80:32479/TCP,443:31177/TCP   128d
+ingress-nginx-controller-admission   ClusterIP   10.97.61.206    <none>        443/TCP                      128d
+kubernetes                           ClusterIP   10.96.0.1       <none>        443/TCP                      157d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl delete service fastapiapp
+service "fastapiapp" deleted
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get svc
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller             NodePort    10.107.82.191   <none>        80:32479/TCP,443:31177/TCP   128d
+ingress-nginx-controller-admission   ClusterIP   10.97.61.206    <none>        443/TCP                      128d
+kubernetes                           ClusterIP   10.96.0.1       <none>        443/TCP                      157d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get pods
+NAME                                        READY   STATUS    RESTARTS     AGE
+ingress-nginx-controller-55dcf56b68-9lvg8   1/1     Running   1 (5d ago)   128d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get deployment
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+ingress-nginx-controller   1/1     1            1           128d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ sudo docker images | grep fastapi
+fastapi_app                                          v1        971e6ede9719   5 months ago    983MB
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$
+
+if above image is not there, build using following command:
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker build -t fastapi_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ ls
+app  app_dev_help  deploy  Dockerfile  __init__.py  requirements.txt
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl apply -f deploy/
+deployment.apps/fastapi-app created
+service/fastapi-app-service created
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get deployment
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+fastapi-app                1/1     1            1           11s
+ingress-nginx-controller   1/1     1            1           128d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get pods
+NAME                                        READY   STATUS    RESTARTS       AGE
+fastapi-app-64b58b4d49-btx5z                1/1     Running   0              19s
+ingress-nginx-controller-55dcf56b68-9lvg8   1/1     Running   1 (5d1h ago)   128d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get service
+NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+fastapi-app-service                  ClusterIP   10.106.149.150   <none>        80/TCP                       29s
+ingress-nginx-controller             NodePort    10.107.82.191    <none>        80:32479/TCP,443:31177/TCP   128d
+ingress-nginx-controller-admission   ClusterIP   10.97.61.206     <none>        443/TCP                      128d
+kubernetes                           ClusterIP   10.96.0.1        <none>        443/TCP                      158d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl describe service fastapi-app-service
+Name:              fastapi-app-service
+Namespace:         default
+Labels:            service=fastapi-service
+Annotations:       <none>
+Selector:          app=fastapiapp
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.106.149.150
+IPs:               10.106.149.150
+Port:              <unset>  80/TCP
+TargetPort:        8000/TCP
+Endpoints:         10.244.0.23:8000
+Session Affinity:  None
+Events:            <none>
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$
+
+
+You can see service Endpoints: 10.244.0.23:8000 match with pod(fastapi-app-64b58b4d49-btx5z) IP
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get pods -o wide
+NAME                                        READY   STATUS    RESTARTS       AGE    IP            NODE           NOMINATED NODE   READINESS GATES
+fastapi-app-64b58b4d49-btx5z                1/1     Running   0              2m5s   10.244.0.23   aafak-rnd-vm   <none>           <none>
+ingress-nginx-controller-55dcf56b68-9lvg8   1/1     Running   1 (5d1h ago)   128d   10.244.0.19   aafak-rnd-vm   <none>           <none>
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$
+
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl logs -f fastapi-app-64b58b4d49-btx5z
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl exec -it fastapi-app-64b58b4d49-btx5z -- sh
+# curl -X GET localhost:8000/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]#
+
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get svc
+NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+fastapi-app-service                  ClusterIP   10.106.149.150   <none>        80/TCP                       14m
+ingress-nginx-controller             NodePort    10.107.82.191    <none>        80:32479/TCP,443:31177/TCP   128d
+ingress-nginx-controller-admission   ClusterIP   10.97.61.206     <none>        443/TCP                      128d
+kubernetes                           ClusterIP   10.96.0.1        <none>        443/TCP                      158d
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl edit svc fastapi-app-service
+service/fastapi-app-service edited
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$ kubectl get svc
+NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+fastapi-app-service                  NodePort    10.106.149.150   <none>        80:31512/TCP                 15m
+ingress-nginx-controller             NodePort    10.107.82.191    <none>        80:32479/TCP,443:31177/TCP   128d
+ingress-nginx-controller-admission   ClusterIP   10.97.61.206     <none>        443/TCP                      128d
+kubernetes                           ClusterIP   10.96.0.1        <none>        443/TCP
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$  curl -X GET 172.17.81.12:31512/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api2$
+
+
+From browser: http://172.17.81.12:31512/users

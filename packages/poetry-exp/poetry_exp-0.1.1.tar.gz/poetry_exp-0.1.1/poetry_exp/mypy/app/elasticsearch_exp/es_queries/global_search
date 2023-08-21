@@ -1,0 +1,166 @@
+# Search in all the indices
+GET _search
+{
+  "query": {
+    "match": {
+      "vcenterInfo.name": "vcenter1"
+    }
+  }
+}
+
+OR
+
+GET /_all/_search?size=100
+{
+  "query": {
+    "match": {
+      "vcenterInfo.name": "vcenter1"
+    }
+  }
+}
+
+
+# Search in specific indices
+GET /poc-esxs,poc-datastores/_search?size=100&?ignore_unavailable = true
+{
+  "query": {
+    "match": {
+      "vcenterInfo.name": "vcenter1"
+    }
+  }
+}
+
+# Search using pattern
+GET /poc*/_search?size=100
+{
+  "query": {
+    "match": {
+      "vcenterInfo.name": "vcenter1"
+    }
+  }
+}
+
+GET /poc*/_search?size=100&_source_includes=name,moref
+{
+  "query": {
+    "match": {
+      "vcenterInfo.name": "vcenter1"
+    }
+  }
+}
+
+Response:
+{
+  "took" : 6,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 29,
+    "successful" : 29,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 26,
+      "relation" : "eq"
+    },
+    "max_score" : 0.105360515,
+    "hits" : [
+      {
+        "_index" : "poc-folders",
+        "_type" : "_doc",
+        "_id" : "01a41b6b-105e-4185-882d-c27b47a68860",
+        "_score" : 0.105360515,
+        "_source" : {
+          "moref" : "group-s9",
+          "name" : "dsFolder9",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          }
+        }
+      },
+
+      {
+        "_index" : "poc-folders",
+        "_type" : "_doc",
+        "_id" : "3c041ce2-dc98-4cc0-873d-9aa16f8b1a52",
+        "_score" : 0.105360515,
+        "_source" : {
+          "moref" : "group-1",
+          "name" : "vmFolder1",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          }
+        }
+      },
+      {
+        "_index" : "poc-esxs",
+        "_type" : "_doc",
+        "_id" : "f316b983-7075-4964-8a17-d731cd68c561",
+        "_score" : 0.051293295,
+        "_source" : {
+          "name" : "Host3",
+          "moref" : "host-3",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c2",
+            "name" : "Cluster2"
+          }
+        }
+      },
+      {
+        "_index" : "poc-esxs",
+        "_type" : "_doc",
+        "_id" : "cc3e39c1-3000-4d22-93bc-12ca775ece68",
+        "_score" : 0.051293295,
+        "_source" : {
+          "name" : "Host4",
+          "moref" : "host-4",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c2",
+            "name" : "Cluster2"
+          }
+        }
+      },
+      {
+        "_index" : "poc-esxs",
+        "_type" : "_doc",
+        "_id" : "b1c17e88-15d3-408e-9f36-f6d5e1443c58",
+        "_score" : 0.051293295,
+        "_source" : {
+          "name" : "Host8",
+          "moref" : "host-8",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-2",
+            "name" : "Datacenter2"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c4",
+            "name" : "Cluster4"
+          }
+        }
+      }
+    ]
+  }
+}

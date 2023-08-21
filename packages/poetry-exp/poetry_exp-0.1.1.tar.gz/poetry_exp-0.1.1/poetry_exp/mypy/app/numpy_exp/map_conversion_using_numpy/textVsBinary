@@ -1,0 +1,15 @@
+Disk    40GB                100GB               1000GB
+
+Text    1.25MB              3.12MB               31.2MB
+        R&W:1.4 sec         R&W: 4 sec           R&W: 40 sec
+        Read: 1.2 sec       Read: 2.5 sec        Read: 27.1 sec
+        Write: 0.4 sec      Write: 0.9 sec       Write: 10.4 sec
+
+
+Binary  2.5MB               6.25MB               62.5MB
+        R&W: 0.2 sec        R&W: 1 sec)          R&W: 1 sec
+        Read: 0.01 sec      Read: 0.02 sec       Read: 0.05 sec
+        Write: 0.17 sec     Write: 0.5 sec       Write: 0.2 sec
+
+Binary almost taking double space, but writing in binary format is very faster than in text format
+But compression options available which will compress 62M binary file to 63KB
