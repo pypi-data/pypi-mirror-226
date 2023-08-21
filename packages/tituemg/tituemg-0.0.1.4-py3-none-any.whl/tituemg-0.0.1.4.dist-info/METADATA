@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tituemg
+Version: 0.0.1.4
+Summary: Heramioentas utiles para el proceso de EMG
+Home-page: https://github.com/tistu37/tituemg
+Author: Tomas Tubino
+Author-email: titubino@miuandes.cl.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy
+Requires-Dist: numpy
+
+# tituemg: Librería de Procesamiento de Señales de EMG.
+
+
+
+
+
+## Justificacion
+Esta librería se crea con el propósito de facilitar y agilizar el análisis de señales EMG, proporcionando herramientas en español para investigadores y Estudiantes en el campo.
+
+## objetivo.
+Nuestra librería tiene como principal propósito simplificar el procesamiento de señales EMG, brindando herramientas en español. Queremos facilitar el análisis y la comprensión de estas señales, haciendo que la información sea accesible para una audiencia más amplia.
+
+
+
+
+## instalación de paquete:
+```sh
+# PyPI
+pip install tituemg
+```
