@@ -1,0 +1,10 @@
+beetsplug/__init__.py,sha256=QDJyS5jtJnGFsSuOx43ZvLBCOrHImm8NrZk5f9URWdk,75
+beetsplug/drop2beets.py,sha256=w_SRsjHAMvsjTflNDg0bRaZ8H-3tFN-JJSlZgrLPwHs,6610
+examples/custom_tag.py,sha256=zy0IW7mcxly_xMsYSzKWvJDESm7z9VuGTlQ4HT_sgJE,647
+examples/force_genre_and_language_by_folder.py,sha256=dcXGP4NR1qxTAeZY9w7z0Xp2RfHtEpHMrlcA0OMSh90,1639
+examples/force_genre_by_folder.py,sha256=Wr1k65AJ-SErsYuMvDBLoeWYilNjw8C8Ts_YL0DzvTQ,1047
+examples/skip_missing_title_or_artist.py,sha256=NzItkmvlnjM1VzwPfbzOVEJ4_6khOPsTWscbQ96PH44,346
+drop2beets-2.0.0.dist-info/LICENSE,sha256=djc4a1-B6KcZyjNiMxSQBeX6KLXmBU6ntn3kk1WwrUA,484
+drop2beets-2.0.0.dist-info/METADATA,sha256=a3RZX1G2kkaBbyV0JrV3Vq-J1cq5fmXm2QW0PKWZS9I,3870
+drop2beets-2.0.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+drop2beets-2.0.0.dist-info/RECORD,,
