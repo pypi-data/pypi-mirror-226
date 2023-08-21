@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: omnicomm
+Version: 0.0.0
+Summary: Implementation of the Omnicomm protocol
+Project-URL: Documentation, https://github.com/pikhovkin/omnicomm#readme
+Project-URL: Issues, https://github.com/pikhovkin/omnicomm/issues
+Project-URL: Source, https://github.com/pikhovkin/omnicomm
+Author-email: Sergei Pikhovkin <s@pikhovkin.ru>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: monitoring,network,omnicomm,omnicomm-protocol,protobuf,protocol,tcp,tcp-protocol
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Requires-Dist: libscrc
+Requires-Dist: protobuf
+Description-Content-Type: text/markdown
+
+# omnicomm
+
+[![GitHub Actions](https://github.com/pikhovkin/omnicomm/workflows/build/badge.svg)](https://github.com/pikhovkin/omnicomm/actions)
+[![PyPI](https://img.shields.io/pypi/v/omnicomm.svg)](https://pypi.org/project/omnicomm/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/omnicomm.svg)
+[![PyPI - License](https://img.shields.io/pypi/l/omnicomm.svg)](./LICENSE)
+[![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch)
+
+Implementation of the Omnicomm protocol
+
+### Installation
+
+    pip install omnicomm
+
+### Usage
+
+
+### License
+
+MIT
