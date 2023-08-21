@@ -1,0 +1,8 @@
+numpy
+scipy
+pandas
+jsonpickle
+psutil
+boto3
+moto
+pytest
