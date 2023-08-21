@@ -1,0 +1,12 @@
+sigma/backends/QRadarAQL/QRadarAQL.py,sha256=osJxIZaO4nQ3Ot-LbVSQyQM6dCsmcrxaY2Zmsnk1FNA,10712
+sigma/backends/QRadarAQL/__init__.py,sha256=68DfmcGVQgIQjSoS1HXu10aR_rMZS64o8PCAQD4xEck,251
+sigma/mapping/fields.py,sha256=fvyZ88Q8gUBzWHPJcw8aiDJ29meI5XvnJm3knXE8kA0,3962
+sigma/mapping/logsources.py,sha256=z5CiSl916yxhFb-d2IRRbftXDJ-NoQFJxyt8vvjX4OY,11407
+sigma/mapping/products.py,sha256=Yv6I8SKgnzdbaLQszbAFAc7-ls9h-PrK6lAqRU81aj4,2323
+sigma/mapping/services.py,sha256=3yxLcefMiDn2ImgEwIJYv69jtW8gTlQuXCZEhFMiU-k,1109
+sigma/pipelines/QRadarAQL/QRadarAQL.py,sha256=4-LzJd6rAc4UUooGyPbtJywVVjzqKO3F2sjB3YrBC-A,7779
+sigma/pipelines/QRadarAQL/__init__.py,sha256=_vBAlcxV35m_gZvSZR2K65XXL-NYE2t134BLJDPr6CU,231
+pysigma_backend_qradar_aql-0.1.5.dist-info/LICENSE,sha256=xV2Z-CW8fQXQlH-DW30guWP5-VkPzxJR_4rCiUw3yos,1088
+pysigma_backend_qradar_aql-0.1.5.dist-info/METADATA,sha256=2lyqSxGnbKgFLVfzLyU_88mdVTskhqmJzr2kwK036fg,27691
+pysigma_backend_qradar_aql-0.1.5.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pysigma_backend_qradar_aql-0.1.5.dist-info/RECORD,,
