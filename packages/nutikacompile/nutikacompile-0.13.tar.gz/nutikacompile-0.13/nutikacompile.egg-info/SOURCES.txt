@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nutikacompile/README.MD
+nutikacompile/__init__.py
+nutikacompile/requirements.txt
+nutikacompile/thirdparty.json
+nutikacompile.egg-info/PKG-INFO
+nutikacompile.egg-info/SOURCES.txt
+nutikacompile.egg-info/dependency_links.txt
+nutikacompile.egg-info/requires.txt
+nutikacompile.egg-info/top_level.txt
