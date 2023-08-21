@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: openpom
+Version: 0.1.3
+Summary: Open-source Principal Odor Map models for Olfaction
+Author: Aryan Amit Barsainyan
+Author-email: aryan.barsainyan@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: pyrfume
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: rdkit
+Requires-Dist: deepchem
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: dgllife
+Requires-Dist: pytest
+Requires-Dist: ipykernel
+Requires-Dist: scikit-multilearn
+Requires-Dist: typing
+
+Open Principal Odor Map
+Replication of the Principal Odor Map paper by Lee et al (2022).
+The model is implemented such that it integrates with DeepChem (https://github.com/deepchem/deepchem). 
+
+Contributors:
+
+Aryan Barsainyan: Code, data cleaning, model development
+
+Ritesh Kumar: data cleaning, hyperparameter optimisation
+
+Pinaki Saha: discussions and feedback
+
+Michael Schmuker: Conceptualisation, project lead
+
+References:
+A Principal Odor Map Unifies Diverse Tasks in Human Olfactory Perception.
+Brian K. Lee, Emily J. Mayhew, Benjamin Sanchez-Lengeling, Jennifer N. Wei,
+Wesley W. Qian, Kelsie Little, Matthew Andres, Britney B. Nguyen, Theresa Moloy,
+Jane K. Parker, Richard C. Gerkin, Joel D. Mainland, Alexander B. Wiltschko
+bioRxiv 2022.09.01.504602; doi: (https://doi.org/10.1101/2022.09.01.504602)
