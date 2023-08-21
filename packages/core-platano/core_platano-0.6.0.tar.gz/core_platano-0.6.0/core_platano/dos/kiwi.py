@@ -1,0 +1,2 @@
+def ano():
+    print('ano')
