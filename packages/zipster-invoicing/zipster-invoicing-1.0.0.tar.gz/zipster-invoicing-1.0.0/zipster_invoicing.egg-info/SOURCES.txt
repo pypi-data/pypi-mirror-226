@@ -1,0 +1,8 @@
+setup.py
+invoicing/__init__.py
+invoicing/invoice.py
+zipster_invoicing.egg-info/PKG-INFO
+zipster_invoicing.egg-info/SOURCES.txt
+zipster_invoicing.egg-info/dependency_links.txt
+zipster_invoicing.egg-info/requires.txt
+zipster_invoicing.egg-info/top_level.txt
