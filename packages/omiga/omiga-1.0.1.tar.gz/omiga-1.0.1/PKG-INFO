@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: omiga
+Version: 1.0.1
+Summary: A package used to make 2D games
+Home-page: 
+Author: 嘎~
+Author-email: chenjinhao2008@hotmail.com
+Maintainer: 嘎~
+Maintainer-email: chenejinhao2008@hotmail.com
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+
+漏Copyright Shadow Studio
+Python package omiga (beta)
+
+Use:
+-----
+路This library is used to make 2D games and includes physics engines, rendering, and other features
+路You can make games by class Stage,Function,Canvas,Music,Sprite,Physics and Interaction
+
+Our Links:
+----------
+路shadowoffice.mysxl.cn
+路xiaoying-command-line.mysxl.cn
+
+Thanks:
+--------
+路All members in Shadow Studio
+路Python Program Language
+路Github
+路shequ.codemao.cn
+路kitten4.codemao.cn
+
+That's all
