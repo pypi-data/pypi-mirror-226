@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: logandprint
+Version: 1.0.1
+Summary: A simple logging package that helps you to log what is happening in your application.
+Home-page: https://github.com/guisaldanha/logandprint
+Author: Guilherme Saldanha
+Author-email: guisaldanha@gmail.com
+Project-URL: Documentation, https://github.com/guisaldanha/logandprint/README.md
+Project-URL: Source, https://github.com/guisaldanha/logandprint
+Project-URL: Tracker, https://github.com/guisaldanha/logandprint/issues
+Keywords: python,log,logging,print,file
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This logging package is a straightforward yet powerful tool that assists developers in logging the activities occurring within their application. It provides a user-friendly interface and customizable settings, enabling developers to generate comprehensive logs that document events and actions within their application. This package is an essential tool for developers who want to troubleshoot issues, improve performance, and optimize the user experience
