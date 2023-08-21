@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: SkylarklabsVideoProcessor
+Version: 0.10
+Summary: A video processing package
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+Description-Content-Type: text/markdown
+
+# Skylark Video Processor
+
+Skylark Video Processor is a Python package that provides a convenient way to process videos using YOLO-based object detection and classification models.
+
+## Installation
+
+You can install Skylark Video Processor using `pip`:
+
+pip install skylark_video_processor
+```bash
+
+from skylark_video_processor import VideoProcessor
+
+# Set paths and configurations
+detection_model_path = "yolov8m.pt"
+classification_model_path = False
+video_path = "rtsp://..."
+
+# Create a VideoProcessor instance
+processor = VideoProcessor(
+    detection_model_path,
+    classification_model_path,
+    video_path,
+    save_video=True,
+    detection_save_crops=False,
+    classification_save_crops=False,
+    detection_conf=0.75,
+    detection_image_size=640,
+    detection_classes=0
+)
+
+# Process the video
+processor.process_video()
+
+```
+
+Features
+
+    Object detection using YOLO model
+    Optional object classification
+    Save processed video
+    Save detected object crops
+
+Dependencies
+
+    opencv-python
+    ultralytics
+    torch (if using classification)
