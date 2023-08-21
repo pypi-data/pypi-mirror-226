@@ -1,0 +1,3 @@
+[console_scripts]
+find = find.__main__:main
+
