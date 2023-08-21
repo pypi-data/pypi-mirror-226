@@ -1,0 +1,11 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/schemas/__init__.py,sha256=XMKGv9Idk04ZHJjB9DLlRg5UFymnhFv5lGxhZ7Hl584,70
+src/schemas/openai.py,sha256=sXsEy_aMddfnqTJzG80waj-Z6BZ0uOIrheFqRHs87rY,2695
+src/schemas/pinecone.py,sha256=1qn69oxg9Rm0jtM3u6Y0I8A0tFlKa88swdXhjqltKO0,2834
+src/schemas/typedefs.py,sha256=De-3nbHNcxJJKo1zCzNJG5w4Qt-MvFqltpXoP_zXX2I,866
+src/services/__init__.py,sha256=VwSVl33HfIbHRE33fQm64Y9oB0H5aginVCth32WXAF0,46
+src/services/openai.py,sha256=jIWzUoWU_JKGx9LyA-OKtK-84uMnrmjlcoDB_RsBrC0,6197
+src/services/pinecone.py,sha256=j-sGlP9GccTF9BQ4HbSZk-Fz7WQ6y7GxwqByUtlLeEI,3140
+aiofauna_llm-0.0.1.dist-info/METADATA,sha256=-skJ4AH7y6bpml-dqwRICCFog1-YYisAZ9-i3F5TNuo,466
+aiofauna_llm-0.0.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+aiofauna_llm-0.0.1.dist-info/RECORD,,
