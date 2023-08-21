@@ -1,0 +1,10 @@
+pytest_pyright/__init__.py,sha256=FHNJgktztZXcGsCL5luFATU4D5Q26TeBWVX1cxlJR2Y,195
+pytest_pyright/_compat.py,sha256=v-em1bX9FHuLgOuCXjMNdyX5HXsEt68cHPvQgGUJHfQ,598
+pytest_pyright/models.py,sha256=YnA0zDnbC_Z1RXd7RIoOsy467V141jbxnUXrDsb7Hzw,2292
+pytest_pyright/plugin.py,sha256=rzBHwQ-oJHHhFIzL_H43CkrBBD8QBpRQK_5q9u2b9Fw,9120
+pytest_pyright-0.0.4.dist-info/LICENSE,sha256=KGKRuqidBuUaWloCxQPYINbcUeSBMKt5d0mN3-YbULQ,1082
+pytest_pyright-0.0.4.dist-info/METADATA,sha256=M2bZAtvdLp-z1WhOxU2OfTJmq0sDn82tTPGsmOPfwdg,3624
+pytest_pyright-0.0.4.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+pytest_pyright-0.0.4.dist-info/entry_points.txt,sha256=2mdhH-WZyhKWEAmjUxgzZVbE5pgCZaBZM3VXtSEXkPQ,43
+pytest_pyright-0.0.4.dist-info/top_level.txt,sha256=esfQybKwZAqG0BRKkMwl1wWilX7EYIORmM-Poou83tU,15
+pytest_pyright-0.0.4.dist-info/RECORD,,
