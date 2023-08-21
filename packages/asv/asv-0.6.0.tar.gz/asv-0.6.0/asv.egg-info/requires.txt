@@ -1,0 +1,38 @@
+asv-runner>=v0.0.9
+json5
+tabulate
+
+[:os_name == "nt"]
+colorama
+
+[:platform_python_implementation != "PyPy"]
+pyyaml
+pympler
+
+[dev]
+ruff
+isort>=5.11.5
+
+[doc]
+sphinx
+sphinx_bootstrap_theme
+
+[hg]
+python-hglib
+
+[test]
+pytest
+pytest-xdist
+pytest-timeout
+pytest-rerunfailures>=10.0
+filelock
+virtualenv
+numpy
+feedparser
+selenium
+pytest-rerunfailures
+python-hglib
+
+[test:platform_python_implementation != "PyPy"]
+scipy
+rpy2
