@@ -1,0 +1,67 @@
+[project]
+name = 'FastAPIExample'
+version = '0.0.2'
+authors = [
+    { name = 'Hendrik du Toit', email = 'hendrik@brightedge.co.za' },
+]
+description = 'Exploring FastAPI'
+license = {file = 'LICENSE'}
+classifiers = [
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Topic :: Communications',
+    'Topic :: Software Development',
+    'Topic :: Internet :: WWW/HTTP',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.11'
+]
+readme = {file = 'README.rst', content-type = 'text/x-rst'}
+requires-python = '>=3.11, <3.12'
+dependencies = [
+    # 'argparse',
+    # 'beetools',
+    # 'git-it',
+    # 'mysql-connector-python',
+    # 'Pygments',
+    'sqlalchemy',
+    'sqlalchemy-utils',
+  ]
+
+[project.optional-dependencies]
+dev = [
+    'git-it',
+    #codecov'
+    #docutils'
+    'pytest',
+    'pytest-cov',
+    'uvicorn'
+]
+
+[project.urls]
+Changelog = 'https://github.com/hendrikdutoit/FastAPIExample/blob/enhancement/master/CHANGES.md'
+Homepage = 'https://github.com/FastAPIExample/rte-api'
+
+[build-system]
+requires = [ 'setuptools', 'wheel',]
+build-backend = 'setuptools.build_meta'
+
+[tool.black]
+skip-string-normalization = true
+line-length = 120
+target-version = ["py311"]
+
+[tool.codespell]
+count = ""
+quiet-level = 2
+
+[tool.coverage.run]
+source = ['src']
+
+[tool.pytest.ini_options]
+addopts = ['--import-mode=importlib', "-v", "--ignore-glob=*\\Archive", "--cov-report=html"]
+#addopts = ['--import-mode=importlib', "-v", "--cov=./", "--ignore-glob=*\Archive", "--cov-report=html"]
+pythonpath = ['src', 'tests' ]
+markers = [
+    "select: Run a selection of tests",
+]

@@ -1,0 +1,8 @@
+sqlalchemy
+sqlalchemy-utils
+
+[dev]
+git-it
+pytest
+pytest-cov
+uvicorn
