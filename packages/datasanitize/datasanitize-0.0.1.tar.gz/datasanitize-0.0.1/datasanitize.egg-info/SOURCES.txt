@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+datasanitize.egg-info/PKG-INFO
+datasanitize.egg-info/SOURCES.txt
+datasanitize.egg-info/dependency_links.txt
+datasanitize.egg-info/requires.txt
+datasanitize.egg-info/top_level.txt
+scr/__init__.py
+scr/datacleaning.py
