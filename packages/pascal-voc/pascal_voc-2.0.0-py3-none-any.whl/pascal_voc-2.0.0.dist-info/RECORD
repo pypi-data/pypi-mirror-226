@@ -1,0 +1,10 @@
+pascal/__init__.py,sha256=QeyL8aK0nXTtGhvMnOEjKSBQKhWAGfYC2-8V8EHCdZs,116
+pascal/annotation_fabric.py,sha256=jnKWqVH2fkICiWcrSGr9F3stMzpBPzlVRak4BIVoIlA,1522
+pascal/exceptions.py,sha256=p6vArMq9bQoNcjqFDJFpqcDrqfsSEm1lTBiZfv-b-sA,94
+pascal/pascal_annotation.py,sha256=mdTzTAN-R-ouTejypKO_SMAXL-Vc5BRa5BBOgqBJsck,7006
+pascal/pascal_object.py,sha256=dRWQpmw5Cc2x3x5KX3I9IjV7hf-Gkd7B8Eii0kM465U,325
+pascal/utils.py,sha256=4yJB81dstvNPyl_YWrnkNrZjL9dzKgQkwEZZrj6RYHo,1115
+pascal_voc-2.0.0.dist-info/METADATA,sha256=XmtbVAAx0KUtSU4POdmjYvTZzdj3n50W5f2JYcTtEV4,2246
+pascal_voc-2.0.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+pascal_voc-2.0.0.dist-info/top_level.txt,sha256=bQ6qO2QU8ki5YOdW5hX6rLdByILZOrGK-J0emxOcR9U,7
+pascal_voc-2.0.0.dist-info/RECORD,,
