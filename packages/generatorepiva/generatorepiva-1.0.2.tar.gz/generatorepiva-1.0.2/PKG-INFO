@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: generatorepiva
+Version: 1.0.2
+Summary: Genera una PIVA italiana formalmente valida, in modo casuale.
+Author: Lorenzo Campanile
+Project-URL: Homepage, https://lorenzocampanile.com/tools/generatorepiva/
+Keywords: generatore piva,generatore partita iva,piva,partita iva,partite iva
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# generatore-piva
+Un semplice generatore di PIVA
+
+Questo pacchetto permette di generare delle Partite IVA casuali ma formalmente valide.
+L'obbiettivo di questo strumento è aiutare gli sviluppatori nel testing dei loro applicativi.
+
+Non mi assumo alcuna responsabilià di un utilizzo improprio di questo strumento.
+
+## Installazione
+
+Puoi installare questo pacchetto dal [PyPI](https://pypi.org/project/generatorepiva/):
+
+    python -m pip install generatorepiva
+
+## Esempio d'uso
+```
+from generatorepiva import GeneratorePiva
+
+
+def main():
+    generatore_piva = GeneratorePiva()
+
+    # Genera 100 PIVA
+    for _ in range(100):
+        piva = generatore_piva.genera()
+        print(f'PIVA: {piva}')
+
+
+if __name__ == '__main__':
+    main()
+```
