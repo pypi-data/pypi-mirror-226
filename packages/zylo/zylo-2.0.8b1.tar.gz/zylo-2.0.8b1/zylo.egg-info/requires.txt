@@ -1,0 +1,6 @@
+werkzeug
+jinja2
+cryptography
+zylo-admin
+itsdangerous
+uuid
