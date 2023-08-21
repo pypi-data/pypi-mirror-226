@@ -1,0 +1,7 @@
+example_package_ohnas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_ohnas/example.py,sha256=X8MPB275LbdlIVf8Mawtah11TDi5cPI8aDrkduPD7y8,42
+example_package_ohnas-0.0.1.dist-info/LICENSE.txt,sha256=IVvaSshJRBHjqFVoVXLUIMym3XJNXAMwDgWrfVXdqAw,1065
+example_package_ohnas-0.0.1.dist-info/METADATA,sha256=PqhWN0Kf-A56fReGOACzACLE775YsNo3YviyaSjKOUo,492
+example_package_ohnas-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+example_package_ohnas-0.0.1.dist-info/top_level.txt,sha256=kCRG56EGGEgVzaAvgS-YNiiNYGsoNAfjLw5RhDitgfc,22
+example_package_ohnas-0.0.1.dist-info/RECORD,,
