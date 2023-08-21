@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+canederli/__init__.py
+canederli/main.py
+canederli.egg-info/PKG-INFO
+canederli.egg-info/SOURCES.txt
+canederli.egg-info/dependency_links.txt
+canederli.egg-info/top_level.txt
