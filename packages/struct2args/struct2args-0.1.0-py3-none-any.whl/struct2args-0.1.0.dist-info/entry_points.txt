@@ -1,0 +1,3 @@
+[console_scripts]
+struct2args=struct2args.cli:main
+
