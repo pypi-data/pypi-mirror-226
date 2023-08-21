@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+bbox/__init__.py
+bbox/bbox.py
+bbox/transform.py
+bbox/measure/__init__.py
+bbox/measure/area.py
+bbox/measure/iou.py
+bbox_python.egg-info/PKG-INFO
+bbox_python.egg-info/SOURCES.txt
+bbox_python.egg-info/dependency_links.txt
+bbox_python.egg-info/requires.txt
+bbox_python.egg-info/top_level.txt
