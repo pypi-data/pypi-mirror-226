@@ -1,0 +1,2 @@
+def gloria():
+    print("SIIIIIIIIIIIIIIIIIIIIIIII")
