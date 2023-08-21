@@ -1,0 +1,12 @@
+pyramid_grpc/__init__.py,sha256=re62AIbL_Nd37OHkvLSYq31IIgCKWhjgtbaHpiE2LG8,32
+pyramid_grpc/decorators.py,sha256=SgNXnhEdSgSroJNT2s_ZSZ62Zp04EOStRqtGs8YdK_E,1063
+pyramid_grpc/interseptors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyramid_grpc/interseptors/request.py,sha256=jxb3fOjwJUF8mjTWWBMCq_NuVIrf9j7rzB8gkt1gn78,1090
+pyramid_grpc/interseptors/transaction.py,sha256=iJrH9Anl7PoW45p8Dl4Yb6EEM8j6OGRYIyvttnaIGxc,760
+pyramid_grpc/main.py,sha256=WICH8W8HPjHLXUhExD5WQTuboR3SVKEZoRaec0gwHPw,586
+pyramid_grpc/server.py,sha256=xrFkNNMWZWL0cIeYfWbrnCIXw6xxfJXRSOKgaGIbBsU,742
+pyramid_grpc-0.0.3a0.dist-info/LICENSE,sha256=XbUKTZPsplV7Qeco49wjShvW2zXh0MWeA-f_BqTepwU,1070
+pyramid_grpc-0.0.3a0.dist-info/METADATA,sha256=Jy2_X2Px4MjlYL4F8auIfgCB36xNGtJVsB2V84auX0U,3383
+pyramid_grpc-0.0.3a0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pyramid_grpc-0.0.3a0.dist-info/entry_points.txt,sha256=Mhi5qfGmuxFkoFqtaR7R6TXtQgSifgSk2orpOks1g_Q,55
+pyramid_grpc-0.0.3a0.dist-info/RECORD,,
