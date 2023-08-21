@@ -1,0 +1,9 @@
+vos_benchmark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vos_benchmark/benchmark.py,sha256=3uLzjVuSzL2AtzNnV6jX6YO_YuJaIfvlWlxLqPk2-ZY,8041
+vos_benchmark/evaluator.py,sha256=UkordQc_mGIx2VAsQ8padCUMPDioUDg93XtZ2MU4PM8,3522
+vos_benchmark/utils.py,sha256=Ia_ZsZX76Mn9cOZJONZq0ZHUu4r9xy62O7MgkwHTaEU,1692
+vos_benchmark-0.1.0.dist-info/METADATA,sha256=i7Z71Twa8XFTuIW-Y1iNXZZ1Idr1mp61QU40kaPfNJU,4936
+vos_benchmark-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+vos_benchmark-0.1.0.dist-info/licenses/LICENSE,sha256=EE8BHxzZEmjVSp-rH_dp7wEIFBDNYi4PcjwD0UbQJII,1048
+vos_benchmark-0.1.0.dist-info/licenses/LICENSE-DAVIS,sha256=pye8K28mofHHbQURUC2muiCCEnCMBKZSMBWTMZBjVPE,1550
+vos_benchmark-0.1.0.dist-info/RECORD,,
