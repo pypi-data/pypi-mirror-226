@@ -1,0 +1,38 @@
+[project]
+name = "fluke-api"
+version = "0.5.0"
+authors = [
+  {email = "manosstoumpos@gmail.com"},
+  {name = "Manos Stoumpos"}
+]
+description = "Cloud-agnostic Python API"
+keywords = ["cloud", "storage", "message-queues", "aws", "azure", "gcp"]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+  "azure-identity == 1.13.0",
+  "azure-storage-blob == 12.17.0",
+  "azure-storage-queue == 12.6.0",
+  "boto3 == 1.28.0",
+  "google-cloud-storage == 2.10.0",
+  "paramiko == 3.2.0",
+  "tqdm == 4.65.0"
+]
+
+[project.optional-dependencies]
+tests = [
+  "coverage == 7.2.1",
+  "moto[s3,sqs] == 4.1.4"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/manoss96/fluke"
+"Bug Tracker" = "https://github.com/manoss96/fluke/issues"
+"Documentation" = "https://fluke.rtfd.io"
+"Changelog" = "https://github.com/manoss96/fluke/blob/main/CHANGELOG.md"
