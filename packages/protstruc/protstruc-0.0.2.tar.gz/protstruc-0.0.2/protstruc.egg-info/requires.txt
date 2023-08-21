@@ -1,0 +1,7 @@
+numpy
+scipy
+scikit-learn
+pandas
+einops
+torch
+biopandas>=0.4.1
