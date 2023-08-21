@@ -1,0 +1,9 @@
+injection/__init__.py,sha256=Z8GHvvsK8YoZDDHQoJugnh5_DMhKbP2x4ym7vvK9_nw,38
+injection/core.py,sha256=AayObFamISoPp7A4skNMD2KMrfTE0WiKFFEcNOmL4uo,4219
+injection/core.pyi,sha256=k99zudSF3wIjODyAlOD6NUowYpc3ojowzQXXlAmGUvE,340
+injection/exceptions.py,sha256=NaP06Dp-6b0TzQBOWjkufuc7xIKmUDMa3_SXYYn60Vs,39
+injection/utils.py,sha256=qrISPj-eKdMLLFHiyZh98XlsI378FIaiFi4vEup4ByA,466
+injection/utils.pyi,sha256=9907YcbHgtcR8hI6tQAsINJevsIvPzFMCecPwaZ6qh4,81
+python_injection-0.2.4.dist-info/METADATA,sha256=U4Wv8tyBsdR_NWe97Mgr-AdWXyw5bkuLuMyaZZH2Xbo,3103
+python_injection-0.2.4.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+python_injection-0.2.4.dist-info/RECORD,,
