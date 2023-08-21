@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: prem-video-processor
+Version: 0.1
+Summary: Video Processor Tool
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: opencv-python
+Requires-Dist: ultralytics
+
+UNKNOWN
+
