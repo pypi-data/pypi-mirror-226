@@ -1,0 +1,7 @@
+README.md
+setup.py
+variablz.egg-info/PKG-INFO
+variablz.egg-info/SOURCES.txt
+variablz.egg-info/dependency_links.txt
+variablz.egg-info/requires.txt
+variablz.egg-info/top_level.txt
