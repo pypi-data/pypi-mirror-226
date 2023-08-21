@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "levenstein"
+version = "0.0.2"
+authors = [
+  { name="GuiTaek", email="GuiTaekM@gmail.com" },
+]
+description = "Download Levenshtein instead"
+readme = "README.md"
+requires-python = ">3.7, <3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+source = "https://github.com/GuiTaek/levenstein"
