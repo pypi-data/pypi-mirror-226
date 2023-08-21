@@ -1,0 +1,16 @@
+tableclasses/__about__.py,sha256=OMrnLsF9IgJ_12xeSRwH_nmUxdJY_v7ZTmZZu5nAaCc,144
+tableclasses/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tableclasses/dc.py,sha256=isZi-OZ3M_zLm1TEiyoREkB4XgwvyOFxyx6rivvS8mA,2631
+tableclasses/errs.py,sha256=xs4qJZsvzyKnfOhdJszTv6SYJ7DNyhNIFrugS8xwekw,1089
+tableclasses/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tableclasses/types.py,sha256=5bkqEd8Uy-1Sbvt7RVzMjBdpDsDKR3bVh7y7hJTtFD4,529
+tableclasses/base/__init__.py,sha256=8qEEgMhZlAQbvrLUtbEEw9C1vvOM5RmvPPZzlv9vIK4,169
+tableclasses/base/field.py,sha256=qf-6FJh2j-h1xKfkChPXsFAvVno02bSHphJkjN6Wen4,660
+tableclasses/base/tabled.py,sha256=5lBm-2UOPzZ74Z0gobmmRzPbvZ9dq-HIjWpw2jerHag,1083
+tableclasses/pandas/__init__.py,sha256=JkYB_mlabWFkhRX773SRW73iZ1Ln_Fc0zsoM3Y6nLcI,103
+tableclasses/pandas/gen.py,sha256=eakFloIFD28xgNteVzf72g-Ku29MfIMuOfSmDAdMCrU,689
+tableclasses/pandas/tabled.py,sha256=NwLfuz6cUzL3RF719MHZX_2YW_8lwnU3523Inyet3Eg,4191
+tableclasses-0.0.1.dist-info/METADATA,sha256=aCRHm6Ez7V5vB1qc0_AsYpzT6-wj5ufqQoTRAlDeFwI,1769
+tableclasses-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+tableclasses-0.0.1.dist-info/licenses/LICENSE.txt,sha256=M2uYSAy2GM02XIUVZapv_1__739FMfiHEu2FsjI87lM,1114
+tableclasses-0.0.1.dist-info/RECORD,,
