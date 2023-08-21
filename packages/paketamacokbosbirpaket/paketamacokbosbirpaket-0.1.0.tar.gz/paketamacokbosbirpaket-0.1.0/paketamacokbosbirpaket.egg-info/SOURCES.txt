@@ -1,0 +1,7 @@
+LICENSE
+README.rst
+setup.py
+paketamacokbosbirpaket.egg-info/PKG-INFO
+paketamacokbosbirpaket.egg-info/SOURCES.txt
+paketamacokbosbirpaket.egg-info/dependency_links.txt
+paketamacokbosbirpaket.egg-info/top_level.txt
