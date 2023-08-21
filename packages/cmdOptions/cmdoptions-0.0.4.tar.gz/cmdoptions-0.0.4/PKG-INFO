@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cmdOptions
+Version: 0.0.4
+Summary: A package making it easier to create small command-line option pickers
+Project-URL: Homepage, https://github.com/EricWoll/Command-Line-Options
+Project-URL: Bug Tracker, https://github.com/EricWoll/Command-Line-Options/issues
+Author-email: SteelHeart696 <steelheart696@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: command-line,simple
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# cmdOptions (Command-Line Options)
+A package making it easier to create small command-line option pickers
+
+## Installation
+This package uses pip for installation.
+```
+pip install cmdOptions
+```
+See on [PyPi](https://pypi.org/project/cmdOptions/).
+
+## Packages to Install
+- None
+
+## Example of Use
+For a simple example see [This Simple Repo](https://github.com/EricWoll/cmdOptions-Example).
+For a more complex example see [This Complex Repo](https://github.com/EricWoll/shoppingCart_cmdOptions).
