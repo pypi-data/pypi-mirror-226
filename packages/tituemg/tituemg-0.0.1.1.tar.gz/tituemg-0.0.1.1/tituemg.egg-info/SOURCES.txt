@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tituemg/__init__.py
+tituemg/emg.py
+tituemg/setup.py
+tituemg.egg-info/PKG-INFO
+tituemg.egg-info/SOURCES.txt
+tituemg.egg-info/dependency_links.txt
+tituemg.egg-info/requires.txt
+tituemg.egg-info/top_level.txt
