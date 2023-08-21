@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: cryptoguardian
+Version: 0.0.3
+Summary: Uma ferramenta de criptografia e descriptografia de arquivos.
+Author: Melissa Alves e Davi Rodolfo
+Author-email: msnmelissaoa15@hotmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+# CryptoGuardian
+
+CryptoGuardian é um pacote Python que fornece uma ferramenta simples e poderosa de criptografia e descriptografia de arquivos. Ele permite que você proteja seus arquivos confidenciais com criptografia forte usando a biblioteca de criptografia Fernet, ao mesmo tempo em que fornece uma interface gráfica construída com PyQt5.
+
+## Características
+
+- **Criptografia de arquivo**: criptografe facilmente seus arquivos para proteger dados confidenciais.
+- **Descriptografia de arquivo**: Descriptografe arquivos criptografados anteriormente quando precisar acessar seu conteúdo.
+- **Gerenciamento de senhas**: gere automaticamente chaves de criptografia fortes e copie-as para a área de transferência para proteção.
+- **Interface Gráfica Intuitiva**: A interface gráfica do usuário torna mais fácil para usuários de todos os níveis de habilidade criptografar e descriptografar arquivos.
+
+### Instalação
+
+Você pode instalar o CryptoGuardian via `pip`:
+
+```bash
+pip install cryptoguardian
+```
+
+### Uso
+import cryptoguardian
+# Crie uma instância do CryptoGuardian
+guardian = cryptoguardian.CryptoGuardian()
+# Criptografar um arquivo
+guardian.encrypt_file()
+# Descriptografar um arquivo
+guardian.decrypt_file()
+
+### Licença
+O CryptoGuardian é distribuído sob a [Licença MIT](https://opensource.org/licenses/MIT). Você é livre para usar, modificar e distribuir este pacote de acordo com os termos da [licença](https://opensource.org/licenses/MIT).
