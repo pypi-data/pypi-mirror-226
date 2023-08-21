@@ -1,0 +1,12 @@
+sscred/__init__.py,sha256=VxuWsOCoJFVqGj79Guh_-rHIL_EwF76L57AKjQwv7jA,503
+sscred/acl.py,sha256=Aq_WDszsPB5ryfvO5Z-805vx5CrAGIpHFjETMUrTsOc,16194
+sscred/blind_pedersen.py,sha256=k3xecpnhpQmZAfM8OfIMka8__FdHmSbtDyzS_KQ92cw,13397
+sscred/blind_signature.py,sha256=dzsPAtVMQCpzkGim3_fv-W1SnPD7Felca4GREUZqm_0,16436
+sscred/commitment.py,sha256=wWZ8Zw1WGi46YlTNbNtgKljVx8vgIXt8gtL2Q1Fx7o4,7701
+sscred/config.py,sha256=n-tfI1Bbo4QrFPtO_j92Gy2gC_PnHM00FbYVZOjXihQ,31
+sscred/pack.py,sha256=7wCVwmN2164XsSMLsDbh02mTyCWjLJMX72nX2cVAhUc,6722
+sscred_fork-0.2.22.dist-info/LICENSE,sha256=ElqD3Aj6-g_Hu_ZHqnKL3ZbdUmH-B1rQ6y0pu1-CXpw,1537
+sscred_fork-0.2.22.dist-info/METADATA,sha256=F2d8z6NtUu_R1phLVTTqXslIAIQw2FEDnmZy69Z5siM,9339
+sscred_fork-0.2.22.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+sscred_fork-0.2.22.dist-info/top_level.txt,sha256=ZeaOowmrvObNZ44X3uWKJ4PCJdpPb-8u-bmq1UMASYc,7
+sscred_fork-0.2.22.dist-info/RECORD,,
