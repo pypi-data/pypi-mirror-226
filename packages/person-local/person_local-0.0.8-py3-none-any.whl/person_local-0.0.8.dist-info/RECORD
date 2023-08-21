@@ -1,0 +1,9 @@
+person_local_python_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+person_local_python_package/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+person_local_python_package/src/delete_person_table.py,sha256=NsoqZZ0YA8-PzbPdwYfVxJbUxMrN4XLclBux7VAWHX8,1151
+person_local_python_package/src/insert_person_table.py,sha256=5VFWovsSoGGsL5AjEB0Qe0N8JKpgIeuhYgHjjVahY-k,2000
+person_local_python_package/src/update_person_table.py,sha256=78Q8OTbH1pWd7LfZs8QNo0LurtMVQgqOa7br-g5OnG4,4056
+person_local-0.0.8.dist-info/METADATA,sha256=DKRlVeoMmUjxLxc0I0F_cVg1FFqGxxe4lqPeN3O5CmI,495
+person_local-0.0.8.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+person_local-0.0.8.dist-info/top_level.txt,sha256=C34hAGGxxcTsvhaE4hOmad8SrboGIIqFxm0_Pf4Wl9w,28
+person_local-0.0.8.dist-info/RECORD,,
