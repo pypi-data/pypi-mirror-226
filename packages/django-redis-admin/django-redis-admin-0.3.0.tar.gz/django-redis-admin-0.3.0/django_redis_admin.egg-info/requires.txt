@@ -1,0 +1,8 @@
+redis
+django
+
+[docs]
+sphinx>=1.7.4
+
+[tests]
+pytest
