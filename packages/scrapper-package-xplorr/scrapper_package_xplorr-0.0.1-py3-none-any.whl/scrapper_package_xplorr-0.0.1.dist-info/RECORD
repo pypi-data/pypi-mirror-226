@@ -1,0 +1,16 @@
+scrapper/ECommerceDataScrapper.py,sha256=bvUQmibyCV2IMGYIv5y9guIonwPkuhDl21mW-rXMqJQ,1885
+scrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapper/product_page.py,sha256=htE6ApQL8yN1xPAZOzP2aKD4e3o41MFn3Xk8Kr0j96I,1264
+scrapper/runner.py,sha256=3Q3xIsXuKOnQfhl3WrNQnPFk1dKIhzvFmpz2bvJJL_s,503
+scrapper/search.py,sha256=Dz8VTxTjr04Rxtqus-_VQcywuEjCFQYZItEmoHEvY0M,2875
+scrapper/core/AbstractScrap.py,sha256=gUEkLyFGNas-B60NOxDZNVuYmLwBj0V7lKIqx9bA0Ro,339
+scrapper/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapper/extractors/NxtPageExtractor.py,sha256=BvmiSmirvt3JkBKrPp-nj27KFdCREiJAgfh0wom3AsE,1194
+scrapper/extractors/PageLinksExtractor.py,sha256=O7Di8jUm16zx99S6WnmhpOrxqPvgP706bHFxnnPtYyQ,1598
+scrapper/extractors/PageProductExtractor.py,sha256=2Pk-6oycPJU4LP1MTpPKk-8coyNOZSpyysTvuWQYUgI,1863
+scrapper/extractors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapper_package_xplorr-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+scrapper_package_xplorr-0.0.1.dist-info/METADATA,sha256=drAlt1eiqFZxUs_w019CYBNo6_oGlGIyXNBEHARsG2I,569
+scrapper_package_xplorr-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+scrapper_package_xplorr-0.0.1.dist-info/top_level.txt,sha256=wx_YcR18O1YVmSvCU4GPjOz5jfH-9kNHV9Cx0FVHGTQ,44
+scrapper_package_xplorr-0.0.1.dist-info/RECORD,,
