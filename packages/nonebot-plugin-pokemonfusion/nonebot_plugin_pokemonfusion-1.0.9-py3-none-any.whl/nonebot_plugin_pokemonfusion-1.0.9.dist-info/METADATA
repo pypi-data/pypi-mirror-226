@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-pokemonfusion
+Version: 1.0.9
+Summary: Nonebot2的Pokemon Infinite Fusion中文版融合计算器插件
+Home-page: https://github.com/IllusiveBull/nonebot_plugin_pokemonfusion
+Author: IllusiveBull
+Author-email: xjn233@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: nonebot2 (>=2.0.0rc2)
+Requires-Dist: Pillow
+Requires-Dist: nonebot-adapter-onebot
+
