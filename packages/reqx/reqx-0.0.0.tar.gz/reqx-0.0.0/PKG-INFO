@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: reqx
+Version: 0.0.0
+Summary: The Efficient Web Scraping Library
+Home-page: https://github.com/trevorhobenshield/reqx
+Author: Trevor Hobenshield
+Author-email: trevorhobenshield@gmail.com
+License: GPLv3
+Keywords: amazon photos api async search automation
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# reqX
+
+### The Efficient Web Scraping Library
+
+A simple interface for quickly making asynchronous HTTP requests and parsing data.
+
+## Examples
+
+### GET
+
+```python
+import asyncio
+import reqx
+
+urls = [...]
+
+res = asyncio.run(reqx.process(
+    reqx.get(urls),
+    desc='example requests'
+))
+```
+
+### Download
+
+```python
+import asyncio
+import reqx
+
+urls = [...]
+
+res = asyncio.run(reqx.process(
+    reqx.download(urls),
+    desc='downloading files'
+))
+```
+
+### GET: additional configuration
+
+```python
+import asyncio
+import httpx
+import reqx
+
+# define the requests to make as a list of dicts. They keys correspond to `httpx.AsyncClient` parameters
+cfgs = [
+    {
+        'url': 'https://www.bcliquorstores.com/ajax/browse',
+        'headers': {'user-agent': '(iPhone; CPU iPhone OS 15_6 like Mac OS X)'},
+        'cookies': None,
+        'params': {'size': 24, 'page': i, 'category': 'spirits', 'sort': 'featuredProducts:desc'}
+    }
+    for i in range(10)
+]
+
+res = asyncio.run(reqx.process(
+    reqx.send('GET', cfgs),
+    http2=True,
+    limits=httpx.Limits(max_connections=1000, max_keepalive_connections=50),
+    desc='example requests'
+))
+```
