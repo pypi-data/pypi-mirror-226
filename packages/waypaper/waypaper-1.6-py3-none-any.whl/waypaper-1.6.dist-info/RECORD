@@ -1,0 +1,12 @@
+waypaper/__main__.py,sha256=Jl_AuwilxPUfIm6wge3-_PXHNd7v00okj0U-oUCFEVM,660
+waypaper/app.py,sha256=Lj-8SAhLloFS_byRi4t6hHT9lokYim9Pcv8_l5A1KwI,12151
+waypaper/arguments.py,sha256=VrrAfuPJQUGNt4H9x6wlS7WWhDpLPQjm0Q2cCDPpsw4,879
+waypaper/changer.py,sha256=PAS5Fo_lcXbCxkFNEO2wWd18nbNATHpgyVHtFeJI49c,2632
+waypaper/config.py,sha256=e1WoUt2O5mATE90HoXxppWwtsQiIMKIxt1KheuySaCY,3521
+waypaper/options.py,sha256=NI2W7bUyy6km_QMJ7eWV9E274r7vY7eDAoYLu9k5AuA,104
+waypaper-1.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+waypaper-1.6.dist-info/METADATA,sha256=U3gZPF-UZKQ5BcTTg7kgNowmaJZHWUjY_647eWteSBM,4106
+waypaper-1.6.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+waypaper-1.6.dist-info/entry_points.txt,sha256=sqAg5AId7R2n5reFxbOxQOgU1GtUvG6EgQGRxzuMQms,51
+waypaper-1.6.dist-info/top_level.txt,sha256=TbFBwf6qNuG_ARQgWTUBlvy6QAYc6E1ZayOXhSf2O90,9
+waypaper-1.6.dist-info/RECORD,,
