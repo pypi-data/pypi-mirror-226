@@ -1,0 +1,9 @@
+Licenses.txt
+README.md
+setup.py
+Dino_AI.egg-info/PKG-INFO
+Dino_AI.egg-info/SOURCES.txt
+Dino_AI.egg-info/dependency_links.txt
+Dino_AI.egg-info/top_level.txt
+dino_ai/__init__.py
+dino_ai/dino_ai.py
