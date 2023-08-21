@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+eqbool/__init__.py
+eqbool/__main__.py
+eqbool/_main.py
+eqbool.egg-info/PKG-INFO
+eqbool.egg-info/SOURCES.txt
+eqbool.egg-info/dependency_links.txt
+eqbool.egg-info/entry_points.txt
+eqbool.egg-info/top_level.txt
