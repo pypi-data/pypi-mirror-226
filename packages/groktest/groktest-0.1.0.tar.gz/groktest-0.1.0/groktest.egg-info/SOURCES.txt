@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+groktest/__init__.py
+groktest/__main__.py
+groktest/_vendor_parse.py
+groktest/python.py
+groktest.egg-info/PKG-INFO
+groktest.egg-info/SOURCES.txt
+groktest.egg-info/dependency_links.txt
+groktest.egg-info/entry_points.txt
+groktest.egg-info/top_level.txt
