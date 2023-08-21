@@ -1,0 +1,12 @@
+torchy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchy/layer.py,sha256=gruSuHr7l96wh7luyg0FpQ0v2uvvtHseisQRZ8JS2Fo,13532
+torchy/loss.py,sha256=XoicskLfpHlaxN7oLGsmyBOJbWou1fVK3915eJn3gm8,1598
+torchy/optim.py,sha256=bpSvuCoNb0buERew2SZVj72crNIaFpaI2--eAbwkSGc,8439
+torchy/scheduler.py,sha256=VbnnbH4N8XHgsTOZzgelxgDS7xjs1jEpmi1WOANEItk,3146
+torchy/sequential.py,sha256=I0lPMF05v_qpWXVnjCEKlVzkFHl57m9cAmC8c8Km_-E,1969
+torchy/tools.py,sha256=I5ZJIUTJQNYhUd77G3bM5RqevFmpUsSTwaYZmB7FLb8,284
+torchy/value.py,sha256=SjmtQuBfnJT7mcfOF2GjEx3tkXKyJH9Sp8gaNfm63XQ,405
+torchy_nn-0.1.2.0.dist-info/METADATA,sha256=39PNx-YgMjGuM6H0YFxb1PYOqVTSxMlUN_lHCOcsTEo,629
+torchy_nn-0.1.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+torchy_nn-0.1.2.0.dist-info/top_level.txt,sha256=YJg0DNoHCOsxaXXnRiyVZjgP7G1PRXlSvhbr-d0ZFvk,7
+torchy_nn-0.1.2.0.dist-info/RECORD,,
