@@ -1,0 +1,11 @@
+minimalistic_deploy/__init__.py,sha256=0-ywFXT7dYBuPc19Kan-UR7Cs5A63_P9_cbGRZOskMM,46
+minimalistic_deploy/action.py,sha256=wNuyIy7hBqSGgU6R71E_056_GeMRzdD4urCRgtIGhV0,1295
+minimalistic_deploy/host.py,sha256=s9L8dRgQTfb2g48u1tXf6g_52nVB3AYOKcqt9diU6RA,12953
+minimalistic_deploy/main.py,sha256=XLe7HxYYi8EqCb6gWo0nt_3LWgBmNl518cyy_wz1Sm8,5040
+minimalistic_deploy/ssh_client.py,sha256=Kz2bys7o4zq0_Pcb06PjOiOvDlYbs7XYhmEObXRBaLw,8452
+minimalistic_deploy/utils.py,sha256=250bhBpmEVXbqaiMaGsvCvSeEHLw8m6oOr28Evw-iUg,977
+minimalistic_deploy-0.0.1.data/scripts/deploy,sha256=czT4DY16ziZTuv7o7_qTfYvlDZUAh5JT3j-sD83UcSg,86
+minimalistic_deploy-0.0.1.dist-info/METADATA,sha256=R1FjnByJRUSCNuNuZ22LUT25lJISioHh8gOY6mqMtrE,928
+minimalistic_deploy-0.0.1.dist-info/WHEEL,sha256=m9WAupmBd2JGDsXWQGJgMGXIWbQY3F5c2xBJbBhq0nY,110
+minimalistic_deploy-0.0.1.dist-info/top_level.txt,sha256=szbBqqPz1wlE5Mu2NctDqSp3GFylQPjsHgYJD7v1eNE,20
+minimalistic_deploy-0.0.1.dist-info/RECORD,,
