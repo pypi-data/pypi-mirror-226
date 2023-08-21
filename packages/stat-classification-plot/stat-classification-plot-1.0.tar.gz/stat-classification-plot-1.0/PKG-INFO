@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: stat-classification-plot
+Version: 1.0
+Home-page: https://github.com/Paramuths/stat-classification-plot-package
+Author: Paramuth Samuthrsindh
+Author-email: paramuths@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: dev
