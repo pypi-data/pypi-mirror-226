@@ -1,0 +1,7 @@
+README.md
+setup.py
+QuantScape/__init__.py
+quantscape.egg-info/PKG-INFO
+quantscape.egg-info/SOURCES.txt
+quantscape.egg-info/dependency_links.txt
+quantscape.egg-info/top_level.txt
