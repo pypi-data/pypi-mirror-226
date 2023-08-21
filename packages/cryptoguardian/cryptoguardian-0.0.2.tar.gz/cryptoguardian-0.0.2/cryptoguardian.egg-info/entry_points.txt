@@ -1,0 +1,2 @@
+[console_scripts]
+cryptoguardian = cryptoguardian.main:main
