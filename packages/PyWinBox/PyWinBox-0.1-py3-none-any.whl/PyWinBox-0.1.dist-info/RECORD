@@ -1,0 +1,17 @@
+ewmhlib/Props.py,sha256=-BEjeG6BSKf6yWt63y5g3MYC60ODEZB-AEvZed4juCg,4038
+ewmhlib/Structs.py,sha256=GXUxM-NcltNBBMGin6rhvhcbruJUp3nEbscRyIcCd8Y,2584
+ewmhlib/__init__.py,sha256=FOkSbdmX02d6kaZWKQliw-2rBI3K9UoZuAtvCpOjfYw,974
+ewmhlib/_ewmhlib.py,sha256=8cGQSrapERUStL-yPq6ZBGaKB2z2dzTyfuuhCp3eFTc,152212
+pywinbox/__init__.py,sha256=gEMTu1z23bVx1VliLN53Rvoy1L_FlQUe28Wdi8johXY,13468
+pywinbox/_pywinbox_linux.py,sha256=_Wz7bX_cFuVAdSqNXuEQ51OAkcTML9mCzI3yHAh5yGY,1782
+pywinbox/_pywinbox_macos.py,sha256=DDL6YUw4XDThYDe63wLlEu_Ik10nQXEedv0yxjpI-6I,6771
+pywinbox/_pywinbox_win.py,sha256=SB_l866-j_vgre4EbVe5x24DUmZ79Mqqmjmbi8pdWjg,1009
+pywinbox/_xlibcontainer-OLD.py,sha256=dJ2xEkVYtcHfXEd-PUZqd6GSFhRpz7RF4Yuq5ZHCHMk,165002
+pywinbox/_xlibcontainer.py,sha256=dJ2xEkVYtcHfXEd-PUZqd6GSFhRpz7RF4Yuq5ZHCHMk,165002
+pywinbox/py.typed,sha256=mAeBY6TvO_5r6EkS1X7q7RIxVMAb__SungbyrvIC98U,67
+PyWinBox-0.1.dist-info/AUTHORS.txt,sha256=0TxZiNgtcIKwZtd11TP4-zsDIeDxmV7wCKHu_WefSSk,127
+PyWinBox-0.1.dist-info/LICENSE.txt,sha256=CDxlTE1hRDjEq4SrS2ZwFEexw7hLgN3kgoWVYeBNI7Y,1537
+PyWinBox-0.1.dist-info/METADATA,sha256=rvnBMVHJG0moMOsDOm5ZbyvBqV-AcA8aoJ_ojql6ZeE,6762
+PyWinBox-0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+PyWinBox-0.1.dist-info/top_level.txt,sha256=N7aSEWdOOmySbZx3YmR0FJU8EH1V0RSNGkxHYJeOu60,17
+PyWinBox-0.1.dist-info/RECORD,,
