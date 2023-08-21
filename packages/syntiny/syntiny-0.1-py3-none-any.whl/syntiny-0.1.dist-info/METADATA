@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: syntiny
+Version: 0.1
+Author: Vedika Rajavat
+Author-email: vedika.rajavat.21@ucl.ac.uk
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pingouin
+Requires-Dist: random
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
