@@ -1,0 +1,4 @@
+[console_scripts]
+find = refind.__main__:main
+refind = refind.__main__:main
+
