@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: async-sabnzbd
+Version: 0.1.0
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Description-Content-Type: text/markdown
+
+# async-sabnzbd
+Python wrapper for SABnzbd API
+
+```python
+
+import asyncio
+from async_sabnzbd.sabnzbd import Sabnzbd
+
+async def main():
+    sabnzbd = Sabnzbd(api_key="mykey", base_url="http://mysabnzbdurl")
+    queue = await sabnzbd.queue()
+    print(queue)
+
+asyncio.run(main())
+```
