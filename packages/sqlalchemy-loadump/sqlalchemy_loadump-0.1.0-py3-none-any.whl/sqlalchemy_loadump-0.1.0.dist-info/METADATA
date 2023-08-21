@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: sqlalchemy-loadump
+Version: 0.1.0
+Summary: This library makes your software to dump and load data in databases with sqlalchemy.
+Home-page: https://github.com/wintermaples/sqlalchemy-loadump
+License: Apache-2.0
+Author: wintermaples
+Author-email: pg.wintermaples@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Utilities
+Requires-Dist: sqlalchemy (>=2.0,<3.0)
+Project-URL: Repository, https://github.com/wintermaples/sqlalchemy-loadump
+Description-Content-Type: text/markdown
+
+# sqlalchemy-loadump
+This library makes your software to dump and load data in databases with sqlalchemy.
+
+## Dependencies
+- Python 3.8+
+- SQLAlchemy 2.0+
+
+## Installation
+**!!!!! Needs poetry !!!!!** 
+
+It will install the library from github.
+
+```commandline
+poetry add git+ssh://git@github.com:wintermaples/sqlalchemy-loadump.git
+```
+
+## Usage
+### Commandline
+#### Dump
+This command dumps data in the postgresql database to the json file.
+
+**You need installing the database adapter before using this command. In below example, you need installing psycopg2.**
+
+```commandline
+python -m sqlalchemy_loadump dump \
+--dump-file-type=json \
+--dump-file-path=dump.json \
+--db-url=postgresql+psycopg2://user:password@host:port/database
+```
+
+#### Load
+This command loads data from the json file and inserts it into the postgresql database.
+
+**You need installing the database adapter before using this command. In below example, you need installing psycopg2.**
+
+```commandline
+python -m sqlalchemy_loadump load \
+--dump-file-type=json \
+--dump-file-path=dump.json \
+--db-url=postgresql+psycopg2://user:password@host:port/database
+```
+
+## Supported Dump Formats
+- JSON
+
+## Supported Databases
+- PostgreSQL
+- Microsoft SQLServer
+
