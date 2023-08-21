@@ -1,0 +1,8 @@
+polars_bin2/__init__.py,sha256=mDRJmJib5PYQ_jsUKvjQRenQWisOpVxDi-n8l9BCHDc,119
+polars_bin2/expr_bin2.py,sha256=X_WaKv3n_eb8eTnqM3UlZl2pLmziDvudpUkVJa7MCgA,3449
+polars_bin2/series_bin2.py,sha256=qK_VqqrmkBwmJsugTUvMXPCwdjChviHPXx5sv4luXgE,3519
+polars_bin2-0.1.0.dist-info/LICENSE-APACHE,sha256=pg7qgXUUUxZo1-AHZXMUSf4U0FnTJJ4LyTs23kX3WfI,10847
+polars_bin2-0.1.0.dist-info/LICENSE-MIT,sha256=ZkoVnIZkHXggAt4VkBSHSHtzI4nAQ0IoBY9C5HOYQVA,1095
+polars_bin2-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+polars_bin2-0.1.0.dist-info/METADATA,sha256=9dlgMCiO3yFYvlUqBunEm81DeWbZOdQB5-HB4ojTR54,4558
+polars_bin2-0.1.0.dist-info/RECORD,,
