@@ -1,0 +1,10 @@
+setup.py
+Nevzat_Probability.egg-info/PKG-INFO
+Nevzat_Probability.egg-info/SOURCES.txt
+Nevzat_Probability.egg-info/dependency_links.txt
+Nevzat_Probability.egg-info/not-zip-safe
+Nevzat_Probability.egg-info/top_level.txt
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
