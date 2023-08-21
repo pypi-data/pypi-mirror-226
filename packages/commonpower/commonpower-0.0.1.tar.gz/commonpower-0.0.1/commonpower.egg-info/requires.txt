@@ -1,0 +1,16 @@
+wandb
+tensorboard
+matplotlib
+gurobipy
+pyomo
+randomtimestamp
+prettytable
+stable-baselines3
+
+[ci]
+pytest
+pandapower
+
+[full]
+jupyter
+pandapower
