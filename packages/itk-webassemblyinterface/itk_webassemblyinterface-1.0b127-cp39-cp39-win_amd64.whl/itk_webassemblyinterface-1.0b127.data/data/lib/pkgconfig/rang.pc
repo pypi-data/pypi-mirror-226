@@ -1,0 +1,8 @@
+prefix=D:/a/im/_skbuild/win-amd64-3.9/cmake-install
+exec_prefix=D:/a/im/_skbuild/win-amd64-3.9/cmake-install
+includedir=${prefix}/include
+
+Name: rang
+Description: A Minimal, Header only Modern c++ library for terminal goodies
+Version: 3.2.0
+Cflags: -I${includedir}
