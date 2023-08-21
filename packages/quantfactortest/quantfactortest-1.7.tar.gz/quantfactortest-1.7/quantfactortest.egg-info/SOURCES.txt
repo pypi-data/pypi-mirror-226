@@ -1,0 +1,8 @@
+README.md
+quantfactortest.py
+setup.py
+quantfactortest.egg-info/PKG-INFO
+quantfactortest.egg-info/SOURCES.txt
+quantfactortest.egg-info/dependency_links.txt
+quantfactortest.egg-info/requires.txt
+quantfactortest.egg-info/top_level.txt
