@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+image_annotation_package.egg-info/PKG-INFO
+image_annotation_package.egg-info/SOURCES.txt
+image_annotation_package.egg-info/dependency_links.txt
+image_annotation_package.egg-info/requires.txt
+image_annotation_package.egg-info/top_level.txt
