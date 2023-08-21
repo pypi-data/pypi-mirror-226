@@ -1,0 +1,3 @@
+include subprocessmonkey/requirements.txt
+include subprocessmonkey/thirdparty.json
+include subprocessmonkey/README.MD
