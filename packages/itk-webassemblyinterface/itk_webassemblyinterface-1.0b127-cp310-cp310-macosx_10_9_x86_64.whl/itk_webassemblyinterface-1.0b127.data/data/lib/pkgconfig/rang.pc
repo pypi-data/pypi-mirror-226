@@ -1,0 +1,8 @@
+prefix=/Users/runner/work/itk-wasm/itk-wasm/_skbuild/macosx-10.9-x86_64-3.10/cmake-install
+exec_prefix=/Users/runner/work/itk-wasm/itk-wasm/_skbuild/macosx-10.9-x86_64-3.10/cmake-install
+includedir=${prefix}/include
+
+Name: rang
+Description: A Minimal, Header only Modern c++ library for terminal goodies
+Version: 3.2.0
+Cflags: -I${includedir}
