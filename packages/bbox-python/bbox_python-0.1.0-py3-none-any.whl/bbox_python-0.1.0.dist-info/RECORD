@@ -1,0 +1,11 @@
+bbox/__init__.py,sha256=PoQgHo2edpp5hi2sifWJWROT3mqKGYEQngod5ZB-p64,68
+bbox/bbox.py,sha256=12Akmj4MciY_n6ge6uogAqbQnrFAo05kzr23f85fh_I,5993
+bbox/transform.py,sha256=PWfMhpDdRHI9pU1gPA1MVweGNNgATA3n6sQ-u0OXq5Y,2198
+bbox/measure/__init__.py,sha256=x1ZG4K02GeyITFvRrLGodJvYUGMmtiyzXvq1suardaQ,156
+bbox/measure/area.py,sha256=729YVc--ukqbZuqiBlU6HMS0GeUJ5PugvHd0Dic6uFY,1182
+bbox/measure/iou.py,sha256=EJRmUjljS_SjLTdiBnWp6lgId5snhGPbGX0BsuIiU7M,2507
+bbox_python-0.1.0.dist-info/LICENSE,sha256=oPNvpqCTm3Dc78oScYQBIsBHlp6tCGj00OEXWs8Fw7c,1085
+bbox_python-0.1.0.dist-info/METADATA,sha256=xXB9nHjZsGv5eBBDCALtD7UZj4LDZpTk-7t0JOcqgx0,666
+bbox_python-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+bbox_python-0.1.0.dist-info/top_level.txt,sha256=ifM3OZ-zzmngdpqBU5P0UdHSPfTD8V-qoIbzxLcX4NI,5
+bbox_python-0.1.0.dist-info/RECORD,,
