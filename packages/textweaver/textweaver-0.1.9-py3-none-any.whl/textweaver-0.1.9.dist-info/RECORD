@@ -1,0 +1,13 @@
+weaver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weaver/app.py,sha256=Y1v2K9dVwKpM2W8pjp_yL3JS-zitmXZHc6E-1vRxMNQ,454
+weaver/config.py,sha256=s2aHGVk5Sg2A_Z_OcWHTjLa8QSvHQbyBIoCfU_A_V6Q,4537
+weaver/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weaver/routers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weaver/routers/search.py,sha256=_s6BtzSLDSpCPRLDgtsIl3fZbJMzG-94BZZ7woaU_iE,5891
+weaver/routers/upload.py,sha256=QDudIQ8RzqPDOOviW--qys-c3WaIkTyU3BL1GHdfYn0,12120
+weaver/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textweaver-0.1.9.dist-info/METADATA,sha256=2F51XbGkOdiyWW_oqRfOLTW_BYS7LVmaiVkY49Okc40,2470
+textweaver-0.1.9.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+textweaver-0.1.9.dist-info/entry_points.txt,sha256=Mw3aNMu2IjlPIcaVJ-L-fhWIqYAY3hZLYcNItIiADt4,52
+textweaver-0.1.9.dist-info/top_level.txt,sha256=LEjOvpn94BvlypCz3uKW4oKwg28al-eNLgXilExkcJE,7
+textweaver-0.1.9.dist-info/RECORD,,
