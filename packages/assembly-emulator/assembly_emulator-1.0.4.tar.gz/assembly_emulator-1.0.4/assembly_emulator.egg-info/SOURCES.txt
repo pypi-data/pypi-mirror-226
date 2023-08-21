@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+assembly_emulator/__init__.py
+assembly_emulator/asm8086_demo.py
+assembly_emulator/test_asm.py
+assembly_emulator.egg-info/PKG-INFO
+assembly_emulator.egg-info/SOURCES.txt
+assembly_emulator.egg-info/dependency_links.txt
+assembly_emulator.egg-info/requires.txt
+assembly_emulator.egg-info/top_level.txt
