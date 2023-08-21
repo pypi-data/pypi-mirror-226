@@ -1,0 +1,11 @@
+numtofi/__init__.py,sha256=qFtWIpY4-qc2v9Fm2s8y40LQMZ8wlVnIBhWc2AOy478,107
+numtofi/cli.py,sha256=eL8KfAuQBxK2f8R13S3OZcWigHI1CHnfIvnzq50W17E,614
+numtofi/core.py,sha256=qPYsjwhJIBQ2Hcla0xHPd3tdRbjm1TXZiTpQbSEdP6E,4892
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=Lxcbbhe73hGap-Qnn8FohCkaaJNLwIfjXcwhVp_nwJs,5188
+numtofi-0.6.dist-info/LICENSE,sha256=ZBHmTC-HdAuurKgVd14p3qRQZc1BJ50DIVJxiME84K0,1092
+numtofi-0.6.dist-info/METADATA,sha256=k0AIVus1RbLj5os46wZHdWSE_gKovAdMuHTJxM_ufKY,1757
+numtofi-0.6.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+numtofi-0.6.dist-info/entry_points.txt,sha256=moAMGcvN2dGSKCKtMqiz0E6u3CpKUH-8wJiukX4BMOE,45
+numtofi-0.6.dist-info/top_level.txt,sha256=g6uUux7LfC6bRqWCyeU5X-ZD04bzSasLIHIHKVAo704,14
+numtofi-0.6.dist-info/RECORD,,
