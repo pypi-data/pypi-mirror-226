@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playwright_nodejs"
+version = "0.0.2"
+authors = [
+  { name="Shi Yz", email="yz.shi@outlook.com" },
+]
+description = "There is a Node.js environment in playwright, why not just use it?"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lordqyxz/playwright_nodejs"
+"Bug Tracker" = "https://github.com/lordqyxz/playwright_nodejs/issues"
+
