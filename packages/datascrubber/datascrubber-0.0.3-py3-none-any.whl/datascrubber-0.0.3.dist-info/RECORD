@@ -1,0 +1,7 @@
+setup.py,sha256=VyNj60oo5nGbuPnB1KFfBXo2ZpeOWHBgS1ZfBERSKqM,1380
+scr/datasanitizer/__init__.py,sha256=1oGGhHHvKprnSsWn-fq2BGDob3ovTQds3our3tFi5l4,38
+scr/datasanitizer/datacleaning.py,sha256=6XkwsSo405weo5bmqhhGKydCXnRDPHQK0vkpNIrXg38,25538
+datascrubber-0.0.3.dist-info/METADATA,sha256=Mxq_KevcDnnZ9TLVTill9xKrhhO-wZXjDiS0CkSOlZc,19780
+datascrubber-0.0.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+datascrubber-0.0.3.dist-info/licenses/LICENSE,sha256=OlqfAdCA2moCpbLZfJiD9p6HvcXNT1C8AxoQX-t6bz8,1093
+datascrubber-0.0.3.dist-info/RECORD,,
