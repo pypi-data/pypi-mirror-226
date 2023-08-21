@@ -1,0 +1,6 @@
+pure_data.egg-info/PKG-INFO
+pure_data.egg-info/SOURCES.txt
+pure_data.egg-info/dependency_links.txt
+pure_data.egg-info/not-zip-safe
+pure_data.egg-info/requires.txt
+pure_data.egg-info/top_level.txt
