@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: odysseusai
+Version: 0.4
+Summary: A package to log LLM models
+Home-page: https://github.com/chziakas/odysseus_ai
+Author: Christos Ziakas
+Author-email: chziakas@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai
+
+# odysseus_ai
+
+system_message = "You are a helpful assistant that translates English to French."
+model = 'gpt-3.5'
+init(project_name='test',prompt=system_message, model=model)
+log(project_name='test',input_llm='Hello world', output_llm='hey')
+
+
+
+ python setup.py sdist bdist_wheel
+
+ twine upload dist/*
+username: __token__
+password: api key
+
