@@ -1,0 +1,8 @@
+README.md
+setup.py
+forty2/__init__.py
+forty2.egg-info/PKG-INFO
+forty2.egg-info/SOURCES.txt
+forty2.egg-info/dependency_links.txt
+forty2.egg-info/not-zip-safe
+forty2.egg-info/top_level.txt
