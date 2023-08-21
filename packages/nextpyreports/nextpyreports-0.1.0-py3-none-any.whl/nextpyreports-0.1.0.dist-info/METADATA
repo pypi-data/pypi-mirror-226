@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: nextpyreports
+Version: 0.1.0
+Summary: Next Dashboard for test results
+License: MIT
+Author: Rahul
+Author-email: saihanumarahul66@gmail.com
+Maintainer: Rahul
+Maintainer-email: saihanumarahul66@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.6,<9.0.0)
+Requires-Dist: sanic (>=23.6.0,<24.0.0)
+Requires-Dist: tortoise-orm (>=0.20.0,<0.21.0)
+Description-Content-Type: text/markdown
+
+# NEXT-PY-REPORTER
+
+Dashboard made with NextJS and material UI and with interest.
+
+with test execution, we generate good amount of data.
+ The AIM of this project is to utilize the data to convey valuable facts. 
+
+
