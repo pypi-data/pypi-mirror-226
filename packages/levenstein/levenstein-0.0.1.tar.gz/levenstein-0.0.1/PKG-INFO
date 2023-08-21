@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: levenstein
+Version: 0.0.1
+Summary: Download Levenshtein instead
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Author-email: GuiTaek <GuiTaekM@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <3.7,>3.7
+Description-Content-Type: text/markdown
+
+# You want to pip install levenshtine, not this
+
+This is a stub project to prevent [dependency confusion](https://cwe.mitre.org/data/definitions/427.html)
