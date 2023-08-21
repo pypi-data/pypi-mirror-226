@@ -1,0 +1,11 @@
+mongo_migrate/__init__.py,sha256=GQk-HHkErbMNVCcPalcWkd7DYfJlemUZXr32HBb71mM,137
+mongo_migrate/base_migrate.py,sha256=f3ROl2nGmXF6YUD1uUrnz7zCLqx2-fYPYZCmAPKFk5E,993
+mongo_migrate/exceptions.py,sha256=hgCQE8_WVtRYxQOE6IKLNGfaswjV7J3v3lZKFm-6VU8,191
+mongo_migrate/migration_cli.py,sha256=iMhoNC7k0gAWH4XXEOvAGSqMNzafpHxBJTAtt946-7M,4510
+mongo_migrate/migration_manager.py,sha256=a_rD2m3i_CCDYPCx9292YFcHGYGbFPcgvxEDtmLBKdM,6643
+mongo_migrate-0.1.0.dist-info/LICENSE,sha256=0MLIOptiJTMAAYT2Ctw5UHt71wOZDuvCTgOEHDdLuag,1066
+mongo_migrate-0.1.0.dist-info/METADATA,sha256=EWOaBd2Zq9n54bhxoAE67OtZsLhaK7wJ2Z3iQyrG9Xg,6100
+mongo_migrate-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+mongo_migrate-0.1.0.dist-info/entry_points.txt,sha256=WYrefpaovA4xXFDOv01v3yQz_vhLpQu8ZyPwoZYdDXY,67
+mongo_migrate-0.1.0.dist-info/top_level.txt,sha256=isgOy7lekAhT13QMTX1zKTlIkSlH9B5yQC44xqvQ35M,14
+mongo_migrate-0.1.0.dist-info/RECORD,,
