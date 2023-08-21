@@ -1,0 +1,10 @@
+cc/__init__.py,sha256=6wJc7cyJbUM3qfPUhU0a5PT7jXDB7Yku9DJzf_YrFzY,19
+cc/scpi/__init__.py,sha256=vSwr_zTRmCsTshFiheCpdC-4eivgqjvAEpKKxYzo6m8,46
+cc/scpi/keysight.py,sha256=VSz3OdRDCRNlPCYvH7ADcUD4WOKnQcYm3GakXSC202w,125
+cc/scpi/siglent.py,sha256=_gQc3mMl37W8ETwjqqOMP1Dkw5HHfNGtZueKMXG-etE,126
+cc/scpi/socket_connection.py,sha256=-TuFAQdPhmFOu9LCEWHZDS77dIzR9wZ54_jn2HQ09s0,789
+cc.scpi-0.0.1.dist-info/LICENSE,sha256=E55tAHN_CF2REYLQWY05Ca8yIf2GUVt4IGDbTUtiwlk,1069
+cc.scpi-0.0.1.dist-info/METADATA,sha256=bs4JFF6jdq-Wfb0yF62GYvVB8bMl30y1nKj4niebkFs,778
+cc.scpi-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+cc.scpi-0.0.1.dist-info/top_level.txt,sha256=o5YPSLsfk-ISzR6mI7m1ilDZOh6HbwFyuMB8NIJKUPE,3
+cc.scpi-0.0.1.dist-info/RECORD,,
