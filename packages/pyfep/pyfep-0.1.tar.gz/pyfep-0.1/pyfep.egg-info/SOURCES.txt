@@ -1,0 +1,6 @@
+README.md
+setup.py
+pyfep.egg-info/PKG-INFO
+pyfep.egg-info/SOURCES.txt
+pyfep.egg-info/dependency_links.txt
+pyfep.egg-info/top_level.txt
