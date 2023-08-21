@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vecta-testa
+Version: 0.1
+Summary: A package for testing vector embeddings.
+Home-page: https://github.com/Hint-Services/vekta-testa
+Author: Hint Services
+Author-email: ben@hint.services
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vekta-testa
+A library to use for evaluating and testing vector search solutions
+
+
+
