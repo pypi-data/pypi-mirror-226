@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mewicli
+Version: 0.1.1
+Summary: Mewicli is simple CLI for uploading and downloading pages to MediaWiki.
+Home-page: https://gitlhub.com/maartenq/mewicli
+License: MIT
+Keywords: mediawiki
+Author: Maarten
+Author-email: ikmaarten@gmail.com
+Requires-Python: >=3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://gitlhub.com/maartenq/mewicli
+Description-Content-Type: text/markdown
+
+# Mewicli
+
+[![PyPI version](https://badge.fury.io/py/mewicli.svg)](https://badge.fury.io/py/mewicli)
+[![Documentation Status](https://readthedocs.org/projects/mewicli/badge/?version=latest)](https://mewicli.readthedocs.io/en/latest/?badge=latest)
+[![workflow ci](https://github.com/maartenq/mewicli/actions/workflows/main.yml/badge.svg)](https://github.com/maartenq/mewicli/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/maartenq/mewicli/branch/main/graph/badge.svg?token=XXXXXXXXXX)](https://codecov.io/gh/maartenq/mewicli)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
+
+Mewicli is simple CLI for uploading and downloading pages to MediaWiki.
+
