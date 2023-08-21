@@ -1,0 +1,9 @@
+s3manifestcollectstatic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3manifestcollectstatic/apps.py,sha256=FSVtzS-KuQmvzxAKQWXtWI_JZSIa_g8greqxKBKADMM,178
+s3manifestcollectstatic/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3manifestcollectstatic/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3manifestcollectstatic/management/commands/s3manifestcollectstatic.py,sha256=Ho2G7ZwwapGZwMkrG9cJvYT1lbJ5NVULdb36c1ykNJY,2916
+s3manifestcollectstatic-0.3.2.dist-info/LICENSE,sha256=gjhwDv9odkLP2UonAM6AFuyaCt5gru5IDnlwluFSw0U,1071
+s3manifestcollectstatic-0.3.2.dist-info/METADATA,sha256=gI2cu0dovgVqEbW45ALUmQhJkC8MZFyYbC27h8LWB2M,2503
+s3manifestcollectstatic-0.3.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+s3manifestcollectstatic-0.3.2.dist-info/RECORD,,
