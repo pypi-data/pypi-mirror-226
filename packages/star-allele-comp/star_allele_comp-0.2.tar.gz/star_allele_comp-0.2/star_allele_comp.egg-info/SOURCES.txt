@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+star_allele_comp/__init__.py
+star_allele_comp/command.py
+star_allele_comp/comparison.py
+star_allele_comp/plot.py
+star_allele_comp/py.typed
+star_allele_comp/summary.py
+star_allele_comp.egg-info/PKG-INFO
+star_allele_comp.egg-info/SOURCES.txt
+star_allele_comp.egg-info/dependency_links.txt
+star_allele_comp.egg-info/entry_points.txt
+star_allele_comp.egg-info/requires.txt
+star_allele_comp.egg-info/top_level.txt
+tests/test_all.py
