@@ -1,0 +1,1 @@
+{"IPHealthStatus": [{"ihs_url": "http://18.132.210.35:19001/ads/ping", "ihs_response": "pong", "ihs_cr_dt": "2023-08-08T11:49:27.792364"}, {"ihs_url": "http://18.132.210.35:19001/ads/ping", "ihs_response": "pong", "ihs_cr_dt": "2023-08-08T11:49:57.780883"}, {"ihs_url": "http://18.132.210.35:19001/ads/ping", "ihs_response": "pong", "ihs_cr_dt": "2023-08-08T11:58:07.426498"}]}
