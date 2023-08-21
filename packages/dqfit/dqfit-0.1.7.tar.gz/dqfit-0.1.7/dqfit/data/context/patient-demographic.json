@@ -1,0 +1,43 @@
+{
+    "key": "patient-demographic",
+    "dim": [
+        {
+            "path": "Patient.gender",
+            "weight": 3
+        },
+        {
+            "path": "Patient.birthDate",
+            "weight": 5
+        },
+        {
+            "path": "Patient.telecom",
+            "weight": 3
+        },
+        {
+            "path": "Patient.maritalStatus",
+            "weight": 1
+        },
+        {
+            "path": "Patient.address",
+            "weight": 1
+        },
+        {
+            "path": "Patient.address.state",
+            "weight": 1
+        },
+        {
+            "path": "Patient.communication",
+            "weight": 1
+        },
+        {
+            "path": "Patient.identifier",
+            "weight": 1
+        },
+        {
+            "path": "Patient.name",
+            "weight": 1
+        }
+    ],
+    "min_date": "2016-01-01",
+    "code": []
+}

@@ -1,0 +1,29 @@
+{
+    "key": "a1c",
+    "dim": [
+        {
+            "path": "Observation.code",
+            "weight": 5
+        },
+        {
+            "path": "Observation.value[x]",
+            "weight": 10
+        },
+        {
+            "path": "Observation.effective[x]",
+            "weight": 1
+        },
+        {
+            "path": "Observation.meta",
+            "weight": 1
+        },
+        {
+            "path": "Observation.status",
+            "weight": 1
+        }
+    ], 
+    "code": [
+        "4548-4"
+    ],
+    "min_date": "2020-01-01"
+}
