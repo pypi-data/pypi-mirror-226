@@ -1,0 +1,3 @@
+[console_scripts]
+tap-applehealth=tap_applehealth.tap:TapAppleHealth.cli
+
