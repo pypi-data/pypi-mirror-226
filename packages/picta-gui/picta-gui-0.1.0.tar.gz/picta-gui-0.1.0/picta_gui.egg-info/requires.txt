@@ -1,0 +1,4 @@
+opencv-python
+psd_tools
+tensorflow
+Pillow
