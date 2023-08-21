@@ -1,0 +1,45 @@
+Elasticsearch - SQL Access:
+It is a component that allows SQL-like queries to be executed in real-time against Elasticsearch.
+You can think of Elasticsearch SQL as a translator, one that understands both SQL and Elasticsearch
+and makes it easy to read and process data in real-time, at scale by leveraging Elasticsearch capabilities.
+
+Advantages of Elasticsearch SQL
+It has native integration − Each and every query is efficiently executed against the
+                            relevant nodes according to the underlying storage.
+
+No external parts − No need for additional hardware, processes, runtimes or libraries to query Elasticsearch.
+
+Lightweight and efficient − it embraces and exposes SQL to allow proper full-text search, in real-time.
+
+E.g:
+
+GET /_sql?format=txt
+{
+  "query": """
+  SELECT moref, name, dsInfo.name FROM "poc-vms"
+  """
+}
+
+Response:
+     moref     |     name      |  dsInfo.name
+---------------+---------------+---------------
+vm-1           |vm1            |Datastore1
+vm-2           |vm2            |Datastore1
+vm-3           |vm3            |Datastore2
+vm-4           |vm4            |Datastore2
+vm-5           |vm5            |Datastore3
+vm-6           |vm6            |Datastore3
+vm-7           |vm7            |Datastore4
+
+
+GET /_sql?format=txt
+{
+  "query": """
+  SELECT * FROM "users" where id>2
+  """
+}
+
+      Age      |      id       |     name
+---------------+---------------+---------------
+25             |3              |Aman--Edit1
+26             |4              |Aakash--Edit1

@@ -1,0 +1,316 @@
+https://www.myvirtualjourney.com/top-80-vmware-interview-questions-answers/
+
+
+These interview questions are categorized into the following technical areas:
+
+Hypervisor
+Fault Tolerance (FT)
+Virtual Networking
+vCenter Server
+Virtual Storage (Datastore)
+What’s New in vSphere 6.0
+Content Libraries
+vSAN
+vApp and
+Miscellaneous
+Hypervisor
+What is VMKernel and why it is important?
+VMkernel is a virtualization interface between a Virtual Machine and the ESXi host which stores VMs. It is responsible to allocate all available resources of ESXi host to VMs such as memory, CPU, storage etc. It’s also controlled special services such as vMotion, Fault tolerance, NFS, traffic management and iSCSI. To access these services, VMkernel port can be configured on ESXi server using a standard or distributed vSwitch. Without VMkernel, hosted VMs cannot communicate with ESXi server.
+
+What is the hypervisor and its types?
+A hypervisor is a virtualization layer that enables multiple operating systems to share a single hardware host.  Each operating system or VM is allocated physical resources such as memory, CPU, storage etc by the host. There are two types of hypervisors
+
+Hosted hypervisor (works as application i-e VMware Workstation)
+Bare-metal (is virtualization software i-e VMvisor, Hyper-V which is installed directly onto the hardware and controls all physical resources).
+What is Virtualization?
+The process of creating virtual versions of physical components i-e Servers, Storage Devices, Network Devices on a physical host is called virtualization. Virtualization lets you run multiple virtual machines on a single physical machine which is called ESXi host.
+
+What are the different types of virtualization?
+There are 5 basic types of virtualization
+
+Server virtualization: consolidates the physical server and multiple OS can be run on a single server.
+Network Virtualization: Provides complete reproduction of physical network into a software-defined network.
+Storage Virtualization: Provides an abstraction layer for physical storage resources to manage and optimize in virtual deployment.
+Application Virtualization: increased mobility of applications and allows migration of VMs from a host on another with minimal downtime.
+Desktop Virtualization: virtualize desktop to reduce cost and increase service
+Fault Tolerance (FT)
+What is VMware FT?
+FT stands for Fault Tolerance very prominent component of VMware vSphere. It provides continuous availability for VMs when an ESXi host fails. It supports up to 4 vCPUs and 64 GB memory. FT is very bandwidth intensive and 10GB NIC is recommended to configure it. It creates a complete copy of an entire VM such as storage, compute, and memory.
+
+How many vCPUs can be used for a VM in FT?
+In vSphere 6.0, there can be up to 4 vCPUs and 64 GB RAM can be used.
+
+What is the name of the technology used by VMware FT?
+vLockstep technology is used by VMware FT
+
+What is Fault Tolerant Logging?
+The communication between two ESXi hosts is called FT logging when FT is configured between them. The pre-requisition of configuring FT is to configure VMKernel port.
+
+Will the FT work if vCenter Server goes down?
+vCenter server is only required to enable Fault Tolerance on a VM. Once it is configured, vCenter is not required to be in online for FT to work. FT failover between primary and secondary will occur even if the vCenter is down.
+What is the main difference between VMware HA and FT?
+The main difference between VMware HA and FT is: HA is enabled per cluster and VMware FT is enabled per VM. In HA, VMs will be re-started and powered-on on another host in case of a host failure, while in FT there is no downtime because the second copy will be activated in case of host failure.
+
+Virtual Networking
+What is virtual networking?
+A network of VMs running on a physical server that is connected logically with each other is called virtual networking.
+
+What is vSS?
+vSS stands for Virtual Standard Switch is responsible for communication of VMs hosted on a single physical host. it works like a physical switch automatically detects a VM which want to communicate with other VM on a same physical server.
+
+What is vDS?
+vDS stands for Virtual Distributed Switch acts as a single switch in a whole virtual environment and is responsible to provide central provisioning, administration, and monitoring of the virtual network.
+
+How many maximum standard ports per host available?
+4096 ports per host are available either in a standard switch or distributed switch.
+
+What are the main benefits of distributed switch (vDS)?
+vDS can provide:
+
+Central administration for a data center
+Central provision, and
+Monitoring
+What is VMKernal adapter and why it used?
+VMKernel adapter provides network connectivity to the ESXi host to handle network traffic for vMotion, IP Storage, NAS, Fault Tolerance, and vSAN. For each type of traffic such as vMotion, vSAN etc. separate VMKernal adapter should be created and configured.
+
+What is the main use of port groups in data center virtualization?
+You can segregate the network traffic by using port groups such as vMotion, FT, management traffic etc.
+
+What are three port groups are configured in ESXi networking?
+Virtual Machine Port Group – Used for Virtual Machine Network
+Service Console Port Group – Used for Service Console Communications
+VMKernel Port Group – Used for VMotion, iSCSI, NFS Communications
+What is VLAN and why use in virtual networking?
+A logical configuration on the switch port to segment the IP Traffic where each segment cannot communicate with other segments without proper rules mentioned is called VLAN and every VLAN has a proper number called VLAN ID.
+
+What is VLAN Tagging?
+The practice of inserting VLAN ID into a packet header to identify which VLAN packet belongs to is called VLAN tagging.
+
+What are three network security policies/modes on vSwitch?
+Promiscuous mode
+MAC address change
+Forged transmits
+What is promiscuous mode on vSwitch?
+The default mode is Reject. If Accept is selected, VM will receive all traffic port group via vSwitch.
+
+What is MAC address changes network policy?
+The default mode of this policy is Reject. If the Accept is selected, a host will accept requests to change the effective MAC address.
+
+What is Forged transmits network policy?
+The default mode is Reject. If Accept is selected, a host will not compare the source and effective MAC address transmitted from a VM.
+
+vCenter Server
+What are the main components of vCenter Server architecture?
+There are three main components of vCenter Server architecture.
+
+vSphere Client and Web Client: a user interface.
+vCenter Server database: SQL server or embedded PostgreSQL to store inventory, security roles, resource pools etc.
+SSO: a security domain in a virtual environment
+What is PSC and its components?
+PSC stands for Platform Services Controller first introduced in version 6 of VMware vSphere which handles infrastructure security functions. It has three main components.
+
+Single Sign-On (SSO)
+VMware Certificate Authority (CA)
+Licensing service
+What are the two main deploying methods of PSC
+You can install PSC in two ways:
+
+Embedded
+centralized
+What are different types of vCenter Server deployment?
+It has two deployment types
+
+Embedded Deployment
+External deployment
+What is vRealize Operation (vROP)
+vROP provides the operation dashboards for performance analytics, capacity optimization and monitoring the virtual environment.
+
+What is the basic security step to secure vCenter Server and users?
+Authenticate vCenter Server with Active Directory. By using this we can assign specific roles to users and can also manage the virtual environment in an efficient way.
+
+Virtual Storage (Datastore)
+What is datastore?
+Datastore is a storage location where virtual machine files are stored and accessed. Datastore is based on a file system which is called VMFS, NFS.
+
+What is the .vmx file?
+It is the configuration file of a VM
+
+What information .nvram file stores?
+It stores BIOS related information of a VM.
+
+What .vmdk file does and used?
+Vmdk is a VM disk file and stores data of a VM. It can be up to 62 TB in size in vSphere 6.0 version.
+
+How many disk types are in VMware?
+There are three disk types in vSphere.
+
+Thick Provisioned Lazy Zeroes: every virtual disk is created by default in this disk format. Physical space is allocated to a VM when a virtual disk is created. It can’t be converted to thin disk.
+Thick Provision Eager Zeroes: this disk type is used in VMware Fault Tolerance. All required disk space is allocated to a VM at time of creation. It takes more time to create a virtual disk compare to other disk formats.
+Thin provision: It provides an on-demand allocation of disk space to a VM. When data size grows, the size of a disk will grow. Storage capacity utilization can be up to 100% with thin provisioning.
+What is Storage vMotion?
+It is similar to traditional vMotion, in Storage vMotion, a virtual disk of a VM is moved from datastore to another. During Storage vMotion, virtual disk types think provisioning disk can be transformed to thin provisioned disk.
+
+What’s New in vSphere 6.0
+What is VM Hardware version for vSphere 6.0?
+Version 11
+
+What VM hardware version for vSphere 6.5?
+Version 13
+
+In which version of vSphere PSC was introduced?
+Platform Services Controller (PSC) is introduced in vSphere 6.0. vSphere 6.0 is also known as Virtual hardware version 11.
+
+How many maximum hosts can manage a vCenter Server in vSphere 6.0?
+In vSphere 6.0, a single vCenter Server can manage up to 1000 hosts either in Windows or in vCenter Appliance (vCSA).
+
+How many hosts can be managed by a cluster in vSphere 6.0?
+A single cluster can manage maximum 64 hosts
+
+How can maximum VMs be managed by a single cluster?
+A single cluster can manage the maximum of 8000 VMs.
+
+What is VVol?
+Virtual Volume a new VM disk management concept introduced in vSphere 6.0 that enables array-based operations at the virtual disk level. VVol is automatically created when a virtual disk is created in a virtual environment for a VM.
+
+How many licensing options for vSphere 6.0?
+There are three licensing options for vSphere 6.0:
+
+Standard Edition: Contains 1 vCenter Server Standard license, up to 2 vCPUs for Fault Tolerance, vMotion, Storage vMotion, HA, VVols etc.
+Enterprise Edition: Same as Standard Edition additionally APIs for Array Integration and Multipathing, DRS, and DPM.
+Enterprise Plus: Includes all features of Standard and Enterprise Editions with additionally Fault Tolerance upto 4 vCPUs and 64GB of RAM. It also includes Distributed vSwitch and the most expensive licensing option of vSphere 6.0.
+How much Maximum RAM can support vSphere 6.0?
+It supports upto 12TB of RAM.
+
+Content Libraries
+What is the Content Library?
+Content Library is the central location point between two different geographical locations with vCenter Servers where you can store VM templates, ISO images, scripts etc. and share them between geographical locations
+
+What are the main benefits of content libraries?
+We create VM templates and can share on another geographical location of a company without creating again on other locations. It has many benefits such as sharing and consistency, storage efficiency, and secure subscription.
+
+How many types of Content Libraries have?
+It has three types:
+
+Local: library of local control.
+Published: local library which contents (VM templates, ISO images etc) for subscription.
+Subscribed: A library which syncs with the published library
+What are the requirements and limitations of Content Libraries?
+A content library has the following requirements and limitations
+
+Single storage which can size upto 64TB
+Maximum of 256 items per library
+Sync occurs once every 24 hours
+What is VMFS?
+VMFS is a file system for a VM in VMware vSphere. VMFS is a datastore that responsible for storing virtual machine files. VMFS can also store large files which size can up to 64TB in vSphere 6.0
+
+VSAN
+What is vSAN?
+Virtual SAN is a software-defined storage first introduced in vSphere 5.5 and is fully integrated with vSphere. It aggregates locally attached storage of ESXi hosts which are part of a cluster and creates a distributed shared solution.
+
+What is cold migration?
+To move a powered-off VM from one host to another is called cold migration.
+
+What is Storage vMotion?
+To move a powered-on VM from one datastore to another is called Storage vMotion.
+
+What are the different configuration options for VSAN?
+There are two configuration options for  vSAN:
+
+Hybrid: Uses both flash-based and magnetic disks for storage. Flash are used for cashing, while magnetic disks are used for capacity or storage.
+All-Flash: Uses flash for both caching and for storage
+Are there VSAN ready nodes are available in the market?
+Yes, vSAN-ready such as VxRail 4.0 and 4.5 are available in the market. VxRail is the combination of min 3 servers which are part of a cluster and can scale up to 64 servers.
+
+How minimum servers/hosts are required to configure vSAN?
+To configure a vSAN, you should have minimum 3 ESXi hosts/servers in the form of a vSAN cluster. If one of the servers fails, a vSAN cluster will fail.
+
+How are many maximum ESXi hosts allowed for vSAN?
+64 hosts are max allowed to configure a vSAN cluster.
+
+How many disk groups and max magnetic disks are allowed in single disk group?
+Maximum 5 disk groups are allowed on an ESXi host which is a part of a vSAN cluster and a maximum of 7 magnetic and 1 SSD per disk group is allowed.
+
+How many types of storages can we use in our virtual environment?
+Direct Attached Storage
+Fiber Channel (FC)
+iSCSI
+Network Attached Storage (NAS)
+What is NFS?
+Network File System (NFS) is a file sharing protocol that ESXi hosts use to communicate with a NAS device. NAS is a specialized storage device that connects to a network and can provide file access services to ESXi hosts.
+
+What is Raw Device Mapping (RDM)?
+Raw Device Mapping (RDM) is a file stored in a VMFS volume that acts as a proxy for a raw physical device. RDM enables you to store virtual machine data directly on a LUN. RDM is recommended when a VM must interact with a real disk on the SAN.
+
+What is iSCSI storage?
+An iSCSI SAN consists of an iSCSI storage system, which contains one or more storage processors. TCP/IP protocol is used to communicate between host and storage array. an iSCSI initiator is configured with the ESXi host. an iSCSI initiator can be a hardware-based either dependent or independent and software-based known as iSCSI software initiator.
+
+What is the format of iSCSI addressing?
+It uses TCP/IP to configure.
+
+What are iSCSI naming conventions?
+iSCSI names are formatted in two different ways:
+
+the iSCSI qualified name (IQN)
+extended unique identifier (EUI)
+vApp
+What is vApp?
+vApp is a container or group where more than one VM can be package and manage multi-tiered applications for specific requirements for example, Web server, database server, and application server can be configured as a vApp and can be defined their power-on and power-off sequence.
+
+What settings can be configured for vApp?
+We can configure several settings for vApp such as CPU and memory allocation, and IP allocation policy etc.
+
+Miscellaneous
+What is VMware DRS?
+DRS stands for Distributed Resource Scheduler; that automatically balances available resources among various hosts by using cluster or resource pools. With the help of HA, DRS can move VMs from one host to another to balance the available resources among VMs.
+
+What is share, limit, and reservation?
+Share: A value that specifies the relative priority or importance of a VM access to given resource.
+
+Limit: Consumption of a CPU cycle or host physical memory that cannot cross the defined value (limit).
+
+Reservation: This value defines in the form of CPU or memory and must be available for a VM to start.
+
+What are the alarms why we use them?
+An alarm is a notification which appears when an event occurs. Many default alarms exist for many inventory objects. Alarms can be created and modified using vSphere Web Client;
+
+What are the hot-pluggable devices which can be added while VM is running?
+We can add HDDs and NIC while VM is running.
+
+What is a Template?
+When a VM is converted into a format which can be used to create a VM with pre-defined settings is called a template. An installed VM can be converted into a template but it cannot be powered-on.
+
+What is Snapshot?
+To create a copy of a VM with the timestamp as a restore point is called a snapshot. Snapshots are taken when an upgrade or software installation is required. For better performance, a snapshot should be removed after a particular task is performed.
+
+How to convert a physical machine into a VM?
+Three steps are required to convert a physical machine to a VM:
+
+An agent needs to be installed on the Physical machine
+VI client needs to be installed with Converter Plug-in
+A server to import/export virtual machines
+What is vMotion and what is the main purpose to use it in a virtual environment?
+It is a very prominent feature of VMware vSphere used to live migrate running VMs from one ESXi host to another without any downtime. Datastores and ESXi hosts both can be used while vMotion.
+
+What is the difference between a clone and a template?
+A clone is a copy of a virtual machine. By cloning a VM, it will save time if multiple VMs with the same configurations are required to configure. While a template is a master copy of an image created from a VM which can be later used to create many clones. After converting a VM to a template, it can’t be powered-on or edited.
+
+What monitoring method is used in vSphere HA?
+Network Heartbeat
+Datastore Heartbeat
+How is master host elected in vSphere HA?
+When HA is enabled in a cluster, all hosts take part in a selection process to be selected as a master host. A host which has the highest number of datastores mounted will be selected as a master host. All other hosts will remain slave hosts.
+
+What is the purpose of VMware Tools?
+It is a suite of utilities which are used to enhance the performance of a VM in the form of graphics, mouse/keyboard movement, network card, and other peripheral devices.
+
+What is VMware DPM?
+Stands for Distributed Power Management is a feature of VMware DRS is used to monitor required resources in a cluster. When the resources are decreases due to low usage, VMware DPM consolidates workloads and shut down the hosts which are not being used, and when resources are increased it automatically power on the un-used hosts.
+
+What is the ESXi Shell?
+It is a command-line interface is used to run repair and diagnostics of ESXi hosts. It can be accessed via DCUI, vCenter Server enable/disable, and via SSH.
+
+How to run ESXTOP on ESXi host?
+To run ESXTOP on an ESXi host, we’ll need two pre-requisites:
+
+Install vSphere Client on a host where you want to configure
+Enable SSH from DCUI by using “Troubleshooting Options” link

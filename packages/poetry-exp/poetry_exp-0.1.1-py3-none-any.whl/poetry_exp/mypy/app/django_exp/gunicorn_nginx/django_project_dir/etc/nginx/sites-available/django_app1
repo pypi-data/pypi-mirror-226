@@ -1,0 +1,11 @@
+server {
+    #location = /favicon.ico { access_log off; log_not_found off; }
+    #location /static/ {
+    #    root /home/aafak/nginx_apps/django_project_dir;
+    #}
+    location / {
+        #include proxy_params;
+        proxy_pass http://localhost:8000/;
+    }
+}
+

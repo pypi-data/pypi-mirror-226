@@ -1,0 +1,22 @@
+---
+- name: Getting inventory details from VMWare vCenter
+  hosts: localhost
+  gather_facts: no
+  vars:
+    timeout: 600
+    ansible_timeout: 600
+    proxy_env:
+      http_proxy: http://web-proxy.in.hpecorp.net:8080
+      https_proxy: http://web-proxy.in.hpecorp.net:8080
+
+  tasks:
+    - name: Gatheing VMs info from VMWare vCenter
+      vmware_vm_info:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        validate_certs: false
+        show_attribute: true
+      register: vminfo
+#    - debug:
+#        var: '{{ vminfo }}'

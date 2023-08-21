@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message CBTMapTransformerRequest {
+  string cbt_map_file_path = 1;
+}
+
+message CBTMapTransformerResponse {
+  string transformed_map_file_path = 1;
+}
+
+service CBTMapTransformer {
+  rpc Transform (CBTMapTransformerRequest) returns (CBTMapTransformerResponse);
+}

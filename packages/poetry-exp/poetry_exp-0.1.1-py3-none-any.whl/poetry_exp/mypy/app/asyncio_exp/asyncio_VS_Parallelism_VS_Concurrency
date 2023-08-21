@@ -1,0 +1,113 @@
+https://medium.com/analytics-vidhya/asyncio-threading-and-multiprocessing-in-python-4f5ff6ca75e8
+
+-------------------------Concurrency-------------------------------------------
+              Concurrency Achieved using Threading, AsyncIO
+
+
+
+               --------Parallelism------------------
+			           Parallelism Achieved using Multiprocess
+
+-------------------------Concurrency-------------------------------------------
+
+
+Parallelism:
+ consists of performing multiple operations at the same time. Multiprocessing is a means to effect parallelism, and it entails spreading tasks over a computer’s central processing units (CPUs, or cores). Multiprocessing is well-suited for CPU-bound tasks: tightly bound for loops and mathematical computations usually fall into this category.
+
+Concurrency:
+ is a slightly broader term than parallelism. It suggests that multiple tasks have the ability to run in an overlapping manner. (There’s a saying that concurrency does not imply parallelism.)
+
+Threading:
+ is a concurrent execution model whereby multiple threads take turns executing tasks. One process can contain multiple threads. Python has a complicated relationship with threading thanks to its GIL, but that’s beyond the scope of this article.
+
+What’s important to know about threading is that it’s better for IO-bound tasks. While a CPU-bound task is characterized by the computer’s cores continually working hard from start to finish, an IO-bound job is dominated by a lot of waiting on input/output to complete.
+
+To recap the above, concurrency encompasses both multiprocessing (ideal for CPU-bound tasks) and threading (suited for IO-bound tasks). Multiprocessing is a form of parallelism, with parallelism being a specific type (subset) of concurrency. The Python standard library has offered longstanding support for both of these through its multiprocessing, threading, and concurrent.futures packages.
+
+
+asyncio:
+   a library to write concurrent code, async IO is a style of concurrent programming
+    in which tasks release the CPU during waiting periods, so that other task can use it
+  
+  However, async IO is not threading, nor is it multiprocessing. It is not built on top of either of these.
+  In fact, async IO is a single-threaded, single-process design: it uses cooperative multitasking
+  
+  It has been said in other words that async IO gives a feeling of concurrency despite
+   using a single thread in a single process.
+  Coroutines (a central feature of async IO) can be scheduled concurrently, but they are not inherently concurrent.
+
+  AsyncIO is a single thread single process cooperative multitasking. An asyncio task has exclusive use of CPU until
+  it wishes to give it up to the coordinator or event loop
+  AsyncIO is a relatively new framework to achieve concurrency in python
+
+ To reiterate, async IO is a style of concurrent programming, but it is not parallelism.
+ It’s more closely aligned with threading
+ Concurrency with AsyncIO
+    Coroutine: Unlike a conventional function with a single point of exit, a coroutine can pause
+    and resume its execution. Creation of coroutine is as simple as using async keyword before declaring a function.
+
+    Event Loop Or Coordinator: Coroutine that manages other coroutines. You can think of it as a scheduler or master.
+    Awaitable object: Coroutine, Tasks, and Future are awaitable objects.
+     A coroutine can await on awaitable objects. While a coroutine is awaiting on an awaitable object,
+      its execution is temporarily suspended and resumed after Future is done.
+
+Asynchronous routines are able to “pause” while waiting on their ultimate result
+ and let other routines run in the meantime.
+
+
+AsyncIO Realtime Scenerio:
+https://www.youtube.com/watch?v=iG6fr81xHKA&feature=youtu.be&t=4m29s
+
+Chess master Judit Polgár hosts a chess exhibition in which she plays multiple amateur players.
+ She has two ways of conducting the exhibition: synchronously and asynchronously.
+
+Assumptions:
+
+24 opponents
+Judit makes each chess move in 5 seconds
+Opponents each take 55 seconds to make a move
+Games average 30 pair-moves (60 moves total)
+
+Synchronous version:
+ Judit plays one game at a time, never two at the same time, until the game is complete.
+  Each game takes (55 + 5) * 30 == 1800 seconds, or 30 minutes.
+  The entire exhibition takes 24 * 30 == 720 minutes, or 12 hours.
+
+Asynchronous version:
+ Judit moves from table to table, making one move at each table. She leaves the table and lets the opponent make their next move during the wait time. One move on all 24 games takes Judit 24 * 5 == 120 seconds, or 2 minutes. The entire exhibition is now cut down to 120 * 30 == 3600 seconds, or just 1 hour.
+ - Here Only one worker(moving here and there during wait time), where as in case of multithreading(there will be multiple worker)
+ 
+ 
+ 
+ Async: Doing many thing at once, achive in python using following way
+   - 1. Multiprocessing: OS does all the multi-tasking work, only option is you should have multi-core processor, multiple process
+                      Open terminal and run the same script multiple times, or use the python multiprocessing module
+   - 2. Multithreading:  OS does all the multi-tasking work, but GIL prevents multi-core concurrency, multiple threads
+   - 3. Async programming:  No os intervention, one process , one thread
+ 
+ 
+ How Async Implemented:
+   - 1. Async funtions need the ability to suspends and resume
+	   - A function enters into the waiting periods is supended, only resumed when the wait is over
+	   - Four way to implement suspends/resume, without os help
+		  1. Callback functions
+		  2. Generator functions
+		  3. Async/await(python 3.5 +)
+		  4. Greenlets(requires third party greenlet package)
+		  
+   - 2. Scheduling asynchronous task:
+         - Async framework need a scheduler, usually called event loop
+		 - Loop keep tracks of all the tasks
+		 - when a function is suspended, returns control to the loop, which then finds ansother function to start/resume
+		 - This is called "co-operative multi-tasking"
+		 
+		 
+
+
+                               Processs                                   Thread                        asyncio
+     
+Optimize waiting periods:      Yes(premptive)                            Yes(premptive)                 Yes(co-operative)
+Use all CPU cores:             Yes                                       No                             No
+Scalibility:                   Low(in tens)                              Medium(IN hudreds)             High(In thousands)
+Use blocking std lib func:     Yes                                       Yes                            No
+GIL Interference:              No                                        Some                           NO

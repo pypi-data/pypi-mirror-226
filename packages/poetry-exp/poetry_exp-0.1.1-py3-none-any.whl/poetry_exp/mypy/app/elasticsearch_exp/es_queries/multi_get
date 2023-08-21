@@ -1,0 +1,65 @@
+GET /poc-esxs/_mget
+{
+  "ids":["f316b983-7075-4964-8a17-d731cd68c561", "ff264088-a8d6-4fb6-a44a-67cc2f9c8ebd", "invalid id"]
+}
+
+{
+  "docs" : [
+    {
+      "_index" : "poc-esxs",
+      "_type" : "_doc",
+      "_id" : "f316b983-7075-4964-8a17-d731cd68c561",
+      "_version" : 1,
+      "_seq_no" : 2,
+      "_primary_term" : 1,
+      "found" : true,
+      "_source" : {
+        "name" : "Host3",
+        "moref" : "host-3",
+        "vcenterInfo" : {
+          "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+          "name" : "vcenter1"
+        },
+        "datacenterInfo" : {
+          "moref" : "datacenter-1",
+          "name" : "Datacenter1"
+        },
+        "clusterInfo" : {
+          "moref" : "domain-c2",
+          "name" : "Cluster2"
+        }
+      }
+    },
+    {
+      "_index" : "poc-esxs",
+      "_type" : "_doc",
+      "_id" : "ff264088-a8d6-4fb6-a44a-67cc2f9c8ebd",
+      "_version" : 1,
+      "_seq_no" : 4,
+      "_primary_term" : 1,
+      "found" : true,
+      "_source" : {
+        "name" : "Host5",
+        "moref" : "host-5",
+        "vcenterInfo" : {
+          "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+          "name" : "vcenter1"
+        },
+        "datacenterInfo" : {
+          "moref" : "datacenter-2",
+          "name" : "Datacenter2"
+        },
+        "clusterInfo" : {
+          "moref" : "domain-c3",
+          "name" : "Cluster3"
+        }
+      }
+    },
+    {
+      "_index" : "poc-esxs",
+      "_type" : "_doc",
+      "_id" : "invalid id",
+      "found" : false
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+https://www.influxdata.com/time-series-platform/
+https://github.com/influxdata/kapacitor/tree/master/udf/agent
+https://docs.influxdata.com/kapacitor/v1.5/guides/anomaly_detection/
+
+
+Tick Script: https://docs.influxdata.com/kapacitor/v1.5/tick/introduction/
+In TICKscript the fundamental type is the node. A node has properties and, as mentioned, chaining methods
+
+node types are batch, query, stream, from, eval and alert, though there are dozens of others.
+
+
+Property methods – A property method modifies the internal properties of a node and returns a reference to the same node. Property methods are called using dot (‘.’) notation.
+Chaining methods – A chaining method creates a new child node and returns a reference to it. Chaining methods are called using pipe (‘|’) notation.
+
+The top level nodes, which establish the processing type of the task to be defined, stream and batch, are simply declared and take no arguments
+
+Each node type wants data in either batch or stream mode.
+
+
+from node: chaining method
+Creates a new FromNode that can be further filtered using the Database, RetentionPolicy, Measurement and Where properties. From can be called multiple times to create multiple independent forks of the data stream.
+
+Example:
+
+    // Select the 'cpu' measurement from just the database 'mydb'
+    // and retention policy 'myrp'.
+    var cpu = stream
+        |from()
+            .database('mydb')
+            .retentionPolicy('myrp')
+            .measurement('cpu')
+    // Select the 'load' measurement from any database and retention policy.
+    var load = stream
+        |from()
+            .measurement('load')
+    // Join cpu and load streams and do further processing.
+    cpu
+        |join(load)
+            .as('cpu', 'load')
+        ...
+
+
+influxDBOut: chaining method, Create an influxdb output node that will store the incoming data into InfluxDB
+
+The influxDBOut node writes data to InfluxDB as it is received.
+
+stream
+  |from()
+    .measurement('requests')
+  |eval(lambda: "errors" / "total")
+    .as('error_percent')
+  // Write the transformed data to InfluxDB
+  |influxDBOut()
+    .database('mydb')
+    .retentionPolicy('myrp')
+    .measurement('errors')
+    .tag('kapacitor', 'true')
+    .tag('version', '0.2')
+
+
+
+UDF Node:
+The udf node can run a User Defined Function (UDF) in a separate process.
+A UDF is a custom script or binary that can communicate via Kapacitor’s UDF RPC protocol.
+The path and arguments to the UDF program are specified in Kapacitor’s configuration.
+Using TICKscripts you can invoke and configure your UDF for each task.
+
+UDFs are configured via Kapacitor’s main configuration file.
+
+Example: kapacitor.conf
+
+[udf]
+[udf.functions]
+    # Example moving average UDF.
+    [udf.functions.movingAverage]
+        prog = "/path/to/executable/moving_avg"
+        args = []
+        timeout = "10s"
+UDFs are first class objects in TICKscripts and are referenced via their configuration name.
+
+Example: test.tick
+
+// Given you have a UDF that computes a moving average
+// The UDF can define what its options are and then can be
+// invoked via a TICKscript like so:
+stream
+  |from()...
+  @movingAverage()
+    .field('value')
+    .size(100)
+    .as('mavg')
+  |httpOut('movingaverage')
+NOTE: The UDF process runs as the same user as the Kapacitor daemon. As a result, make sure the user is properly secured, as well as the configuration file.
+
+
+Socket Based UDF:
+
+Configure Kapacitor to Talk to the UDF
+Now that our UDF is ready, we need to tell Kapacitor where our UDF socket is, and give it a name so that we can use it. Add this to your Kapacitor configuration file:
+
+[udf]
+[udf.functions]
+    [udf.functions.mirror]
+        socket = "/tmp/mirror.sock"
+        timeout = "10s"
+
+
+
+Take an existing task and add @mirror() at any point in the TICKscript pipeline to see it in action.
+
+Here is an example TICKscript, which will need to be saved to a file:
+
+dbrp "telegraf"."autogen"
+
+stream
+    |from()
+        .measurement('cpu')
+    @mirror()
+    |alert()
+        .crit(lambda: "usage_idle" < 30)
+Define the above alert from your terminal like so:
+
+kapacitor define mirror_udf_example -tick path/to/above/script.tick
+
+
+
+aafak2@aafak-ubuntu:~/Documents/repos/intel/IEdgeInsights$ sudo apt install influxdb-client
+
+aafak2@aafak-ubuntu:~/Documents/repos/intel/IEdgeInsights$ sudo cp cert-tool/Certificates/ca/ca_certificate.pem  /etc/ssl/certs/ETA1.pem
+
+aafak2@aafak-ubuntu:~/Documents/repos/intel/IEdgeInsights$ sudo influx -host localhost -port 8086 -username admin -password admin123 -database datain -ssl
+
+>>> client = InfluxDBClient(host='mydomain.com', port=8086, username='myuser', password='mypass' ssl=True, verify_ssl=True)

@@ -1,0 +1,40 @@
+# TO make it work first install
+# https://github.com/ansible-collections/vmware
+# aafak@aafak-virtual-machine:~/aafak/ansible_exp$ ansible-galaxy collection install community.vmware
+# Process install dependency map
+# Starting collection install process
+# Installing 'community.vmware:1.0.0' to '/home/aafak/.ansible/collections/ansible_collections/community/vmware'
+# aafak@aafak-virtual-machine:~/aafak/ansible_exp$
+---
+- name: Getting inventory details from VMWare vCenter
+  hosts: localhost
+  gather_facts: no
+  vars:
+    timeout: 600
+    ansible_timeout: 600
+    vcenter_hostname: 172.17.29.162
+    vcenter_username: administrator@vsphere.local
+    vcenter_password: 12rmc*Help
+    proxy_env:
+      http_proxy: http://web-proxy.in.hpecorp.net:8080
+      https_proxy: http://web-proxy.in.hpecorp.net:8080
+
+  tasks:
+    - name: Gathering specific datastore info from datacenter
+      community.vmware.vmware_datastore_info:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        datacenter_name: Datacenter1
+        validate_certs: no
+        name: datastore1 # Don't pass this param, if want all Datastores info
+        gather_vmfs_mount_info: yes
+        gather_nfs_mount_info: yes
+        schema: vsphere
+        properties: ["name", "_moId", "summary", "vm"]
+
+      register: dsInfo
+    - debug:
+        var: dsInfo
+
+

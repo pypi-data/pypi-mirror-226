@@ -1,0 +1,219 @@
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ ls
+db.sqlite3  django_project  django_project_venv  manage.py  static
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$
+(django_project1_env) aafak@aafak-virtual-machine:~/nginx_apps$ mkdir django_project_dir
+(django_project1_env) aafak@aafak-virtual-machine:~/nginx_apps$ cd django_project_dir/
+(django_project1_env) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ python3 -m venv django_project_venv
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ source django_project_venv/bin/activate
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ pip install django gunicorn psycopg2-binary
+Collecting django
+  Using cached Django-4.0.3-py3-none-any.whl (8.0 MB)
+Collecting gunicorn
+  Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     |████████████████████████████████| 3.0 MB 893 kB/s
+Collecting asgiref<4,>=3.4.1
+  Using cached asgiref-3.5.0-py3-none-any.whl (22 kB)
+Collecting backports.zoneinfo; python_version < "3.9"
+  Using cached backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl (74 kB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.2-py3-none-any.whl (42 kB)
+Requirement already satisfied: setuptools>=3.0 in ./django_project_venv/lib/python3.8/site-packages (from gunicorn) (44.0.0)
+Installing collected packages: asgiref, backports.zoneinfo, sqlparse, django, gunicorn, psycopg2-binary
+Successfully installed asgiref-3.5.0 backports.zoneinfo-0.2.1 django-4.0.3 gunicorn-20.1.0 psycopg2-binary-2.9.3 
+
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ django-admin startproject django_project ../django_project_dir
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ ls
+django_project  django_project_venv  manage.py
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ vim django_project/settings.py
+ALLOWED_HOSTS = ['172.17.29.165', 'localhost']
+
+STATIC_URL = '/static/'
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ vim django_project/settings.py
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ ls
+django_project  django_project_venv  manage.py
+
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ python manage.py createsuperuser
+Username (leave blank to use 'aafak'):
+Email address:
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ python manage.py collectstatic
+
+128 static files copied to '/home/aafak/nginx_apps/django_project_dir/static'.
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ sudo ufw allow 8000
+[sudo] password for aafak:
+Sorry, try again.
+[sudo] password for aafak:
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ gunicorn --bind 0.0.0.0:8000 django_project.wsgi
+[2022-03-31 13:34:36 +0530] [3560060] [INFO] Starting gunicorn 20.1.0
+[2022-03-31 13:34:36 +0530] [3560060] [INFO] Listening at: http://0.0.0.0:8000 (3560060)
+[2022-03-31 13:34:36 +0530] [3560060] [INFO] Using worker: sync
+[2022-03-31 13:34:36 +0530] [3560062] [INFO] Booting worker with pid: 3560062
+Not Found: /static/admin/css/fonts.css
+Not Found: /favicon.ico
+
+Browse: http://172.17.29.165:8000/
+
+
+
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ sudo vim /etc/systemd/system/django-app1.service
+[Unit]
+Description=Django App1
+After=network.target
+
+[Service]
+User=aafak
+Group=www-data
+WorkingDirectory=/home/aafak/nginx_apps/django_project_dir
+ExecStart=/home/aafak/nginx_apps/django_project_dir/django_project_venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind 0.0.0.0:8000 \
+          django_project.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ sudo systemctl start django-app1
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ sudo systemctl enable django-app1
+Created symlink /etc/systemd/system/multi-user.target.wants/django-app1.service → /etc/systemd/system/django-app1.service.
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ sudo systemctl status django-app1
+● django-app1.service - Django App1
+     Loaded: loaded (/etc/systemd/system/django-app1.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-03-31 14:30:46 IST; 38s ago
+   Main PID: 3593598 (gunicorn)
+      Tasks: 4 (limit: 11872)
+     Memory: 87.8M
+     CGroup: /system.slice/django-app1.service
+             ├─3593598 /home/aafak/nginx_apps/django_project_dir/django_project_venv/bin/python3 /home/aafak/nginx_apps/django>
+             ├─3593600 /home/aafak/nginx_apps/django_project_dir/django_project_venv/bin/python3 /home/aafak/nginx_apps/django>
+             ├─3593601 /home/aafak/nginx_apps/django_project_dir/django_project_venv/bin/python3 /home/aafak/nginx_apps/django>
+             └─3593602 /home/aafak/nginx_apps/django_project_dir/django_project_venv/bin/python3 /home/aafak/nginx_apps/django>
+
+Mar 31 14:30:46 aafak-virtual-machine systemd[1]: Started Django App1.
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593598]: [2022-03-31 14:30:46 +0530] [3593598] [INFO] Starting gunicorn 20.1.0
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593598]: [2022-03-31 14:30:46 +0530] [3593598] [INFO] Listening at: http://0.0>
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593598]: [2022-03-31 14:30:46 +0530] [3593598] [INFO] Using worker: sync
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593600]: [2022-03-31 14:30:46 +0530] [3593600] [INFO] Booting worker with pid:>
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593601]: [2022-03-31 14:30:46 +0530] [3593601] [INFO] Booting worker with pid:>
+Mar 31 14:30:46 aafak-virtual-machine gunicorn[3593602]: [2022-03-31 14:30:46 +0530] [3593602] [INFO] Booting worker with pid:>
+
+
+Browse: http://172.17.29.165:8000
+
+
+Add the views:
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project$ mkdir views
+
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project$ ls
+asgi.py  __init__.py  __pycache__  settings.py  urls.py  views  wsgi.py
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project$
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project$ cd views/
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project/views$ cat users.py
+from django.views import View
+from django.http import HttpResponse, JsonResponse
+import json
+from uuid import uuid4
+
+
+class Users(View):
+    http_method_names = ['get', 'post']
+
+    def __init__(self):
+        pass
+
+    def get(self, request):
+        users = [
+            {
+                'id': 1,
+                'name': 'Ajay'
+            },
+            {
+                'id': 2,
+                'name': 'Aman'
+            }
+        ]
+        return JsonResponse(users, safe=False, status=200)
+
+    def post(self, request):
+        request_body = json.loads(request.body)
+        name = request_body['user']['name']
+        id = uuid4()
+        user = {
+            'id': str(id),
+            'name': name
+        }
+        # return HttpResponse(json.dumps(user), 200)
+        return JsonResponse(user, safe=False, status=200)
+
+
+aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir/django_project/$cat urls.py
+
+from django.contrib import admin
+from django.urls import path
+
+
+from .views.users import Users
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/v1/users', Users.as_view(), name='UserView')
+]
+
+
+http://172.17.29.165:8000/api/v1/users
+
+[{"id": 1, "name": "Ajay"}, {"id": 2, "name": "Aman"}]
+
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ pip freeze > requirements.txt
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ ls
+db.sqlite3  django_project  django_project_venv  __init__.py  manage.py  requirements.txt
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$ cat requirements.txt
+asgiref==3.5.0
+backports.zoneinfo==0.2.1
+Django==4.0.3
+gunicorn==20.1.0
+psycopg2-binary==2.9.3
+sqlparse==0.4.2
+(django_project_venv) aafak@aafak-virtual-machine:~/nginx_apps/django_project_dir$
+

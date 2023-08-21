@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  tasks:
+  - name: GET Google
+    uri:
+      url: https://www.google.com
+    environment:
+      http_proxy: web-proxy.in.hpecorp.net:8080
+      https_proxy: web-proxy.in.hpecorp.net:8080     

@@ -1,0 +1,17 @@
+https://docs.djangoproject.com/en/3.0/topics/conditional-view-processing/
+
+   If-Match is most often used with state-changing methods (e.g., POST,
+   PUT, DELETE) to prevent accidental overwrites when multiple user
+   agents might be acting in parallel on the same resource (i.e., to
+
+
+
+
+
+MIDDLEWARE = [
+    'django.middleware.http.ConditionalGetMiddleware',
+    'atlcom.middleware.auth.'
+    'KeystoneTokenValidationMiddleware',
+    'atlcom.middleware.json_converter.'
+    'JsonConverterMiddleware'
+]

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  # # Its deployment metadata
+  name: fastapiapp
+  labels:  # This labels will used by used other component to select it e.g service use this
+    app: fastapiapp  # This should match with select in service
+spec:    # Deployment label spec
+  replicas: 1
+  selector:   # This selector matches the label defined in template
+    matchLabels:
+      app: fastapiapp   # this should match with template->metadata->labels
+  template:    # This template configuration applied to pod
+    metadata:
+      labels:  # This metadata labels used for connecting deployment to pods and service to identify the pods
+        app: fastapiapp  # this should match with spec->elector->matchLabels,  adn service->spec->selector
+    spec:   # pod label spec, blueprint for a pod
+      containers:
+      - name: fastapiapp
+        image: fastapi_app:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000   # should match with target port in service

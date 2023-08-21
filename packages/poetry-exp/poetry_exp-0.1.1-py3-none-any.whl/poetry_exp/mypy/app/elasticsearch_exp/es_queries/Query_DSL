@@ -1,0 +1,686 @@
+# DSL(Domain specific language)
+In Elasticsearch, searching is carried out by using query based on JSON. A query is made up of two clauses −
+
+Leaf Query Clauses − These clauses are match, term or range, which look for a specific value in specific field.
+
+Compound Query Clauses − These queries are a combination of leaf query clauses and other compound
+                         queries to extract the desired information.
+
+1. Leaf Query Clauses:
+
+1.a Match All Query:
+    GET /poc-vms/_search
+    {
+      "query": {
+        "match_all": {}
+      }
+    }
+
+1.b Full Text Queries:
+  These queries are used to search a full body of text like a chapter or a news article.
+  This query works according to the analyser associated with that particular index or document.
+  In this section, we will discuss the different types of full text queries.
+
+  Match query: This query matches a text or phrase with the values of one or more fields.
+                GET /poc-vms/_search
+                {
+                  "query": {
+                    "match": {
+                      "datacenterInfo.name": "Datacenter1"
+                    }
+                  }
+                }
+
+  Multi Match Query: This query matches a text or phrase with more than one field.
+        GET /poc-*/_search
+        {
+          "query": {
+            "multi_match": {
+              "query": "Datastore2",
+              "fields": ["dsInfo.name", "name"]
+            }
+          }
+        }
+
+        Response:
+          {
+              "took" : 9,
+              "timed_out" : false,
+              "_shards" : {
+                "total" : 4,
+                "successful" : 4,
+                "skipped" : 0,
+                "failed" : 0
+              },
+              "hits" : {
+                "total" : {
+                  "value" : 3,
+                  "relation" : "eq"
+                },
+                "max_score" : 2.580217,
+                "hits" : [
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "1770f96b-8abd-4f34-92e6-5aabbd5c12f3",
+                    "_score" : 2.580217,
+                    "_source" : {
+                      "name" : "vm3",
+                      "moref" : "vm-3",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+                        "name" : "Host1"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+                          "name" : "Datastore2"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+                        "name" : "vmFolder1"
+                      }
+                    }
+                  },
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "d30992bf-0064-4ce3-970c-6648d3b6221e",
+                    "_score" : 2.580217,
+                    "_source" : {
+                      "name" : "vm4",
+                      "moref" : "vm-4",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+                        "name" : "Host1"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+                          "name" : "Datastore2"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+                        "name" : "vmFolder1"
+                      }
+                    }
+                  },
+                  {
+                    "_index" : "poc-datastores",
+                    "_type" : "_doc",
+                    "_id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+                    "_score" : 2.4849067,
+                    "_source" : {
+                      "name" : "Datastore2",
+                      "moref" : "ds-2",
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : [
+                        {
+                          "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+                          "name" : "Host1"
+                        }
+                      ],
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "folderInfo" : {
+                        "id" : "86432081-30a8-4fd4-8668-1220350e4a81",
+                        "name" : "dsFolder1"
+                      }
+                    }
+                  }
+                ]
+              }
+        }
+
+  Query String Query: This query uses query parser and query_string keyword.
+        GET /poc-vms/_search
+        {
+          "query": {
+            "query_string": {
+              "query": "vcenterInfo.name:vcenter1 AND (dsInfo.name:Datastore2 OR dsInfo.name:Datastore3)"
+            }
+          }
+        }
+
+        Response:
+        {
+              "took" : 1,
+              "timed_out" : false,
+              "_shards" : {
+                "total" : 1,
+                "successful" : 1,
+                "skipped" : 0,
+                "failed" : 0
+              },
+              "hits" : {
+                "total" : {
+                  "value" : 4,
+                  "relation" : "eq"
+                },
+                "max_score" : 2.5954843,
+                "hits" : [
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "1770f96b-8abd-4f34-92e6-5aabbd5c12f3",
+                    "_score" : 2.5954843,
+                    "_source" : {
+                      "name" : "vm3",
+                      "moref" : "vm-3",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+                        "name" : "Host1"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+                          "name" : "Datastore2"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+                        "name" : "vmFolder1"
+                      }
+                    }
+                  },
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "d30992bf-0064-4ce3-970c-6648d3b6221e",
+                    "_score" : 2.5954843,
+                    "_source" : {
+                      "name" : "vm4",
+                      "moref" : "vm-4",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+                        "name" : "Host1"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+                          "name" : "Datastore2"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+                        "name" : "vmFolder1"
+                      }
+                    }
+                  },
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "d3865069-d5a0-4e59-a1fe-d2d40389b772",
+                    "_score" : 2.5954843,
+                    "_source" : {
+                      "name" : "vm5",
+                      "moref" : "vm-5",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "82488f1b-5fad-425c-a725-9ca349d06314",
+                        "name" : "Host2"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "c4b79e08-4a93-48ff-8454-336b6f0f5db9",
+                          "name" : "Datastore3"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "a8354fec-d620-4bb1-b8ae-7df6517383b5",
+                        "name" : "vmFolder2"
+                      }
+                    }
+                  },
+                  {
+                    "_index" : "poc-vms",
+                    "_type" : "_doc",
+                    "_id" : "d41fbf12-5f4b-4bc0-8217-0dfaabe90b18",
+                    "_score" : 2.5954843,
+                    "_source" : {
+                      "name" : "vm6",
+                      "moref" : "vm-6",
+                      "vcenterInfo" : {
+                        "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+                        "name" : "vcenter1"
+                      },
+                      "datacenterInfo" : {
+                        "moref" : "datacenter-1",
+                        "name" : "Datacenter1"
+                      },
+                      "clusterInfo" : {
+                        "moref" : "domain-c1",
+                        "name" : "Cluster1"
+                      },
+                      "esxInfo" : {
+                        "id" : "82488f1b-5fad-425c-a725-9ca349d06314",
+                        "name" : "Host2"
+                      },
+                      "dsInfo" : [
+                        {
+                          "id" : "c4b79e08-4a93-48ff-8454-336b6f0f5db9",
+                          "name" : "Datastore3"
+                        }
+                      ],
+                      "folderInfo" : {
+                        "id" : "a8354fec-d620-4bb1-b8ae-7df6517383b5",
+                        "name" : "vmFolder2"
+                      }
+                    }
+                  }
+                ]
+              }
+        }
+
+  Term Level Queries: These queries mainly deal with structured data like numbers, dates and enums.
+  Note: [term] query doesn't support multiple fields and query does not support multiple term clouse
+      GET /poc-vms/_search
+        {
+          "query": {
+            "term": {
+              "dsInfo.id.keyword": {
+                "value": "c91dda5c-93e4-48c1-8e3b-37b49edeae31"
+              }
+            }
+          }
+        }
+
+       OR
+
+        GET /poc-vms/_search
+        {
+           "query":{
+              "term":{"dsInfo.id.keyword": "c91dda5c-93e4-48c1-8e3b-37b49edeae31"}
+           }
+        }
+
+
+  Range Query: This query is used to find the objects having values between the ranges of values given.
+              For this, we need to use operators such as −
+
+        gte − greater than equal to
+        gt − greater-than
+        lte − less-than equal to
+        lt − less-than
+        For example, observe the code given below −
+
+        POST /schools*/_search
+        {
+           "query":{
+              "range":{
+                 "rating":{
+                    "gte":3.5
+                 }
+              }
+           }
+        }
+
+
+2. Compound Queries:
+These queries are a collection of different queries merged with each other by using Boolean operators like and,
+or, not or for different indices or having function calls etc.
+
+
+GET /poc-vms/_search
+{
+   "query": {
+      "bool" : {
+         "must" : {
+            "term" : { "vcenterInfo.name.keyword" : "vcenter1"}
+         },
+         "filter": {
+            "term" : { "dsInfo.name.keyword": "Datastore1"}
+         }
+      }
+   }
+}
+
+Response:
+{
+  "took" : 0,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 2,
+      "relation" : "eq"
+    },
+    "max_score" : 0.015267472,
+    "hits" : [
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "94814a97-5514-414e-9fc2-be839694ce0e",
+        "_score" : 0.015267472,
+        "_source" : {
+          "name" : "vm1",
+          "moref" : "vm-1",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "c91dda5c-93e4-48c1-8e3b-37b49edeae31",
+              "name" : "Datastore1"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      },
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "688ea103-0e1f-45b3-a5a9-c3625df6f90b",
+        "_score" : 0.015267472,
+        "_source" : {
+          "name" : "vm2",
+          "moref" : "vm-2",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "c91dda5c-93e4-48c1-8e3b-37b49edeae31",
+              "name" : "Datastore1"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      }
+    ]
+  }
+}
+
+
+Terms:
+GET /poc-vms/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "vcenterInfo.name.keyword": ["vcenter1"]
+          }
+        },
+        {
+          "terms": {
+            "dsInfo.name.keyword": ["Datastore1", "Datastore2"]
+          }
+        }
+      ]
+    }
+  }
+}
+
+Response:
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 4,
+      "relation" : "eq"
+    },
+    "max_score" : 2.0,
+    "hits" : [
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "94814a97-5514-414e-9fc2-be839694ce0e",
+        "_score" : 2.0,
+        "_source" : {
+          "name" : "vm1",
+          "moref" : "vm-1",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "c91dda5c-93e4-48c1-8e3b-37b49edeae31",
+              "name" : "Datastore1"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      },
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "688ea103-0e1f-45b3-a5a9-c3625df6f90b",
+        "_score" : 2.0,
+        "_source" : {
+          "name" : "vm2",
+          "moref" : "vm-2",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "c91dda5c-93e4-48c1-8e3b-37b49edeae31",
+              "name" : "Datastore1"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      },
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "1770f96b-8abd-4f34-92e6-5aabbd5c12f3",
+        "_score" : 2.0,
+        "_source" : {
+          "name" : "vm3",
+          "moref" : "vm-3",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+              "name" : "Datastore2"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      },
+      {
+        "_index" : "poc-vms",
+        "_type" : "_doc",
+        "_id" : "d30992bf-0064-4ce3-970c-6648d3b6221e",
+        "_score" : 2.0,
+        "_source" : {
+          "name" : "vm4",
+          "moref" : "vm-4",
+          "vcenterInfo" : {
+            "id" : "d8deb0f7-5822-408d-816b-0bd621271375",
+            "name" : "vcenter1"
+          },
+          "datacenterInfo" : {
+            "moref" : "datacenter-1",
+            "name" : "Datacenter1"
+          },
+          "clusterInfo" : {
+            "moref" : "domain-c1",
+            "name" : "Cluster1"
+          },
+          "esxInfo" : {
+            "id" : "d13dcf3a-b9ae-4341-aed2-9788d6dcbcdc",
+            "name" : "Host1"
+          },
+          "dsInfo" : [
+            {
+              "id" : "bffab3d9-0b69-4d26-99fe-7bfd89846459",
+              "name" : "Datastore2"
+            }
+          ],
+          "folderInfo" : {
+            "id" : "780759f4-a3ed-4f37-bd86-552b090edf8e",
+            "name" : "vmFolder1"
+          }
+        }
+      }
+    ]
+  }
+}

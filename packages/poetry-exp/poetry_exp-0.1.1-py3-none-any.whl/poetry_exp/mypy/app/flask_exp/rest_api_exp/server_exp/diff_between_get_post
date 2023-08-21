@@ -1,0 +1,10 @@
+When the method is GET, all form data is encoded into the URL, appended to the action URL as query string parameters.
+With POST, form data appears within the message body of the HTTP request.
+
+In GET method, the parameter data is limited to what we can stuff into the request line (URL).
+Safest to use less than 2K of parameters, some servers handle up to 64K.
+No such problem in POST method since we send data in message body of the HTTP request, not the URL.
+
+Only ASCII characters are allowed for data to be sent in GET method.There is no such restriction in POST method.
+GET is less secure compared to POST because data sent is part of the URL.
+So, GET method should not be used when sending passwords or other sensitive information.

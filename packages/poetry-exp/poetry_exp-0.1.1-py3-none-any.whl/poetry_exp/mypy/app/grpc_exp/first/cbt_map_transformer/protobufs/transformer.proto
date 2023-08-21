@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message CBTMapTransformerRequest {
+  string cbt_map_file_path = 1;
+}
+
+message CBTMapTransformerResponse {
+  string transformed_map_file_path = 1;
+}
+
+service CBTMapTransformer {
+  rpc Transform (CBTMapTransformerRequest) returns (CBTMapTransformerResponse);
+}
+
+// cd transformer
+// python -m grpc_tools.protoc -I ../protobufs --python_out=. --grpc_python_out=. ../protobufs/transformer.proto
+// it will create two new py files inside transformer(transformer_pb2.py, transformer_pb2_grpc.py)

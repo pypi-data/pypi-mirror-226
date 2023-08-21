@@ -1,0 +1,52 @@
+A clone is a copy of an existing virtual machine.
+When the cloning operation is complete, the clone is a separate virtual machine
+though it may share virtual disks with the parent virtual machine:
+
+Changes made to a clone do not affect the parent virtual machine.
+
+There are two types of clone:
+
+The Full Clone: A full clone is an independent copy of a virtual machine that shares nothing
+with the parent virtual machine after the cloning operation.
+Ongoing operation of a full clone is entirely separate from the parent virtual machine.
+
+
+The Linked Clone — A linked clone is a copy of a virtual machine that shares virtual disks
+ with the parent virtual machine in an ongoing manner. This conserves disk space,
+ and allows multiple virtual machines to use the same software installation.
+
+
+Difference Between Full Clone and Linked Clone
+A full clone is an independent virtual machine, with no need to access the parent.
+A linked clone must have continued access to the parent. Without access to the parent,
+a linked clone is disabled. See Linked Clone and Access to the Parent Virtual Machine
+
+A linked clone is made from a snapshot of the parent.
+all files available on the parent at the moment of the snapshot continue to remain available to the linked clone.
+Ongoing changes to the virtual disk of the parent do not affect the linked clone,
+and changes to the disk of the linked clone do not affect the parent.
+
+Benefits of Full Clones
+Full clones do not require an ongoing connection to the parent virtual machine.
+Overall performance of a full clone is the same as a never-cloned virtual machine,
+while a linked clone trades potential performance degradation for a guaranteed conservation
+of disk space. If you are focused on performance, you should prefer a full clone over a linked clone.
+
+Benefits of Linked Clones
+Linked clones are created swiftly. A full clone can take several minutes if the files involved are large.
+A linked clone lowers the barriers to creating new virtual machines, so you might swiftly and easily create a unique virtual machine for each task you have.
+
+Another benefit of linked clones is that they are easier to share.
+If a group of people needs to access the same virtual disks,
+then the people can easily pass around clones with references to those virtual disks.
+For example, a support team can reproduce a bug in a linked clone and then just email that linked clone to development.
+ This is feasible only when a virtual machine isn't gigabytes in size.
+
+Create a Linked Clone:
+
+1. Select the virtual machine to use as a parent of your linked clone.
+2. Verify that the parent has at least one snapshot. Open the snapshot manager and create a snapshot if none exists.
+3. Verify that template mode has been enabled.
+4. With the virtual machine still selected, launch the Clone Virtual Machine Wizard.
+5. Click Next to display the Clone Source panel.
+6. Select a snapshot from the drop-down menu and click Next.

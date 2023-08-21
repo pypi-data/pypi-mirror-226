@@ -1,0 +1,50 @@
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl apply -f deploy/
+deployment.apps/fastapi-app unchanged
+ingress.networking.k8s.io/fastapi-app-ingress created
+service/fastapi-app-service unchanged
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl get ing
+NAME                  CLASS   HOSTS            ADDRESS   PORTS   AGE
+fastapi-app-ingress   nginx   fastapiapp.com             80      21s
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl describe ing
+Name:             fastapi-app-ingress
+Namespace:        default
+Address:          10.111.70.159
+Default backend:  fastapi-app-service:8000 (10.244.0.34:8000)
+Rules:
+  Host            Path  Backends
+  ----            ----  --------
+  fastapiapp.com
+                  /users   fastapi-app-service:8000 (10.244.0.34:8000)
+Annotations:      ingressClassName: nginx
+Events:
+  Type    Reason  Age                    From                      Message
+  ----    ------  ----                   ----                      -------
+  Normal  Sync    5m19s (x2 over 5m51s)  nginx-ingress-controller  Scheduled for sync
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ sudo vim /etc/host
+host.conf    hostid       hostname     hosts        hosts.allow  hosts.deny
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ sudo vim /etc/hosts
+[sudo] password for aafak:
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ sudo vim /etc/hosts
+172.17.81.12    fastapiapp.com
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ ping fastapiapp.com
+PING fastapiapp.com (172.17.81.12) 56(84) bytes of data.
+64 bytes from fastapiapp.com (172.17.81.12): icmp_seq=1 ttl=64 time=0.069 ms
+64 bytes from fastapiapp.com (172.17.81.12): icmp_seq=2 ttl=64 time=0.060 ms
+64 bytes from fastapiapp.com (172.17.81.12): icmp_seq=3 ttl=64 time=0.056 ms
+64 bytes from fastapiapp.com (172.17.81.12): icmp_seq=4 ttl=64 time=0.106 ms
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl get ing
+NAME                  CLASS   HOSTS            ADDRESS         PORTS   AGE
+fastapi-app-ingress   nginx   fastapiapp.com   10.111.70.159   80      2m9s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl get ing
+NAME                  CLASS   HOSTS            ADDRESS         PORTS   AGE
+fastapi-app-ingress   nginx   fastapiapp.com   10.111.70.159   80      2m11s
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$
+
+Browse:
+  http://fastapiapp.com/users

@@ -1,0 +1,8 @@
+import re
+secondaryName='ada4s1'
+diskname='ada4'
+find_list = re.findall('\\b'+secondaryName+'\\b', diskname)
+print (find_list)  
+
+if len(find_list) > 0:
+  print (find_list)  

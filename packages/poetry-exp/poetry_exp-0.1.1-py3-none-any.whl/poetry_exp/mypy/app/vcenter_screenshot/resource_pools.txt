@@ -1,0 +1,62 @@
+Resource pools can be grouped into hierarchies and used to hierarchically partition available CPU and memory resources.
+
+
+Resource Pool provides better control of cluster resource by using Shares, Limits, and Reservations on CPU and RAM usage
+
+you can specify reservation, limit, shares, and whether the reservation should be expandable.
+The resource pool resources are then available to child resource pools and virtual machines.
+
+To configure Resource Pools you need to enable VMware Distributed Resource Scheduler (DRS) on a cluster.
+DRS is available in vSphere Enterprise and Enterprise Plus editions.
+
+Advantage of using resource pools:
+Prioritizing VMs.
+Selling resource inside or outside an organization.
+Performance Isolation - for example when you have Test/Dev, Prod and also some really crucial VMs
+(like Business Critical Application (BCA), you can use Resource Pool to isolate/guarantee performance.
+
+
+Shares
+Shares specify the relative priority or importance of a virtual machine (or resource pool).
+For example, if a virtual machine has triple as many shares of a resource as another virtual machine,
+it is entitled to consume triple as much of that resource when these two virtual machines are competing for resources
+. Shares are typically specified as High, Normal, or Low and these values specify share values with a 4:2:1 ratio,
+respectively. You can also specify Custom as well.
+
+Shares only come into play when there is resource contention (Memory or CPU).
+
+Limits
+Limits specify the maximum resource usage. A server can allocate more than the reservation to a virtual machine,
+but never allocates more than the limit, even if there are unused resources on the system. Assigning a limit is useful
+If you start with a small number of virtual machines and want to manage user expectations.
+However, you could waste idle resources if you specify a limit.
+
+Reservations
+Reservations establish a minimum guarantee of resource usage.
+For example, if you have fours VMs belonging to Resource Pool with RAM reservation set to 4 GB,
+the resource pool guarantees the concurrent RAM usage of all VMs in the pool to a minimum of 4 GB jointly.
+It means that if VM1 is using only 0.5GB, VM2 and VM3 is using  2GB (1 GB each), VM4 can use 1.5GB.
+
+Shares, Reservations, and Limits can also be set on a per-VM basis.
+
+
+Another articale:
+A VMware ESX Resource pool is a pool of CPU and memory resources.
+Inside the pool, resources are allocated based on the CPU and memory shares that are defined.
+This pool can have associated access control and permissions.
+
+You would want to use a pool to ensure that CPU and RAM resources are allocated fairly across systems
+or to ensure that certain systems are giving the resources they need to perform the tasks that
+the application on that server demand.
+
+Inside VMware Virtual Center, Resource pools will be shown with the “pie chart” icon, like this:
+
+
+Resource pools can be contained inside Clusters. Clusters contain hosts or resource pools, and and
+“Datacenters” contain Hosts and Clusters.
+
+When setting up a resource pool, you must configure the limit, reservation, and share settings
+for both CPU & Memory for all virtual guest machines in the pool. Here is what that configuration windows looks like:
+
+Back on the Resource Allocation tab for that resource pool, you can see a summary of the resources used by
+ ach VM and how that related to the resource pool:

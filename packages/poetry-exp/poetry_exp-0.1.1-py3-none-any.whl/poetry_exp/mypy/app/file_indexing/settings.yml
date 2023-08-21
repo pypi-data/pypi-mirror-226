@@ -1,0 +1,30 @@
+elasticsearch:
+  bulk_size: 100
+  byte_size: 10mb
+  flush_interval: 5s
+  nodes:
+  - url: http://172.17.29.167:9300
+fs:
+  add_as_inner_object: false
+  add_filesize: true
+  attributes_support: false
+  continue_on_error: false
+  excludes:
+  - /mnt/Windows/*
+  filename_as_id: false
+  follow_symlinks: false
+  index_content: false
+  index_folders: true
+  json_support: false
+  lang_detect: false
+  ocr:
+    enabled: true
+    language: eng
+    pdf_strategy: ocr_and_text
+  raw_metadata: false
+  remove_deleted: true
+  store_source: false
+  update_rate: 15m
+  url: /mnt/aafak1
+  xml_support: false
+name: test_fi

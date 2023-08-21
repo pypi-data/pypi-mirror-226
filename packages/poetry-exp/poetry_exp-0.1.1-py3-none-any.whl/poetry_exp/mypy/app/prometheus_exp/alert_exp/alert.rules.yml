@@ -1,0 +1,13 @@
+# alert.rules.yml
+groups:
+  - name: example_alerts
+    rules:
+      - alert: vmware_vcentre_reg_failure
+        expr: hm_register_failure_alert==1
+        labels:
+          severity: critical
+          source: cloud
+          owner: glbr-vmware-protection
+        annotations:
+          summary: 'vCenter register failed'
+          description: 'vCenter register failure alert'

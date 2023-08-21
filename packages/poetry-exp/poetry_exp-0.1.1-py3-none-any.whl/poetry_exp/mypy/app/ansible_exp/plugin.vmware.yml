@@ -1,0 +1,12 @@
+plugin: vmware_vm_inventory
+strict: False
+hostname: 172.17.29.162
+username: administrator@vsphere.local
+password: 12rmc*Help
+#proxy_host: web-proxy.in.hpecorp.net
+#proxy_port: 8080
+validate_certs: False
+with_tags: True
+environment:
+  http_proxy: web-proxy.in.hpecorp.net:8080
+  https_proxy: web-proxy.in.hpecorp.net:8080

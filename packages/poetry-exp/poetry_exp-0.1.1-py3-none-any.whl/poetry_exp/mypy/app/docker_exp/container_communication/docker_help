@@ -1,0 +1,525 @@
+https://www.tutorialworks.com/container-networking/
+https://www.tutorialworks.com/container-networking/#how-do-containers-communicate
+
+https://runnable.com/docker/python/docker-compose-with-flask-apps
+
+If you are running more than one container, you can let your containers communicate
+with each other by attaching them to the same network.
+
+A Docker network lets your containers communicate with each other
+Docker creates virtual networks which let your containers talk to each other.
+In a network, a container has an IP address, and optionally a hostname.
+
+You can create different types of networks depending on what you would like to do. We’ll cover the easiest options:
+
+1. The default bridge network: which allows simple container-to-container communication by IP address,
+ and is created by default.
+
+2. A user-defined bridge network: which you create yourself, and allows your containers
+ to communicate with each other, by using their container name as a hostname.
+
+
+The simplest network in Docker is the bridge network. It’s also Docker’s default networking driver.
+
+A bridge network gives you simple communication between containers on the same host.
+When Docker starts up, it will create a default network called… bridge.
+It should start automatically, without any configuration required by you.
+From that point onwards, all containers are added into to the bridge network, unless you say otherwise.
+
+In a bridge network, each container is assigned its own IP address.
+So containers can communicate with each other by IP.
+
+
+For containers to communicate with other, they need to be part of the same “network”.
+
+Docker creates a virtual network called bridge by default, and connects your containers to it.
+
+In the network, containers are assigned an IP address, which they can use to address each other.
+
+If you want more control (and you definitely do), you can create a user-defined bridge,
+which will give you the added benefit of hostnames for your containers too.
+
+Build and run the DB server:
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker build -t db_server:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+Sending build context to Docker daemon  5.632kB
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> 24f7553f3872
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> 4cd7e7ec44f7
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> a44756607c13
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/db_server
+ ---> Using cache
+ ---> f3128bc9ca4f
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> e3fdf92c4168
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> e5aaac8346dd
+Step 9/11 : ADD ./db_server.py $APP_ROOT_DIR/db_server.py
+ ---> 1e93927311f6
+Step 10/11 : EXPOSE 5002
+ ---> Running in 6bda834035b6
+Removing intermediate container 6bda834035b6
+ ---> 15534dd8c0c6
+Step 11/11 : ENTRYPOINT ["python3", "db_server.py"]
+ ---> Running in 30289719efbf
+Removing intermediate container 30289719efbf
+ ---> 305c20627541
+Successfully built 305c20627541
+Successfully tagged db_server:v1
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker run -p 5002:5002 -d --name db_server db_server:v1
+f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker logs -f db_server
+Starting the DB Server on port 5002
+^C
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ curl -X GET http://127.0.0.1:5002/users            [{"id": 1, "name": "Admin"}]aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$
+[{"id": 1, "name": "Admin"}]
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED         STATUS         PORTS                                                                                                                                  NAMES
+f7da595daf78   db_server:v1                          "python3 db_server.py"   3 minutes ago   Up 3 minutes   0.0.0.0:5002->5002/tcp, :::5002->5002/tcp                                                                                              db_server
+3d6686c048b7   gcr.io/k8s-minikube/kicbase:v0.0.27   "/usr/local/bin/entr…"   5 days ago      Up 4 days      127.0.0.1:49167->22/tcp, 127.0.0.1:49166->2376/tcp, 127.0.0.1:49165->5000/tcp, 127.0.0.1:49164->8443/tcp, 127.0.0.1:49163->32443/tcp   minikube
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ docker inspect network bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "a8087e7fb82f869d500a31b3308e34dec43d25dd280a74c5a2111154b1c52057",
+        "Created": "2021-09-23T12:28:13.227648566+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82": {
+                "Name": "db_server",
+                "EndpointID": "c9822a6e75172e216012353e305c3ca42550c577b89dd4d4c2fbadba0d93b5c1",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+Error: No such object: network
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$ curl -X GET http://172.18.0.2:5002/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/dbserver$
+
+
+
+**************Now build and run the Api server
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker build -t api_server:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+Sending build context to Docker daemon  6.656kB
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> 24f7553f3872
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> b54a55d46a9f
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> 8fd18b772430
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/api_server
+ ---> Using cache
+ ---> 995bfff8bd2d
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> 7b3d917a5247
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> 0f9618aabc0a
+Step 9/11 : ADD ./api_server.py $APP_ROOT_DIR/api_server.py
+ ---> dff969f97094
+Step 10/11 : EXPOSE 5003
+ ---> Running in 1cebbfac7536
+Removing intermediate container 1cebbfac7536
+ ---> f998624b3ccb
+Step 11/11 : ENTRYPOINT ["python3", "api_server.py"]
+ ---> Running in 67af69a3f55f
+Removing intermediate container 67af69a3f55f
+ ---> 879157e3ab3d
+Successfully built 879157e3ab3d
+Successfully tagged api_server:v1
+
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker run -p 5003:5003 -d --name api_server api_server:v1
+db81f88a18007f40689fd78e8f91acf8e8e1987b18c66251a2327c8385d3df0c
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker logs api_server
+Starting the Api Server on port 5003
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ curl -X GET http://127.0.0.1:5003/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker logs -f api_server
+Starting the Api Server on port 5003
+[Server2]: Fetching the page from server1 running n another container....
+[Server2]: Response from server1: <Response [200]>, [{"id": 1, "name": "Admin"}]
+172.18.0.1 - - [2021-09-28 09:25:59] "GET /users HTTP/1.1" 200 144 0.014240
+^C
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker logs -f db_server
+Starting the DB Server on port 5002
+[DBServer]: Fetching the users....
+172.18.0.1 - - [2021-09-28 09:11:57] "GET /users HTTP/1.1" 200 144 0.003089
+[DBServer]: Fetching the users....
+172.18.0.1 - - [2021-09-28 09:15:27] "GET /users HTTP/1.1" 200 144 0.002532
+[DBServer]: Fetching the users....
+172.18.0.3 - - [2021-09-28 09:25:59] "GET /users HTTP/1.1" 200 144 0.002389
+^C
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ ^C
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$
+
+
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ ^C
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker network inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "a8087e7fb82f869d500a31b3308e34dec43d25dd280a74c5a2111154b1c52057",
+        "Created": "2021-09-23T12:28:13.227648566+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "db81f88a18007f40689fd78e8f91acf8e8e1987b18c66251a2327c8385d3df0c": {
+                "Name": "api_server",
+                "EndpointID": "adcdcd9b793e61e092c7f3f00f6e7c5103a557c8a56f705b9d785ab1bb2a2eb9",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82": {
+                "Name": "db_server",
+                "EndpointID": "c9822a6e75172e216012353e305c3ca42550c577b89dd4d4c2fbadba0d93b5c1",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ curl -X GET http://172.18.0.3:5003/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ curl -X GET http://172.18.0.2:5002/users
+[{"id": 1, "name": "Admin"}]
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$
+
+
+
+A bridge network gives you simple communication between containers on the same host.
+When Docker starts up, it will create a default network called… bridge.
+It should start automatically, without any configuration required by you.
+From that point onwards, all containers are added into to the bridge network, unless you say otherwise.
+
+In a bridge network, each container is assigned its own IP address.
+So containers can communicate with each other by IP.
+
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication/apiserver$ docker inspect db_server
+[
+    {
+        "Id": "f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82",
+        "Created": "2021-09-28T09:11:27.90377175Z",
+        "Path": "python3",
+        "Args": [
+            "db_server.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2013777,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2021-09-28T09:11:29.358870414Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:305c20627541ccdb8853ab1017e6e6705507e6ad6e8de68ffd972a7cee88dfb5",
+        "ResolvConfPath": "/var/lib/docker/containers/f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82/hostname",
+        "HostsPath": "/var/lib/docker/containers/f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82/hosts",
+        "LogPath": "/var/lib/docker/containers/f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82/f7da595daf7898bf8f88f17fddd8a4ad8971c1d7dac2576acae46c3e689cbf82-json.log",
+        "Name": "/db_server",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "5002/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5002"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/5694a1893368ded86be158498eab66c1e003c5192b8b8066a7ccb71cfbee2857-init/diff:/var/lib/docker/overlay2/4e0a68b9722616cc7901163aa5a1e895998fa73ad46dea518178b03a5d88b9e9/diff:/var/lib/docker/overlay2/073980e6a7c2b3cf074a74efe28c2e99c2e46660202821d27012011ac58d69ac/diff:/var/lib/docker/overlay2/3dc425b8318444c1f74b2969936e43ebf5848dfea729acc5e80a165c6d3e3a8f/diff:/var/lib/docker/overlay2/f5539ec523c45e6f49f708f42c9ef991e24b0bce255da4ed42301c9890a884d7/diff:/var/lib/docker/overlay2/fbdcafa7ee1fa44034cc4cfcc4045bda2df22f743ad723a06a5758f175780d70/diff:/var/lib/docker/overlay2/16c2499cefeaf73cfb552e012e6ec9371817c4a5a1889e79c0fa997631b00f2e/diff:/var/lib/docker/overlay2/e228e49b6a37e1b8d185c32b295999e6ea3c6dd61e9151a0ee1a1c0118bd280a/diff:/var/lib/docker/overlay2/6ca9647c224ebcc03b287bf41e049de7ae69ec91aa6beec4135b3be9dc61cde4/diff:/var/lib/docker/overlay2/4dab02a4db46919b274a0c2e98d2df4f256110eaea2cf2890d4bc896d80d7f84/diff:/var/lib/docker/overlay2/8cbaca10fa34a344ed3f5e897c3a8a51f99d1818c6b03349d3e1aa2358fbe452/diff:/var/lib/docker/overlay2/c6c04e6a173f62805bc47623c8826e4d953c35a4607d50cd3d9eb06b031c13b1/diff:/var/lib/docker/overlay2/3d5774ce3c93e99db488aae01b9d81c2596d16cc882d316753bcf873e3df5d32/diff:/var/lib/docker/overlay2/dd9db78918edda75fba3e5fe87ec9d55a67694d307f3f4634cdca0601bf77ae8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/5694a1893368ded86be158498eab66c1e003c5192b8b8066a7ccb71cfbee2857/merged",
+                "UpperDir": "/var/lib/docker/overlay2/5694a1893368ded86be158498eab66c1e003c5192b8b8066a7ccb71cfbee2857/diff",
+                "WorkDir": "/var/lib/docker/overlay2/5694a1893368ded86be158498eab66c1e003c5192b8b8066a7ccb71cfbee2857/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "f7da595daf78",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5002/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "HTTP_PROXY=http://web-proxy.in.hpecorp.net:8080",
+                "http_proxy=http://web-proxy.in.hpecorp.net:8080",
+                "HTTPS_PROXY=http://web-proxy.in.hpecorp.net:8080",
+                "https_proxy=http://web-proxy.in.hpecorp.net:8080",
+                "NO_PROXY=*.test.example.com,.example2.com,127.0.0.0/8",
+                "no_proxy=*.test.example.com,.example2.com,127.0.0.0/8",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
+                "PYTHON_VERSION=3.8.12",
+                "PYTHON_PIP_VERSION=21.2.4",
+                "PYTHON_SETUPTOOLS_VERSION=57.5.0",
+                "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py",
+                "PYTHON_GET_PIP_SHA256=fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONPATH=:/usr/src/db_server"
+            ],
+            "Cmd": null,
+            "Image": "db_server:v1",
+            "Volumes": null,
+            "WorkingDir": "/usr/src/db_server",
+            "Entrypoint": [
+                "python3",
+                "db_server.py"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "0d9e7c942e737c3f4410b90f38212bf051520e73f6c04c4c2d24627a605a3e5d",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "5002/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5002"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5002"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/0d9e7c942e73",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c9822a6e75172e216012353e305c3ca42550c577b89dd4d4c2fbadba0d93b5c1",
+            "Gateway": "172.18.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.18.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:12:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "a8087e7fb82f869d500a31b3308e34dec43d25dd280a74c5a2111154b1c52057",
+                    "EndpointID": "c9822a6e75172e216012353e305c3ca42550c577b89dd4d4c2fbadba0d93b5c1",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

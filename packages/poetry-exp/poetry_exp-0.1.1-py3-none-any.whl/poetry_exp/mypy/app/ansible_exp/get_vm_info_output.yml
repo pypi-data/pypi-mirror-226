@@ -1,0 +1,98 @@
+aafak@aafak-virtual-machine:~/aafak/ansible_exp$ ansible-playbook get_vm_info.yml
+[WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+PLAY [Getting inventory details from VMWare vCenter] ***************************************************************************
+
+TASK [Gathering specific VM info from datacenter] ******************************************************************************
+ok: [localhost]
+
+TASK [debug] *******************************************************************************************************************
+ok: [localhost] => {
+    "vminfo": {
+        "changed": false,
+        "failed": false,
+        "instance": {
+            "config": {
+                "hardware": {
+                    "memoryMB": 8192
+                }
+            },
+            "guest": {
+                "disk": [
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 25973477376,
+                        "diskPath": "/",
+                        "filesystemType": null,
+                        "freeSpace": 18809634816,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 296236032,
+                        "diskPath": "/boot",
+                        "filesystemType": null,
+                        "freeSpace": 189473792,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 75125227520,
+                        "diskPath": "/log_dump",
+                        "filesystemType": null,
+                        "freeSpace": 75091345408,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 7264002048,
+                        "diskPath": "/tmp",
+                        "filesystemType": null,
+                        "freeSpace": 6837964800,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 80491315200,
+                        "diskPath": "/catalogue",
+                        "filesystemType": null,
+                        "freeSpace": 80345407488,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 16095641600,
+                        "diskPath": "/var/log",
+                        "filesystemType": null,
+                        "freeSpace": 16052383744,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 25973477376,
+                        "diskPath": "/var/lib/docker/containers",
+                        "filesystemType": null,
+                        "freeSpace": 18809634816,
+                        "mappings": []
+                    },
+                    {
+                        "_vimtype": "vim.vm.GuestInfo.DiskInfo",
+                        "capacity": 25973477376,
+                        "diskPath": "/var/lib/docker/overlay2",
+                        "filesystemType": null,
+                        "freeSpace": 18809634816,
+                        "mappings": []
+                    }
+                ]
+            },
+            "overallStatus": "green"
+        }
+    }
+}
+
+PLAY RECAP *********************************************************************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+aafak@aafak-virtual-machine:~/aafak/ansible_exp$

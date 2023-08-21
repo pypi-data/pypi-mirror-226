@@ -1,0 +1,16 @@
+[Unit]
+Description=Djangoi REST API App
+After=network.target
+
+[Service]
+User=aafak
+Group=www-data
+WorkingDirectory=/home/aafak/rest_api_app/
+ExecStart=/home/aafak/rest_api_app/rest_api_app_venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind 127.0.0.1:8001 \
+          app.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+syntax = "proto3";
+// The greeting service definition.
+service Backup {
+  // Sends a greeting
+  rpc Create (BackupRequest) returns (BackupResponse) {}
+}
+
+// The request message containing the user's name.
+message BackupRequest {
+  string name = 1;
+  string description = 2;
+  int32 retention = 3;
+  string retentionUnit = 4;
+  string resourceId = 5;
+}
+
+// The response message containing the greetings
+message BackupResponse {
+  string taskId = 1;
+}

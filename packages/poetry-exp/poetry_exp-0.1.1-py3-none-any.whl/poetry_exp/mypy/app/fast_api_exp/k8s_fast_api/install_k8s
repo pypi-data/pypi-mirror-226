@@ -1,0 +1,244 @@
+k8s tutorial:
+https://admintuts.net/server-admin/how-to-install-kubernetes-flannel-on-ubuntu-18-04/
+k8s: is open source Container orchestrations (provide auto scaling, rolling upgrade)
+k8s full course:
+https://www.youtube.com/watch?v=X48VuDVv0do&list=RDCMUCdngmbVKX1Tgre699-XLlUA&start_radio=1&rv=X48VuDVv0do&t=2869&t=2869
+https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/release/kubernetes-manifests.yaml
+
+istio:
+https://www.youtube.com/watch?v=voAyroDb6xk
+
+https://www.youtube.com/watch?v=X48VuDVv0do&list=RDCMUCdngmbVKX1Tgre699-XLlUA&start_radio=1&rv=X48VuDVv0do&t=2869&t=2869
+https://www.youtube.com/watch?v=voAyroDb6xk
+
+Master Process:
+  API Server: Takes the request from user, can be CLI(kubectl)
+  Controller Manager: Mainatins the state of cluster, instruct the schedule to re-created the pod
+  Scheduler: Schedule the creation of pod to different pod based on the resource usage
+  etcd: key value pair maintains cluster DB states and configuraion, all cluster changes get stored in etcd
+
+Worker Process:
+  Kubelet: Interact with container environmenr and create the pod
+  kubeproxy: For communicating with other node services
+  container environement: e.d docker
+
+Deployment: abstraction over pods, manages pods, its a blueprint for pods
+Pod: Abstraction over containers
+Service: To access the application running in the pod from outside the cluster
+Ingress: Routing the traffic from outside to the cluster
+
+
+Config files:
+  Metadata:
+  Spec: Deployment and pod spec
+  Status: Get automatically updated
+
+  template configuration applied to POD:
+
+
+Why service needed: (service, just an abstraction layer, reprenest the ip address)
+  AS we know, each pod has its own IP address, and pods goes and back frequently due to upgrade or whatever reasons
+  so when pod come up again, will get new IP, so it does not make sense to use pod ip addresses, but service have
+  stable IP address and service also provide load balancing when you have multiple replicas of pods,
+  so service provides the loose coupling for coomunication between pod and clients(external service)
+  within or outside the clusters.
+
+  k8s create endpoint objects with same as service name and keep track of which pods are the member/endpoints of the service
+  aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$ kubectl get endpoints
+    NAME                  ENDPOINTS           AGE
+    fastapi-app-service   10.244.0.34:8000    101m
+    kubernetes            172.17.81.12:6443   159d
+    aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api5_ingress_host_config$
+
+  Endpoints keep updated when pod destroyed/recreated
+  service port is arbitrary, can be any number, but tragetPort must be same as the container is listening
+  for multi port service, you have to name each port
+
+
+  Type of services: (service identify its member pod by "selector" and on which port to send, identify by targetPort)
+  1. ClusterIP: default, mostly used to communicate among internal services,
+                client->ingress->default internal service->pod->calling again another service
+
+  2. Headless service: When client wants to communicate to a specific pod directly or
+      pods wants to talk directly with specific pod, use case: Stateful application like database, in these
+      case, pods replicas are not identical, because each one has individual characterstica nad states,
+      e.g msql master and slave, only master allow to write to DB,
+      set clusterIP NOne in service.yaml in order to DNS lookup to
+      return pods IP addresses instead of single service ClusterIP, then client use
+      this IP to connect to specific pod, e.g when new worker node comes, up it can donnect directly to
+      existing worker to clone/sync the data
+      SO to define Headless service, set ClusterIP as None, so k8s will not assign any IP addresss to seervice
+      service->spec->ClusterIP:None
+
+  3. NodePort: its a extension of CLusterIp, defined by setting type as NodePort under spec->type:NodePort
+      Used to access the service from outside the cluster using static IP and port, so
+      external traffic has access to fixed port on each worker node
+      service->spec->ports->port->number: 30000 to 32767, in each replica pods it will open this port
+      service->spec->type: NodePort
+      - This type of service is not secure and efficient because we are opening port to each worker node
+        so client have access to worker node directly
+      - so this we use only to test some service quickely
+
+  4. Load Balancer: its a extension of NodePort, Better alternative to NodePort,
+    Service becomes accesible from outside through cloud providers load balancers,
+    whenever we create this service, NodePort and ClusterIP service created automatically
+    to define use:
+    service->spec->ports->port->number: 30000 to 32767
+    service->spec->type: LoadBalancer
+    this also opens nodePort in each node, but not directly from clients
+
+https://www.techrunnr.com/how-to-reset-kubernetes-cluster/
+
+https://mohan08p.medium.com/create-a-kubernetes-cluster-using-kubeadm-a69d8fd67559#:~:text=You%20can%20install%20kubeadm%20on,later%20on%20heavy%20resource%20applications).
+once docker and k8s installed run following:
+
+TO reset kubeadm cluster:
+sudo kubeadm reset -f
+sudo rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
+systemctl restart docker
+
+
+To initialize k8s cluster:
+aafak@aafak-virtual-machine:~$ sudo swapoff -a
+
+Disable swap
+In order to run Kubernetes, you must first disable swap. To do this, issue the command:
+
+sudo swapoff -a
+To make that permanent (otherwise swap will re-enable every time you reboot), issue the command:
+
+sudo vim /etc/fstab
+In the fstab file, comment out the swap entry (by adding a leading # character):
+
+/swap.img none swap sw 0 0
+Save and close that file.
+
+
+aafak@aafak-virtual-machine:~$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+W0630 11:41:53.503002    4407 version.go:103] could not fetch a Kubernetes version from the internet: unable to get URL "https://dl.k8s.io/release/stable-1.txt": Get "https://dl.k8s.io/release/stable-1.txt": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+W0630 11:41:53.503212    4407 version.go:104] falling back to the local client version: v1.22.2
+[init] Using Kubernetes version: v1.22.2
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [aafak-virtual-machine kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 172.17.81.12]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [aafak-virtual-machine localhost] and IPs [172.17.81.12 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [aafak-virtual-machine localhost] and IPs [172.17.81.12 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[apiclient] All control plane components are healthy after 14.011572 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config-1.22" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node aafak-virtual-machine as control-plane by adding the labels: [node-role.kubernetes.io/master(deprecated) node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+[mark-control-plane] Marking the node aafak-virtual-machine as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+[bootstrap-token] Using token: kfmid0.8jizeuo1xi0jkieo
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 172.17.81.12:6443 --token kfmid0.8jizeuo1xi0jkieo \
+        --discovery-token-ca-cert-hash sha256:bccdb8c15d3aae921a2ff4ba37442d31ab3e500e088614beb1b9a5020d4ad0f4
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ kubectl get pods
+Unable to connect to the server: Forbidden
+
+
+if you are seeing it, set the no_proxy
+
+aafak@aafak-virtual-machine:~$ export no_proxy=127.0.0.1,localhost,aafak-virtual-machine:,172.17.81.12,192.168.49.2,10.10.*.*
+aafak@aafak-virtual-machine:~$ env | grep proxy
+no_proxy=127.0.0.1,localhost,aafak-virtual-machine:,172.17.81.12,192.168.49.2,10.10.*.*
+https_proxy=http://web-proxy.sdc.hpecorp.net:8080/
+HTTPS_PROXY=http://web-proxy.sdc.hpecorp.net:8080/
+HTTP_PROXY=http://web-proxy.sdc.hpecorp.net:8080/
+http_proxy=http://web-proxy.sdc.hpecorp.net:8080/
+aafak@aafak-virtual-machine:~$ kubectl get pods
+No resources found in default namespace.
+aafak@aafak-virtual-machine:~$ kubectl get nodes
+NAME                    STATUS     ROLES                  AGE   VERSION
+aafak-virtual-machine   NotReady   control-plane,master   25m   v1.22.2
+aafak@aafak-virtual-machine:~$
+
+Set the proxy permanantly:
+aafak@aafak-virtual-machine:~$  vim ~/.bashrc
+aafak@aafak-virtual-machine:~$ cat  ~/.bashrc | grep proxy
+export http_proxy=http://web-proxy.sdc.hpecorp.net:8080/
+export https_proxy=http://web-proxy.sdc.hpecorp.net:8080/
+export HTTP_PROXY=http://web-proxy.sdc.hpecorp.net:8080/
+export HTTPS_PROXY=http://web-proxy.sdc.hpecorp.net:8080/
+export no_proxy=127.0.0.1,localhost,aafak-virtual-machine:,172.17.81.12,192.168.49.2,10.10.*.*
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-rnd-vm:~$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+Warning: policy/v1beta1 PodSecurityPolicy is deprecated in v1.21+, unavailable in v1.25+
+podsecuritypolicy.policy/psp.flannel.unprivileged created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds created
+
+aafak@aafak-rnd-vm:~$
+aafak@aafak-rnd-vm:~$ kubectl get nodes    # will come in ready state after sometime
+NAME           STATUS   ROLES                  AGE     VERSION
+aafak-rnd-vm   Ready    control-plane,master   5m24s   v1.22.2
+aafak@aafak-rnd-vm:~$
+
+
+Change hostname:
+aafak@aafak-rnd-vm:~$ hostnamectl set-hostname new-hostname
+and then reconnect

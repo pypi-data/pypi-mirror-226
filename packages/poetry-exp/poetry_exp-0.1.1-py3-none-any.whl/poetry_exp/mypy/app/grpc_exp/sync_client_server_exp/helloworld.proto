@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+enum Gender {
+   GENDER_MALE = 0;    // first value must be zero in enum
+   GENDER_FEMALE = 1;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+  Gender gender = 2;
+  string age = 3;
+}
+
+enum Status {
+   STATUS_SUCCESS = 0;
+   STATUS_ERROR = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string name = 1;
+  string age = 2;
+  Status status = 3;
+  Gender gender = 4;
+}

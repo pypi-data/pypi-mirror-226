@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    server_name 172.17.29.165;
+    location /app1/api/v1/ {
+        include proxy_params;
+        proxy_pass http://unix:/home/aafak/nginx_apps/nginx_app1/nginx-app1.sock;
+    }
+}

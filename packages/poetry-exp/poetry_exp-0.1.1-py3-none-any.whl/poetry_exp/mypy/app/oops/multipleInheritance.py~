@@ -1,0 +1,40 @@
+class A:
+  def __init__(self):
+     self.x = 10
+     print "In A", self.x
+
+  def displayA(self):
+   print "In A", self.x
+
+class B(A):
+
+  def __init__(self):
+    A.__init__(self)
+    print "In B, ", self.x
+
+  def displayB(self):
+   print self.x
+
+
+class C(A):
+  def __init__(self):
+    A.__init__(self)
+    print "In C, ", self.x
+  def displayC(self):
+   print self.x
+
+
+
+class D(B,C):
+  def __init__(self):
+    super(D, self).__init__(self)
+    print "In D, ", self.x
+
+  def displayD(self):
+   print self.x
+
+
+b = B()
+c = C()
+d = D()
+

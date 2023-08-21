@@ -1,0 +1,30 @@
+INDEX = 'index'
+_INDEX = '_index'
+DOC = 'doc'
+UPDATE = 'update'
+DELETE = 'delete'
+_ID = '_id'
+RETRY_ON_CONFLICT = 'retry_on_conflict'
+RETRY_ATTEMPT_ON_CONFLICT = 3
+RESOURCE = 'resource'
+ID = 'id'
+OPERATION = 'operation'
+
+
+# Indices constants
+INDEX_VIRTUAL_MACHINES = 'virtual-machines'
+INDEX_DATASTORES = 'datastores'
+INDEX_HYPERVISOR_HOSTS = 'hypervisor-hosts'
+INDEX_FOLDERS = 'folders'
+INDEX_VIRTUAL_DISKS = 'virtual-disks'
+
+HYPERVISOR_MANAGER_INFO = 'hypervisorManagerInfo'
+HYPERVISOR_HOST_INFO = 'hypervisorHostInfo'
+HYPERVISOR_HOSTS_INFO = 'hypervisorHostsInfo'
+DATASTORE_INFO = 'datastoreInfo'
+DATASTORES_INFO = 'datastoresInfo'
+FOLDER_INFO = 'folderInfo'
+CLUSTER_INFO = 'clusterInfo'
+DATACENTER_INFO = 'datacenterInfo'
+VIRTUAL_MACHINE_INFO = 'virtualMachineInfo'
+VIRTUAL_MACHINES_INFO = 'virtualMachinesInfo'

@@ -1,0 +1,180 @@
+
+X509:
+ - In cryptography, X.509 is a standard defining the format of public key certificates. X.509 certificates are used in
+   many Internet protocols, including TLS/SSL, which is the basis for HTTPS[1], the secure protocol for browsing the web.
+
+ - An X.509 certificate contains a public key and an identity (a hostname, or an organization, or an individual),
+   and is either signed by a certificate authority or self-signed.
+
+ - When a certificate is signed by a trusted certificate authority, or validated by other means, someone holding that certificate
+   can rely on the public key it contains to establish secure communications with another party, or validate documents digitally
+   signed by the corresponding private key.
+
+ - Structure of certificate:
+
+	The structure foreseen by the standards is expressed in a formal language, Abstract Syntax Notation One (ASN.1).
+	The structure of an X.509 v3 digital certificate is as follows:
+
+	Certificate
+	Version Number
+	Serial Number
+	Signature Algorithm ID
+	Issuer Name
+	Validity period
+	Not Before
+	Not After
+	Subject name
+	Subject Public Key Info
+	Public Key Algorithm
+	Subject Public Key
+	Issuer Unique Identifier (optional)
+	Subject Unique Identifier (optional)
+	Extensions (optional)
+	...
+	Certificate Signature Algorithm
+	Certificate Signature
+
+
+Public key infrastructure (PKI):
+ - A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute,
+   use, store & revoke digital certificates and manage public-key encryption.
+ - The purpose of a PKI is to facilitate the secure electronic transfer of information for a range of network activities
+   such as e-commerce, internet banking and confidential email.
+ - It is required for activities where simple passwords are an inadequate authentication method and more rigorous proof is
+  required to confirm the identity of the parties involved in the communication and to validate the information being transferred
+ - Public key cryptography is a cryptographic technique that enables entities to securely communicate on an insecure public network,
+   and reliably verify the identity of an entity via digital signatures
+
+
+
+Certificate signing request(CSR):
+ - In public key infrastructure (PKI) systems, a certificate signing request (also CSR or certification request) is a message
+   sent from an applicant to a certificate authority in order to apply for a digital identity certificate.
+ - It usually contains the public key for which the certificate should be issued, identifying information (such as a domain name)
+   and integrity protection (e.g., a digital signature).
+ - If the request is successful, the certificate authority will send back an identity certificate that has been digitally signed
+   using the private key of the certificate authority.
+ - Before creating a CSR, the applicant first generates a key pair, keeping the private key secret. The CSR contains information
+   identifying the applicant (such as a distinguished name in the case of an X.509 certificate) which must be signed using the applicant's private key.
+ - The CSR also contains the public key chosen by the applicant. The CSR may be accompanied by other credentials or proofs of identity
+   required by the certificate authority, and the certificate authority may contact the applicant for further information.
+ - Typical information required in a CSR (sample column from Sample X.509 Certificate). Note that there are often alternatives
+   for the Distinguished Names (DN), the preferred value is listed.
+
+	DN[1]	Information	Description	                                                                     Sample
+	CN	Common Name	This is fully qualified domain name that you wish to secure	                     *.wikipedia.org
+	O	Business name / Organization	Usually the legal incorporated name of a company and should
+		                                    include any suffixes such as Ltd., Inc., or Corp.	W            ikimedia Foundation, Inc.
+	OU	Department Name / Organizational Unit	                                                             e.g. HR, Finance, IT
+	L	Town / City		San Francisco
+	S	Province, Region, County or State	This should not be abbreviated e.g. Sussex, Normandy,       New Jersey	California
+	C	Country	The two-letter ISO code for the country where your organization is located	US
+	MAIL	Email address	The organization contact, usually of the certificate administrator or IT department
+
+
+
+Public Key:
+ - IN Public-key cryptography, or asymmetric cryptography, is a cryptographic system that uses pairs of keys
+ - any person can encrypt a message using the receiver's public key, but that encrypted message can only be decrypted with the receiver's private key.
+
+
+Private Key:
+ - private keys which are known only to the owner.
+ - The generation of such keys depends on cryptographic algorithms based on mathematical problems to produce one-way functions.
+ - Effective security only requires keeping the private key private
+
+
+.crt/cer:
+
+.der:
+
+X.690 is an ITU-T standard specifying several ASN.1 encoding formats:
+ - Basic Encoding Rules (BER)
+ - Canonical Encoding Rules (CER)
+ - Distinguished Encoding Rules (DER)
+
+
+.pem(Privacy-Enhanced Mail):  is a Base64 encoded DER certificate
+ - A PEM file may contain a public key, a private key, or both, because a PEM file is not a standard.
+ - In effect PEM just means the file contains a base64-encoded bit of data.
+
+-----BEGIN CERTIFICATE REQUEST-----
+MIIB9TCCAWACAQAwgbgxGTAXBgNVBAoMEFF1b1ZhZGlzIExpbWl0ZWQxHDAaBgNV
+BAsME0RvY3VtZW50IERlcGFydG1lbnQxOTA3BgNVBAMMMFdoeSBhcmUgeW91IGRl
+Y29kaW5nIG1lPyAgVGhpcyBpcyBvbmx5IGEgdGVzdCEhITERMA8GA1UEBwwISGFt
+aWx0b24xETAPBgNVBAgMCFBlbWJyb2tlMQswCQYDVQQGEwJCTTEPMA0GCSqGSIb3
+DQEJARYAMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJ9WRanG/fUvcfKiGl
+EL4aRLjGt537mZ28UU9/3eiJeJznNSOuNLnF+hmabAu7H0LT4K7EdqfF+XUZW/2j
+RKRYcvOUDGF9A7OjW7UfKk1In3+6QDCi7X34RE161jqoaJjrm/T18TOKcgkkhRzE
+apQnIDm0Ea/HVzX/PiSOGuertwIDAQABMAsGCSqGSIb3DQEBBQOBgQBzMJdAV4QP
+Awel8LzGx5uMOshezF/KfP67wJ93UW+N7zXY6AwPgoLj4Kjw+WtU684JL8Dtr9FX
+ozakE+8p06BpxegR4BR3FMHf6p+0jQxUEAkAyb/mVgm66TyghDGC6/YkiKoZptXQ
+98TwDIK/39WEB/V607As+KoYazQG8drorw==
+-----END CERTIFICATE REQUEST-----
+
+Above is the example of a CSR (certificate signing request) in PEM format.  You can see that PEM has the characteristics of containing a header, the body (which consists mainly of code) and footer.
+
+The header and footer is what identifies the type of file, however be aware that not all PEM files necessarily need them.
+
+-----BEGIN CERTIFICATE REQUEST----- and -----END CERTIFICATE REQUEST----- show a CSR in PEM format.
+-----BEGIN RSA PRIVATE KEY----- and -----END RSA PRIVATE KEY----- show a private key in PEM format.
+-----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- show a certificate file in PEM format.
+
+
+#openssl x509 -in cert.pem -text -noout
+For the following example:
+
+-----BEGIN CERTIFICATE-----
+MIICLDCCAdKgAwIBAgIBADAKBggqhkjOPQQDAjB9MQswCQYDVQQGEwJCRTEPMA0G
+A1UEChMGR251VExTMSUwIwYDVQQLExxHbnVUTFMgY2VydGlmaWNhdGUgYXV0aG9y
+aXR5MQ8wDQYDVQQIEwZMZXV2ZW4xJTAjBgNVBAMTHEdudVRMUyBjZXJ0aWZpY2F0
+ZSBhdXRob3JpdHkwHhcNMTEwNTIzMjAzODIxWhcNMTIxMjIyMDc0MTUxWjB9MQsw
+CQYDVQQGEwJCRTEPMA0GA1UEChMGR251VExTMSUwIwYDVQQLExxHbnVUTFMgY2Vy
+dGlmaWNhdGUgYXV0aG9yaXR5MQ8wDQYDVQQIEwZMZXV2ZW4xJTAjBgNVBAMTHEdu
+dVRMUyBjZXJ0aWZpY2F0ZSBhdXRob3JpdHkwWTATBgcqhkjOPQIBBggqhkjOPQMB
+BwNCAARS2I0jiuNn14Y2sSALCX3IybqiIJUvxUpj+oNfzngvj/Niyv2394BWnW4X
+uQ4RTEiywK87WRcWMGgJB5kX/t2no0MwQTAPBgNVHRMBAf8EBTADAQH/MA8GA1Ud
+DwEB/wQFAwMHBgAwHQYDVR0OBBYEFPC0gf6YEr+1KLlkQAPLzB9mTigDMAoGCCqG
+SM49BAMCA0gAMEUCIDGuwD1KPyG+hRf88MeyMQcqOFZD0TbVleF+UsAGQ4enAiEA
+l4wOuDwKQa+upc8GftXE2C//4mKANBC6It01gUaTIpo=
+-----END CERTIFICATE-----
+you will get:
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 0 (0x0)
+    Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C = BE, O = GnuTLS, OU = GnuTLS certificate authority, ST = Leuven, CN = GnuTLS certificate authority
+        Validity
+            Not Before: May 23 20:38:21 2011 GMT
+            Not After : Dec 22 07:41:51 2012 GMT
+        Subject: C = BE, O = GnuTLS, OU = GnuTLS certificate authority, ST = Leuven, CN = GnuTLS certificate authority
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:52:d8:8d:23:8a:e3:67:d7:86:36:b1:20:0b:09:
+                    7d:c8:c9:ba:a2:20:95:2f:c5:4a:63:fa:83:5f:ce:
+                    78:2f:8f:f3:62:ca:fd:b7:f7:80:56:9d:6e:17:b9:
+                    0e:11:4c:48:b2:c0:af:3b:59:17:16:30:68:09:07:
+                    99:17:fe:dd:a7
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier:
+                F0:B4:81:FE:98:12:BF:B5:28:B9:64:40:03:CB:CC:1F:66:4E:28:03
+    Signature Algorithm: ecdsa-with-SHA256
+         30:45:02:20:31:ae:c0:3d:4a:3f:21:be:85:17:fc:f0:c7:b2:
+         31:07:2a:38:56:43:d1:36:d5:95:e1:7e:52:c0:06:43:87:a7:
+         02:21:00:97:8c:0e:b8:3c:0a:41:af:ae:a5:cf:06:7e:d5:c4:
+         d8:2f:ff:e2:62:80:34:10:ba:22:dd:35:81:46:93:22:9a
+
+
+
+
+

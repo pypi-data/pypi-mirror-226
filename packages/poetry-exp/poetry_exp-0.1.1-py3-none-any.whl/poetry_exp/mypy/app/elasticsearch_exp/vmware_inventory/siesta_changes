@@ -1,0 +1,77 @@
+aafakmoh@WHDCIS4TDR MINGW64 ~/OneDrive - Hewlett Packard Enterprise/github-repos/atlas/siesta (vms_and_ds_api)
+$ git status
+On branch vms_and_ds_api
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   rest_app_storage/common/constants.py
+        modified:   rest_app_storage/urls.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        rest_app_storage/controllers/datastores.py
+        rest_app_storage/controllers/vms.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+aafakmoh@WHDCIS4TDR MINGW64 ~/OneDrive - Hewlett Packard Enterprise/github-repos/atlas/siesta (vms_and_ds_api)
+$ git diff
+diff --git a/rest_app_storage/common/constants.py b/rest_app_storage/common/constants.py
+index 5f3c457..71adc53 100644
+--- a/rest_app_storage/common/constants.py
++++ b/rest_app_storage/common/constants.py
+@@ -75,6 +75,12 @@ RESOURCE_SCHEDULE_JOBS = "schedule-jobs"
+ RESOURCE_APPLIANCE = "Appliance"
+ RESOURCE_DATABASE_PROTECTION_CONFIG = "DatabaseProtectionConfig"
+
++# VMWare resources
++RESOURCE_VMS = 'vms'
++RESOURCE_VM = 'vm'
++RESOURCE_DATASTORES = 'datastores'
++RESOURCE_DATASTORE = 'datastore'
++
+ # Operations on resource
+ HOST_CREATE = 'create host'
+ HOST_UPDATE = 'update host'
+diff --git a/rest_app_storage/urls.py b/rest_app_storage/urls.py
+index 172cf11..f7e3034 100644
+--- a/rest_app_storage/urls.py
++++ b/rest_app_storage/urls.py
+@@ -60,6 +60,9 @@ from rest_app_storage.controllers.search_suggestions import SearchSuggestions
+ from rest_app_storage.controllers.schedule_jobs import ScheduleJobs,\
+     ScheduleJobWithId
+
++from rest_app_storage.controllers.vms import VMs, VMsWithID
++from rest_app_storage.controllers.datastores import Datastores, DatastoresWithID
++
+ from rest_app_storage.common.uac_utils import INCLUDE_PROJECTS
+
+ CREDENTIALS_URLS = [
+@@ -275,11 +278,23 @@ SCHEDULE_JOBS_URLS = [
+          name='ScheduleJobWithId')
+ ]
+
++VMS_URLS = [
++    path('rest/v1/vms', VMs.as_view(), name='VMs'),
++    path('rest/v1/vms/<str:id>', VMsWithID.as_view(),
++         name='VMsWithID')
++]
++DATASTORES_URLS = [
++    path('rest/v1/datastores', Datastores.as_view(), name='Datastores'),
++    path('rest/v1/datastores/<str:id>', DatastoresWithID.as_view(),
++         name='DatastoresWithID')
++]
++
+ urlpatterns = CREDENTIALS_URLS + HOST_URLS + TAGS_URLS + ASSET_GROUPS_URLS + \
+     STORAGE_POOLS_URLS + DATABASES_URLS + VOLUME_SETS_URLS + BATCH_URLS + \
+     SNAPSHOTS_URLS + VOLUME_SETS_SNAPSHOTS_URLS + SUPPORTABILITY_URLS + \
+     POLICIES_URLS + POLICY_JOBS_URLS + UAC_URLS + GLOBAL_SEARCH_URLS + \
+-    ACM_URLS + DASHBOARD_URLS + SEARCH_SUGGESTION_URLS + SCHEDULE_JOBS_URLS
++    ACM_URLS + DASHBOARD_URLS + SEARCH_SUGGESTION_URLS + SCHEDULE_JOBS_URLS + \
++    VMS_URLS + DATASTORES_URLS
+
+
+ # NOT_FOUND_URLS should always be added at the last as it catches all the urls
+(END)

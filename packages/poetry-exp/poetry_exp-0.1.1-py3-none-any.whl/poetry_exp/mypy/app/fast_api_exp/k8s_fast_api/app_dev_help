@@ -1,0 +1,370 @@
+aafak@aafak-rnd-vm:~/k8s_apps$ ls
+k8s_fast_api
+aafak@aafak-rnd-vm:~/k8s_apps$ python3 -m venv k8s_fast_api_venv
+aafak@aafak-rnd-vm:~/k8s_apps$ source k8s_fast_api_venv/bin/activate
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$ ls
+k8s_fast_api  k8s_fast_api_venv
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$ pip install fastapi
+Collecting fastapi
+  Downloading fastapi-0.78.0-py3-none-any.whl (54 kB)
+     |████████████████████████████████| 54 kB 85 kB/s
+Collecting starlette==0.19.1
+  Downloading starlette-0.19.1-py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 295 kB/s
+Collecting pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2
+  Downloading pydantic-1.9.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+     |████████████████████████████████| 12.7 MB 128 kB/s
+Collecting typing-extensions>=3.10.0; python_version < "3.10"
+  Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+Collecting anyio<5,>=3.4.0
+  Downloading anyio-3.6.1-py3-none-any.whl (80 kB)
+     |████████████████████████████████| 80 kB 3.3 MB/s
+Collecting sniffio>=1.1
+  Downloading sniffio-1.2.0-py3-none-any.whl (10 kB)
+Collecting idna>=2.8
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 2.7 MB/s
+Installing collected packages: typing-extensions, sniffio, idna, anyio, starlette, pydantic, fastapi
+Successfully installed anyio-3.6.1 fastapi-0.78.0 idna-3.3 pydantic-1.9.1 sniffio-1.2.0 starlette-0.19.1 typing-extensions-4.2.0
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$
+
+
+Uvicorn : ASGI server (different from WSGI)
+Gunicorn : Used to manage Uvicorn processes
+FastAPI : ASGI web framework
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$ pip install uvicorn
+Collecting uvicorn
+  Downloading uvicorn-0.18.2-py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 124 kB/s
+Collecting h11>=0.8
+  Downloading h11-0.13.0-py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 1.4 MB/s
+Collecting click>=7.0
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     |████████████████████████████████| 96 kB 1.8 MB/s
+Installing collected packages: h11, click, uvicorn
+Successfully installed click-8.1.3 h11-0.13.0 uvicorn-0.18.2
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$ pip install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+     |████████████████████████████████| 79 kB 202 kB/s
+Requirement already satisfied: setuptools>=3.0 in ./k8s_fast_api_venv/lib/python3.8/site-packages (from gunicorn) (44.0.0)
+Installing collected packages: gunicorn
+Successfully installed gunicorn-20.1.0
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps$ cd k8s_fast_api
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ ls
+app  fast_api_k8s_helm  __init__.py  install_k8s
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ cd app/
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ uvicorn main:app
+INFO:     Started server process [68277]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60456 - "GET /users HTTP/1.1" 200 OK
+
+
+aafak@aafak-rnd-vm:~$ curl -X GET http://127.0.0.1:8000/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]aafak@aafak-rnd-vm:~$
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ pip freeze > requirements.txt
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ cat requirements.txt
+anyio==3.6.1
+click==8.1.3
+fastapi==0.78.0
+gunicorn==20.1.0
+h11==0.13.0
+idna==3.3
+pydantic==1.9.1
+sniffio==1.2.0
+starlette==0.19.1
+typing-extensions==4.2.0
+uvicorn==0.18.2
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ mv requirements.txt ../
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ ls
+__init__.py  main.py  __pycache__
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/app$ cd ..
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ ls
+app  fast_api_k8s_helm  __init__.py  install_k8s  requirements.txt
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ ls
+app  Dockerfile  fast_api_k8s_helm  __init__.py  install_k8s  requirements.txt
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker build -t fastapi_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker build -t fastapi_app:v1 --build-arg http_proxy=http://web-proxy.sdc.hpecorp.net:8080 .
+Sending build context to Docker daemon  20.99kB
+Step 1/10 : from python:3.8
+ ---> a603f4f4683f
+Step 2/10 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> 23cbf659888a
+Step 3/10 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> b10008f8f213
+Step 4/10 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> 13622b7e8a4d
+Step 5/10 : ARG APP_ROOT_DIR=/usr/src/k8sFastApiApp
+ ---> Using cache
+ ---> d67469192edd
+Step 6/10 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> 122a7d4f2bbf
+Step 7/10 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> f433f8d2c106
+Step 8/10 : ADD ./app/* $APP_ROOT_DIR/
+ ---> Using cache
+ ---> 472b90bdb86d
+Step 9/10 : EXPOSE 8000
+ ---> Using cache
+ ---> 073b1458ecbf
+Step 10/10 : ENTRYPOINT ["uvicorn", "main:app", "--host",  "0.0.0.0", "--port", "8000"]
+ ---> Running in 11d54593b7dc
+Removing intermediate container 11d54593b7dc
+ ---> 971e6ede9719
+Successfully built 971e6ede9719
+Successfully tagged fastapi_app:v1
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker run -d -p 8000:8000 fastapi_app:v1                 d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker logs -f d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     172.18.0.1:43396 - "GET /users HTTP/1.1" 200 OK
+
+
+root@171654c3c741:/usr/src/k8sFastApiApp# aafak@aafak-rnd-vm:~$ curl -X GET localhost:8000/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]aafak@aafak-rnd-vm:~$
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker stop d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ sudo docker rm d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+d53373c4eba80ab26ed8ccac9f17fdd50285b6bd86e74673a5cada0e3398f31b
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$
+
+
+Deploy:
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ ls
+app  deploy  Dockerfile  fast_api_k8s_helm  __init__.py  install_k8s  requirements.txt
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api$ cd deploy/
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl apply -f deployment.yaml
+deployment.apps/fastapiapp created
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+fastapiapp-7596c56fb-h9rvv   0/1     Pending   0          4m22s
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl logs -f fastapiapp-7596c56fb-h9rvv
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl describe pod fastapiapp-7596c56fb-h9rvv
+Name:           fastapiapp-7596c56fb-h9rvv
+Namespace:      default
+Priority:       0
+Node:           <none>
+Labels:         app=fastapiapp
+                pod-template-hash=7596c56fb
+Annotations:    <none>
+Status:         Pending
+IP:
+IPs:            <none>
+Controlled By:  ReplicaSet/fastapiapp-7596c56fb
+Containers:
+  fastapiapp:
+    Image:        fastapi_app:v1
+    Port:         8000/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-q52h8 (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False
+Volumes:
+  kube-api-access-q52h8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                  From               Message
+  ----     ------            ----                 ----               -------
+  Warning  FailedScheduling  36s (x5 over 4m54s)  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node-role.kubernetes.io/master: }, that the pod didn't tolerate.
+
+
+
+# Remove the taints on the master so that you can schedule pods on it.
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl taint nodes --all node-role.kubernetes.io/master-
+node/aafak-rnd-vm untainted
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get nodes
+NAME           STATUS   ROLES                  AGE     VERSION
+aafak-rnd-vm   Ready    control-plane,master   3h32m   v1.22.2
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+fastapiapp-7596c56fb-h9rvv   1/1     Running   0          9m40s
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl logs -f fastapiapp-7596c56fb-h9rvv
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+
+
+
+aafak@aafak-rnd-vm:~$ curl -X GET localhost:8000/users
+curl: (7) Failed to connect to localhost port 8000: Connection refused
+aafak@aafak-rnd-vm:~$ curl -X GET 172.17.81.12:8000/users
+curl: (7) Failed to connect to 172.17.81.12 port 8000: Connection refused
+aafak@aafak-rnd-vm:~$
+
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl describe pod fastapiapp-7596c56fb-h9rvv
+Name:         fastapiapp-7596c56fb-h9rvv
+Namespace:    default
+Priority:     0
+Node:         aafak-rnd-vm/172.17.81.12
+Start Time:   Thu, 30 Jun 2022 16:38:39 +0530
+Labels:       app=fastapiapp
+              pod-template-hash=7596c56fb
+Annotations:  <none>
+Status:       Running
+IP:           10.244.0.4
+IPs:
+  IP:           10.244.0.4
+Controlled By:  ReplicaSet/fastapiapp-7596c56fb
+Containers:
+  fastapiapp:
+    Container ID:   docker://98a56543f35d94140bdf952825fce9bc2118ab70e9b4278d014e58a4788a9c65
+    Image:          fastapi_app:v1
+    Image ID:       docker://sha256:971e6ede9719a6d8e0f23ba01d0f77a729dcfce52a0999ed7cef66b4ccaa27ae
+    Port:           8000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 30 Jun 2022 16:38:41 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-q52h8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-q52h8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                   From               Message
+  ----     ------            ----                  ----               -------
+  Warning  FailedScheduling  4m48s (x10 over 14m)  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node-role.kubernetes.io/master: }, that the pod didn't tolerate.
+  Normal   Scheduled         4m37s                 default-scheduler  Successfully assigned default/fastapiapp-7596c56fb-h9rvv to aafak-rnd-vm
+  Normal   Pulled            4m36s                 kubelet            Container image "fastapi_app:v1" already present on machine
+  Normal   Created           4m36s                 kubelet            Created container fastapiapp
+  Normal   Started           4m35s                 kubelet            Started container fastapiapp
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+fastapiapp-7596c56fb-h9rvv   1/1     Running   0          18m
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get svc
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   3h41m
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl describe pod fastapiapp-7596c56fb-h9rvv^C
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ ^C
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ curl -X GET 10.96.0.1:8000/users
+
+
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ curl -X GET 10.104.5.137:8000/users
+
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl apply -f service.yaml
+service/fastapiapp created
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get svc
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+fastapiapp   ClusterIP   10.104.5.137   <none>        8000/TCP   10s
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP    3h43m
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ curl -X GET 10.104.5.137:8000/users
+
+
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ ^C
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl edit svc fastapiapp
+service/fastapiapp edited  CHanged ClusterIP to NodePort
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl get svc
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+fastapiapp   NodePort    10.104.5.137   <none>        8000:31079/TCP   67s
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          3h44m
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ curl -X GET 10.104.5.137:31079/users
+
+
+^C
+(k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ curl -X GET 172.17.81.12:31079/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}](k8s_fast_api_venv) aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$
+
+from any browser also you can browse: http://172.17.81.12:31079/users
+[{"id":1,"name":"User1"},{"id":2,"name":"User2"}]
+
+
+Port 80
+HTTP Port-80 is used for HTTP (Hyper Text Transfer Protocol) connection by default.
+It is a popular and widely used port across the globe. Port 80 was introduced by Tim Berners-Lee in 1991
+in the HTTP 0.9 document. The document states that if there is no port assigned for HTTP connection,
+Port 80 is used by default. It connects you to the worldwide web (WWW).
+A user, with the help of this port, can connect to webpages available on the internet.
+It means unencoded data exchange takes place between the user’s browser and the server using this port.
+This port relates to TCP (Transfer Control Protocol- a protocol used in data transmission).
+
+Port 443
+HTTPS (Hypertext Transfer Protocol Secure) is a secured HTTP version where all traffic is bind
+with strong encryption that passes through 443. This port is also connected with TCP protocol and
+creates a secure connection between the webpages and browser. HTTPS Port 443 was officially published
+in RFC 1700 and solicited by “Kipp E.B. Hickman”. The main difference between Port 80 and Port 443
+is strong security. Port-443 allows data transmission over a secured network, while Port 80 enables data
+transmission in plain text. Users will get an insecure warning if he tries to access a non-HTTPS web page.
+Port 443 encrypts network data packets before data transmission takes place. The security over port 443
+is used by the SSL protocol (secure socket layer).
+
+
+aafak@aafak-rnd-vm:~/k8s_apps/k8s_fast_api/deploy$ kubectl logs -f fastapiapp-7596c56fb-h9rvv
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.244.0.1:18817 - "GET /users HTTP/1.1" 200 OK
+INFO:     10.244.0.1:8697 - "GET /users HTTP/1.1" 200 OK
+INFO:     10.244.0.1:37508 - "GET /users HTTP/1.1" 200 OK
+
+
+10.244.0.0 - - [18/May/2022:08:29:33 +0000] "GET /api/v1/virtual-machines/7f1ea0a8-b412-5272-87cc-1c70be628863/backups
+ HTTP/1.1" 200 9751 "http://172.17.80.38:31005/backup_and_recovery_assets/vmware/virtual-machines/
+ 7f1ea0a8-b412-5272-87cc-1c70be628863" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" 1367 0.083
+  [appdm-nb-rest-virt-8000] [] 10.244.2.253:8000 9751 0.084 200 2899aaeb9fc12b7f38fe3bf1856c6fe1

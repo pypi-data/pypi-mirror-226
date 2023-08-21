@@ -1,0 +1,190 @@
+https://www.tutorialworks.com/container-networking/#how-do-containers-communicate
+
+https://runnable.com/docker/python/docker-compose-with-flask-apps
+
+
+And also keep in mind that EXPOSE is only for documenting that you expose some service
+at this port - it does not make your app in the container run on this port.
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication2$ ls
+docker-compose.yml  docker_help  __init__.py  web1  web2
+aafak@aafak-virtual-machine:~/docker_apps/container_communication2$
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication2$ docker-compose up
+Creating network "container_communication2_default" with the default driver
+Building web1
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> ce385029b5d4
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> 3e2c019d614a
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> 7a125baa9f55
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/flask_app1
+ ---> Running in e13cb659507d
+Removing intermediate container e13cb659507d
+ ---> 993a7202943b
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Running in 223e3a83cbca
+Removing intermediate container 223e3a83cbca
+ ---> fdd986c89703
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Running in b555cd2dba92
+Removing intermediate container b555cd2dba92
+ ---> 79af77198571
+Step 9/11 : ADD ./app1.py $APP_ROOT_DIR/app1.py
+ ---> 7700a7deec57
+Step 10/11 : EXPOSE 5002
+ ---> Running in 87e025bb9590
+Removing intermediate container 87e025bb9590
+ ---> 25cf449c1580
+Step 11/11 : ENTRYPOINT ["python3", "app1.py"]
+ ---> Running in ef794f1119c6
+Removing intermediate container ef794f1119c6
+ ---> c18a37bee65b
+
+Successfully built c18a37bee65b
+Successfully tagged container_communication2_web1:latest
+WARNING: Image for service web1 was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Building web2
+Step 1/11 : FROM python:3.8
+ ---> ff08f08727e5
+Step 2/11 : ENV PYTHONUNBUFFERED 1
+ ---> Using cache
+ ---> 508d6d96d8a9
+Step 3/11 : ARG PROXY_SERVER=$http_proxy
+ ---> Using cache
+ ---> ce385029b5d4
+Step 4/11 : ADD requirements.txt requirements.txt
+ ---> Using cache
+ ---> 3e2c019d614a
+Step 5/11 : RUN pip3 install --proxy=$PROXY_SERVER -r requirements.txt
+ ---> Using cache
+ ---> 7a125baa9f55
+Step 6/11 : ARG APP_ROOT_DIR=/usr/src/flask_app2
+ ---> Using cache
+ ---> da3b56be2d38
+Step 7/11 : WORKDIR $APP_ROOT_DIR
+ ---> Using cache
+ ---> af9d2c87275b
+Step 8/11 : ENV PYTHONPATH=$PYTHONPATH:$APP_ROOT_DIR
+ ---> Using cache
+ ---> f24eb2d8da7d
+Step 9/11 : ADD ./app2.py $APP_ROOT_DIR/app2.py
+ ---> 728c432a719d
+Step 10/11 : EXPOSE 5003
+ ---> Running in f784a61ef65e
+Removing intermediate container f784a61ef65e
+ ---> d1724e94bbf5
+Step 11/11 : ENTRYPOINT ["python3", "app2.py"]
+ ---> Running in 2368a262bea2
+Removing intermediate container 2368a262bea2
+ ---> 6ea9718c3dce
+
+Successfully built 6ea9718c3dce
+Successfully tagged container_communication2_web2:latest
+WARNING: Image for service web2 was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating web1 ... done
+Creating web2 ... done
+Attaching to web2, web1
+web2    | Starting the server1 on port 5003
+web1    | Starting the server1 on port 5002
+web2    | Returning the message.......
+web1    | Response from web2: <Response [200]>, text: the message
+web2    | 172.24.0.3 - - [2021-09-28 07:33:25] "GET /return_message HTTP/1.1" 200 127 0.002370
+web1    | 172.24.0.1 - - [2021-09-28 07:33:25] "GET /get_message HTTP/1.1" 200 127 0.025167
+
+
+
+
+
+aafak@aafak-virtual-machine:~$ curl -X GET http://127.0.0.1:5002/get_message
+the messageaafak
+@aafak-virtual-machine:~$
+
+
+the messageaafak@aafak-virtual-machine:~$ docker network ls
+NETWORK ID     NAME                               DRIVER    SCOPE
+a8087e7fb82f   bridge                             bridge    local
+86c6508a8fd4   container_communication2_default   bridge    local
+681a9704b7a9   host                               host      local
+784971f64267   minikube                           bridge    local
+06e37eab8b65   none                               null      local
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ docker inspect container_communication2_default
+[
+    {
+        "Name": "container_communication2_default",
+        "Id": "86c6508a8fd443f5968de8420e3885d2dfff366b7fd08092e6bf128c84890069",
+        "Created": "2021-09-28T13:03:04.095544406+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.24.0.0/16",
+                    "Gateway": "172.24.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "911bd5688e53d2a53fcf5dcb93857b9fa97cf7a673cbd56b9bc346faaa5534de": {
+                "Name": "web2",
+                "EndpointID": "134f5c0202832bd5c65c9a8a5c066f8170ff55b560626cf63e49f1594e137e01",
+                "MacAddress": "02:42:ac:18:00:02",
+                "IPv4Address": "172.24.0.2/16",
+                "IPv6Address": ""
+            },
+            "ab95b050d1fe800c526038afd875b5522e5ecd3dffcbba117bf6268c5e4d4cab": {
+                "Name": "web1",
+                "EndpointID": "d509a06d3ca66609dfc901cd6daa959f72515b963219adf18556047043d409fa",
+                "MacAddress": "02:42:ac:18:00:03",
+                "IPv4Address": "172.24.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "container_communication2",
+            "com.docker.compose.version": "1.25.0"
+        }
+    }
+]
+
+aafak@aafak-virtual-machine:~$ curl -X GET http://172.24.0.3:5002/get_message
+the message
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~$ curl -X GET http://172.24.0.2:5003/return_message
+the message
+aafak@aafak-virtual-machine:~$
+
+
+aafak@aafak-virtual-machine:~/docker_apps/container_communication2$ docker-compose down
+Stopping web2 ... done
+Stopping web1 ... done
+Removing web2 ... done
+Removing web1 ... done
+Removing network container_communication2_default
+aafak@aafak-virtual-machine:~/docker_apps/container_communication2$
