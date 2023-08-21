@@ -1,0 +1,7 @@
+mypy
+tqdm
+opencv-python
+matplotlib
+numpy
+scipy
+networkx
