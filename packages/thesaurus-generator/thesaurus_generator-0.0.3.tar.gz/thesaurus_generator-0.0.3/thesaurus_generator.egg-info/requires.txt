@@ -1,0 +1,17 @@
+tensorflow_hub
+yake
+keybert
+pytextrank
+rake_nltk
+sentence_transformers
+nltk
+scikit-learn
+es_core_news_lg
+stanza
+pathlib
+json
+logging
+pandas
+numpy
+collections
+re

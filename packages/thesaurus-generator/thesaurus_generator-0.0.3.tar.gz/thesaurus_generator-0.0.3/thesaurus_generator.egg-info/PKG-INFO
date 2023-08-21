@@ -1,0 +1,214 @@
+Metadata-Version: 2.1
+Name: thesaurus-generator
+Version: 0.0.3
+Summary: An automatic thesaurus generator.
+Home-page: https://github.com/pegondo/thesaurus_generator
+Download-URL: https://github.com/pegondo/thesaurus_generator/archive/refs/tags/0.0.3.tar.gz
+Author: José Alonso González
+Author-email: pegondo99@gmail.com
+License: MIT
+Keywords: thesaurus,generation,automatic,nlp
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# thesaurus_generator
+
+This module provides a simple tool to automatically generate thesaurus in Spanish from a given txt file.
+
+# Installation
+
+You can install this module using pypi:
+
+```bash
+pip install thesaurus-generator
+```
+
+# Usage
+
+Here is a simple example:
+
+```python
+from thesaurus_generator import ThesaurusGenerator
+
+# Generate the thesaurus.
+t = ThesaurusGenerator()
+thesaurus = t.generate('./topics/topic_2.txt')
+
+# Save the thesaurus in JSON format.
+t.save_thesaurus('thesaurus.json')
+```
+
+# Configuration
+
+As in the example above, you can use this module without providing any configuration, as the default configuration works well in most cases. Anyway, if you want some customization, feel free to edit the configuration.
+
+Here is a summary of the configuration supported:
+
+- `verbose` defines if logs describing the process will appear or not.
+- `use_spacy` defines if you want the pipeline to use Spacy's pipeline or not. It is True by default, and should be
+  True unless you have an incompatibility with Spacy: https://spacy.io/
+- `use_spacy` defines if you want the pipeline to use Stanza's pipeline or not. It is True by default, and should be
+  True unless you have an incompatibility with Stanza: https://www.stanza.es/
+- `key_terms` defines the configuration to extract the most important terms from the text. If its value is `'auto'`,
+  then the default configuration will be used. Here is the format of the configuration: - `config` defines the configuration used to extract the most important terms of each length. This piece of
+  configuraiton is an array of objects, where the object at index `i` defines the configuration used to extract
+  terms formed by `i-1` words. It must contain three objects. Here is what each object must contain: - `criteria` defines the criteria used to extract the key words. It can be `tf-idf`, which will point the
+  relevance of each term based on a TF-iDF index; `text-relevance`, which will point the relevance of each term
+  according to the similarity between the embedding of the whole text and the embedding of the term; or `both`,
+  which is the average of each metric. - `ratio` defines the ratio of the elements with the highest score that will be kept. E.g: a ratio of 0.05
+  indicates that the 5% of the terms with the higher score will be kept. - `remove_stop_words` defines a criteria to remove stop words. The possible values are `None`, which indicates
+  that the stop words will not be removed; `'hard'` that indicates that the terms that contain any stop word will
+  be discarted; and `'soft'` that only discards the terms that are totally formed by stop words. - `stop_words` is a list with stop words to be considered.
+- `key_terms_from_models` defines the configuration used to extract the key terms using external models. If the value is
+  `'auto'`, the default configuration is loaded. Here is a description of the configuration: - `models` defines the models to be used in a string format with the models separated using a comma. E.g:
+  `textrank,keybert,yake`. The models available are count, keybert, rake, spacy, textrank and yake. - `verbose` defines if the model will log the amount of terms that were extracted using every model. - `count.ratio` defines the ratio of terms to be kept when using the count model. This model considers more important
+  the terms that are most repeated in the text. - `keybert` defines the configurations to use for this model. As KeyBERT (https://github.com/MaartenGr/KeyBERT) model
+  has a wide variarity of configuration, this piece of configuration supports an array of configurations, that will be
+  used to extract terms using the model and will be joined once all the configurations are run. Here is the format of the
+  configuration. Each element must contain an object with the following configuration: `diversity`, `nr_candidates`,
+  `num_terms`, `use_maxsum` and `use_mmr`. Here you can find the meaning of each property: https://github.com/MaartenGr/KeyBERT - `rake.ratio` defines the ratio of terms to be kept when using the rake model. This model considers more important
+  the terms that are most repeated in the text. https://pypi.org/project/rake-nltk/ - `spacy.ratio` defines the ratio of terms to be kept when using the spacy model. This model considers more important
+  the terms that are most repeated in the text. https://spacy.io/ - `textrank.ratio` defines the ratio of terms to be kept when using the textrank model. This model considers more important
+  the terms that are most repeated in the text. https://github.com/davidadamojr/TextRank - `yake.ratio` defines the ratio of terms to be kept when using the yake model. This model considers more important
+  the terms that are most repeated in the text. https://pypi.org/project/yake/
+- `special_characters` is a list of characters that when a term contains them it will be removed. You can provide an
+  empty array to disable this feature.
+- `filter_terms` defines the criteria used to discard the irrelevant terms. If its value is `'auto'`, then the default
+  configuration will be used. Here is the format of the configuration: - `criteria` defines the criteria to filter terms. If the value is `'included'`, then the terms that match the patterns
+  in `included_pos_tagging` will be included; and if its value is `'excluded'`, then the terms that do not match the
+  patterns in `excluded_pos_tagging` will be discarted. - `pos_tagging_groups` defines a mapping between keywords and Spacy POS tagging terms (https://web.archive.org/web/20190206204307/). - `included_pos_tagging` is a list of patterns that will be included in the terms extracted. Each element is a list of
+  elements used as keys in `pos_tagging_groups`. - `excluded_pos_tagging` is a list of patterns that will be excluded in the terms extracted. Each element is a list of
+  elements used as keys in `pos_tagging_groups`.
+- `similarity` defines the similarity measure between the terms that appear in the generated thesaurus. If its value is
+  `'auto'`, then the default configuration will be used. Here is the format of the configuration: - `metric` is the metric used to calculate the similarity. It can be `'spacy'`, which uses the document similarity
+  defined by Spacy (https://spacy.io/api/doc); `'transformers'`, which uses the similarity defined in sentence_transformers
+  (https://pypi.org/project/sentence-transformers/); or `'tfhub'`, which uses the similarity defined in this TF-hub model:
+  https://tfhub.dev/google/universal-sentence-encoder/4 - `remove_stop_words` if the stop words in the terms are removed before running the metric.
+- `thesaurus_similarity_threshold` defines the minumum score of relevance needed between two terms to be included in the
+  generated thesaurus.
+
+## Default configuration
+
+Here is the default configuration the module uses:
+
+```json
+{
+  "verbose": false,
+  "use_spacy": true,
+  "use_stanza": true,
+  "key_terms": {
+    "config": [
+      {
+        "criteria": "text-relevance",
+        "ratio": 0.05,
+        "remove_stop_words": "soft"
+      },
+      {
+        "criteria": "text-relevance",
+        "ratio": 0.05,
+        "remove_stop_words": "soft"
+      },
+      {
+        "criteria": "text-relevance",
+        "ratio": 0.02,
+        "remove_stop_words": "soft"
+      }
+    ],
+    "stop_words": `nltk.corpus.stopwords.words('spanish')`
+  },
+  "key_terms_from_models": {
+    "models": "textrank,keybert,yake",
+    "verbose": false,
+    "count": { "ratio": 0.2 },
+    "keybert": [
+      {
+        "diversity": 0.5,
+        "nr_candidates": 20,
+        "num_terms": 15,
+        "use_maxsum": false,
+        "use_mmr": false
+      },
+      {
+        "diversity": 0.5,
+        "nr_candidates": 20,
+        "num_terms": 15,
+        "use_maxsum": true,
+        "use_mmr": false
+      },
+      {
+        "diversity": 0.7,
+        "nr_candidates": 20,
+        "num_terms": 15,
+        "use_maxsum": false,
+        "use_mmr": true
+      },
+      {
+        "diversity": 0.2,
+        "nr_candidates": 20,
+        "num_terms": 15,
+        "use_maxsum": false,
+        "use_mmr": true
+      }
+    ],
+    "rake": { "ratio": 0.1 },
+    "spacy": { "ratio": 0.1 },
+    "textrank": { "ratio": 0.2 },
+    "yake": { "num_terms": 125 }
+  },
+  "special_characters": ["𝒇", "𝑓", "𝒈", "α"],
+  "filter_terms": {
+    "criteria": "included",
+    "pos_tagging_groups": {
+      "ADJ": ["ADJ"],
+      "ADV": ["ADV"],
+      "DET": ["DET", "ADP", "SCONJ", "CCONJ"],
+      "NOUN": ["NOUN", "PROPN", "NUM"],
+      "OTHER": ["PUNCT", "SPACE", "PART", "SYM", "INTJ", "X"],
+      "PRON": ["PRON"],
+      "VERB": ["VERB", "AUX"]
+    },
+    "excluded_pos_tagging": [
+      ["PRON"],
+      ["ADJ"],
+      ["DET"],
+      ["ADV"],
+      ["OTHER"],
+      ["DET", "NOUN"],
+      ["*", "DET"],
+      ["DET", "VERB"],
+      ["DET", "PRON"],
+      ["DET", "ADJ"],
+      ["DET", "ADV"],
+      ["DET", "OTHER"],
+      ["DET", "DET", "*"],
+      ["*", "DET", "DET"],
+      ["*", "*", "DET"]
+    ],
+    "included_pos_tagging": [
+      ["NOUN"],
+      ["NOUN", "ADJ"],
+      ["NOUN", "ADV", "ADJ"],
+      ["NOUN", "DET", "NOUN"]
+    ]
+  },
+  "similarity": {
+    "metric": "transformers",
+    "remove_stop_words": true
+  },
+  "thesaurus_similarity_threshold": 0.8
+}
+```
+
+# Other features
+
+Once you run the `generate` method in the `ThesaurusGenerator` class, you will have access to the following attributes:
+
+- `thesaurus` is the generated thesaurus.
+- `terms` is the list of extracted terms.
+- `filtered_terms` is the list of terms after filtered.
+- `token_pair_similarities` is a list of all the terms pairs and their similarity.
