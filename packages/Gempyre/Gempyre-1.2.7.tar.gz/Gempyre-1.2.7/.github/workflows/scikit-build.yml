@@ -1,0 +1,173 @@
+name: CMake Build Matrix
+
+on: [push]
+
+jobs:
+  build:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {
+            name: "MSVC",
+            artifact: "Windows.tar.gz",
+            os: windows-latest,
+            build_type: "Release",
+          }
+        - {
+            name: "Ubuntu",
+            artifact: "Linux.tar.gz",
+            os: ubuntu-latest,
+            build_type: "Release"
+          }
+        - {
+            name: "MacOS",
+            artifact: "macOS.tar.gz",
+            os: macos-latest,
+            build_type: "Release"
+          }
+
+    steps:
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      id: cp38
+      with:
+        python-version: "3.8"
+  
+    - uses: actions/checkout@v2  
+    - name: Install scikit-build
+      run: |
+        pip install scikit-build --user
+        pip install build --user
+
+    #- name: Setup Chrome
+    #  uses: browser-actions/setup-chrome@v1  
+
+    #- name: Setup DISPLAY
+    #  if: startsWith(matrix.config.os, 'linux')
+    #  run: |
+    #    export DISPLAY=:99
+    #    sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &       
+    
+
+    #- name: Build using CIBuildWheel
+    #  if: startsWith(matrix.config.name, 'Ubuntu')
+    #  uses: pypa/cibuildwheel@v2.15.0
+    #  env:
+    #    CIBW_BUILD: cp38-manylinux_x86_64
+  
+    - name: Build for Windows
+      if: startsWith(matrix.config.name, 'MSVC')
+      shell: pwsh
+      run: |
+        mkdir C:\foo
+        $env:TMPDIR = "C:\foo"
+        $env:TEMP = "C:\foo"
+        python -m build .
+    
+    - name: Build 
+      if: "!startsWith(matrix.config.name, 'MSVC')"
+      run: |
+        python -m build .
+
+    #- name: Run tests
+    #  shell: cmake -P {0}
+    #  run: |
+    #    include(ProcessorCount)
+    #    ProcessorCount(N)
+    #
+    #    execute_process(
+    #      COMMAND ctest -j ${N}
+    #      WORKING_DIRECTORY ${{ matrix.config.build_dir }}
+    #      RESULT_VARIABLE result
+    #    )
+    #    if (NOT result EQUAL 0)
+    #      message(FATAL_ERROR "Running tests failed!")
+    #    endif()
+    
+    - name: Pack
+      shell: bash
+      run: |
+        cmake -E tar cvzf ${{ matrix.config.artifact }} dist/
+
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+        path: ./${{ matrix.config.artifact }}
+        name: ${{ matrix.config.artifact }}
+
+  release:
+    if: contains(github.ref, 'tags/v')
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Create Release
+      id: create_release
+      uses: ncipollo/release-action@v1.12.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        allowUpdates: true
+
+    - name: Store Release url
+      run: |
+        echo "${{ steps.create_release.outputs.upload_url }}" > ./upload_url
+
+    - uses: actions/upload-artifact@v1
+      with:
+        path: ./upload_url
+        name: upload_url
+
+  publish:
+    if: contains(github.ref, 'tags/v')
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {
+            name: "Windows Latest MSVC", artifact: "Windows.tar.gz",
+            os: ubuntu-latest
+          }
+        - {
+            name: "Ubuntu Latest GCC", artifact: "Linux.tar.gz",
+            os: ubuntu-latest
+          }
+        - {
+            name: "macOS Latest Clang", artifact: "macOS.tar.gz",
+            os: ubuntu-latest
+          }
+    needs: release
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: ${{ matrix.config.artifact }}
+        path: ./
+
+    - name: Download URL
+      uses: actions/download-artifact@v1
+      with:
+        name: upload_url
+        path: ./
+    - id: set_upload_url
+      run: |
+        upload_url=`cat ./upload_url`
+        echo ::set-output name=upload_url::$upload_url
+
+    - name: Upload to Release
+      id: upload_to_release
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.set_upload_url.outputs.upload_url }}
+        asset_path: ./${{ matrix.config.artifact }}
+        asset_name: ${{ matrix.config.artifact }}
+        asset_content_type: application/x-gtar
