@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "token-scan"
+version = "0.1.0"
+description = ""
+authors = ["Ethan-ahnlabio <ethan@ahnlab.io>"]
+readme = "README.md"
+packages = [{include = "token_scan"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bicscan-engine = "^0.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
