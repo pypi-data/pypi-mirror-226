@@ -1,0 +1,8 @@
+PyLTSpice
+build
+dist
+doc
+doc_build
+examples
+temp_mc
+unittests
