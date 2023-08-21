@@ -1,0 +1,3 @@
+COMET_APIKEY = "5ZUfpoh74fEwbc4o1gqF5iyqQ"
+COMET_WORKSPACE="thibaultsmnt"
+COMET_PROJECT = "mlc"
