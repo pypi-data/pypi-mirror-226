@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+PyPPTXShot.egg-info/PKG-INFO
+PyPPTXShot.egg-info/SOURCES.txt
+PyPPTXShot.egg-info/dependency_links.txt
+PyPPTXShot.egg-info/requires.txt
+PyPPTXShot.egg-info/top_level.txt
+pypptxshot/__init__.py
+pypptxshot/__main__.py
+pypptxshot/pypptxshot.py

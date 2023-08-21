@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: PyPPTXShot
+Version: 1.0.0
+Summary: A Python Screenshotting PPTX Generator
+Home-page: https://github.com/ph4xmo/pypptxshot/
+Author: ph4xmo
+Author-email: ph4xmo@gmail.com
+License: MIT
+Keywords: clicker autoclicker pptx ppt generator screenshot
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: ~=3.8.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 📷 PyPPTXShot - A Python Screenshotting PPTX Generator
+This small Python app serves as an automatic screenshotter (and 
+optional auto-clicker) of a selected area in your screen with the help 
+of PyAutoGUI and python-pptx. This is also uses Tkinter as its GUI.
+
+PyPPTXShot was initially a past-time project to capture 
+slideshow presentations that are undownloadable (probably because of a 
+certain professor won't let it be downloadable for some reason during 
+online class) and is displayed in a website instead (e.g., ISpring 
+Presentation on Moodle).
+
+The default save path of the generated PPTX file would be in the
+desktop. While the default (and initial) filename is "pypptxshot_output-0". 
+Best used with a console to view what is going on.
+
+Contributions are welcomed!
+
+## ✨ Features
+- Optional auto-clicker (to simulate "next" on target slides).
+- Auto-clicker can also have a click delay.
+- User can have any number of screenshots per slide (tested up to 500).
+- Placed screenshots can be scaled.
+- Maximum slide size is limited by python-pptx.
+- Slide size can be automatically adjusted based from screenshot size.
+- F2 shortcut key for getting coordinates in screen (for auto-click).
+
+## 📦 Installation
+```
+pip install pypptxshot
+python -m pypptxshot
+```
+
+## 🔑 License
+PyPPTXShot is released under the MIT License. See LICENSE for more details.
