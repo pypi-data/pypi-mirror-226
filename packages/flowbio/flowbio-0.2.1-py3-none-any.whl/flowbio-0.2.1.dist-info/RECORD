@@ -1,0 +1,11 @@
+flowbio/__init__.py,sha256=FgRahINgjQI4TRedRxqY1qPiLcukDCN7IFcevCG7AEk,76
+flowbio/client.py,sha256=XHYBSpSeav11_cUB2sWpDtUfJvSJXAf73adb1Fwj4hY,2091
+flowbio/mutations.py,sha256=TYY1YpALEoEVuB0kQzf3GjHBOJdW5ThNsmrYdG2UIFQ,3122
+flowbio/queries.py,sha256=yrkg8GLSp2K8S-8IT52plBHos11dNvBSMs3FZAoUZn0,1422
+flowbio/samples.py,sha256=UFbWX2UqF1x25rdkgGI0Y43tCg9eeLO4vMkbchmJoAo,517
+flowbio/upload.py,sha256=kcuLS4-jlrF-OzX6z_oYaUg9DI78Fi2-GZQS9FJqdYo,9399
+flowbio-0.2.1.dist-info/LICENSE,sha256=7hC2iX3PSUEzJ6cohZnN7_1mrLgcZTDj-leYC3ECT8Q,1071
+flowbio-0.2.1.dist-info/METADATA,sha256=YdYMWteYT4jGHNYY5M_xTL0WkzhxCmTTo0ePHastaEo,1786
+flowbio-0.2.1.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+flowbio-0.2.1.dist-info/top_level.txt,sha256=iQpqI_FjN5Xd_Ye9Qnp14zDUs54wn7BMcSu6GENkBl0,8
+flowbio-0.2.1.dist-info/RECORD,,
