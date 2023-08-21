@@ -1,0 +1,3 @@
+[console_scripts]
+pmxlock = pmxlock.cli:main
+pmxlock-gc = pmxlock.gc:main
