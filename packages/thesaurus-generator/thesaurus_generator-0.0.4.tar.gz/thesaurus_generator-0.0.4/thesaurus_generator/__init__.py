@@ -1,0 +1,1 @@
+from thesaurus_generator.thesaurus_generator import ThesaurusGenerator
