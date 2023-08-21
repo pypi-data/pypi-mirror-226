@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/file_cycle.py
+src/FileCycle_nachash.egg-info/PKG-INFO
+src/FileCycle_nachash.egg-info/SOURCES.txt
+src/FileCycle_nachash.egg-info/dependency_links.txt
+src/FileCycle_nachash.egg-info/top_level.txt
+tests/test_file_cycle.py
