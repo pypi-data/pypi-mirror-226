@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: SyntaxMorph
+Version: 1.0.1
+Summary: SyntaxMorph is a Python module that enables code conversion between different programming languages
+Home-page: https://github.com/Enderjua/SyntaxMorph
+Author: Marijua
+Author-email: enderjua@gmail.com
+License: GPLv3
+Keywords: morph,syntax,python,syntaxmorph,ai,machinelearning,change,codexchange
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+Description
