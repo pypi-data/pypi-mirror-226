@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+gembox/__init__.py
+gembox/debug_utils.py
+gembox/io.py
+gembox.egg-info/PKG-INFO
+gembox.egg-info/SOURCES.txt
+gembox.egg-info/dependency_links.txt
+gembox.egg-info/top_level.txt
