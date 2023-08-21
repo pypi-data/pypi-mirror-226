@@ -1,0 +1,15 @@
+vimanager/__init__.py,sha256=v0UVxQjbdt_vGgsK0PatSWBP9B9xoVQww78O_B9Jq-c,354
+vimanager/edit.py,sha256=lH9FJOckk55Jg1K9K5J-qX9yQDP74R16pcg03OtSPeA,3721
+vimanager/inspector.py,sha256=egu-ZQzuvBYhm-JzgnH4kBYuUb9Er6z4uc_9gw4lgDs,3392
+vimanager/main.py,sha256=6dhhRZ3jR4BWwgI89Zr_JJq-B3y_clV0CyYZ6ExI7y8,1839
+vimanager/models.py,sha256=o-13TNKjuCV8o1-U7QA9rxLtXou9i4SzdGBOO2P1v_0,3262
+vimanager/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vimanager/sorter.py,sha256=HZ7zFyHlqeSqn3kiY3hV_euNuYETsaCgTdcjdnGfC-s,3521
+vimanager/spotify.py,sha256=yyZKG0gz1kHPmm_dHcEVF2bNs4vv-0s5EpVcMDOvwKQ,8110
+vimanager/utils.py,sha256=o7lpdsFduoe6HKKcglJpZynJit8DOgGi3QA4kkzCluk,2548
+vimanager_cli-0.1.1.dist-info/LICENSE,sha256=FwSYfw2MEEd9IfaAOySoNcsazKaN2BdcFaCJ6ogpISs,1060
+vimanager_cli-0.1.1.dist-info/METADATA,sha256=8FmqjU43Y1DAG7rqgK4wzJh_ED3CRTQRmgZqEayUrWM,3259
+vimanager_cli-0.1.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+vimanager_cli-0.1.1.dist-info/entry_points.txt,sha256=9B35VoJQc4E-p3Vfy3gj8gHhDvMu3W40i895QL3ljNs,56
+vimanager_cli-0.1.1.dist-info/top_level.txt,sha256=3tZuePgBu8IxPlVs90safoLqDN6T5q8CCJHGF9CYrlU,10
+vimanager_cli-0.1.1.dist-info/RECORD,,

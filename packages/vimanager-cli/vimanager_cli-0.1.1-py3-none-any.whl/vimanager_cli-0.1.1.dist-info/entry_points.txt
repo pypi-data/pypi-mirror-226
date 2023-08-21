@@ -1,0 +1,2 @@
+[console_scripts]
+vimanager = vimanager.main:entrypoint
