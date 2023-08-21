@@ -1,0 +1,2 @@
+[console_scripts]
+shai = ai_shell.main:main
