@@ -1,0 +1,3 @@
+[console_scripts]
+unifi_reconnect=unifi_reconnect:run
+
