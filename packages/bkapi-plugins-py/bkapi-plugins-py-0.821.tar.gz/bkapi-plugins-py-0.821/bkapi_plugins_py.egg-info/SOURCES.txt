@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.cfg
+setup.py
+test.py
+bkapi_plugins/__init__.py
+bkapi_plugins/files/k8s.zip
+bkapi_plugins_py.egg-info/PKG-INFO
+bkapi_plugins_py.egg-info/SOURCES.txt
+bkapi_plugins_py.egg-info/dependency_links.txt
+bkapi_plugins_py.egg-info/top_level.txt
