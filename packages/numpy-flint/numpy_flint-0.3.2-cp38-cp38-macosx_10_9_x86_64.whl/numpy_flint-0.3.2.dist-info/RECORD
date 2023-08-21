@@ -1,0 +1,11 @@
+numpy_flint-0.3.2.dist-info/RECORD,,
+numpy_flint-0.3.2.dist-info/WHEEL,sha256=Ecg4CJUDMrMPYXPfjzldIDlznuohZjjtOrYNd5H0Zo0,109
+numpy_flint-0.3.2.dist-info/copying.lesser.md,sha256=HpUKMjWJEodvzT6gvdl1yeqKeCLt3DzaZigXw6vpmxw,7642
+numpy_flint-0.3.2.dist-info/copying.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+numpy_flint-0.3.2.dist-info/top_level.txt,sha256=ERZPv0lz7-9_ArySDCJP7328QDmmfLPFA-v6AvY0EWo,6
+numpy_flint-0.3.2.dist-info/METADATA,sha256=DZzDfC9OAxOkg34P2WZ2d0v1kQvjq-AWccCDjBSAo2w,12603
+flint/__init__.py,sha256=Wy68GEP0mLWBXKC9UxWNIBTv4ga_R0JNPEtCrZrZ5YY,1027
+flint/flint.h,sha256=tWD14OMXj-nJmJazeH3YSvDt7xkjcJP_vBN6gsBjLYI,36625
+flint/numpy_flint.cpython-38-darwin.so,sha256=Vb5SOhHUlwLm5mgc2Y5wNhikT_IQ2SgOSoxHC4b87YU,106296
+flint/numpy_flint.h,sha256=zEQ-4Pj_aLg1NL4Xr4Ajh3VqcYS_F9oKXPfaOzGBwSQ,3163
+flint/numpy_flint.c,sha256=3W-K167u1zLBcTjEnpvYezalyHIII7wFqRl5mBZPI7s,61943
