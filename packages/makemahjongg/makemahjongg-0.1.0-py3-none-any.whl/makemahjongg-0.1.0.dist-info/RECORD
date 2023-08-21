@@ -1,0 +1,11 @@
+makemahjongg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makemahjongg/__main__.py,sha256=h3CxxCZ7hUjEsdeva_5IkgdwTvgnCaGeIoeUQZeKUgg,466
+makemahjongg/blank.png,sha256=SCEZA9AwbwHo_g62M4tCaY-hOdTkfiXJudi0BqfonNI,5972
+makemahjongg/blank_selected.png,sha256=Juf6XEecWYE5Ty003ZAzyGPBxBbV7bRQEcqRuU9ior8,4984
+makemahjongg/tileset_blank.png,sha256=IWpPzWPmRswJYk7tUQnuAd4zkSix6opZNUSpupWV6gE,59355
+makemahjongg/tileutil.py,sha256=wyXgrzS0asBo6k6-8wS4kkDyqfx-L9i22lmbWEhGuy4,7246
+makemahjongg-0.1.0.dist-info/METADATA,sha256=NHUpT0GQs7SmlE2zS4xIfJlCR2oDLtBT8HWB3GOoJpU,2393
+makemahjongg-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+makemahjongg-0.1.0.dist-info/entry_points.txt,sha256=91NyihcSGaRC44c7FoSGFgnI9bLfT8UpkN85ibf9bjw,60
+makemahjongg-0.1.0.dist-info/top_level.txt,sha256=ebS82UkaxwIH3AOR_UAa1E_egZ6lkwnAKdzJktsKX9k,13
+makemahjongg-0.1.0.dist-info/RECORD,,

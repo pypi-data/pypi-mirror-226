@@ -1,0 +1,2 @@
+[console_scripts]
+makemahjongg = makemahjongg.__main__:main
