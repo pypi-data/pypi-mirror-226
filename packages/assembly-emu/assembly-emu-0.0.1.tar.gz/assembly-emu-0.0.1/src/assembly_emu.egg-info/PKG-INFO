@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: assembly-emu
+Version: 0.0.1
+Summary: A basic emulator of asm8086 in python
+Home-page: https://github.com/jonaprojects/assemblyEmulator
+Author: jonaprojects
+Author-email: merkava234@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Welcome to Emu++
+
+## Installation
+You can install Emu++ by running the following command in the terminal:
+```bash
+pip install emuplusplus
+```
+
+## Usage
+

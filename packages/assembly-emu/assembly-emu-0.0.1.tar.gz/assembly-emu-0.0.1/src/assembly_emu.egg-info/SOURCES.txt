@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/assembly_emu.egg-info/PKG-INFO
+src/assembly_emu.egg-info/SOURCES.txt
+src/assembly_emu.egg-info/dependency_links.txt
+src/assembly_emu.egg-info/top_level.txt
