@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: skylark-video-processor
+Version: 0.1
+Summary: A video processing packageg fop YOLOV8
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+Requires-Dist: opencv-python
+Requires-Dist: ultralytics
+
