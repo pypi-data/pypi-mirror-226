@@ -1,0 +1,11 @@
+nudenetupdated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nudenetupdated/classifier.py,sha256=25eFo0h4DEuoRYo5dp712oh06ZjOdoj-nF2LCV8_uoE,2727
+nudenetupdated/detector.py,sha256=e7-kOyoIpXAt2oXCF4-_tV2DRtvNYyB-GSaOtlbxlkQ,3727
+nudenetupdated/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nudenetupdated/utils/detector.py,sha256=Yhitp6fcczakAmrWPt-uNumOMz98uT2oSBrIVHUB7vg,1587
+nudenetupdated/utils/download.py,sha256=AVkhgu7M7nI6IF3uJJSOhq-FHYZASpg2jSxpQZdQEts,2435
+nudenetupdated/utils/image.py,sha256=LKu35depqEOxZEJBeW-4HkWhdodPuA-xNOp9uBdJOvw,5319
+nudenetupdated-2.2.4.dist-info/LICENSE.md,sha256=u8FryZCHc6WunEB0rQgYOLiy90f2q_haIWPDrqbVS-0,1088
+nudenetupdated-2.2.4.dist-info/METADATA,sha256=GayU4vHzykD22OV2ltmsZpE07y-UNk1me4OWehNNx1o,4374
+nudenetupdated-2.2.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+nudenetupdated-2.2.4.dist-info/RECORD,,
