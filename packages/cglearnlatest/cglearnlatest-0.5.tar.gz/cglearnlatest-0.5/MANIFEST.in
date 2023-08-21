@@ -1,0 +1,6 @@
+include cglearnlatest/data/*.csv
+include cglearnlatest/binaries/*.dll
+include cglearnlatest/binaries/*.so
+include cglearnlatest/*.csv
+include cglearnlatest/*.dll
+include cglearnlatest/*.so
