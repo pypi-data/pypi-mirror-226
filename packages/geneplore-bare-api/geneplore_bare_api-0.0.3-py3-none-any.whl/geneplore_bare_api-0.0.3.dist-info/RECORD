@@ -1,0 +1,7 @@
+geneplore_bare_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geneplore_bare_api/api_async.py,sha256=MFNtsozpTl36X9AfQaNCUmzVZ55YrHccbXxllT-Lxa4,39700
+geneplore_bare_api/api_sync.py,sha256=trGLstB0yO8xzjRe0dh7GvabzOvRnx6GCjC7KAKFPCo,38096
+geneplore_bare_api-0.0.3.dist-info/METADATA,sha256=VLrxOBuHE17GCSxuvKMXmG4zR0Ke_uFQ7tRR_7_djho,848
+geneplore_bare_api-0.0.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+geneplore_bare_api-0.0.3.dist-info/licenses/LICENSE,sha256=0R4f3WxV_3ERqtC0Wucb7w8afaFk6VpTPLiXsw7C5Nc,232
+geneplore_bare_api-0.0.3.dist-info/RECORD,,
