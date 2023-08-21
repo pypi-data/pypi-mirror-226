@@ -1,0 +1,139 @@
+GameWorld:
+    regions += Region
+    items += Item
+    player = Player
+    'start_position' start_position = [Region]
+    'final_position' final_position = [Region]
+;
+
+Region:
+    '<' name = GWID '>' '{'
+        properties *= RegionProperties
+        connections *= Connection
+        ('requirements' requirements = Requirement)?
+    '}'
+;
+
+Requirement:
+    item = GWID
+;
+
+Connection:
+    direction = Direction
+    target = GWID
+;
+
+
+Item:
+    '[' name = GWID ']' '{'
+        properties *= ItemProperties
+        'isStatic' isStatic = BOOL
+    '}'
+;
+
+Player:
+    '(' name = GWID ')' '{'
+        properties *= PlayerProperties
+    '}'
+;
+
+RegionProperties:
+    BasicProperties | PriceProperties
+;
+
+ItemProperties:
+    BasicProperties | ActivationProperties
+;
+
+
+PlayerProperties:
+    BasicProperties | InventoryProperties | MovementProperties | HealthProperties | ScoreProperties | PositionProperties
+;
+
+BasicProperties:
+    PortrayalProperties | ContainsProperties
+;
+
+PortrayalProperties:
+    'portrayal' portrayal = STRING
+;
+
+ContainsProperties:
+    'contains' contains *= [Item][',']
+;
+
+
+PriceProperties:
+    'price' price = INT
+;
+
+InventoryProperties:
+    'inventory' '{' inventory *= [Item][','] '}'
+;
+
+HealthProperties:
+    'health' health = INT
+;
+
+ScoreProperties:
+    'score' score = INT
+;
+
+MovementProperties:
+    MoveCommand | OpenCommand | TakeCommand | DropCommand | UseCommand
+;
+
+MoveCommand:
+    'move' direction = Direction
+;
+
+OpenCommand:
+    'open' object = GWID
+;
+
+TakeCommand:
+    'take' object = GWID
+;
+
+DropCommand:
+    'drop' object = GWID
+;
+
+UseCommand:
+    'use' object = GWID
+;
+
+
+ActivationProperties:
+    'activation' action = ActivationAction
+;
+
+ActivationAction:
+    HealAction
+;
+
+HealAction:
+    'heal' amount = INT
+;
+
+
+Keyword:
+    'start_position' | 'final_position' | 'drop' | 'take' | 'open' | 'move' | 'heal' | 'N' | 'S' | 'E' | 'W' | 'score' |
+    'inventory' | 'action' | 'contains' | 'health' | 'price' | 'portrayal' | 'activation' | 'heal' | 'position' | 'isStatic'
+;
+
+GWID:
+    !Keyword ID
+;
+
+PositionProperties:
+    'position' position = [Region]
+;
+
+Direction:
+    'N' | 'S' | 'E' | 'W'
+;
+
+Comment:
+    /\/\*(.|\n)*?\*\//
+;
