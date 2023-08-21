@@ -1,0 +1,11 @@
+simplextree-0.1.0.dist-info/METADATA,sha256=pMI7JgIEq3jAmEzRT2uCqyZisrj2Xw_JM-1zmJeTRhY,14263
+simplextree-0.1.0.dist-info/WHEEL,sha256=8AdrFzOtKQ6LLJ-VyqCU3y1iN8N--fMXYqrdkeTKDn0,83
+simplextree-0.1.0.dist-info/LICENSE,sha256=JDEfOtRu_rQ2AEMeCSBrhJOu9lJmF3D5ztZH0Yripww,11560
+_simplextree.cp39-win_amd64.pyd,sha256=rfubFKgVvvrfxYu5gi1VaJVRO7pjXsP8ayDvN1KzUYg,351232
+_simplextree.cp39-win_amd64.lib,sha256=wAGsS5ltMTedGlNhZR960N3lIaI-OxNZ7bd5Zgb9JG0,1404
+_unionfind.cp39-win_amd64.pyd,sha256=QAwhhkccevoeuaKO_u81MitsurjJCpSVJTBHOGFJ4FE,178176
+_unionfind.cp39-win_amd64.lib,sha256=BWFZudmicDL7JLN1FXRxWxNa7vVl_kao4jNbTrCT0Sg,1382
+simplextree-0.1.0.data/purelib/simplextree/__init__.py,sha256=skObXxHZOyHVAjA-fHlFX-PgjYznvg0CAVRvvN3KSkg,204
+simplextree-0.1.0.data/purelib/simplextree/SimplexTree.py,sha256=OjCgCqkuAzhxNJbgcTVpf8G5oy9Wo9N_B7ejbjnWoPI,11279
+simplextree-0.1.0.data/purelib/simplextree/UnionFind.py,sha256=NaTUwjMONdk8ROQZ0N5t176x2RU3DPKblDFCMPbUQUY,215
+simplextree-0.1.0.dist-info/RECORD,,
