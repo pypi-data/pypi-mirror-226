@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: image-annotation-package
+Version: 0.1
+Summary: An image annotation tool
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: opencv-python
+
+UNKNOWN
+
