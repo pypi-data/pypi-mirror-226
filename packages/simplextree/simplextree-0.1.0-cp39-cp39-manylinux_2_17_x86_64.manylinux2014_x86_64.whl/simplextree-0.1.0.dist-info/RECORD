@@ -1,0 +1,9 @@
+_simplextree.cpython-39-x86_64-linux-gnu.so,sha256=QZOb9bUpSSxBUlIQ3jCRCmM5WF1HSIYMGUpPBvC3CrQ,491272
+_unionfind.cpython-39-x86_64-linux-gnu.so,sha256=nwgiDPknXliCrVeNC7YKkNjiHw4tPMglFxayGq-hVHI,313456
+simplextree-0.1.0.dist-info/LICENSE,sha256=YvuKOpYh3COIF0yqq-nCMXtpS7mh1GyYvPVlW2j1G-M,11359
+simplextree-0.1.0.dist-info/RECORD,,
+simplextree-0.1.0.dist-info/METADATA,sha256=pMI7JgIEq3jAmEzRT2uCqyZisrj2Xw_JM-1zmJeTRhY,14263
+simplextree-0.1.0.dist-info/WHEEL,sha256=jMyS45pfVQQNgqjilq2bIfG3aDgtWNCCOi-3M7NZx5A,133
+simplextree-0.1.0.data/purelib/simplextree/UnionFind.py,sha256=gZaT9gJCAKIJ-6vlqSAdC3TuB9efxc8zFLbth2dhips,207
+simplextree-0.1.0.data/purelib/simplextree/SimplexTree.py,sha256=rumEP3-0XyZ5lLgXX7M1WKatqwNJyU2e8MPTK7NlVAI,10966
+simplextree-0.1.0.data/purelib/simplextree/__init__.py,sha256=tDtLBRBOiz8IarXtULPpx8GSVbWcAWUnG-juNOFvqvM,196
