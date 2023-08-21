@@ -1,0 +1,4 @@
+[console_scripts]
+record_udp=udprecorder.record_udp_stream:main
+replay_udp=udprecorder.replay_udp_stream:main
+

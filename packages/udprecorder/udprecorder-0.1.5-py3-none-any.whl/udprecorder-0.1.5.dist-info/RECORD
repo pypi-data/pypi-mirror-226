@@ -1,0 +1,8 @@
+udprecorder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+udprecorder/record_udp_stream.py,sha256=66zNLrz4Z6tflLKCwpN6heufoGvOI-pNKio02KhBvM0,5437
+udprecorder/replay_udp_stream.py,sha256=ZOKKS7hB9I_P0msycyEwc7QH-RGbMSvRgugKLPvzT5E,2426
+udprecorder/utils.py,sha256=bHz1x8xy5NzWjo00V-1q6ks5CZJM16TdE7f--5wttxk,1093
+udprecorder-0.1.5.dist-info/entry_points.txt,sha256=xERwuICTw16ZSHPuSs5-zkkRRL7c1OIWRDNHETsDD3k,111
+udprecorder-0.1.5.dist-info/METADATA,sha256=yp4_g992qvlfwK6JXspWfGtZCk8a9FXsAYnwULfI1Ls,2780
+udprecorder-0.1.5.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+udprecorder-0.1.5.dist-info/RECORD,,
