@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: entest-cognito-userpool
+Version: 0.0.2
+Summary: entest-cdk-chatbot
+Home-page: https://github.com/entest-hai/entest-cdk-chatbot.git
+Author: haitran<hai@entest.io>
+License: Apache-2.0
+Project-URL: Source, https://github.com/entest-hai/entest-cdk-chatbot.git
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+---
+
+
+## author: haimtran
+title: create a cognito userpool for web development
+date: 20/08/2023
+
+## Cognito Authorizer
+
+When developing an web or mobile application, we usually need a identity provider. So this Construct can be used to create a Cognito UserPool
+
+```python
+new CognitoAuthorizer(stack, 'CognitoAuthorizer', {
+  userPoolName: 'chatbot',
+  userPoolClientName: 'chatbotapp',
+});
+```
+
+## Usage Guide
+
+There are different use cases, for example
+
+* Use in another CDK Stack
+* Create only a UserPool for a web application

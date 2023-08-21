@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/entest_cognito_userpool/__init__.py
+src/entest_cognito_userpool/py.typed
+src/entest_cognito_userpool.egg-info/PKG-INFO
+src/entest_cognito_userpool.egg-info/SOURCES.txt
+src/entest_cognito_userpool.egg-info/dependency_links.txt
+src/entest_cognito_userpool.egg-info/requires.txt
+src/entest_cognito_userpool.egg-info/top_level.txt
+src/entest_cognito_userpool/_jsii/__init__.py
+src/entest_cognito_userpool/_jsii/entest-cdk-chatbot@0.0.2.jsii.tgz
