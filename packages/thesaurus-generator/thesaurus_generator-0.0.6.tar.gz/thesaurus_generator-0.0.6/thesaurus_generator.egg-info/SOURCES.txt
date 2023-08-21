@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+thesaurus_generator/__init__.py
+thesaurus_generator/thesaurus_generator.py
+thesaurus_generator.egg-info/PKG-INFO
+thesaurus_generator.egg-info/SOURCES.txt
+thesaurus_generator.egg-info/dependency_links.txt
+thesaurus_generator.egg-info/requires.txt
+thesaurus_generator.egg-info/top_level.txt
