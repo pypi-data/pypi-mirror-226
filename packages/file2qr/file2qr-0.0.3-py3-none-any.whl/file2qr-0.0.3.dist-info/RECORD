@@ -1,0 +1,13 @@
+file_to_qr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+file_to_qr/main.py,sha256=9mc1aaZA6bmgB4VqlA0PuTYOVTwfqxrypJpUfB3eMkQ,4056
+qr_to_file/__init__.py,sha256=Kh6jrI-hnjzjfflp823HuTuUxU3IMtdQ5ftQhdL4LNo,67
+qr_to_file/assembler.py,sha256=7xJe5wRoCeN_cPV1x6TbQ6eTI8eh-2feishPMsw6v5U,3662
+qr_to_file/main.py,sha256=8iPfgQjFdtCz-PQ63UylWNR3NdPks2je9YWQr_jyNBE,3745
+qr_to_file/protocol.py,sha256=gxwIzf9wbxMCWI3sHNwctdoKnBkESbUKaJVHS9M2Bqc,2878
+qr_to_file/qr.py,sha256=UhE2u4JJh_jsSxCNaVdrNw3yOro-lSrfzQZy1c-iXlg,4300
+qr_to_file/webcam.py,sha256=wylTqwDYPa0iwLUb7IO2akr97iNTtXqqGCdS9fAiQ6c,2262
+file2qr-0.0.3.dist-info/METADATA,sha256=tXRFs7d9r3s88LuFdH3I0BeBbs4xCfR24-AYTXcVTAM,615
+file2qr-0.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+file2qr-0.0.3.dist-info/entry_points.txt,sha256=3trTrjXUEJ68gK7RYyPw6iPW1OTC4QTb_eBaBGofzKs,80
+file2qr-0.0.3.dist-info/top_level.txt,sha256=_OiLU4zYoXqcCyl6EvcDjsD3dRNN8bfCowqdIigxb-4,22
+file2qr-0.0.3.dist-info/RECORD,,
