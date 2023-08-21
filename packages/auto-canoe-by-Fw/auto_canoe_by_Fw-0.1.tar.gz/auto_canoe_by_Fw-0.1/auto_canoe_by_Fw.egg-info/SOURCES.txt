@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+auto_canoe_by_Fw/CANoe.py
+auto_canoe_by_Fw/__init__.py
+auto_canoe_by_Fw.egg-info/PKG-INFO
+auto_canoe_by_Fw.egg-info/SOURCES.txt
+auto_canoe_by_Fw.egg-info/dependency_links.txt
+auto_canoe_by_Fw.egg-info/top_level.txt
