@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Skolmaten/__init__.py
+Skolmaten/constants.py
+Skolmaten/helpers.py
+Skolmaten/skolmaten.py
+Skolmaten.egg-info/PKG-INFO
+Skolmaten.egg-info/SOURCES.txt
+Skolmaten.egg-info/dependency_links.txt
+Skolmaten.egg-info/requires.txt
+Skolmaten.egg-info/top_level.txt
