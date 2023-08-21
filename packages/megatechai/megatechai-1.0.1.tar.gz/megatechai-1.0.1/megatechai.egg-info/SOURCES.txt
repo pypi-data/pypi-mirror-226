@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+megatechai/__init__.py
+megatechai.egg-info/PKG-INFO
+megatechai.egg-info/SOURCES.txt
+megatechai.egg-info/dependency_links.txt
+megatechai.egg-info/top_level.txt
+megatechai/model_api/__init__.py
+megatechai/model_api/api.py
+megatechai/model_api/mega_params.py
+megatechai/model_api/params.py
+megatechai/utils/__init__.py
+megatechai/utils/http_client.py
+megatechai/utils/jwt_token.py
+megatechai/utils/sse_client.py
