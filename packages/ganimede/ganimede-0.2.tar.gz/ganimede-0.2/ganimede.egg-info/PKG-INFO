@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ganimede
+Version: 0.2
+Summary: A Rethinking of Computational Notebooks
+Author: nottherealsanta
+Requires-Python: >=3.8

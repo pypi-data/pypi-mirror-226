@@ -1,0 +1,3 @@
+[console_scripts]
+ganimede = ganimede.main:cli
+ganimede_dev = ganimede.main:dev_cli
