@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/README.md
+src/makemahjongg/__init__.py
+src/makemahjongg/__main__.py
+src/makemahjongg/blank.png
+src/makemahjongg/blank_selected.png
+src/makemahjongg/tileset_blank.png
+src/makemahjongg/tileutil.py
+src/makemahjongg.egg-info/PKG-INFO
+src/makemahjongg.egg-info/SOURCES.txt
+src/makemahjongg.egg-info/dependency_links.txt
+src/makemahjongg.egg-info/entry_points.txt
+src/makemahjongg.egg-info/requires.txt
+src/makemahjongg.egg-info/top_level.txt
