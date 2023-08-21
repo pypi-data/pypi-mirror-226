@@ -1,0 +1,4 @@
+optlang
+numpy
+deepdiff
+sigfig
