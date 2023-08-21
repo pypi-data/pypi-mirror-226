@@ -1,0 +1,14 @@
+clicky/__init__.py,sha256=z3DqXJNkmsc1_FlXDIQcLKDwV6n0LhzXANLw9tPA_8w,33
+clicky/app.py,sha256=ndlC5mQXqAh-V7MHnWhJtb8M6XhKU-8gYr8ODsrQgmw,1605
+clicky/backends/__init__.py,sha256=J0ifQnTprQ6-9SPA5YUTqj-4RcYdRir72Xwjubq8Ikg,124
+clicky/backends/base.py,sha256=vfLmFE375KN81PWkClICKi7OCi2aoyKI8GPG_uFjnpA,1711
+clicky/backends/slack.py,sha256=kNbA8tsPYSfNXPZkjd8319_DuoUQ4xzWZC9O_w4E-AU,2984
+clicky/context.py,sha256=odXI3a9w1m1h1gMN9R5spV8WeB0uHAN5-CgSfyn9K-s,250
+clicky/detect_run_string.py,sha256=TLAnwguHyyejUgfhzsquaGVqFMXSA6fleSX0McsmJ94,1712
+clicky/frontends/__init__.py,sha256=8dmNVXTRBXZ2U2_x9AU99Vi4oHmIie3sSpI7-FH-PH8,117
+clicky/frontends/click.py,sha256=vWO0QVJYzyAoQ-F1mGSTbGOscx3QhcJPX3Eb_vP02oE,2968
+clicky/types.py,sha256=Mm5tNCADMZjPq2wesjZ3lTv7dsSOvypuv0J38dDRtvE,1096
+clicky-0.1.0.dist-info/LICENSE,sha256=k4t8SSavmDiYtsKiOx84ciRpmUyBApWJ7YmqgYZLA28,1069
+clicky-0.1.0.dist-info/METADATA,sha256=NQPISWUyQHetb1Y-Vf-ObPAak7bT8wtCnEs5jTQmSII,1682
+clicky-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+clicky-0.1.0.dist-info/RECORD,,
