@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+setup.py
+NudeNetUpdated.egg-info/PKG-INFO
+NudeNetUpdated.egg-info/SOURCES.txt
+NudeNetUpdated.egg-info/dependency_links.txt
+NudeNetUpdated.egg-info/requires.txt
+NudeNetUpdated.egg-info/top_level.txt
+fastDeploy_recipes/classifier/predictor.py
+src/__init__.py
+src/classifier.py
+src/detector.py
+src/utils/__init__.py
+src/utils/detector.py
+src/utils/download.py
+src/utils/image.py
+src/utils/video.py
