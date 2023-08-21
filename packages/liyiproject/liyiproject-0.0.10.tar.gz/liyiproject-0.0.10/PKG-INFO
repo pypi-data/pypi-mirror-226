@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: liyiproject
+Version: 0.0.10
+Summary: A small test package
+Project-URL: Github, https://github.com/support-yl/testproject.git
+Author-email: yi-li <insupport@163.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://pypi.org/user/yi-li/)
+to write your content.
