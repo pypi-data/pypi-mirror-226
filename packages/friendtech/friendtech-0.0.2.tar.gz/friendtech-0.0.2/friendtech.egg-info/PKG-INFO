@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: friendtech
+Version: 0.0.2
+Summary: A python module for friend.tech
+Author: ItsAditya (https://itsaditya.xyz)
+Author-email: <chaudharyaditya0005@gmail.com>
+Keywords: friend.tech,social media,crypto,decentralized social media
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+# friendtech - A python module to interact with friend.tech platform
+
+Run `pip install friendtech` to install the module!
+
+The module uses friend.tech APIs (by default) and you can change the nodeURL to use any other node.
+
+Developed by [ItsAditya](https://twitter.com/itsaditya_xyz)
+
+## How to Use:
