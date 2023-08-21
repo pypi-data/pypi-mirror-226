@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: variablz-qt
+Version: 0.0.1
+Summary: Welcome to the Variablz QT Library! This library provides a collection of utility functions tailored 
+Requires-Dist: certifi (==2023.7.22)
+Requires-Dist: charset-normalizer (==3.2.0)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: idna (==3.4)
+Requires-Dist: pipreqs (==0.4.13)
+Requires-Dist: PyQt6 (==6.5.2)
+Requires-Dist: PyQt6-Qt6 (==6.5.2)
+Requires-Dist: PyQt6-sip (==13.5.2)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: urllib3 (==2.0.4)
+Requires-Dist: yarg (==0.1.9)
+
