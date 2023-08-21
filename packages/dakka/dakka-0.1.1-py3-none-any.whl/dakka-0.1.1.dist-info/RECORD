@@ -1,0 +1,12 @@
+dakka/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dakka/agent_logger.py,sha256=KzuTpNIvJQXMiOaDpCqVSi1dKxZrz0W9vYAv2-srQk8,794
+dakka/ask.py,sha256=oqxbIGPsUuH7XkEIEWmN7FAcNMExDay_E7gCVYZ5rdE,2688
+dakka/cli.py,sha256=DfuKlI5jn1z-5fOoT_cQQkNb36i8O4L3kYzFw2-o4II,6301
+dakka/openapi_spec.py,sha256=OAkgESDAJxODJPg4kypdstqO0H7zfpw0OrAdNHiYiIA,17354
+dakka/test_cli.py,sha256=b2kBOxgxlv-ipWnIQJ9P9jlQqHERhK1FStNY6AWa8Sg,1829
+dakka/utils.py,sha256=3FYQzrM6a2kj-569QKf9zGc45XioSe9_JiD0QO02JYo,2280
+dakka-0.1.1.dist-info/METADATA,sha256=0eOkSX8kjHKBBFcNs-H5_6X8-buB_UmZkHSrWo6ABjM,249
+dakka-0.1.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+dakka-0.1.1.dist-info/entry_points.txt,sha256=ol111BRgiPW1Oivf1tVzZQFOwu9maDUhet6lzI3Ojhs,41
+dakka-0.1.1.dist-info/top_level.txt,sha256=NjzOfFt-M_T4Mc7Ft_nho_9wj72f6ZoS1kpUSxZrGKM,6
+dakka-0.1.1.dist-info/RECORD,,

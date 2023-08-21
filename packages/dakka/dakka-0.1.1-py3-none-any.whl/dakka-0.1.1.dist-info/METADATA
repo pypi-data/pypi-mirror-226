@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dakka
+Version: 0.1.1
+Summary: Do more of what works.
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: openapi-spec-validator
+Requires-Dist: openapi-spec-pydantic
+Requires-Dist: openai
+Requires-Dist: termcolor
+
