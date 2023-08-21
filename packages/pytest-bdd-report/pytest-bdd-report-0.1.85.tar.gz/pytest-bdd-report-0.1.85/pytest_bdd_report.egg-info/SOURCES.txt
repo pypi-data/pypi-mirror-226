@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+pytest_bdd_report.egg-info/PKG-INFO
+pytest_bdd_report.egg-info/SOURCES.txt
+pytest_bdd_report.egg-info/dependency_links.txt
+pytest_bdd_report.egg-info/entry_points.txt
+pytest_bdd_report.egg-info/requires.txt
+pytest_bdd_report.egg-info/top_level.txt
