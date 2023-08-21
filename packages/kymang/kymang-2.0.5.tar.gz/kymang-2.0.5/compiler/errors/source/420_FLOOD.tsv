@@ -1,0 +1,6 @@
+id	message
+2FA_CONFIRM_WAIT_X	Tungguin sampe {value} detik diperlukan karena akun ini aktif dan dilindungi oleh kata sandi 2FA
+FLOOD_TEST_PHONE_WAIT_X	Tungguin sampe {value} detik diperlukan di server pengujian
+FLOOD_WAIT_X	Tungguin sampe {value} detik dulu ngentot
+SLOWMODE_WAIT_X	Tungguin sampe {value} detik dulu, baru bisa kirim pesan di obrolan ini.
+TAKEOUT_INIT_DELAY_X	Anda harus mengonfirmasi permintaan ekspor data menggunakan salah satu perangkat seluler Anda atau menunggu {value} detik
