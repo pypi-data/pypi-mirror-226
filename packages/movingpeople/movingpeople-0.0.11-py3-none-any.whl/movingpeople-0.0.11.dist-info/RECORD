@@ -1,0 +1,10 @@
+movingpeople/__init__.py,sha256=kp_qSWvFFekc8q6NZYErVNTqe6jJ3dl3uO7oUB9fe-s,152
+movingpeople/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+movingpeople/src/route_generator.py,sha256=OwbDaMYvxOff9g757rNVeuW7f3v2d2zOyx6AWOR4j5U,12978
+movingpeople/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+movingpeople/tests/test_movingpeople.py,sha256=mfB7tikp2OisIMPQbx3YoI8qP99xwoqI8qutnr5tB7I,4223
+movingpeople-0.0.11.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+movingpeople-0.0.11.dist-info/METADATA,sha256=aLYTfmitTEdG016rtZBWfWrwGjFiHWROJePaQwTvPiY,3981
+movingpeople-0.0.11.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+movingpeople-0.0.11.dist-info/top_level.txt,sha256=PSjzhsVrY3lUr2pMmeVHGPhay7hrQwotpEW4zNTVmmA,13
+movingpeople-0.0.11.dist-info/RECORD,,
