@@ -1,0 +1,11 @@
+aiofauna_llm/__init__.py,sha256=QllOy78kIU_rP7i8eIXWXc8N6LzE6L8RwazPGfxw5IQ,129
+aiofauna_llm/schemas/__init__.py,sha256=XMKGv9Idk04ZHJjB9DLlRg5UFymnhFv5lGxhZ7Hl584,70
+aiofauna_llm/schemas/openai.py,sha256=sXsEy_aMddfnqTJzG80waj-Z6BZ0uOIrheFqRHs87rY,2695
+aiofauna_llm/schemas/pinecone.py,sha256=1qn69oxg9Rm0jtM3u6Y0I8A0tFlKa88swdXhjqltKO0,2834
+aiofauna_llm/schemas/typedefs.py,sha256=De-3nbHNcxJJKo1zCzNJG5w4Qt-MvFqltpXoP_zXX2I,866
+aiofauna_llm/services/__init__.py,sha256=VwSVl33HfIbHRE33fQm64Y9oB0H5aginVCth32WXAF0,46
+aiofauna_llm/services/openai.py,sha256=jIWzUoWU_JKGx9LyA-OKtK-84uMnrmjlcoDB_RsBrC0,6197
+aiofauna_llm/services/pinecone.py,sha256=j-sGlP9GccTF9BQ4HbSZk-Fz7WQ6y7GxwqByUtlLeEI,3140
+aiofauna_llm-0.0.3.dist-info/METADATA,sha256=M_rXf7nzUyxIIl-tcnExt0u7YQJhXqo7Z-xGOv547fM,466
+aiofauna_llm-0.0.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+aiofauna_llm-0.0.3.dist-info/RECORD,,
