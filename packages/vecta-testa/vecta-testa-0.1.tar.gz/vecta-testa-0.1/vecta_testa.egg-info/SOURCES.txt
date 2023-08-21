@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+vecta_testa.egg-info/PKG-INFO
+vecta_testa.egg-info/SOURCES.txt
+vecta_testa.egg-info/dependency_links.txt
+vecta_testa.egg-info/top_level.txt
+vekta_testa/__init__.py
+vekta_testa/graph.py
+vekta_testa/runner.py
+vekta_testa/types.py
+vekta_testa/utils.py
