@@ -1,0 +1,8 @@
+numpy>=1.16
+scipy>=1.0
+pyyaml
+matplotlib
+requests
+PyQt5
+PyQtWebEngine
+vtk
