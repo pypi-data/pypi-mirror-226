@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: copyit
+Version: 0.0.0
+Summary: Project template composer.
+Author-email: Blake Naccarato <blake.naccarato@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Changes, https://copyit-org.github.io/copyit/changelog.html
+Project-URL: Docs, https://copyit-org.github.io/copyit
+Project-URL: Home, https://github.com/copyit-org/copyit
+Project-URL: Tracker, https://github.com/copyit-org/copyit/issues
+
+# copyit
+
+Project template composer.
+

@@ -1,0 +1,107 @@
+ci:
+  skip:
+    - "update-warning-filters"
+    - "pytest-fast-only"
+    - "fawltydeps"
+  autoupdate_schedule: "quarterly"
+
+repos:
+  - repo: "meta"
+    hooks:
+      # ? Enable this to ensure each hook runs against at least one file
+      # - id: "check-hooks-apply"
+      - id: "check-useless-excludes"
+  - repo: "local"
+    hooks:
+      # * -------------------------------------------------------------------------- * #
+      # * Changes below should persist in significant template updates.
+
+      # * -------------------------------------------------------------------------- * #
+      # * Changes below may be lost in significant template updates.
+
+      - id: "update-warning-filters"
+        name: "update-warning-filters"
+        verbose: true
+        pass_filenames: false
+        language: "system"
+        entry: "pwsh -Command python .tools/scripts/warning_filters.py"
+        files: |
+          (?x)^(
+            .tools/scripts/warning_filters.py
+          )$
+      - id: "pytest-fast-only"
+        name: "pytest-fast-only"
+        verbose: true
+        pass_filenames: false
+        language: "system"
+        entry: |
+          pwsh -Command "pytest -m 'not slow' --suppress-no-test-exit-code"
+        files: |
+          (?x)^(
+            pyproject.toml
+            src/.*
+            |tests/.*
+            |.tools/(
+              pyproject.toml
+              |requirements/.*
+            )
+          )$
+      - id: "fawltydeps"
+        name: "fawltydeps"
+        verbose: true
+        pass_filenames: false
+        language: "system"
+        entry: "pwsh -Command fawltydeps"
+        files: |
+          .*
+
+  # * ------------------------------------------------------------------------------ * #
+  # * Changes below should persist in significant template updates.
+
+  # * ------------------------------------------------------------------------------ * #
+  # * Changes below may be lost in significant template updates.
+
+  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+    rev: "v4.4.0"
+    hooks:
+      - id: "end-of-file-fixer"
+      - id: "trailing-whitespace"
+  - repo: "https://github.com/asottile/blacken-docs"
+    rev: "1.16.0"
+    hooks:
+      - id: "blacken-docs"
+        additional_dependencies: ["black==23.7.0"]
+  - repo: "https://github.com/charliermarsh/ruff-pre-commit"
+    rev: "v0.0.284"
+    hooks:
+      - id: "ruff"
+  - repo: "https://github.com/DavidAnson/markdownlint-cli2"
+    rev: "v0.8.1"
+    hooks:
+      - id: "markdownlint-cli2-fix"
+  - repo: "https://github.com/nbQA-dev/nbQA"
+    rev: "1.7.0"
+    hooks:
+      - id: "nbqa-ruff"
+        additional_dependencies: ["ruff==0.0.284"]
+  - repo: "https://github.com/psf/black"
+    rev: "23.7.0"
+    hooks:
+      - id: "black"
+      - id: "black-jupyter"
+  - repo: "https://github.com/srstevenson/nb-clean"
+    rev: "2.4.0"
+    hooks:
+      - id: "nb-clean"
+        args:
+          - "--remove-empty-cells"
+          - "--preserve-cell-metadata"
+          - "special"
+          - "tags"
+          - "--"
+        files: |
+          (?x)^(
+            src/.*
+            |docs/.*
+            |tests/.*
+          )$

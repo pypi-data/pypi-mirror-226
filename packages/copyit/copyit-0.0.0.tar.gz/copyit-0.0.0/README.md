@@ -1,0 +1,3 @@
+# copyit
+
+Project template composer.

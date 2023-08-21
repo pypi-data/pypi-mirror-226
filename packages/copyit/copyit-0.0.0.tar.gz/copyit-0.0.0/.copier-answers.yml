@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: f0d6311
+_src_path: gh:blakeNaccarato/copier-python
+actions_runner: ubuntu-latest
+active: false
+github_repo_name: copyit
+project_description: Project template composer.
+project_email: blake.naccarato@gmail.com
+project_name: copyit
+project_owner_github_username: copyit-org
+project_owner_name: Blake Naccarato
+project_version: 0.0.0
+python_version: '3.11'
+year_of_project_creation: 2023
