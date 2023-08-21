@@ -1,0 +1,2 @@
+[console_scripts]
+dcr = docker_compose_reloaded:cli
