@@ -1,0 +1,10 @@
+LICENSE
+README.md
+alibaba_sms.py
+pyproject.toml
+setup.py
+alibaba_sms.egg-info/PKG-INFO
+alibaba_sms.egg-info/SOURCES.txt
+alibaba_sms.egg-info/dependency_links.txt
+alibaba_sms.egg-info/requires.txt
+alibaba_sms.egg-info/top_level.txt
