@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "crystalaudio"
+version = "1.0.1"
+description = "CrystalPlay(\"file.wav\")"
+authors = ["3verlaster <ndizhevskij@gmail.com>"]
+license = "LICENSE.txt"
+readme = "README.md"
+packages = [{include = "crystalaudio"}]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
