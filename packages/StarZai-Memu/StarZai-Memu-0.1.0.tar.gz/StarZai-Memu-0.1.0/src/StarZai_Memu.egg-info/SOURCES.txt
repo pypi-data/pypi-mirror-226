@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/StarZai_Memu.egg-info/PKG-INFO
+src/StarZai_Memu.egg-info/SOURCES.txt
+src/StarZai_Memu.egg-info/dependency_links.txt
+src/StarZai_Memu.egg-info/top_level.txt
+src/plugins/starzai_memu/__init__.py
+src/plugins/starzai_memu/config.py
