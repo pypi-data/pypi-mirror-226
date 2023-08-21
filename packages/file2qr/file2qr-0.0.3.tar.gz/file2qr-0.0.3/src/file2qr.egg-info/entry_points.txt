@@ -1,0 +1,3 @@
+[console_scripts]
+file2qr = file_to_qr.main:main
+qr2file = qr_to_file.main:main
