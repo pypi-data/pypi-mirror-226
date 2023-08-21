@@ -1,0 +1,13 @@
+[project]
+name = "nanoPPO"
+version = "0.1"
+description = "This is a reinforcement PPO implementation"
+readme = "README.md"
+authors = [{name = "James Liu"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Development Status :: 4 - Beta"
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
