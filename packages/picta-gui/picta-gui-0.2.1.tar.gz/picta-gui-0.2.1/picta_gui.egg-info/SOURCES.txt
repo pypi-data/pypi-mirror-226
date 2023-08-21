@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+picta_gui.egg-info/PKG-INFO
+picta_gui.egg-info/SOURCES.txt
+picta_gui.egg-info/dependency_links.txt
+picta_gui.egg-info/requires.txt
+picta_gui.egg-info/top_level.txt
+src/__init__.py
+src/allocate.py
+src/displayutils.py
+src/filechecks.py
+src/imagetransforms.py
+src/turtle_gui.py
