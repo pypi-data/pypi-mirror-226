@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+datascrubber.egg-info/PKG-INFO
+datascrubber.egg-info/SOURCES.txt
+datascrubber.egg-info/dependency_links.txt
+datascrubber.egg-info/requires.txt
+datascrubber.egg-info/top_level.txt
