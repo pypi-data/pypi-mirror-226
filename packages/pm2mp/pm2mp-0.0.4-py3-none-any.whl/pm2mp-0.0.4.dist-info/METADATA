@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pm2mp
+Version: 0.0.4
+Summary: PM2 Programmatic API for Python
+Home-page: https://github.com/MushroomSquad/pm2mp
+Author: Mushroom Squad 
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: nodejs-bin
+
