@@ -1,0 +1,8 @@
+assembly_emulator/__init__.py,sha256=DpXGewDl7ty79PTyPykH0O1doB-9nexP7cYOFQ61F0Q,62
+assembly_emulator/asm8086_demo.py,sha256=NjVT4xFq9BSEejdlBGGDN3z_5CQZWAZlMFWIXaphyaw,69040
+assembly_emulator/test_asm.py,sha256=irhfB1-Ag2VOenlNgvSIATefpXHh9L_Nv--EOq8btpA,33
+assembly_emulator-1.0.3.dist-info/LICENSE,sha256=LhH4nnNyMCn_HyeAthqHci6GYvqRft0NvjRq_AMJcS4,1065
+assembly_emulator-1.0.3.dist-info/METADATA,sha256=dbnb0JTpNkpKPKT6hTz73qpf_tt_CdSm3tgCEi8NCQE,447
+assembly_emulator-1.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+assembly_emulator-1.0.3.dist-info/top_level.txt,sha256=HEvbdtvTlJ04Yclb5HY4j8xmGCtUv4c26ByANGxsKEI,18
+assembly_emulator-1.0.3.dist-info/RECORD,,
