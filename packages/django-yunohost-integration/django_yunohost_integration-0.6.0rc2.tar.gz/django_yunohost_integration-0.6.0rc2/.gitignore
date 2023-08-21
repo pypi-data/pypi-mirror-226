@@ -1,0 +1,16 @@
+.*
+*.egg-info
+__pycache__
+/dist/
+coverage.*
+
+!.github
+!.editorconfig
+!.flake8
+!.gitignore
+!.gitkeep
+
+secret.txt
+/local_test/
+*.log
+*.sqlite
