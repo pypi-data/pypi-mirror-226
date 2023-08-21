@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+odysseusai/__init__.py
+odysseusai/odysseusai.py
+odysseusai.egg-info/PKG-INFO
+odysseusai.egg-info/SOURCES.txt
+odysseusai.egg-info/dependency_links.txt
+odysseusai.egg-info/top_level.txt
