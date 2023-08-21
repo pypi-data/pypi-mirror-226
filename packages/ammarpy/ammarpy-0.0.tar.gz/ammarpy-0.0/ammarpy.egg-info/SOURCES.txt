@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+ammarpy/__init__.py
+ammarpy/asagame.py
+ammarpy.egg-info/PKG-INFO
+ammarpy.egg-info/SOURCES.txt
+ammarpy.egg-info/dependency_links.txt
+ammarpy.egg-info/not-zip-safe
+ammarpy.egg-info/top_level.txt
