@@ -1,0 +1,253 @@
+Metadata-Version: 2.1
+Name: DatastreamNavigator
+Version: 1.0.7
+Summary: Python package for Datastream Web Services Navigator component
+Author: London Stock Exchange
+Author-email: datastream@lseg.com
+License: Apache Software License (http://www.apache.org/licenses/LICENSE-2.0)
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: requests
+
+The DatastreamUCS package facilitates retrieving Datastream content, our historical financial database with over 35 million individual instruments
+or indicators across all major asset classes, including 14.5 million active economic indicators. It features 120 years of data,
+across 175 countries – the information you need to interpret market trends, economic cycles, and the impact of world events.
+
+Data spans bond indices, bonds, commodities, convertibles, credit default swaps, derivatives, economics, energy, equities, equity
+indices, ESG, estimates, exchange rates, fixed income, funds, fundamentals, interest rates, and investment trusts. Unique content
+includes I/B/E/S Estimates, Worldscope Fundamentals, point-in-time data, and Reuters Polls.
+
+Alongside the content, sit a set of powerful
+analytical tools for exploring relationships between different asset types, with a library of customizable analytical functions.
+
+In house time series can also be uploaded using the package to comingle with Datastream maintained datasets, use with these analytical
+tools and displayed in Datastream’s flexible charting facilities in Microsoft Office. 
+
+This DatastreamNavigator package now allows you to launch the Datastream Navigator service within a wxPython browser and to search for
+instruments and datatypes for use in retrieval requests using the DatstreamUCS package.
+
+
+# Available in this version 
+
+This is the initial release of the DatastreamNavigator package and supports browsing to our search utility using the wxPython platform.
+
+
+# Dependencies
+
+This package has a dependency on the wxPython package (pip install wxPython).
+
+In order to successfuly launch the DatastreamNavigator package, you have to obtain the search urls by prior authentication against our platform using
+the DatastreamUCS package.
+
+
+# Prerequisites
+
+You need to have an account to access Datastream content and these credentials need to be permissioned to access our API service.
+
+If you do not have an account, please request Datastream product details [here](https://www.refinitiv.com/en/products/datastream-macroeconomic-analysis/).
+If you do have an account, please contact your local LSEG representative to discuss access to the web API service.
+
+
+
+# Getting started
+
+First of all we need to download the wxPython, DatastreamUCS and DatastreamNavigator packages:
+```
+pip install wxPython
+pip install DatastreamUCS
+pip install DatastreamNavigator
+```
+
+For any applications we then just need to import both the DatastreamUCS and DatastreamNavigator libraries and refer to the following sections
+demonstrating usage:
+```
+import DatastreamUCS as dsweb
+import DatastreamNavigator as dsNav
+```
+
+
+# Logging on with your credentials
+
+In order to access DatastreamNavigator, you need to logon to DatastreamUCS with your Datastream credentials. After this step, you can seed
+DatastreamNavigator with the search URLs containg an encrypted token. These URLS are valid for 24 hours after logon. 
+
+User authentication can be performed by loading the credentials from a configuration file, or you can supply the credentials directly in the constructor. Please
+see the help for DatastreamUCS for more details.
+```
+# loading credentials from a config file
+dsClient = dsweb.DataClient('Config.ini')
+
+# loading credentials directly into the constructor
+dsClient = dsweb.DataClient(None, 'YourID', 'YourPwd')
+```
+
+
+# Seeding DatastreamNavigator with authorised search URLs.
+
+Datastream Navigator has two search URLs, one for searching instruments and one for searching datatypes. These URLs can be obtained from the DatastreamUCS
+DataClient after a successful logon and passed directly to DatastreamNavigator.
+```
+# We want to request some data, but first we should select some instruments to query
+# To search for instruments we can use our browser object in Datastream Navigator
+# let's create the navigator client
+navigator = dsNav.DatastreamNavigator()
+
+# Then we need to assign the urls for accessing Datastream Navigator created when we logged onto the API
+navigator.seriesSearchUrl = dsClient.navigatorSeriesUrl
+navigator.datatypeSearchUrl = dsClient.navigatorDatatypesUrl
+```
+
+
+# Searching for instruments or datatypes to request from Datastream
+
+Launching the web browser is simply a matter of calling the SearchSeries or SearchDatatypes methods.
+
+Once the browser has opened, you can filter on various search criteria using the panel on the left hand side of the Navigator window.
+
+Use the checkbox to the left of each instrument to add/remove it from the selected items collection. Then select the 'Use'
+option at the top of the search results table to return all your selected items.
+
+Note, if you click on the Name field of an individual item in the results pane, a more detailed view of the instrument will
+be displayed in a panel at the bottom of the browser (known as the spotlight window).
+
+You can select and return a maximum of 4K items.
+
+
+# Searching for instruments
+
+The following is a simple example of launching DatastreamNavigator, selecting one or more instruments, and displaying the selected results;
+
+```
+# OK, let's launch Navigator and select some instruments
+seriesSearchResponse = navigator.SearchSeries()
+
+# Note, you need to check you successfully retrieved a valid list of instruments
+if seriesSearchResponse.ResponseStatus == dsNav.DSNavigatorResponseStatus.NavigatorSuccess:
+    if seriesSearchResponse.SeriesCount > 0 and seriesSearchResponse.Series:
+        print("Series Selected:\n\n")
+        for i in seriesSearchResponse.Series:
+            print ("Name: " + i.Name, "PrimaryCode: " + i.PrimaryCode, "PrimaryCodeType: " + i.PrimaryCodeType, "Category: " 
+                   + i.Category.name, "Base Date: "+ format(i.BaseDate), sep = '\n')
+            print ("All Identifiers:")
+            for k, v in i.Codes.items():
+                print ('    ' + k + ": ", v)
+            print('\n')
+    else:
+        print("SearchSeries returned with no instruments selected.\n")
+else:
+    # The ErrorMessage field will describe the error condition
+    print ('Search request failed with: ' + seriesSearchResponse.ErrorMessage)
+```
+
+
+For successful SearchSeries responses, you'll receive a collection of DSNavigatorSeries objects; one for each returned instrument.
+
+The DSNavigatorSeries class has the following properties:
+
+```
+Name: The descriptive name for the instrument (e.g. APPLE, MICROSOFT, etc).
+
+PrimaryCode: This is the primary identifier for the selected instrument. This is typically a Datastream mnemonic (MNEM)
+or Datastream Code (DSCD).
+
+PrimaryCodeType - This defines the type of the PrimaryCode returned; typically MNEM or DSCD. Other possible types could
+be one of the set of key names defined in the Codes property below.
+
+Category: A DSNavigatorCategory enumeration instance defining the classification of the instrument within Datastream.
+
+BaseDate : The date this instrument was created or first listed on Datastream.
+
+Codes : A list of Key-Value pairs defining all the returned identifiers for the instrument. The returned Key values can be:
+* MNEM - This is a unique identification code assigned by Datastream. 
+* DSCD - This is the unique six-digit identification code for every stock allocated by Datastream.
+* LOC -  This is an identification code based on the instrument's official local exchange code.
+* ISIN - The International Security Identification Number. A code that uniquely identifies a security.
+* SECD - This is an identification code based on the code issued by the London Stock Exchange.
+* RIC -  The Reuters Instrument Code. Note this datatype is permissioned. Please consult your LSEG account manager.
+* LTYPE - A description of the type of user created list returned. e.g. 'Datastream List'
+```
+
+
+The SearchSeries method in DatastreamNavigator also allows you to filter the avalable list of instruments when you launch it.
+Here we will demonstrate launching navigator filtered only on 'Economics' instruments concerned with French GDP.
+
+```
+#NB, we aren't concerned with handling the response. Please see the earlier cells for this.
+selectedGdpItems = navigator.SearchSeries(categoryFilter = dsNav.DSNavigatorCategory.Economics, searchFilter = "GDP France")
+```
+
+
+# Searching for datatypes
+
+The following is a simple example of launching DatastreamNavigator, selecting one or more datatypes, and displaying the selected results;
+
+```
+# Let's search for some datatypes to request against our instruments.
+# For this example, lets's find some timeseries datatypes. Please pick some datatypes that are available for equities.
+
+datatypesSearchResponse = navigator.SearchDatatypes()
+
+# Note, you need to check you successfully retrieved a valid list of datatypes
+if datatypesSearchResponse.ResponseStatus == dsNav.DSNavigatorResponseStatus.NavigatorSuccess:
+    if datatypesSearchResponse.DatatypesCount > 0 and datatypesSearchResponse.Datatypes:
+        print("Datatypes Selected:\n\n")
+        for i in datatypesSearchResponse.Datatypes:
+            print (i.Key + " : " + i.Name, sep = "\n")
+    else:
+        print("SearchDatatypes returned with no datatypes selected.\n")
+else:
+    # The ErrorMessage field will describe the error condition
+    print (datatypesSearchResponse.ErrorMessage)
+```
+
+
+For successful SearchDatatypes responses, you'll receive a collection of DSNavigatorDatatype objects; one for each returned datatype.
+
+The DSNavigatorDatatype class has the following two properties:
+```
+Key : Symbol of the datatype eg: BP
+Name : Description of the datatype eg: Price to Book Value
+```
+
+The SearchDatatypes method in Datastream Navigator also allows you to filter the avalable list of datatypes to just static or
+timeseries datatypes. It also allows you to filter on keywords. Here we will demonstrate filtering on timeseries datatypes
+with 'vol' in the description
+```
+#NB, we aren't concerned with handling the response. Please see the earlier cells for this.
+selectedPriceDatatypes = navigator.SearchDatatypes(typeFilter = dsNav.DSDatatypeFilter.TimeseriesOnly, searchFilter = "Vol*")
+```
+
+
+# Example of using the returned sets of instruments and datatypes in DatastreamUCS
+
+Assuming we have called the SearchSeries and SearchDatatypes methods and successfully stored the responses in the variables 
+seriesSearchResponse and datatypesSearchResponse respectively, we can then use both selections to request the underlying data
+using the DatastreamUCS package which you would have needed to logon onto previously.
+
+```
+# Provided you successfully searched for some instruments and datatypes, let's request some daily data for this dataset.
+# Now we revert back to the DatastreamUCS component to retrieve the data; DatastreamNavigator's job is done.
+
+# We'll check you previously selected some instruments and datatypes. If not, we'll default to some safety examples
+
+# default instrument option is @MSFT and @AAPL
+instruments = '@MSFT,@AAPL'
+# override with your selections from Datastream Navigator
+if (seriesSearchResponse and isinstance(seriesSearchResponse, dsNav.DSNavigatorSeriesResponse)
+    and seriesSearchResponse.ResponseStatus == dsNav.DSNavigatorResponseStatus.NavigatorSuccess
+    and seriesSearchResponse.Series and len(seriesSearchResponse.Series) > 0):
+    instruments = ','.join([x.PrimaryCode for x in seriesSearchResponse.Series])
+
+# default datatypes option is PH and PL
+datatypes = ['PH', 'PL']
+# override with your selections from Datastream Navigator
+if (datatypesSearchResponse and isinstance(datatypesSearchResponse, dsNav.DSNavigatorDatatypesResponse)
+    and datatypesSearchResponse.ResponseStatus == dsNav.DSNavigatorResponseStatus.NavigatorSuccess
+    and datatypesSearchResponse.Datatypes and len(datatypesSearchResponse.Datatypes) > 0):
+    datatypes = [x.Key for x in datatypesSearchResponse.Datatypes]
+
+# And let's request that dataset from the begining of 2022 with daily frequency and display using a dataframe.
+df = dsClient.get_data(instruments, datatypes, kind = 1, start = "2022-01-01", end = '-0D', freq = 'D')
+print (df)
+```
