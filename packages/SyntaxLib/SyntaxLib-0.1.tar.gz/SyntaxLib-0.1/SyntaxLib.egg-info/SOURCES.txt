@@ -1,0 +1,5 @@
+setupsyntax.py
+SyntaxLib.egg-info/PKG-INFO
+SyntaxLib.egg-info/SOURCES.txt
+SyntaxLib.egg-info/dependency_links.txt
+SyntaxLib.egg-info/top_level.txt
