@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+RobotTracker/Tester.py
+RobotTracker/TrackerDB.py
+RobotTracker/__init__.py
+automation_tracker.egg-info/PKG-INFO
+automation_tracker.egg-info/SOURCES.txt
+automation_tracker.egg-info/dependency_links.txt
+automation_tracker.egg-info/requires.txt
+automation_tracker.egg-info/top_level.txt
