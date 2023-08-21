@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: google-images-downloader
+Version: 1.0.1
+Summary: Script to download images from a "Google Images" query
+Home-page: https://github.com/Harkame/GoogleImagesDownloader
+Author: Harkame
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+
+# GoogleImagesDownloader
+
+[![PyPI version](https://badge.fury.io/py/google-images-downloader.svg)](https://badge.fury.io/py/google-images-downloader)
+
+## Installation
+
+```console
+$ pip install google-images-downloader
+```
+
+OR
+
+```console
+$ git clone https://github.com/Harkame/GoogleImagesDownloader.git
+$ cd GoogleImagesDownloader
+$ python -m pip install .
+```
+
+## Usage
+
+```console
+$ google-images-downloader
+```
