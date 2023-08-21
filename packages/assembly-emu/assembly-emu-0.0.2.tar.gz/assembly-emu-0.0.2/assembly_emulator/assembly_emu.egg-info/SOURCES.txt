@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+assembly_emulator/assembly_emu.egg-info/PKG-INFO
+assembly_emulator/assembly_emu.egg-info/SOURCES.txt
+assembly_emulator/assembly_emu.egg-info/dependency_links.txt
+assembly_emulator/assembly_emu.egg-info/top_level.txt
