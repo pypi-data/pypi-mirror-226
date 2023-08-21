@@ -1,0 +1,9 @@
+README.md
+setup.py
+omiga/__init__.py
+omiga/omiga.py
+omiga.egg-info/PKG-INFO
+omiga.egg-info/SOURCES.txt
+omiga.egg-info/dependency_links.txt
+omiga.egg-info/requires.txt
+omiga.egg-info/top_level.txt
