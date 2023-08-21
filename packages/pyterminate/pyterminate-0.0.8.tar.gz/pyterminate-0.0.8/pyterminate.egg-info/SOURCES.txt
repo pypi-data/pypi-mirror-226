@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyterminate/__init__.py
+pyterminate/py.typed
+pyterminate.egg-info/PKG-INFO
+pyterminate.egg-info/SOURCES.txt
+pyterminate.egg-info/dependency_links.txt
+pyterminate.egg-info/top_level.txt
