@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: stat-classification-plot
+Version: 1.0.1
+Home-page: https://github.com/Paramuths/stat-classification-plot-package
+Author: Paramuth Samuthrsindh
+Author-email: paramuths@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# stat-classification-plot-package #
+
+**pip package to help with displaying and saving outputs from classification including**
+1. Confusion Matrix
+2. Receiver-Operating-Characteristic curve
+3. Precision-Recall curve
+4. Precision-Recall-F1 graph
