@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+example.py
+pyproject.toml
+requirements.txt
+tests.py
+pyramaterised/pyramaterised.egg-info/PKG-INFO
+pyramaterised/pyramaterised.egg-info/SOURCES.txt
+pyramaterised/pyramaterised.egg-info/dependency_links.txt
+pyramaterised/pyramaterised.egg-info/requires.txt
+pyramaterised/pyramaterised.egg-info/top_level.txt
