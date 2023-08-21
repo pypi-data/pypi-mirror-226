@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mah"
+version = "0.0.1"
+description = "mah - mpv add-on helper"
+readme = "README.md"
+license = { text = "GNU General Public License v3 (GPLv3)" }
+keywords = [ "mpv" ]
+dependencies = [
+    "loadconf",
+    "GitPython"
+]
+
+[project.optional-dependencies]
+
+[project.scripts]
+mlm = "mlm.__main__:main"
+
+[project.urls]
+repository = "https://codeberg.org/johndovern/mlm"

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/mah/__init__.py
+src/mah.egg-info/PKG-INFO
+src/mah.egg-info/SOURCES.txt
+src/mah.egg-info/dependency_links.txt
+src/mah.egg-info/entry_points.txt
+src/mah.egg-info/requires.txt
+src/mah.egg-info/top_level.txt

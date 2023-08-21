@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mah
+Version: 0.0.1
+Summary: mah - mpv add-on helper
+License: GNU General Public License v3 (GPLv3)
+Project-URL: repository, https://codeberg.org/johndovern/mlm
+Keywords: mpv
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mah
+mah - mpv add-on helper.
