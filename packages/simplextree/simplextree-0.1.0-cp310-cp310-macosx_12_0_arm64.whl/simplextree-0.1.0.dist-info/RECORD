@@ -1,0 +1,9 @@
+_simplextree.cpython-310-darwin.so,sha256=x3vGz6w7IE-F1mZOimTNiXL-Q3xLhDR7zXHyinnFrrM,489119
+_unionfind.cpython-310-darwin.so,sha256=u6rKeJx_KF9-2xNJ_ONbPN9mjnXv3sbldTSEAZOkN3U,224717
+simplextree-0.1.0.data/purelib/simplextree/__init__.py,sha256=tDtLBRBOiz8IarXtULPpx8GSVbWcAWUnG-juNOFvqvM,196
+simplextree-0.1.0.data/purelib/simplextree/SimplexTree.py,sha256=rumEP3-0XyZ5lLgXX7M1WKatqwNJyU2e8MPTK7NlVAI,10966
+simplextree-0.1.0.data/purelib/simplextree/UnionFind.py,sha256=gZaT9gJCAKIJ-6vlqSAdC3TuB9efxc8zFLbth2dhips,207
+simplextree-0.1.0.dist-info/RECORD,,
+simplextree-0.1.0.dist-info/LICENSE,sha256=YvuKOpYh3COIF0yqq-nCMXtpS7mh1GyYvPVlW2j1G-M,11359
+simplextree-0.1.0.dist-info/WHEEL,sha256=Ep2SgF6yV45nIBdxm49hl_xnVh0uKnFXRsk2oguDYE8,93
+simplextree-0.1.0.dist-info/METADATA,sha256=pMI7JgIEq3jAmEzRT2uCqyZisrj2Xw_JM-1zmJeTRhY,14263
