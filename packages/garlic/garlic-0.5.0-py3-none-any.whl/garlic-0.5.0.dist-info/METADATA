@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: garlic
+Version: 0.5.0
+Summary: Create a event driven architecture with garlic improve your development experience
+Home-page: https://github.com/Sancer/garlic
+License: MIT
+Author: Uriel Reina Abadía
+Author-email: urielreina@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pika (>=1.3.2,<2.0.0)
+Requires-Dist: pydantic (>=2.1.1,<3.0.0)
+Project-URL: Repository, https://github.com/Sancer/garlic
+Description-Content-Type: text/markdown
+
+# 🧄 Garlic
+
+Craft powerful **Event-Driven Architectures (EDA)** in Python, effortlessly. With Garlic, respond to app events, like user actions, in a snap.
+
+## Why Garlic?
+
+**Simple, Yet Robust**: Drawing inspiration from tools like Celery and FastAPI, Garlic brings a fresh approach to EDA, making it approachable without sacrificing power.
+
+- 🚀 **EDA Simplified**: Want actions like email notifications or newsletter sign-ups after a user registers? Garlic streamlines these event-driven responses.
+- 📦 **FastAPI Inspired**: Just as FastAPI made web APIs intuitive, Garlic aims to demystify EDA.
+- 🔍 **Beyond Regular Tasks**: While Celery is a go-to for background tasks, Garlic emphasizes responding to events.
+- 📝 **Typed and Transparent**: Using Python typings, understand and control the data in your events.
+- 🔌 **Flexible & Extendable**: Adapt and grow Garlic according to your needs.
+
+## Coming Soon
+
+📖 **Visual Event Flows**: We're building tools to visually map out your event-driven pathways, similar to how web routes are displayed in some platforms.
+
+## Get Started
+1. **Install**: 
+```bash
+pip install garlic
+```
+2. **Dive In**: FastAPI integration example
+
+* Create a file `main.py` with:
+
+```python
+from fastapi import FastAPI
+from garlic import Garlic, BaseEvent
+
+bus = Garlic()
+
+api = FastApi()
+
+
+class CustomerRegisteredEvent(BaseEvent):
+    name: str
+
+
+@bus.subscribe()
+def send_email(event: CustomerRegisteredEvent):
+    pass
+
+
+@bus.subscribe()
+def subscribe_to_newsletter(event: CustomerRegisteredEvent):
+    pass
+
+
+@api.route('customer/register/')
+def register_user(user: dict):
+    # .... business logics  ....
+    bus.emit(CustomerRegisteredEvent(
+        name=user['name']
+    ))
+    # ... http response ...
+```
+
+* Run the app with `uvicorn main:api --reload`
+* Send a POST request to `http://localhost:8000/customer/register/` with a JSON body like `{"name": "Uriel Reina"}`
+* Check the terminal to see the event being published and handled by the subscribers
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
