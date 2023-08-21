@@ -1,0 +1,10 @@
+iso_week_date/__init__.py,sha256=0k6E6UwcXEB-UkJjKFLlZuQ-OCa-IfyJs-oBPqQr-4g,162
+iso_week_date/isoweek.py,sha256=FGT21q_ZDmahxxbzO7RoB69gSFBFi3RzDnsdu2uwxaY,29731
+iso_week_date/pandas_utils.py,sha256=cJBgmh7_mDrBF7KLN-ayh_vG3Vm882n4q1yfMV-I5tg,3877
+iso_week_date/polars_utils.py,sha256=g079O6HtpT1pctp4T8Ii6rdb_OnDLXzpLMvNoDpX0Ag,3792
+iso_week_date/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iso_week_date-0.0.1.dist-info/LICENSE,sha256=dvme5SVaxB8S--1OkhJXMzOrJnDhPZvCY_vys9LsoBo,1075
+iso_week_date-0.0.1.dist-info/METADATA,sha256=7t18YdHLBIOofR8HgjOTVTt4tK8yx4RtugOPq37ELGI,8271
+iso_week_date-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+iso_week_date-0.0.1.dist-info/top_level.txt,sha256=QoXCy4SyPZIKpWy-WE9gP2TBAYyZJMolhn_sFGW3-6k,14
+iso_week_date-0.0.1.dist-info/RECORD,,
