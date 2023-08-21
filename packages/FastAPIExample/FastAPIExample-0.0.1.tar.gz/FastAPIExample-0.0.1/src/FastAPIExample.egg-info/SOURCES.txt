@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+requirements.txt
+setup.cfg
+src/FastAPIExample.egg-info/PKG-INFO
+src/FastAPIExample.egg-info/SOURCES.txt
+src/FastAPIExample.egg-info/dependency_links.txt
+src/FastAPIExample.egg-info/requires.txt
+src/FastAPIExample.egg-info/top_level.txt
+src/fastapiexample/__init__.py
+src/fastapiexample/fastapiexample.py
+tests/test_fastapiexample.py
