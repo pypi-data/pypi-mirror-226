@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/curl2min/__init__.py
+src/curl2min/cli.py
+src/curl2min.egg-info/PKG-INFO
+src/curl2min.egg-info/SOURCES.txt
+src/curl2min.egg-info/dependency_links.txt
+src/curl2min.egg-info/entry_points.txt
+src/curl2min.egg-info/top_level.txt
