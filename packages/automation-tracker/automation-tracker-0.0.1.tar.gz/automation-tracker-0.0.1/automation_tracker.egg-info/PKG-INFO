@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: automation-tracker
+Version: 0.0.1
+Summary: Robot Framework Library for Tracking Test Cases
+Author: Justus Mwangi
+Author-email: <mwangijustus12@gmail.com>
+Keywords: python,robotframework,robotframework-library,robotframework-library,robotframework-tracking,robotframework-tracker,robotframework-tracker,robotframework-tracker
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+# Automation Tracker
+
+Use this package to quickly track your automation projects and usage. It has been developed to ensure easy and 
+seamless integration with any third party automation tool.
+
+Documentation: https://automation-tracker.readthedocs.io/en/latest/ for more information.
+
+## Examples of How To Use it on your Robot Framework
+
+### Setup Robot Framework
+
+```robotframework
+*** Settings ***
+Library    AutomationTracker
+```
+
+### Usage of the library in Robot Framework
+
+```robotframework
+*** Test Cases ***
+Example
+    Start Tracker    ${PROJECT_NAME}    ${PROJECT_VERSION}    ${PROJECT_DESCRIPTION}    ${PROJECT_URL}    ${PROJECT_EMAIL}
+    Start Suite    ${SUITE_NAME}    ${SUITE_DOCUMENTATION}
+    Start Test    ${TEST_NAME}    ${TEST_DOCUMENTATION}
+    Start Keyword    ${KEYWORD_NAME}    ${KEYWORD_DOCUMENTATION}
+    End Keyword
+    End Test
+    End Suite
+    End Tracker
+```
+
+### Examples of How To Use it on your Python
+
+
+```python
+#import the DB tracker and use functions from it
+from RobotTracker.TrackerDB import *
+
+#invoke the tracker
+AutomationDBTracker("https://your_ip_or_domain").manually_start_tracker_detailed("POS",
+"justus","UAT", "CRQ-1234","Q-OPS", "testType","API", "200", "100", "50","150","0","0","0","0", 
+ "0","0", "0","100", "100", "0", "200","TEST-1234")
+```
+
+### Using a listener to listen to your code runs and track the testcase runs
+
+#### Setup the robot framework listener
+
+```robotframework
+*** Settings ***
+Library    AutomationTracker
+Suite Setup    Start Tracker    ${PROJECT_NAME}    ${PROJECT_VERSION}    ${PROJECT_DESCRIPTION}    ${PROJECT_URL}    ${PROJECT_EMAIL}
+Suite Teardown    End Tracker
+Test Setup    Start Test    ${TEST_NAME}    ${TEST_DOCUMENTATION}
+Test Teardown    End Test
+```
+
+```robotframework
+```python
+from vidstream import CameraClient
+from vidstream import VideoClient
+from vidstream import ScreenShareClient
+
+# Choose One
+client1 = CameraClient('127.0.0.1', 9999)
+client2 = VideoClient('127.0.0.1', 9999, 'video.mp4')
+client3 = ScreenShareClient('127.0.0.1', 9999)
+
+client1.start_stream()
+client2.start_stream()
+client3.start_stream()
+```

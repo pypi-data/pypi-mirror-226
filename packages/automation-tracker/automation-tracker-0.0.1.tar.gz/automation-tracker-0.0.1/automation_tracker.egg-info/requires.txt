@@ -1,0 +1,8 @@
+robotframework
+requests
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-listenerlibrary
+robotframework-seleniumlibrary
+urllib3
+robotframework-stringformat
