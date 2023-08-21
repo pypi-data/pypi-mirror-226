@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+pyyaml
+jinja2
+argparse
+pydantic
+python-multipart
+psutil
+chariot-sdk==1.3.4
