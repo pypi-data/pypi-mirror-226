@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: tableclasses
+Version: 0.0.2rc1
+Summary: Dataclasses for tabular data
+Project-URL: Documentation, https://github.com/joshua-auchincloss/tableclasses#readme
+Project-URL: Issues, https://github.com/joshua-auchincloss/tableclasses/issues
+Project-URL: Source, https://github.com/joshua-auchincloss/tableclasses
+Author-email: joshua-auchincloss <joshua.auchincloss@proton.me>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: beartype
+Requires-Dist: pyarrow
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == 'pandas'
+Provides-Extra: test
+Requires-Dist: coverage[toml]; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# tableclasses
+
+[![Code Coverage](https://img.shields.io/codecov/c/github/joshua-auchincloss/spic?style=flat-square)](https://app.codecov.io/github/joshua-auchincloss/tableclasses)
+[![PyPI - Version](https://img.shields.io/pypi/v/tableclasses.svg)](https://pypi.org/project/tableclasses)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tableclasses.svg)](https://pypi.org/project/tableclasses)
+
+---
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install tableclasses
+```
+
+## License
+
+`tableclasses` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
