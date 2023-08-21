@@ -1,0 +1,2 @@
+[console_scripts]
+pbjson = pbjson.__main__:main
