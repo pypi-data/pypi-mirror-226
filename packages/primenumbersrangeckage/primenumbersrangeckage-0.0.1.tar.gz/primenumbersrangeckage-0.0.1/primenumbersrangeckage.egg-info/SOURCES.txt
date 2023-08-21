@@ -1,0 +1,8 @@
+README.md
+setup.py
+primenumbersrangeckage.egg-info/PKG-INFO
+primenumbersrangeckage.egg-info/SOURCES.txt
+primenumbersrangeckage.egg-info/dependency_links.txt
+primenumbersrangeckage.egg-info/top_level.txt
+primenumbersrangepackage/__init__.py
+primenumbersrangepackage/primenumbersrangepackage.py
