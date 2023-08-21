@@ -1,0 +1,11 @@
+importlib_resources
+lxml
+nbconvert >= 7.0
+notebook >= 7.0
+pandas
+pandocfilters
+pypandoc >= 1.4
+requests
+setuptools >= 38.6.0
+setuptools-scm
+tabulate
