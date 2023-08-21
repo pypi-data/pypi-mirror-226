@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/playwright_nodejs/__init__.py
+src/playwright_nodejs/node.py
+src/playwright_nodejs.egg-info/PKG-INFO
+src/playwright_nodejs.egg-info/SOURCES.txt
+src/playwright_nodejs.egg-info/dependency_links.txt
+src/playwright_nodejs.egg-info/top_level.txt
+tests/test_nodejs.py
