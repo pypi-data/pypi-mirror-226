@@ -1,0 +1,3 @@
+[console_scripts]
+register-code-gen=register_code_gen.register_code_gen:main
+
