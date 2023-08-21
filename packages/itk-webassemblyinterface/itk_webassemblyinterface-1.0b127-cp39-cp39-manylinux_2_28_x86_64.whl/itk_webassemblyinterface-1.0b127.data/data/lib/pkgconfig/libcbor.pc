@@ -1,0 +1,11 @@
+prefix=/work/_skbuild/linux-x86_64-3.9/cmake-install
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libcbor
+Description: libcbor - CBOR protocol implementation
+URL: https://github.com/PJK/libcbor
+Version: 0.9.0
+Libs: -L${libdir} -lcbor
+Cflags: -I${includedir}
