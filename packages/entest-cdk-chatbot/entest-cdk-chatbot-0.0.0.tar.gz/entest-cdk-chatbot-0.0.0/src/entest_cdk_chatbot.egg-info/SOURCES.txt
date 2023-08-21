@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/entest_cdk_chatbot/__init__.py
+src/entest_cdk_chatbot/py.typed
+src/entest_cdk_chatbot.egg-info/PKG-INFO
+src/entest_cdk_chatbot.egg-info/SOURCES.txt
+src/entest_cdk_chatbot.egg-info/dependency_links.txt
+src/entest_cdk_chatbot.egg-info/requires.txt
+src/entest_cdk_chatbot.egg-info/top_level.txt
+src/entest_cdk_chatbot/_jsii/__init__.py
+src/entest_cdk_chatbot/_jsii/entest-cdk-chatbot@0.0.0.jsii.tgz
