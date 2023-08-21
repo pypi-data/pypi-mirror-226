@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "NudeNetUpdated"
+version = "2.2.4"
+description = ""
+authors = ["ELoiselle <emile.loiselle@hotmail.com>"]
+readme = "README.md"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = "src/"
+strict = true
+ignore_missing_imports = true
+
+# issue with the mypy daemon (dmypy) and VSCode resolved by this undocumented configuration option and might not be officially supported in the future.
+ignore_missing_imports_per_module = true
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.25.2"
+pydload = "^1.0.9"
+onnxruntime = "^1.15.1"
+pillow = "^10.0.0"
+opencv-python-headless = ">=4.5.1.48"
+scikit-image = "^0.21.0"
+progressbar = "^2.5"
+
+[tool.poetry.group.dev.dependencies]
+hupper = "^1.12"
+flake8 = "^6.0.0"
+black = "^23.3.0"
+isort = "^5.12.0"
+mypy = "^1.3.0"
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+pytest-xdist = "^3.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
