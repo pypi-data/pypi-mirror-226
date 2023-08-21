@@ -1,0 +1,11 @@
+panda3d
+panda3d-gltf
+pillow
+pyperclip
+screeninfo
+
+[extras]
+imageio
+numpy
+psd-tools3
+psutil
