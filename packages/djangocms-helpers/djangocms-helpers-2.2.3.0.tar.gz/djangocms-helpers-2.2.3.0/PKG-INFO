@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: djangocms-helpers
+Version: 2.2.3.0
+Summary: A set of fixes, patches and utils for django-cms
+Home-page: https://gitlab.com/what-digital/djangocms-helpers
+Author: Victor
+Author-email: victor@what.digital
+License: MIT
+Keywords: django
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django CMS
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
