@@ -1,0 +1,7 @@
+__init__.py
+module1.py
+setup.py
+ljf7.egg-info/PKG-INFO
+ljf7.egg-info/SOURCES.txt
+ljf7.egg-info/dependency_links.txt
+ljf7.egg-info/top_level.txt
