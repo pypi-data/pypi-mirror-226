@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: whinesnips
+Version: 0.0.0.0a0
+Summary: Bloated python utility library
+Home-page: https://whsn.whinyaan.xyz
+License: MIT
+Keywords: your,keywords,here
+Author: whitespace_negative
+Author-email: whinyaan@protonmail.com
+Maintainer: whitespace_negative
+Maintainer-email: whinyaan@protonmail.com
+Requires-Python: >=3.10,<4
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Requires-Dist: arrow (>=1.2.3,<2.0.0)
+Requires-Dist: inquirer (>=3.1.3,<4.0.0)
+Requires-Dist: markdown2 (>=2.4.8,<3.0.0)
+Requires-Dist: msgpack (>=1.0.5,<2.0.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: rich (>=13.3.3,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Documentation, https://whsn.whinyaan.xyz
+Project-URL: Repository, https://github.com/whinee/whinesnips
