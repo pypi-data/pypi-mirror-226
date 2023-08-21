@@ -1,0 +1,13 @@
+websearchdict/__init__.py,sha256=Ln2ahDLXDaYsSMFlYAWefaiQEgiiUDqOHvIKhbiyIv0,1318
+websearchdict/dictionary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+websearchdict/dictionary/entry.py,sha256=ZTuzUp9na6VoRyaZplmP7gr3F0sbO_4zR0z3hml7bbo,1297
+websearchdict/web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+websearchdict/web/automation.py,sha256=2x87WRcluBYm-EfSqUHzV43lVBmC78UNsD0kPXEvff8,2831
+websearchdict/web/constants.py,sha256=a_rIeBhVx_vu339pw5fXd7qEYVB5QY888PZrVuXbG88,5490
+websearchdict/web/fetch.py,sha256=CrbUX6UNDvX8TN753KMKz3OfmdDDBFG4BmjOV5ecDa0,1405
+websearchdict/web/parser.py,sha256=mU56eTKMe-ZcbQxQ4wmBIFv_Q173qUdCm_NFnBbdvMs,6680
+websearchdict/web/structure.py,sha256=EQBhBVlpwxYVyhe_ccodPEXwFIASasBis6Db83hl_RE,2577
+websearchdict-0.0.1.dist-info/METADATA,sha256=a55Pu1M4YEWqdk2bAuON78VnFjl9J64M-p15fweEUio,6338
+websearchdict-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+websearchdict-0.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+websearchdict-0.0.1.dist-info/RECORD,,
