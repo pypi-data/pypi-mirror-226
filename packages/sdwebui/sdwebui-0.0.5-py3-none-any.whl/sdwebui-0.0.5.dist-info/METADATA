@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: sdwebui
+Version: 0.0.5
+Summary: Stable diffusion webui package
+Author: tangjicheng
+Author-email: tang.j@ctw.inc
+License-File: LICENSE.txt
+
+Stable diffusion webui package, for functional call
