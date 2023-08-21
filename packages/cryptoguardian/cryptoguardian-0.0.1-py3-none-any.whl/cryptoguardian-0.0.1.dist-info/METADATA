@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cryptoguardian
+Version: 0.0.1
+Summary: Uma ferramenta de criptografia e descriptografia de arquivos.
+Author: Melissa Alves e Davi Rodolfo
+Author-email: msnmelissaoa15@hotmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: cryptography
+Requires-Dist: PyQt5
+
