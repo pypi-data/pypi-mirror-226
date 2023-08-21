@@ -1,0 +1,13 @@
+fastapi_oauth2/__init__.py,sha256=Le2kV_86xEdR2TdpfN2hqQxpES1Gs3HebIFh8Wxl_Dw,27
+fastapi_oauth2/claims.py,sha256=dZxG-QvCpR9qobaDeilhPbvzXGZG8c_sbC7jNxYTsI4,767
+fastapi_oauth2/client.py,sha256=p42ImE-10G_SVAT3xYf4O0BmiJN7q1fssuRXAnfvOWI,992
+fastapi_oauth2/config.py,sha256=dbX7lsDSSiGn1YB3FQx2GVbaRsrj_CKORo8TS6wcGio,855
+fastapi_oauth2/core.py,sha256=euzxfbCYCXsJU_2z-zhNDfHrP3vQk_XC7nvv3irUdkw,4962
+fastapi_oauth2/middleware.py,sha256=m9WgMxmGDbdXia3ySebLIPpZ8VLu61PEtK3NyZXTk-s,5813
+fastapi_oauth2/router.py,sha256=zrRrF5Pn5UhB7payLmq7PHJubQtg5LcM5wVFceITvXw,636
+fastapi_oauth2/security.py,sha256=w3xNWe8U3PrOPwB9nAEJyFiov-gGY4u0NiP9OPoh4A8,1471
+fastapi_oauth2-1.0.0b0.dist-info/LICENSE,sha256=QYf8kAs_zfwaYbq6Qj7yv6GEHXkohOQEarOmCr05xsI,1071
+fastapi_oauth2-1.0.0b0.dist-info/METADATA,sha256=nk94Apsb2mHnLvNXADODaVdN4EDcHTbV1pQeUSLHgSM,3330
+fastapi_oauth2-1.0.0b0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+fastapi_oauth2-1.0.0b0.dist-info/top_level.txt,sha256=5b9bNJBvNXWFsfucLSogJzHj5899ShqjiB73TE_fcfc,15
+fastapi_oauth2-1.0.0b0.dist-info/RECORD,,
