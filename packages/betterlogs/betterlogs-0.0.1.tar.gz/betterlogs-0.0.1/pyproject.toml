@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "colorama>=0.4.6", "typing>=3.7.4.3", "datetime>=5.2"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["betterlogs"]  # package names should match these glob patterns (["*"] by default)
+exclude = []  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
+
+[project]
+name = "betterlogs"
+version = "0.0.1"
+authors = [
+  { name="CheatBetter", email="vitalistrashlool@gmail.com" },
+]
+description = "A improved logging system for python"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/CheatBetter/BetterLogging"
+"Bug Tracker" = "https://github.com/CheatBetter/BetterLogging/issues"

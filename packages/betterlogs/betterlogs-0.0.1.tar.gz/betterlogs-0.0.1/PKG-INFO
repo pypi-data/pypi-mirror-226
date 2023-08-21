@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: betterlogs
+Version: 0.0.1
+Summary: A improved logging system for python
+Author-email: CheatBetter <vitalistrashlool@gmail.com>
+Project-URL: Homepage, https://github.com/CheatBetter/BetterLogging
+Project-URL: Bug Tracker, https://github.com/CheatBetter/BetterLogging/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# BetterLogs
+
+BetterLogs is a improved logging package for python
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install betterlogs.
+
+```bash
+pip install betterlogs
+```
+
+## Usage
+
+```python
+
+from betterlogs import logger
+from colorama import Fore, Style
+
+logger = logger.Logger(name="BetterLogs", base_color=Fore.BLUE, base_style=Style.DIM,
+                       time=True, time_color=Fore.BLUE, time_style=Style.BRIGHT)
+
+logger.log("test")
+logger.debug("test")
+logger.warning("test")
+logger.error("test")
+logger.critical("test")
+
+```
+Result
+![Result](images/result.png)
+
+
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

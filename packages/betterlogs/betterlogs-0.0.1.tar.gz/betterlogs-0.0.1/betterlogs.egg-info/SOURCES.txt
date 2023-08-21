@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+betterlogs/__init__.py
+betterlogs/logger.py
+betterlogs.egg-info/PKG-INFO
+betterlogs.egg-info/SOURCES.txt
+betterlogs.egg-info/dependency_links.txt
+betterlogs.egg-info/top_level.txt
