@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+baumregextrie/README.MD
+baumregextrie/__init__.py
+baumregextrie/requirements.txt
+baumregextrie/thirdparty.json
+baumregextrie.egg-info/PKG-INFO
+baumregextrie.egg-info/SOURCES.txt
+baumregextrie.egg-info/dependency_links.txt
+baumregextrie.egg-info/requires.txt
+baumregextrie.egg-info/top_level.txt

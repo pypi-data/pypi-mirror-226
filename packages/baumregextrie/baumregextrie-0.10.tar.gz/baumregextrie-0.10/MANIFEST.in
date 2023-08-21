@@ -1,0 +1,3 @@
+include baumregextrie/requirements.txt
+include baumregextrie/thirdparty.json
+include baumregextrie/README.MD
