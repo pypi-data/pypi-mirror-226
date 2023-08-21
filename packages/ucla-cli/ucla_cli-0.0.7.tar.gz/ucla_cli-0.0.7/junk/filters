@@ -1,0 +1,16 @@
+                {
+                    "enrollment_status": "O,W,C,X,T,S",
+                    "advanced": "y",
+                    "meet_days": "M,T,W,R,F",
+                    "start_time": "8:00 am",
+                    "end_time": "8:00 pm",
+                    "meet_locations": None,
+                    "meet_units": None,
+                    "instructor": None,
+                    "class_career": None,
+                    "impacted": "N",
+                    "enrollment_restrictions": None,
+                    "enforced_requisites": None,
+                    "individual_studies": "n",
+                    "summer_session": None,
+                }
