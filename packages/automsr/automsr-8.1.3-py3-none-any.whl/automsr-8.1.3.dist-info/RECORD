@@ -1,0 +1,16 @@
+automsr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automsr/browser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automsr/browser/browser.py,sha256=giSW6NUK23AXZoC9wHCr31CdiXf5uQgpt4iM_EenuMY,8550
+automsr/browser/profile.py,sha256=C6mCihdgidXYhIqeSmGFaJ-bMq6AZhkTvGpPpFEjSU8,3812
+automsr/cli.py,sha256=6SVCOSFsIQQO_CF5I0hJzTBUV0PjChyCtAGwRg5VsR8,1255
+automsr/config.py,sha256=2wes9-10DPhUvDsF9kL_p50WYQRbYkUlFhDX5rpiP9E,4625
+automsr/datatypes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automsr/datatypes/dashboard.py,sha256=rQ_LSjcoTARpnPw7LXgguxnZdALDFE0XvrLzVhSy-t0,9083
+automsr/executor.py,sha256=IgCjIez7NrpilDTYzYKcnHiYFMf-Lo3LP8T5SPGJIfY,13552
+automsr/mail.py,sha256=OES9pDtCguaTkZh_IctDeKQecTwmGjUDPB7nDo9zv2s,7498
+automsr/search.py,sha256=J1kgNF4mgrsa6PSNuYyOPOPw1v8sUzvk_Vp55bOKSR4,1502
+automsr-8.1.3.dist-info/LICENSE,sha256=jO98wUqYgNqhC6bUqkGG61yJ_cM9TOG2rJT7pIl7HSM,1074
+automsr-8.1.3.dist-info/METADATA,sha256=2p2-jAOHkzBw-8lemJlQ2dusqy8vfvFn-FLobp6MvxI,2808
+automsr-8.1.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+automsr-8.1.3.dist-info/entry_points.txt,sha256=7iZiuG4dMfxBNmpsORpLBEcBcSq_oBrbh5YYR8f01lQ,99
+automsr-8.1.3.dist-info/RECORD,,
