@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: openpom
+Version: 0.1.1
+Summary: Open-source Principal Odor Map models for Olfaction
+Author: Aryan Amit Barsainyan
+Author-email: aryan.barsainyan@gmail.com
+License-File: LICENSE
+Requires-Dist: pyrfume
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: rdkit
+Requires-Dist: deepchem
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: dgl
+Requires-Dist: dglgo
+Requires-Dist: dgllife
+Requires-Dist: pytest
+Requires-Dist: ipykernel
+Requires-Dist: scikit-multilearn
+Requires-Dist: typing
+
