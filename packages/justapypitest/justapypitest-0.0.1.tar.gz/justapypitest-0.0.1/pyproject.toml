@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "justapypitest"
+version = "0.0.1"
+description = "test"
+authors = ["Artur Toshev <artur.toshev@tum.de>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = { version = "1.13.1", source = "torchcpu" }
+
+[[tool.poetry.source]]
+name = "torchcpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
