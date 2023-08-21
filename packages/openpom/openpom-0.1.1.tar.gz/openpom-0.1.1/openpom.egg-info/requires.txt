@@ -1,0 +1,15 @@
+pyrfume
+pandas
+numpy
+rdkit
+deepchem
+torch
+torchvision
+torchaudio
+dgl
+dglgo
+dgllife
+pytest
+ipykernel
+scikit-multilearn
+typing
