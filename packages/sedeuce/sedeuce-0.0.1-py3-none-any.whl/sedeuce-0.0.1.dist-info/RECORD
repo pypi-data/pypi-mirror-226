@@ -1,0 +1,9 @@
+sedeuce/__init__.py,sha256=5BBn-soOXdRfdDbATwxkzmPqc_VOaSWIDrNwJJmqT_0,18
+sedeuce/__main__.py,sha256=r9KxhSe5kLYSzf_GARa3c7Fovfmiy8Dxp3WBTSSiQHA,322
+sedeuce/sed.py,sha256=60OfdcPnUVZx9WdLtwafe6fKQ2NJZ1-1P29qh4OECDE,1436
+sedeuce-0.0.1.dist-info/LICENSE.md,sha256=dXMeP6p4v9OvVmaa-X7oZcPjBSYA__ww3KVh2gm91vQ,1067
+sedeuce-0.0.1.dist-info/METADATA,sha256=lzOav9fUUg62IEEqVSTS3EHYCFyGbdDJgKG-h8uOGUA,1320
+sedeuce-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sedeuce-0.0.1.dist-info/entry_points.txt,sha256=CD8mpawpwama9TA6HVhaTF4TPZqvcFx9hGERUYki2dU,79
+sedeuce-0.0.1.dist-info/top_level.txt,sha256=ho-FmeFDNy_vGSp9kyKnuq5gos2LMcmWWXjUyJHUg7M,8
+sedeuce-0.0.1.dist-info/RECORD,,
