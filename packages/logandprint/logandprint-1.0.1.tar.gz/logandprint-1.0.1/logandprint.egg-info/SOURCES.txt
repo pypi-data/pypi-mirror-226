@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+logandprint/__init__.py
+logandprint/main.py
+logandprint.egg-info/PKG-INFO
+logandprint.egg-info/SOURCES.txt
+logandprint.egg-info/dependency_links.txt
+logandprint.egg-info/top_level.txt
