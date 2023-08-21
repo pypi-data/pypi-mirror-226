@@ -1,0 +1,3 @@
+include cglearnlatest/*.csv
+include cglearnlatest/*.dll
+include cglearnlatest/*.so
