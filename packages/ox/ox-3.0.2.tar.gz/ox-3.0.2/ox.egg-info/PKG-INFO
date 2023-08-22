@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ox
+Version: 3.0.2
+Summary: python-ox - the web in a dict
+Home-page: https://code.0x2620.org/0x2620/python-ox
+Author: 0x2620
+Author-email: 0x2620@0x2620.org
+License: GPLv3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
