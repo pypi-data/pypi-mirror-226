@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: mingdaoyun-sdk
+Version: 0.0.9
+Summary: 针对mingdaoyun的API封装的Python-SDK包
+Home-page: https://github.com/ghostlitao/mingdaoyun-python-sdk
+Author: Todd
+Author-email: ghostlitao@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+mingdaoyun-Python-SDK
+-----
+
+针对mingdaoyun的API封装的Python-SDK包
+
+如果你在寻找PHP版本的,请点击(https://github.com/Lany-w/mingdaoyun-php-sdk)
+
+## Installing
+
+```shell
+$ pip install mingdaoyun-sdk
+```
+
+## Usage
+
+## License
+
+MIT
