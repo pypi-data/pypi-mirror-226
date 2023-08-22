@@ -1,0 +1,100 @@
+[2023-08-21 18:43:03,252] (root) [INFO] [212]: logger
+[2023-08-21 18:49:04,733] (root) [INFO] [212]: logger
+[2023-08-21 18:49:04,733] (NAME) [INFO] [212]: logger
+[2023-08-21 18:49:28,571] (root) [INFO] [212]: logger
+[2023-08-21 18:49:28,571] (NAME) [INFO] [212]: logger
+[2023-08-21 18:49:28,571] (NAME) [INFO] [212]: params: : logger
+[2023-08-21 18:49:35,467] (root) [INFO] [212]: logger
+[2023-08-21 18:49:35,467] (NAME) [INFO] [212]: logger
+[2023-08-21 18:49:35,467] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:50:19,939] (root) [INFO] [212]: logger
+[2023-08-21 18:50:19,939] (NAME) [INFO] [212]: logger
+[2023-08-21 18:50:19,939] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:51:28,862] (root) [INFO] [213]: logger
+[2023-08-21 18:51:28,866] (NAME) [INFO] [213]: logger
+[2023-08-21 18:51:28,866] (NAME) [INFO] [213]: params: logger
+[2023-08-21 18:51:44,781] (root) [INFO] [214]: logger
+[2023-08-21 18:51:44,781] (NAME) [INFO] [214]: logger
+[2023-08-21 18:51:44,782] (NAME) [INFO] [214]: params: logger
+[2023-08-21 18:52:00,129] (root) [INFO] [213]: logger
+[2023-08-21 18:52:00,129] (NAME) [INFO] [213]: logger
+[2023-08-21 18:52:00,129] (NAME) [INFO] [213]: params: logger
+[2023-08-21 18:52:13,149] (root) [INFO] [212]: logger
+[2023-08-21 18:52:13,150] (NAME) [INFO] [212]: logger
+[2023-08-21 18:52:13,150] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:52:23,550] (root) [INFO] [212]: logger
+[2023-08-21 18:52:23,550] (NAME) [INFO] [212]: logger
+[2023-08-21 18:52:23,550] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:52:46,103] (root) [INFO] [212]: logger
+[2023-08-21 18:52:46,103] (NAME) [INFO] [212]: logger
+[2023-08-21 18:52:46,103] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:52:46,103] (root) [INFO] [197]: exception
+[2023-08-21 18:52:55,469] (root) [INFO] [212]: logger
+[2023-08-21 18:52:55,469] (NAME) [INFO] [212]: logger
+[2023-08-21 18:52:55,469] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:53:06,733] (root) [INFO] [212]: logger
+[2023-08-21 18:53:06,733] (NAME) [INFO] [212]: logger
+[2023-08-21 18:53:06,733] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:53:48,693] (root) [INFO] [215]: logger
+[2023-08-21 18:53:48,693] (NAME) [INFO] [215]: logger
+[2023-08-21 18:53:48,693] (NAME) [INFO] [215]: params: logger
+[2023-08-21 18:54:55,165] (root) [INFO] [212]: logger
+[2023-08-21 18:54:55,165] (NAME) [INFO] [212]: logger
+[2023-08-21 18:54:55,165] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:55:29,578] (root) [INFO] [212]: logger
+[2023-08-21 18:55:29,578] (NAME) [INFO] [212]: logger
+[2023-08-21 18:55:29,578] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:56:16,037] (root) [INFO] [213]: logger
+[2023-08-21 18:56:16,038] (NAME) [INFO] [213]: logger
+[2023-08-21 18:56:16,038] (NAME) [INFO] [213]: params: logger
+[2023-08-21 18:56:31,152] (root) [INFO] [213]: logger
+[2023-08-21 18:56:31,153] (NAME) [INFO] [213]: logger
+[2023-08-21 18:56:31,153] (NAME) [INFO] [213]: params: logger
+[2023-08-21 18:57:20,758] (root) [INFO] [212]: logger
+[2023-08-21 18:57:20,758] (NAME) [INFO] [212]: logger
+[2023-08-21 18:57:20,758] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:57:37,590] (root) [INFO] [212]: logger
+[2023-08-21 18:57:37,590] (NAME) [INFO] [212]: logger
+[2023-08-21 18:57:37,590] (NAME) [INFO] [212]: params: logger
+[2023-08-21 18:59:36,517] (root) [INFO] [212]: logger
+[2023-08-21 18:59:36,517] (NAME) [INFO] [212]: logger
+[2023-08-21 18:59:36,517] (NAME) [INFO] [212]: params: logger
+[2023-08-21 19:01:04,591] (root) [INFO] [213]: logger
+[2023-08-21 19:01:04,591] (NAME) [INFO] [213]: logger
+[2023-08-21 19:01:04,591] (NAME) [INFO] [213]: params: logger
+[2023-08-21 19:02:44,769] (root) [INFO] [215]: logger
+[2023-08-21 19:02:44,770] (NAME) [INFO] [215]: logger
+[2023-08-21 19:02:44,770] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:03:32,054] (root) [INFO] [215]: logger
+[2023-08-21 19:03:32,054] (NAME) [INFO] [215]: logger
+[2023-08-21 19:03:32,054] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:03:43,559] (root) [INFO] [215]: logger
+[2023-08-21 19:03:43,559] (NAME) [INFO] [215]: logger
+[2023-08-21 19:03:43,559] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:06:03,153] (root) [INFO] [215]: logger
+[2023-08-21 19:06:03,153] (NAME) [INFO] [215]: logger
+[2023-08-21 19:06:03,153] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:06:55,205] (root) [INFO] [215]: logger
+[2023-08-21 19:06:55,205] (NAME) [INFO] [215]: logger
+[2023-08-21 19:06:55,205] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:07:05,558] (root) [INFO] [215]: logger
+[2023-08-21 19:07:05,558] (NAME) [INFO] [215]: logger
+[2023-08-21 19:07:05,558] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:07:23,707] (root) [INFO] [215]: logger
+[2023-08-21 19:07:23,707] (NAME) [INFO] [215]: logger
+[2023-08-21 19:07:23,708] (NAME) [INFO] [215]: params: logger
+[2023-08-21 19:08:50,625] (root) [INFO] [216]: logger
+[2023-08-21 19:08:50,626] (NAME) [INFO] [216]: logger
+[2023-08-21 19:08:50,626] (NAME) [INFO] [216]: params: logger
+[2023-08-21 19:09:41,695] (root) [INFO] [216]: logger
+[2023-08-21 19:09:41,695] (NAME) [INFO] [216]: logger
+[2023-08-21 19:09:41,695] (NAME) [INFO] [216]: params: logger
+[2023-08-21 19:10:13,749] (root) [INFO] [213]: logger
+[2023-08-21 19:10:13,750] (NAME) [INFO] [213]: logger
+[2023-08-21 19:10:13,750] (NAME) [INFO] [213]: params: logger
+[2023-08-21 19:14:24,708] (root) [INFO] [213]: logger
+[2023-08-21 19:14:24,709] (NAME) [INFO] [213]: logger
+[2023-08-21 19:14:24,709] (NAME) [INFO] [213]: params: logger
+[2023-08-21 19:15:13,828] (root) [INFO] [213]: logger
+[2023-08-21 19:15:13,828] (NAME) [INFO] [213]: logger
+[2023-08-21 19:15:13,829] (NAME) [INFO] [213]: params: logger
