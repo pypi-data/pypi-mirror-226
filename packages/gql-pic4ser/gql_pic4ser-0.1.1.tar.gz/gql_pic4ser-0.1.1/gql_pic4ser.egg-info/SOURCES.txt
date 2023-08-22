@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+gql_pic4ser/__init__.py
+gql_pic4ser.egg-info/PKG-INFO
+gql_pic4ser.egg-info/SOURCES.txt
+gql_pic4ser.egg-info/dependency_links.txt
+gql_pic4ser.egg-info/not-zip-safe
+gql_pic4ser.egg-info/requires.txt
+gql_pic4ser.egg-info/top_level.txt
