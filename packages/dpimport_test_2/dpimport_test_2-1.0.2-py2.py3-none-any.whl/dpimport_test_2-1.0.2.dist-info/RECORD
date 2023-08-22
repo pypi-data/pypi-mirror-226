@@ -1,0 +1,4 @@
+tests/test_dppylib.py,sha256=HvsE3QRcYxY3FurUL2kzht7JYGjR9iatqRupLsHra-c,5377
+dpimport_test_2-1.0.2.dist-info/METADATA,sha256=RKVPq1GblbVf-I56RMq-eth2iq5WEjTB574htQ_O0_w,2387
+dpimport_test_2-1.0.2.dist-info/WHEEL,sha256=fagL_Tj29mg80flwlxJNW45nBDbboxF04Tnbc_jt3Bg,105
+dpimport_test_2-1.0.2.dist-info/RECORD,,
