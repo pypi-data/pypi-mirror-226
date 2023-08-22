@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tango-extensions
+Version: 0.0.1
+Summary: Extension modules for allenai/tango (ai2-tango)
+Author: Shunsuke KITADA
+Author-email: shunsuke.kitada.0831@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: all
+Provides-Extra: diffusers
+Requires-Dist: ai2-tango[datasets,examples,torch,transformers,wandb] (>=1.0.0)
+Requires-Dist: diffusers[diffusers] (>=0.5.0) ; extra == "diffusers" or extra == "all"
+Requires-Dist: urllib3 (<2)
+Description-Content-Type: text/markdown
+
+# tango-extensions
+
+Extension modules for [`allenai/tango` (ai-2tango)](https://github.com/allenai/tango).
+
