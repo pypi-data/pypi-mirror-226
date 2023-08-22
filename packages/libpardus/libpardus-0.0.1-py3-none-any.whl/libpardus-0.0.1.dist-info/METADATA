@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: libpardus
+Version: 0.0.1
+Summary: Pardus Library for Pardus Applications and Utilities
+Home-page: https://github.com/pardus/libpardus
+Author: Osman Coskun
+Author-email: osman.coskun@pardus.org.tr
+License: GPLv3
+Classifier: Development Status :: 1 - Planning
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: Turkish
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Desktop Environment :: Gnome
+
