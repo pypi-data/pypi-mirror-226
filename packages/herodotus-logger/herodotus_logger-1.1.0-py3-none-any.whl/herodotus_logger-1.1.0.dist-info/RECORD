@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+herodotus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+herodotus/handlers/__init__.py,sha256=I37l-FiiNKMl1vIGj1Ws94tJnA5NfaPixI0PqZzjtD8,381
+herodotus/handlers/file_handlers.py,sha256=aQ39dCHi4N8ydUgt6ZPEIxcAsJn-NB8DzK3cWOFEKmI,3097
+herodotus/handlers/stream_handlers.py,sha256=Zu11TOBeHTAaQC7lm4q1Ox9SxBPhZEWa4VU4ti-UYOg,862
+herodotus/logger/__init__.py,sha256=BTdCAysF1tv3GQXDma1qOKnj6fBn-CKuuWFyZYfYXkc,55
+herodotus/logger/logger.py,sha256=sZmkiGY5ACaRgAKMFyMg-rES3PFM6x9j90A1_YjA_z4,1222
+herodotus/utils/__init__.py,sha256=cAvKoXschn-D_rTJ9pAAgdrEfQVGwLGIYEcgty9uGnM,92
+herodotus/utils/colorizer.py,sha256=K8wQ8Li8EzDn_bU4KUU3mod4Z6yS3UIiJK5caSz1DIk,1160
+herodotus_logger-1.1.0.dist-info/LICENSE.txt,sha256=602HE5qDMDBYhAKXdv20r7MwQoBbWyPS6tVTCooslHM,1070
+herodotus_logger-1.1.0.dist-info/METADATA,sha256=nWBky4jstuv2Y4B9biHH2LCA-I6TnjZoPwB3I3P3zuk,18674
+herodotus_logger-1.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+herodotus_logger-1.1.0.dist-info/top_level.txt,sha256=Tvaleub-DBiJt7qOcZlF0LOmL_uTPjxeHB6PoR-FBbg,19
+herodotus_logger-1.1.0.dist-info/RECORD,,
