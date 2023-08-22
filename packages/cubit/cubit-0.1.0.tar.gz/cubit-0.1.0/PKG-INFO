@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cubit
+Version: 0.1.0
+Summary: A package implementing an experimental unit system
+Author-email: "Joseph M. Courtney" <joseph.m.courtney@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas >= 1.5.3
+Requires-Dist: numpy >= 1.24.2
+Project-URL: Bug Tracker, https://github.com/josephcourtney/cubit/issues
+Project-URL: Homepage, https://github.com/josephcourtney/cubit
+
+# cubit
+A package implementing an experimental unit system
+
+
