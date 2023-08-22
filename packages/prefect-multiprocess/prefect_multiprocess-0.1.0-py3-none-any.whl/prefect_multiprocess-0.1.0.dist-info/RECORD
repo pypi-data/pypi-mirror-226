@@ -1,0 +1,8 @@
+prefect_multiprocess/__init__.py,sha256=eojY0lRuE-PSI3hXf3u4maqWWivA9D9ZUmn0JhAPxcE,129
+prefect_multiprocess/_version.py,sha256=wPhLmObJVJWepJHzB40Thf5BNWwfi2idLPwqAasGYwc,497
+prefect_multiprocess/task_runners.py,sha256=bdtufOvBP8N_crDywaMhgO0I4Fod-dM3uOO7aEyN8xk,7655
+prefect_multiprocess-0.1.0.dist-info/LICENSE,sha256=tLKlrmr0sOnPybm5TUmA2SBT-cYajF3kILQME85pqpQ,11356
+prefect_multiprocess-0.1.0.dist-info/METADATA,sha256=Ww4Xcun2zA499pctped1dqz81tSpIu36WAZIS-d1p64,5192
+prefect_multiprocess-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+prefect_multiprocess-0.1.0.dist-info/top_level.txt,sha256=JPbcBQwcwfo-1eoy_IpS5rJQPjlR7ZO5eAfgdDOJMrE,21
+prefect_multiprocess-0.1.0.dist-info/RECORD,,
