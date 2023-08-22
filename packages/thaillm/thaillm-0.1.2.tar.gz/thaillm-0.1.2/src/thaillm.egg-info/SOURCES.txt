@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/thaillm/__init__.py
+src/thaillm.egg-info/PKG-INFO
+src/thaillm.egg-info/SOURCES.txt
+src/thaillm.egg-info/dependency_links.txt
+src/thaillm.egg-info/requires.txt
+src/thaillm.egg-info/top_level.txt
+src/thaillm/tokenize/Tokenize.py
+src/thaillm/tokenize/__init__.py
+src/thaillm/tokenize/input/th_tokenizer_32000.model
