@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: vectorama
+Version: 0.1.4
+Summary: 
+License: MIT
+Author: Pierce Freeman
+Author-email: pierce@freeman.vc
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pydantic (>=2.2.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# vectorama-python
+
+## Tests
+
+**Tests will clear out the current database as part of the test flows. Make sure you are only running a test server locally and you are not storing real data.**
+
+Tests are intended to be run with a live vectorama server running on `localhost:50051`. We provide a docker-compose file for this purpose. To run the tests, first start the server:
+
+```bash
+docker-compose up
+```
+
+Then, in a separate terminal, run the tests:
+
+```bash
+poetry run pytest
+```
+
