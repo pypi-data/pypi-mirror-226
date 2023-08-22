@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/Scraper_Ashutosh_Kumar_Singh/__init__.py
+src/Scraper_Ashutosh_Kumar_Singh/scraper.py
+src/Scraper_Ashutosh_kumar_Singh.egg-info/PKG-INFO
+src/Scraper_Ashutosh_kumar_Singh.egg-info/SOURCES.txt
+src/Scraper_Ashutosh_kumar_Singh.egg-info/dependency_links.txt
+src/Scraper_Ashutosh_kumar_Singh.egg-info/top_level.txt
