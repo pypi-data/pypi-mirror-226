@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: thaillm
+Version: 0.1.2
+Summary: Thai large language model(LLM)
+Home-page: 
+Author: bablueza
+Author-email: bablueza@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: transformers
+Requires-Dist: sentencepiece
+
+Thai large language model(LLM) สำหรับ Tranformer
+# include
+* Tokenization: ตัดคำภาษาไทย
+
+# Colab
+https://colab.research.google.com/drive/1ll5VU4P1E-08oudsJBzynjQY6nQpbXDz?usp=sharing
+================================================================================
+# Update
+## 0.1.1
+* เพิ่ม library Tokenization
+
+
+
