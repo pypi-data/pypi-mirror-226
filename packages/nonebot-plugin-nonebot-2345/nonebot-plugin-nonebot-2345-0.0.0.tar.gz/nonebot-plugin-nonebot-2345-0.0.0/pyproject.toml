@@ -1,0 +1,6 @@
+[project]
+name = "nonebot-plugin-nonebot-2345"
+version = "0.0.0"
+description = "Nonebot 2345 Placeholder"
+dependencies = []
+requires-python = ">=3.9"

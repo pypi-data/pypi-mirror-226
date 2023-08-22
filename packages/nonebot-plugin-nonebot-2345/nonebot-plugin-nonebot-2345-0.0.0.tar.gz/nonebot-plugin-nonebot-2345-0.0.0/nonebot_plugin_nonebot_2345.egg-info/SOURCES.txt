@@ -1,0 +1,5 @@
+pyproject.toml
+nonebot_plugin_nonebot_2345.egg-info/PKG-INFO
+nonebot_plugin_nonebot_2345.egg-info/SOURCES.txt
+nonebot_plugin_nonebot_2345.egg-info/dependency_links.txt
+nonebot_plugin_nonebot_2345.egg-info/top_level.txt
