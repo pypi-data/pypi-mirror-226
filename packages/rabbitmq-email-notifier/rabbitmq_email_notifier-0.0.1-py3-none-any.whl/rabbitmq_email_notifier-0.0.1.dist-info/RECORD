@@ -1,0 +1,11 @@
+rabbitmqresources/__init__.py,sha256=zBkcUsmNhmqhcKG5MWjHWtLU49vZ4jiACKuzGoXh4KA,1242
+rabbitmqresources/worker.py,sha256=8wh1C-EFkEBFGDzsRKjJBpd9wZFEzeQRlSb1qVLMi68,1571
+scripts/healthcheck.py,sha256=bjDVWlctGiQFsMLnQVoBLtiy3hFynnwLSLtyl3icEeU,729
+scripts/invoke-task.py,sha256=mhOSF0gkRQ8f2QqKjKVaxfk2GS2Sy_Z7kPSoK9Ej74g,565
+tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tasks/tasks.py,sha256=oVLLMMVQVYX4QCY5UdexMbcBMjbhxdt3-WxNE00HOSM,5222
+rabbitmq_email_notifier-0.0.1.dist-info/LICENSE,sha256=TPGMeHuVxtePIPZemGLOt0FZecpVGT3S-zYerjmlSoY,11450
+rabbitmq_email_notifier-0.0.1.dist-info/METADATA,sha256=yAFUb7bvpSc_I3hufh02k_B-hWdhwvgKdjdU-C7raLY,6506
+rabbitmq_email_notifier-0.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+rabbitmq_email_notifier-0.0.1.dist-info/top_level.txt,sha256=DOdiIuF6cSiSOEkHea5nwURx7O39n_6Kcj9v0xHZ75M,38
+rabbitmq_email_notifier-0.0.1.dist-info/RECORD,,
