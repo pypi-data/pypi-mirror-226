@@ -1,0 +1,10 @@
+patchly/__init__.py,sha256=dqJX2xxC4d-haGQzPtIvOiGdpgAsqAmPtElC4p0_moU,131
+patchly/aggregator.py,sha256=Ro8ZitzrSLbXVJdtzCloLjpZQrdNkk1LrmHQm92uCMU,25181
+patchly/array_like.py,sha256=qYOqRY3L5Cb_cSzuV5Jkv7FIyO4XNwj8eZackHofqiE,6882
+patchly/sampler.py,sha256=IVyvx7MMHgr3O5AjrQ7wOPc3si12HsjmWhKX74gVXQc,20338
+patchly/slicer.py,sha256=o4JrP473S2rUnsSK88CIr75xsYvjQmwUttIdxUXCt7M,3834
+patchly/utils.py,sha256=w1zLSopShsyw4oHzI-Yb0w-jZzFY9GKbCKBSw683OSM,4544
+patchly-0.1.dist-info/METADATA,sha256=xfgt1O3h1l0L7rfhS3jj5ZOxwff7psreVnNpP7iQdec,188
+patchly-0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+patchly-0.1.dist-info/top_level.txt,sha256=gqCRq_FcwX9tAxJ8mAAxjFmHzT5yhCobld8Hl_aY7-U,8
+patchly-0.1.dist-info/RECORD,,

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: patchly
+Version: 0.1
+Summary: none
+Home-page: 
+Author-email: karol.gotkowski@dkfz.de
+License: Apache Software License 2.0
+Requires-Dist: numpy >=1.20
+
