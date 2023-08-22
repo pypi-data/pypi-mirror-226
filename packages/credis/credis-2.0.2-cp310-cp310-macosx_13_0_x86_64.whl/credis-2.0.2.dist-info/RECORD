@@ -1,0 +1,11 @@
+credis/__init__.py,sha256=a4DY-y36KiCO4stpT1xVRGqYZ0Av8FgHijwYf2_UvUM,104
+credis/base.pyx,sha256=hlJbf-V-oTc_Dffi1vzRrEtPwbglB9e9X-BeKXSRd54,10663
+credis/geventpool.pyx,sha256=5gf5tK4hQ_BzKm5iCN4OGLTqSIZsjFgbecbAR8HTW9E,2157
+credis/base.c,sha256=cR4bhZoaVfB28Wx16q4W25IURbHofdCI_M0OD0QXWmA,698354
+credis/base.cpython-310-darwin.so,sha256=93ZpOIq3EVvnSverMQIxN4l7Udhmg3xcVKnHOB_UU6c,165064
+credis/geventpool.c,sha256=wcKW7APr951oCxnW_amoLY9Yqi-eTG5ywVJTTQFYilw,505753
+credis/geventpool.cpython-310-darwin.so,sha256=fLJhTw9472nEBw-49JACNxPuyMEOuPQcHG7yjwsxUv8,121880
+credis-2.0.2.dist-info/LICENSE,sha256=6VJAgTLlwjHbTN0VWLjli47PktB0OWps_F-2lCvLQHQ,1129
+credis-2.0.2.dist-info/METADATA,sha256=WKIqK8wI64jHNxhjJkUkC3BPVuN_cWXyIsF8fBQtSSo,1929
+credis-2.0.2.dist-info/WHEEL,sha256=-Uf7hStmLeJ5dqJgjwf2Ah3d_0slQVfg28z4tCNUrjA,107
+credis-2.0.2.dist-info/RECORD,,
