@@ -1,0 +1,15 @@
+sl10n/__init__.py,sha256=YZ0aCT1zZRAHdOQZjrVuJgcd9Bjgh8B8I4y9ZcC3O-8,356
+sl10n/core.py,sha256=3wehFdL9zUsHTdJEeohe0bKRKWZGhADiQwXpb3oriaY,8519
+sl10n/locale.py,sha256=s_IWdRDJD6-phzCZ0WIGhfPbsgIEKWY612oJtn00yMU,2479
+sl10n/modifiers.py,sha256=POhilyCOr4jBTXX6r_S_tWRZ9LNDbUVxBwMoOwT_Z3c,607
+sl10n/process.py,sha256=TgWqscTEpG5ZlcUfM01OPx2fW2GC1dv2U4nJqPCEX4g,4322
+sl10n/warnings.py,sha256=mhyp4Gw32Kc0zTHO7Z6wOamty7SzAwU-h_c8ZH6g9l8,368
+test/__init__.py,sha256=liHyxoT2g_To3BLI5uoSYxjG8MS8G3Zg7214c3o3dKU,1471
+test/test_create_file.py,sha256=6IrXnLLnGpol-2U7ZRWIO4S50a-ZoO07N4-bVTMxdko,1788
+test/test_json_impl.py,sha256=v0FIgcFuA8Q-iOllZP9UXfXj7m9RQaNZFEeiKPWXrdE,1952
+test/test_l10n_init.py,sha256=kdbA_UvPdDNtNujp_ogR9gkB4BIxsfNz1c14trdsjOA,5348
+sl10n-0.1.0.2.dist-info/LICENSE,sha256=Dqh-wkBJhJMxF5bbIQd_aQa61cJEE6xl34RnTXGlC4s,1064
+sl10n-0.1.0.2.dist-info/METADATA,sha256=6JkPu0-7D48Gv5fjr5zG_f_MatvJcSZEcYCU02uNcG0,5140
+sl10n-0.1.0.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+sl10n-0.1.0.2.dist-info/top_level.txt,sha256=lAixOC2ClC9TbMmC_p1AVfKiObF08sRkdFVqW6q4r2w,11
+sl10n-0.1.0.2.dist-info/RECORD,,
