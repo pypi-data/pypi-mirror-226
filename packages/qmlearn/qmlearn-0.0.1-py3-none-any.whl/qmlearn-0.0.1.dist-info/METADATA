@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: qmlearn
+Version: 0.0.1
+Summary: QMLearn
+Home-page: http://qmlearn.rutgers.edu
+Author: Pavanello Research Group
+Author-email: m.pavanello@rutgers.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.11.0)
+Requires-Dist: scipy (>=0.18.0)
+Requires-Dist: ase (>=3.21.1)
+Requires-Dist: scikit-learn (>=0.24.2)
+Requires-Dist: rmsd (==1.4)
+Requires-Dist: h5py (>=3.7.0)
+Requires-Dist: pyscf (>=2.0.0)
+Requires-Dist: tqdm
+Requires-Dist: importlib-metadata (>=0.12) ; python_version < "3.8"
+Provides-Extra: all
+Requires-Dist: matplotlib ; extra == 'all'
+
+# QMLearn
+  `Quantum Machine Learning` by learning one-body reduced density matrices in the AO basis.
+
+  ![QM-Learn code and workflow](https://gitlab.com/pavanello-research-group/qmlearn/-/raw/main/Docs/static/figure3.png)
+
+## Contributors
+ - Xuecheng Shao, Lukas Paetow, Md Rajib Khan Musa, Jessica A. Martinez B. and Michele Pavanello @ [PRG](https://sites.rutgers.edu/prg/) at [Rutgers University-Newark](http://sasn.rutgers.edu).
+ - Mark E Tuckerman @ [Tuckerman Research Group](https://wp.nyu.edu/tuckerman_group/) at [NYU](https://cas.nyu.edu/)
+
+## Some info
+
+ Code entirely in Python leveraging [PySCF](https://pyscf.org/) and [Psi4Numpy](https://github.com/psi4/psi4numpy) for generating GTO integrals and DFT targets. Regressions are carried out with [scikit-learn](https://scikit-learn.org/stable/) or other ML tools.
+
+
