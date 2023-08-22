@@ -1,0 +1,11 @@
+simple_geo/__init__.py,sha256=826QxaD18j-uqWFhYwknmReK2GtAS1sOaTku4EGAYa4,62
+simple_geo/admin.py,sha256=_3Lct6rYxyDbmC-HLjYNFsa3YU-6IP7Y7EmJHURWySo,967
+simple_geo/models.py,sha256=zXFnhIwHSR5qNdgevPfLYZsi_VJ1X7CWU4F8blojumc,3683
+simple_geo/settings.py,sha256=hM10-IptQgHEOTYsSXoH6qDT6tClLaxWeFMzU7hGPB8,427
+simple_geo/utils.py,sha256=yNM6ocIED4XCm9MFhraWyJmlII0Iom6XQUIYj9GHWN4,4717
+django_simple_geo-0.4.4.dist-info/AUTHORS,sha256=gV3wEvX6ViRw_pv5ivsYWiqv5UL0pGSlgbUV6UtOM2w,121
+django_simple_geo-0.4.4.dist-info/LICENSE,sha256=EbigyqWs1Y6ke_NA9u2xLLYqPwYYfYwgpf8N2AiNrbI,1470
+django_simple_geo-0.4.4.dist-info/METADATA,sha256=69iH4SxqpiNsvX-gT4JwYCu9OdHq1M1u4CWuC9LgZmw,824
+django_simple_geo-0.4.4.dist-info/WHEEL,sha256=m9WAupmBd2JGDsXWQGJgMGXIWbQY3F5c2xBJbBhq0nY,110
+django_simple_geo-0.4.4.dist-info/top_level.txt,sha256=Nll-UUpI5qr9bnP7JGckm4gP8JiILZ29EW1q0Db2Q9k,11
+django_simple_geo-0.4.4.dist-info/RECORD,,
