@@ -1,0 +1,9 @@
+README.md
+setup.py
+CVV_API.egg-info/PKG-INFO
+CVV_API.egg-info/SOURCES.txt
+CVV_API.egg-info/dependency_links.txt
+CVV_API.egg-info/requires.txt
+CVV_API.egg-info/top_level.txt
+ClasseVivaAPI/__init__.py
+ClasseVivaAPI/classeviva.py
