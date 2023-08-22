@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+graphs_for_science.egg-info/PKG-INFO
+graphs_for_science.egg-info/SOURCES.txt
+graphs_for_science.egg-info/dependency_links.txt
+graphs_for_science.egg-info/top_level.txt
