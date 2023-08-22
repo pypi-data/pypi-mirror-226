@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+datawaza/__init__.py
+datawaza/workflow.py
+datawaza.egg-info/PKG-INFO
+datawaza.egg-info/SOURCES.txt
+datawaza.egg-info/dependency_links.txt
+datawaza.egg-info/top_level.txt
