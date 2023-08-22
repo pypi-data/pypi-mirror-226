@@ -1,0 +1,5 @@
+hexbytes
+py-solc-x
+web3
+importlib_resources
+importlib_metadata
