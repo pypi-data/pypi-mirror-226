@@ -1,0 +1,4 @@
+rabbitmqresources
+scripts
+tasks
+tests
