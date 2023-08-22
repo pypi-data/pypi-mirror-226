@@ -1,0 +1,8 @@
+hdrlocal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hdrlocal/clahe.py,sha256=SZShdhnZREPbhG67uidYOEaTtadPyL_qkhMvtRKkwMM,8455
+hdrlocal/processor.py,sha256=tUOMtYzz4v_lhnF28sozUdQy_qSFxn7QaPaIfa-e_4g,8904
+hdrlocal/util.py,sha256=vklNMf0luLQQU8rpM5EEvmZ84oKms0xpTRAvDzfF89Y,3629
+hdr_local_processing-0.1.4.dist-info/METADATA,sha256=vOt9I7-bNfptU3d6BctKSObYNsJcsuBf3cHKLdbnbDQ,334
+hdr_local_processing-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hdr_local_processing-0.1.4.dist-info/top_level.txt,sha256=S8_OCzMmDVawJLjJ7Lj4iy2A8nCb06EDN5pkne1fbbA,9
+hdr_local_processing-0.1.4.dist-info/RECORD,,
