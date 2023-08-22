@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: nlpcv
+Version: 0.0.1
+Summary: A deep learning framework for nlp/cv package.
+Author-email: vulcan <3320382157@qq.com>
+Project-URL: Homepage, https://github.com/yalisandsoso
+Project-URL: Bug Tracker, https://github.com/yalisandsoso
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## ABOUT
+
+This is a slight deep learning framework for NLP/CV created by Vulcan @ Huazhou.
+
+## FEATURES
+. wav2Lip
+
+## REMAIN
+. cuda
+
+## Connection
+[Github](https://github.com/yalisandsoso)

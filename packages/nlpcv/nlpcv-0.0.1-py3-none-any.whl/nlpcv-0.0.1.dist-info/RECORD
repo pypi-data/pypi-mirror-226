@@ -1,0 +1,9 @@
+nlpcv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nlpcv/vulcan.py,sha256=fgBX0M6Z1f7PEvF5Yiz5u5YzHg8EShSNJ_TA_f8JFjo,96
+nlpcv/vision/__init__.py,sha256=PahljohKBgySIJ-j6hSsERxbbFb3g7xjdQVQUW0L4E8,58
+nlpcv/vision/metainfo.py,sha256=NhGWQFmdJCzq1apHzDvwWygXSnxfXZtBF3hmjmca-g0,86
+nlpcv-0.0.1.dist-info/LICENSE,sha256=kmKXryWg4PQd-2cxRoWpm-GYfaXzkewFL4fz1B88NiY,34
+nlpcv-0.0.1.dist-info/METADATA,sha256=Yaz-4umeYrNryzzqOMFvNOz4nTtxzuQNt5NLWPpa9xc,705
+nlpcv-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+nlpcv-0.0.1.dist-info/top_level.txt,sha256=OhIfoYxMIex6nPxkPwvckSWyajBWMW-wWSLf8L-qjes,6
+nlpcv-0.0.1.dist-info/RECORD,,
