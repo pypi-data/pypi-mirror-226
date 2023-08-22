@@ -1,0 +1,11 @@
+SMjour/__init__.py,sha256=yXg2xPbDYakiNn0sUj6kUZ6XjD3n1WctZuux9-9meig,128
+SMjour/collinearity.py,sha256=poEIRHw1uv7qbVVMMGz-lkiDW8iw4udrjKTI_Fag4lE,4134
+SMjour/data.py,sha256=FwiecH-kBOh5ErYDcpjZ-oVmLX6Hwsa7wXKiWZndZqs,4764
+SMjour/low_level.py,sha256=wiUgRzTSAXCXo_utU8Lgdnc4CpirZxKHZTy6SIIAhAA,1573
+SMjour/meta_reg.py,sha256=DYZRagXq-iQmliGbHoq29XH6xlEohbIeyn-3AUsi6DI,4548
+SMjour/potentiality.py,sha256=8WHPqtUWJEOEjZsr4lXwjaykI8K_KsI7YN-2QdaV1io,2974
+SMjour-0.0.16.dist-info/LICENSE,sha256=pyzD9ZO5dPrK-zmNNqrBhzHnnCqB91l2lCOc7zGVb7s,1097
+SMjour-0.0.16.dist-info/METADATA,sha256=srzTONZLXGKUusbtVP7FvT6cploLL1oYtpmiv0SV3eU,699
+SMjour-0.0.16.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+SMjour-0.0.16.dist-info/top_level.txt,sha256=zPfH8LQPZLGT5F6VX1mkTOU0FX-5wuyd5B0rIwrLLTQ,7
+SMjour-0.0.16.dist-info/RECORD,,
