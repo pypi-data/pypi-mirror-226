@@ -1,0 +1,2 @@
+[console_scripts]
+mkname = mkname.cli:parse_cli
