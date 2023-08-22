@@ -1,0 +1,8 @@
+PyMuPDFb-1.23.0rc2.dist-info/RECORD,,
+PyMuPDFb-1.23.0rc2.dist-info/METADATA,sha256=jzOAfhF7xcouIps66zRQZIgUURNgrEsh0WpGRYqdhMA,1405
+PyMuPDFb-1.23.0rc2.dist-info/README.md,sha256=cb8wjiD2htWQew8Ug9DVUXm-LAfLOhBjYoXub_LBw9Y,223
+PyMuPDFb-1.23.0rc2.dist-info/COPYING,sha256=4Fv7ClDSjhDuQgCg-BeJPyaVMFWkyVp40FN4tIg7QBM,18
+PyMuPDFb-1.23.0rc2.dist-info/WHEEL,sha256=LyC2D1hBHpF2HFjzv6f1bqg6GHmnTYjHEeWEZAAixKw,131
+fitz/libmupdf.so,sha256=UI69c3KI-zpT1me44b0ic05oOrprDaoMB8ebJd0ch0I,22163768
+fitz_new/libmupdf.so,sha256=UI69c3KI-zpT1me44b0ic05oOrprDaoMB8ebJd0ch0I,22163768
+fitz_new/libmupdfcpp.so,sha256=zm8bn7qTW7aldfcMDnoEg6z7532wCjYjoOM8F1O6iso,2452720
