@@ -1,0 +1,3 @@
+[console_scripts]
+bingo = bingo.__main__:main
+
