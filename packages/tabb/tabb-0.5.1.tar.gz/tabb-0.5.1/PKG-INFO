@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: tabb
+Version: 0.5.1
+Summary: Trevor's argparse but better.
+Project-URL: Documentation, https://github.com/wtolson/tabb#readme
+Project-URL: Issues, https://github.com/wtolson/tabb/issues
+Project-URL: Source, https://github.com/wtolson/tabb
+Author-email: Trevor Olson <trevor@heytrevor.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# TaBB
+
+> [!WARNING]
+> TaBB has an alpha devlopment status. This package is untested and the api is subject to change. Use at your own risk.
+
+Trevor's argparse but better. CLI and configuration using Python type hints.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/tabb.svg)](https://pypi.org/project/tabb)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tabb.svg)](https://pypi.org/project/tabb)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install tabb
+```
+
+## License
+
+`tabb` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
