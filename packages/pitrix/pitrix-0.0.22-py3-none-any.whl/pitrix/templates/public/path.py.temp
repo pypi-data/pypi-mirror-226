@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import os
+
+
+class Project:
+    BASEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    CONFIG_DIR = os.path.join(BASEDIR, "config")
+    DATA_DIR = os.path.join(BASEDIR, "datas")
+    LOG_DIR = os.path.join(BASEDIR, "logs")
+    REPORT_DIR = os.path.join(BASEDIR, "reports")
+    TESTCASE_DIR = os.path.join(BASEDIR, "testcases")
+    DB = os.path.join(BASEDIR, "database","pitrix.db")
+    CONFIG_YAML = os.path.join(CONFIG_DIR,"config.yaml")

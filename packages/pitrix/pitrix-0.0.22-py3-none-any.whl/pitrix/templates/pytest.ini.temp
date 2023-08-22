@@ -1,0 +1,41 @@
+[pytest]
+markers =
+    smoke: smoke test
+
+filterwarnings =
+    ignore::UserWarning
+    ignore::DeprecationWarning
+
+xfail_strict = True
+
+;configuration log format
+; cli live log
+;log_cli = True
+;log_cli_date_format = %Y-%m-%d %H:%M:%S
+;log_cli_format = %(asctime)s %(levelname)s %(message)s
+;log_cli_level = info
+;capture log
+;log_date_format = %Y-%m-%d %H:%M:%S
+;log_format = %(asctime)s %(levelname)s %(message)s
+;log_level = info
+
+;configuration testcase folder
+testpaths = testcases
+
+;testcase rule
+python_files =     test_*  *_test  test*
+python_classes =   Test*   test*
+python_functions = test_*  test*
+
+;pytest ignore folder
+norecursedirs = apis common conf controls data database log report schedulers tools util yamlcase venv
+
+;pytest.mark.parametrize ids params show language
+disable_test_id_escaping_and_forfeit_all_rights_to_community_support = True
+
+addopts = -sv
+          --capture=sys
+          -p no:warnings
+          --alluredir=./reports/json
+
+render_collapsed = True

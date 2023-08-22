@@ -1,0 +1,49 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from apis.network import vxnet,router_table
+from apis.common.context import instance
+
+ctx = instance()
+
+class InvalidAction(Exception):
+
+    def __init__(self, msg):
+        self.msg = msg
+
+    def __str__(self):
+        return (f"{self.msg} 属性不存在！！！")
+
+class PitrixTest():
+
+    def __init__(self,**kwargs):
+        self.actions = [
+            vxnet.Vxnets(**kwargs),
+            # router_table.RouteTabl(kwargs)
+        ]
+
+    def __getattr__(self, attr):
+        for action in self.actions:
+            _is_exist = hasattr(action, attr)
+            if not _is_exist:
+                ...
+                # print(f"{action.__class__.__name__} 访问:{attr} 属性不存在")
+            else:
+                return getattr(action, attr)
+        raise InvalidAction(attr)
+
+
+
+
+
+
+if __name__ == '__main__':
+    ak = 'RDSZGWPVOUMXPNZWMVHL'
+    sk = 'oactiANB62fhYwsm1zYq8VZbervpAiZ09wzS82NM'
+    zone = 'sh1'
+
+    api = PitrixTest(qy_access_key_id=ak, qy_secret_access_key=sk, zone=zone)
+    api.create_vxnets('api-test')
+    api.delete_vxnet('vxnet-nibcbsh')
+
+    print(ctx.vxnets)

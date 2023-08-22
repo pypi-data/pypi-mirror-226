@@ -1,0 +1,129 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import re
+import pytest
+from pitrix.utils.log import logger
+
+from pitrix.utils.http_client import request
+from pitrix.plugin import db_config
+
+
+class Login:
+
+    def __init__(self):
+        env_infos = db_config.get_all()
+        self.is_private = env_infos.get('private')
+        self.account_host = env_infos.get('submit_host')
+        self.host = env_infos.get('host')
+        self.zone = env_infos.get('zone')[0]
+        self.username = env_infos.get('account')['user']
+        self.password = env_infos.get('account')['pwd']
+
+        self.csrf_token = ''
+        self.sid = ''
+
+    def _private_login(self):
+        data = {
+            'url': self.host + '/login',
+            'method': 'get',
+        }
+        resp = request(**data)
+        self.csrf_token = resp.cookies['csrftoken']
+        self.sid = resp.cookies['sid']
+
+    def _public_login(self):
+        resp = request("get", self.account_host + "/login")
+        self.csrf_token = resp.cookies['csrftoken']
+        self.sid = resp.cookies['sid']
+
+    def _call_pre_login(self):
+        if self.is_private:
+            return self._private_login()
+        return self._public_login()
+
+    def login(self):
+        """
+        public:
+            ->: account/login(get)-->csrftoken,sid
+            ->: account/login(post) with csrftoken -->sk
+        private:
+            ->: console/login(post) -->csrftoken,sid
+            ->: console/login --> with csrftoken -->sk
+        ** pek2 need to verify=False
+        """
+        print("开始登录qingcloud")
+        self._call_pre_login()
+
+        payload = {
+            'verifyType': 'passwd',
+            'loginType': 'email',
+            'email': self.username,
+            'passwd': self.password,
+            'csrfmiddlewaretoken': self.csrf_token,
+            'login_account_email_postfix': '@xxx.com'
+        }
+        submit_login_url = self.account_host + "/login/api/submit/"
+        if self.is_private is True:
+            del payload['verifyType']
+            del payload['loginType']
+            del payload['email']
+            payload['user'] = self.account['user']
+            submit_login_url = self.host + '/login/submit'
+            payload['login_server'] = 'qingcloud'
+
+        data = {
+            'url': submit_login_url,
+            'method': 'post',
+            'headers': {
+                "Referer": self.host, 'Content-Type': 'application/x-www-form-urlencoded',
+                "Cookie": f'csrftoken={self.csrf_token}'
+            },
+            'data': payload
+        }
+
+        resp_submit = request(**data)
+        if self.is_private is False:
+            sk = resp_submit.cookies.get('sk')
+        else:
+            pattern = "sk\": \"(.+?)\","
+            try:
+                sk = re.findall(pattern, resp_submit.text)[0]
+            except IndexError:
+                pattern = "sk: '(.+?)',"
+                sk = re.findall(pattern, resp_submit.text)[0]
+
+        resp_login = {
+            "sk": sk,
+            "host": self.host,
+            "csrftoken": self.csrf_token,
+            "sid": self.sid
+        }
+        headers = self.make_headers(resp_login)
+
+        request(url=self.host + '/', method='get', headers=headers)
+        request(url=self.host + f'/{self.zone}', method='get', headers=headers)
+
+        return resp_login
+
+    def make_headers(self, resp_login):
+        headers = {
+            'Cookie': f'csrftoken={resp_login["csrftoken"]};sid={resp_login["sid"]};sk={resp_login["sk"]};console_ver=3',
+            'X-CSRFToken': resp_login["csrftoken"], "Referer": resp_login['host']}
+        return headers
+
+@pytest.fixture(scope="session",autouse=True)
+def login(tep_context_manager):
+    """
+    tep_context_manager是为了兼容pytest-xdist分布式执行的上下文管理器
+    该login只会在整个运行期间执行一次
+    """
+    logger.info("开始执行登录...")
+    def produce_expensive_data():
+        qc = Login()
+        qc.login()
+        logger.info("登录操作执行完成...")
+
+    return tep_context_manager(produce_expensive_data)

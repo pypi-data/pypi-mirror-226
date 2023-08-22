@@ -1,0 +1,96 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023/08/11 13:08
+# @Author  : Tang Yiwei
+# @Email   : yiweitang@yunify.com
+# @File    : context.py
+# @Software: PyCharm
+
+class TestContext(object):
+
+    def __init__(self):
+        self.global_dict = {}
+
+        # 定义计算资源
+        self.instances: list[str] = []
+        self.instance_groups: list[str] = []
+        self.images: list[str] = []
+        self.nics: list[str] = []
+        self.keypairs: list[str] = []
+        self.snapshots: list[str] = []
+        self.devices: list[str] = []
+
+        # 定义网络资源
+        self.routers: list[str] = []
+        self.vxnets: list[str] = []
+        self.bm_vxnets: list[str] = []
+        self.eips: list[str] = []
+        self.loadbalancers: list[str] = []
+        self.loadbalancer_policies: list[str] = []
+        self.server_certificates: list[str] = []
+        self.nfvs: list[str] = []
+        self.nacls: list[str] = []
+        self.vips: list[str] = []
+        self.routing_tables: list[str] = []
+        self.spans: list[str] = []
+        self.domain_policies: list[str] = []
+        self.vpc_borders: list[str] = []
+        self.dns_aliases: list[str] = []
+
+        # 定义存储资源
+        self.volumes: list[str] = []
+        self.s2_servers: list[str] = []  # vsan + vnas
+        self.s2_servers_vsans: list[str] = []  # vsan
+        self.s2_servers_vnass: list[str] = []  # vnas
+        self.s2_shared_targets: list[str] = []
+        self.s2_groups: list[str] = []
+        self.s2_accounts: list[str] = []
+
+        # 定义安全资源
+        self.security_groups: list[str] = []
+        self.security_group_ipsets: list[str] = []
+        self.waf_parameter_group: list[str] = []
+        self.rule_ids: list[str] = []
+
+        # 定义公共服务资源
+        self.tags: list[str] = []
+        self.accesskeys: list[str] = []
+        self.dns_alias: list[str] = []
+        self.users: list[str] = []
+        self.projects: list[str] = []
+        self.schedulers: list[str] = []
+        self.autoscaling_policies: list[str] = []
+        self.inst_group_ids: list[str] = []
+        self.notification_lists: list[str] = []
+        self.topologies: list[str] = []
+        self.router_instances: list[str] = []
+        self.orders: list[dict] = []
+
+    def set_value(self, key, value):
+        self.global_dict[key] = value
+
+    def get_value(self, key, def_val=None):
+        try:
+            return self.global_dict.get(key)
+        except KeyError:
+            return def_val
+
+    def get_values(self):
+        return self.global_dict
+
+    def delete_value(self, key):
+        self.global_dict.pop(key)
+
+    def clean_values(self):
+        self.global_dict.clear()
+
+    def delete_values(self):
+        del self.global_dict
+
+
+g_ctx = TestContext()
+
+
+def instance():
+    global g_ctx
+    return g_ctx

@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import platform
+from decimal import Decimal
+from random import choice
+from pitrix.utils.log import logger
+
+def extract_action(response:dict):
+    """
+    提取job action name
+    :param response:
+    :return:
+    """
+    msg = "未提取到action"
+    if not response:
+        logger.error(msg)
+        return ''
+    ret_code = response.get('ret_code')
+    if ret_code == 0:
+        action_name: str = response.get('action').replace('Response', '')
+        return action_name
+    else:
+        logger.error(msg)
+        return ''
+
+def extract_job(response:dict):
+    """
+    提取job id
+    :param response:
+    :return:
+    """
+    msg = "未提取到job id"
+    if not response:
+        logger.error(msg)
+        return
+    action_name: str = extract_action(response)
+    job_id: str = response.get('job_id')
+    job_ids: list = response.get('job_ids')
+    if job_id:
+        logger.info(f"=== 执行:{action_name},提取的job_id为:{job_id} ===")
+        return job_id
+    if job_ids:
+        logger.info(f"=== 执行:{action_name},提取的job_ids为:{job_ids} ===")
+        return job_ids
+    logger.error(msg)
+    return
+
+def split_list(lst, size=200):
+    """
+    将一个列表按照指定大小拆分为多个子列表
+    :param lst: 需要拆分的列表
+    :param size: 拆分的大小
+    :return:
+    """
+    return [lst[i:i+size] for i in range(0, len(lst), size)]
+
+def generate_test_method_name(_request):
+    """
+    创建资源生成指定规则的名称: test方法名_region_zone
+    :param _request:  func or class type
+    :return: eg。test_instance_testbm_testbm1a
+    """
+    _region = ''
+    _zone = ''
+    if hasattr(_request,'__name__'):
+        case_name = _request.__name__ + '_' + _region + '_' + _zone
+    elif hasattr(_request,'function'):
+        case_name = _request.function.__name__ + '_' + _region + '_' + _zone
+    elif isinstance(_request,str):
+        case_name = _request + '_' + _region + '_' + _zone
+    logger.info(f"❤️❤️❤️❤️❤️❤️ 正在执行测试以及创建测试资源 : {case_name} ❤️❤️❤️❤️❤️❤️")
+    return case_name

@@ -1,0 +1,55 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import time
+import pytest
+import allure
+from pitrix.plugin import db_config
+from pitrix.case.base_assert import case
+from pitrix.utils.allure_attach import allure_attach
+
+@allure.epic("主机")
+@allure.feature("主机创建测试")
+@allure.severity("通过镜像创建主机")
+@allure.story('test_01')
+def test_01():
+    """test - 01"""
+    case.assert_eq(1,2)
+
+@allure.epic("主机")
+@allure.feature("主机创建测试")
+@allure.severity("通过克隆创建主机")
+@allure.story('test_02')
+def test_02():
+    """test - 02"""
+    print(f"取数据：{db_config.get('account')}")
+    allure.attach(body='测试', name='主机测试', attachment_type=allure.attachment_type.TEXT)
+    allure.attach
+    case.assert_eq(1,1)
+
+@allure.epic("主机")
+@allure.feature("主机创建测试")
+@allure.severity("通过备份创建主机")
+@allure.story('test_03')
+def test_03():
+    """test - 03"""
+    pytest.skip("跳过了")
+
+
+@allure.epic("硬盘")
+@allure.feature("硬盘创建测试")
+@allure.severity("通过克隆创建硬盘")
+@allure.story('批量')
+@pytest.mark.parametrize("n", list(range(1)))
+def test_demo_param(n):
+    """test - 批量"""
+    time.sleep(2)
+    allure_attach.text(f"test_demo_param_{n}")
+    allure.attach(body='测试', name='ttt测试', attachment_type=allure.attachment_type.TEXT)
+    assert True
+
+
+if __name__ == '__main__':
+    pytest.main(['sv'])

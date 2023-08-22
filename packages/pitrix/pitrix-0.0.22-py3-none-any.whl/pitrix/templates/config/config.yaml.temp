@@ -1,0 +1,23 @@
+env: qingcloud
+qingcloud:
+  account:
+    pwd: xxx
+    user: xxx
+  api_host: api.qingcloud.com
+  console_id: qingcloud
+  debug: false
+  host: https://console.qingcloud.com
+  port: 443
+  private: false
+  project_name: qingcloud-autotest
+  protocol: https
+  qy_access_key_id: xxx
+  qy_secret_access_key: xxx
+  region: sh1
+  submit_host: https://account.qingcloud.com
+  test_department: Quality Assurance Department
+  test_title: Cloud Platform Automated Testing
+  user_id: xxx
+  zone:
+  - sh1a
+  - sh1b

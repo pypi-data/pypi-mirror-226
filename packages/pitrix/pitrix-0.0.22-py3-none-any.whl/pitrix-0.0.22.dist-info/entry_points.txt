@@ -1,0 +1,6 @@
+[console_scripts]
+pitrix=pitrix.cli:main
+
+[pytest11]
+pitrix=pitrix.plugin:Plugin
+

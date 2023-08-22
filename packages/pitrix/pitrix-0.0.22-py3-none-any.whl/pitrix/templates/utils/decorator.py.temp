@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import time
+import decimal
+from pitrix.utils.log import logger
+from utils.common import extract_job
+from utils.allure_attach import allure_attach
+
+
+def parser_rep(func):
+    """
+    解析响应
+    """
+    def inner(args, kwargs):
+        start = time.process_time()
+        payload = args[1]
+        method = payload.get('method')
+        api_path = payload.get('api_path', '')
+        params = payload.get("params")
+        data = payload.get("data")
+        json = payload.get("json")
+
+        logger.info(f"请求方法 =====> {method}")
+
+        if params:
+            logger.info(f"请求参数 =====> {params}")
+        if data:
+            logger.info(f"请求体[data] =====> {data}")
+        if json:
+            logger.info(f"请求体[json] =====> {json}")
+
+        response = func(*args, **kwargs)
+
+        end = time.process_time()
+        elapsed = str(decimal.Decimal("%.3f" % float(end - start))) + "s"
+
+
+        return response
+    return inner
+
+def parser_sdk(func):
+    """
+    解析sdk响应
+    """
+    def inner(args, kwargs):
+        start = time.process_time()
+
+        logger.info(f"请求参数:{args}")
+
+        response = func(*args, **kwargs)
+        end = time.process_time()
+        elapsed = str(decimal.Decimal("%.3f" % float(end - start))) + "s"
+
+        allure_attach.json(body=response, name='查看响应↓')
+
+        logger.info(f"响应信息:{response}")
+
+        job_id = extract_job(response)
+
+        # todo: wait job
+        pass
+
+        return response
+    return inner

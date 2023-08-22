@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023/08/11 12:58
+# @Author  : Tang Yiwei
+# @Email   : yiweitang@yunify.com
+# @File    : router_table.py
+# @Software: PyCharm
+
+from lib.common import rest_client
+
+class RouteTabl(rest_client.RestClient):
+
+    def __init__(self,**kwargs):
+        super(RouteTabl,self).__init__(**kwargs)
+
+    def create_route_table(self,routing_table_type=1):
+        action = "CreateRouteTable"
+        body = {
+            'routing_table_type':'routing_table_type'
+        }
+        return self.send_request(action, body)
+
+    def delete_route_tables(self,routing_tables):
+        action = "DeleteRouteTables"
+        body = {
+            "routing_tables": routing_tables,
+        }
+        self.send_request(action, body)
+
+if __name__ == '__main__':
+    ak = 'RDSZGWPVOUMXPNZWMVHL'
+    sk = 'oactiANB62fhYwsm1zYq8VZbervpAiZ09wzS82NM'
+    zone = 'sh1'
+    api = Vxnets(ak, sk, zone)
+    api.create_vxnets('api-test')
+    api.create_vxnets('api-test')

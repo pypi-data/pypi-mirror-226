@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: pitrix
+Version: 0.0.22
+Summary: pitrix test tool
+Home-page: https://github.com/tython/pitrix.git
+License: Apache-2.0
+Keywords: testing,pytest
+Author: pitrix
+Author-email: 892398433@qq.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: allure-pytest (>=2.8.16,<3.0.0)
+Requires-Dist: allure-python-commons (>=2.8.16,<3.0.0)
+Requires-Dist: black (>=23.7.0,<24.0.0)
+Requires-Dist: click (>=8.1.6,<9.0.0)
+Requires-Dist: click-help-colors (>=0.9.1,<0.10.0)
+Requires-Dist: colorlog (>=6.7.0,<7.0.0)
+Requires-Dist: emoji (>=2.7.0,<3.0.0)
+Requires-Dist: faker (>=4.1.1,<5.0.0)
+Requires-Dist: fastapi (>=0.72.0,<0.73.0)
+Requires-Dist: filelock (>=3.8.2,<4.0.0)
+Requires-Dist: flake8 (>=6.1.0,<7.0.0)
+Requires-Dist: ipy (>=1.1,<2.0)
+Requires-Dist: iso8601 (>=2.0.0,<3.0.0)
+Requires-Dist: isort (>=5.12.0,<6.0.0)
+Requires-Dist: jsonpath (>=0.82,<0.83)
+Requires-Dist: loguru (>=0.4.1,<0.5.0)
+Requires-Dist: mitmproxy (==9.0.1)
+Requires-Dist: netaddr (>=0.8.0,<0.9.0)
+Requires-Dist: netifaces (>=0.11.0,<0.12.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: paramiko (>=3.3.1,<4.0.0)
+Requires-Dist: ping3 (>=4.0.4,<5.0.0)
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Requires-Dist: pyfiglet (>=0.8.post1,<0.9)
+Requires-Dist: pymysql (>=1.1.0,<2.0.0)
+Requires-Dist: pytest (>=7.1.1,<8.0.0)
+Requires-Dist: pytest-assume (>=2.4.2,<3.0.0)
+Requires-Dist: pytest-html (>=3.2.0,<4.0.0)
+Requires-Dist: pytest-variables (>=3.0.0,<4.0.0)
+Requires-Dist: pytest-xdist (>=3.1.0,<4.0.0)
+Requires-Dist: pyyaml (>=5.4.1,<6.0.0)
+Requires-Dist: qingcloud-sdk (>=1.2.15,<2.0.0)
+Requires-Dist: requests (>=2.22.0,<3.0.0)
+Requires-Dist: urllib3 (>=1.25.9,<2.0.0)
+Requires-Dist: uvicorn (>=0.17.0,<0.18.0)
+Project-URL: Repository, https://github.com/tython/pitrix.git
+Description-Content-Type: text/markdown
+
+# Pitrix
+1.脚手架
+
+2.项目默认配置
+

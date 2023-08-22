@@ -1,0 +1,2 @@
+wechat:
+    webhook: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=465ab3b8-93b8-4341-b35d-f674ce23f6b4

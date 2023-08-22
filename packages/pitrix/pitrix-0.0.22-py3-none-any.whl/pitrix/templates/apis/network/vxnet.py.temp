@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023/08/11 11:24
+# @Author  : Tang Yiwei
+# @Email   : yiweitang@yunify.com
+# @File    : vxnet.py
+# @Software: PyCharm
+
+from lib.common import rest_client
+from apis.common.context import instance
+
+ctx = instance()
+class Vxnets(rest_client.RestClient):
+
+    def __init__(self,**kwargs):
+        super(Vxnets,self).__init__(**kwargs)
+
+    def create_vxnets(self,vxnet_name):
+        action = "CreateVxnets"
+        body = {
+            "vxnet_name": vxnet_name,
+        }
+        rep = self.send_request(action, body)
+        print(rep)
+        ctx.vxnets.extend(rep['vxnets'])
+        return rep
+
+    def delete_vxnet(self,vxnets):
+        action = "DeleteVxnets"
+        body = {
+            "vxnets": vxnets,
+        }
+        self.send_request(action, body)
+
+if __name__ == '__main__':
+    ak = 'RDSZGWPVOUMXPNZWMVHL'
+    sk = 'oactiANB62fhYwsm1zYq8VZbervpAiZ09wzS82NM'
+    zone = 'sh1'
+    api = Vxnets(ak, sk, zone)
+    api.create_vxnets('api-test')
+    api.delete_vxnet('api-test')

@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author  : tython
+# @Email   : 892398433@qq.com
+
+import os
+import pytest
+from public.path import Project
+
+
+
+if __name__ == '__main__':
+    pytest.main(['-sv'])
