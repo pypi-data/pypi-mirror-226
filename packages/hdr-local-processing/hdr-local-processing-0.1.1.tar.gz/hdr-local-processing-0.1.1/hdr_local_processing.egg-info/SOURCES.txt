@@ -1,0 +1,11 @@
+README
+setup.py
+hdr_local_processing.egg-info/PKG-INFO
+hdr_local_processing.egg-info/SOURCES.txt
+hdr_local_processing.egg-info/dependency_links.txt
+hdr_local_processing.egg-info/requires.txt
+hdr_local_processing.egg-info/top_level.txt
+hdrlocal/__init__.py
+hdrlocal/clahe.py
+hdrlocal/processor.py
+hdrlocal/util.py
