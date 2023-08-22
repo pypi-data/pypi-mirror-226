@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: openapi-gen
+Version: 1.1.9
+Summary: Swagger UI for Flask apps
+Author: Chris Lyons
+Author-email: administrator@suncoast.systems
+Keywords: python,openapi-gen
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9.0
+License-File: LICENSE
+
+Automatically generate OpenAPI UI documentation for a Flask app.  Batteries included.
