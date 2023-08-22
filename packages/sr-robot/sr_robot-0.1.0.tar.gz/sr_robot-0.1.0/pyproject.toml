@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sr-robot"
+version = "0.1.0"
+description = ""
+authors = ["SRE <sre@stro.uk>"]
+license = "Proprietary"
+readme = "README.md"
+packages = [{include = "sr_robot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
