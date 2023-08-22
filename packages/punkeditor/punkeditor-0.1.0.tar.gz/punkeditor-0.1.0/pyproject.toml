@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "punkeditor"
+authors = [
+    {name = "Steampunk Wizard", email = "punkeditor@steampunkwizard.ca"}
+]
+description = "Text editor component for curses"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "wizlib >= 0.9.2"
+]
+dynamic = ["version"]
+
+[tool.setuptools.package-dir]
+punkeditor = "punkeditor"
+
+[project.scripts]
+punke = "punkeditor.handler:PunkEditorHandler.shell"
+
+[tool.setuptools.dynamic]
+version = {file = [".version"]}
