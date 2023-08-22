@@ -1,0 +1,10 @@
+ruslanio/__init__.py,sha256=N-eXep8ZKjH4Zj-Z8vPSeS_uOLdXcfGzSXgtTzd_A0g,80
+ruslanio/beam_search.py,sha256=hiC9EOzgaIVyS3065cCPnEjaaCXwnn2-dMlxTnLOyig,2506
+ruslanio/cacher.py,sha256=sLWsNnBZB_xyFmP-vH5m9ublfC_tiaNRlO4SYbEwN_Y,6365
+ruslanio/image.py,sha256=7zqKjhJxbq3MfjJ9ySnzxZyRFsvy4hR-_QtKOIjy9og,222
+ruslanio/utils.py,sha256=dJFF8p2iNV_UakDdFvEozoSAAhRkMcPeCDZ5-a9w0ZQ,440
+ruslanio-0.0.5.dist-info/LICENSE,sha256=6RW-FsaVShib7o2_kRljU-aOuDV6vNW7B7So8ymXOEo,463
+ruslanio-0.0.5.dist-info/METADATA,sha256=acOzcaBuQMiVjJrWQ6Oderyljhv7E239tnyrukd0NYY,730
+ruslanio-0.0.5.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+ruslanio-0.0.5.dist-info/top_level.txt,sha256=MzHPdJepN5m5GNbjUJ96JIj8bXG6OU70iW5-dbGm3mc,9
+ruslanio-0.0.5.dist-info/RECORD,,
