@@ -1,0 +1,9 @@
+README.md
+setup.py
+AmosMsg/AmosMsg.py
+AmosMsg/__init__.py
+AmosMsg.egg-info/PKG-INFO
+AmosMsg.egg-info/SOURCES.txt
+AmosMsg.egg-info/dependency_links.txt
+AmosMsg.egg-info/requires.txt
+AmosMsg.egg-info/top_level.txt
