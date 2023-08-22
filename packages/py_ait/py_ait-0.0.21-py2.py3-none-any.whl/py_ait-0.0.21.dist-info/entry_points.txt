@@ -1,0 +1,3 @@
+[console_scripts]
+ait-download=py_ait.hf_download:run
+
