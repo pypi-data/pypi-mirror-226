@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kmd-hmdb-api-client
+Version: 1.0.0
+Summary: A API Client for KMD HMDB
+Home-page: 
+Author: Lainou
+Author-email: lain.pavot@inrae.fr
+License: GNU GENERAL PUBLIC LICENSE v3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9.0
