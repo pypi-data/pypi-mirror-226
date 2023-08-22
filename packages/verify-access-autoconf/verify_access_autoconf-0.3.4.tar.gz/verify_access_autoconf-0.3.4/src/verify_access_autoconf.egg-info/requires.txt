@@ -1,0 +1,6 @@
+requests
+PyYAML
+pyisva
+kubernetes
+docker-compose
+typing
