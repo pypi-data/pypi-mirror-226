@@ -1,0 +1,40 @@
+ccc
+***
+
+
+Description
+===========
+
+Compute Cloud at Customer CLI
+
+
+Available Commands
+==================
+
+* infrastructure
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* upgrade-schedule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
