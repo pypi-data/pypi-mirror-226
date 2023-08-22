@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: swavey
+Version: 0.0.1
+Summary: Test
+Author: Ian Lai
+Author-email: 
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: requests
+Requires-Dist: json
+Requires-Dist: bs4
+Requires-Dist: random
+Requires-Dist: datetime
+Requires-Dist: flask
+
