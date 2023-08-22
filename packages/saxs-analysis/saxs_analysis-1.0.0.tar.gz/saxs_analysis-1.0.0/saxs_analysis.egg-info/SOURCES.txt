@@ -1,0 +1,9 @@
+LICENSE
+README.md
+__init__.py
+saxspy.py
+setup.py
+saxs_analysis.egg-info/PKG-INFO
+saxs_analysis.egg-info/SOURCES.txt
+saxs_analysis.egg-info/dependency_links.txt
+saxs_analysis.egg-info/top_level.txt
