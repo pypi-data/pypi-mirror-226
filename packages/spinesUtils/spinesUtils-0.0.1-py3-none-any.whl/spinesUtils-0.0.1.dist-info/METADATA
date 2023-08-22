@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: spinesUtils
+Version: 0.0.1
+Summary: 模型训练工具集 model trainning  toolsets
+Home-page: https://github.com/BirchKwok/spinesUtils
+Author: Birch Kwok
+Author-email: birchkwok@gmail.com
+Keywords: computer vision
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: scikit-learn >=1.0.2
+Requires-Dist: torch >=1.4
+Requires-Dist: scipy >=1.7.0
+Requires-Dist: numpy >=1.17.0
+Requires-Dist: pandas >=1.0.0
+Requires-Dist: tabulate >=0.8
+Requires-Dist: tqdm >=4.65.0
+Requires-Dist: matplotlib >=3.7.1
+Requires-Dist: dask >=2023.6.0
+Requires-Dist: shap >=0.41.0
+
+./README.md
