@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: CleanTextKit
+Version: 0.1.1
+Summary: A preprocessor which performs operations of lowering text, removing special characters and removing stopwords
+Author: Chaitanya Kulkarni
+Keywords: text processing,text preprocessing,text cleaner
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: nltk
+
+# Text Preprocessor
+
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)   
+
+## Usage
+
+- Make sure you have Python installed in your system.
+- Run Following command in the CMD.
+ ```
+  pip install CleanTextKit
+  ```
+## Example
+
+ ```
+# test.py
+from CleanTextKit import preprocess_text
+preprocess_text("I love preprocessing text")
+  ```
+
+## Run the following Script.
+ ```
+  python test.py
+ ```
