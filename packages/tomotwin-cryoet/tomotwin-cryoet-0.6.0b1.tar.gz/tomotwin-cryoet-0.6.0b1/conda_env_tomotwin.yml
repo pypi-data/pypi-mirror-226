@@ -1,0 +1,24 @@
+name: tomotwin
+channels:
+  - nvidia
+  - pytorch-nightly
+  - rapidsai
+  - conda-forge
+  - defaults
+dependencies:
+  - pytorch #=2.1.0.dev20230802 - not available anymore...
+  - torchvision
+  - pandas[version='<2']
+  - scipy
+  - numpy
+  - matplotlib
+  - pytables
+  - cuml=23.04
+  - cudatoolkit=11.8
+  - protobuf[version='>3.20']
+  - tensorboard
+  - optuna
+  - mysql-connector-python
+  - pip
+  - pip:
+      - git+https://github.com/MPI-Dortmund/tomotwin-cryoet.git@pt2_distrdataparallel
