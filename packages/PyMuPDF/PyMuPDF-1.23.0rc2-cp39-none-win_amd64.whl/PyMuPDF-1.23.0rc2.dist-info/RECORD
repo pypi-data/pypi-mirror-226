@@ -1,0 +1,17 @@
+fitz\__init__.py,sha256=dvjL8I1s3WBE4UVcX6Ltv5JYIBRnvOVn-7xfoOwSqu4,22833
+fitz\__main__.py,sha256=anlMr2JHc0eu1Vmphljtrp9B7PwV7yHYRMZpaGjdhWQ,40875
+fitz\fitz.py,sha256=vlly19-yh9MNslhkFNJdCClRbmwSwjz87R3rHYCwk6w,377642
+fitz\utils.py,sha256=Ux4v6FsUQOptzMnaEokcIdbOctjV8x4LS3joMVUcvI0,187581
+fitz\_fitz.cp39-win_amd64.pyd,sha256=TEWiysliFrOb36-06rjcqWMUOQ7_VoG-PBlj4hiM36g,717312
+fitz_new\__init__.py,sha256=5JPQ6nbASTrtyRmherU5Bo2aV3dfp23e3EDU4l1ItkY,788307
+fitz_new\__main__.py,sha256=anlMr2JHc0eu1Vmphljtrp9B7PwV7yHYRMZpaGjdhWQ,40875
+fitz_new\fitz.py,sha256=4nOBVLNyIYohjXzZup9l2bSWdxEWZ1kckQ5ct7VKcJ4,17
+fitz_new\utils.py,sha256=FmLjK0L3nT9hl880ejDTJC8lS5BlGamrh7EC2JibeNk,192199
+fitz_new\extra.py,sha256=iX-HuJsxpgk3rQyReZyn33Dn1zn1yWZzTb7HNoOUMp8,6477
+fitz_new\_extra.cp39-win_amd64.pyd,sha256=QZwSYhoJzh6SW6ml7NMK4aVPPJrCYG5STS2aH-4rJCA,214016
+fitz_new\mupdf.py,sha256=TO6Vdckf8S-a8ji4pjyrmw196fcwkBEQiRZ_m94PoGE,2091362
+fitz_new\_mupdf.pyd,sha256=L0Z-QbGG5f7aqP0oCsUNTcWg4L-_wC0cn-2RcvHK_VA,9797120
+PyMuPDF-1.23.0rc2.dist-info\README.md,sha256=Egfv5DT2sBUcdf9AogRKa-D8Mcpm63sh21WBXQaxFHc,8898
+PyMuPDF-1.23.0rc2.dist-info/WHEEL,sha256=grqT7_gunn2qkry_2jkgnCW-mZWbsJsZyl7L9X5auI4,84
+PyMuPDF-1.23.0rc2.dist-info/METADATA,sha256=NQX_3_Hzd8zIz7EoMjgel0RFRrAZsYmObP9uGnKLdY8,9968
+PyMuPDF-1.23.0rc2.dist-info/COPYING,sha256=4Fv7ClDSjhDuQgCg-BeJPyaVMFWkyVp40FN4tIg7QBM,18
