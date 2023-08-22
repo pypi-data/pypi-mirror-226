@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+flickr/__init__.py
+flickr/__version__.py
+flickr/main.py
+flickr_api_client.egg-info/PKG-INFO
+flickr_api_client.egg-info/SOURCES.txt
+flickr_api_client.egg-info/dependency_links.txt
+flickr_api_client.egg-info/requires.txt
+flickr_api_client.egg-info/top_level.txt
