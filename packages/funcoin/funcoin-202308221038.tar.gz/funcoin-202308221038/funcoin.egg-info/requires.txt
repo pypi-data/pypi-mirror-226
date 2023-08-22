@@ -1,0 +1,6 @@
+funbuild
+funsecret
+funfile
+pymysql
+ccxt
+pymysql
