@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+extra_logging/__init__.py
+extra_logging/log.py
+extra_logging.egg-info/PKG-INFO
+extra_logging.egg-info/SOURCES.txt
+extra_logging.egg-info/dependency_links.txt
+extra_logging.egg-info/not-zip-safe
+extra_logging.egg-info/top_level.txt
