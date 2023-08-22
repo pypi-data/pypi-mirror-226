@@ -1,0 +1,10 @@
+simple_pygame/__init__.py,sha256=fMVJrMdC4RtNK31gwTuewKqi9OQy29W1i-o2a3j9eO0,2279
+simple_pygame/audio.py,sha256=pXz4WwaLc-o59NCNtqg5pJR3jpvnzvhtz0Fhal12tvU,46219
+simple_pygame/constants.py,sha256=d7HP3Fi5O18SnEZcnmU3m5OJwQnJTPlz6uo0iq4EiSI,637
+simple_pygame/mixer.py,sha256=5SKwbRY3RIsJRISlYpjqhP08ZM4MvtkN-VhY1BvX-0U,1687
+simple_pygame/transform.py,sha256=-P40Y86TBnSi5mEgzwTOBJUjwc7YcyDTiXFOkU85Q7U,3713
+simple_pygame-0.0.8.dist-info/LICENSE,sha256=tB8D-ChGIDetHq8Jn77CtposJtWMhycwnDLVzmRLLXs,1087
+simple_pygame-0.0.8.dist-info/METADATA,sha256=okupkss0nDETt1aIJOAZt_FJoqy87qXmpLIGxIMIhHw,1662
+simple_pygame-0.0.8.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+simple_pygame-0.0.8.dist-info/top_level.txt,sha256=xP_gTxAiMUbbO8GUfvDbTYD6uxsJzcbwrLIvi4ZQbkw,14
+simple_pygame-0.0.8.dist-info/RECORD,,
