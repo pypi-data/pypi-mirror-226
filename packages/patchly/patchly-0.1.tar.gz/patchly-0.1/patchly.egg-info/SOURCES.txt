@@ -1,0 +1,14 @@
+README.md
+setup.py
+patchly/__init__.py
+patchly/aggregator.py
+patchly/array_like.py
+patchly/sampler.py
+patchly/slicer.py
+patchly/utils.py
+patchly.egg-info/PKG-INFO
+patchly.egg-info/SOURCES.txt
+patchly.egg-info/dependency_links.txt
+patchly.egg-info/not-zip-safe
+patchly.egg-info/requires.txt
+patchly.egg-info/top_level.txt
