@@ -1,0 +1,10 @@
+setup.py
+arandono_distributions/Binomialdistribution.py
+arandono_distributions/Gaussiandistribution.py
+arandono_distributions/Generaldistribution.py
+arandono_distributions/__init__.py
+arandono_distributions.egg-info/PKG-INFO
+arandono_distributions.egg-info/SOURCES.txt
+arandono_distributions.egg-info/dependency_links.txt
+arandono_distributions.egg-info/not-zip-safe
+arandono_distributions.egg-info/top_level.txt
