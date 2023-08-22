@@ -1,0 +1,16 @@
+convopilot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+convopilot/google_doc.py,sha256=JKQ6KmlOPfPtUc6RR-u-Is9ke6RtJ9iJehqE6qPm-DY,3277
+convopilot/gpt_api.py,sha256=opA3P3NsYd2koIbVgXDho9cEegeisrCdFeaRCRkfpW4,3228
+convopilot/interface.py,sha256=j7cBoT7UHMXu1_S5zBfl-GIbEBvUgp4AQFlQT_-RdTA,347
+convopilot/llm_insight_generator.py,sha256=rpTU-oqWDpwXb_U7sphhfh_3ervu-qv81xJxYh5I2mQ,1839
+convopilot/llm_models.py,sha256=Fj48IPGzAqJVjuXbBAEFWGNaq2FqYOjNCF45B1Dp78Q,621
+convopilot/module_factory.py,sha256=5J5mIzFCj6JSSSp5bBX2zBZUFJVd60-09iNwgjZxLLM,1204
+convopilot/pyaudio_recorder.py,sha256=XlsY-pwBP4t_RuKHJsI6K2Xre3oDRqTPkfvZ0bkn2Es,1160
+convopilot/record_audio.py,sha256=gbnGvlfRk8Okm1C2vQEynu2alezcVwccKR0n3nN_xAA,3805
+convopilot/whisper_transcriber.py,sha256=evYP7FVZzu3-qf2vtIAEb6hQH_oenc8wYJuxbIGnQEo,1439
+convopilot-0.1.4.dist-info/LICENSE,sha256=3VRE9D6yhYfNtkAulKPRIIV_HW_Zhpmhg1OjcnvlG-k,1062
+convopilot-0.1.4.dist-info/METADATA,sha256=-kwgWk2qaCotDaiKWIZ-0LBrLLImXGtAcDf6WC9YwIc,483
+convopilot-0.1.4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+convopilot-0.1.4.dist-info/entry_points.txt,sha256=z3aQvZJ5VPJnrYSLpCG3bRHrYXe3KImMl8GhWoKmteY,59
+convopilot-0.1.4.dist-info/top_level.txt,sha256=34BvGoXcGJc1jxvJco7_3V0QPhmWgLcpzLApIcdmA9s,11
+convopilot-0.1.4.dist-info/RECORD,,
