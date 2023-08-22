@@ -1,0 +1,16 @@
+dot_connect/__init__.py,sha256=TvuQFMEQbOXL9_y4BPL38EF7GGk3c9thj0ILpl2rVQw,1166
+dot_connect/backends/__init__.py,sha256=bBgn0Oz2v4l_UINCGe4h4LgU1afv7jdcAtRR27ajxAI,1229
+dot_connect/backends/aws.py,sha256=wblmRXGAIR--Icdrf5qhtJVjphhuHYattkKOO7pN5Bc,2046
+dot_connect/backends/azure.py,sha256=a_vDxFbt-wC-6wrKafdyxq-VBxkN7VoDvcKMqfF7Hhg,1453
+dot_connect/backends/impala.py,sha256=bFh2E7NMdz-ceGZCC7HdNuAjlmGlo7vNQnJQdAUL1rk,1330
+dot_connect/backends/mssql.py,sha256=wxPr2aeVJ4SGFQwcB48CAFzuxnzuCSJnxx215cT7mws,1053
+dot_connect/backends/mysql.py,sha256=wQ_RR9mNWCTWbampDD9r-IoOTrkSYep7VoQ3A82kLHM,1332
+dot_connect/backends/postgres.py,sha256=x81KA22OFp9MOqn-ENeRiy7Hkou1HuAh9Apc-vEgFs8,1339
+dot_connect/backends/pyspark.py,sha256=rxyVCiD-iZi1v2zGUE3B1Il-ykjMYH3LTe2bdO7ludQ,1454
+dot_connect/backends/snowflake.py,sha256=hxe3dpaNCl4kkhq__7ofT4F65PfTAoqbItMUSz8LPhc,2431
+dot_connect/backends/snowpark.py,sha256=tOSHTJM8MHnFCEtfQCYpDq4opaCfb6-Sh8EWSlC1Or4,1480
+dot_connect-0.3.2.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+dot_connect-0.3.2.dist-info/METADATA,sha256=bZLLoGJX0G7BOoLAhX04qEqM3F-TbNU_al365KHxdBw,3721
+dot_connect-0.3.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+dot_connect-0.3.2.dist-info/top_level.txt,sha256=zBj2lGz8KqiqdbezzHVM_rHOywAJuFeCCcBaktcqO24,12
+dot_connect-0.3.2.dist-info/RECORD,,
