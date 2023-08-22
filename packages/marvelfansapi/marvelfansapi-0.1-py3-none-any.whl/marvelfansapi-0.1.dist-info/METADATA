@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: marvelfansapi
+Version: 0.1
+Summary: API package
+Author: muskaan
+Author-email: muskaanmakhija2000@gmail.com
+License: MIT
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: hashlib
+
