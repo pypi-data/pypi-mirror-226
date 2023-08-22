@@ -1,0 +1,16 @@
+pandas==2.0.3
+
+[dev]
+black
+flake8
+pre-commit
+
+[dist]
+build
+pyinstaller
+twine
+
+[test]
+coverage
+pytest
+pytest-mock
