@@ -1,0 +1,3 @@
+prune .git
+recursive-include thumbor_arcface *
+include VERSION
