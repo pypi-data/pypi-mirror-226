@@ -1,0 +1,12 @@
+pycwatch/cli/__init__.py,sha256=sgbd1mP8MYIEWe9pjqMvonFzSIKod5YGs9ytBDk_eVc,20
+pycwatch/cli/assets.py,sha256=JQLsPQ5Sxp4v3E16apwYAsK5n_nkm2-67PvF1osRCJM,896
+pycwatch/cli/exchanges.py,sha256=y9ehgWRdlcbnUSaShQWEfTz5YqREI9j2_XzWHN279Ss,1010
+pycwatch/cli/main.py,sha256=4LvjKQU9aXAPw7C5qxPmlVk9xc1GF6u38niuODSLPac,845
+pycwatch/cli/markets.py,sha256=fqSiqeQuzTVBsAwGTGpB6FoyPnIJzBE5jFZSkmGkN-o,4820
+pycwatch/cli/pairs.py,sha256=vDwjC3dEuYMis-mAPoXSQMvol5GaWqWosB6UrTP85P4,870
+pycwatch/cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycwatch/cli/utils.py,sha256=nRqU6pHrgPV2pozQtfZlkUGMx0vRCTA8K-3cKrxPaj4,253
+pycwatch_cli-2.0.0.dist-info/METADATA,sha256=9LH5uDAzK5xYeifeqVhAfdhKE-gBnS-_7UK8nEYQmgk,4050
+pycwatch_cli-2.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pycwatch_cli-2.0.0.dist-info/entry_points.txt,sha256=oIe4xx1mmVek-ierwxPUldO34VLrrJKPGLx5mnAGDAg,46
+pycwatch_cli-2.0.0.dist-info/RECORD,,
