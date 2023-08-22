@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: GraphicsMilens
+Version: 1.1.3
+Summary: Pacote gerador de gráficos
+Author: Milene Fialho
+Author-email: milefialho16@gmail.com
+License: MIT
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+Pacote que contém funções que geram gráficos tipo pizza, linha, ponto, barra
