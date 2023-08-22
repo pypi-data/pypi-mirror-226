@@ -1,0 +1,11 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+df_strike_tut/__init__.py
+df_strike_tut/df_main_tut.py
+df_strike_tut.egg-info/PKG-INFO
+df_strike_tut.egg-info/SOURCES.txt
+df_strike_tut.egg-info/dependency_links.txt
+df_strike_tut.egg-info/top_level.txt
