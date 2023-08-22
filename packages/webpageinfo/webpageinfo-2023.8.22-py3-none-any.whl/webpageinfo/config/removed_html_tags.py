@@ -1,0 +1,16 @@
+removed_html_tags = {
+    "button",
+    "canvas",
+    "form",
+    "g:plusone",
+    "g-popup",
+    "hr",
+    "input",
+    "link",
+    "meta",
+    "nav",
+    "script",
+    "select",
+    "style",
+    "video-js",
+}
