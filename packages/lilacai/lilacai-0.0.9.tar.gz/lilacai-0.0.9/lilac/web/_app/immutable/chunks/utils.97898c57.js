@@ -1,0 +1,1 @@
+function r(n){return n!=null}function e(n,t){return`${n}/${t}`}function s(n,t){return`/concepts#${e(n,t)}`}function i(n,t){return`${n}/${t}`}function a(n,t){return`/datasets#${i(n,t)}`}function c(n){return`/signals#${n}`}export{e as a,a as b,s as c,i as d,r as n,c as s};
