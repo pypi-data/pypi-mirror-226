@@ -1,0 +1,9 @@
+README.md
+setup.py
+python_sdk_local/__init__.py
+python_sdk_local.egg-info/PKG-INFO
+python_sdk_local.egg-info/SOURCES.txt
+python_sdk_local.egg-info/dependency_links.txt
+python_sdk_local.egg-info/top_level.txt
+python_sdk_local/src/__init__.py
+python_sdk_local/src/utilities.py
