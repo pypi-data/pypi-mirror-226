@@ -1,0 +1,10 @@
+better_proxy/__init__.py,sha256=W4I6AShP8Sf73pBx6PaD6zPeev_51tV4LG4isE4t1B8,185
+better_proxy/imap.py,sha256=xCe51fZjImxOXJlx841TIXUvJQoYo8X_XVUXRwaO-8A,2492
+better_proxy/process.py,sha256=pHB4FbtMZl34jRPs6kNhWHXPBHU5byIXEZ0N4VaA01Y,1262
+better_proxy/proxy.py,sha256=VZ0U_w-Fhc1rygekyqnOiYoreMAYwXGA8V-sUZKkOYs,2489
+better_proxy/utils/__init__.py,sha256=Us1oGk1BbNmWNd4I1uCAfZWYWE2dSSegKKAIsM2Snwg,349
+better_proxy/utils/file.py,sha256=Tx7YO0_amkDJOq-nqriFyjhRS69ADr_mXJec5m0e9Ds,1120
+better_proxy/utils/other.py,sha256=rugxJklycxBoS9t97Gm37ZQWgLBHU14okGs1PdweTzU,627
+better_proxy-0.1.0.dist-info/METADATA,sha256=WDNXp7ZE52Muvy2DRV3pxiH4o-v1NSwTJ6Bu_-016GI,1354
+better_proxy-0.1.0.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+better_proxy-0.1.0.dist-info/RECORD,,
