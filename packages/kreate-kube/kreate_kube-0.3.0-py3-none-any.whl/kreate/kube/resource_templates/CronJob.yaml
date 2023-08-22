@@ -1,0 +1,55 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ my.name }}
+spec:
+  schedule: {{ strukt.schedule }}
+  successfulJobsHistoryLimit: {{ default.successfulJobsHistoryLimit }}
+  concurrencyPolicy: {{ default.concurrencyPolicy}}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: {{ my.name }}
+          labels: {}
+          annotations:
+            app.kubernetes.io/name: {{ my.name }}
+            app.kubernetes.io/version: "{{ default.image_version }}"
+            app.kubernetes.io/component: cronjob
+            app.kubernetes.io/part-of: {{ default.project }}
+            app.kubernetes.io/managed-by: kustomize
+            co.elastic.logs/enabled: "true"
+            co.elastic.logs/exclude_lines: DEBUG
+        spec:
+          restartPolicy: OnFailure
+          containers:
+      containers:
+          - name: {{ default.container_name }}
+            image: {{ default.image_repo }}/{{ default.image_name }}:{{ default.image_version }}
+            imagePullPolicy: {{ default.imagePullPolicy }}
+            resources:
+              limits:
+                cpu: {{ val.cpu_limit | default(default.cpu_limit) }}
+                memory: {{ val.memory_limit | default(default.memory_limit) }}
+              requests:
+                cpu: {{ val.cpu_request | default(default.cpu_request) }}
+                memory: {{ val.memory_request | default(default.memory_request) }}
+            envFrom:
+              - configMapRef:
+              {% for cm in strukt.get("vars",[]) %}
+                  name: {{ cm }}
+              {% endfor %}
+              - secretRef:
+              {% for secr in strukt.get("secret-vars",[]) %}
+                  name: {{ secr }}
+              {% endfor %}
+            securityContext:
+              runAsNonRoot: true
+              runAsUser: {{ default.runAsUser}}
+              runAsGroup: {{ default.runAsGroup }}
+            command: "/bin/sh"
+            args:
+              - '-c'
+              - {{ strukt.command }}
+      serviceAccountName: {{ strukt.get("serviceAccountName", "")}}
