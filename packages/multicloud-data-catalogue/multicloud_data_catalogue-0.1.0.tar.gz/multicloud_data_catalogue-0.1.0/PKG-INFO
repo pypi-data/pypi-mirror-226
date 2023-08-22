@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: multicloud-data-catalogue
+Version: 0.1.0
+Summary: CLI utility to interacts with AWS Databases, get details and draw Architecture
+License: MIT
+Author: Roman Tsypuk
+Author-email: tsypuk.conf@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3 (>=1.28.29,<2.0.0)
+Requires-Dist: flake8 (==3.9.0)
+Requires-Dist: flakehell (>=0.9.0,<0.10.0)
+Requires-Dist: multicloud-diagrams (>=0.3.13,<0.4.0)
+Requires-Dist: rich (>=13.5.2,<14.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+
