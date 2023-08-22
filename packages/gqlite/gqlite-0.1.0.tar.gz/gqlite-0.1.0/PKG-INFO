@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: gqlite
+Version: 0.1.0
+Summary: Lightweight client for GraphQL in Python
+License: MIT
+Author: Seto Balian
+Author-email: seto.balian@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# gqlite
+
+Lightweight client for GraphQL in Python.
+
+```bash
+pip install gqlite
+```
+
+Set the two environment variables:
+
+1. `GQLPY_URL` for the URL.
+2. `GQLPY_TOKEN` for the authorization token.
+
+You can also set these in `.env`.
+
+Then:
+
+```python
+import gqlite
+
+query: str = ... # your GraphQL query
+
+json_response = gqlite.post(query)
+```
+
