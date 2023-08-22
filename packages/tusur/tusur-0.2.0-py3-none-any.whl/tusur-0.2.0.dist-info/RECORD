@@ -1,0 +1,10 @@
+tusur/__init__.py,sha256=-0IBynh-5K_TrxebLF2ycfFEVgbsajZAyA4nJexmEwU,294
+tusur/authorization.py,sha256=29I21CEdH-o9KnqiHOImom5B7WI2_mz2gdeEE0O1Xuw,3090
+tusur/exceptions.py,sha256=izUclsQRDhuUXvH0KnGFz-h_oPAHxLxvu6IPieJz4LU,189
+tusur/sdo.py,sha256=HGvmm_-79PQ4-LxQVNqdA2AfXwlxwNIiJQN78Zdir54,2169
+tusur/session.py,sha256=ww5GHTbzlXNBre-waU_JBl9lMyDoAiGezEfnt12bbYw,9475
+tusur-0.2.0.dist-info/LICENSE,sha256=BnG9cxsSfDATj_Lc5MILWqucLxSGs7fxVgUwq0t27fE,1088
+tusur-0.2.0.dist-info/METADATA,sha256=Lxop9ktWZLn3J-e9NB9wmuIsSH3c8Cm9GiPUzKjZWAA,1807
+tusur-0.2.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+tusur-0.2.0.dist-info/top_level.txt,sha256=fZJTmbxz1SNqFSA-UP52dX35AhbbcK5vXjAxNd9EUWQ,6
+tusur-0.2.0.dist-info/RECORD,,
