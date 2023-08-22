@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bingo-cli
+Version: 0.2
+Summary: A Bing wallpaper downloader utility
+Home-page: https://github.com/deep5050/bingo
+Author: Dipankar Pal
+Author-email: dipankarpal5050@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/deep5050/bingo/
+Keywords: Bing wallpaper downloader cli-app
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: typer
+
+A Bing wallpaper downloader utility
+
