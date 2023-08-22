@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mkdocs-onecompiler-plugin"
+version = "0.1.0"
+description = "Include OneCompiler online compiler to your mkdocs website"
+authors = ["Alban Siffer <alban.siffer@irisa.fr>"]
+readme = "README.md"
+packages = [{ include = "mkdocs_onecompiler_plugin" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs = "^1.5.1"
+mkdocs-material = "^9.1.21"
+pydantic = "^2.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+ipython = "^8.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
