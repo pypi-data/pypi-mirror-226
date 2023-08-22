@@ -1,0 +1,13 @@
+aistudio_cognition/cognibot/models.py,sha256=vK3zLOhGKI7j_BRAuk0P9VuQSu3gEwJeyAmn6M0ujM0,13744
+aistudio_cognition/models/__init__.py,sha256=ggyLQk80hM0L3YaZ4RjvtJbpfxX_vsFT4S0citnBJqU,46
+aistudio_cognition/models/response_status.py,sha256=5UpRVc7MiBJ1RHulEFtIhG3bda94-VvoRV6O3z0y3Cs,141
+aistudio_cognition/nlu/luis/__init__.py,sha256=fBSnEqcPVYqTh-4Gg0gwsZ8CAiH9nkgSUInU0mJ4zT4,82
+aistudio_cognition/nlu/luis/luis.py,sha256=1e0Jg7Hv4tDie8Mc6t6SwLzMvldVLIUQKqw28mwZ714,7054
+aistudio_cognition/nlu/luis/models/__init__.py,sha256=0v3DkMaN_rgYMIiA35NkNHWW0PEkS43uejj31ZEhOzE,47
+aistudio_cognition/nlu/luis/models/luis_settings.py,sha256=HImTX09gqyxpU4ZsdRWPu9mL8RW7Z9P4lvdaZyHEAig,467
+aistudio_cognition/nlu/luis/prediction.py,sha256=8cik0UuiN5_eaRi4m1yQ4TfAexCgldxF21rkdIehe5Q,2830
+aistudio_cognition/nlu/luis/rule.py,sha256=fpt9iJ6JEOqU7IcDWZw-vyB2sVb8fl8A7rE-k9XGRM0,5207
+aistudio_cognition/nlu/models.py,sha256=JxlKYVYLjPS69bPw-jBkGltKIY5LANdjHBQXlBYpiFs,674
+aistudio_cognition-1.0.3.dist-info/METADATA,sha256=10t1j1sbt04hphYZwHkUQ7D1f63wq4lm7FG-i5_voao,484
+aistudio_cognition-1.0.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+aistudio_cognition-1.0.3.dist-info/RECORD,,
