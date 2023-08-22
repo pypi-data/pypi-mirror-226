@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "myally_database"
+version = "1.1"
+description = "简单的数据库连接"
+authors = ["BlackWhite <jierong8215@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myally/myally_database"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+SQLAlchemy = "1.4.47"
