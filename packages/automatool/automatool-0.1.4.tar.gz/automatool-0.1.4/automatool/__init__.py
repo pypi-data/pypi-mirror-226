@@ -1,0 +1,1 @@
+from automatool import Automaton
