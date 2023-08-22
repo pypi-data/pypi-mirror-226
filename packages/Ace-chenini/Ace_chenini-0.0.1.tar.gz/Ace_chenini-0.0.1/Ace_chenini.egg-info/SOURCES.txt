@@ -1,0 +1,6 @@
+README.txt
+setup.py
+Ace_chenini.egg-info/PKG-INFO
+Ace_chenini.egg-info/SOURCES.txt
+Ace_chenini.egg-info/dependency_links.txt
+Ace_chenini.egg-info/top_level.txt

@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: Ace-chenini
+Version: 0.0.1
+Summary: A very basic ransomware
+Home-page: UNKNOWN
+Author: Tasdrago
+Author-email: UNKNOWN
+License: MIT
+Description: Ace-01 is not a library. It's a ransomware that I worked on for my school project. Please be careful.
+        
+        
+        
+        In any case, the decryption code is:
+        
+        
+                                                                    123
+        
+Keywords: ransomware
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
