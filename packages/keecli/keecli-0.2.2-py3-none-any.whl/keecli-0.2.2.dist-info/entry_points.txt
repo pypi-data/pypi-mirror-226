@@ -1,0 +1,3 @@
+[console_scripts]
+keecli=keecli.cli:cli
+
