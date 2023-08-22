@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/atls/__init__.py
+src/atls/attested_https_connection.py
+src/atls/attested_tls_context.py
+src/atls/validators/__init__.py
+src/atls/validators/az_aas.py
+src/atls/validators/az_aas_aci_validator.py
+src/atls/validators/az_aas_cvm_validator.py
+src/atls/validators/validator.py
+src/pyatls.egg-info/PKG-INFO
+src/pyatls.egg-info/SOURCES.txt
+src/pyatls.egg-info/dependency_links.txt
+src/pyatls.egg-info/requires.txt
+src/pyatls.egg-info/top_level.txt
