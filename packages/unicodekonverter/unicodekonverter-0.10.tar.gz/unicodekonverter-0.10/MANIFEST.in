@@ -1,0 +1,3 @@
+include unicodekonverter/requirements.txt
+include unicodekonverter/thirdparty.json
+include unicodekonverter/README.MD
