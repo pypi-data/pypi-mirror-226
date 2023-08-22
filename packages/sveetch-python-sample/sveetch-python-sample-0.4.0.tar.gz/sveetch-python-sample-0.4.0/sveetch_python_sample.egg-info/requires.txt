@@ -1,0 +1,17 @@
+click>=8.0
+colorlog
+colorama
+
+[dev]
+pytest
+
+[doc]
+sphinx
+furo==2023.7.26
+sphinx-copybutton==0.5.2
+livereload
+
+[quality]
+flake8
+tox
+twine
