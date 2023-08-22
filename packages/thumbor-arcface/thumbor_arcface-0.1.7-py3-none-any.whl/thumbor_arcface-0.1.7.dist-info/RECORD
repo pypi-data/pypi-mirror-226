@@ -1,0 +1,15 @@
+thumbor_arcface/__init__.py,sha256=JBQQqZ6xXIJkZBoUr17sqmN_X2O-aJg_npcxrpv6qIc,2410
+thumbor_arcface/__pycache__/__init__.cpython-39.pyc,sha256=ieaImPMfPUtLRayBq5wjpeF118jpIsdapJrZZ456Iog,2636
+thumbor_arcface/arcface/engine.py,sha256=RfwGcrxfkqsFFtbINippy4mV53Zh1Lk5ml1naIZ2yqo,8353
+thumbor_arcface/arcface/lib_func.py,sha256=bpKCaQf1x1aRkcbpx2Zp8Ei1Bt0F0rP84NHZ9TKsT0Y,3591
+thumbor_arcface/arcface/struct_info.py,sha256=amZHugvbnhPE-BGXRK33ta4YoRCDWh6dsRggIt-c7_0,6726
+thumbor_arcface/arcface/__pycache__/engine.cpython-39.pyc,sha256=2E7ibsxw-2JuRgdv7ygX6ffAo4pTCEq3jj1k2RS7S6w,8194
+thumbor_arcface/arcface/__pycache__/lib_func.cpython-39.pyc,sha256=0o5pqywrWPH-m_9N-7sCkcOGSI8MPnsc5MqUY8UEexM,1933
+thumbor_arcface/arcface/__pycache__/struct_info.cpython-39.pyc,sha256=zjwTVyyqBpQx_gNyqggWudJpe05DQF7wGIB5EoklNDs,6629
+thumbor_arcface/lib/libarcsoft_face.so,sha256=eLIqZmXhY_hHnNNrPGANVt6DeUlQ8ggZJDiwUo5TjpM,41829008
+thumbor_arcface/lib/libarcsoft_face_engine.so,sha256=0-HtvzdYIZOmbGVf99LMlICnH5RhflnEVn6ZYn08FfE,803296
+thumbor_arcface-0.1.7.dist-info/LICENSE,sha256=tU6_0wHZa546We3y-dAvXH8sE9P12JgPYDdljIiiSWg,1064
+thumbor_arcface-0.1.7.dist-info/METADATA,sha256=GB2yb70T8VlG58pK5KjwbCGr6X5sX61UrrXiX5Omij4,1250
+thumbor_arcface-0.1.7.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+thumbor_arcface-0.1.7.dist-info/top_level.txt,sha256=zszk1UG__3BUAQmhr1BUmvNyhTor1OIwJbtN6yuru24,16
+thumbor_arcface-0.1.7.dist-info/RECORD,,
