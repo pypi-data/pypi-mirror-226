@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: fency-pgn
+Version: 0.2.1
+Summary: A converter from Standard Algebraic Notation (SAN) moves to the resulting State of a Game.
+Keywords: chess,FEN,SAN
+Home-Page: https://github.com/jawerg/fency-pgn
+License: MIT
+Project-URL: Source Code, https://github.com/jawerg/fency-pgn
