@@ -1,0 +1,13 @@
+quantpyml/__init__.py,sha256=H4MdvC6NqAaSA9avBaxJBSVMgzDJ_MAVkRsup3dsqbY,228
+quantpyml/equity/__init__.py,sha256=KNGpdcVaYIOl92q_nYcs2bXjTgl_tJMm9zzv-BzLN4Q,159
+quantpyml/equity/black_litterman.py,sha256=fobgjqV2HMBvoRwVIFU84M8ggRL1vxVbrhtZOuSS0xE,29
+quantpyml/equity/black_scholes.py,sha256=AoWUjgm3PmxFYbi1wek4ziYjTrAtBInRf5tdx9m-T_8,1552
+quantpyml/equity/efficient_frontier.py,sha256=mpU-45fTt4AeYmzWLgtdu-7M8tpmHLl3Y4U_hk_Utkc,10038
+quantpyml/returns/__init__.py,sha256=L2p9WXmKeqKjq5ygHQzrnsdsLnJf8nL8q9OrdGupbjc,181
+quantpyml/returns/brownian_motion.py,sha256=L07CYmlIj9v6CTyipjiOrAbD7qJaaAIbrntN-m_do2c,693
+quantpyml/returns/geometric_brownian_motion.py,sha256=TJZRiNZW-vQd3XfrtoQSKDakjUwBziFvD5JoOXKmTxM,742
+quantpyml-0.0.2.dist-info/LICENSE,sha256=c5zhc03BrgYH8IK5GNmn67BZcDCxhLro9nG3n_r1VxA,1069
+quantpyml-0.0.2.dist-info/METADATA,sha256=Xk8Leu3fH54vT-mUXBk17QOGCJzxISUBWQdUs8Yp5wo,2371
+quantpyml-0.0.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+quantpyml-0.0.2.dist-info/top_level.txt,sha256=IUS5zdMAArgEp2mtm4v0CHEnu0JVug39qzvnOUlqTCI,10
+quantpyml-0.0.2.dist-info/RECORD,,
