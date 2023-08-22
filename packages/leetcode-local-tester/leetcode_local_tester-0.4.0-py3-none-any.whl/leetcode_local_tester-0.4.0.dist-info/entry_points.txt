@@ -1,0 +1,3 @@
+[console_scripts]
+leetcode-local-tester=leetcode_local_tester.main:cli
+
