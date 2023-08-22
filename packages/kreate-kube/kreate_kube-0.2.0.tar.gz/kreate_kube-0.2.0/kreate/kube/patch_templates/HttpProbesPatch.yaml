@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: {{ target.kind }}
+metadata:
+  name: {{ target.name }}
+spec:
+  template:
+    spec:
+      containers:
+      - name: {{ default.container_name }}
+        startupProbe:
+          initialDelaySeconds: {{ default.startup_initialDelaySeconds }}
+          periodSeconds: {{ default.startup_periodSeconds }}
+          timeoutSeconds: {{ default.startup_timeoutSeconds }}
+          successThreshold: {{ default.startup_successThreshold }}
+          failureThreshold: {{ default.startup_failureThreshold }}
+          httpGet:
+            scheme: {{ default.startup_scheme }}
+            path: {{ default.startup_path or default.probe_path }}
+            port: {{ default.startup_port }}
+        readinessProbe:
+          periodSeconds: {{ default.readiness_periodSeconds }}
+          timeoutSeconds: {{ default.readiness_timeoutSeconds }}
+          failureThreshold: {{ default.readiness_failureThreshold }}
+          successThreshold: {{ default.readiness_successThreshold }}
+          httpGet:
+            scheme: {{ default.readiness_scheme }}
+            path: {{ default.readiness_path or default.probe_path }}
+            port: {{ default.readiness_port }}
+        livenessProbe:
+          periodSeconds: {{ default.liveness_periodSeconds }}
+          timeoutSeconds: {{ default.liveness_timeoutSeconds }}
+          failureThreshold: {{ default.liveness_failureThreshold }}
+          successThreshold: {{ default.liveness_successThreshold }}
+          httpGet:
+            scheme: {{ default.liveness_scheme }}
+            path: {{ default.liveness_path or default.probe_path }}
+            port: {{ default.liveness_port }}
