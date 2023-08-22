@@ -1,0 +1,16 @@
+CHANGES
+=======
+
+2.20.6
+------
+
+* support  find chind by xpath
+* add  WatchNative
+* WatchContext add  interval  paramter
+* update doc
+* improve IniterOfADBWifi
+* add IniterOfADBWifi
+* update changelog
+* trigger by push tag
+* fix  bug of  compatible
+* update atx-agent
