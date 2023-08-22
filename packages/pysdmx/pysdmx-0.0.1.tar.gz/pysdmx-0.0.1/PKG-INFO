@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pysdmx
+Version: 0.0.1
+Summary: BIS SDMX Python library
+Project-URL: Homepage, https://www.bis.org/innovation/bis_open_tech.htm
+Author-email: Example Author <statistics@bis.org>
+Classifier: Development Status :: 1 - Planning
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# pysdmx
+
+Coming soon
