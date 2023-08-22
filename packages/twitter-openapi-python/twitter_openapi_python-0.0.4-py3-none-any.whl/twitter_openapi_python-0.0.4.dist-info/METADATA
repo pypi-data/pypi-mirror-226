@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: twitter-openapi-python
+Version: 0.0.4
+Summary: Twitter OpenAPI
+Home-page: https://github.com/fa0311/twitter_openapi_python
+Author: fa0311
+Author-email: yuki@yuki0311.com
+License: GNU Affero General Public License v3.
+Keywords: OpenAPI,OpenAPI-Generator,Twitter OpenAPI
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: twitter-openapi-python-generated <1,>=0.0.1
+Requires-Dist: pydantic <2,>=1.10.5
+
+        Twitter scraping with data validation by pydantic.
+    
