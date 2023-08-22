@@ -1,0 +1,6 @@
+mutagen
+networkx
+pyxdg
+psutil
+PyYAML
+packaging
