@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.setuptools.packages.find]
+exclude = ["*.txt", "*.mp4", "*ipynb", ".ps1", "signals"]
+
+[tool.pyproject.sdist]
+# include = ["mullen/excel_files/*", "**/excel_files/*"]
+
+[project]
+name = "checkin-webapp"
+version = "0.0.3"
+authors = [
+  { name="Evan Voyles", email="ejovo13@yahoo.com" },
+]
+description = "Simple backend application to learn how to make a web app"
+readme = "README.md"
+requires-python = ">=3.10"
+# dependencies = ["numpy", "ffmpeg-python", "requests", "termcolor", "matplotlib", "pandas", "jsonpickle", "appdirs", "Deprecated", "varname"]
+# dependencies = ["pandas", "xlrd", "xlwt", "selenium", "appdirs", "mysql-connector-python"]
+dependencies = ["pandas", "appdirs"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+# Used to add entry points
+[project.scripts]
+checkin_serve = "checkin.server:main"
+checkin_client = "checkin.client:main"
+# tcu = "mullen.cli.tcu_query:main"
+# mullen_serve = "mullen.cli.mullen_serve:main"
+# hello_mullen = "mullen:hello"
+
+
+# [project.urls]
+# "fmdt" = "https://github.com/alsoc/fmdt"
+# "Homepage" = "https://github.com/ejovo13/fmdt_scripts"
