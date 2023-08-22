@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "audio_title_tag"
+version = "1.1"
+description = "批量设置文件夹内的mp3、flac音频文件元数据标签的标题为当前文件名称"
+authors = ["BlackWhite <jierong8215@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myally/audio-title-tag"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+eyed3 = "0.9.7"
+mutagen = "1.46.0"
