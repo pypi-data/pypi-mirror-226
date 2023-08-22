@@ -1,0 +1,11 @@
+django_better_repr/__init__.py,sha256=lKt_zo3Ntfr0xQz0kn2Ev9Qx0eGqvK-gIGwI3Ntfw2c,914
+django_better_repr/apps.py,sha256=DohWjQKYpWAH0eAEmApnS_9A9ydrjtN1o6OzF7dYtdU,294
+django_better_repr/bases.py,sha256=Xon2JuEn8q8k6wRpNPrjpeUmFLlnuX1Moh-YMOiK7Is,3355
+django_better_repr/config.py,sha256=zvT0GuCQ9nES1V4_Bg9CnTH-sJsN_MfReC0LR2ya8Zo,1185
+django_better_repr/exceptions.py,sha256=db-SDhCKxLdlOvorEbxawbfhU6Q67bOoSnilrMc77kk,46
+django_better_repr/signals.py,sha256=yRiPOmWwl6KZ6mvtYh4yJjOe0zXMOjmn4clGaN_vvDc,706
+django_better_repr-1.0.7.dist-info/LICENSE.txt,sha256=foyd_ZgU-iLgu0UcDpyEmeOyzSfo7_1QzypBBBYuPCE,1078
+django_better_repr-1.0.7.dist-info/METADATA,sha256=1uoE1VKS4jbOpQqvBBSrPhoxPsFVsq_pFaNk3IiFX_k,6141
+django_better_repr-1.0.7.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+django_better_repr-1.0.7.dist-info/top_level.txt,sha256=VfxRH-Nr93cHsQpj_pZlw2n8lx5UyZE4UwGnb4d0i0w,19
+django_better_repr-1.0.7.dist-info/RECORD,,
