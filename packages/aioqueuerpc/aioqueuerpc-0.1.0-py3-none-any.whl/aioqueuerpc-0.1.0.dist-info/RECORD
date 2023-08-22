@@ -1,0 +1,10 @@
+aioqueuerpc/__init__.py,sha256=Fn5ujaWN_8xwTCnwpsa32xlcvx5Ci9LvP5KAynkXRso,92
+aioqueuerpc/job_spec.py,sha256=c0601AsTmkh3ZNsRQ9oANks6Xs3sXmx6NNo5zteCKnE,564
+aioqueuerpc/jsonrpc_schemas.py,sha256=cgPisUgWCMu28KwBdlBnKmSk8q2jeOEckZ4yi5kp5dA,4758
+aioqueuerpc/rpc.py,sha256=GtYpCjLSrxE_0ufQPaU9sA1M41QaLBTVUhE-Y2svygg,16137
+aioqueuerpc/worker.py,sha256=nkuKGQl8WL00t1uxpIiRDlGOioIuSnfAaLAiocUANiM,2944
+aioqueuerpc-0.1.0.dist-info/LICENSE,sha256=ilnIj-fYCnytRnpO9XYg4AJUhNw3v4cNvLj1zDH8mzQ,1107
+aioqueuerpc-0.1.0.dist-info/METADATA,sha256=75TW-Sl0aeDEwW8vnXw_qLjbcueCFm8YyJTHlLrJAw4,970
+aioqueuerpc-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+aioqueuerpc-0.1.0.dist-info/top_level.txt,sha256=lUmh1VPHEU-JVzpXgNbOwUiHnGVxL2LUR4GUdkm0EkQ,12
+aioqueuerpc-0.1.0.dist-info/RECORD,,
