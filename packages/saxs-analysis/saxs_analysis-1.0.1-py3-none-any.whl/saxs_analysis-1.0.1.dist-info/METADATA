@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: saxs-analysis
+Version: 1.0.1
+Summary: SAXS python package
+Home-page: https://github.com/emathew16/SAXS_analysis
+Author: Elizabeth Mathew
+Author-email: Elizabeth.Mathew@hereon.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SAXS_analysis
+
+This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No 101001567).
+
+## Packges required for the SAXS_analysis
+
+PyFAI version 0.21.3 \
+fabio 2022.12.1 \
+scipy version 1.9.3 \
+matplotlib version 3.6.2 \
+ipympl version 0.9.2 \
+Python version 3.8.8 
+
+
