@@ -1,0 +1,17 @@
+
+[dev]
+black
+bumpversion
+flake8
+pylint
+pyment
+pytest
+pytest-cov
+pytest-mock
+readme_renderer
+tox
+twine
+
+[webapp]
+Flask
+gevent
