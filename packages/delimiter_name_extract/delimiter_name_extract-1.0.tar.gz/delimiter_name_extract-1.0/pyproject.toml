@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "delimiter_name_extract"
+version = "1.0"
+description = "通过定界符提取名称"
+authors = ["BlackWhite <jierong8215@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myally/delimiter_name_extract"
+
+[tool.poetry.dependencies]
+python = ">=3.6"

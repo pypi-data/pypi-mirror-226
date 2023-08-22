@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: delimiter_name_extract
+Version: 1.0
+Summary: 通过定界符提取名称
+Home-page: https://github.com/myally/delimiter_name_extract
+License: MIT
+Author: BlackWhite
+Author-email: jierong8215@gmail.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/myally/delimiter_name_extract
+Description-Content-Type: text/markdown
+
+## 说明
+通过定界符提取名称
+
+## 用法
+
+**`pip install delimiter_name_extract`**
+
+mode='all' = 提取定界符内全部字符
+
+mode='num' = 提取定界符内数字
+
+```python
+delimiter_name_extract(filename, delimiters=['[]', '【】'], mode='all'):
+```
+
