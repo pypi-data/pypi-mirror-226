@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+unicodekonverter/README.MD
+unicodekonverter/__init__.py
+unicodekonverter/requirements.txt
+unicodekonverter/thirdparty.json
+unicodekonverter.egg-info/PKG-INFO
+unicodekonverter.egg-info/SOURCES.txt
+unicodekonverter.egg-info/dependency_links.txt
+unicodekonverter.egg-info/requires.txt
+unicodekonverter.egg-info/top_level.txt
