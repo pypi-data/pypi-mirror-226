@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: MSLXPluginHelper
+Version: 0.0.2
+Summary: Help you create a plugin for MSLX
+Home-page: https://github.com/MojaveHao/MSL-X
+Author: MojaveHao
+Author-email: 353181381@qq.com
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MSLXPluginHelper
+
+## 注意
+
+文档现在领先于代码。请以文档为准。
+
+## 开始编写插件
+
+- 首先，您应该编写```from MSLXPluginHelper.PluginList import RegisterPlugin```，这将导入用于注册插件函数的修饰器。
+
+-  编写您的插件函数体。
+- 使用```@RegisterPlugin```来修饰您的函数使其注册为一个MSLX插件，此修饰器需要一个字典才能正确注册，字典的格式如下：
+```Python
+{
+	"name":"",
+	"author":"",
+	"description":"",
+	"version":"x.x.x",
+	"args":
+    {
+        "need_funcs":[],
+        "need_vars":[],
+    },
+    "unsafe":True,
+    "muti_thread":True,
+    "thread_class":"Start_Plugin_Thread",
+    "location":("main","after"),
+    "events":
+    {
+        "on_load":("func","name"),
+        "on_enable":("func","name"),
+        "on_disable":("func","name"),
+    }
+}
+```
+
+- ```name ```是插件的名称
+- ```author ```是插件的作者
+- ```description``` 是插件的描述
+- ```version ```是插件的版本
+- ```args``` 表示插件需要在运行时获取的变量和函数
+    - ```need_funcs ```欲获取主程序中的函数的列表
+    - ```need_vars``` 欲获取主程序中的变量的列表
+- ```unsafe``` 如果程序需要修改主程序中的函数或者变量，则此参数**必须为True**
+- ```muti_thread``` 如果程序需要经过threading的特殊处理可将此项设为True
+- ```thread_class``` 在指定上一个参数为True的情况下必须指定此项为继承了Threading的子类的类名
+- ```location``` 第一个参数表示插件加载的位置，第二个参数表示要在初始化之前或者初始化之后运行这个插件，**只能为```before```或者```after```其中之一**
+- ```events``` 表示插件在发生指定事件时需要执行的特殊动作
+    - ```on_load``` 当插件被检测到的时候运行的函数名称，无论插件是否启用
+    - ```on_enable``` 当插件被启用时运行的函数名称，插件的初始化函数应该写在这里而不是on_load处
+    - ```on_disable``` 当插件被关闭时运行的函数名称，需要注意的是如果主程序启动时插件已经被禁用则这里的函数不会被运行
+
+其中```on_load```,```on_enable```,```on_disable```的值还可写成这种形式:
+
+```Python
+{
+"mode":"register",
+"type":"class",
+"value":"xxxx"
+}
+```
+在这种情况下，MSLX会根据此处字典的值执行相应操作。
+
+> 目前只支持register模式和class类型。在此种方法下，value应为已经存在的欲添加的class的名称。
+
+
+
+最后，您应该在发布时将所有```MSLXPluginHelper.PluginList```替换为```.PluginList```
