@@ -1,0 +1,13 @@
+fuzzingbook~=1.1
+isla-solver>=1.14.1
+islearn>=0.2.15
+shap>=0.41
+lightgbm>=3.3.2
+pandas>=1.4.4
+numpy>=1.23.2
+scikit-learn>=1.1.2
+
+[dev]
+pytest>=7.2.0
+twine
+flaky>=3.7.0
