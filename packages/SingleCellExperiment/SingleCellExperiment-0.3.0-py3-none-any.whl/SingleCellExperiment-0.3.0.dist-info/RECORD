@@ -1,0 +1,11 @@
+singlecellexperiment/SingleCellExperiment.py,sha256=to2Kz1SSKeWhxxQO9y0lLzGXGHMUYAOPIMA1cRqPK-0,21170
+singlecellexperiment/__init__.py,sha256=RPzTaLFHvw3O3YdOv2MiKYqzglDPN6bumZi_SvEhmKA,744
+singlecellexperiment/_types.py,sha256=g7j3UoLx_AWgT2us7x51C33aCwaltQj2RZ29MtjZgKQ,273
+singlecellexperiment/io/__init__.py,sha256=A_maZ2YATCH-TU0V6u28cbMShighzQysv2T30XM9Aic,91
+singlecellexperiment/io/anndata.py,sha256=V_ftj23eGeLrwdedt0cs4mjN46AR4jA17kjIMzNZ2Qo,1661
+singlecellexperiment/io/tenx.py,sha256=rWI93GmwSmgEsRRj0WR8plFTzzp2LY36_CZgocWRSSs,2471
+SingleCellExperiment-0.3.0.dist-info/LICENSE.txt,sha256=pkwgQ8WMTR1-Qa0qwIaBf5I1-8OGN1B20E_eeDg-bqc,1082
+SingleCellExperiment-0.3.0.dist-info/METADATA,sha256=3CrfwvKS6NhiiOkEzRQ1wmDnWYBM0u8-ZAvdzSV4yqw,2085
+SingleCellExperiment-0.3.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+SingleCellExperiment-0.3.0.dist-info/top_level.txt,sha256=z7r7iD9iq5gSYLft8QIBKCE9uGMFEdbkqqqMMYB53Rk,21
+SingleCellExperiment-0.3.0.dist-info/RECORD,,
