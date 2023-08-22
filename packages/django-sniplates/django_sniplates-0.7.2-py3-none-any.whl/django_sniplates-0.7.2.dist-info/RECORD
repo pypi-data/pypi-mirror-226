@@ -1,0 +1,9 @@
+sniplates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sniplates/templates/sniplates/django.html,sha256=Qs3CgtkIdGVDo0CTYN1PPnEB9ZTLL4rZCQiDwzMnNd4,5802
+sniplates/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sniplates/templatetags/sniplates.py,sha256=08TTODJhUaTMSOJtPqxdRCodFYA_dstHfRmYcZAGCho,14663
+django_sniplates-0.7.2.dist-info/LICENSE,sha256=FTbeqWYJAWvIIoyNLNSkbK-52Ctw6ZC0LN7rbrWnz4Q,1081
+django_sniplates-0.7.2.dist-info/METADATA,sha256=cJlmnPeituXazDkZs_uKUCwobpp4seEy35bL7-df-MQ,2738
+django_sniplates-0.7.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+django_sniplates-0.7.2.dist-info/top_level.txt,sha256=WBxP8Yi84ULyWsVzFw5oVNwwgNKtPqOG7W5aG2_VSF4,10
+django_sniplates-0.7.2.dist-info/RECORD,,
