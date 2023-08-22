@@ -1,0 +1,6 @@
+README.md
+setup.py
+simuverse.egg-info/PKG-INFO
+simuverse.egg-info/SOURCES.txt
+simuverse.egg-info/dependency_links.txt
+simuverse.egg-info/top_level.txt
