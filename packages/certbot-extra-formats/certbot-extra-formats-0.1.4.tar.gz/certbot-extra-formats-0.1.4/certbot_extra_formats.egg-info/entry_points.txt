@@ -1,0 +1,2 @@
+[console_scripts]
+certbot-extra-formats = certbot_extra_formats:main
