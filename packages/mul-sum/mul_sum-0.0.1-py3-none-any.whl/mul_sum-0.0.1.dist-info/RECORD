@@ -1,0 +1,8 @@
+example.py,sha256=FIXzEOWsT3ZWVBjow4fzovdj2620GfNcpeKy1aAHzi4,42
+example_package_me/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_me/example.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_me/example2.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mul_sum-0.0.1.dist-info/METADATA,sha256=FNCWp_2IhGDOTiGAPiMWoqQFI1j7ZtH_ROqXioe_HYA,454
+mul_sum-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+mul_sum-0.0.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mul_sum-0.0.1.dist-info/RECORD,,
