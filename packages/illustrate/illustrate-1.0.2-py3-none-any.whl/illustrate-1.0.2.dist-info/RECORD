@@ -1,0 +1,11 @@
+illustrate/__init__.py,sha256=ksyNgylFC8zLgNREaBUHL3z_ZEAKvkMHBXmtpEM8Ffc,304
+illustrate/bot.py,sha256=ZsLiOjIHQbgfpeuxibOzESp72cWqImbSWV4nMNbgzgo,2639
+illustrate/database.py,sha256=Qly0jPDGJxmXM6R9QGkcyqCobh4FPtUEAJAszGBHItk,7131
+illustrate/hook.py,sha256=pFPfhhcyxD_rZznSkIvsrBsTsE1GypzNeC3mz13p7TI,1702
+illustrate/scrape.py,sha256=Ps2z_je99_2wUuOyDWYThtrRPUDwiaCoQedgMRwRJnA,2752
+illustrate/ui.py,sha256=up-510ZkNjJ7gxqPGwFUMIefpzmUkAq2YlmGs0lbAXI,8030
+illustrate-1.0.2.dist-info/LICENSE,sha256=uj8kRxg2mmr83cvfHHHtad3KYziQM7Df8hftUXF1N8s,1060
+illustrate-1.0.2.dist-info/METADATA,sha256=iiJHHT99mvGZefxmyAbuzzgIW_n0UkDHB0JCLfXvve8,3803
+illustrate-1.0.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+illustrate-1.0.2.dist-info/top_level.txt,sha256=t8hAnZ_xk_q2WXndo3UJCe_3qHoqIVe_Hk9wRoP5s_c,11
+illustrate-1.0.2.dist-info/RECORD,,
