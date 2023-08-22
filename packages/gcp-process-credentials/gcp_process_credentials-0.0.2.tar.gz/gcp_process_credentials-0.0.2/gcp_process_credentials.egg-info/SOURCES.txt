@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gcp_process_credentials/__init__.py
+gcp_process_credentials/credentials.py
+gcp_process_credentials.egg-info/PKG-INFO
+gcp_process_credentials.egg-info/SOURCES.txt
+gcp_process_credentials.egg-info/dependency_links.txt
+gcp_process_credentials.egg-info/requires.txt
+gcp_process_credentials.egg-info/top_level.txt
