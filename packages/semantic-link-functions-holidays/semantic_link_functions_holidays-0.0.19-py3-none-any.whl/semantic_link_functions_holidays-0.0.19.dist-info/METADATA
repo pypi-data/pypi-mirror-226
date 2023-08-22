@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: semantic-link-functions-holidays
+Version: 0.0.19
+Summary: Semantic link functions for Holidays
+Home-page: https://github.com/microsoft/semantic-link-functions
+Author: Microsoft
+Author-email: semanticdatascience@service.microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+License-File: ../LICENSE.txt
+Requires-Dist: holidays
+Requires-Dist: semantic-link-sempy ==0.0.19
+
+UNKNOWN
+
