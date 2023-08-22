@@ -1,0 +1,7 @@
+discourse_client_in_disraptor/__init__.py,sha256=Hx3NY0uiU-8b_wqYpsfX9C0UTRnmiegvpRP_YJ9cMek,106
+discourse_client_in_disraptor/discourse_api_client.py,sha256=zU958yH8xbk-3x5W6efr2nvpz1N1401Bwq-DFVn-dMI,5568
+discourse_client_in_disraptor/third_party_integrations.py,sha256=iDgHtNzygtyvfp1gy6z4z7dhLmRaxNYadr0Rf3LqeO8,574
+discourse_client_in_disraptor-0.0.3.dist-info/METADATA,sha256=i0WNPFgqI64fTf_YeSYu0GsNWxdE-kveruj01L7rXYw,1780
+discourse_client_in_disraptor-0.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+discourse_client_in_disraptor-0.0.3.dist-info/top_level.txt,sha256=hBYTAcZi67LfDZ2LiW22YiNlVFsKlE_qTPP6akiwtaI,30
+discourse_client_in_disraptor-0.0.3.dist-info/RECORD,,
