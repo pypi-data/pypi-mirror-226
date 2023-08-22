@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/drdb/__init__.py
+src/drdb/drdb.py
+src/drdb/schema.py
+src/drdb.egg-info/PKG-INFO
+src/drdb.egg-info/SOURCES.txt
+src/drdb.egg-info/dependency_links.txt
+src/drdb.egg-info/top_level.txt
