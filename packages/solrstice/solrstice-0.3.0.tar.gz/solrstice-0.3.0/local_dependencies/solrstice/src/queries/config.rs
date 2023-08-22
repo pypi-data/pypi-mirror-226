@@ -1,0 +1,147 @@
+use crate::models::context::SolrServerContext;
+use crate::models::error::{try_solr_error, SolrError};
+use crate::models::response::SolrResponse;
+use crate::queries::helpers::basic_solr_request;
+use std::fs::File;
+use std::io::{Read, Seek, Write};
+use std::path::Path;
+use tempfile::tempfile;
+use walkdir::{DirEntry, WalkDir};
+use zip::write::FileOptions;
+
+// https://github.com/zip-rs/zip/blob/e32db515a2a4c7d04b0bf5851912a399a4cbff68/examples/write_dir.rs
+fn zip_dir<T>(
+    it: &mut dyn Iterator<Item = DirEntry>,
+    prefix: &Path,
+    writer: T,
+    method: zip::CompressionMethod,
+) -> Result<(), SolrError>
+where
+    T: Write + Seek,
+{
+    let mut zip = zip::ZipWriter::new(writer);
+    let options = FileOptions::default().compression_method(method);
+
+    let mut buffer = Vec::new();
+    for entry in it {
+        let path = entry.path();
+        let name = path.strip_prefix(prefix)?;
+        if path.is_file() {
+            zip.start_file(name.to_str().unwrap(), options)?;
+            let mut f = File::open(path)?;
+
+            f.read_to_end(&mut buffer)?;
+            zip.write_all(&buffer)?;
+            buffer.clear();
+        } else if !name.as_os_str().is_empty() {
+            zip.add_directory(name.to_str().unwrap(), options)?;
+        }
+    }
+    zip.finish()?;
+    Ok(())
+}
+pub async fn upload_config<C: AsRef<SolrServerContext>, S: AsRef<str>, P: AsRef<Path>>(
+    context: C,
+    name: S,
+    path: P,
+) -> Result<(), SolrError> {
+    let query_params = [("action", "UPLOAD"), ("name", name.as_ref())];
+    let mut request = context
+        .as_ref()
+        .client
+        .post(format!(
+            "{}/solr/admin/configs",
+            context.as_ref().host.get_solr_node().await?
+        ))
+        .header("Content-Type", "application/octet-stream")
+        .query(&query_params);
+    if let Some(auth) = &context.as_ref().auth {
+        request = auth.add_auth_to_request(request)
+    }
+    let mut outfile = tempfile()?;
+    path.as_ref().try_exists()?;
+    if path.as_ref().is_dir() {
+        let walkdir = WalkDir::new(path.as_ref());
+        let it = walkdir.into_iter();
+        zip_dir(
+            &mut it.filter_map(|e| e.ok()),
+            path.as_ref(),
+            &outfile,
+            zip::CompressionMethod::Stored,
+        )?;
+        outfile.rewind()?;
+    } else {
+        outfile = File::open(path)?;
+    }
+    let mut vec = Vec::new();
+    outfile.read_to_end(&mut vec)?;
+    request = request.body(vec);
+    let json = request.send().await?.json::<SolrResponse>().await?;
+    try_solr_error(&json)?;
+    Ok(())
+}
+
+pub async fn get_configs<C: AsRef<SolrServerContext>>(
+    context: C,
+) -> Result<Vec<String>, SolrError> {
+    let query_params = [("action", "LIST"), ("wt", "json")];
+    let json = basic_solr_request(context, "/solr/admin/configs", query_params.as_ref()).await?;
+    match json.config_sets {
+        None => Err(SolrError::Unknown("Could not get configsets".to_string())),
+        Some(config_sets) => Ok(config_sets),
+    }
+}
+
+pub async fn config_exists<C: AsRef<SolrServerContext>, S: AsRef<str>>(
+    context: C,
+    name: S,
+) -> Result<bool, SolrError> {
+    let configs = get_configs(context).await?;
+    Ok(configs.contains(&name.as_ref().to_string()))
+}
+
+pub async fn delete_config<C: AsRef<SolrServerContext>, S: AsRef<str>>(
+    context: C,
+    name: S,
+) -> Result<(), SolrError> {
+    let query_params = [("action", "DELETE"), ("name", name.as_ref())];
+    basic_solr_request(context, "/solr/admin/configs", query_params.as_ref()).await?;
+    Ok(())
+}
+
+#[cfg(feature = "blocking")]
+use crate::runtime::RUNTIME;
+
+#[cfg(feature = "blocking")]
+pub fn upload_config_blocking<C: AsRef<SolrServerContext>, S: AsRef<str>, P: AsRef<Path>>(
+    context: C,
+    name: S,
+    path: P,
+) -> Result<(), SolrError> {
+    RUNTIME
+        .handle()
+        .block_on(upload_config(context, name, path))
+}
+
+#[cfg(feature = "blocking")]
+pub fn get_configs_blocking<C: AsRef<SolrServerContext>>(
+    context: C,
+) -> Result<Vec<String>, SolrError> {
+    RUNTIME.handle().block_on(get_configs(context))
+}
+
+#[cfg(feature = "blocking")]
+pub fn config_exists_blocking<C: AsRef<SolrServerContext>, S: AsRef<str>>(
+    context: C,
+    name: S,
+) -> Result<bool, SolrError> {
+    RUNTIME.handle().block_on(config_exists(context, name))
+}
+
+#[cfg(feature = "blocking")]
+pub fn delete_config_blocking<C: AsRef<SolrServerContext>, S: AsRef<str>>(
+    context: C,
+    name: S,
+) -> Result<(), SolrError> {
+    RUNTIME.handle().block_on(delete_config(context, name))
+}
