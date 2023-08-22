@@ -1,0 +1,2 @@
+[console_scripts]
+miditk-mid2syx = miditk.smf.scripts.mid2syx:main
