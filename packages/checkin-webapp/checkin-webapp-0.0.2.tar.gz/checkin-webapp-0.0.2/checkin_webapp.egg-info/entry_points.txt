@@ -1,0 +1,3 @@
+[console_scripts]
+checkin_client = client:main
+checkin_serve = server:main
