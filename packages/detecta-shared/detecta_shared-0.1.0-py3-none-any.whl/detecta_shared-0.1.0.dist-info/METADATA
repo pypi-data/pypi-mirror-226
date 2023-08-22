@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: detecta-shared
+Version: 0.1.0
+Summary: Shared libs for detecta.
+Author: TaKi
+Requires-Python: ==3.9
+Requires-Dist: numpy
+Requires-Dist: pika
+Requires-Dist: jsonpickle
+
