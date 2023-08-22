@@ -1,0 +1,2 @@
+[console_scripts]
+PyGlide = PyGlide.__main__:main
