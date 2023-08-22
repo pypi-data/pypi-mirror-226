@@ -1,0 +1,7 @@
+requests
+bs4
+nltk
+scikit-learn
+numpy
+pandas
+textblob

@@ -1,0 +1,6 @@
+setup.py
+EqFlow.egg-info/PKG-INFO
+EqFlow.egg-info/SOURCES.txt
+EqFlow.egg-info/dependency_links.txt
+EqFlow.egg-info/requires.txt
+EqFlow.egg-info/top_level.txt
