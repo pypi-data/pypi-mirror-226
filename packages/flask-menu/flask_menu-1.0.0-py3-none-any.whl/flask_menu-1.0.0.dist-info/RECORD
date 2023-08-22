@@ -1,0 +1,11 @@
+flask_menu/__init__.py,sha256=iRWpvMabK0Mc7Ktlin-2XJyWi2e3oelPqryVlRIKW44,691
+flask_menu/decorators.py,sha256=4Ruo3_3p3iAx4KgZsOWYYBiF0bSKhQaAVESxshLZ5bw,3235
+flask_menu/ext.py,sha256=9YvLMKgyQAEi2WYrnlXrXdqXuoHo9NCp47RYlObbgWw,1507
+flask_menu/menu.py,sha256=dxquqcZ36NmRoJ8JHAktiEDExnQBn5s-DOqXspyZdg0,9112
+flask_menu/proxies.py,sha256=gLulZLsx7A3WvdAdsQcxIPmiRrv7r_j1z17uYloKk_I,528
+flask_menu-1.0.0.dist-info/AUTHORS.rst,sha256=LAqu3MjVUKT62kOuaaDKwXS5BLCDnk2QYcEjyfS2crg,635
+flask_menu-1.0.0.dist-info/LICENSE,sha256=Y2KAwLhm-XtUxUy-ydAf5SVpeulGoYLtDEKjzWxEMmc,1806
+flask_menu-1.0.0.dist-info/METADATA,sha256=2xUtjpOsElXyG68hCFCMVx3j8-_Jslq4Vwyyp8NYU4Q,5015
+flask_menu-1.0.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+flask_menu-1.0.0.dist-info/top_level.txt,sha256=z2efkQ78ypXj_15XL6PeDhlJNrMQ6f9CkZLygOZoX48,11
+flask_menu-1.0.0.dist-info/RECORD,,
