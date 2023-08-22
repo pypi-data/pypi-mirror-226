@@ -1,0 +1,58 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "priority": { "type": "integer" },
+        "condition": { "$ref": "#/definitions/condition" },
+        "action": { "type": "string" }
+      },
+      "required": ["priority", "condition", "action"]
+    },
+    "definitions": {
+      "condition": {
+        "oneOf": [
+          {
+            "properties": {
+              "and": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/condition" }
+              }
+            },
+            "required": ["and"]
+          },
+          {
+            "properties": {
+              "or": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/condition" }
+              }
+            },
+            "required": ["or"]
+          },
+          {
+            "properties": {
+              "type": { "enum": ["number", "string"], "type": "string" },
+              "arg1": {
+                "properties": {
+                  "type": { "enum": ["reference", "static"], "type": "string" },
+                  "value": { "type": ["number", "string"] }
+                },
+                "required": ["type", "value"]
+              },
+              "arg2": {
+                "properties": {
+                  "type": { "enum": ["reference", "static"], "type": "string" },
+                  "value": { "type": ["number", "string"] }
+                },
+                "required": ["type", "value"]
+              },
+              "operation": { "enum": ["equals", "greater_than", "less_than"], "type": "string" }
+            },
+            "required": ["type", "arg1", "arg2", "operation"]
+          }
+        ]
+      }
+    }
+  }
+  
