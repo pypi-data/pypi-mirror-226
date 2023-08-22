@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+community_waiting_list_local_python_package.egg-info/PKG-INFO
+community_waiting_list_local_python_package.egg-info/SOURCES.txt
+community_waiting_list_local_python_package.egg-info/dependency_links.txt
+community_waiting_list_local_python_package.egg-info/top_level.txt
