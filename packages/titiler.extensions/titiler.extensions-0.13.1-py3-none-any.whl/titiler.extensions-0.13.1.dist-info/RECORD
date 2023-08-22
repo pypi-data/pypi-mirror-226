@@ -1,0 +1,13 @@
+titiler/extensions/__init__.py,sha256=eKQtMm7fCwUE5t50SKD0mhWKSBl25ThTWVnUE6N4JgU,244
+titiler/extensions/cogeo.py,sha256=nIsmiPWWauyDVhRd8jLQ7L04XnsrVu5wj-UrN9Toe5k,1236
+titiler/extensions/stac.py,sha256=MnKzs8X4I51-Goc5zBSgkWS5OFunl7cTu0j3Qsq3Jxc,6094
+titiler/extensions/templates/cog_viewer.html,sha256=FN0WSMtURNO1ajXvgJp_MHXr90PAUXwvjWAmgkAlsu8,30665
+titiler/extensions/templates/stac_viewer.html,sha256=QRKzsG4X68jPIlrEAsAVSxdNXglzA6TfcZ3eT2DhEFM,35135
+titiler/extensions/templates/wms_1.0.0.xml,sha256=2aPYCoF97heK9iIUDq1gRz-_RLgkrJUypaU3vyutArk,2231
+titiler/extensions/templates/wms_1.1.1.xml,sha256=XBoo6SPzuQ7-dEjfhcBRak7BPMCFNJOrkkpWMncQTQc,2715
+titiler/extensions/templates/wms_1.3.0.xml,sha256=oBXMITXPrjWjH7rB9jChCfHoGj9AShzsDbPRX4V3yuk,3452
+titiler/extensions/viewer.py,sha256=vXMUUYYfa69tI7sK1tMzuzOkbGQW5bX7_5de3Fi8jBg,2194
+titiler/extensions/wms.py,sha256=knurxC6M-MAmsLI0gIhlKJnALXHAx4hcbhgIEJS_ZIE,21070
+titiler.extensions-0.13.1.dist-info/WHEEL,sha256=B19PGBCYhWaz2p_UjAoRVh767nYQfk14Sn4TpIZ-nfU,87
+titiler.extensions-0.13.1.dist-info/METADATA,sha256=DmoJpzS8SKSb68WWkXan0FoTaWUSj9Hi6Higje_VKzw,6195
+titiler.extensions-0.13.1.dist-info/RECORD,,
