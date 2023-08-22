@@ -1,0 +1,166 @@
+default:
+  Deployment:
+    cpu_limit:   500m
+    cpu_request: 100m
+
+CronJob:
+  main:
+    vars:
+    - demo-vars
+    secret-vars:
+    - demo-secrets
+    command: "echo Starting; do-some-job; echo done"
+    schedule: 0 2 * * ?
+
+Deployment:
+  main:
+    vars:
+    - demo-vars
+    secret-vars:
+    - demo-secrets
+    volumes:
+    - demo-files:
+        files:
+        - /home/spring/application.properties
+        - /home/spring/logback.xml
+    - demo-secret-files:
+        type: secret
+        files:
+        - /home/spring/credential.properties
+    pod:
+      annotations:
+        some-demo-annotation: just-for-fun
+    patches:
+      AntiAffinity: {}
+      HttpProbes:
+        main:
+          startupProbe:
+            failureThreshold: 120
+      ElasticLogging: {}
+      EgressLabels: {}
+      KubernetesAnnotations: {}
+      VolumeMounts:
+        demo-files:
+          files:
+            - /home/spring/application.properties
+            - /home/spring/logback.xml
+        demo-extra-files:
+          files:
+            - /home/spring/environment.properties
+        demo-secret-files:
+          secret: True
+          files:
+            - /home/spring/credential.properties
+
+StatefulSet:
+  main:
+    add:
+      spec.template:
+        serviceName: jantje
+        klaas: pietje
+      some.long.and.very.long.strange.dummy: value
+    remove:
+      - spec.template.spec.containers.imagePullPolicy
+      #- spec.template.metadata.annotations.co_dot_elastic_dot_logs/exclude_lines
+      - some.long.and # remove the strange long thingy
+    patches:
+      ElasticLogging: {}
+      KubernetesAnnotations: {}
+
+
+Egress:
+  redis:
+    cidr_list: {{ val.redis_egress_cidr_list }}
+    port: 6379
+  db:
+    name: demo-egress-to-db
+    cidr_list: {{ val.db_egress_cidr_list }}
+    port: 1521
+  xyz:
+    cidr_list: {{ val.xyz_egress_cidr_list }}
+    port: {{ val.xyz_egress_port | default(8443) }}
+
+HorizontalPodAutoscaler:
+  main:
+    minReplicas: {{ val.minReplicas | default(1) }}
+    maxReplicas: {{ val.maxReplicas | default(3) }}
+
+Ingress:
+  root:
+    host: {{ val.ingress_host_internal}}
+    path: /
+    options:
+      - sticky
+      - basic_auth
+      - read_timeout: 100
+      - whitelist: {{ val.root_whitelist }}
+    labels:
+      dummy: jan
+  api:
+    host: {{ val.ingress_host_internal}}
+    path: /api
+
+
+Kustomization:
+  main:
+    configmaps:
+      demo-vars:
+        vars:
+          ENV: {{ val.env }}
+          ORACLE_URL: {{ val.ORACLE_URL }}
+          ORACLE_USR: {{ val.ORACLE_USR }}
+          ORACLE_SCHEMA: {{ val.ORACLE_SCHEMA }}
+      demo-files:
+        files:
+          - files/application.properties
+          - files/default-values.yaml
+      demo-extra-files:
+        files:
+          - files/environment.properties
+    secrets:
+      demo-secrets-from-kustomize:
+        vars:
+          DB_USR: {{ secret.DB_USR }}
+          DB_PSW: {{ secret.DB_PSW | dekrypt }}
+      demo-secret-files-from-kustomize:
+        files:
+          - secrets/files/credential.properties
+
+MyUdpService:
+  main:
+    name: demo-udp-service
+
+PodDisruptionBudget:
+  main:
+    name: demo-pdb
+    labels:
+      testje: test
+
+Secret:
+  main:
+    vars:
+      DB_USR: {{ secret.DB_USR }}
+      DB_PSW: {{ secret.DB_PSW | dekrypt }}
+  secret-files:
+    files:
+    - secrets/files/credential.properties
+
+Service:
+  main:
+    options:
+      - headless
+  https:
+    ports:
+      - port: 443
+        targetPort: 443
+        name: https
+
+ServiceAccount:
+  main:
+    role: {{ val.serviceaccount_role }}
+
+ServiceMonitor:
+  main:
+    endpoints:
+      - interval: 20s
+        path: /actuator/prometheus

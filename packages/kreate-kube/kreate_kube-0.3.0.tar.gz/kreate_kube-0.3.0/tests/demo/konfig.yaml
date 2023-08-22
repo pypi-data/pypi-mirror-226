@@ -1,0 +1,33 @@
+{% set appname = "demo" %}  # reuse the appname in rest of this file
+{% set env = "dev" %}       # reuse the env in rest of this file
+app:
+  appname: {{ appname }}
+  env: {{ env }}
+  team: myteam
+  image_version: v1.3.4
+values:
+  - shared-values.yaml
+  - values-{{appname}}-{{env}}.yaml
+#secrets:
+#  - secrets-{{appname}}-{{env}}.yaml
+kopy_files:
+  - name: application.properties
+    template: True
+  - name: environment.properties
+  - name: default-values.yaml
+    from: py:kreate.kube.other_templates:kube-defaults.yaml
+kopy_secret_files:
+  - name: credential.properties
+    dekrypt: True
+
+# key the enkryption key for the DEV environment
+#krypt_key: {{ function.getenv("KREATE_KRYPT_KEY_"+env.upper()) }}
+
+strukture:
+  - {{appname}}-strukture.yaml
+  - override-{{appname}}-{{env}}.yaml
+templates:
+  MyUdpService: ./templates/MyUdpService.yaml
+  Service: ./templates/MyUdpService.yaml   # Override existing Service template
+patch_templates:
+  ElasticLogging: ./templates/ElasticLogging.yaml
