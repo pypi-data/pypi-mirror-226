@@ -1,0 +1,9 @@
+[musictoolbox.transcoding.codecs]
+audiotomp3 = musictoolbox.transcoding.codecs.gstreamerffmpeg:AudioToMp3
+audiotowav = musictoolbox.transcoding.codecs.gstreamerffmpeg:AudioToWav
+copy = musictoolbox.transcoding.codecs.basic:Copy
+extractaudio = musictoolbox.transcoding.codecs.gstreamerffmpeg:ExtractAudio
+flvmp4webmtomp3 = musictoolbox.transcoding.codecs.gstreamerffmpeg:FlvMp4WebmToMp3
+flvmp4webmtowav = musictoolbox.transcoding.codecs.gstreamerffmpeg:FlvMp4WebmToWav
+wavtoogg = musictoolbox.transcoding.codecs.gstreamerffmpeg:WavToOgg
+wavtoopus = musictoolbox.transcoding.codecs.gstreamerffmpeg:WavToOpus
