@@ -1,0 +1,8 @@
+setup.py
+swavey/__init__.py
+swavey/views.py
+swavey.egg-info/PKG-INFO
+swavey.egg-info/SOURCES.txt
+swavey.egg-info/dependency_links.txt
+swavey.egg-info/requires.txt
+swavey.egg-info/top_level.txt
