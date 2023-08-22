@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+simplecalculatorpython/__init__.py
+simplecalculatorpython.egg-info/PKG-INFO
+simplecalculatorpython.egg-info/SOURCES.txt
+simplecalculatorpython.egg-info/dependency_links.txt
+simplecalculatorpython.egg-info/top_level.txt
