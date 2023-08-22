@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: gau-tensorflow
+Version: 0.0.1
+Summary: Tensorflow implementation of Gated Attention Unit
+Author: kevinyecs
+Author-email: <kevinyecodes@gmail.com>
+Keywords: python,gau,ml,tensorflow,gated attention unit,transformer
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow
+
+
+# GAU - TensorFlow
+
+Gated Attention Unit (TensorFlow implementation)
+
+
+
+Originally from the paper [Transformer Quality in Linear Time](https://arxiv.org/pdf/2202.10447.pdf)
+
+
+
+__*REPO UNDER DEVELOPMENT*__
+
+
+
+## Citations
+
+
+
+```bibtex
+
+@article{Hua2022TransformerQI,
+
+    title   = {Transformer Quality in Linear Time},
+
+    author  = {Weizhe Hua and Zihang Dai and Hanxiao Liu and Quoc V. Le},
+
+    journal = {ArXiv},
+
+    year    = {2022},
+
+    volume  = {abs/2202.10447}
+
+}
+
+```
+
