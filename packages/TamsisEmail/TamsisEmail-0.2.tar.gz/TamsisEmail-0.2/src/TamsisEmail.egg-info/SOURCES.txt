@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/TamsisEmail.egg-info/PKG-INFO
+src/TamsisEmail.egg-info/SOURCES.txt
+src/TamsisEmail.egg-info/dependency_links.txt
+src/TamsisEmail.egg-info/requires.txt
+src/TamsisEmail.egg-info/top_level.txt
+src/tam-mail/__init__.py
+src/tam-mail/tamsis.py
