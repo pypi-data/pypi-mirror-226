@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "langbase"
+version = "0.0.1"
+description = "Tame the LLMs interface"
+authors = ["Ahmad Awais <me@AhmadAwais.com>"]
+readme = "README.md"
+license = "Proprietary"
+homepage = "https://langbase.dev/"
+keywords = ["llm", "langbase"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
