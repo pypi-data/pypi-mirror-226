@@ -1,0 +1,13 @@
+pysolid/grid.py,sha256=FlNl7Bmacl83ZPri6eWAtF_krGtUr_0hofrco67V4gQ,5941
+pysolid/solid.cpython-311-darwin.so,sha256=_5uUBNSeAKx4smoRBVo1khIsaaoe8Pzn7BSWA6wXzFU,162352
+pysolid/__init__.py,sha256=DUxjRwj2BTOiuPG4KFdQuI7UegJ5UyZiWzuVhXX7pPU,860
+pysolid/point.py,sha256=WhqZ_LmVG_VYkAN1CIhwN0oJXMxt9YxuokO1CSDVzI8,13384
+pysolid/solid.for,sha256=tNfWIHpI2M-52J7pzeSm3jNOKaRyzSHW7mukTPv8V5w,56948
+pysolid/.dylibs/libgfortran.5.dylib,sha256=rgG_hOkG7bFagM3bTWcZIUpeWfTABGiFgWNzHdC9tzM,3303824
+pysolid/.dylibs/libquadmath.0.dylib,sha256=H0YlcsXrE6HkKV1lkkhOK9CfBmmfm_sEQRr0BgQeabM,403280
+pysolid/.dylibs/libgcc_s.1.1.dylib,sha256=yCbBWGoNUYhkXzFrh7e5Y2jYpJcnxG5amxAyIdoEhVM,147456
+pysolid-0.3.1.dist-info/RECORD,,
+pysolid-0.3.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pysolid-0.3.1.dist-info/WHEEL,sha256=Ge8EEn6Sa7LLzvdg5TraB5KucccEUnHoQkMN7K8br3U,111
+pysolid-0.3.1.dist-info/top_level.txt,sha256=aktt4uhw_RbYpbKYe3db_MsQ30eW1ZhMWRBtWZHtVd4,8
+pysolid-0.3.1.dist-info/METADATA,sha256=NqZG3dR6N7oNN3Ptx1H1GBIPgTJwNpyeBS3akJVRKIc,8732
