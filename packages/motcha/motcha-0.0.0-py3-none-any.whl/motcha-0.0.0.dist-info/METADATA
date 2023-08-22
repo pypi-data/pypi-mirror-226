@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: motcha
+Version: 0.0.0
+Summary: MoTChA
+Project-URL: Homepage, https://github.com/jackmuskopf/motcha
+Project-URL: Bug Tracker, https://github.com/jackmuskopf/motcha/issues
+Author-email: Jack Muskopf <jam.muskopf@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# MoTChA
