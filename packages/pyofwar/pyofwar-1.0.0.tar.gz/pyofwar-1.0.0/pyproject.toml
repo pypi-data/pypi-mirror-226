@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pyofwar"
+version = "1.0.0"
+authors = [
+  { name="iJakub", email="jakub.izdebski.social@gmail.com" },
+]
+description = "Python module for Sun Tzu's most popular quotes"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/iJakub/pyofwar"
+"Bug Tracker" = "https://github.com/iJakub/pyofwar/issues"

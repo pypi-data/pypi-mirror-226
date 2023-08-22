@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyofwar/__init__.py
+src/pyofwar/pow.py
+src/pyofwar/quote_list.py
+src/pyofwar.egg-info/PKG-INFO
+src/pyofwar.egg-info/SOURCES.txt
+src/pyofwar.egg-info/dependency_links.txt
+src/pyofwar.egg-info/top_level.txt
+tests/test_quote.py
+tests/test_random_quote.py
