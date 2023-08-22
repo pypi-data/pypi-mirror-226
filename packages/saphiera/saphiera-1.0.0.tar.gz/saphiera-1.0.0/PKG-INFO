@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: saphiera
+Version: 1.0.0
+Summary: Secure Authoritative Python Hiera configuration management.
+Home-page: https://github.com/Pillar-ML/saphiera
+Author: Matt Struble
+Author-email: matt@pillar.ml
+Maintainer: Matt Struble
+Maintainer-email: matt@pillar.ml
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: strictyaml (>=1.7.3,<2.0.0)
+Project-URL: Repository, https://github.com/Pillar-ML/saphiera
+Description-Content-Type: text/markdown
+
+<!-- markdownlint-disable-next-line first-line-heading -->
+<img src="img/saphiera.png" align="right" width="250px"/>
+
+# saphiera
+
+Secure Authoritative Python Hiera configuration management.
+
