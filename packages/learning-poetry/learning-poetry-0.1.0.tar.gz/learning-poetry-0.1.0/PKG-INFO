@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: learning-poetry
+Version: 0.1.0
+Summary: 
+Author: Pető Tamás
+Author-email: petotamas0@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: idna (>=3.4,<4.0)
