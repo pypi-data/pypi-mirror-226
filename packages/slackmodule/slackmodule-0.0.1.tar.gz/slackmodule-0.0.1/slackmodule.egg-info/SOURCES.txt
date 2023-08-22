@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+slack/__init__.py
+slack/functions.py
+slackmodule.egg-info/PKG-INFO
+slackmodule.egg-info/SOURCES.txt
+slackmodule.egg-info/dependency_links.txt
+slackmodule.egg-info/top_level.txt
