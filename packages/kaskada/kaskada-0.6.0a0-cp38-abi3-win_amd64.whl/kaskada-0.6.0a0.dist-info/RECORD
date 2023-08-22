@@ -1,0 +1,17 @@
+kaskada-0.6.0a0.dist-info/METADATA,sha256=IxqRTlaOek3bWE1Sv94UGOu8x1KUQLVh0GeH1QdMYwc,1689
+kaskada-0.6.0a0.dist-info/WHEEL,sha256=99FjJemiOpnqDpHHnlkL1KcdI5HmBSAD7chjdtjOHJE,94
+kaskada/plot.py,sha256=ETyJfBX9aS-ZzHHmbPJno746Avomnm25iV1DSGo-Wb0,3060
+kaskada/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kaskada/sources/arrow.py,sha256=stXhNMwhHyJJm4hzU5eVc5SpKPtVk9WvdnZynHQhODw,7526
+kaskada/sources/source.py,sha256=r2TgMcfgQCs5Mi2xLWEftAV9c-UtQTLwwyh_FkYHclc,2653
+kaskada/sources/__init__.py,sha256=L1g3u6HqzWDe0dzZ22OMUWZ4Qt4NJUBhGS1OSe3FmBM,301
+kaskada/udf.py,sha256=QPhNHtr-aurZLbwMNZVvjqelBdDJPmSfD-U-5DXB_E4,1859
+kaskada/windows.py,sha256=3SrSUkwGw1QtdJ6_371c9-iokiuw8IouB69CoS4If74,1881
+kaskada/_execution.py,sha256=mTvTLdgvW6rfbLcSFe6MZsMB73iWf-CNYgBfhx170CU,684
+kaskada/_ffi.pyi,sha256=s7UuNX_HDDh-a2eZlRNLvZIsRNksK8aHs2iFrYyAH4M,1603
+kaskada/_result.py,sha256=2u3emo1FmhvEBhkJ1JEWQafql1RKQ90VSXMwuRBRc2M,3870
+kaskada/_session.py,sha256=MTBENlwFGFP10cn1hpdSklgwYU2SNvlJz04bea2r2hI,1041
+kaskada/_timestream.py,sha256=ezswkSL6UDy4NDuPOBz1pWU_SnC9OvSfXePvCbN5Hrc,46119
+kaskada/__init__.py,sha256=Dij0kqnRKSQgdiMk1lUncNWS9fY-pz-sSniqNpvVthU,547
+kaskada/_ffi.pyd,sha256=e7sDWS-5Dd2FRaBzJ38ziJtGQntLrzoGwAw5_OfpKPY,41560576
+kaskada-0.6.0a0.dist-info/RECORD,,
