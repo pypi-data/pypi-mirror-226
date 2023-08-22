@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: statum
+Version: 0.1.0.dev0
+Summary: Opionated Framework to build scalable LLM based applications through function chaining or state machines.
+Home-page: https://github.com/liamlio/statum
+License: MIT
+Author: Liam Croteau
+Author-email: liamcroteau@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: openai (>=0.27.8,<0.28.0)
+Requires-Dist: pydantic (>=2.0.2,<3.0.0)
+Project-URL: Repository, https://github.com/liamlio/statum
+Description-Content-Type: text/markdown
+
+# statum
+An LLM Application framework for network based execution graphs
+
