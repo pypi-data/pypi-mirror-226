@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+apoli_python_extension/__init__.py
+apoli_python_extension/animated_texture.py
+apoli_python_extension/blocks.py
+apoli_python_extension/datapack.py
+apoli_python_extension/generate_types.py
+apoli_python_extension/wiki.py
+apoli_python_extension.egg-info/PKG-INFO
+apoli_python_extension.egg-info/SOURCES.txt
+apoli_python_extension.egg-info/dependency_links.txt
+apoli_python_extension.egg-info/top_level.txt

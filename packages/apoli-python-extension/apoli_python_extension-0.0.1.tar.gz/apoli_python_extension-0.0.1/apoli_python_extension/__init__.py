@@ -1,0 +1,1 @@
+from .wiki import update_wiki
