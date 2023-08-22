@@ -1,0 +1,8 @@
+gpt4/__init__.py,sha256=CcWkrqrCCwxtKcElY7Ep7igOIVdgkhxZSVqaKduGm_c,55
+gpt4/gpt4.py,sha256=FwyQrVlED1MtwfvbzKDg1esgMhzBz_rwdrUWFrDCiPU,7012
+gpt4/model.py,sha256=Srce1NWO9cQwyxhXe1wSPgThlPVSQDZA58v1th5PMzo,60651
+gpt4/train.py,sha256=7bAbLkclbETRbNbc-rKHCektwHfoTv2uv24qFgfXrR0,24465
+gpt4_torch-0.0.1.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+gpt4_torch-0.0.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+gpt4_torch-0.0.1.dist-info/METADATA,sha256=yLJEAWn_SG5ARX6LtJ-d8qSh50aw8cGMF5PXg7Ohvxk,1073
+gpt4_torch-0.0.1.dist-info/RECORD,,
