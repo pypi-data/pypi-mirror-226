@@ -1,0 +1,17 @@
+lxml
+rich
+pandas
+
+[dev]
+pytest
+pytest-cov
+ruff
+mypy
+types-lxml
+sphinx
+sphinx-autodoc-typehints
+myst-parser
+sphinx-book-theme
+
+[extras]
+plotnine
