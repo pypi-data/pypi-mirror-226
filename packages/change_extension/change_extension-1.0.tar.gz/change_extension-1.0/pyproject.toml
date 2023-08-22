@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "change_extension"
+version = "1.0"
+description = "批量修改文件夹内文件的扩展名"
+authors = ["BlackWhite <jierong8215@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myally/change_extension"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
