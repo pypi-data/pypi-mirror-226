@@ -1,0 +1,259 @@
+import os
+import sys
+import random
+import string
+from cryptography.fernet import Fernet
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class CryptoGuardian(object):
+    
+    def setupUi(self, MainWindow):
+        """
+        Classe principal do aplicativo CryptoGuardian.
+
+        Esta classe fornece funcionalidades para criptografar e descriptografar arquivos, além de uma interface gráfica para interação do usuário.
+
+        Methods
+        -------
+        setupUi(self, MainWindow: QtWidgets.QMainWindow)
+            Configura a interface gráfica do aplicativo.
+
+        retranslateUi(self, MainWindow: QtWidgets.QMainWindow)
+            Traduz elementos da interface gráfica.
+
+        iniciar_interface(self)
+            Inicia a interface gráfica do aplicativo.
+
+        gerar_senha(self, length: int = 16) -> str
+            Gera uma senha aleatória.
+
+        criptografar_arquivo(self)
+            Criptografa um arquivo selecionado pelo usuário.
+
+        copiar_senha(self, password: bytes)
+            Copia uma senha para a área de transferência.
+
+        descriptografar_arquivo(self)
+            Descriptografa um arquivo criptografado selecionado pelo usuário.
+
+        mostrar_mensagem(self, message: str, password: str = "")
+            Exibe uma mensagem ao usuário.
+
+        ...
+
+        """
+
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(576, 419)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(230, 130, 111, 41))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(230, 200, 111, 41))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(190, 30, 191, 41))
+        self.label.setObjectName("label")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 576, 21))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.pushButton.clicked.connect(self.descriptografar_arquivo)
+        self.pushButton_2.clicked.connect(self.descriptografar_arquivo)
+
+    def retranslateUi(self, MainWindow):
+        """
+        Traduz os elementos da interface gráfica para o idioma desejado.
+
+        Parameters
+        ----------
+        MainWindow : QtWidgets.QMainWindow
+            O objeto da janela principal.
+        """
+
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "CryptoGuardian"))
+        self.pushButton.setText(_translate("MainWindow", "Criptografar"))
+        self.pushButton_2.setText(_translate("MainWindow", "Descriptografar"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt;\">CryptoGuardian</span></p></body></html>"))
+
+    def iniciar_interface(self):
+        """
+        Inicia a interface gráfica do aplicativo.
+        """
+
+        app = QtWidgets.QApplication(sys.argv)
+        MainWindow = QtWidgets.QMainWindow()
+        ui = CryptoGuardian()
+        ui.setupUi(MainWindow)
+        MainWindow.show()
+
+    def gerar_senha(self, length=16):
+        """
+        Gera uma senha aleatória com o comprimento especificado.
+
+        Parameters
+        ----------
+        length : int, optional
+            Comprimento da senha (padrão é 16).
+
+        Returns
+        -------
+        str
+            Uma senha aleatória.
+        """
+
+        self.iniciar_interface()
+        caracteres = string.ascii_letters + string.digits + string.punctuation
+        return ''.join(random.choice(caracteres) for _ in range(length))
+
+    def criptografar_arquivo(self):
+        """
+        Criptografa um arquivo selecionado pelo usuário ou especificado via terminal.
+        """
+
+        if os.environ.get('DISPLAY'):
+            self.iniciar_interface()
+            file_path, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Selecione um arquivo para criptografar", "", "Todos os arquivos (*)")
+            if file_path:
+                key = Fernet.generate_key()
+                cipher_suite = Fernet(key)
+
+                with open(file_path, 'rb') as file:
+                    file_data = file.read()
+
+                encrypted_data = cipher_suite.encrypt(file_data)
+
+                encrypted_file_path = file_path + '.encrypted'
+                with open(encrypted_file_path, 'wb') as encrypted_file:
+                    encrypted_file.write(encrypted_data)
+
+                self.copiar_senha(key)
+                self.mostrar_mensagem(f'Arquivo criptografado: {encrypted_file_path}', "Senha de criptografia copiada para a área de transferência.")
+        else:
+            file_path = input("Digite o caminho do arquivo a ser criptografado: ")
+
+            key = Fernet.generate_key()
+            cipher_suite = Fernet(key)
+
+            with open(file_path, 'rb') as file:
+                file_data = file.read()
+
+            encrypted_data = cipher_suite.encrypt(file_data)
+
+            encrypted_file_path = file_path + '.encrypted'
+            with open(encrypted_file_path, 'wb') as encrypted_file:
+                encrypted_file.write(encrypted_data)
+
+            print(f'Arquivo criptografado: {encrypted_file_path}')
+            print(f'Senha de criptografia: {key.decode()}')
+
+    def copiar_senha(self, password):
+        """
+        Copia uma senha para a área de transferência.
+
+        Parameters
+        ----------
+        password : bytes
+            A senha a ser copiada.
+        """
+
+        self.iniciar_interface()
+        clipboard = QtWidgets.QApplication.clipboard()
+        clipboard.setText(password.decode())
+
+    def descriptografar_arquivo(self):
+        """
+        Descriptografa um arquivo criptografado selecionado pelo usuário ou especificado via terminal.
+        """
+         
+        if os.environ.get('DISPLAY'):
+            self.iniciar_interface()
+            encrypted_file_path, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Selecione um arquivo para descriptografar", "", "Encrypted Files (*.encrypted)")
+            if encrypted_file_path:
+                senha_usuario, ok = QtWidgets.QInputDialog.getText(None, "Senha", "Digite a senha de descriptografia:")
+                if ok:
+                    key = senha_usuario.encode()
+
+                    cipher_suite = Fernet(key)
+
+                    with open(encrypted_file_path, 'rb') as encrypted_file:
+                        encrypted_data = encrypted_file.read()
+
+                    decrypted_data = cipher_suite.decrypt(encrypted_data)
+
+                    decrypted_file_path = encrypted_file_path.replace('.encrypted', '.decrypted')
+                    with open(decrypted_file_path, 'wb') as decrypted_file:
+                        decrypted_file.write(decrypted_data)
+
+                    self.mostrar_mensagem(f'Arquivo descriptografado: {decrypted_file_path}', "")
+        else:
+            encrypted_file_path = input("Digite o caminho do arquivo criptografado: ")
+            password = input("Digite a senha de descriptografia: ")
+
+            key = password.encode()
+
+            cipher_suite = Fernet(key)
+
+            with open(encrypted_file_path, 'rb') as encrypted_file:
+                encrypted_data = encrypted_file.read()
+
+            decrypted_data = cipher_suite.decrypt(encrypted_data)
+
+            decrypted_file_path = encrypted_file_path.replace('.encrypted', '.decrypted')
+            with open(decrypted_file_path, 'wb') as decrypted_file:
+                decrypted_file.write(decrypted_data)
+
+            print(f'Arquivo descriptografado: {decrypted_file_path}')
+
+    def mostrar_mensagem(self, message, password):
+        """
+        Exibe uma mensagem de informação ao usuário.
+
+        Parameters
+        ----------
+        message : str
+            A mensagem principal a ser exibida.
+        password : str
+            Informações adicionais, como senhas.
+        """
+
+        self.iniciar_interface()
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        msg.setText(message)
+        msg.setWindowTitle("CryptoGuardian")
+        if password:
+            msg.setInformativeText(password)
+        msg.exec_()
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+    if os.environ.get('DISPLAY'):
+        MainWindow = QtWidgets.QMainWindow()
+        ui = CryptoGuardian()
+        ui.setupUi(MainWindow)
+        MainWindow.show()
+        app.exec_()
+    else:
+        print("Execução no modo de terminal")
+        choice = input("Escolha uma ação (criptografar/descriptografar/sair): ")
+        ui = CryptoGuardian()
+        if choice == "criptografar":
+            ui.criptografar_arquivo()
+        elif choice == "descriptografar":
+            ui.descriptografar_arquivo()
+        elif choice == "sair":
+             sys.exit(app.exec_())
+        else:
+            print("Escolha inválida")
