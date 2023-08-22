@@ -1,0 +1,12 @@
+py_adapter/__init__.py,sha256=a_aIIfKsBDYNIj51zIcnPwXoW1JideLD09p86Xgd5gI,23365
+py_adapter/_schema.py,sha256=YyDxvQwq7hJqaiLWvrXGRgTPoCXBzLAc5UtUtlFBTZg,6702
+py_adapter/py.typed,sha256=HnEDkaznpgfRW07Qfogy4tFLu_4dcQ5YcOsI7pmU5rQ,52
+py_adapter/plugin/__init__.py,sha256=c7iI_V89kYsiQRY_OmDFvMQD0j5nQ63g8GX8z0FkfVg,4349
+py_adapter/plugin/_avro.py,sha256=HvQPhAdJyJygW398XwtDqJP6FWAb6CTs2CgN_3u09uA,2166
+py_adapter/plugin/_json.py,sha256=Jya5-_CO4uODhMiq-_UlCWuo1nal4aEea-9yAnDstz0,1431
+py_adapter-0.1.0.dist-info/LICENSE,sha256=zE1N4JILDTkSIDtdmqdnKKxKEQh_VdqeoAV2230eNOI,10141
+py_adapter-0.1.0.dist-info/LICENSE_HEADER.txt,sha256=5JqwnUqi_igvzUM61_6NqXvONRzu0cOyr2_D7XJJX1E,564
+py_adapter-0.1.0.dist-info/METADATA,sha256=hiXj9GXcrUKaNQDJd7fyrZa0Dl5Dwh8JYeTWnxNw3yc,14781
+py_adapter-0.1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+py_adapter-0.1.0.dist-info/top_level.txt,sha256=GE-A8vYqxI6E4uI8VxhRqFUMemFEcBJBclrlCLrbL-Y,11
+py_adapter-0.1.0.dist-info/RECORD,,
