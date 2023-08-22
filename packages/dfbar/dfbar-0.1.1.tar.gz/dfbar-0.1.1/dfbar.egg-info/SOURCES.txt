@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dfbar.egg-info/PKG-INFO
+dfbar.egg-info/SOURCES.txt
+dfbar.egg-info/dependency_links.txt
+dfbar.egg-info/entry_points.txt
+dfbar.egg-info/top_level.txt
