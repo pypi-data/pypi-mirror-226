@@ -1,0 +1,8 @@
+README.md
+setup.py
+idingpt/__init__.py
+idingpt.egg-info/PKG-INFO
+idingpt.egg-info/SOURCES.txt
+idingpt.egg-info/dependency_links.txt
+idingpt.egg-info/not-zip-safe
+idingpt.egg-info/top_level.txt
