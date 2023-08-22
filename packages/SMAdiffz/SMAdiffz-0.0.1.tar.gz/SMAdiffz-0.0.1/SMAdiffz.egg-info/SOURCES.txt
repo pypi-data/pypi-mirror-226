@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+SMAdiffz.egg-info/PKG-INFO
+SMAdiffz.egg-info/SOURCES.txt
+SMAdiffz.egg-info/dependency_links.txt
+SMAdiffz.egg-info/requires.txt
+SMAdiffz.egg-info/top_level.txt
+lib/__init__.py
+lib/main.py
