@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pynchon
+Version: 2023.8.21.19.34
+Summary: Autodocs for python projects
+Home-page: https://github.com/elo-enterprises/pynchon/
+Author: elo
+Author-email: engineering@elo.enterprises
+License: MIT
+Project-URL: Documentation, https://github.com/elo-enterprises/pynchon/
+Project-URL: Source, https://github.com/elo-enterprises/pynchon/
+Project-URL: Download, https://github.com/elo-enterprises/pynchon/#files
+Platform: any
+Classifier: Programming Language :: Python
+Requires-Python: >3.6
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Provides-Extra: dev
+Provides-Extra: testing
+Provides-Extra: lint
+Provides-Extra: publish
+
+See the project README
