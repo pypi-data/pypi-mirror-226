@@ -1,0 +1,3 @@
+[console_scripts]
+rsize=asset_sizer.__main__:app
+
