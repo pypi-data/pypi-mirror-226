@@ -1,0 +1,11 @@
+circles_local_database_python/__init__.py,sha256=Z3u4YnLKAfbX0RW8RDltkfhjBUY-2ql1MMe4oqPuvcY,9
+circles_local_database_python/connection.py,sha256=_NX9k3NuWbfQ1HqvHuWtZD0q-8CcjW6wvLgMEkpyqmY,4698
+circles_local_database_python/cursor.py,sha256=Hj38k1L7jCrhhzEUC_UXOO6-h7PwQbOixABYN5h02KM,2359
+circles_local_database_python/generic_crud/__init__.py,sha256=Z3u4YnLKAfbX0RW8RDltkfhjBUY-2ql1MMe4oqPuvcY,9
+circles_local_database_python/generic_crud/src/__init__.py,sha256=Z3u4YnLKAfbX0RW8RDltkfhjBUY-2ql1MMe4oqPuvcY,9
+circles_local_database_python/generic_crud/src/generic_crud.py,sha256=pfHy3NuOiNuVn-Hwgtf5f2f2rBVWZ0Htzuxw9rdhn_A,9806
+database_without_orm_local-0.0.53.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+database_without_orm_local-0.0.53.dist-info/METADATA,sha256=QGRmbI1QO1rcbpud2aI30ULjzaaK6EjKog8gB8Rzrjc,489
+database_without_orm_local-0.0.53.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+database_without_orm_local-0.0.53.dist-info/top_level.txt,sha256=ooVGGtzJSkLcNt9kO_2ajX4G2xH-APBgfXtCNDZsjyk,30
+database_without_orm_local-0.0.53.dist-info/RECORD,,
