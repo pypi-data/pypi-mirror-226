@@ -1,0 +1,10 @@
+README.md
+setup.py
+MediaAPIClient.egg-info/PKG-INFO
+MediaAPIClient.egg-info/SOURCES.txt
+MediaAPIClient.egg-info/dependency_links.txt
+MediaAPIClient.egg-info/requires.txt
+MediaAPIClient.egg-info/top_level.txt
+mediapi/__init__.py
+mediapi/client_stream_controller_v2.py
+mediapi/stream_models.py
