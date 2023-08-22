@@ -1,0 +1,7 @@
+setup.py
+fib142857.egg-info/PKG-INFO
+fib142857.egg-info/SOURCES.txt
+fib142857.egg-info/dependency_links.txt
+fib142857.egg-info/top_level.txt
+my_packages/__init__.py
+my_packages/fib.py
