@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: djangocms_calameo
+Version: 3.0.1
+Summary: Django CMS Calaméo is a plugin for Django CMS that allows you to add Calaméo widgets on your site.
+Home-page: https://gitlab.com/kapt/open-source/djangocms-calameo
+License: GPL-3.0-or-later
+Author: Kapt dev team
+Author-email: dev@kapt.mobi
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=1.11)
+Requires-Dist: django-cms (>=3.8,<4.0)
+Project-URL: Repository, https://gitlab.com/kapt/open-source/djangocms-calameo
+Description-Content-Type: text/markdown
+
+# djangocms-calameo
+
+**Django CMS Calaméo** is a plugin for [Django CMS](http://django-cms.org/) that allows you to add Calaméo widgets on your site.
+
+![](preview.png)
+
+# Installation
+
+- run `pip install djangocms-calameo`
+- add `djangocms_calameo` to your `INSTALLED_APPS`
+- run `python manage.py migrate djangocms_calameo`
+
+# Known issues
+
+A [bug in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1459147) prevents the iframe to reload with new parameters.
+You must force reload the page after saving the plugin.
+
