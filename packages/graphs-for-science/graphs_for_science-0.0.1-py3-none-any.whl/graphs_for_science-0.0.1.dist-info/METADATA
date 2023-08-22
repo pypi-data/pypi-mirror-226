@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: graphs-for-science
+Version: 0.0.1
+Summary: A package for graphing beautiful datasets and fit curves.
+Home-page: https://github.com/lmarchetti02/graphs-for-data-analysis
+Author: Luca Marchetti
+Author-email: 00lucamarchetti00@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+
+# graphs-for-data-analysis
+
+### Colori matplotlib per grafici
+
+---
+
+<img width="704" alt="colors" src="https://github.com/lmarchetti02/graphs-for-data-analysis/assets/90146345/17c94f95-7054-47dc-9e9f-8ade52ed6390">
