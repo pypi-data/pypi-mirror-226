@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+BGLogger/BGConsole.py
+BGLogger/BGLogger.py
+BGLogger/__init__.py
+BGLogger.egg-info/PKG-INFO
+BGLogger.egg-info/SOURCES.txt
+BGLogger.egg-info/dependency_links.txt
+BGLogger.egg-info/top_level.txt
