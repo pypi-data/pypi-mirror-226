@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: TestDsPackage
+Version: 0.0.6
+Summary: A small example package
+Home-page: https://github.com/Aravind-SL/Pip_package.git
+Author: Aravind
+Author-email: aravind9180@gmail.com
+Project-URL: Bug Tracker, https://github.com/Aravind-SL/Pip_package.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+A package that allows to fetch all the required csv files for lab manual exercises.
