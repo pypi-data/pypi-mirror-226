@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: langbase
+Version: 0.0.1
+Summary: Tame the LLMs interface
+Home-page: https://langbase.dev/
+License: Proprietary
+Keywords: llm,langbase
+Author: Ahmad Awais
+Author-email: me@AhmadAwais.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# langbase
+
+Tame the LLM parser and compiler with a simple language.
+
+WIP.
+
