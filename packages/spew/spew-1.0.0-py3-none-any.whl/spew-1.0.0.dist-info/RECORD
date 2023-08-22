@@ -1,0 +1,8 @@
+spew/__init__.py,sha256=GzEh-cxQYrCKmwxYQvTecQij6T9m_WxkR8y74PfS4lM,113
+spew/__main__.py,sha256=iqyDpW0r4QU7bRV5tPV53FRaGFVdAZAnbC4gHMkxi-Q,485
+spew/generate.py,sha256=mhHj4ad49NSJ0zb2O8smh5OHfD7XmaMygiSCYhB8zxA,16259
+spew/names.py,sha256=aRG5DXYfhQew14HM2-bCMi0HVV7kWD9a1lYcB8XjN-c,426
+spew-1.0.0.dist-info/LICENSE,sha256=u3QhCC9XgO4M-PS-ktanM7Fvo92g2fS9rGSlJQ2w3ww,1100
+spew-1.0.0.dist-info/WHEEL,sha256=VUbF57hf4yRZWWrOOjp25Fr4BQX9EtnVSbnP2vNxHDM,81
+spew-1.0.0.dist-info/METADATA,sha256=cJDK_6XJ2Ce9EutucwERhPlRpYBsBZ7BsYLtOPa-3kg,358
+spew-1.0.0.dist-info/RECORD,,
