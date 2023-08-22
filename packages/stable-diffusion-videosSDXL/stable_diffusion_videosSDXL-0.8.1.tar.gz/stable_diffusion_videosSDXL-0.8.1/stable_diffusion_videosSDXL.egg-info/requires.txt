@@ -1,0 +1,10 @@
+av<10.0.0
+diffusers
+fire
+fsspec>=2023.4.0
+gradio
+librosa
+protobuf==3.20.*
+realesrgan==0.2.5.0
+scipy
+transformers
