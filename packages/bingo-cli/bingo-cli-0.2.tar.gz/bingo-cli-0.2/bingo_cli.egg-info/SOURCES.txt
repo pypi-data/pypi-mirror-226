@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+bingo/__init__.py
+bingo/__main__.py
+bingo/cli.py
+bingo_cli.egg-info/PKG-INFO
+bingo_cli.egg-info/SOURCES.txt
+bingo_cli.egg-info/dependency_links.txt
+bingo_cli.egg-info/entry_points.txt
+bingo_cli.egg-info/requires.txt
+bingo_cli.egg-info/top_level.txt
