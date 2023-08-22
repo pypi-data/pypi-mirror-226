@@ -1,0 +1,22 @@
+{% block CharField %}
+<input type="text" name="{{ html_name }}" value="{{ value|default:'' }}>
+{% endblock %}
+
+{% block ChoiceField %}
+{% if display %}Selected: {{ display }}{% endif %}
+<select name="{{ html_name }}">
+{% for val, disp in choices %}
+    <option value="{{ val }}">{{ disp }}</option>
+{% endfor %}
+</select>
+{% endblock %}
+
+{% block MultipleChoiceField %}
+{{ value }}
+{{ choices|safe }}
+<select name="{{ html_name }}">
+{% for val, display in choices %}
+    <option value="{{ val }}" {% if val in value %}selected{% endif %}>{{ display }}</option>
+{% endfor %}
+</select>
+{% endblock %}
