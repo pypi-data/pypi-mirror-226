@@ -1,0 +1,11 @@
+Django>=1.9
+redis>=2.7.2
+
+[test]
+pylint
+isort
+pytest
+pytest-django
+factory-boy
+pytest-cov
+pylint-pytest

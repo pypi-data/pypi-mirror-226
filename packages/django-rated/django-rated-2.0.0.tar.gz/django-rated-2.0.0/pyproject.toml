@@ -1,0 +1,50 @@
+[project]
+name = "django-rated"
+version = "2.0.0"
+description = "A rate limiting decorator for Django"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Curtis Maloney", email="curtis@tinbrain.net" }
+]
+keywords = ["django", "api"]
+classifiers = [
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+]
+dependencies = [
+  "Django (>=1.9)",
+  "redis (>=2.7.2)",
+]
+
+[project.urls]
+Repository = "https://github.com/funkybob/django-rated"
+
+[project.optional-dependencies]
+test = [
+  "pylint",
+  "isort",
+  "pytest",
+  "pytest-django",
+  "factory-boy",
+  "pytest-cov",
+  "pylint-pytest",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+
+django_find_project = false
+pythonpath = ["."]
+
+addopts = "--cov=rated/"
+
+[tool.coverage.run]
+branch = true
+source = ["rated"]
+
+[tool.pylint."message control"]
+disable = ["missing-module-docstring", "missing-class-docstring", "missing-function-docstring"]
