@@ -1,0 +1,2 @@
+[neon.plugin.lang.detect]
+ovos-lang-detector-plugin-lingua-podre = lingua_podre.opm:LinguaPodrePlugin

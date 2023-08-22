@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: lingua_podre
+Version: 0.0.3
+Summary: dead simple word list based language detection
+Home-page: https://github.com/OpenVoiceOS/lingua-podre
+Author: JarbasAI
+Author-email: jarbasai@mailfence.com
+License: apache-2
+License-File: LICENSE
