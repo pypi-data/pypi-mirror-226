@@ -1,0 +1,12 @@
+statum/LLMs/LLM.py,sha256=wCNcH5N_muuAWOYR73NzqAVMQiJHDgD5SMVq3xZJ6QI,1224
+statum/LLMs/__init__.py,sha256=2EqrzwM16DlhdzrjKxlPjiRyUibk_xf_edQ3nSkAwU0,103
+statum/LLMs/openai_function.py,sha256=MNitXoN1kWD5O9EHbREXapVbuETS-sxVyIJRxy3bnIo,2028
+statum/actions/__init__.py,sha256=-jLOwzaEXsJ6qGF-zW10gJnc7YnzTM-t7VIWwVLRHAM,49
+statum/actions/actions.py,sha256=Shn_4xUj9n8Eb3BTZZ110xJIB0-LKa2d2nWpgvn2vng,2341
+statum/agents/__init__.py,sha256=Jw-9vZYCuPjVKhYNnG9UH5Rdv-vHiU-O30j5PId9PSM,79
+statum/agents/agent.py,sha256=9ojI62s7eFHheHYogl-ZjXSGi8hW9Ewkuz-tYWIfOA4,2873
+statum/agents/chain.py,sha256=M8LA0Z8duHXobblGImXL2ZcqyeMFDZ0OQbWbMj8DeDk,1000
+statum-0.1.0.dev0.dist-info/LICENSE,sha256=60DBwvngzkA28utGaB8y4NewAItf6l9WHaaUPXr2SxA,1061
+statum-0.1.0.dev0.dist-info/METADATA,sha256=279VTCK-MMRNz_Oktrbuch5pKrOVyQXAUwKZq2m5VcM,771
+statum-0.1.0.dev0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+statum-0.1.0.dev0.dist-info/RECORD,,
