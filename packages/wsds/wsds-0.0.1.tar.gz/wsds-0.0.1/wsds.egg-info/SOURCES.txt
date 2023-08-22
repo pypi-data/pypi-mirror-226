@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wsds/__init__.py
+wsds/wsds.py
+wsds.egg-info/PKG-INFO
+wsds.egg-info/SOURCES.txt
+wsds.egg-info/dependency_links.txt
+wsds.egg-info/entry_points.txt
+wsds.egg-info/requires.txt
+wsds.egg-info/top_level.txt
