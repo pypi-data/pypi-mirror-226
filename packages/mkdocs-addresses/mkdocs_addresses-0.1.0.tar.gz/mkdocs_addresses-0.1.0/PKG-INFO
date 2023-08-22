@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mkdocs-addresses
+Version: 0.1.0
+Summary: Mkdocs automatic paths/addresses building - auto-completion support (VSC)
+Keywords: mkdocs,mkdocs-plugin,links,autocompletion
+Author: Frédéric Zinelli
+Author-email: frederic.zinelli@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Utilities
+Requires-Dist: beautifulsoup4 (>=4.12,<5.0)
+Requires-Dist: mkdocs (>=1.4,<2.0)
+Description-Content-Type: text/markdown
+
+# WIP
+
