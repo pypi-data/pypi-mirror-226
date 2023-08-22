@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gau_tensorflow/__init__.py
+gau_tensorflow/gau_tensorflow.py
+gau_tensorflow.egg-info/PKG-INFO
+gau_tensorflow.egg-info/SOURCES.txt
+gau_tensorflow.egg-info/dependency_links.txt
+gau_tensorflow.egg-info/requires.txt
+gau_tensorflow.egg-info/top_level.txt
