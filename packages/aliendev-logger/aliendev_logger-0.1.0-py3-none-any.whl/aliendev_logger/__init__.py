@@ -1,0 +1,1 @@
+from aliendev_logger.main import custom_log as logger
