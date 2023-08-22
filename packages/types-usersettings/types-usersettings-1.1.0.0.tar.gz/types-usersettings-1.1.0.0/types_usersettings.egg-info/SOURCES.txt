@@ -1,0 +1,9 @@
+CHANGELOG.md
+MANIFEST.in
+setup.py
+types_usersettings.egg-info/PKG-INFO
+types_usersettings.egg-info/SOURCES.txt
+types_usersettings.egg-info/dependency_links.txt
+types_usersettings.egg-info/top_level.txt
+usersettings-stubs/METADATA.toml
+usersettings-stubs/__init__.pyi
