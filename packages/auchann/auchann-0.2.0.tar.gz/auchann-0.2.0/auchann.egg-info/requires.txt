@@ -1,0 +1,6 @@
+chamd>=0.5.8
+editdistance
+pyyaml-include
+
+[NL]
+sastadev>=0.03
