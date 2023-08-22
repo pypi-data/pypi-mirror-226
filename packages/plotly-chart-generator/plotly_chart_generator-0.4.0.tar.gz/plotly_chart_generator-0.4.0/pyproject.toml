@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "plotly-chart-generator"
+version = "0.4.0"
+description = "Quickly display basic Plotly charts based on data inside a Pandas dataframe."
+authors = ["Preben Hesvik <prebenhesvik@hotmail.com>"]
+license = "\"MIT\""
+readme = "README.rst"
+packages = [{ include = "plotly_chart_generator" }]
+
+keywords = ["Chart", "Plotly", "Pandas"]
+
+
+exclude = [
+    "examples/bar-charts.ipynb",
+    "examples/color-palettes.ipynb",
+    "examples/layout.ipynb",
+    "examples/line-charts.ipynb",
+    "examples/other-charts.ipynb",
+    "examples/subplots.ipynb",
+    "examples/scatter-charts.ipynb",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.0.3"
+plotly = "^5.16.1"
+seaborn = "^0.12.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.1"
+nbformat = "^5.9.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
