@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LISCENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+pymeili/__init__.py
+pymeili/beautifyplot.py
+pymeili.egg-info/PKG-INFO
+pymeili.egg-info/SOURCES.txt
+pymeili.egg-info/dependency_links.txt
+pymeili.egg-info/top_level.txt
+pymeili/FONT/Futura Extra Black font.ttf
+pymeili/FONT/Futura Heavy font.ttf
+pymeili/FONT/futura medium bt.ttf
