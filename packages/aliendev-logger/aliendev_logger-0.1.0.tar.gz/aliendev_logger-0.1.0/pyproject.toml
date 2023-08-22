@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aliendev-logger"
+version = "0.1.0"
+description = ""
+authors = ["Nasri Adzlani <nasriadzlani@live.com>"]
+readme = "README.md"
+packages = [{include = "aliendev_logger"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+loguru = "^0.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
