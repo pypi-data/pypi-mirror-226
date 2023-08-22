@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "aliendev-sentiment"
+version = "0.1.4"
+description = ""
+authors = ["Nasri Adzlani <nasriadzlani@live.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/masnasri-a"
+repository = "https://github.com/masnasri-a/aliendev-sentiment"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+deep-translator = "^1.11.4"
+vadersentiment = "^3.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

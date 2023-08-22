@@ -1,0 +1,1 @@
+from aliendev_sentiment.main import SentimentAnalyzer
