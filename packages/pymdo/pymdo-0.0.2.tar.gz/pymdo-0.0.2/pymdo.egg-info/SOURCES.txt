@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+pymdo/DerivativeAssembler.py
+pymdo/Discipline.py
+pymdo/MDA.py
+pymdo/MDO.py
+pymdo/Variable.py
+pymdo/__init__.py
+pymdo.egg-info/PKG-INFO
+pymdo.egg-info/SOURCES.txt
+pymdo.egg-info/dependency_links.txt
+pymdo.egg-info/requires.txt
+pymdo.egg-info/top_level.txt
