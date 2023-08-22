@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+codeboxcli.egg-info/PKG-INFO
+codeboxcli.egg-info/SOURCES.txt
+codeboxcli.egg-info/dependency_links.txt
+codeboxcli.egg-info/entry_points.txt
+codeboxcli.egg-info/requires.txt
+codeboxcli.egg-info/top_level.txt
