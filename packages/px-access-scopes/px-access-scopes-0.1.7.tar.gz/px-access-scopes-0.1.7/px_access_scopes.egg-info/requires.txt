@@ -1,0 +1,11 @@
+px-domains<0.2.0,>=0.1.4
+
+[dev]
+psycopg2-binary
+pytest<7.0,>=6.0
+pytest-watch<5.0,>=4.2
+pytest-django<5.0,>=4.3
+django-environ==0.4.5
+django-stubs
+django<5,>=2.2
+twine
