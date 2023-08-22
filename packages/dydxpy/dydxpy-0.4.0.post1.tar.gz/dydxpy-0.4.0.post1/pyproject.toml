@@ -1,0 +1,26 @@
+# pyproject.toml
+
+[tool.setuptools]
+package-dir = {"" = "dydx"}
+
+[tool.poetry]
+name = "dydxpy"
+version = "0.4.0.post1"
+description = "Proto types and clients for dYdX v4 protocol"
+authors = ["John Huang <contact@dydx.exchange>"]
+license = "MIT"
+readme = "README.md"
+include = ["dydxpy.egg-info/*"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+protobuf = "^4.23"
+grpcio-tools = "^1.54"
+grpcio = "^1.54"
+
+[tool.poetry.dev-dependencies]
+wheel = "^0.35.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
