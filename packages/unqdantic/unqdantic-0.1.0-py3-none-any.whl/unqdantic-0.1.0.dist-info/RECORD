@@ -1,0 +1,11 @@
+unqdantic/__init__.py,sha256=Tx7TOISDcOrnZRq5rI4eLT-lUpbIt7WU4Wa-p9QW6dk,293
+unqdantic/core.py,sha256=qG8ZB6ZYP9xn0ERQeEyhkEeABNtl49dAG-2z5kzxrXs,7506
+unqdantic/expression.py,sha256=lU0jwh__smQhXnQWMpsM4xsuPg45jLsHrK8pLvEv3y8,6503
+unqdantic/meta.py,sha256=AWtHV9Fm_0sfeobec8gu-_CvxR3vJmzVZw8qVXBUlcI,577
+unqdantic/models.py,sha256=kVbm_SNKJmvmDBU5cco5fEk6iwPHmCzyto8fZ90BRRs,9855
+unqdantic/types.py,sha256=IUjDuUhIPMvsiW0o9hm0lUKlb6GLvx2rl5ZlwKfx3B4,295
+unqdantic/utils.py,sha256=kCfbkbrD4VZWhVfBqN-_uR8pQc5-O85boHmJ4nWY6ZU,1357
+unqdantic-0.1.0.dist-info/LICENSE,sha256=N0AJYSWwhzWiR7jdCM2C4LqYTTvr2SIdN4V2Y35SQNo,1058
+unqdantic-0.1.0.dist-info/METADATA,sha256=cfQiMjoKseU7boUL85qv9zlmcD63ifwvUMNIm9EPwgc,6745
+unqdantic-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+unqdantic-0.1.0.dist-info/RECORD,,
