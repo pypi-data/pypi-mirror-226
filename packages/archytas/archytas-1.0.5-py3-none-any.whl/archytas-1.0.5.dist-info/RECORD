@@ -1,0 +1,15 @@
+archytas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+archytas/agent.py,sha256=3mP1vZ4oodn-0s0e0SM09waMgr6LEnxecJ9Hu6DRnC0,12197
+archytas/demo_tools.py,sha256=_nCTgkwFZWxCfWp_56MON_XmtpGaI8caJBnTr1LzwWk,10073
+archytas/prompt.py,sha256=JsTBSfbUrgu1KB-AIPU_k4EY4lsGJOjbjwcWB6QOEkA,4120
+archytas/python.py,sha256=IZeJ1eVEGkiFvZmcfT82EnOHSJFdJgYvuNSOHBN2BAY,3247
+archytas/react.py,sha256=Qs13Cp-Bo5m1RKJ7Lty5NUiPI1qOTuEFk69xtafaDvE,9104
+archytas/repl.py,sha256=E2GdpcN2FyGp01W8qIHDFo_YQDVCvn9dV6gWeWSZRek,1569
+archytas/tool_utils.py,sha256=9wFjHvoxen27UQGrijHXMCXqLWV4gOc4Fz57r68E1J4,20137
+archytas/tools.py,sha256=t7HR-QnByKVQBbHD4hffhUS6N7qqvFze5Obp5aJCzv0,4580
+archytas/utils.py,sha256=sYkZls495r5H0wO703oar-0eMXvv5UwSOTIlzrkC8Ho,1280
+archytas-1.0.5.dist-info/LICENSE,sha256=UiCnq3ALVoE2_2UYK0HpZY8amAxQ-6NkJfDt6GrGhlI,32472
+archytas-1.0.5.dist-info/METADATA,sha256=s2_ua3JcjqZjLVINWB3LZBDSS4NdVon3x656iouUTdE,2923
+archytas-1.0.5.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+archytas-1.0.5.dist-info/entry_points.txt,sha256=_BRJGECOFwOnihfCfrSiCWWeczLH9Ez-M6sqryY-VYE,54
+archytas-1.0.5.dist-info/RECORD,,
