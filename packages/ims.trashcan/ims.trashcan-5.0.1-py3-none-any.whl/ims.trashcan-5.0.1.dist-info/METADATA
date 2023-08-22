@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ims.trashcan
+Version: 5.0.1
+Summary: Web scan settings
+Author-email: Eric Wohnlich <wohnlice@imsweb.com>
+License: GPL
+Project-URL: homepage, https://github.com/imsweb/ims.trashcan
+Classifier: Framework :: Plone :: 6.0
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: plone
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+Requires-Dist: plone.mocktestcase ; extra == 'test'
+Requires-Dist: formencode ; extra == 'test'
+
