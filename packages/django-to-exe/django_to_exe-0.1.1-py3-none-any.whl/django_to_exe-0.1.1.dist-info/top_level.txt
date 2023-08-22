@@ -1,0 +1,2 @@
+app01
+django_to_exe
