@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: myally_database
+Version: 1.0
+Summary: 使用 .env 的数据库连接
+Home-page: https://github.com/myally/myally_database
+License: MIT
+Author: BlackWhite
+Author-email: jierong8215@gmail.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: SQLAlchemy (==1.4.47)
+Requires-Dist: python-decouple (==3.8)
+Project-URL: Repository, https://github.com/myally/myally_database
+Description-Content-Type: text/markdown
+
+## 说明
+使用 .env 的数据库连接
+
+## 用法
+
+**`pip install myally_database`**
+
+项目根目录创建 .env 文件
+```.env
+DB_USER=名
+DB_PASSWORD=数据库密码
+DB_HOST=ip
+DB_PORT=端口
+DB_DATABASE=数据库
+```
+调用后用法与包 SQLAlchemy 一致
+```
+from myally_database import database
+# 获取数据库会话
+session = database.get_session()
+# 提交事务
+session.commit()
+# 关闭会话
+session.close()
+```
