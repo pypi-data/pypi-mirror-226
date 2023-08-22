@@ -1,0 +1,4 @@
+[console_scripts]
+MVTS-Analyzer = mvts_analyzer.main:main
+mvts-analyzer = mvts_analyzer.main:main
+mvtsa = mvts_analyzer.main:main
