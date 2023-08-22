@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: factorycore-utils
+Version: 0.0.18
+Summary: 
+Author: Mick Wood
+Author-email: mick.wood@insightfactory.ai
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# factory.CORE PySpark Utilities
+
+This project builds a PySpark utility project for deploying to Databricks. It is based on [Quinn](https://github.com/MrPowers/quinn) by Matthew Powers.
+
+## Poetry
+
+[Poetry](https://python-poetry.org/docs/) is used to manage dependencies, build, test etc.
+
+### Installation
+
+Installing on Ubuntu is recommended for consistency. Run the following code to install Poetry:
+
+```
+curl -sSL https://install.python-poetry.org | python3 -
+sudo apt install -y python3-venv
+```
+
+After Poetry is installed, activate the factorycore-utils project by navigating to the source code and activating. For example:
+
+```
+cd /mnt/c/Repos/InsightFactory/factory.CORE/DatabricksSparkUtils/src/factorycore-utils/
+source $(poetry env info --path)/bin/activate
+```
+
+## Spark
+
+In order to run tests, Spark needs to be installed.
+
+```
+sudo apt install default-jdk scala git -y
+wget https://dlcdn.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop2.7.tgz
+tar xvf spark-*
+sudo mv spark-3.1.2-bin-hadoop2.7 /opt/spark
+echo "export SPARK_HOME=/opt/spark" >> ~/.profile
+echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.profile
+echo "export PYSPARK_PYTHON=/usr/bin/python3" >> ~/.profile
+```
+
+## Other Tweaks
+
+Make prompt only display folder (not full path)
+
+```
+echo $PS1
+export PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+```
+
+## Update Poetry
+
+If changes to the pyproject.toml file are required, to bump the version of pyspark for instance, Poetry will need to be updated. This can also be required if a 'ImportError: No module named pyspark.sql' is being returned.
+
+```
+poetry update
+```
+
+## Running Tests
+
+```
+poetry run pytest
+poetry run pytest tests/test_dataframe_helpers.py
+```
+
+## flake8
+
+```
+flake8 --ignore E501,E122 factorycore_utils
+```
+
+## Futher reading
+
+- [Poetry Basic usage](https://python-poetry.org/docs/master/basic-usage/)
+- [How to Install Spark on Ubuntu](https://phoenixnap.com/kb/install-spark-on-ubuntu)
+- [Download Apache Spark](https://spark.apache.org/downloads.html)
+- [Testing PySpark Code](https://mungingdata.com/pyspark/testing-pytest-chispa/)
