@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Modulo-SMTP
+Version: 1.0.1
+Summary: Paquete SMTP
+Home-page: https://github.com/danielrherr/smtp
+Author: Daniel R Herr
+Author-email: Dherr.ar@gmail.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# smtp
+paquete de envio de mail smtp

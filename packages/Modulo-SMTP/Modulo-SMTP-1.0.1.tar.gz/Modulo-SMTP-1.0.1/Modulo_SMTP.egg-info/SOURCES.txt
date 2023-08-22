@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Modulo_SMTP.egg-info/PKG-INFO
+Modulo_SMTP.egg-info/SOURCES.txt
+Modulo_SMTP.egg-info/dependency_links.txt
+Modulo_SMTP.egg-info/top_level.txt
+mail/__init__.py
+mail/smtp.py
