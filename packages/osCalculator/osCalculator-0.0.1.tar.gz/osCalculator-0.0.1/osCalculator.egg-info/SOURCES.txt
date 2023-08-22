@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+osCalculator/__init__.py.txt
+osCalculator.egg-info/PKG-INFO
+osCalculator.egg-info/SOURCES.txt
+osCalculator.egg-info/dependency_links.txt
+osCalculator.egg-info/top_level.txt
