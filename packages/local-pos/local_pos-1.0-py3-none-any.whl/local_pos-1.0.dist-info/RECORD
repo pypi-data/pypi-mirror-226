@@ -1,0 +1,9 @@
+inventory_manangement/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventory_manangement/asgi.py,sha256=S-rintIXa1d4gb5lEalVM3BqjGAYPkGpaRnYrDD12Ok,419
+inventory_manangement/settings.py,sha256=Jqdxs17beWUTy-tOgUO5iq01kIs2c5ZAbt2jO-co9AE,4312
+inventory_manangement/urls.py,sha256=uv4xgX95ARj3Tql6G9otbesfn692JBJ3v0UH2AcICak,1021
+inventory_manangement/wsgi.py,sha256=4wxWr4f5HGbea2-vEiLFEw5ZNtwrspwTX-UJ2DsLLgE,419
+local_pos-1.0.dist-info/METADATA,sha256=Yd4BPXhwlNR3_czkE9ehTh08P91j5pTQD3TnCPs5-HU,52
+local_pos-1.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+local_pos-1.0.dist-info/top_level.txt,sha256=P2LW0rYgLRvrvIhC65GDAW8MPL4YgTdWoYz6FH1pDKM,22
+local_pos-1.0.dist-info/RECORD,,
