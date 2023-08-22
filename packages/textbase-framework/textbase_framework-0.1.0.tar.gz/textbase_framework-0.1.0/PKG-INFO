@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: textbase-framework
+Version: 0.1.0
+Summary: Framework for the textbase package.
+Author: sammyCofactory
+Author-email: samarthar@cofactory.ai
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: functions-framework (>=3.4.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+

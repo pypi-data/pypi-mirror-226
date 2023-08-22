@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "textbase-framework"
+version = "0.1.0"
+description = "Framework for the textbase package."
+authors = ["sammyCofactory <samarthar@cofactory.ai>"]
+readme = "README.md"
+packages = [{include = "textbase_framework"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+functions-framework = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
