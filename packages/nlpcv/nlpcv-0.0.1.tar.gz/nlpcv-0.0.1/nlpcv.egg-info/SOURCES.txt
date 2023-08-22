@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+nlpcv/__init__.py
+nlpcv/vulcan.py
+nlpcv.egg-info/PKG-INFO
+nlpcv.egg-info/SOURCES.txt
+nlpcv.egg-info/dependency_links.txt
+nlpcv.egg-info/top_level.txt
+nlpcv/vision/__init__.py
+nlpcv/vision/metainfo.py
