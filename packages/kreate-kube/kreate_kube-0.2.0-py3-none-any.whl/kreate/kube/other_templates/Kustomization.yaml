@@ -1,0 +1,46 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: {{ app.namespace }}
+
+resources:
+{% for res in my.resources() %}
+- {{ res.dirname }}/{{ res.filename }}
+{% endfor %}
+
+patches:
+{% for pat in my.patches() %}
+- patches/{{ pat.filename }}
+{% endfor %}
+
+configMapGenerator:
+{% for cm in strukt.get("configmaps",{}).keys()  %}
+- name: {{ cm }}
+  options:
+    labels:
+      config-map: {{ cm }}
+  literals:
+    {% for varname in strukt.configmaps[cm].get("vars",{}).keys() %}
+     - {{ varname }}={{ strukt.configmaps[cm].vars[varname ] }}
+    {% endfor %}
+  files:
+    {% for filename in strukt.configmaps[cm].get("files",[]) %}
+     - {{ filename }}
+    {% endfor %}
+{% endfor %}
+
+secretGenerator:
+{% for cm in strukt.get("secrets",{}).keys()  %}
+- name: {{ cm }}
+  options:
+    labels:
+      secret: {{ cm }}
+  literals:
+    {% for varname in strukt.secrets[cm].get("vars",{}).keys() %}
+     - {{ varname }}={{ strukt.secrets[cm].vars[varname ] }}
+    {% endfor %}
+  files:
+    {% for filename in strukt.secrets[cm].get("files",[]) %}
+     - {{ filename }}
+    {% endfor %}
+{% endfor %}
