@@ -1,0 +1,8 @@
+py_jaws_namespace/__init__.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+py_jaws_namespace/decorators.py,sha256=F1edvpLSXDmE_BKltudrqIlm2ltlms8vxX3VrGloqhY,859
+py_jaws_namespace/namespace_registry.py,sha256=aMVJHSMk90iHz-F0FrRj0KWiPQOeHozwDLaDNj8zM4k,827
+py_jaws_namespace/namespace_resolver.py,sha256=kCoCPVrsd3ZVqtreaJdltDi1e66l0XPFGxK16MNv8X8,1177
+py_jaws_namespace/test.py,sha256=n_s-yzM5ZsH15J5etlssyktqzhRV1pY8dJs9Fm38eek,99
+py_jaws_namespace-1.0.1.dist-info/METADATA,sha256=3hqa83LNncXMK_EMj_YOELS0CWzRSDOdJxCIZkQq8rA,556
+py_jaws_namespace-1.0.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+py_jaws_namespace-1.0.1.dist-info/RECORD,,
