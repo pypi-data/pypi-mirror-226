@@ -1,0 +1,14 @@
+coboljsonifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coboljsonifier/copybookextractor.py,sha256=yXVds3PdUa26IkMjPfou2jRS8w0TO-jTSgfaJp66NFU,9790
+coboljsonifier/parser.py,sha256=0Ql-Pu7DGsIhzlhwwr-N5go8-DiKKzZnzlq_IZHYqeI,4312
+coboljsonifier/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coboljsonifier/config/parser_type_enum.py,sha256=H5nuqOozoIBiMKHwCbbgl9DVKWhL-PTxO-i5SmTA61U,113
+coboljsonifier/extractors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coboljsonifier/extractors/book_item.py,sha256=61XPANBX0EbyGbSGGoripiQ-le4H_u28feIHdzhotGA,264
+coboljsonifier/extractors/field_extractor.py,sha256=B4PjAM3xytQBjmL29khegYWUqgXJVBv2q7dE_YBX3rE,9035
+coboljsonifier/extractors/structure_extractor.py,sha256=6Uxhv4LAXsyKHvcbC8cTINoa1Q8YTRnY2O-cBSq4X5s,5675
+coboljsonifier/extractors/subformat_extractor.py,sha256=IGUULkxPXP4b2pbxShZ_jttDu6KMLLfr2UMk2BorRT0,2312
+coboljsonifier-1.0.4.dist-info/METADATA,sha256=HCY2wbTReCVsTc1jm9zGZTZvvDOCQQKJXIv9byvpvQM,8280
+coboljsonifier-1.0.4.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+coboljsonifier-1.0.4.dist-info/top_level.txt,sha256=gP0olKj4WLYp98It3FP80IkfzOWK6F5GkobLl262Syk,15
+coboljsonifier-1.0.4.dist-info/RECORD,,
