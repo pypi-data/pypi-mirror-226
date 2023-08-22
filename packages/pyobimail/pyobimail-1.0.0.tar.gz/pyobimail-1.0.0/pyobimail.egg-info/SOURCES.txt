@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pyobimail/client.py
+pyobimail/threads.py
+pyobimail/utils.py
+pyobimail/version.py
+pyobimail.egg-info/PKG-INFO
+pyobimail.egg-info/SOURCES.txt
+pyobimail.egg-info/dependency_links.txt
+pyobimail.egg-info/requires.txt
+pyobimail.egg-info/top_level.txt
+pyobimail.egg-info/zip-safe

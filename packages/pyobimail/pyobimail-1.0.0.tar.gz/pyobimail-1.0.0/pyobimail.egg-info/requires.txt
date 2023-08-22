@@ -1,0 +1,5 @@
+secure-smtplib
+secure-imaplib
+bs4
+requests
+user_agent
