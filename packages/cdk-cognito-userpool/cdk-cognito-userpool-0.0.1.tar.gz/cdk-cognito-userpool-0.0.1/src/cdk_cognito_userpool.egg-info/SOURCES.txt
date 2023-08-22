@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk-cognito-userpool/__init__.py
+src/cdk-cognito-userpool/py.typed
+src/cdk-cognito-userpool/_jsii/__init__.py
+src/cdk-cognito-userpool/_jsii/cdk-cognito-userpool@0.0.1.jsii.tgz
+src/cdk_cognito_userpool.egg-info/PKG-INFO
+src/cdk_cognito_userpool.egg-info/SOURCES.txt
+src/cdk_cognito_userpool.egg-info/dependency_links.txt
+src/cdk_cognito_userpool.egg-info/requires.txt
+src/cdk_cognito_userpool.egg-info/top_level.txt
