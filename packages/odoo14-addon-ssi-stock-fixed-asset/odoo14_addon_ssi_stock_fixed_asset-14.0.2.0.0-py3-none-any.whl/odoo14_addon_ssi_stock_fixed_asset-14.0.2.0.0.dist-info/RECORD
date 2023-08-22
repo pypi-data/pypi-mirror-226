@@ -1,0 +1,11 @@
+odoo/addons/ssi_stock_fixed_asset/README.rst,sha256=TeK35Og9h_Wmv75lLYkMLOzfMmYYBl1hzxS7sDzqCWs,1225
+odoo/addons/ssi_stock_fixed_asset/__init__.py,sha256=M7twq1SJz2cc98CkgeiDiDg05QWWFb09lt5oh03-axA,181
+odoo/addons/ssi_stock_fixed_asset/__manifest__.py,sha256=Iyuo0PH506o1ylFtsKAgyowpbMKVMrWgwwu-LwFlLv4,570
+odoo/addons/ssi_stock_fixed_asset/models/__init__.py,sha256=i_MGgNvGsEd75qpbZiEi4863K8efmi6BcKsK_96BUNg,190
+odoo/addons/ssi_stock_fixed_asset/models/product_product.py,sha256=RyNomyCK_tR1c7jnnQMzhOtz6Srlbcu_jiKG2K2zFgQ,542
+odoo/addons/ssi_stock_fixed_asset/static/description/icon.png,sha256=ilrOdaZsQ9IGvXoiOd_f-k_WPa0qzAB3rOWgUSGKNtM,20342
+odoo/addons/ssi_stock_fixed_asset/views/product_product_views.xml,sha256=wC-VEbpUqtm_a_-Emaws-Fey3cNC0_80S45HIu6TN8k,942
+odoo14_addon_ssi_stock_fixed_asset-14.0.2.0.0.dist-info/METADATA,sha256=nEnXMJF7aJBaTFQcK1NW4YJv6_Amv_QgUdj7jUU_A0s,1828
+odoo14_addon_ssi_stock_fixed_asset-14.0.2.0.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+odoo14_addon_ssi_stock_fixed_asset-14.0.2.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_ssi_stock_fixed_asset-14.0.2.0.0.dist-info/RECORD,,
