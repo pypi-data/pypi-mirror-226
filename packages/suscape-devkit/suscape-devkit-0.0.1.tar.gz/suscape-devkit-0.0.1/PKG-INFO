@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: suscape-devkit
+Version: 0.0.1
+Summary: suscape dataset devkit
+Author-email: naurril <naurril@gmail.com>
+Project-URL: Homepage, https://suscape.com
+Project-URL: Bug Tracker, https://github.com/sustech-isus/suscape-devkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## About
+
+This is a python devkit package for the suscape dataset. It provides interfaces to load the dataset and to access the data.
+
+## Install
+Install from pypi:
+
+```bash
+pip install suscape-devkit
+```
+
+for development use:
+
+```bash
+pip install -e .
+```
+
+
+## verify installation
+
+```python
+
+
+from suscape.dataset import SuscapeDataset
+dataset = SuscapeDataset("dataset_root_path")
+print(len(dataset.get_scene_names()), 'scenes')
+print(dataset.get_scene_info("scene-000000"))
+
+
+
+```
