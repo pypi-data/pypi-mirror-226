@@ -1,0 +1,7 @@
+README.md
+setup.py
+ideaverse.egg-info/PKG-INFO
+ideaverse.egg-info/SOURCES.txt
+ideaverse.egg-info/dependency_links.txt
+ideaverse.egg-info/requires.txt
+ideaverse.egg-info/top_level.txt
