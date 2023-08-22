@@ -1,0 +1,8 @@
+pgml-0.9.0.dist-info/METADATA,sha256=sLqjUcHjbyOndVSviVNj5IFygz1TmTTZz1JFqUH_ukw,13833
+pgml-0.9.0.dist-info/WHEEL,sha256=z1pDcG7VPE2ODbuqskUcTdSrYy8YHlcAkEb6MX_GT5k,108
+pgml.libs/libcrypto-10ded509.so.1.1,sha256=1isaMjYHEKt_niTfoh41EMnW29vlB5ezg2rpWPBUv0M,3083721
+pgml.libs/libssl-1ca2187b.so.1.1,sha256=ibyS4RrCnRU40AFHVdJoHTMUBDAkwuXqrwDhAdM9tog,646121
+pgml/pgml.pyi,sha256=YGjIBav8trjLG3_tmO5SZ04AW6hQE5FGaLvpC3CK7Xo,2850
+pgml/__init__.py,sha256=zElPWOHq9SUKFjdYwafaJ1h7pvI-OsM5tW_qt-JffqY,101
+pgml/pgml.cpython-310-x86_64-linux-gnu.so,sha256=bAklGDPEVTQum0azMCv0TV7ADmYtEx567u8RTmMNGUo,10838657
+pgml-0.9.0.dist-info/RECORD,,
