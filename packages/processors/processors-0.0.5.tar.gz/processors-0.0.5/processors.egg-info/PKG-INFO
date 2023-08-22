@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: processors
+Version: 0.0.5
+Summary: Allows easy clean up of text
+Home-page: https://github.com/upshiftbe/processors
+Author: Upshift
+Author-email: contact@upshift.be
+Project-URL: Bug Tracker, https://github.com/upshiftbe/processors/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Text processors
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Usage
+
+```python
+from texprocessors import TextProcessor
+process = TextProcessor()
+processor.process("       this is%20absolutely%20horrible%20  text 😠!!!! !!??? ?    that needs to be   cleaned up         ")
+'This is absolutely horrible text:angry face: ! That needs to be cleaned up.'
+```
