@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: radio81
+Version: 1.4.2
+Summary: Radio81, it's just a radio
+Author-email: Cesare Jacopo Corzani <corzani@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: inquirerpy~=0.3.4
+Requires-Dist: aiohttp~=3.8.5
+Requires-Dist: diskcache~=5.6.1
+Requires-Dist: appdirs~=1.4.4
+Requires-Dist: python-vlc==3.0.18122
+
+# Radio 81
+
+A classical command line old tube radio, you can't skip songs... you have to deal with it... Just relax and listen...
+like it used to be...
+
+![Radio 81 interface](radio81.png)
+
+```shell
+# Install Radio 81 using pipx
+pipx install radio81
+# or with pip
+pip install radio81
+
+# And now... Run it...
+
+radio81
+```
+
+## Additional notes
+
+
+This is an Alpha version I wrote during a mystical crisis so don't blame anyone if that doesn't work in every situation.
+It will be better soon... or probably not... I find it so lovely as it is... even with the exception when you press CTRL+C.
+
+I almost forgot... Thanks to Shoutcast and people who are making those beautiful radio stations...

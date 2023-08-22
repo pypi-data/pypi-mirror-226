@@ -1,0 +1,21 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.9.0,<4"]
+
+[project]
+name = "radio81"
+version = "1.4.2"
+authors = [
+    { name = "Cesare Jacopo Corzani", email = "corzani@gmail.com" },
+]
+description = "Radio81, it's just a radio"
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "inquirerpy~=0.3.4",
+    "aiohttp~=3.8.5",
+    "diskcache~=5.6.1",
+    "appdirs~=1.4.4",
+    "python-vlc==3.0.18122",
+]
