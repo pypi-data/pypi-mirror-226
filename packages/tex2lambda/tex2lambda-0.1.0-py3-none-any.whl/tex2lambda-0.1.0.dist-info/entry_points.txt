@@ -1,0 +1,3 @@
+[console_scripts]
+tex2lambda=tex2lambda.main:cli
+
