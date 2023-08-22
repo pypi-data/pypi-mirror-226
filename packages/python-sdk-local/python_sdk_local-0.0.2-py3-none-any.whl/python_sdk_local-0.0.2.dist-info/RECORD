@@ -1,0 +1,7 @@
+python_sdk_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_sdk_local/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_sdk_local/src/utilities.py,sha256=i0v5Pf3OJ9JTyGVyD0NQrd8jmxTKC3CzVgNi10_LzCs,1363
+python_sdk_local-0.0.2.dist-info/METADATA,sha256=eV5s57bAVOh_Y2Azi2fsNXaz14uinTPYEGqi33byKws,470
+python_sdk_local-0.0.2.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+python_sdk_local-0.0.2.dist-info/top_level.txt,sha256=9MVrcsynSYg1-wsmAz7JKjcPdSy9H2sPikDDPR-oYpI,17
+python_sdk_local-0.0.2.dist-info/RECORD,,
