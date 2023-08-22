@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+main.py
+pyproject.toml
+setup.py
+XBStrapDistro/__init__.py
+XBStrapSQLite/__init__.py
+xbdistro_tools.egg-info/PKG-INFO
+xbdistro_tools.egg-info/SOURCES.txt
+xbdistro_tools.egg-info/dependency_links.txt
+xbdistro_tools.egg-info/requires.txt
+xbdistro_tools.egg-info/top_level.txt
