@@ -1,0 +1,5 @@
+tqdm
+
+[dev]
+mypy
+types-tqdm
