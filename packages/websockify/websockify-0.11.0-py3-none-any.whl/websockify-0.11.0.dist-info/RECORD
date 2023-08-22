@@ -1,0 +1,15 @@
+websockify/__init__.py,sha256=kKhK-TPma_giYlwpbKYpK3n_XMqs8teMWKzUsZhQ2bc,75
+websockify/__main__.py,sha256=KQUnP-SteUiRr7EoruUriO79T9g94CWhNAvfCGVmmK4,94
+websockify/auth_plugins.py,sha256=Nrg55BPJyCSLwgtZZ4LgNfVTxAXBr-nMYzdHPPR5HV0,3265
+websockify/sysloghandler.py,sha256=QdH_mUrgnDcbyBNJ7sH1hlVYwwQu_9DLt4zxMfHpsZQ,4051
+websockify/token_plugins.py,sha256=8UantRfqvWGF50fPw4XZJYPeo9wXr-G_o9YnISgr7Ok,7527
+websockify/websocket.py,sha256=2PKs3PBybjYXb51p0cpBFQxS9Zcv3fPin0kzLoIpLgI,29293
+websockify/websocketproxy.py,sha256=T2_KaD2SJorvhPelARzZ5gx8-AA6oCFgezZToYR1kkc,30247
+websockify/websocketserver.py,sha256=Yn_-DkcJxLcNAMhQxhlkWhM3bN3W22_c5R431cCfmek,3406
+websockify/websockifyserver.py,sha256=ffSW1QKuEJnvKbcuuutBbjk7BkJ-1Y9U4rO545rF0Jo,30722
+websockify-0.11.0.dist-info/COPYING,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+websockify-0.11.0.dist-info/METADATA,sha256=FUIUCIX890CuT17lfLsfA3cOYHEu6NCmvuwzE4LHKKY,12943
+websockify-0.11.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+websockify-0.11.0.dist-info/entry_points.txt,sha256=T16BRUMo23NJa6SUF8D3gChZafxK5-k5K-AlXLrcyCE,73
+websockify-0.11.0.dist-info/top_level.txt,sha256=I9fZK6yFXT3pv9IEWFqTkQQvnovVsxhRE3WwbC94J8w,11
+websockify-0.11.0.dist-info/RECORD,,
