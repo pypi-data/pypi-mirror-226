@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "langscript"
+version = "0.0.0-alpha.01"
+description = "Tame the LLMs interface"
+authors = ["Ahmad Awais <me@AhmadAwais.com>"]
+readme = "README.md"
+license = "Proprietary"
+homepage = "https://langscript.dev/"
+keywords = ["llm", "langscript"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

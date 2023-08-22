@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: langscript
+Version: 0.0.0a1
+Summary: Tame the LLMs interface
+Home-page: https://langscript.dev/
+License: Proprietary
+Keywords: llm,langscript
+Author: Ahmad Awais
+Author-email: me@AhmadAwais.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# LangScript
+
+Tame the LLM parser and compiler with a simple language.
+
+WIP.
+
