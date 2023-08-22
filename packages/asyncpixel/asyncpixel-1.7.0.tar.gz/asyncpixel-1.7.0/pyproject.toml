@@ -1,0 +1,159 @@
+[project]
+name = "asyncpixel"
+dynamic = []
+description = "Asynchronous Python library for the Hypixel API"
+authors = [
+    { name = "Leon Bowie", email = "leon@bowie-co.nz" },
+]
+dependencies = [
+    "aiohttp>=3.8.5",
+    "pydantic>=2.2.1",
+]
+requires-python = ">=3.8.1"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+version = "1.7.0"
+
+[project.license]
+text = "GPL-3.0-or-later"
+
+[project.urls]
+Homepage = "https://asyncpixel.readthedocs.io"
+Repository = "https://github.com/Darkflame72/asyncpixel"
+Documentation = "https://asyncpixel.readthedocs.io"
+
+[tool.black]
+line-length = 120
+target-version = [
+    "py38",
+    "py39",
+    "py310",
+    "py311",
+]
+
+[tool.ruff]
+line-length = 120
+extend-select = [
+    "I",
+    "B",
+    "C4",
+    "PGH",
+    "RUF",
+    "W",
+    "YTT",
+]
+src = [
+    "src",
+]
+target-version = "py38"
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.isort]
+known-first-party = [
+    "pdm",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.build]
+excludes = [
+    "./**/.git",
+]
+package-dir = "src"
+includes = [
+    "src/asyncpixel",
+]
+source-includes = [
+    "tests",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+]
+
+[tool.pdm.scripts]
+test = "coverage run --parallel -m pytest"
+doc = "sphinx-build docs docs/_build"
+lint = "pre-commit run --all-files"
+
+[tool.pdm.scripts.coverage_report]
+shell = "coverage combine && coverage report"
+
+[tool.pdm.scripts.all]
+composite = [
+    "lint",
+    "test",
+    "coverage",
+    "doc",
+]
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "furo>=2023.8.19",
+    "sphinx-copybutton>=0.5.2",
+    "sphinxext-opengraph>=0.8.2",
+    "sphinx>=7.1.2",
+    "sphinxcontrib-trio>=1.1.2",
+    "autodoc-pydantic>=2.0.1",
+]
+test = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.1",
+    "aioresponses>=0.7.4",
+    "coverage>=7.3.0",
+    "setuptools>=68.1.2",
+]
+style = [
+    "black>=23.7.0",
+    "ruff>=0.0.285",
+    "pre-commit>=3.3.3",
+    "mypy>=1.5.1",
+]
+
+[tool.coverage.paths]
+source = [
+    "src/",
+    "*/site-packages",
+]
+others = [
+    "asyncpixel/",
+    "*/asyncpixel",
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "src/",
+]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+
+[pytest]
+asyncio_mode = "auto"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
