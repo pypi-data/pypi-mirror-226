@@ -1,0 +1,11 @@
+README.md
+main.py
+pyproject.toml
+setup.py
+test.json
+wghtest.egg-info/PKG-INFO
+wghtest.egg-info/SOURCES.txt
+wghtest.egg-info/dependency_links.txt
+wghtest.egg-info/entry_points.txt
+wghtest.egg-info/requires.txt
+wghtest.egg-info/top_level.txt
