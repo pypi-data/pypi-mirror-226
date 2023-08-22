@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: truss-utils
+Version: 0.1.0
+Summary: Utilities for use in Truss development
+License: MIT
+Author: Truss Maintainers
+Author-email: team@trussml.com
+Requires-Python: >=3.8,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Pillow (>=10.0.0,<11.0.0)
+Description-Content-Type: text/markdown
+
+# truss-utils
+
+This package is a repository of common functions that help with developing
+production AI/ML models with Truss.
+
+## Use
+
+In the `model.py` of your truss, you can do something like the following:
+
+```
+from truss_utils.image import pil_to_64
+
+class Model:
+...
+
+    def predict(self, model_input):
+        # call Stable diffusion
+        ...
+
+        return pil_to_b64(image)
+```
