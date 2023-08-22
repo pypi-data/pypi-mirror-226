@@ -1,0 +1,7 @@
+overwatch_client/__init__.py,sha256=U-vPQEcT8wsX6CBkdXr2urfquYsx9crGZRQN_uAysnc,64
+overwatch_client/client.py,sha256=1TCg2IR365_j72TA0Evwu6vzi6ouhzo11dKeU560r3U,15362
+overwatch_client/utils.py,sha256=0dMKkcMRJ-zA7lun9jCeaVvcKhhWM7jnMMWslUC09dU,378
+overwatch_client/version.py,sha256=rPSfWgIeq2YWVPyESOAwCBt8vftsTpIkuLAGDEzyRQc,22
+overwatch_client-0.1.5.dist-info/METADATA,sha256=xsSKAIA6BZgyQzrARyb7mkdTniis_yxYrogQuJwt7p8,1713
+overwatch_client-0.1.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+overwatch_client-0.1.5.dist-info/RECORD,,
