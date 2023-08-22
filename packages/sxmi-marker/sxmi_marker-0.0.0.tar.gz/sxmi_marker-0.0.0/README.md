@@ -1,0 +1,64 @@
+# sxmi-marker
+
+Generates markers for SXMI modules
+
+## Using
+
+_Python package_: To add and install this package as a dependency of your project, run `poetry add sxmi-marker`.
+
+_Python CLI_: To view this app's CLI commands once it's installed, run `sxmi-marker --help`.
+
+### Setting up your development environment
+
+<details>
+<summary>Prerequisites</summary>
+
+1. [Generate an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) and [add the SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+1. Configure SSH to automatically load your SSH keys:
+    ```sh
+    cat << EOF >> ~/.ssh/config
+    Host *
+      AddKeysToAgent yes
+      IgnoreUnknown UseKeychain
+      UseKeychain yes
+    EOF
+    ```
+1. [Install Docker Desktop](https://www.docker.com/get-started).
+    - Enable _Use Docker Compose V2_ in Docker Desktop's preferences window.
+    - _Linux only_:
+        - [Configure Docker and Docker Compose to use the BuildKit build system](https://docs.docker.com/develop/develop-images/build_enhancements/#to-enable-buildkit-builds). On macOS and Windows, BuildKit is enabled by default in Docker Desktop.
+        - Export your user's user id and group id so that [files created in the Dev Container are owned by your user](https://github.com/moby/moby/issues/3206):
+            ```sh
+            cat << EOF >> ~/.bashrc
+            export UID=$(id --user)
+            export GID=$(id --group)
+            EOF
+            ```
+2. [Install VS Code](https://code.visualstudio.com/) and [VS Code's Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+
+</details>
+
+<details open>
+<summary>One-time project setup</summary>
+
+1. Clone this repository.
+2. Start a [Dev Container](https://code.visualstudio.com/docs/remote/containers) in your preferred development environment:
+    - _VS Code_: open the cloned repository and run <kbd>Ctrl/⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> → _Remote-Containers: Reopen in Container_.
+    - _Terminal_: open the cloned repository and run `docker compose up --detach dev` to start the Dev Container in the background, and then run `docker compose exec dev zsh` to open a shell prompt in the Dev Container.
+
+</details>
+
+### Browser development setup
+
+1. Open [https://github.com/Stroma-Vision/sxmi-marker](https://github.com/Stroma-Vision/sxmi-marker) in your browser.
+2. Click on _Code_ and select _Create codespace_ to start a Dev Container with [GitHub Codespaces](https://github.com/features/codespaces).
+
+### Developing
+
+- This project follows the [Conventional Commits](https://www.conventionalcommits.org/) standard to automate [Semantic Versioning](https://semver.org/) and [Keep A Changelog](https://keepachangelog.com/) with [Commitizen](https://github.com/commitizen-tools/commitizen).
+- Run `poe` from within the development environment to print a list of [Poe the Poet](https://github.com/nat-n/poethepoet) tasks available to run on this project.
+- Run `poetry add {package}` from within the development environment to install a run time dependency and add it to `pyproject.toml` and `poetry.lock`. Add `--group test` or `--group dev` to install a CI or development dependency, respectively.
+- Run `poetry update` from within the development environment to upgrade all dependencies to the latest versions allowed by `pyproject.toml`.
+- Run `cz bump` to bump the package's version, update the `CHANGELOG.md`, and create a git tag.
+
+</details>
