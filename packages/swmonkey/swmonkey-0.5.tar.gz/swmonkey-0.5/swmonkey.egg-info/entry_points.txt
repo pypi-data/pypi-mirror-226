@@ -1,0 +1,2 @@
+[console_scripts]
+swmonkey = swmonkey.__main__:main

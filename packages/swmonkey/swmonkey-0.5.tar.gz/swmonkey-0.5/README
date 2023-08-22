@@ -1,0 +1,21 @@
+# 基于pyautogui的Monkey测试
+
+## 运行
+
+1. 进入venv环境
+```
+source venv/bin/activate
+```
+2. 安装依赖
+
+```
+pip install -r requirements.txt
+```
+
+2. 运行`python main.py`
+
+## 安装
+
+```
+pip install  --index-url https://pypi.org/project swmonkey
+```
