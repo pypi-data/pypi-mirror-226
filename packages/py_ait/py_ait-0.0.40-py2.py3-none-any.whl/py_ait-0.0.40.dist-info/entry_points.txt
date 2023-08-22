@@ -1,0 +1,4 @@
+[console_scripts]
+ait-download=py_ait.hf_download:run
+ait-fork=py_ait.hf_fork:run
+
