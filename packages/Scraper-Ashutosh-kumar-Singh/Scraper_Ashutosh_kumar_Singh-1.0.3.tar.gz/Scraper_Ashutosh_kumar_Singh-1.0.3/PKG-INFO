@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Scraper_Ashutosh_kumar_Singh
+Version: 1.0.3
+Summary: A small package that makes web-scraping more Easier
+Author-email: Ashutosh Kumar Singh <ashutoshkumarsingh02032005@gmail.com>
+Project-URL: Homepage, https://github.com/E-techy/Web-Scraping-with-python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Scraper 
+
+It is a simple web scraping app
+built on top of BeautifulSoup4.
+
+## Github repo at:
+https://github.com/E-techy/Web-Scraping-with-python/
