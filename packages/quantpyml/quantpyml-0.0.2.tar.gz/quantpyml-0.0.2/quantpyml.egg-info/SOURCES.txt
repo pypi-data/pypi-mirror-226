@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+quantpyml/__init__.py
+quantpyml.egg-info/PKG-INFO
+quantpyml.egg-info/SOURCES.txt
+quantpyml.egg-info/dependency_links.txt
+quantpyml.egg-info/requires.txt
+quantpyml.egg-info/top_level.txt
+quantpyml/equity/__init__.py
+quantpyml/equity/black_litterman.py
+quantpyml/equity/black_scholes.py
+quantpyml/equity/efficient_frontier.py
+quantpyml/returns/__init__.py
+quantpyml/returns/brownian_motion.py
+quantpyml/returns/geometric_brownian_motion.py
