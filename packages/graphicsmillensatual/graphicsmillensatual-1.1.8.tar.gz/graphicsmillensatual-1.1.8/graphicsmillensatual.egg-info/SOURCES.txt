@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+graphicsmillensatual/__init__.py
+graphicsmillensatual/graf.py
+graphicsmillensatual.egg-info/PKG-INFO
+graphicsmillensatual.egg-info/SOURCES.txt
+graphicsmillensatual.egg-info/dependency_links.txt
+graphicsmillensatual.egg-info/requires.txt
+graphicsmillensatual.egg-info/top_level.txt
