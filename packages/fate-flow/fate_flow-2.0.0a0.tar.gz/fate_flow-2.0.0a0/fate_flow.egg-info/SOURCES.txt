@@ -1,0 +1,5 @@
+setup.py
+fate_flow.egg-info/PKG-INFO
+fate_flow.egg-info/SOURCES.txt
+fate_flow.egg-info/dependency_links.txt
+fate_flow.egg-info/top_level.txt
