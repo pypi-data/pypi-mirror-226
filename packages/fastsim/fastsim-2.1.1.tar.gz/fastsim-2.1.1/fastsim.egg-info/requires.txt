@@ -1,0 +1,15 @@
+pandas>=1
+matplotlib>=3.3
+numpy>=1.18
+scipy
+seaborn>=0.10
+typing_extensions
+pyyaml
+pytest
+
+[dev]
+black
+maturin
+plotly
+ipykernel
+pymoo==0.6.0.1
