@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: CleanTextKit
+Version: 0.0.1
+Summary: A preprocessor which performs operations of lowering text, removing special characters and removing stopwords
+Author: Chaitanya Kulkarni
+Keywords: text processing,text preprocessing,text cleaner
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: nltk
+
