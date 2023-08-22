@@ -1,0 +1,3 @@
+alibabacloud_url<1.0.0,>=0.0.1
+alibabacloud_tea_util<1.0.0,>=0.3.11
+alibabacloud_darabonba_number<1.0.0,>=0.0.4
