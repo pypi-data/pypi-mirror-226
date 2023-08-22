@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: marvel-characters-da
+Version: 1.0.0
+Summary: A Python package for working with Marvel characters data.
+Home-page: https://github.com/denC16/marvel-characters
+Author: Dhyaneswaran A P
+Author-email: dhyaneswaran.ap@fractal.ai
+Requires-Dist: requests
+Requires-Dist: pandas
+
