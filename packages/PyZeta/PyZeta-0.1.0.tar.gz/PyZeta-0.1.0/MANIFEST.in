@@ -1,0 +1,3 @@
+include README.rst
+include pyzeta/py.typed
+include docs/_static/docstr_coverage_badge.svg
