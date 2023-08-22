@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: semantic-link
+Version: 0.0.19
+Summary: Semantic link for Microsoft Fabric
+Home-page: https://learn.microsoft.com/en-us/fabric/data-science/semantic-link-overview
+Author: Microsoft
+Author-email: semanticdatascience@service.microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: ../LICENSE.txt
+Requires-Dist: semantic-link-sempy ==0.0.19
+Requires-Dist: semantic-link-functions-geopandas ==0.0.19
+Requires-Dist: semantic-link-functions-holidays ==0.0.19
+Requires-Dist: semantic-link-functions-meteostat ==0.0.19
+Requires-Dist: semantic-link-functions-phonenumbers ==0.0.19
+Requires-Dist: semantic-link-functions-validators ==0.0.19
+
+Semantic Link is a feature that allows you to establish a connection between Power BI datasets and Synapse Data Science in Microsoft Fabric.  
+
+The primary goals of Semantic Link are to facilitate data connectivity, enable the propagation of semantic information, and seamlessly integrate with established tools used by data scientists, such as notebooks.  
+
+Semantic Link helps you to preserve domain knowledge about data semantics in a standardized way that can speed up data analysis and reduce errors.
+
