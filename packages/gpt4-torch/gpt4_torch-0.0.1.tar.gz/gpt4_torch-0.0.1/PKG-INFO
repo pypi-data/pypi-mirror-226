@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: gpt4-torch
+Version: 0.0.1
+Summary: GPT4 - Pytorch
+Home-page: https://github.com/kyegomez/gpt3
+License: MIT
+Keywords: artificial intelligence,attention mechanism,transformers
+Author: Kye Gomez
+Author-email: kye@apac.ai
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: SentencePiece
+Requires-Dist: accelerate
+Requires-Dist: datasets
+Requires-Dist: deepspeed
+Requires-Dist: einops
+Requires-Dist: lion-pytorch
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: transformers
+Description-Content-Type: text/markdown
+
+# GPT4
+The open source implementation of the base model behind GPT-4 from OPENAI [Language + Multi-Modal]
+
