@@ -1,0 +1,17 @@
+pytexutils/__init__.py,sha256=4eaDjsPMHf0IgJfN1qCCNqGz5POCPPs5jAeVxOVwJOY,82
+pytexutils/figures/__init__.py,sha256=ZShCiztMX9Kav4gDsleOuTVKgOuF_xku11GrN9kgJf4,111
+pytexutils/figures/make_image.py,sha256=tPyHUkjSxWCg4ZN_8zhoEiHKCOz4Jk07BxPczBToJYU,1884
+pytexutils/figures/make_tabular_image.py,sha256=etc1yL4TqGylDeWY6TGU6P_-r1ALLpeFSJjr-LJu0BU,2511
+pytexutils/graphs/__init__.py,sha256=4H8hKoChQ9n9k9A5wEqVe7ckyX4pHszEzj8GCaJGVYs,63
+pytexutils/graphs/make_pie_chart.py,sha256=fzB6SMElBz9NnwwumGfoe-cue97gEiwtwy8_qx48JsI,2776
+pytexutils/tables/__init__.py,sha256=aCidoYpko83ZWffGmQ0Kz_RbmSYq4bsBxVrMbKLrskE,76
+pytexutils/tables/make_table.py,sha256=EfoCwhip0pS48giVPrHO3m-Qagx5yha7GFMSjSeWqEU,3720
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_make_figure.py,sha256=7tsnopSL7ilCKY5fyQKzfNBSk3ZpQTHVW1qSAqLdvwQ,880
+tests/test_make_pie_chart.py,sha256=sutheK1IwaqFQ97olC6EjE1YNxOnLIHXooeSPJaE_XQ,940
+tests/test_make_table.py,sha256=rpCW714fXEHRMyzbmdrvN8PrkeedDWgEsD3wNMs8DBY,680
+pytexutils-0.0.5.dist-info/LICENSE,sha256=u8ZMamdEWmUi39duyC0momwkUgQ8eBGglNHzcKmzhpI,1072
+pytexutils-0.0.5.dist-info/METADATA,sha256=EXBkMO6UTo8UhVOergHGTBm0SzqVpm7DqNLerT8dG40,2765
+pytexutils-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pytexutils-0.0.5.dist-info/top_level.txt,sha256=YhIO9BxUdirTX9w1qt2M0Nd2JUWHCMV06N1DUa8bf_U,17
+pytexutils-0.0.5.dist-info/RECORD,,
