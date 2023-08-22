@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: redguy-api
+Version: 1.0.0
+Summary: RedGuyAPI
+Home-page: 
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+Keywords: OpenAPI,OpenAPI-Generator,RedGuyAPI
+Requires-Python: >=3.6
+Requires-Dist: urllib3 (>=1.25.3)
+Requires-Dist: python-dateutil
+Requires-Dist: nulltype
+
+    Some apis from coder for coders  # noqa: E501
+    
