@@ -1,0 +1,9 @@
+README
+main.py
+setup.py
+myexerc.egg-info/PKG-INFO
+myexerc.egg-info/SOURCES.txt
+myexerc.egg-info/dependency_links.txt
+myexerc.egg-info/entry_points.txt
+myexerc.egg-info/requires.txt
+myexerc.egg-info/top_level.txt

@@ -1,0 +1,42 @@
+README File for typer package
+
+**CLI With Python**
+
+**Typer** is a helpful package for building command-line interfaces (CLIs) with Python.
+
+
+
+***INSTALLATION***
+
+requirements: - typer
+to install run 
+"pip install typer"
+
+***USAGE***
+Once you have the required dependencies installed, you can run the CLI using the following command:
+
+cd CLI-Code-Typer
+commands:
+    func      # This command prints a message to demonstrate a basic CLI functionality.
+    hello     # This command greets the specified organization.
+Argument: 
+     ORGANIZATION
+
+***Run script:***
+**- python main.py func
+- Python main.py hello [name_of_organization] 
+
+***RUN THE SCRIPT WITH TYPER COMMAND INSTEAD OF PYTHON***
+
+Requirements:
+   Typer CLI
+
+install:
+ - python -m pip install typer-cli
+
+You can then install completion for it:
+ - typer --install-completion
+  
+***Run script:***
+  - typer main.py run func
+  - typer main.py run hello [name_of_organization]
