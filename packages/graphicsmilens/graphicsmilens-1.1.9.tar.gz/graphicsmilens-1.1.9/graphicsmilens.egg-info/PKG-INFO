@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: graphicsmilens
+Version: 1.1.9
+Summary: Pacote gerador de gráficos
+Author: Milene Fialho
+Author-email: milefialho16@gmail.com
+License: MIT
+License-File: LICENSE
+
+Pacote que contém funções que geram gráficos tipo pizza, linha, ponto, barra
