@@ -1,0 +1,13 @@
+pycrossva/__init__.py,sha256=E4r-EWOq1j-dDDkZpFxtUSBFagkEdedKb0SAjJKOgvE,19
+pycrossva/configuration.py,sha256=unn0eBc2oFK88PXUsvGFc8uuWNzZ3tNsNcg_tNXt7qk,25626
+pycrossva/mappings.py,sha256=jnGcbb-eCgeAQAdELjkb8NKwuvWhlEm63YkVKW_Qybs,19825
+pycrossva/transform.py,sha256=nm6yt9Z8aaS_71ACdEiSgJepKFh8AWByLoEw0hK0R8I,15323
+pycrossva/utils.py,sha256=x1LDaonFd7nTMWmK1rPLkWVd07ENU9-4fZH2CSWBFAU,6327
+pycrossva/validation.py,sha256=LoTmUXn3wxUKFhwQoYvEMWciH0T9SUxsjnRFw22Gnus,33042
+pycrossva/scripts/pycrossva_transform.py,sha256=DN99_0gdh7JRKP9_JJZtbGb6bajUBCN-Gu0FcKCBq08,5170
+pycrossva-0.95.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pycrossva-0.95.dist-info/METADATA,sha256=46ouqsKCe-rLOgFzQDi-rsvbMWA9G5v8lu4H_Z82l1A,743
+pycrossva-0.95.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+pycrossva-0.95.dist-info/entry_points.txt,sha256=8pAVyuojhuJlCiXftePNgiuZ1WeZCVsj1d-Srcm_YE0,83
+pycrossva-0.95.dist-info/top_level.txt,sha256=pJQy7oc7MRWh14OHhMSe-0JO3nAJOBMTU9ZL6s63BjQ,10
+pycrossva-0.95.dist-info/RECORD,,
