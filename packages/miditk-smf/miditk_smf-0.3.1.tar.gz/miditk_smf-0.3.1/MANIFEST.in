@@ -1,0 +1,11 @@
+include CHANGELOG.md LICENSE.md README.md
+include tox.ini pytest.ini
+include Makefile
+
+graft examples
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
