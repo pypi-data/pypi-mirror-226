@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: nothing_pip
+Version: 0.2.0
+Summary: Let's share a program made with Python with mankind. It's nothing. It's easy.
+Author-email: dmario24 <data.mario24@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# nothing-pip
+- 누구나 python 으로 제작한 프로그램을 누구에게나 사용하도록 배포 할 수 있습니다.
+- 아무것도 아닙니다.
+
+### Start
+- A. https://packaging.python.org/en/latest/tutorials/packaging-projects/ 문서가 기준입니다.
+- B. https://pdm.fming.dev/latest/#introduction 에 따라 pdp 를 처리하고 초기 프로젝트를 만들어 봅니다.
+- C. https://github.com/edu-data-mario/nothing-pip/releases/tag/0.1.0 에서 (B) 수행 결과 확인이 가능합니다.
+
+### Nothing
+```bash
+$ 
+```
+
