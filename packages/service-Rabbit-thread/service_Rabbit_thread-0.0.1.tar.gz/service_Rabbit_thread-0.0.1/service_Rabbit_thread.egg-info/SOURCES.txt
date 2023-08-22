@@ -1,0 +1,12 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+rabbit_library/Rabbit.py
+rabbit_library/__init__.py
+service_Rabbit_thread.egg-info/PKG-INFO
+service_Rabbit_thread.egg-info/SOURCES.txt
+service_Rabbit_thread.egg-info/dependency_links.txt
+service_Rabbit_thread.egg-info/requires.txt
+service_Rabbit_thread.egg-info/top_level.txt
+tests/test_Rabbit.py

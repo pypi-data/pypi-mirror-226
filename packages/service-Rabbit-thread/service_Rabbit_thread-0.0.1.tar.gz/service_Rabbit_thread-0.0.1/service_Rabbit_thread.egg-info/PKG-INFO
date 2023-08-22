@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: service-Rabbit-thread
+Version: 0.0.1
+Summary: Wrapper não oficial do Rabbit
+Author: Eliézer Schwartz
+Author-email: eliezer.mail090@gmail.com
+License: MIT License
+Keywords: rabbit
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Biblioteca para trabalhar com o Rabbit
+- Ao instanciar a classe do Rabbit jÃ¡ deve ser passado os parametros de conexÃ£o.
+- Nesta biblioteca pode ser encontrado os metodos:
+    - getMessages
+        - Pegar as mensgens de uma fila com uma funÃ§Ã£o de callback.
+        - Parametros:
+            - 
