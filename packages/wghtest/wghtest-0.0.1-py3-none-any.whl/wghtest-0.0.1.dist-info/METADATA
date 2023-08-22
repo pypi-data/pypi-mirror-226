@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wghtest
+Version: 0.0.1
+Summary: Easily test
+Home-page: https://gitee.com/Sea-Depth/wgh_yt_test.git
+Author: guohuai wu
+Author-email: wu466687121@qq.com
+License: MIT
+Keywords: python,moviepy,cut video
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+
