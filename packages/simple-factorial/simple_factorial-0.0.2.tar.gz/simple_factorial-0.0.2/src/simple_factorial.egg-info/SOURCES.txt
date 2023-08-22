@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/simple_factorial/__init__.py
+src/simple_factorial.egg-info/PKG-INFO
+src/simple_factorial.egg-info/SOURCES.txt
+src/simple_factorial.egg-info/dependency_links.txt
+src/simple_factorial.egg-info/top_level.txt
