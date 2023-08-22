@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+scipy
+xarray>=2023.7.0
+hvplot>=0.8.4
+panel>=1.2.1
