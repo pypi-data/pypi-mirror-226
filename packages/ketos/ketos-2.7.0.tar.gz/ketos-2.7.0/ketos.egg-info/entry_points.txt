@@ -1,0 +1,2 @@
+[console_scripts]
+ketos-run = ketos.ketos_commands.ketos_run:main
