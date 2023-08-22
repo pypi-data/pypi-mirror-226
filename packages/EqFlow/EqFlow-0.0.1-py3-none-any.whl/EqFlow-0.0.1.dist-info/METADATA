@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: EqFlow
+Version: 0.0.1
+Summary: Introducing EqFlow: Your all-in-one solution for efficient web scraping, AI development, and more. Streamline your projects with its intuitive API, eliminating the need for multiple libraries like requests and bs4. EqFlow's lightning-fast performance and simplified syntax redefine coding, making tasks that once required extensive code a breeze. Elevate your coding experience, embrace efficiency, and unlock your true creative potential with EqFlow.
+Author: Stutya Patwal
+Author-email: stutyapatwal@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: nltk
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: textblob
+
