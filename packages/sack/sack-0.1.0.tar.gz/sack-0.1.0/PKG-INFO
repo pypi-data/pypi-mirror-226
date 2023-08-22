@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sack
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Yevgnen Koh <wherejoystarts@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# sack
+
+Describe your project here.
