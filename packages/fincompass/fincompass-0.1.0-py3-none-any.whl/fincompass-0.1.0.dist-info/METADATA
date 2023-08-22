@@ -1,0 +1,275 @@
+Metadata-Version: 2.1
+Name: fincompass
+Version: 0.1.0
+Summary: A comprehensive toolkit for large model evaluation
+Keywords: AI,NLP,in-context learning
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: absl-py ==1.4.0
+Requires-Dist: accelerate ==0.20.3
+Requires-Dist: addict ==2.4.0
+Requires-Dist: aiohttp ==3.8.4
+Requires-Dist: aiosignal ==1.3.1
+Requires-Dist: async-timeout ==4.0.2
+Requires-Dist: attrs ==23.1.0
+Requires-Dist: bcrypt ==4.0.1
+Requires-Dist: beautifulsoup4 ==4.12.2
+Requires-Dist: boto3 ==1.28.2
+Requires-Dist: botocore ==1.31.2
+Requires-Dist: certifi ==2023.5.7
+Requires-Dist: cffi ==1.15.1
+Requires-Dist: cfgv ==3.3.1
+Requires-Dist: charset-normalizer ==2.1.1
+Requires-Dist: click ==8.1.4
+Requires-Dist: cmake ==3.26.4
+Requires-Dist: colossalai ==0.3.0
+Requires-Dist: contexttimer ==0.3.3
+Requires-Dist: contourpy ==1.1.0
+Requires-Dist: cpm-kernels ==1.0.11
+Requires-Dist: cryptography ==41.0.2
+Requires-Dist: cycler ==0.11.0
+Requires-Dist: datasets ==2.13.1
+Requires-Dist: decorator ==5.1.1
+Requires-Dist: dill ==0.3.6
+Requires-Dist: distlib ==0.3.6
+Requires-Dist: e ==1.4.5
+Requires-Dist: et-xmlfile ==1.1.0
+Requires-Dist: evaluate ==0.4.0
+Requires-Dist: fabric ==3.1.0
+Requires-Dist: fairscale ==0.4.13
+Requires-Dist: faiss-gpu ==1.7.2
+Requires-Dist: filelock ==3.12.2
+Requires-Dist: fonttools ==4.41.0
+Requires-Dist: frozenlist ==1.3.3
+Requires-Dist: fsspec ==2023.6.0
+Requires-Dist: huggingface-hub ==0.16.4
+Requires-Dist: identify ==2.5.24
+Requires-Dist: idna ==3.4
+Requires-Dist: importlib-metadata ==6.8.0
+Requires-Dist: invoke ==2.1.3
+Requires-Dist: jieba ==0.42.1
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: jmespath ==1.0.1
+Requires-Dist: joblib ==1.3.1
+Requires-Dist: kiwisolver ==1.4.4
+Requires-Dist: lit ==16.0.6
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: matplotlib ==3.7.2
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: mmengine ==0.8.2
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: multidict ==6.0.4
+Requires-Dist: multiprocess ==0.70.14
+Requires-Dist: networkx ==3.1
+Requires-Dist: ninja ==1.11.1
+Requires-Dist: nltk ==3.8
+Requires-Dist: nodeenv ==1.8.0
+Requires-Dist: numpy ==1.23.4
+Requires-Dist: nvidia-cublas-cu11 ==11.10.3.66
+Requires-Dist: nvidia-cuda-cupti-cu11 ==11.7.101
+Requires-Dist: nvidia-cuda-nvrtc-cu11 ==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu11 ==11.7.99
+Requires-Dist: nvidia-cudnn-cu11 ==8.5.0.96
+Requires-Dist: nvidia-cufft-cu11 ==10.9.0.58
+Requires-Dist: nvidia-curand-cu11 ==10.2.10.91
+Requires-Dist: nvidia-cusolver-cu11 ==11.4.0.1
+Requires-Dist: nvidia-cusparse-cu11 ==11.7.4.91
+Requires-Dist: nvidia-nccl-cu11 ==2.14.3
+Requires-Dist: nvidia-nvtx-cu11 ==11.7.91
+Requires-Dist: openai ==0.27.1
+Requires-Dist: opencv-python ==4.8.0.74
+Requires-Dist: openpyxl ==3.1.2
+Requires-Dist: packaging ==23.1
+Requires-Dist: pandas ==1.5.3
+Requires-Dist: paramiko ==3.2.0
+Requires-Dist: Pillow ==10.0.0
+Requires-Dist: platformdirs ==3.8.1
+Requires-Dist: pre-commit ==3.3.3
+Requires-Dist: protobuf ==3.20.0
+Requires-Dist: psutil ==5.9.5
+Requires-Dist: pyarrow ==12.0.1
+Requires-Dist: pycparser ==2.21
+Requires-Dist: Pygments ==2.15.1
+Requires-Dist: PyNaCl ==1.5.0
+Requires-Dist: pyparsing ==3.0.9
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: pytz ==2023.3
+Requires-Dist: PyYAML ==6.0
+Requires-Dist: rank-bm25 ==0.2.2
+Requires-Dist: regex ==2023.6.3
+Requires-Dist: requests ==2.28.1
+Requires-Dist: responses ==0.18.0
+Requires-Dist: rich ==13.4.2
+Requires-Dist: rouge-score ==0.1.2
+Requires-Dist: s3transfer ==0.6.1
+Requires-Dist: safetensors ==0.3.1
+Requires-Dist: scikit-learn ==1.2.1
+Requires-Dist: scipy ==1.11.1
+Requires-Dist: sentence-transformers ==2.2.2
+Requires-Dist: sentencepiece ==0.1.99
+Requires-Dist: six ==1.16.0
+Requires-Dist: soupsieve ==2.4.1
+Requires-Dist: sympy ==1.12
+Requires-Dist: tabulate ==0.9.0
+Requires-Dist: termcolor ==2.3.0
+Requires-Dist: threadpoolctl ==3.1.0
+Requires-Dist: tiktoken ==0.4.0
+Requires-Dist: tokenizers ==0.13.3
+Requires-Dist: tomli ==2.0.1
+Requires-Dist: torch ==2.0.1
+Requires-Dist: torchvision ==0.15.2
+Requires-Dist: tqdm ==4.64.1
+Requires-Dist: transformers ==4.31.0
+Requires-Dist: triton ==2.0.0
+Requires-Dist: typing-extensions ==4.7.1
+Requires-Dist: urllib3 ==1.26.16
+Requires-Dist: virtualenv ==20.23.1
+Requires-Dist: xxhash ==3.2.0
+Requires-Dist: yapf ==0.40.1
+Requires-Dist: yarl ==1.9.2
+Requires-Dist: zipp ==3.16.0
+
+**Welcome to FinCompass**!
+
+**FinCompass**旨在面向金融NLPer，更便捷地对金融领域NLP模型的性能进行公平全面的评估。FinCompass在具备丰富的算法和功能的基础上，支持灵活的文件配置式评测，使得NLPer更高效地新增评测数据与模型。FinCompass 将不断致力于为NLPer提供准确、可靠的评估工具，以更好地理解和提升金融领域的NLP模型。
+
+## 最新进展
+
+- **\[2023.08.18\]** 新增面向模型训练者的框架部署流程，针对新增评测集和模型，只需修改`run.json`配置文件。
+- **\[~2023.08.16\]** 基于官方框架新增10个中文评测数据集、11类金融领域评测任务以及6个模型评测接口；评测功能上，支持机器评估与人工评估两类评估方式；新增F1、GPT等评测基准。
+
+## 评测流程
+
+### 1. 运行环境配置
+- python环境
+
+
+```
+$ conda create --name {deepai} python=3.10
+```
+
+```
+$ conda activate {deepai}
+```
+
+- 安装依赖
+
+```
+$ unzip opencompass.zip
+$ cd opencompass
+$ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 
+```
+
+- 安装opencompass库
+
+```
+$ pip install -e .
+```
+
+- 检测环境是否配置成功
+
+```
+$ python run.py configs/eval_demo.py -w outputs/demo --debug
+```
+如果一切正常，屏幕上会出现 “Starting inference process”
+
+![debug](./imgs/debug.png)
+
+### 2. 评测流程配置
+
+如果运行环境配置完成，用户便可配置项目中的`run.json`文件，指定相关参数，即可对新增的数据集和模型进行评测。后续评测过程只需更改配置参数即可。
+
+1. **修改`run.json`配置文件**
+
+```json
+{
+  "dataset_name": "nlpcc",
+  "dataset_path": "data/test/nlpcc_test.json",
+  "prompt_key": ["question", "triple"],
+  "answer_key": "answer",
+  "prompt_template": "请根据知识库中的三元组知识回答问题,三元组知识为: {triple}\n请问答问题: {question}\n答案: ",
+  "evaluator": "ROUGE",
+  "model_name": "minimax",
+  "generateURL": "http://ip:port/api/v1/eval/minimax",
+  "request_data": {
+    "data":{
+      "question": ""
+    },
+    "times": 0
+  },
+  "recieve_data": {
+    "data":{
+      "prediction": ""
+    }
+  },
+  "max_seq_len": 2048,
+  "max_out_len": 512,
+  "sample_size": 2
+}
+```
+
+2. **执行评测指定**
+
+```shell
+python run.py configs/eval_base.py -w outputs/base
+```
+
+> Todo: 后面使用.sh文件
+
+**json配置字段说明：**
+
+- `dataset_name`：str，数据集名称，用于与其他数据集区分。
+- `dataset_path`：str，数据集文件路径。
+
+- `prompt_key`：list，构造prompt需要的字段。
+- `answer_key`：str，标准答案字段。
+- `prompt_template`：str，prompt样例，`{字段}`来源于`prompt_key`。
+- `evaluator`：str，评估指标，目前可选项：`EM`、`ROUGE`。不支持自定义指标。
+- `model_name`：str，模型名称，用于与其他模型区分。
+- `generateURL`：str，模型接口链接。
+- `request_data`：dict，请求字段设置。必须包含`data:{question:""}`字段，其他可自定义，比如模型的初始化参数。
+- `recieve_data`：dict，接收字段设置。此处无需修改，用于告知用户返回字段必须包含`data:{prediction:""}`字段。
+- `max_seq_len`：int，模型最大输入指定。也可在`request_data`字段中根据需求设定。
+- `max_out_len`：int，模型最大输入指定。也可在`request_data`字段中根据需求设定。
+- `sample_size`：int，指定个评估数据的样例个数，用于debug，选择方式为随机采样。
+
+**!注意!**
+
+当前版本，评测集必须为json格式数据，需要明确指定`prompt_key`字段和`answer_key`字段，且`prompt_key`需要在`prompt_template`字符串中出现。
+
+## 性能榜单
+
+**通用能力**
+
+![image-20230818192047059](./imgs/bangdan.png)
+
+**金融能力**
+
+<img src="./imgs/fin.png" alt="image-20230818192620845" style="zoom: 33%;" />
+
+## 数据集支持
+
+<img src="./imgs/dataset.png" alt="image-20230818192317348" style="zoom: 33%;" />
+
+## 模型支持
+
+- 文心一言 ernie-bot
+- 文心一言 ernie-bot-turbo（10B）
+- gpt-3.5-turbo
+- 面壁cpmbee-api
+- minimax-api
+- ChatGLM-6B
+- ChatGLM2-6B
+- llama-7b
+- Baichuan-7B
+- internlm_7b
+- CPMBEE-10B
+- ...
