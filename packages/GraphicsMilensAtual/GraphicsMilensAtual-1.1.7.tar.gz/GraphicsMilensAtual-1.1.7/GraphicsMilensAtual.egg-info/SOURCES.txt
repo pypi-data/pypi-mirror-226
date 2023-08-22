@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+GraphicsMilensAtual/__init__.py
+GraphicsMilensAtual/graf.py
+GraphicsMilensAtual.egg-info/PKG-INFO
+GraphicsMilensAtual.egg-info/SOURCES.txt
+GraphicsMilensAtual.egg-info/dependency_links.txt
+GraphicsMilensAtual.egg-info/requires.txt
+GraphicsMilensAtual.egg-info/top_level.txt
