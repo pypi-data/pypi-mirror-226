@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: unagi-tools
+Version: 0.1.0
+Summary: 
+Author: Parth Patel
+Author-email: parthspatel.nj@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: fsspec (>=2023.6.0,<2024.0.0)
+Requires-Dist: gevent (>=23.7.0,<24.0.0)
+Description-Content-Type: text/markdown
+
+# Py File API Abstraction
+
+Deal with files and directories in a platform independent way.
+
+DOES NOT WORK FOR WINDOWS!
+
+
+

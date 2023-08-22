@@ -1,0 +1,15 @@
+README.md,sha256=UHkUKYdHHYWZjoHH8x0Fm2HK--MTopFIxw3RGarPfgA,120
+VERSION,sha256=atlhOkVXmNbZLl9fOQq0uqcFlryGntaxf1zdKyhjXwY,5
+unagi/__init__.py,sha256=ZhmrlXfMCr047LKQuPJdClapy6wkE8fWOSM5DeIdQHE,117
+unagi/collections/__init__.py,sha256=0YgfOpnXx6quJqACWEHRii7d9Aw0c_mlmQ1dWr8rRlE,280
+unagi/collections/abstractlist.py,sha256=2JqPF7LtQyyPCFXFvzqPcbAEjRjYHWBq6pktTTk80Zg,3089
+unagi/collections/greenparlazylist.py,sha256=NUVNj51Fonru6FzRKUdgUPSJN2FvbXqcvYO7LDrZV9A,1365
+unagi/collections/greenparlist.py,sha256=kBjZbXOZxbNVZMbaXHdLsYMVqamc7jJ3fdNHGOeU2MU,4151
+unagi/collections/lazylist.py,sha256=nslubVnFallDalXbm5S1f47zXLGfQRNzKbxV7hDbGNY,5266
+unagi/collections/parlist.py,sha256=dsu9tYhV1Uo3-xRIOj9S5E1WHX3RIR-7grY2TAoWq4M,3258
+unagi/fileapi/__init__.py,sha256=T-zM8Bc3r057QdkIfirjzLkVhZP2MAC4ytYsxwqtt44,330
+unagi/fileapi/fileapi.py,sha256=8lEadS3UE22dKGf4Ks_FAFKDiMHm6OFp437QQh8avuw,10279
+unagi/main.py,sha256=yos3Gppe5-Lgffd-bTSVje-8ReN4i-JIiAGtw7kigEE,271
+unagi_tools-0.1.0.dist-info/METADATA,sha256=9S8yBM7EFtBb2fZ3yala_xcLT8ZAsbqWbUQLiSxSfIk,600
+unagi_tools-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+unagi_tools-0.1.0.dist-info/RECORD,,
