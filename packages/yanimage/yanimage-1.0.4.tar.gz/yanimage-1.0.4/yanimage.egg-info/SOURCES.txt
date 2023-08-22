@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+yanimage/Download.py
+yanimage/Parser.py
+yanimage/__init__.py
+yanimage.egg-info/PKG-INFO
+yanimage.egg-info/SOURCES.txt
+yanimage.egg-info/dependency_links.txt
+yanimage.egg-info/top_level.txt
