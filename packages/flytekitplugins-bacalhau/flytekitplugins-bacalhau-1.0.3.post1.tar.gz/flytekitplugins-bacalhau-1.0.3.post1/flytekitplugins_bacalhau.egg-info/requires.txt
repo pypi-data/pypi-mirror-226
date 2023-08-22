@@ -1,0 +1,6 @@
+flytekit<=1.8.1,>=1.1.0b0
+bacalhau-sdk>=1.0.3
+dataclasses-json
+marshmallow
+marshmallow-dataclass
+marshmallow-enum>=1.5.1

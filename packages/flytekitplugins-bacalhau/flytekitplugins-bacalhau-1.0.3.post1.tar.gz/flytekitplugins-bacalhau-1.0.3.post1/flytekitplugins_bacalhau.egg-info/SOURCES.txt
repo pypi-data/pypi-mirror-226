@@ -1,0 +1,13 @@
+README.md
+setup.py
+flytekitplugins/bacalhau/__init__.py
+flytekitplugins/bacalhau/agent.py
+flytekitplugins/bacalhau/task.py
+flytekitplugins_bacalhau.egg-info/PKG-INFO
+flytekitplugins_bacalhau.egg-info/SOURCES.txt
+flytekitplugins_bacalhau.egg-info/dependency_links.txt
+flytekitplugins_bacalhau.egg-info/namespace_packages.txt
+flytekitplugins_bacalhau.egg-info/requires.txt
+flytekitplugins_bacalhau.egg-info/top_level.txt
+tests/test_agent.py
+tests/test_bacalhau.py
