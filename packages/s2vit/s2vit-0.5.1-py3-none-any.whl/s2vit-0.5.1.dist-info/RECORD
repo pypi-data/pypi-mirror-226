@@ -1,0 +1,11 @@
+s2vit/__init__.py,sha256=4eCSoGahyEnSSAHPQ9ILIoH-Rc3FFJ6B7HllBwRObIg,107
+s2vit/_version.py,sha256=5ce-0vz0PN22Gc_UNUXWlhud2UWGBBAZKhZPIdrr1wc,188
+s2vit/nn.py,sha256=-3U6LDCNQbXbFzRu1yp-bDcrp42_ZeOOuO3HnxOk9S4,1272
+s2vit/ops.py,sha256=neKObGLpNZq5CnCU8-3XzxZQauA0rCSveP5mWQ7Aywg,11031
+s2vit/transformer.py,sha256=Pxq3BWcNjB9fDpp7cNYYuSD-7VOqg5rMo-yZlaAIfvA,9354
+s2vit/utils.py,sha256=trLofcLG28Ab_QuBymDe_zU5SSXhNzKF1lcAEEIFRTE,410
+s2vit-0.5.1.dist-info/LICENSE,sha256=qoiD2llX_8vsDuOLbhHuqxWq6dz5H9H7von-a_X52kk,1070
+s2vit-0.5.1.dist-info/METADATA,sha256=LPabx0TNHdFMHOlzClLiLkZYpyAoeOllTeztJN780dU,5539
+s2vit-0.5.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+s2vit-0.5.1.dist-info/top_level.txt,sha256=d1fxjrzExCG6EDuD-5yNmVCupV-Fmg4amJuJeuj-u7U,6
+s2vit-0.5.1.dist-info/RECORD,,
