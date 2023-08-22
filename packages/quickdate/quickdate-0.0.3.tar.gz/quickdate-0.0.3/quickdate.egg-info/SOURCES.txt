@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+quickdate/__init__.py
+quickdate/quickdate.py
+quickdate.egg-info/PKG-INFO
+quickdate.egg-info/SOURCES.txt
+quickdate.egg-info/dependency_links.txt
+quickdate.egg-info/requires.txt
+quickdate.egg-info/top_level.txt
