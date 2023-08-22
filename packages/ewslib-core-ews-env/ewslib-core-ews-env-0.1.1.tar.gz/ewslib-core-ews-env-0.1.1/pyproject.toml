@@ -1,0 +1,205 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+# --------------------------------------------------
+# Build system
+# --------------------------------------------------
+
+[tool.setuptools]
+include-package-data = true
+
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+# https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#finding-simple-packages
+[tool.setuptools.packages.find]
+namespaces = true # to disable scanning PEP 420 namespaces (true by default)
+where = ["src"]   # list of folders that contain the packages (["."] by default)
+
+# package names should match these glob patterns (["*"] by default)
+include = ["ewslib_core*"] # Future me: Keep the * !!!
+
+# Ignored modules go here
+exclude = ["*hidden*"]
+
+
+[tool.setuptools.package-data]
+"*" = ["*"]
+
+# exclude packages matching these glob patterns (empty by default)
+# https://stackoverflow.com/questions/72464123/exclude-tests-files-from-setuptools-find-packages
+# https://github.com/pypa/setuptools/issues/3260
+[tool.setuptools.exclude-package-data]
+"*" = ["*.ignore", "~*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ewslib_core.ews_env.version.VERSION" }
+readme = { file = ["README.md"], content-type = "text/markdown" }
+
+
+# --------------------------------------------------
+# Build system
+# --------------------------------------------------
+
+
+[project]
+requires-python = ">=3.9"
+name = "ewslib-core-ews-env"
+authors = [
+    { name = "EWS Consulting - Testing Center", email = "f.farella@ews-consulting.at" },
+]
+description = "EWS Library Environnemnt  management"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+license = { file = "LICENSE" }
+dynamic = ["version", "readme"]
+dependencies = [
+    "tomli; python_version < '3.11'",
+    "typing-extensions; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = 'https://github.com/EWS-Consulting-Private/ewslib-core-ews-env'
+Documentation = 'http://cm.ews.local/mb/ewslib-core-ews-env'
+Source = 'https://github.com/EWS-Consulting-Private/ewslib-core-ews-env'
+
+
+[tool.black]
+color = true
+line-length = 120
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+known_first_party = ['ewslib_core', 'ewslib_core.ews_env']
+
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+include = [
+    "src/ewslib_core/ews_env/*.py",
+    "tests/*.py",
+    "scripts/*.py",
+    "pyproject.toml",
+    "noxfile.py",
+]
+exclude = [".venv", ".nox", "/usr/lib"]
+# extend-select = ['Q', 'RUF100', 'C90']
+flake8-quotes = { inline-quotes = 'double', multiline-quotes = 'double', docstring-quotes = "double", avoid-escape = false }
+mccabe = { max-complexity = 14 }
+extend-select = [
+    "A",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "SIM",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = []
+
+[tool.ruff.isort]
+combine-as-imports = true
+known-first-party = ['ewslib_core']
+
+[tool.ruff.per-file-ignores]
+"tests/*.py" = ["S101"]
+"noxfile.py" = ["EM101", "EM102", "S602"]
+"ews_helpers.py" = ["S602"]
+"src/ewslib_core/ews_env/**/__init__.py" = ["F401", "F403"]
+
+[tool.pyright]
+# https://microsoft.github.io/pyright/#/configuration?id=main-configuration-options
+include = ["src", "tests", "noxfile.py"]
+venvPath = ".venv"
+pythonVersion = "3.99"
+pythonPlatform = "Linux"
+
+[tool.codespell]
+# https://github.com/codespell-project/codespell
+skip = "*.c,"
+quiet-level = 3
+
+
+[tool.pip-tools]
+allow-unsafe = false
+annotate = true
+emit-find-links = false
+# emit-header = false
+emit-index-url = false
+emit-options = true
+emit-trusted-host = false
+generate-hashes = false
+# index-urls = index-urls
+strip-extras = true
+# trusted-hosts = trusted-hosts
+
+[tool.pytest.ini_options]
+addopts = "--log-cli-level=INFO -v -sv -n 4"
+testpaths = 'tests'
+python_files = 'test_*.py'
+python_functions = 'test_*'
+xfail_strict = true
+filterwarnings = [
+    'error',
+    'ignore:np.find_common_type is deprecated.*:DeprecationWarning',
+    'ignore:path is deprecated.*:DeprecationWarning:',
+    'ignore:DeprecationWarning',
+    'ignore:unclosed.*:ResourceWarning',
+]
+
+
+[tool.coverage.run]
+parallel = true
+source = ['src/ewslib_core/ews_env']
+omit = []
+branch = true
+context = '${CONTEXT}'
+
+[tool.coverage.report]
+show_missing = true
+precision = 2
+fail_under = 0
+exclude_lines = [
+    'pragma: no cover',
+    'raise NotImplementedError',
+    'if TYPE_CHECKING:',
+    'if typing.TYPE_CHECKING:',
+    'typing.assert_never',
+    'assert_never',
+]
+
+[tool.coverage.paths]
+source = ['src/ewslib_core/ews_env/*']

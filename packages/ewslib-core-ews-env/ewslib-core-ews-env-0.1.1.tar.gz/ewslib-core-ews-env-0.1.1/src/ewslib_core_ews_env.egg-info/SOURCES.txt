@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ewslib_core/ews_env/__init__.py
+src/ewslib_core/ews_env/version.py
+src/ewslib_core_ews_env.egg-info/PKG-INFO
+src/ewslib_core_ews_env.egg-info/SOURCES.txt
+src/ewslib_core_ews_env.egg-info/dependency_links.txt
+src/ewslib_core_ews_env.egg-info/requires.txt
+src/ewslib_core_ews_env.egg-info/top_level.txt
+tests/test_version.py
