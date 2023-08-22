@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "unagi-tools"
+version = "0.1.0"
+description = ""
+authors = ["Parth Patel <parthspatel.nj@gmail.com>"]
+readme = "README.md"
+include = ["VERSION", "README.md"]
+packages = [{ include = "unagi" }]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fsspec = { version = "^2023.6.0"}
+gevent = "^23.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+mypy = "^1.5.1"
+flake8 = "^6.1.0"
+black = "^23.7.0"
+ipython = "^8.14.0"
+dunamai = "^1.18.0"
+commitizen = "^3.6.0"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"
+version_files = [
+    "VERSION",
+    "pyproject.toml:^version",
+    "unagi/__init__.py:^__version",
+]
+update_changelog_on_bump = true
+changelog_incremental = true
+bump_message = "bump: $current_version → $new_version"
+
+
+
