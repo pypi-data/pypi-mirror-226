@@ -1,0 +1,11 @@
+animeapi/__init__.py,sha256=o2FQZNUJRUoaGF_EMI8EHAkIQo9L9hKwzN3SQGvKtNc,831
+animeapi/animeapi.py,sha256=_9npdFh4lEXJJNWL65wp31aZE0JG0WC_pLwzRgilSXg,10383
+animeapi/asyncaniapi.py,sha256=yIKHAyAOQNs5pjI0VBckkTxLF_4PidKzN6Ii-KjBCTY,13306
+animeapi/converter.py,sha256=MAmIbOWVhNLB-11L1EShi1ITduPaGe3-Mw5WVlu9bKU,2333
+animeapi/excepts.py,sha256=ooDGayTJqLMxJ_eegML-4Ro6mlTNItspNjTtpBxfJxE,278
+animeapi/models.py,sha256=G2IKSMDGsiSZiwdbE1V-39P-koZsO6k6gEkxjQpyrq4,10569
+animeapi_py-3.4.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+animeapi_py-3.4.0.dist-info/METADATA,sha256=yEWPhwD2_Gr5murG1qeQSZByLuN9vFq55HCNm2LR8UA,6782
+animeapi_py-3.4.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+animeapi_py-3.4.0.dist-info/top_level.txt,sha256=91NHpWKdd7yjSr_mbUJMcbAX6VKtM8_s8QpnzhxxYIY,9
+animeapi_py-3.4.0.dist-info/RECORD,,
