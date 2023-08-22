@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: flytekitplugins-bacalhau
+Version: 1.0.3.post1
+Summary: My awesome plugin.....
+Home-page: https://github.com/flyteorg/flytekit/tree/master/plugins/flytekit-...
+Author: flyteorg
+Author-email: admin@flyte.org
+License: apache2
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: flytekit (<=1.8.1,>=1.1.0b0)
+Requires-Dist: bacalhau-sdk (>=1.0.3)
+Requires-Dist: dataclasses-json
+Requires-Dist: marshmallow
+Requires-Dist: marshmallow-dataclass
+Requires-Dist: marshmallow-enum (>=1.5.1)
+
+
+# Flytekit Bacalhau Plugin
+
+Bacalhau (https://github.com/bacalhau-project/bacalhau) is a platform for fast, cost efficient, and secure computation by running jobs where the data is generated and stored. With Bacalhau you can streamline your existing workflows without the need of extensive rewriting by running arbitrary Docker containers and WebAssembly (wasm) images as tasks.
+
+To install the plugin, run the following command:
+
+```bash
+$ pip install flytekitplugins-bacalhau
+```
