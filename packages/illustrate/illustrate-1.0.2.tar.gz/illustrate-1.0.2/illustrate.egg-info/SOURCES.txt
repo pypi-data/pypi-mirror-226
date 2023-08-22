@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+illustrate/__init__.py
+illustrate/bot.py
+illustrate/database.py
+illustrate/hook.py
+illustrate/scrape.py
+illustrate/ui.py
+illustrate.egg-info/PKG-INFO
+illustrate.egg-info/SOURCES.txt
+illustrate.egg-info/dependency_links.txt
+illustrate.egg-info/requires.txt
+illustrate.egg-info/top_level.txt
