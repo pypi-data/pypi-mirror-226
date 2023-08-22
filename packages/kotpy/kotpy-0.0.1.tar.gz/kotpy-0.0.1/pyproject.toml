@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["kotpy"]
+
+[project]
+name = "kotpy"
+dynamic = ["version"]
+authors = [
+    { name = "Galarzaa90", email = "allan.galarza@gmail.com" }
+]
+description = "A collection of functions implementing built-in and popular Kotlin extensions in Python."
+requires-python = '>=3.8'
+readme = "README.md"
+
+
+[tool.setuptools.dynamic]
+version = { attr = "kotpy.__version__" }

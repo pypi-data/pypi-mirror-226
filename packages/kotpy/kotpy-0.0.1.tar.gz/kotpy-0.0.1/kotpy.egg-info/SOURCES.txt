@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+kotpy/__init__.py
+kotpy/collections.py
+kotpy.egg-info/PKG-INFO
+kotpy.egg-info/SOURCES.txt
+kotpy.egg-info/dependency_links.txt
+kotpy.egg-info/top_level.txt
+tests/test_collections.py
