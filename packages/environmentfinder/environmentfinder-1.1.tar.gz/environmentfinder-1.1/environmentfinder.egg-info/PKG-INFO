@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: environmentfinder
+Version: 1.1
+Summary: Tool for finding atomic environments in crystal structures
+Home-page: http://github.com/PabloPiaggi/EnvironmentFinder
+Author: Pablo Piaggi
+Author-email: ppiaggi@princeton.edu
+License: GNU General Public License v3.0
+License-File: LICENSE
