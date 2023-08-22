@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+seaborn
+matplotlib
+adjustText
+gseapy
+bio
+scikit-learn
+bayesian-optimization
+ruamel-yaml
