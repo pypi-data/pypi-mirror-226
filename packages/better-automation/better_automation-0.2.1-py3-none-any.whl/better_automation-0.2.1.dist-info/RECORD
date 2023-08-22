@@ -1,0 +1,15 @@
+better_automation/__init__.py,sha256=28Yiwhg2krOhnx4wa84PfzOy0K6UheRpVJjOaO4PXJ0,279
+better_automation/discord/__init__.py,sha256=ANBU6l-330B92LravU6A064O8Is1tsvvke7ulHy3VGA,66
+better_automation/discord/api.py,sha256=qNx_h1H5oTO8cIqvcd-v5VdXHPVfN1Q2P-mnyamkij8,1537
+better_automation/http.py,sha256=v44JMjspIQ1XcdidRfblIqjAUjxBde2EeFFHm39qd5E,1161
+better_automation/imap.py,sha256=_lsyb-QPjV3ig9Q3zPqlmlSxuAvjZZJTLxXOQY7TtpA,2455
+better_automation/process.py,sha256=cxTeM8VltBniESkhkvoLlwyGiKwQ2_nwgl2gf_etKtM,1223
+better_automation/twitter/__init__.py,sha256=E-UdzJQUVl9Eg4Btrc3Shb1QHuiDmnevHq6xLviG-NQ,103
+better_automation/twitter/api.py,sha256=xat9HKF9qazibrv5oHez5-Q7hS8UbAv2XqfUD63fOpA,21922
+better_automation/twitter/errors.py,sha256=qPaOxw5roNA44dqW1mOhe2u2lLHdWMmkQK5PRz5w07I,2904
+better_automation/utils/__init__.py,sha256=Us1oGk1BbNmWNd4I1uCAfZWYWE2dSSegKKAIsM2Snwg,349
+better_automation/utils/file.py,sha256=Tx7YO0_amkDJOq-nqriFyjhRS69ADr_mXJec5m0e9Ds,1120
+better_automation/utils/other.py,sha256=5K85oKWO74H6kdJnGh-N3Xu9aAOwX-odaCl8-G_gySc,625
+better_automation-0.2.1.dist-info/METADATA,sha256=QWPqFy19r7IS_Hm-thP1Cciw9-CUVcZA6RQK7Ml27-E,2688
+better_automation-0.2.1.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+better_automation-0.2.1.dist-info/RECORD,,
