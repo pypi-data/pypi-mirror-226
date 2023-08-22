@@ -1,0 +1,14 @@
+bg-atlasapi
+bg_space
+brainglobe-utils
+napari
+napari-ndtiffs
+napari-plugin-engine>=0.1.4
+tifffile>=2020.8.13
+
+[dev]
+black
+gitpython
+pre-commit
+pytest
+pytest-cov
