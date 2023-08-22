@@ -1,0 +1,3 @@
+[console_scripts]
+mcdc=multicloud_data_catalogue.main:app
+

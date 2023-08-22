@@ -1,0 +1,9 @@
+multicloud_data_catalogue/main.py,sha256=nG6X6lnR020_p1wFtAX7n_6BKkuXs9nn5yMrcmilU6I,168
+multicloud_data_catalogue/providers/aws.py,sha256=cvhcpWFECvKdMAt9iGN3DnRoiGvGid09lkdPcbYsyUU,197
+multicloud_data_catalogue/providers/aws_storage/dynamo.py,sha256=DGwBjSPwTCmbb7_OZk4cyMHrK_2VgWKfPOJMs8BtWTM,6333
+multicloud_data_catalogue/providers/aws_storage/rds.py,sha256=I0X8ETC_KhsPdTRJbRzbBB7r-HAEkrDiQAoySvAU6OE,234
+multicloud_data_catalogue-0.1.0.dist-info/LICENSE,sha256=BJajCOsqy76PWzCTHCKDG2u7gwTiPdMSZVlBHKidDMw,1069
+multicloud_data_catalogue-0.1.0.dist-info/METADATA,sha256=oC6gOd8uuI1oGri4CwxQzCySOsA8HiBgv_2A_1GKuw0,894
+multicloud_data_catalogue-0.1.0.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+multicloud_data_catalogue-0.1.0.dist-info/entry_points.txt,sha256=lzwvLJHCNw1J115O3F2bwHnud_rmiPXNlGXv6DXs6aw,59
+multicloud_data_catalogue-0.1.0.dist-info/RECORD,,
