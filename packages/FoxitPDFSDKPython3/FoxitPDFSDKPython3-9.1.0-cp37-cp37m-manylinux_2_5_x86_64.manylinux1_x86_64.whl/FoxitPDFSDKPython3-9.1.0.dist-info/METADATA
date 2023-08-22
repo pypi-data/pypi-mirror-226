@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: FoxitPDFSDKPython3
+Version: 9.1.0
+Summary: Foxit PDF SDK For Python3
+Home-page: https://www.developers.foxit.com
+Author: Foxit Software Inc.
+Author-email: support@foxitsoftware.com
+License: Other/Proprietary License (Commercial)
+Keywords: PDF SDK,PDF Library,PDF render,PDF view,PDF print,PDF Edit,PDF convert
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/plain
+License-File: legal.txt
+
+Foxit PDF SDK v9.1.0  Release Date: 22 Aug. 2023
+==================================================================
+This is a minor release
+
+____New Features/Enhancements____
+* Set the appearance before start signing.
+	Relevant API: bool foxit::pdf::Signature::GenerateAppearance()
+* Support adding signature with shared dictionary.
+	Relevant API: foxit::pdf::PDFPage::AddSignatureWithExistedVDict()
+* Allowing incremental saving document before calling Signature::StartSign().
+	Relevant API: void Foxit::pdf::Signature::EnableIncrementalSaveForFirstSigning().
+* Modify the appearance of the existing unsigned paging seal signatures before signing.
+	Relevant API: foxit::pdf::Signature::GetPagingSealSignature()
+* Support adding paging signatures with shared dictionary.
+	Relevant API: Foxit::pdf::PagingSealConfig::PagingSealConfig () 
+* Ignores full-width characters search.
+	Relevant API: Foxit::pdf::TextSearch::SearchFlags()
+* Delete invalid PDF indexes.
+	Relevant API: Foxit::pdf::FullTextSearch:: StartUpdateIndex ()
+* Support new PDF JavaScript objects including "Doc.pageTransition,Doc.templates,Span and Soap".
+* [Office2PDF] Control VBA code execution during Office2PDF on Windows.
+	Relevant API: foxit::addon::conversion::Word2PDFSettingData::Word2PDFSettingData()
+	Relevant API: foxit::addon::conversion::Word2PDFSettingData::Set()
+* [HTML2PDF] Control the converter environment and the IP blacklist.
+	Relevant API: foxit::addon::conversion::HTML2PDFSettingData::HTML2PDFSettingData()
+	Relevant API: foxit::addon::conversion::HTML2PDFSettingData::Set()
+* Support Multiline tiled watermarks with options.
+	Relevant API: foxit::pdf::PDFDoc::StartAddTiledWatermark()
+* Enable auto font size for the redaction overlay text.
+	Relevant API: foxit::pdf::annots::Redact::EnableAutoFontSize()     
+* Support retrieving suspect results when performing OCR.
+	Relevant API: foxit::addon::ocr::OCR::GetOCRSuspectsInfo()
+* Save document without updating datetime metadata.
+	Relevant API: PDFDoc::SaveAs()
+	Relevant API: PDFDoc::StartSaveAs()
+* Enable text rotation when adding text
+	Relevant API: PDFPage.AddText()
+* Added new objects-level classes for traversing the PDF structure tree.
+	New head file: fs_pdfstructtree.h
+* Added Verify functionality to the PDFCompliance.
+	Relevant API: foxit::addon::compliance::PDFCompliance::Verify()
+* Added image-to-PDF conversion functions with file path and stream options.
+	Relevant API: foxit::addon::conversion::Convert::FromImage()
+* Link annotation supports JavaScript actions.
+	Relevant API: foxit::pdf::annots::Link::ExecuteJavaScriptAction()
+* Added new functions to reset default value for XFA Widget.
+	Relevant API: foxit::addon::xfa::XFAWidget::SetDefaultValue()
+	Relevant API: foxit::addon::xfa::XFAWidget::GetDefaultValue()
+* Added PDF Print interface on Linux
+	Relevant API: foxit::common::Renderer::Renderer()
+* The Java Library supports for Linux ARM architectures.
+* Updated the compliance lib to enhance its overall processing.
+* Enhanced Windows C library support, addressing compatibility and errors.
+
+____Demo____
+* New demonstration projects for both Visual Studio 2019 and 2022.
+
+____Bug Fixes____
+1.	Fixed a problem where certain Link Annotations retrieved empty Destinations in specific documents.
+2.	Fixed the appearance reset issue for Circle annotations, where some circle edges were being clipped after resetting.
+3.	Rectified the rendering issue of note annotations that were not displayed correctly in a specific file.
+4.	Fixed image compression process that led to image loss due to pauses during compression.
+5.	Fixed an issue in which running office2pdf on Linux environment resulted in an error: "[Unknown error]: any unknown error occurs."
+6.	[Java] Fixed a crash that occurred when invoking getEditableHeaderFooter during the addition of headers/footers in a document with pre-existing ones.
+7.	Fixed a situation where no exception was thrown when using PDFDoc.SaveAs to overwrite the original PDF file.
+8.	Fixed the generation of extra content in added page headers and footers when the last two characters of the content were "<<".
+9.	[Java] Rectified an issue where StructTreeEntity.getPage returned incorrect type.
+10.	Fixed text garbling issue when using PDFDoc.GetPageText to retrieve text from specific documents on Linux.
+11.	Fixed the issue where an e_ErrUnsupported exception was thrown when rendering PDF pages with transparency and DIBFormat set to e_DIBCmy
+12.	PDFDoc::StartLoad can now accurately retrieve the loading progress during document loading.
+13.	Resolved the problem on Android systems where automatic multiplication calculation for form fields produced incorrect results.
+14.	Rectified the unexpected outcome of AdditionalAction::DoJSAction execution.
+15.	Corrected the inability to clear a password-protected text field using JavaScript.
+16.	Corrected the misalignment of values in a list box after selecting and refocusing it in ViewDemo.
+17.	Resolved a crash issue triggered by calling Control.GetWidget() for specific files.
+18.	[Java] Addressed an error that occurred when using Image.saveAs with a path containing Chinese characters: "File cannot be found."
+19.	Addressed an error with Page.AddImage that occurred with large TIF files.
+20.	Rectified the issue of extra gray squares appearing when inserting a barcode image using AddImageFromFilePath.
+21.	Fixed SDK C++ library's incompatibility on Linux ArmV8, ensuring proper functionality.
+22.	Fixed a Linux OCR engine exception caused by insufficient RAM usage.
+23.	Resolved an issue where text overlap occurred in OCR output for skewed original documents.
+24.	Addressed an issue where ComplianceModule threw unhandled exceptions when converting an OCRed PDF document to PDF/A.
+25.	Fixed a crash that occurred when converting specific PDF files to PDF/A format.
+26.	Fixed an AccessViolationException that occurred when converting a specific PDF to PDF/A.
+27.	Resolved an issue where Control.GetWidget() took a long time for XFA files.
+28.	[PrintManager] Fixed incorrect print status returned by GetPrintJobStatus.
+29.	Fixed an issue where printing specific documents resulted in black blocks appearing in some areas of the printout.
+30.	Resolved encoding issue with FullTextSearch, enabling proper search of Chinese text.
+31.	Fixed FullTextSearch problem where it failed to work for already indexed files without index updates.
+
