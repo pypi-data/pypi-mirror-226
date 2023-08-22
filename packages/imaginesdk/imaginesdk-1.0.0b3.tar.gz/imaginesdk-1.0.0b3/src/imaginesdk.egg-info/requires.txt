@@ -1,0 +1,5 @@
+
+[embeddings]
+numpy
+Pillow
+requests
