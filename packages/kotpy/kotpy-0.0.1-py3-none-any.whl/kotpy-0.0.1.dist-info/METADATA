@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kotpy
+Version: 0.0.1
+Summary: A collection of functions implementing built-in and popular Kotlin extensions in Python.
+Author-email: Galarzaa90 <allan.galarza@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# KotPy
+A collection of functions implementing built-in and popular Kotlin extensions in Python.
