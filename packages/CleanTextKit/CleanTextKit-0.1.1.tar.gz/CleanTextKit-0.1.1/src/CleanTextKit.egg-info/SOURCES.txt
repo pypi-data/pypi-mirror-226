@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+src/CleanTextKit.egg-info/PKG-INFO
+src/CleanTextKit.egg-info/SOURCES.txt
+src/CleanTextKit.egg-info/dependency_links.txt
+src/CleanTextKit.egg-info/requires.txt
+src/CleanTextKit.egg-info/top_level.txt
