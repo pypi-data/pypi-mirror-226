@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: fano-oss-py-sdk
+Version: 7.1.18
+Summary: A fork of minio-py with some modifications.
+Author: Fano Labs
+Author-email: patrick.wu@fano.ai
+License: Apache-2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# fano-oss-py-sdk
+
+This is a fork of minio-py.
+
+## Difference
+
+- Add `external_host` and `contextual_path` to `Minio` constructor.
+- Add `is_external` to `presigned_get_object` and `presigned_put_object` method.
+
+
+Following is an example code:
+```
+client = Minio(
+    "192.168.4.19:9000",
+    access_key="accesskey",
+    secret_key="secretkey",
+    secure=False,
+    external_host="https://sample.fano.ai",
+    contextual_path=True,
+)
+
+# For external link
+result = client.presigned_get_object("example", "test", is_external=True)
+# for internal link
+result = client.presigned_get_object("example", "test")
+```
