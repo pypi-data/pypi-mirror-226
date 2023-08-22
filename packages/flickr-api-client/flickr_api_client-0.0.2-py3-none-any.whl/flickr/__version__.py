@@ -1,0 +1,5 @@
+__title__ = "flickr-api-client"
+__description__ = "Flickr API"
+__version__ = "0.0.2"
+__author__ = "Trevor Hobenshield"
+__license__ = "MIT"
