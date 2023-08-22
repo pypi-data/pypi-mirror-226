@@ -1,0 +1,2 @@
+rabbitmqresources
+scripts
