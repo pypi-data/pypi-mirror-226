@@ -1,0 +1,10 @@
+hxri/BodyDetector.py,sha256=U_R1h6wxEgblK2f4lKp7Q8gWJeOCAS4ubjAvAXuB3pg,5691
+hxri/FaceDetector.py,sha256=yhcica3nW71Uj0LrVGfJeg2d1lW8txs-1wv8N0XMKrE,2502
+hxri/HandDetector.py,sha256=0C_QwAL0YqTLVvwbMq1kiXiwFnZcj6YKw9tjJR03YiI,10791
+hxri/ObjectDetector.py,sha256=GT1hgMyBLMm5OWAGPmgCjwGt8JQo93F23s6tNKgmEXc,9400
+hxri/__init__.py,sha256=M074Fcb9hCilkDEuFEWLSRcRKfzNdZ4IQtptmZSvBsg,199
+hxri-0.0.0.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+hxri-0.0.0.3.dist-info/METADATA,sha256=yA9gPlUSAJpp9jkg3zlovfK42gb96YliLXVd6XdAbRE,1124
+hxri-0.0.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+hxri-0.0.0.3.dist-info/top_level.txt,sha256=l1jnuzGWACFPrLFZ3STQj25noLdlxYNI8U9EopHBKnU,5
+hxri-0.0.0.3.dist-info/RECORD,,
