@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+setup.py
+nik-video-creator/__init__.py
+nik-video-creator/build_screen.py
+nik-video-creator/moveL2R.py
+nik-video-creator/moveR2L.py
+nik-video-creator/video_creator.py
+nik_video_creator.egg-info/PKG-INFO
+nik_video_creator.egg-info/SOURCES.txt
+nik_video_creator.egg-info/dependency_links.txt
+nik_video_creator.egg-info/requires.txt
+nik_video_creator.egg-info/top_level.txt
