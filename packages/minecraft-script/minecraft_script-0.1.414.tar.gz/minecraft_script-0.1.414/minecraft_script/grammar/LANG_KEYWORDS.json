@@ -1,0 +1,11 @@
+{
+  "var"      : "VAR_DEFINE",
+  "const"    : "CONST_DEFINE",
+  "set"      : "SET_DEFINE",
+
+  "function" : "FUNC_DEFINE",
+  "return"   : "TT_RETURN",
+
+  "true"     : "TT_BOOLEAN",
+  "false"    : "TT_BOOLEAN"
+}
