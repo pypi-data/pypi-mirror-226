@@ -1,0 +1,6 @@
+LICENSE.txt
+setup.py
+solacalc.egg-info/PKG-INFO
+solacalc.egg-info/SOURCES.txt
+solacalc.egg-info/dependency_links.txt
+solacalc.egg-info/top_level.txt

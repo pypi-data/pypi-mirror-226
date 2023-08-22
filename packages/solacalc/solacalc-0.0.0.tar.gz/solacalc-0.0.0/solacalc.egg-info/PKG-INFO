@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: solacalc
+Version: 0.0.0
+Summary: simple calc library
+Author: Asala Hussien
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
