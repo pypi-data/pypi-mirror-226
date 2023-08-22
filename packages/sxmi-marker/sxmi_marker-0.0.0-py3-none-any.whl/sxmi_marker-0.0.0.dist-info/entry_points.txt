@@ -1,0 +1,3 @@
+[console_scripts]
+sxmi-marker=sxmi_marker.cli:app
+

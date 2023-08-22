@@ -1,0 +1,12 @@
+sxmi_marker/ARUCO_DICT_7X7_1000.npz,sha256=BOcoQFiY76XENQQfrbLIxtvPJV6J83EiiYl3uo2mFlM,26866
+sxmi_marker/__init__.py,sha256=lTl1ktoxwsT01xp2x3BfnwTxl71eH-MUKH7bqCbBPVY,27
+sxmi_marker/cli.py,sha256=pDk0NjyxdFkX10EpgK5M-p8LmiPnispu7u5r2BVOl68,1109
+sxmi_marker/file_handler.py,sha256=KiOxsuHkWwL8TgEtwWTPs1vG6sqaog6VCtdO3VC7eNQ,840
+sxmi_marker/identifier_handler.py,sha256=rTWR54IOjjZZYpQOqihB4va-6DlHF8evsb_OWgork6I,859
+sxmi_marker/marker_generator.py,sha256=sCnU4G_DKFkCwY4QvtI4QL2KpmGWsEKVlSdC0KcfMz0,2387
+sxmi_marker/marker_workflow.py,sha256=8lSuZW1WYFepuZr69HRSBvOfw04Relc4O7CIlsRdveA,1257
+sxmi_marker/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sxmi_marker-0.0.0.dist-info/METADATA,sha256=mdJP-X8SLqC2ItYb1itx5JiFjzADeZ5_hLS6lDDD2OY,4234
+sxmi_marker-0.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+sxmi_marker-0.0.0.dist-info/entry_points.txt,sha256=VCefYyV38ol7yL8Rpg_Aa98dtWHUTaoq_zfnXDvaWHg,51
+sxmi_marker-0.0.0.dist-info/RECORD,,
