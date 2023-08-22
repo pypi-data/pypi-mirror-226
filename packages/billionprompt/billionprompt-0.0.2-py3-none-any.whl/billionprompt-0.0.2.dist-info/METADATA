@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: billionprompt
+Version: 0.0.2
+Summary: BillionPrompt Python SDK
+Home-page: 
+Author: ShanHai AI
+Author-email: xiexiaofeng@youxiqun.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# BillionPrompt Python SDK
+
+BillionPrompt Python SDK can use python to call the functions of [BillionPrompt](https://billionprompt.com ) products, including prompt writing, prompt retrieval and image creation.
+
+## Installing By PIP
+
+```bash
+$ pip install billionprompt
+```
+
+## API secretkey
+
+To generate an API secretkey, you need to go to our website: [BillionPrompt](https://billionprompt.com)
+
+## Example usage
+
+
+Import the SDK and instantiate a new client with your authentication secrets:
+
+```python
+from billionprompt import ImageClient,RetrivalClient,PromptClient
+
+secretkey = {"Authorization":"PUT YOUR KEY HERE"}
+promptclient = PromptClient(headers=secretkey)
+```
+
+Description continued:
+
+```python
+text = "一个女孩穿着白色的衣服"
+response = ""
+for output in promptclient.fcDict(text=text):
+    response += output
+    print(response)
+```
+
+Convert Description to Prompt:
+
+```python
+text = "一个女孩穿着白色的衣服"
+response = promptclient.descToPrompt(prompt=text)
+print(",".join(response))
+```
+
+Prompt continued:
+
+```python
+text = "1girl,long hair,white clothes"
+response = promptclient.promptContinu(text=text)
+print(",".join(response))
+```
+
+More examples can be found in [examples.py](./examples.py).
