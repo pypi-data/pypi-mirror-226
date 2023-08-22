@@ -1,0 +1,12 @@
+LICENSE
+README.md
+glm.c
+main.c
+ridge.c
+setup.py
+util.c
+data_significance.egg-info/PKG-INFO
+data_significance.egg-info/SOURCES.txt
+data_significance.egg-info/dependency_links.txt
+data_significance.egg-info/requires.txt
+data_significance.egg-info/top_level.txt
