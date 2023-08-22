@@ -1,0 +1,14 @@
+LICENSE,sha256=E2SZQ-S4Rzwhj-mjzNTsnEuuvFQl3McLN-TDTdAfzp0,1060
+minecraft_object_utils/__init__.py,sha256=sVeV6LbsogLDYmdOIGRxIKJeSGT-JXgwGRtRt44XbyQ,377
+minecraft_object_utils/block_factory.py,sha256=btcKk3VSitKuxua7twUsG1i5P2OtYPhKmTcvaZ9sBN0,5214
+minecraft_object_utils/data/minecraft-1.20-block.toml,sha256=x-U6iPdajzYYlMVPUaBur8FbPpQFBN5mVp5jashLN3I,191633
+minecraft_object_utils/data/minecraft-1.20-entity.toml,sha256=351v2AygcFHNDZfQSHsOJnfwF8RlS8EBZ2XDYzNDosE,1442
+minecraft_object_utils/data/minecraft-1.20-item.toml,sha256=2AyaoLIOvJXio5Dok9aGboNd_VOJZJyp8nBS5qt9PdM,6525
+minecraft_object_utils/entity_factory.py,sha256=xc0jbF7tA252WQ5sUIbDKGFFlCr7hvZmL-26VBJo-oY,3170
+minecraft_object_utils/item_factory.py,sha256=DWy_li0uTdOVoYHL09wuVdDV6MdMOGeJ0PfJpwONCX8,3179
+minecraft_object_utils/minecraft_object_factory.py,sha256=7TKuYK9qUdDdE00YBpUUlu141h_JJT71tUiM3IZQPWM,1259
+minecraft_object_utils/mod_info.py,sha256=wolZOSlQ33Egv0wPpGpkBFsixwigk8tuULXBM-VwAVk,726
+minecraft_object_utils-0.1.0.dist-info/LICENSE,sha256=E2SZQ-S4Rzwhj-mjzNTsnEuuvFQl3McLN-TDTdAfzp0,1060
+minecraft_object_utils-0.1.0.dist-info/METADATA,sha256=b5dDyEyf-SBKWpfbKuoFW__UfCXMshz-Ji7VaQ7ZBHY,5169
+minecraft_object_utils-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+minecraft_object_utils-0.1.0.dist-info/RECORD,,
