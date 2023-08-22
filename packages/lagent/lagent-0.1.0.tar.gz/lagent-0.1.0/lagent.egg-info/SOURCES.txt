@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+lagent.egg-info/PKG-INFO
+lagent.egg-info/SOURCES.txt
+lagent.egg-info/dependency_links.txt
+lagent.egg-info/requires.txt
+lagent.egg-info/top_level.txt
+requirements/docs.txt
+requirements/optional.txt
+requirements/runtime.txt
