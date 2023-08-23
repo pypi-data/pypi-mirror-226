@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: oc-checksumsworker-mongo
+Version: 0.1.2
+Summary: Checksums worker for Distributives Mongo API
+Requires-Python: >=3.7
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: oc-checksumsq >=10.2.3
+Requires-Dist: oc-cdtapi >=3.9.5
+Requires-Dist: requests
+
+Checksums worker for Distributives Mongo API
