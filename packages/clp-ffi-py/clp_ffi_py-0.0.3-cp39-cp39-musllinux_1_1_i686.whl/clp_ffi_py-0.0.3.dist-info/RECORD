@@ -1,0 +1,14 @@
+clp_ffi_py/wildcard_query.py,sha256=G3Y84RE6BlVGx-1hSBbrLRjVjHrGS18R6hGh6Jo_t5k,1432
+clp_ffi_py/__init__.py,sha256=f6eNhh0Amp6z7P2Q-1S03NgAN0RyyoPNBnDm9eqG8R4,84
+clp_ffi_py/ir.cpython-39-i386-linux-gnu.so,sha256=TZKuAb2tEUpF3bnMb7Mru_q_OfeW6mDawNX3ufm75x8,6627237
+clp_ffi_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clp_ffi_py/readers.py,sha256=SSViTbC04CLeQP6ZXGSTsmyvOUrDZrIt7EVPUr3XuPU,4776
+clp_ffi_py/ir.pyi,sha256=WxsDAPhNHDDvcZwCX89j-zZJI_hmT1rL0DgxexCRac8,2963
+clp_ffi_py/utils.py,sha256=Ng8w8mSbLQ6vVHDob_jbpMpEJlHFnGAYZJw1Gh2zDtw,1130
+clp_ffi_py-0.0.3.dist-info/RECORD,,
+clp_ffi_py-0.0.3.dist-info/WHEEL,sha256=v-8vN2Z1wRfhJEi3opfRVfxTNuxBOvco3uYBajkO8Zw,109
+clp_ffi_py-0.0.3.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+clp_ffi_py-0.0.3.dist-info/METADATA,sha256=V_GR54AKjnTu2L0bxq10QBXXjn606K6pr3CBaovbFIg,10976
+clp_ffi_py-0.0.3.dist-info/top_level.txt,sha256=oJlQf7Hnz9l2Yum2B9WNNVFDMdgnuqibAtxChyZJtc8,11
+clp_ffi_py.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
+clp_ffi_py.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
