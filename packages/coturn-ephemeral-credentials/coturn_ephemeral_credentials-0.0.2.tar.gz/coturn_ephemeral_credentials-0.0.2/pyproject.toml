@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coturn_ephemeral_credentials"
+version = "0.0.2"
+authors = [
+  { name="p4irin", email="139928764+p4irin@users.noreply.github.com" },
+]
+description = "Generate time limited, ephemeral, long term credentials to authenticate usage of a coturn server."
+readme = "README.md"
+requires-python = ">=3.8.10"
+keywords = ["coturn", "turn", "stun", "ice"]
+dependencies = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build == 0.10.0",
+  "twine >= 4.0.2",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Homepage" = "https://github.com/p4irin/coturn_ephemeral_credentials"
+"Bug Tracker" = "https://github.com/p4irin/coturn_ephemeral_credentials/issues"
