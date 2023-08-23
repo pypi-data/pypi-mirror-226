@@ -1,0 +1,16 @@
+[package]
+name = "libsql-python"
+version = "0.0.8"
+edition = "2021"
+
+[lib]
+name = "libsql_experimental"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19.0"
+libsql = { git = "https://github.com/libsql/libsql/", rev = "fa76af21b90f1b40d542e67158289588500d2b00" }
+tokio = { version = "1.29.1", features = [ "rt-multi-thread" ] }
+
+[patch.crates-io]
+tonic = { git = "https://github.com/hyperium/tonic" }
