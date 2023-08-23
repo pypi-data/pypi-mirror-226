@@ -1,0 +1,14 @@
+import pyjwt
+
+class Whalegistic:
+
+	def __init__(this, public_key, private_key):
+		this.pri_key = private_key;
+		this.pub_key = public_key;
+		this.token = pyjwt.jwt.encode({ public_key: public_key}, private_key, algorithm="HS256");
+
+	def getBrands(this):
+		print(f'JWT TOKEN : {this.token}')
+
+
+test = Whalegistic('123', '321')
