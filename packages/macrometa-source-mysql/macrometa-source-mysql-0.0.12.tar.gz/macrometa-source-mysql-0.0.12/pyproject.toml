@@ -1,0 +1,72 @@
+[build-system]
+requires = ["poetry-core", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "macrometa-source-mysql"
+version='0.0.12'
+description = "Macrometa Source for extracting data from MySQL database."
+license = "Apache-2.0"
+authors = ["Macrometa <info@macrometa.com>"]
+keywords = [
+    "ELT",
+    "Connectors",
+    "Workflows",
+    "Macrometa",
+    "MySQL",
+    "MariaDB",
+    "Source"
+]
+classifiers = [
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.8',
+]
+packages = [
+    { include = "macrometa_source_mysql" },
+    { include = "sync_strategies", from = "macrometa_source_mysql" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<3.11"
+pipelinewise-singer-python = "1.2.0"
+c8connector = ">=0.0.32"
+prometheus-client = "0.16.0"
+PyMySQL = '>=1.1.0'
+mysql-replication = '0.43'
+pendulum = "2.1.2"
+plpygis = "0.2.1"
+tzlocal = "2.1"
+
+[tool.poetry.scripts]
+# CLI declaration
+macrometa-source-mysql = 'macrometa_source_mysql:main'
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/Macrometacorp/macrometa-source-mysql/issues"
+
+[tool.black]
+line-length = 88
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+skip = [
+    '.eggs', '.git', '.hg', '.mypy_cache', '.nox', '.pants.d', '.tox',
+    '.venv', '_build', 'buck-out', 'build', 'dist', 'node_modules', 'venv',
+]
+skip_gitignore = true
