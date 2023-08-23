@@ -1,0 +1,2 @@
+[console_scripts]
+mctrimmer = mc_trimmer.__main__:run
