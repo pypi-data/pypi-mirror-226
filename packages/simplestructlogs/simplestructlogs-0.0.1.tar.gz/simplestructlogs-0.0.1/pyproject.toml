@@ -1,0 +1,18 @@
+[project]
+name = "simplestructlogs"
+version = "0.0.1"
+authors = [
+  { name="Calvin Echols", email="calvin@cechols.com" },
+]
+description = "A simple wrapper around the standard logging library to support structured logging."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/CalvinE/simplestructlogs-py"
+"Bug Tracker" = "https://github.com/CalvinE/simplestructlogs-py/issues"
