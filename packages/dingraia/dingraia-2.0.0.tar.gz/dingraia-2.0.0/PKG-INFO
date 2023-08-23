@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: dingraia
+Version: 2.0.0
+Summary: A Dingtalk robot framework based on Python
+Home-page: https://github.com/MeiHuaGuangShuo/Dingraia
+Author: MeiHuaGuangShuo
+Author-email: meihuaguangshuo@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.7
