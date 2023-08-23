@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+votifier_py.egg-info/PKG-INFO
+votifier_py.egg-info/SOURCES.txt
+votifier_py.egg-info/dependency_links.txt
+votifier_py.egg-info/requires.txt
+votifier_py.egg-info/top_level.txt

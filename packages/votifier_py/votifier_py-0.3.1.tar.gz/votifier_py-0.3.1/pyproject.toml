@@ -1,0 +1,44 @@
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=22.12.0",
+    "pytest>=7.2.0",
+    "pytest-asyncio>=0.20.3",
+    "coverage>=7.0.3",
+    "aiovotifier>=1.0.6",
+]
+
+[project]
+name = "votifier_py"
+dynamic = ["version"]
+description = "A Python implementation of the Minecraft Votify project."
+authors = [
+    {name = "Dw4lt", email = "15569233-Dw4lt@users.noreply.gitlab.com"},
+]
+dependencies = [
+    "pydantic>=1.10.4",
+    "pycryptodome>=3.16.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.urls]
+Repository = "https://gitlab.com/Dw4lt/votifier_py"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+
+[tool.setuptools]
+py-modules = [
+    "votifier_py"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "votifier_py.__version__.__version__"}

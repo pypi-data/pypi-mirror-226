@@ -1,0 +1,2 @@
+pydantic>=1.10.4
+pycryptodome>=3.16.0
