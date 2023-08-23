@@ -1,0 +1,8 @@
+flask_deta/__init__.py,sha256=Mhh-aHho86zgm_9ca-reLzXFLqZ2QfIhLayp7qhl7Cg,93
+flask_deta/deta_base.py,sha256=pro0AA74GO0dJ3x4PD0hy9Lx-VdIsGlJB_uVI4GHGMo,10657
+flask_deta/deta_drive.py,sha256=5o5ZKS7LbZCJ82Tux5hneB8dmz0-TcOuebUAas1Wog4,8398
+flask_deta/validator.py,sha256=Wrnp29A3DDrCW3Qg6yCjWJV6kZ525tenn6tHiZOXSGE,1951
+flask_deta-0.2.1.dist-info/METADATA,sha256=I9I90BQl9huHUZFpRIq_EQduTX-_3HI3hpk6VfaIeRk,9600
+flask_deta-0.2.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+flask_deta-0.2.1.dist-info/licenses/LICENSE,sha256=Dniij74IVsUmkiWboorFZKoLVYuKjPw2O9nqJiZ139g,1486
+flask_deta-0.2.1.dist-info/RECORD,,
