@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: video-images-creator
+Version: 0.1.15
+Summary: Create Feature Videos.
+Home-page: 
+Author: Nikhil Sharma
+Author-email: nikhilsharma972@gmail.com
+License: BSD 2-clause
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+"Create videos from images using the 'video_images_creator' package. "
+"Easily generate dynamic videos for your project by following these steps:\n\n"
+"1. Install the package using pip:\n"
+"   $ pip install video_images_creator\n\n"
+"2. Import the 'video_creator' module and customize the images and feature names:\n"
+"   ```python\n"
+"   from video_images_creator import video_creator\n"
+"   feature_names = ['Splash Screen', 'Search']\n"
+"   image_urls = [\n"
+"       'URL_to_image_1',\n"
+"       'URL_to_image_2'\n"
+"   ]\n"
+"   video_creator.build(image_urls, feature_names)\n"
+"   ```\n\n"
+"3. Run your Python script to create the video inside the 'outputs' folder.\n"
