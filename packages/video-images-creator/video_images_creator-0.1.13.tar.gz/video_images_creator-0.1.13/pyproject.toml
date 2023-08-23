@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[metadata]
+description = """
+Steps:
+1. Install the package using pip.
+2. Copy the following code. You can change image_urls and feature_names as per your preferences.
+from video_images_creator import video_creator
+feature_names = ['Splash Screen', 'Search']
+image_urls = [
+    'https://buildernowassets.azureedge.net/builder-now-beta/uploads/staging/feature_figma/image/485/b478c7bd-84f8-48f2-81c7-3b9a5dbe7960.png',
+    'https://buildernowassets.azureedge.net/builder-now-beta/uploads/staging/feature_figma/image/485/b478c7bd-84f8-48f2-81c7-3b9a5dbe7960.png'
+]
+video_creator.build(image_urls, feature_names)
+3. Run your Python script and see the video inside the 'outputs' folder.
+"""
+
+
