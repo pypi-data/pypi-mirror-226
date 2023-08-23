@@ -1,0 +1,16 @@
+LICENSE
+LICENSE_GNU-GPLv3
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/objectproxypool/__init__.py
+src/objectproxypool/pool.py
+src/objectproxypool/shared_array.py
+src/objectproxypool/shared_memory_fix.py
+src/objectproxypool.egg-info/PKG-INFO
+src/objectproxypool.egg-info/SOURCES.txt
+src/objectproxypool.egg-info/dependency_links.txt
+src/objectproxypool.egg-info/requires.txt
+src/objectproxypool.egg-info/top_level.txt
+src/objectproxypool.egg-info/zip-safe
