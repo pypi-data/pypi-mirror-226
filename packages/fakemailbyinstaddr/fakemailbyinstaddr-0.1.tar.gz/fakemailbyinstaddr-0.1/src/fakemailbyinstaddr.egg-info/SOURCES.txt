@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/fakemailbyinstaddr/__init__.py
+src/fakemailbyinstaddr/tamsismail.py
+src/fakemailbyinstaddr.egg-info/PKG-INFO
+src/fakemailbyinstaddr.egg-info/SOURCES.txt
+src/fakemailbyinstaddr.egg-info/dependency_links.txt
+src/fakemailbyinstaddr.egg-info/requires.txt
+src/fakemailbyinstaddr.egg-info/top_level.txt
