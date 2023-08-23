@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pyxi_kafka_client.egg-info/PKG-INFO
+pyxi_kafka_client.egg-info/SOURCES.txt
+pyxi_kafka_client.egg-info/dependency_links.txt
+pyxi_kafka_client.egg-info/requires.txt
+pyxi_kafka_client.egg-info/top_level.txt

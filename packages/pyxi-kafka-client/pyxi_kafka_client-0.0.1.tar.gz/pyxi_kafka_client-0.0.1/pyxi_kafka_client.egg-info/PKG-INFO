@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyxi-kafka-client
+Version: 0.0.1
+Summary: A basic kafka client for python.
+Home-page: https://github.com/stiproot/py-kafka-client
+Author: Simon Stipcich
+Author-email: stipcich.simon@gmail.com
+License: MIT
+Keywords: python,package,kafka,beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# py-kafka-client
+A simple Kafka client module in Python to spin up consumers and producers.
