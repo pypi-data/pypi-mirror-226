@@ -1,0 +1,8 @@
+contractions
+numpy
+pandas
+nltk>=3.8
+textblob
+transformers
+xformers
+loguru
