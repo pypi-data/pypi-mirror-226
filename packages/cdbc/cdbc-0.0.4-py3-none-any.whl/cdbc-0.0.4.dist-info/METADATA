@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cdbc
+Version: 0.0.4
+Summary: Common Database Connector
+Home-page: https://github.com/friendlyblackwell/cdbc
+Author: Blackwell
+Author-email: friendlyblackwell@example.com
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: psycopg2-binary ==2.9.5
+Requires-Dist: redis
+
+# Common Database Connector
