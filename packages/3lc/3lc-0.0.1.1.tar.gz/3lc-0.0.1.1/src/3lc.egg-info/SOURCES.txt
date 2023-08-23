@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/3lc.egg-info/PKG-INFO
+src/3lc.egg-info/SOURCES.txt
+src/3lc.egg-info/dependency_links.txt
+src/3lc.egg-info/top_level.txt
+src/tlc/__init__.py
