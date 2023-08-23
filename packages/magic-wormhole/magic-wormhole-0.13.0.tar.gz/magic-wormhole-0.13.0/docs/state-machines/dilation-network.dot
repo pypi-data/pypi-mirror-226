@@ -1,0 +1,39 @@
+# this concentrates on a more "abstract" view of dilation, ignoring
+# the Python implementation and looking more directly at network
+# messages.
+#
+# The _same_ state-machine should work for both Leader and Follower
+# roles (which is nice) although some transitions simply won't be
+# ever used in one vs. the other ... small price, IMO
+#
+# It _would_ be really great if this could actually be expressed as a
+# kind of "diff" against the Automat produced diagrams ... e.g. most
+#  of it is "manager", chopped down.
+
+digraph {
+	graph [dpi=150 pack=true splines=true]
+	node [fontname="Source Sans Pro"]
+	edge [fontname="Source Sans Pro"]
+
+    WAITING -> WANTING [label="start\lsend: type=please"]
+
+    WANTING -> WANTING [label="receive: connection-hints\lignore"]
+    WANTING -> CONNECTING [label="receive: type=please\llisten"]
+
+    CONNECTING -> CONNECTING [label="send: type=connection-hints"]
+    CONNECTING -> CONNECTING [label="recveive: type=connection-hints\lattempt connections"]
+    CONNECTING -> CONNECTING [label="recveive: type=reconnect\lremove all connections"]
+
+    CONNECTING -> CONNECTED [label="L2 connection made"]
+
+    CONNECTED -> CONNECTED [label="receive: type=connection-hints\lignore"]
+    CONNECTED -> LONELY [label="connection lost\l(I am Follower)", color=blue]
+    CONNECTED -> FLUSHING [label="connection lost\lsend_reconnect", color=red]
+
+    LONELY -> CONNECTING [label="receive: type=reconnect\lsend: reconnecting"]
+    LONELY -> LONELY [label="receive: type=connection-hints\lignore"]
+
+    FLUSHING -> CONNECTING [label="receive: type=reconnecting"]
+    FLUSHING -> FLUSHING [label="receive: type=connection-hints\lignore"]
+
+ }
