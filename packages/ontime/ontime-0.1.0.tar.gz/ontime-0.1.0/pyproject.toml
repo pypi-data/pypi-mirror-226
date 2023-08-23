@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "ontime"
+version = "0.1.0"
+description = ""
+authors = ["Fred Montet <fredmontet@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ontime", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
