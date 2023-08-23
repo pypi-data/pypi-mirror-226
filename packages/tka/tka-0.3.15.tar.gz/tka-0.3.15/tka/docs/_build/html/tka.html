@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tka package &mdash; TKA 0.3.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tka.data package" href="tka.data.html" />
+    <link rel="prev" title="tka" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TKA
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">tka</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tka package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tka.data.html">tka.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tka.external_models.html">tka.external_models package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tka.utils">tka.utils module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.SpheringNormalizer"><code class="docutils literal notranslate"><span class="pre">SpheringNormalizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.docs"><code class="docutils literal notranslate"><span class="pre">docs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.load_l1000_ordered_feature_columns"><code class="docutils literal notranslate"><span class="pre">load_l1000_ordered_feature_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.load_mobc_ordered_feature_columns"><code class="docutils literal notranslate"><span class="pre">load_mobc_ordered_feature_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.prepare_df_for_mobc_predictions"><code class="docutils literal notranslate"><span class="pre">prepare_df_for_mobc_predictions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.transform_l1000_ids"><code class="docutils literal notranslate"><span class="pre">transform_l1000_ids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tka.utils.transform_moshkov_outputs"><code class="docutils literal notranslate"><span class="pre">transform_moshkov_outputs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tka">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TKA</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">tka</a></li>
+      <li class="breadcrumb-item active">tka package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tka.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tka-package">
+<h1>tka package<a class="headerlink" href="#tka-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tka.data.html">tka.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tka.data.html#module-tka.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tka.external_models.html">tka.external_models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tka.external_models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tka.external_models.html#module-tka.external_models.moshkov">tka.external_models.moshkov module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tka.external_models.html#tka.external_models.moshkov.load_assay_metadata"><code class="docutils literal notranslate"><span class="pre">load_assay_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tka.external_models.html#tka.external_models.moshkov.predict_from_ge"><code class="docutils literal notranslate"><span class="pre">predict_from_ge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tka.external_models.html#tka.external_models.moshkov.predict_from_mobc"><code class="docutils literal notranslate"><span class="pre">predict_from_mobc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tka.external_models.html#tka.external_models.moshkov.predict_from_smiles"><code class="docutils literal notranslate"><span class="pre">predict_from_smiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tka.external_models.html#module-tka.external_models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-tka.utils">
+<span id="tka-utils-module"></span><h2>tka.utils module<a class="headerlink" href="#module-tka.utils" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tka.utils.SpheringNormalizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">SpheringNormalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#SpheringNormalizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.SpheringNormalizer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tka.utils.SpheringNormalizer.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#SpheringNormalizer.normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.SpheringNormalizer.normalize" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tka.utils.SpheringNormalizer.sphering_transform">
+<span class="sig-name descname"><span class="pre">sphering_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#SpheringNormalizer.sphering_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.SpheringNormalizer.sphering_transform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.docs">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">docs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#docs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.docs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.load_l1000_ordered_feature_columns">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">load_l1000_ordered_feature_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gene_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#load_l1000_ordered_feature_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.load_l1000_ordered_feature_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.load_mobc_ordered_feature_columns">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">load_mobc_ordered_feature_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#load_mobc_ordered_feature_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.load_mobc_ordered_feature_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.prepare_df_for_mobc_predictions">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">prepare_df_for_mobc_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_dmso</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_real</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SMILES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grouping_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tka/utils.html#prepare_df_for_mobc_predictions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.prepare_df_for_mobc_predictions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.transform_l1000_ids">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">transform_l1000_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'l1000_mapped.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="reference internal" href="_modules/tka/utils.html#transform_l1000_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.transform_l1000_ids" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms L1000 gene IDs from one format to another.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>from_id (str): The source probe type (“affyID”, “entrezID”, “ensemblID”).
+to_id (str): The target probe type (“affyID”, “entrezID”, “ensemblID”).
+gene_ids (list): List of L1000 gene IDs to transform.
+dataset_path (str): Path to the DataFrame containing L1000 gene IDs for each probe type.
+ignore_missing (bool): If set to True, it will not raise an error on missing or invalid probe IDs.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: Original and transformed L1000 gene IDs as keys and values respectively.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If either from_id or to_id is not one of the allowed values.
+ValueError: If any of the gene IDs in the dataset is not within the scope of L1000.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tka.utils.transform_moshkov_outputs">
+<span class="sig-prename descclassname"><span class="pre">tka.utils.</span></span><span class="sig-name descname"><span class="pre">transform_moshkov_outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier_col_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_full_assay_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/tka/utils.html#transform_moshkov_outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tka.utils.transform_moshkov_outputs" title="Permalink to this definition"></a></dt>
+<dd><p>Transform Moshkov outputs into a Pandas DataFrame.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>identifier_col_vals (List[str]): List of SMILES strings corresponding to input data points (or any other identifiers).
+output (List[List[]]): List of lists containing output data (shape: X, 270).
+use_full_assay_names (bool, optional): Whether to use full assay names from the CSV. Defaults to False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>DataFrame: Pandas DataFrame with SMILES as the first column and assay data columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tka">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tka" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="tka" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tka.data.html" class="btn btn-neutral float-right" title="tka.data package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Filip Cvetko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
