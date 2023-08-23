@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: tstrait
+Version: 0.0.1a1
+Summary: Quantitative trait simulation of tree sequence data
+Home-page: https://tskit.dev/tstrait/
+Download-URL: https://pypi.python.org/pypi/tstrait
+Maintainer: Tskit Developers
+Maintainer-email: admin@tskit.dev
+License: MIT
+Project-URL: Bug Tracker, https://github.com/tskit-dev/tstrait/issues
+Project-URL: Documentation, https://tskit.dev/tstrait/docs/
+Project-URL: Source Code, https://github.com/tskit-dev/tstrait
+Keywords: gwas,population genetics,quantitative trait,simulation,statistical genetics,tree sequence,tskit
+Platform: POSIX
+Platform: Windows
+Platform: MacOS X
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.20.3
+Requires-Dist: numba >=0.57.0
+Requires-Dist: pandas >=1.0
+Requires-Dist: tskit >=0.5.5
+Provides-Extra: tests
+Requires-Dist: msprime ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: scipy ; extra == 'tests'
+
+# tstrait
+
+**tstrait** is a quantitative trait simulator of [tskit](https://tskit.readthedocs.io/) tree sequences.
+
+- Documentation: https://tskit.dev/tstrait/docs/
+- Source code: https://github.com/tskit-dev/tstrait
+- Tree sequence documentation: https://tskit.dev/learn/
+
+It provides:
+- Simulation of quantitative traits
+- Simulation of genetic effect sizes from various distributions
+- Simulation of pleiotropic phenotypes
+- Simulation of environmental noise
+- Computation of individual genetic values given the effect sizes of causal mutations
