@@ -1,0 +1,17 @@
+azuredevopsX/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azuredevopsX/abstractdevops.py,sha256=mrGP6iT1ap4AT7trwVBdWodDZLvvzYfp7VhQV-UEzYM,1263
+azuredevopsX/backlog.py,sha256=CwhmPuXFjMsIt25Q9DsNSR7z8VOuhSZfGr3ZfDREcAM,1603
+azuredevopsX/factories.py,sha256=iLudT2f3tHsbSJC7GomIFAcnrBpt13SUz_SSKKy7ONI,1857
+azuredevopsX/identity.py,sha256=hYyz3jaChkXEzq58TQoz26k8yTNGLqv0Y2HDjpcqz2Q,324
+azuredevopsX/interaction.py,sha256=uOYeRmzdqlI8ssAgK6NmTtnqxJjOCbaUdI18ab1otxo,2963
+azuredevopsX/project.py,sha256=fKbm384XSJh4DYHOvJbRiBUOU_BZMMeO2uQXutqrKhA,1572
+azuredevopsX/status.py,sha256=EIYW3QFzPvma7rqcvipSNPdSvaQktqMU520nFJYHRWI,351
+azuredevopsX/team.py,sha256=wEkp6OFhEza4e8CMAZGX_8m-lg0bJCWat5QQaQDD5Xw,1570
+azuredevopsX/teammember.py,sha256=ZLjQZD50wMtJnfYud87VDb2wfwroteJoAgt9JeCOSEc,2092
+azuredevopsX/workitem.py,sha256=6ufQ_aWSnZ9Zez8Z_TIIdmLXNVUUFmj7cK_uwRYQC_0,8210
+azuredevopsX/workitem_history.py,sha256=j8OCHpMtLegPsFxz0oxBuVnm6VPpD5fT44XkTSDgj6Q,1142
+azuredevopsX/workitemtype.py,sha256=NtTv_-wqXLBRZpnJImaWW-IP3NLSiO4USEJYMJS9LQs,1438
+azuredevopsX-0.2.0.dist-info/METADATA,sha256=B4ym6n0D_HKOg3i2P0KVfHMkwvQpkCAwAsA1uxtRrEY,2235
+azuredevopsX-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+azuredevopsX-0.2.0.dist-info/top_level.txt,sha256=5eqZIScBYOUIwspo--jA_bw95-aK1_S_7Nd0A-djvLo,13
+azuredevopsX-0.2.0.dist-info/RECORD,,
