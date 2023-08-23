@@ -1,0 +1,7 @@
+setup.py
+Finwave_python_programs_setup/__init__.py
+Finwave_python_programs_setup/file_utils.py
+Finwave_python_programs_setup.egg-info/PKG-INFO
+Finwave_python_programs_setup.egg-info/SOURCES.txt
+Finwave_python_programs_setup.egg-info/dependency_links.txt
+Finwave_python_programs_setup.egg-info/top_level.txt
