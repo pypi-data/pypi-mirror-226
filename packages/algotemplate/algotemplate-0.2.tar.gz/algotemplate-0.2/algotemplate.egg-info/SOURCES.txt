@@ -1,0 +1,7 @@
+setup.py
+algotemplate/__init__.py
+algotemplate.egg-info/PKG-INFO
+algotemplate.egg-info/SOURCES.txt
+algotemplate.egg-info/dependency_links.txt
+algotemplate.egg-info/not-zip-safe
+algotemplate.egg-info/top_level.txt
