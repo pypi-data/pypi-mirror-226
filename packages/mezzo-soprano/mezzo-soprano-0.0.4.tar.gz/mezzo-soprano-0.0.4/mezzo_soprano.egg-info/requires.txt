@@ -1,0 +1,8 @@
+gdpyc
+astropy
+astromodels
+netspec
+threeML
+numpy
+rich
+omegaconf

@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: mezzo-soprano
+Version: 0.0.4
+Summary: Python Boilerplate contains all the boilerplate you need to create a Python package.
+Home-page: https://github.com/grburgess/mezzo-soprano
+Author: J. Michael Burgess
+Author-email: jburgess@mpe.mpg.de
+License: GPL-2+
+Project-URL: Bug Tracker, https://github.com/grburgess/mezzo-soprano/issues
+Project-URL: Source Code, https://github.com/grburgess/mezzo-soprano
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mezzo-soprano
+![CI](https://github.com/grburgess/mezzo-soprano/workflows/CI/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/grburgess/mezzo-soprano/branch/master/graph/badge.svg)](https://codecov.io/gh/grburgess/mezzo-soprano)
+[![Documentation Status](https://readthedocs.org/projects/mezzo-soprano/badge/?version=latest)](https://mezzo-soprano.readthedocs.io/en/latest/?badge=latest)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3372456.svg)](https://doi.org/10.5281/zenodo.3372456)
+![PyPI](https://img.shields.io/pypi/v/mezzo-soprano)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/mezzo-soprano)
+
+![alt text](https://raw.githubusercontent.com/grburgess/mezzo-soprano/master/docs/media/logo.png)
+
+
+Python Boilerplate contains all the boilerplate you need to create a Python package.
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://mezzo-soprano.readthedocs.io.
+
+
+## Features
+
+
+* TODO
+
+## Credits
+
