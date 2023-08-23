@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ccsf/__init__.py
+ccsf/ccsf.py
+ccsf.egg-info/PKG-INFO
+ccsf.egg-info/SOURCES.txt
+ccsf.egg-info/dependency_links.txt
+ccsf.egg-info/requires.txt
+ccsf.egg-info/top_level.txt
+ccsf/class_discriminative_opt/__init__.py
+ccsf/class_discriminative_opt/class_discriminative_opt.py
+ccsf/group_centroid_opt/__init__.py
+ccsf/group_centroid_opt/group_centroid_opt.py
