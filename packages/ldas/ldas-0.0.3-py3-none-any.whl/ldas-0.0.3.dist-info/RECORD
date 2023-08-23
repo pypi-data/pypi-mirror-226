@@ -1,0 +1,10 @@
+ldas/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+ldas/_modidx.py,sha256=iDN7vUOXT4sjE_rwfNa6D-n7gotgy3CcI_QBmb9_HUc,3916
+ldas/core.py,sha256=XvYRFJnboqMdZHx5H7r0_lA-3XPdhaQT2VEq4mdIHEg,142
+ldas/iiif.py,sha256=5O_tXZEPF5sKCPjNGF21SmmhxfBvHMBs2IqkC99cSQ4,36750
+ldas-0.0.3.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+ldas-0.0.3.dist-info/METADATA,sha256=eSZXTpYNxVQXvrV-S-IgpOnNFw3JJIemN0dsbzFyiFg,1250
+ldas-0.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+ldas-0.0.3.dist-info/entry_points.txt,sha256=J2Gs-kvC2AUfN_5oAIpPCMdjE26g_UjKvdZ80-Dd9-g,51
+ldas-0.0.3.dist-info/top_level.txt,sha256=cMDndzj9XJqo2BPnU6u7NPYRcHqainU02v5ArypEruc,5
+ldas-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+ldas = ldas._modidx:d
+
