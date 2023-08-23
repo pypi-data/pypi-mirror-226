@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Skylark-Yolov8
+Version: 0.2
+Summary: A video processing package
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+Description-Content-Type: text/markdown
+
+# Skylarklabs YoloV8 Processor
+
+Skylark_Yolov8 is a package for video processing using YOLO object detection and optional classification. It allows you to process videos, apply detection, and optionally classify detected objects.
+
+## Usage
+
+
+```bash
+detection_model_path = "yolov8m.pt"
+
+# Classification Model = False or Model Path
+classification_model_path = "yolov8m-cls.pt"
+
+# video_path = Directory of Videos or Direct Video File or RTSP
+video_path = "1.mp4"
+
+processor = VideoProcessor(
+    detection_model_path, 
+    classification_model_path, 
+    video_path, 
+    save_video=True, 
+    detection_save_crops = False, 
+    classification_save_crops = False, 
+    detection_conf = 0.75,
+    detection_image_size = 640, 
+    detection_classes=None, 
+    classification_conf=0.75, 
+    classification_classes=None,
+    classification_image_size=128)
+
+processor.process_video()
+```
