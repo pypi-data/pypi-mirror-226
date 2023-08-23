@@ -1,0 +1,16 @@
+patchgan/__init__.py,sha256=v7M2XXYAmZ1pj1fS1EcBJj9mtKy4H7039H5cElAbP7Q,186
+patchgan/disc.py,sha256=kCsiNjySk7luXBJQt1y7lqw6yy5GntY1rop5MkT9XJU,1868
+patchgan/infer.py,sha256=Wp__BGKoziYHSAKBgxY3Y6TPb_cS-Ej0xwrU2lzyFlQ,6112
+patchgan/io.py,sha256=6Z42-Y_YDF9PJrSr2tCev6sr5RUchjr-uWQwHl2P-UU,2092
+patchgan/losses.py,sha256=C8zWKa3pZiXpwjhTP_TT4XMbB9xMHZZJ6-2enU9Qfj0,980
+patchgan/train.py,sha256=apoIzhPXXOMFpE_pHho4rqUAMcRhC5mIRbhcCUCSNUU,5821
+patchgan/trainer.py,sha256=CjR7Tw-1lgF790v-NqFqvy77GvPuYpaGJN5uwHp85gc,13854
+patchgan/transfer.py,sha256=z5C3Q57-sjCeADONLaDHOgd-A2IM9S6QN6mKAXkMjTE,797
+patchgan/unet.py,sha256=Nbi8YJKdoe3vSW5C18BHVrLCxemHxU5HX704ginJf3Q,4836
+patchgan/version.py,sha256=-cHO5oOHPuBCll4Noe1fIVjbMIhK_d1gaJJcPlbSlt4,20
+patchGAN-0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+patchGAN-0.2.dist-info/METADATA,sha256=IiRgYJqgxHiAllnLCA4cQRXHSdtD6ddJI_0NhaYDTQg,1418
+patchGAN-0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+patchGAN-0.2.dist-info/entry_points.txt,sha256=J1kDy57wqIw-RkGTl0fIuVyfxen5oOH_xHr3mbVdUA4,112
+patchGAN-0.2.dist-info/top_level.txt,sha256=DnH-PQWskzYXw0GpT1yEtGD9zMSVm35QT44E5tflyc8,9
+patchGAN-0.2.dist-info/RECORD,,
