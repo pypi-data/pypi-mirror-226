@@ -1,0 +1,2 @@
+[console_scripts]
+search-in-youtube-video-comments = search_in_youtube_video_comments.search_in_youtube_video_comments:__main__

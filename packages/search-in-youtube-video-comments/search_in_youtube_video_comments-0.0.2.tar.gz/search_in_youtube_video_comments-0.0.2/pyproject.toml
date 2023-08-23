@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "search_in_youtube_video_comments"
+version = "0.0.2"
+authors = [{name="Benjamin Loison"}]
+description = "Search in YouTube video comments"
+readme = "README.md"
+dependencies = ["requests"]
+requires-python = ">=3.9"
+
+[project.scripts]
+search-in-youtube-video-comments = "search_in_youtube_video_comments.search_in_youtube_video_comments:__main__"
+
+[project.urls]
+"Homepage" = "https://codeberg.org/Benjamin_Loison/Search_in_YouTube_video_comments"
+"Bug Tracker" = "https://codeberg.org/Benjamin_Loison/Search_in_YouTube_video_comments/issues"
