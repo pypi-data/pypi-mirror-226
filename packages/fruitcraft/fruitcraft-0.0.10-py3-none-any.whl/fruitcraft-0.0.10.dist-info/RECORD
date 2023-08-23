@@ -1,0 +1,10 @@
+fruitcraft/__init__.py,sha256=cDbDZEZvYlY3wPkz8m10hd54nCFEdoNiJSogHbKmuGc,158
+fruitcraft/client.py,sha256=jLbpW8biag4wIc6xm0I9GROoWEWYiuQKkEshIzO9EMA,25986
+fruitcraft/f_types/__init__.py,sha256=-fWGQEhUmTR5-PFJgzSZta86C-8m-akZa5Pod48Kyk0,24569
+fruitcraft/f_types/cards.py,sha256=wql3I_SwfUihl5K4csEGIRuq1CMHo29NyDVjQ9u_BMk,351313
+fruitcraft/f_types/errors.py,sha256=cfjgvXhkMELiievc2bUasMOzVjWntajqYoL_DZsQSpg,1317
+fruitcraft/f_types/utils.py,sha256=ZAOhFR2i050QTQJzQfE0dpy95mCeYQQ5UcHyL4FSe38,3985
+fruitcraft-0.0.10.dist-info/LICENSE,sha256=euC8wKZWQYyzktvkgwCRkjbUpFnQiSjKsJCU2dgt6WE,1068
+fruitcraft-0.0.10.dist-info/METADATA,sha256=zpUi2sO6jeUIqZMPA0n4DQHppX2sALb-AP4JFrL9Xp4,1027
+fruitcraft-0.0.10.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+fruitcraft-0.0.10.dist-info/RECORD,,
