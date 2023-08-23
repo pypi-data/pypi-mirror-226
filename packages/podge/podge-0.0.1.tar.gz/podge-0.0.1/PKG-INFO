@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: podge
+Version: 0.0.1
+Summary: Podcast management CLI
+Author-email: James McLaren <jdysmcl@tutanota.com>
+License: GPL-3.0-only
+Keywords: podcast,cli
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
