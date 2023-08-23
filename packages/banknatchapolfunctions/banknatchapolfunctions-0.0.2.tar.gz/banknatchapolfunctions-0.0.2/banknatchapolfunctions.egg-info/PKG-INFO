@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: banknatchapolfunctions
+Version: 0.0.2
+Summary: ฟังก์ชันของ Bank Natchapol
+Home-page: 
+Author: Bank Natchapol
+Author-email: natchapol.pat@gmail.com
+License: MIT
+Keywords: banknatchapol
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+ฟังก์ชันของ Bank Natchapol
+
+Change Log
+==========
+
+0.0.2 (19/04/2020)
+0.0.1 (19/04/2020)
+-------------------
+- First Release
