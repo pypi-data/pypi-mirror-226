@@ -1,0 +1,10 @@
+SimpleITK==1.2.4
+antspyx==0.3.8
+matplotlib==3.3.4
+nibabel==4.0.1
+numpy==1.19.2
+pandas==1.4.3
+pydicom==2.3.0
+scikit-image==0.19.3
+scikit-learn==1.1.2
+scipy==1.5.3
