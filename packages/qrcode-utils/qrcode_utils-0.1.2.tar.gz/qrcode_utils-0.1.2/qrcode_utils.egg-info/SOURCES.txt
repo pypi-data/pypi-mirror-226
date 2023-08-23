@@ -1,0 +1,8 @@
+LICENCE
+README.md
+setup.py
+qrcode_utils.egg-info/PKG-INFO
+qrcode_utils.egg-info/SOURCES.txt
+qrcode_utils.egg-info/dependency_links.txt
+qrcode_utils.egg-info/requires.txt
+qrcode_utils.egg-info/top_level.txt
