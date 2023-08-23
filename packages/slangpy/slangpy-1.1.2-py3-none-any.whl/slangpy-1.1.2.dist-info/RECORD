@@ -1,0 +1,12 @@
+bin/libslang.so,sha256=IgPDf8PDlioAHOXhNXgox1ZZvfgSzBB6E2BKVZT4HVw,14717152
+bin/slang.dll,sha256=Yu_jy6cQ4SZqdrp-aNIVBP1FCnAwcxrbg_HjNbpEQcw,13162496
+bin/slangc,sha256=YTxVrFXeem2dUKPFyg_p4cbs42Qyw7D3x8h2mloA6iw,129368
+bin/slangc.exe,sha256=LlR6XFef8W8odQCIPD4P_xspgjML-AGLumzvsrEEi10,190464
+slangpy/__init__.py,sha256=q1yJlio0nIx2HDIOrGEyp30l21NUF93Kev7CqqU4E4I,31
+slangpy/slangpy.py,sha256=e4JtpVRTU7CxmiYllcGILHJSYjoKDxk38I6KBpQiOpw,16472
+slangpy/util/__init__.py,sha256=M8LjAtmZBieiSWSfjfdvRbsE0YnRlKnWL22Kwu2YwAA,32
+slangpy/util/compile.py,sha256=Xk06C6zowWUck0lEDljKAlMHwicBhqv_pQMNlyXPNfI,3351
+slangpy-1.1.2.dist-info/METADATA,sha256=PzV9PYI53CFfGRldkX3zmp4Hqb4N8qCS2NqKYQ9GASI,855
+slangpy-1.1.2.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+slangpy-1.1.2.dist-info/licenses/LICENSE,sha256=oyl5MNuiXmz3H7XDCDA25SOiSrCg5-J0Eg1KqxnmrwM,1069
+slangpy-1.1.2.dist-info/RECORD,,
