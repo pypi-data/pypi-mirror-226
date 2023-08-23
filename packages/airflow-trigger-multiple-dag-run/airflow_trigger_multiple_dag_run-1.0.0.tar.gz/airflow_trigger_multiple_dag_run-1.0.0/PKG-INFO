@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: airflow-trigger-multiple-dag-run
+Version: 1.0.0
+Summary: Plugin to trigger and monitor multiple dag runs
+License: MIT
+Author: Jaya Bharath
+Author-email: bharath21196@gmail.com
+Requires-Python: >=3.7.13,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: apache-airflow (>=2.6.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# airflow-trigger-multiple-dag-run
+
+## Usage
+
+```shell
+pip install airflow-trigger-multiple-dag-run
+```
+
+## Dev setup
+
+### initial setup
+
+```shell
+pip install poetry
+make setup
+```
+
+### publish to testpypi
+
+```shell
+poetry config repositories.testpypi https://test.pypi.org/legacy/
+poetry publish --build -r testpypi -p <password> -u <username:=__token__>
+```
+
+### useful poetry commands
+
+```shell
+poetry add <dependencies>
+poetry add --dev <dependencies> # dev dependencies
+poetry update
+poetry lock --no-update
+```
+
+## Contribution
+
+Contributions are very welcome. Tests can be run with `make test`, please ensure the coverage at least stays the same
+before you submit a pull request.
+
+## License
+
+Distributed under the terms of the `MIT` license, "airflow-trigger-multiple-dagrun" is free and open source software
+
+### Repository
+
+> [Repo-url](https://github.com/jaya-bharath/airflow-trigger-multiple-dag-run)
+
