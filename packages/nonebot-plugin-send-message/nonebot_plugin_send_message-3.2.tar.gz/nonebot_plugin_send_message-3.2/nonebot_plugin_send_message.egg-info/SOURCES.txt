@@ -1,0 +1,9 @@
+README.md
+setup.py
+nonebot_plugin_send_message/__init__.py
+nonebot_plugin_send_message/config.py
+nonebot_plugin_send_message.egg-info/PKG-INFO
+nonebot_plugin_send_message.egg-info/SOURCES.txt
+nonebot_plugin_send_message.egg-info/dependency_links.txt
+nonebot_plugin_send_message.egg-info/requires.txt
+nonebot_plugin_send_message.egg-info/top_level.txt
