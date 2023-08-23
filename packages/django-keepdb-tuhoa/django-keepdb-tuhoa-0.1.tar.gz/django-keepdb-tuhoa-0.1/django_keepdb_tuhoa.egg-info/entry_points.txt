@@ -1,0 +1,2 @@
+[django.sovellus]
+keepdb_tuhoa = keepdb_tuhoa

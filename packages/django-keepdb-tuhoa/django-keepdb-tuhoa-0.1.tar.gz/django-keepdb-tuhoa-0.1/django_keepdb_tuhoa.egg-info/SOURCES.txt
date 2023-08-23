@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+django_keepdb_tuhoa.egg-info/PKG-INFO
+django_keepdb_tuhoa.egg-info/SOURCES.txt
+django_keepdb_tuhoa.egg-info/dependency_links.txt
+django_keepdb_tuhoa.egg-info/entry_points.txt
+django_keepdb_tuhoa.egg-info/historia.json
+django_keepdb_tuhoa.egg-info/not-zip-safe
+django_keepdb_tuhoa.egg-info/requires.txt
+django_keepdb_tuhoa.egg-info/top_level.txt
+keepdb_tuhoa/__init__.py
+keepdb_tuhoa/management/__init__.py
+keepdb_tuhoa/management/commands/__init__.py
+keepdb_tuhoa/management/commands/test.py
