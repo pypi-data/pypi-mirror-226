@@ -1,0 +1,3 @@
+[console_scripts]
+endstone = endstone.loader.cli:cli
+
