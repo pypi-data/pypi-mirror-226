@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: PyNutri
+Version: 1.2
+Summary: Pacote para suporte de cálculos relacionados a nutricao.
+Author: Hudson Bandeira
+Author-email: hudsonrb750@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+PyNutrition1.0.0
+===========
+
+#### Esse é um pacote que realiza cálculos relacionados a avaliação nutrtional. Cálculos retirados do site://www.drnutricao.com.br/.
+#### Veja o exemplo de resultado do pacote:
+## Litros agua: litrosAgua(75)
+
+## Instalação:
+
+    pip install PyNutrition1.0
+
+# Uso:
+
+
+from PyNutrition1.0 import imc, litrosAgua, qtdCalorias, qtdProteina, qtdCarboidratos, qtdGorduras, imm, percentualGordura, gastoEnergeticoBasal, taxaMetabólicaBasal, frequenciaCardiacaMaxima, taxaPerdaPeso
+
+  
+
+# Exemplo de dados
+peso = 70
+altura = 1.75
+idade = 30
+sexo = 'm'
+qtd_calorias = 2000
+massa_muscular = 50
+nivel_atividade = 1.55
+calorias_consumidas = 2500
+calorias_gastas = 2200
+
+# Calcula o IMC
+resultado_imc = imc(peso, altura)
+print("IMC:", resultado_imc)
+
+# Calcula a quantidade de água recomendada
+litros_agua = litrosAgua(peso)
+print("Litros de Água Recomendados:", litros_agua)
+
+# Calcula a quantidade de calorias necessárias
+resultado_calorias = qtdCalorias(peso, altura, idade, sexo)
+print("Calorias Necessárias:", resultado_calorias)
+
+# Calcula a quantidade de proteína necessária
+qtd_proteina = qtdProteina(qtd_calorias)
+print("Proteína Necessária:", qtd_proteina)
+
+# Calcula a quantidade de carboidratos necessária
+qtd_carboidratos = qtdCarboidratos(qtd_calorias)
+print("Carboidratos Necessários:", qtd_carboidratos)
+
+# Calcula a quantidade de gorduras necessária
+qtd_gorduras = qtdGorduras(qtd_calorias)
+print("Gorduras Necessárias:", qtd_gorduras)
+
+# Calcula o Índice de Massa Muscular (IMM)
+resultado_imm = imm(peso, altura, massa_muscular)
+print("Índice de Massa Muscular (IMM):", resultado_imm)
+
+# Calcula o Percentual de Gordura Corporal
+resultado_percentual_gordura = percentualGordura(resultado_imc, idade, sexo)
+print("Percentual de Gordura Corporal:", resultado_percentual_gordura)
+
+# Calcula o Gasto Energético Basal (GEB)
+resultado_geb = gastoEnergeticoBasal(peso, altura, idade, sexo)
+print("Gasto Energético Basal (GEB):", resultado_geb)
+
+# Calcula o Gasto Energético Total (GET)
+resultado_get = gastoEnergeticoTotal(resultado_geb, nivel_atividade)
+print("Gasto Energético Total (GET):", resultado_get)
+
+# Calcula a Taxa Metabólica Basal (TMB)
+resultado_tmb = taxaMetabólicaBasal(peso, altura, idade, sexo)
+print("Taxa Metabólica Basal (TMB):", resultado_tmb)
+
+# Calcula a Frequência Cardíaca Máxima
+resultado_fc_maxima = frequenciaCardiacaMaxima(idade, sexo)
+print("Frequência Cardíaca Máxima:", resultado_fc_maxima)
+
+# Calcula a Taxa de Perda de Peso
+resultado_taxa_perda_peso = taxaPerdaPeso(calorias_consumidas, calorias_gastas)
+print("Taxa de Perda de Peso:", resultado_taxa_perda_peso)
+'''
