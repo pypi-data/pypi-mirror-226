@@ -1,0 +1,17 @@
+sentia/DatasetConcat.py,sha256=9f5e-I04EOpGH4oKo4R26twcRO__7fBLcxJXQzpb5E4,10535
+sentia/SENTIA.py,sha256=0eT3W3NcG4r1y_0iJHnzZID9fETWYug11Kxor2e7TcI,33761
+sentia/SENTIAForDistTPU.py,sha256=GKYp0GF1hIzLGsDX0GHGCmFXNFgBhhEn-myLN63WHWg,38035
+sentia/__init__.py,sha256=sGn4f0TQrPWiPPnWGE3n2DUjPTURVlhtN-qt0g6TfiU,320
+sentia/config_sentia.py,sha256=IfouC1ZfbNjMU0f_G7BoaSuqbz36dyYw9zvPO9Luy9I,750
+sentia/dataset.py,sha256=c3Ewjxh21xTLPVetsy3zw0tObOnsO515zmNEAaYQZLc,2999
+sentia/deploy.py,sha256=upp32llGDBHzb9I7VOvnq1zRzAskP9GZ5xsycx4Ho24,1799
+sentia/modeling_sentia.py,sha256=fPNX7os-d9_V3_OFLzSFoVAAf-ZhNSXKAakB7W82-Cw,39590
+sentia/tokenizer.py,sha256=bxZDZBgtUGtaRKkw45CsYyV3LgCF7HH2fT1uqdVy9fI,1240
+sentia/train.py,sha256=YhJGZGhWZNOIIuaTTAh4HcjjsDLNYWlc4HhOXWfGFjc,2011
+sentia/utils/MHA.py,sha256=iJTAEVOhIY-ReZUWPNbf0C28RaVKDdooGdrp0Bzw9nI,2774
+sentia/utils/SENTIAFeedForward.py,sha256=1u9DRnbeZHNZIkoiIHI4J-ZyUOZ_g_Q2Kx7M7hT9vno,867
+sentia/utils/__init__.py,sha256=jCQWXmKI3v45g8TdAaGG4h5erCFzqBKBke-mxtybKXQ,67
+sentia-1.0.dist-info/METADATA,sha256=_F_BF2ilKSB6QpMpUBFQCIItDWDa1ZryxyNvVjY2hNQ,1968
+sentia-1.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+sentia-1.0.dist-info/top_level.txt,sha256=xlyepxmcgyehzWpnChGSCRFiPNCuDgPUVwu8-uvY2HU,7
+sentia-1.0.dist-info/RECORD,,
