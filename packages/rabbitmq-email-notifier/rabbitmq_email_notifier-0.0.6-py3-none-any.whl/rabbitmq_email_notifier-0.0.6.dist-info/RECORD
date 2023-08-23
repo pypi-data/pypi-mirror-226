@@ -1,0 +1,9 @@
+rabbitmqresources/__init__.py,sha256=zBkcUsmNhmqhcKG5MWjHWtLU49vZ4jiACKuzGoXh4KA,1242
+rabbitmqresources/worker.py,sha256=8wh1C-EFkEBFGDzsRKjJBpd9wZFEzeQRlSb1qVLMi68,1571
+rabbitmqresources/tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rabbitmqresources/tasks/tasks.py,sha256=bcL_hfuGS09XpQnJUDXCumFqqQdxPH38mQPwDRls_FE,5289
+rabbitmq_email_notifier-0.0.6.dist-info/LICENSE,sha256=TPGMeHuVxtePIPZemGLOt0FZecpVGT3S-zYerjmlSoY,11450
+rabbitmq_email_notifier-0.0.6.dist-info/METADATA,sha256=xXgpZ930Rtn5byqqSPBOMYyntpoUk-ls3RPioryNYog,7439
+rabbitmq_email_notifier-0.0.6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+rabbitmq_email_notifier-0.0.6.dist-info/top_level.txt,sha256=zH8B1KnEKPsINcSf9IfN3axYfntvP8NJFmYKqTj4-zc,18
+rabbitmq_email_notifier-0.0.6.dist-info/RECORD,,
