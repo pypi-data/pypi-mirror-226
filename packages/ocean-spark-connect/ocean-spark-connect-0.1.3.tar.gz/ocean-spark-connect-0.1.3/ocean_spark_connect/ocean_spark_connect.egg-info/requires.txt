@@ -1,0 +1,8 @@
+numpy
+pandas
+pyarrow
+requests
+websockets
+grpcio
+grpcio-status
+googleapis-common-protos
