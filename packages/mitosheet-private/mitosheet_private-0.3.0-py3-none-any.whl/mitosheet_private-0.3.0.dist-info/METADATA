@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mitosheet-private
+Version: 0.3.0
+Summary: The mitosheet_private package is a wrapper around the mitosheet package.
+Home-page: https://github.com/mito-ds/mito
+Author: Aaron Diamond-Reivich
+Author-email: aarondr77@gmail.com
+License: GNU Affero General Public License v3
+License-File: LICENSE
+Requires-Dist: mitosheet >0.1.504
+Provides-Extra: deploy
+Requires-Dist: wheel ; extra == 'deploy'
+Requires-Dist: twine ; extra == 'deploy'
+Requires-Dist: setuptools ==56.0.0 ; extra == 'deploy'
+
