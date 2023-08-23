@@ -1,0 +1,1 @@
+from shipdan_apps.food.models import *
