@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sproing
+Version: 0.1.0
+Summary: 
+Author: danodic
+Author-email: danilo@danodic.dev
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pytest
+Description-Content-Type: text/markdown
+
+# Sproing
+
+A dead simple dependency injection library.
+
