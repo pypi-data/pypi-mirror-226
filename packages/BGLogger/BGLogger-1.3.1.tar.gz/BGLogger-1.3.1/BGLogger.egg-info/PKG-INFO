@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: BGLogger
+Version: 1.3.1
+Summary: BGLogger is a simple module for logging in Python
+Home-page: https://github.com/BelGray/BGLogger
+Download-URL: https://github.com/BelGray/BGLogger/archive/v1.3.1.zip
+Author: BelGray
+Author-email: belg186@yandex.ru
+License: GNU General Public License v3.0, see LICENSE file
+License-File: LICENSE
+
+BGLogger is a simple module for logging in Python. If you wanna see full documentation you can just visit our GitHub repository. Just call print(Log.__github__) to do this
