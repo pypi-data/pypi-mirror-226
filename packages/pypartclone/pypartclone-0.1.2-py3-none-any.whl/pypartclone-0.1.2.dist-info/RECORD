@@ -1,0 +1,13 @@
+partclone/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+partclone/__main__.py,sha256=W9XrS6PnZpzVS4vKx7qu7Hql3gf3Ida6o-vl_JHdqyI,3449
+partclone/bitmap.py,sha256=CN9VPGgodUCUAVPHczFklsmrvo0LujDC2EGo2agyMAs,6693
+partclone/blockio.py,sha256=-0b9diU6dBq_81CQDC0M36bsvpHm_ePqU1dpAck7jpA,2440
+partclone/blocks.py,sha256=YfZsAaDN8xz7tEc0EDTZn-s6S_0ycv3wolcCOxsNVms,4884
+partclone/fuse.py,sha256=dn4pKXNmKNnm--rC4T4Ufsjq8BHrw3hJv4codxGNUaU,7259
+partclone/header.py,sha256=4ioAy4a7PB1aQYWm5LRR2sWax8I14gq4-2twlvdYeAc,10953
+pypartclone-0.1.2.dist-info/LICENSE,sha256=ph2ny11mK4NW5146NPaDhw9fPHo-uY3OI0plQTZnXtU,1067
+pypartclone-0.1.2.dist-info/METADATA,sha256=j0GNtzgRwFeJbnD3uKJppxvJFZkMOeH9QNaFiVG6vWs,18234
+pypartclone-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pypartclone-0.1.2.dist-info/entry_points.txt,sha256=tQBr25ObavVrtddsDYo_q3j7gA7cAgyPTUgJfaoY98c,55
+pypartclone-0.1.2.dist-info/top_level.txt,sha256=qHgaZF2WDq6xYHHUBbUwawcRSjuAv6qUZu7Weby9GPM,10
+pypartclone-0.1.2.dist-info/RECORD,,
