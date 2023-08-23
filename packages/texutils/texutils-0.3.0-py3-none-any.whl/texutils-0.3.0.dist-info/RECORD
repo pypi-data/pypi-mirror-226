@@ -1,0 +1,6 @@
+texutils/__init__.py,sha256=EHUDVVWp6q-YG5OabAvE2jCHoi2Isic6qfW6KFaJXj8,39
+texutils/texutils.py,sha256=uUCXYekzmx6UMLWZh3f_pULfz6wNRa8uvlHSbpLRPJM,1742
+texutils/utils.py,sha256=tMXWooe3NyBQY5pem6x7B9jU9c_2aJBRrbVs87bbKtc,380
+texutils-0.3.0.dist-info/METADATA,sha256=knr1f1hoRTfI2fnSXqJ3nGQtfQ247VeZuwgC2ZYa9FY,505
+texutils-0.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+texutils-0.3.0.dist-info/RECORD,,
