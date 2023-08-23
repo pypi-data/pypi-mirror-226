@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: Interphase
+Version: 0.0.1
+Summary: Package for genarating typescript interface with git submodule folder structure
+Author-email: Rajat Sandeep <rajatsandeepsen1839@gmail.com>
+Project-URL: Homepage, https://github.com/rajatsandeepsen/Interphase
+Project-URL: Bug Tracker, https://github.com/rajatsandeepsen/Interphase/isssues
+Keywords: python,api,backend,typescript,interface,git,submodule
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: importlib-metadata ; python_version == "3.8"
+
+# Interphase
+
+# interface is not supported yet
+
+defualt is export On
+default is type = 
+need file name
+need type name
+need any data
+
+base directory can be empty string
+d.ts is supported & it is defualt
+
+
+# dev
+
+```bash
+pip install --upgrade setuptools
+pip install --upgrade build #python -m build
+```
+
+```bash
+$ pip install -q build
+$ python -m build
+```
+
+pyproject.toml `https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html`
+
+```
+dist/
+    meowpkg-0.0.1.whl
+    meowpkg-0.0.1.tar.gz
+```
+
+```bash
+$ pip install dist/meowpkg-0.0.1.whl
+$ pip install dist/meowpkg-0.0.1.tar.gz
+```
+
+upload to pypi
+```bash
+$ python -m twine upload --repository pypi dist/*
+```
