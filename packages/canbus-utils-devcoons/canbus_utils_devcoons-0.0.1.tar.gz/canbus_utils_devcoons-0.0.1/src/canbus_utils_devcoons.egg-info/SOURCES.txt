@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/canbus_utils_devcoons/__init__.py
+src/canbus_utils_devcoons/setup.py
+src/canbus_utils_devcoons.egg-info/PKG-INFO
+src/canbus_utils_devcoons.egg-info/SOURCES.txt
+src/canbus_utils_devcoons.egg-info/dependency_links.txt
+src/canbus_utils_devcoons.egg-info/top_level.txt
