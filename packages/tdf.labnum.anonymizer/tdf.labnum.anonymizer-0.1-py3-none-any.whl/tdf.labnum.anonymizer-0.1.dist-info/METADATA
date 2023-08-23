@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tdf.labnum.anonymizer
+Version: 0.1
+Requires-Dist: nltk
+Requires-Dist: pydantic
+Requires-Dist: faker
+Requires-Dist: pandas
+
