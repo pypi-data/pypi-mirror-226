@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+simplestructlogs/__init__.py
+simplestructlogs/json_log_message.py
+simplestructlogs/structured_logging.py
+simplestructlogs.egg-info/PKG-INFO
+simplestructlogs.egg-info/SOURCES.txt
+simplestructlogs.egg-info/dependency_links.txt
+simplestructlogs.egg-info/top_level.txt
