@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+macrocorr.egg-info/PKG-INFO
+macrocorr.egg-info/SOURCES.txt
+macrocorr.egg-info/dependency_links.txt
+macrocorr.egg-info/requires.txt
+macrocorr.egg-info/top_level.txt
+src/macrocorr/__init__.py
+src/macrocorr/correlator.py
+src/macrocorr/macroIndicator.py
+src/macrocorr/utils.py
