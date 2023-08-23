@@ -1,0 +1,6 @@
+setup.py
+ca_visionlearn.egg-info/PKG-INFO
+ca_visionlearn.egg-info/SOURCES.txt
+ca_visionlearn.egg-info/dependency_links.txt
+ca_visionlearn.egg-info/requires.txt
+ca_visionlearn.egg-info/top_level.txt
