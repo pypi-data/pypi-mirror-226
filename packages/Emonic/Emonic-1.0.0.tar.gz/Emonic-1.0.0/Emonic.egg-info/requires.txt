@@ -1,0 +1,6 @@
+werkzeug
+jinja2
+cryptography
+emonic-admin
+itsdangerous
+uuid
