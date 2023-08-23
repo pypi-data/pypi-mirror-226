@@ -1,0 +1,146 @@
+import pathlib
+from typing import Any, Dict, AnyStr
+
+import pandas as pd
+
+from rebyu.pipeline.pipeline import BasePipeline
+
+
+class BaseRebyu(object):
+    """
+    Base Class for Rebyu
+
+    The BaseRebyu class is the foundation of Rebyu, an automatic review analysis pipeline and toolkit.
+    It processes various types of data, primarily text data, using built-in pipelines designed for
+    review analysis. Rebyu handles preprocessing, composition extraction, and analysis using its own
+    tools and external toolsets.
+
+    Attributes:
+        data (pd.DataFrame): The input dataset, converted to a DataFrame.
+        pipeline (BasePipeline): A customizable pipeline for data preprocessing, composition,
+            and analysis.
+        verbose (bool): Determines whether verbose output is enabled.
+    """
+
+    def __init__(self,
+                 data: Any,
+                 pipeline: BasePipeline,
+                 verbose: bool = True):
+        self.data = data
+        self.pipeline = None
+        self._composition = {}
+        self._analysis = {}
+
+        self.verbose = verbose
+
+        if isinstance(data, pd.DataFrame):
+            self.data = data.copy()
+
+        if isinstance(data, pd.Series):
+            self.data = self.data.to_frame().copy()
+
+        if isinstance(data, str):
+            _suffix = pathlib.Path(data).suffix
+
+            if _suffix == '.csv':
+                self.data = pd.read_csv(data)
+            if _suffix == '.json':
+                self.data = pd.read_json(data)
+
+        if isinstance(pipeline, BasePipeline):
+            self.pipeline = pipeline
+            self.pipeline.reset()
+
+    def step(self, verbose: bool = False):
+        """ Take a step of a series of process within the pipeline.
+
+        :param verbose: Determines whether verbose output is enabled.
+        :return:
+        """
+        if self.pipeline is None:
+            return
+
+        self.pipeline.step(
+            data=self.data,
+            composition=self._composition,
+            analysis=self._analysis,
+            verbose=verbose
+        )
+
+    def run(self, verbose: bool = False):
+        """ Run through all the steps within the pipeline.
+
+        :param verbose: Determines whether verbose output is enabled.
+        :return:
+        """
+        if self.pipeline is None:
+            return
+
+        self.pipeline.run(
+            data=self.data,
+            composition=self._composition,
+            analysis=self._analysis,
+            verbose=verbose
+        )
+
+    def composition(self, key: AnyStr, default: Any = None) -> Any:
+        """ Get values from 'composition' step results
+
+        :param key: Target Key of Composition
+        :param default: (Optional) Default value if not found
+        :return: Any
+        """
+        return self._composition.get(key, default)
+
+    def analysis(self, key: AnyStr, default: Any = None) -> Any:
+        """ Get values from 'analysis' step results
+
+        :param key: Target Key of Analysis
+        :param default: (Optional) Default value if not found
+        :return: Any
+        """
+        return self._analysis.get(key, default)
+
+    def reset(self):
+        """ Reset the results of Rebyu object. (Composition Result, Analysis Result, and Pipeline State)
+
+        :return:
+        """
+        self._composition.clear()
+        self._analysis.clear()
+        self.pipeline.reset()
+
+    def info(self):
+        """ Get the information of the class.
+
+        :return:
+        """
+        out_text = 'DATA:\n'
+        for col in self.data.columns:
+            out_text += f' -{col}: {self.data[col].dtype}\n'
+
+        out_text += '\nCOMPOSITION:\n'
+        if len(self._composition):
+            for kc, vc in self._composition.items():
+                out_text += f' -{kc}: {type(vc)}\n'
+        else:
+            out_text += 'Empty\n'
+
+        out_text += '\nANALYSIS:\n'
+        if len(self._analysis):
+            for kc, vc in self._analysis.items():
+                out_text += f' -{kc}: {type(vc)}\n'
+        else:
+            out_text += 'Empty\n'
+
+        out_text += '\nPIPELINE:\n'
+        out_text += f'pid: {self.pipeline.pid}\n'
+        out_text += f'steps: {len(self.pipeline)}\n'
+        out_text += f'state: {self.pipeline.state()}\n'
+
+        out_text += '\nSTEPS:\n'
+        steps_info = self.pipeline.steps_info()
+        for step in steps_info:
+            out_text += f' -{step}\n'
+
+        return out_text
