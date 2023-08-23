@@ -1,0 +1,5 @@
+setup.py
+Bassam_faisal.egg-info/PKG-INFO
+Bassam_faisal.egg-info/SOURCES.txt
+Bassam_faisal.egg-info/dependency_links.txt
+Bassam_faisal.egg-info/top_level.txt
