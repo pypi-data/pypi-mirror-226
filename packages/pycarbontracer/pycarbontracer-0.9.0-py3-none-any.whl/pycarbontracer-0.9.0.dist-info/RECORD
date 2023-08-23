@@ -1,0 +1,8 @@
+pycarbontracer/__init__.py,sha256=aJMkyO9z04fJmfp64sHnaEZ-_8IYt9hfDaPjjtpFX9Y,22
+pycarbontracer/classes/__init__.py,sha256=op-9BCRWRKJcAHWEpiD2jdGQKSj4ZrE-Sr8f8Bocqqk,68
+pycarbontracer/classes/carbontracer.py,sha256=fSRFTvX3RE5fo93mZKvE82a66Vx3W_mMt74Fwaa679U,3829
+pycarbontracer/classes/http.py,sha256=onTW9dVQ_ioGm3Ac0yb7Kw5SgFn8EwPMiVIh-75bTUs,547
+pycarbontracer-0.9.0.dist-info/METADATA,sha256=VUYQJ8VX4M1sykHhMKAZHVtwJ_x9nDLgj-5CAu-6mes,3045
+pycarbontracer-0.9.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pycarbontracer-0.9.0.dist-info/licenses/LICENSE,sha256=AikqHgUd0pdyp-t0SKV5wTMbJvYlO-LTJWBaHOFXp2U,1084
+pycarbontracer-0.9.0.dist-info/RECORD,,
