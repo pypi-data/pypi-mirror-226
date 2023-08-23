@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: catgrad
+Version: 0.0.0.1
+Summary: Reverse-derivative-based machine learning
+Project-URL: Homepage, https://github.com/statusfailed/catgrad
+Project-URL: Github, https://github.com/statusfailed/catgrad
+Author-email: Paul Wilson <paul@statusfailed.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: numpy~=1.21
+Requires-Dist: yarrow-diagrams==0.0.3.1
+Provides-Extra: dev
+Requires-Dist: hypothesis; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Provides-Extra: example
+Requires-Dist: pandas; extra == 'example'
+Description-Content-Type: text/markdown
+
+# Machine Learning with Reverse Derivatives
+
+Deep learning via [reverse derivatives](https://arxiv.org/abs/1910.07065).
+
+# Examples
+
+    ./data/get-iris-data.sh
+    python3 -m examples.iris hidden

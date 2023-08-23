@@ -1,0 +1,16 @@
+catgrad/__init__.py,sha256=bE8crscIuJfISXoEGc1FSQMPCcodZQa3FSkHGuuijJo,152
+catgrad/compile.py,sha256=j0MLUoZWg-mOshubTORQIbs-lUqZHQtw0CTwGuPlODw,3438
+catgrad/initializer.py,sha256=sylvs6shRlFQIo26WdabpE2gVYqhBFk6kehFsfYICWg,359
+catgrad/layer.py,sha256=9g49Lvi8zxVfPApI7H3fohpvCo4iG5Eo8k4LdTOoxbc,1475
+catgrad/operation.py,sha256=JwTrOhyi6luhjq5dM9PQfUcBUxYUeDwYuTi7Ou7UJc0,2081
+catgrad/optic.py,sha256=4v_pKK73XfPf880BnklxpifPUIfrmifZJesUj-_Fk7Q,4103
+catgrad/parameters.py,sha256=LqF-CLQIrPPqJmkLBblOVSMQ9PgDiG_LjVgHlKPfjwE,3247
+catgrad/signature.py,sha256=Q_8XqnD4xKsTI3uOTZKN7IachE72ty3zwW4u_JAVhKk,12571
+catgrad/learner/__init__.py,sha256=aGt3t13ER86Ed4UaTwzSxb82x-sijH7o61J4l4DvBWw,132
+catgrad/learner/displacement.py,sha256=z81IRA4XbMCBH4NKsO8dT_9qqJzwxviRuD4Ktb3yoZ4,160
+catgrad/learner/learner.py,sha256=DWHDNJkS8TMup8bs6wH7i9cyRKRtE3vKyFGzE-0Khu0,732
+catgrad/learner/update.py,sha256=STpY7vEgWhbC9-0SJdegHA49OiQqoz0DiV_MkgThjH8,742
+catgrad-0.0.0.1.dist-info/METADATA,sha256=aqmXa2D43460fVgiNL2NotOQGQkWFKZQ5aQNDNQ5HIM,918
+catgrad-0.0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+catgrad-0.0.0.1.dist-info/licenses/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+catgrad-0.0.0.1.dist-info/RECORD,,
