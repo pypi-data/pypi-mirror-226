@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: shell-ssh-client
+Version: 0.0.1
+Summary: ssh shell demo on python
+Project-URL: Homepage, https://github.com/Yulai202020/ssh-python
+Project-URL: Documentation, https://github.com/Yulai202020/ssh-python
+Project-URL: Changes, https://github.com/Yulai202020/ssh-python
+Keywords: ssh,project
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+### ssh client
+- install:
+
+pip3 install ssh_client
+
+- run shell:
+
+python3 -m shell_ssh_client [ip_address] [uname] [password/path_to_key_file] [workdir_on_pc]
+
+shell_ssh_client [ip_address] [uname] [password/path_to_key_file] [workdir_on_pc]

@@ -1,0 +1,2 @@
+[console_scripts]
+ssh_client = ssh_python.__main__:main
