@@ -1,0 +1,7 @@
+pyLICOS/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyLICOS/client.py,sha256=8XSimveIpMKiMHjTdMVrWPAVvdLJwfrUFJxJr5Bz3pQ,19145
+pyLICOS/communication.py,sha256=KpHSrra_Eqntspb1pKtwAqCehCCQi90dDh3_-o0jEFY,2103
+pyLICOS-0.1.0.dist-info/METADATA,sha256=T-L-kKPdvS4O0uX7Y_TbfUFIATVeDCzZwaiSU0Jcz_o,328
+pyLICOS-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyLICOS-0.1.0.dist-info/top_level.txt,sha256=Icx8ZEkDj2ZUHRl6NRgQ_ZnwFtFH18DKf_d10aRW3Yg,8
+pyLICOS-0.1.0.dist-info/RECORD,,
