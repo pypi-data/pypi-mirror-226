@@ -1,0 +1,12 @@
+datateer_upload_agent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datateer_upload_agent/config.py,sha256=rEImhps5h7-uHbKtYk-KYGnZbsmkt0oDuI92ItOnmnc,1335
+datateer_upload_agent/constants.py,sha256=0H5tTpoqFnqWZTyW07ubRc037giaol7xDJt0bmc9az8,512
+datateer_upload_agent/main.py,sha256=AYLa797Im4wRJV6a9UsPX33_9iQiNziccZVpy3tYfjs,4450
+datateer_upload_agent/uploader/upload.py,sha256=lui2gHuGjf_5NmlBFhR60r4iNLZhGi4p3xVOCK_L8TE,746
+datateer_upload_agent/uploader/upload_gcs.py,sha256=jn03zZXWHi1BqstY94P0wP8ekeXF0QzvrhUn-P7cR5Y,1199
+datateer_upload_agent/uploader/upload_s3.py,sha256=sSwgMH114YqnS56QSCT0WoGCV78UhSfcI8ImtM2SmWY,1063
+datateer_upload_agent-0.5.1.dist-info/LICENSE,sha256=HnH1CDXo6mm9jG7PuIieFyDOzXDbeweL3873ny4E95U,1065
+datateer_upload_agent-0.5.1.dist-info/METADATA,sha256=QvfmoaBAFmUPumuXqC1ZC7k0q83Ur4aFQhwa_EAVWc0,4914
+datateer_upload_agent-0.5.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+datateer_upload_agent-0.5.1.dist-info/entry_points.txt,sha256=Y5O4X2Ntr8ecLl3g_YCdqzQCeRKoxzQDBw31J25kuL4,59
+datateer_upload_agent-0.5.1.dist-info/RECORD,,

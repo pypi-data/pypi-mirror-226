@@ -1,0 +1,3 @@
+[console_scripts]
+datateer=datateer_upload_agent.main:cli
+
