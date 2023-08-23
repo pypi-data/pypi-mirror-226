@@ -1,0 +1,11 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crud.py,sha256=Gk1oO6NOys0emH2iPqY0Svsd1ro-cdyPZFeWGlaTUVQ,1060
+dbdef.py,sha256=xFIrHmrsd86qJCxRBhNzFHjp87YoOg_Duo8MsgsFsbg,607
+main.py,sha256=VtMiG13aYTTVxKZ5-OXkfPSMKcTpdvz0x-Jq-pHeGkE,3183
+models.py,sha256=e4wQVOzyM4pFATiFaXgPwLQbcbn79LUkqhR8gC2fiXY,1074
+schemas.py,sha256=higl0YAvlIYfe6ri3V0qJX8LF9XzOEJVhyW4T19sBJY,673
+FastAPIExample-0.0.6.dist-info/LICENSE,sha256=R61b4eD649E1aUoRpfhxb2v6PYInZk_YyIRb4VJpXpo,1075
+FastAPIExample-0.0.6.dist-info/METADATA,sha256=i_ZDTPLRWC9B4qz20Aib79gbjLZGqAnbN2fBxIfRSik,10760
+FastAPIExample-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+FastAPIExample-0.0.6.dist-info/top_level.txt,sha256=QbW8nvAOpZGGQRGyC7F4UAPDjv5GAbmLJWTkfZfB7QI,40
+FastAPIExample-0.0.6.dist-info/RECORD,,
