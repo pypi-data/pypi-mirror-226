@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: encryptme
+Version: 2.3
+Summary: A simple encryption library
+Author: Adjei Collins
+Author-email: adjeicollins1672@gmail.com
+License: MIT
+Keywords: cryptography encryption encrypt message
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# EncryptMe Library
+
+EncryptMe is a simple encryption library developed by ADJEI COLLINS, a Cybersecurity student from Accra Technical University, Ghana.
+
+## Features
+
+- Encrypt and decrypt messages using a provided key.
+- Save encrypted messages to files.
+- Read encrypted messages from files.
+- Display decrypted messages.
+
+## Installation
+
+You can install the library using pip:
+pip install encryptme
+
+
+
+```bash
+pip install encryptme
+
+Change Log
+==========
+
+1.0 (22/08/2023)
+
+## USAGE GUIDE
+# This guide demonstrates how to use the 'encryptme' library to encrypt and decrypt messages.
+import encryptme
+
+# Encryption key (known only to the sender)
+encryption_key = 12345
+
+# Message to encrypt
+message = "Hello, this is a secret message!"
+
+# Encrypt the message
+encrypted_message = encryptme.encrypt(message, encryption_key)
+
+# Save encrypted message to a file
+encrypted_message.save("encrypted_message.txt")
+
+# Decrypting the message
+# (Importing the module again to ensure access to all functions)
+import encryptme
+
+# Encryption key (known only to the receiver)
+decryption_key = 12345
+
+# Read encrypted message from the file
+encrypted_message = encryptme.read("encrypted_message.txt")
+
+# Decrypt the message
+decrypted_message = encryptme.decrypt(encrypted_message, decryption_key)
+
+# Show decrypted message
+decrypted_message.show()

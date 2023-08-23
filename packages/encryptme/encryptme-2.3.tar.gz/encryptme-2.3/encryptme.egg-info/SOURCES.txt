@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+encryptme.py
+setup.py
+encryptme.egg-info/PKG-INFO
+encryptme.egg-info/SOURCES.txt
+encryptme.egg-info/dependency_links.txt
+encryptme.egg-info/top_level.txt
