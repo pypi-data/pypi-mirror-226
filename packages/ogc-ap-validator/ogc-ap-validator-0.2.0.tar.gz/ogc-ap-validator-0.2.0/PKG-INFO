@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ogc-ap-validator
+Version: 0.2.0
+Summary: Validation tool to check OGC compliance of CWL files for application packages
+License: Apache License, Version 2.0
+Keywords: application package,CWL,validator,validation,OGC
+
+Validation tool to check OGC compliance of CWL files for application packages
