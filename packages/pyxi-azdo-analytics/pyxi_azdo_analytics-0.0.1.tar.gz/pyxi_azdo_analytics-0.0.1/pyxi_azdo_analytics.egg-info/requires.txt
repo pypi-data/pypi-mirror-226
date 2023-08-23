@@ -1,0 +1,4 @@
+environs
+fastapi
+pyxi_kafka_client
+pyxi_couchbase_client

@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pyxi_azdo_analytics.egg-info/PKG-INFO
+pyxi_azdo_analytics.egg-info/SOURCES.txt
+pyxi_azdo_analytics.egg-info/dependency_links.txt
+pyxi_azdo_analytics.egg-info/requires.txt
+pyxi_azdo_analytics.egg-info/top_level.txt

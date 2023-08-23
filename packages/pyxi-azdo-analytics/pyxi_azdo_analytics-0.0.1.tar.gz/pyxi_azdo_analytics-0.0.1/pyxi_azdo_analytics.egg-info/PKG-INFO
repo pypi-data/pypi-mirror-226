@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyxi-azdo-analytics
+Version: 0.0.1
+Summary: A basic data gatherer for azdo in Python.
+Home-page: https://github.com/stiproot/py-azdo-analytics
+Author: Simon Stipcich
+Author-email: stipcich.simon@gmail.com
+License: MIT
+Keywords: python,package,azdo,beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# py-azdo-analytics
+A collection of Python services to monitor and persist changes in Azure DevOps Work Items, in order to draw insights from, to determine the health of a project.
