@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "qwest-git"
+readme = "README.md"
+version = "0.1.4"
+description = "A ssssimple framework for building complex web applications."
+license = "MIT"
+authors = ["jenrey <jenrey@foxmail.com>"]
+maintainers= ["jenrey1 <jenrey1@foxmail.com>"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+homepage = "https://python-poetry.org/"
+repository = "https://git.i.mercedes-benz.com/ITT-China/azmodan"
+documentation = "https://python-poetry.org/docs/"
+keywords = ["packaging", "poetry"]
+packages = [
+    {include = "test_git"},
+    {include = "a.py"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+twine = "^4.0.2"
+build = "^0.10.0"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = "default"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
