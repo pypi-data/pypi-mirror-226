@@ -1,0 +1,5 @@
+iconsdk>=2.3.0
+iso3166>=2.1.0
+
+[tests]
+pytest~=6.2.5
