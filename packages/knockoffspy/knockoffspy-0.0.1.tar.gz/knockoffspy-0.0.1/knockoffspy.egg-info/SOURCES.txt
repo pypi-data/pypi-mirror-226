@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+knockoffspy/__init__.py
+knockoffspy/install.jl
+knockoffspy/ko.py
+knockoffspy/setup.jl
+knockoffspy.egg-info/PKG-INFO
+knockoffspy.egg-info/SOURCES.txt
+knockoffspy.egg-info/dependency_links.txt
+knockoffspy.egg-info/not-zip-safe
+knockoffspy.egg-info/requires.txt
+knockoffspy.egg-info/top_level.txt
