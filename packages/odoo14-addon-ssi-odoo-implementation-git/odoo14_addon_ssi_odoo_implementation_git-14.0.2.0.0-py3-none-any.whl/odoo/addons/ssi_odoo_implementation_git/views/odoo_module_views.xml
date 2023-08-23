@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="odoo_module_view_form" model="ir.ui.view">
+    <field name="name">odoo_module.form</field>
+    <field name="model">odoo_module</field>
+    <field name="inherit_id" ref="ssi_odoo_implementation.odoo_module_view_form" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='version_ids']" position="after">
+                <field name="git_repo_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
