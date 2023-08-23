@@ -1,0 +1,13 @@
+data/models/bbox_model.pt,sha256=dtSG2IAj1bLtbyUqP1jMMuij3z86Ywaghg1wwbyTAGs,8698771
+data/models/model.pt,sha256=Jd9jO4-B3Yt2ZlAdrpqQqanZQIJnk8gkgFgXFgUabco,8697352
+deepbet/__init__.py,sha256=EBm97wYtVHABmP27uzNfMyww0VHvG5IL6H4_nmouOX8,71
+deepbet/bet.py,sha256=KgPpgEMEYyIIKu8bEas7ORJ6x5aMWdU9_ZSSiTDUTco,4744
+deepbet/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepbet/interfaces/cli.py,sha256=WTRD_mJXZ234dKrcFMuA6U-CudFCefykGLiU_3UiNKk,2341
+deepbet/interfaces/gui.py,sha256=7PMPVqyrFA6l9VhzGw9f1D2FDj00rMwbMBjsX20YXV8,7198
+deepbet/utils.py,sha256=fBtZTwalSvc5Af-iJam7MsyZu9j22LhlFUbzxalmfS8,1432
+deepbet-0.0.2.dist-info/LICENSE,sha256=osgee6lBXekQUWvLL4Pnap2IF1hqKUWTRpXfTVla3qU,1110
+deepbet-0.0.2.dist-info/METADATA,sha256=BFQfrCtgzkbPJaT_nwU9W669nb89iTRRoI-l0MvwWW4,3890
+deepbet-0.0.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+deepbet-0.0.2.dist-info/entry_points.txt,sha256=rnZWpPX0NBlMqhvm0dl0-s-tfQTsPK5X4o7J8hnxd8s,105
+deepbet-0.0.2.dist-info/RECORD,,
