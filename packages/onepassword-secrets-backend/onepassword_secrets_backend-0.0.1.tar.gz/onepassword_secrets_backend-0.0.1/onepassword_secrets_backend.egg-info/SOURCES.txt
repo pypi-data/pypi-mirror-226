@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+onepassword_secrets_backend/__init__.py
+onepassword_secrets_backend/one_password_backend.py
+onepassword_secrets_backend.egg-info/PKG-INFO
+onepassword_secrets_backend.egg-info/SOURCES.txt
+onepassword_secrets_backend.egg-info/dependency_links.txt
+onepassword_secrets_backend.egg-info/requires.txt
+onepassword_secrets_backend.egg-info/top_level.txt
