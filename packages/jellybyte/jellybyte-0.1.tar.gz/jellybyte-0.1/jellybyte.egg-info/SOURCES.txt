@@ -1,0 +1,7 @@
+README.md
+setup.py
+jellybyte/__init__.py
+jellybyte.egg-info/PKG-INFO
+jellybyte.egg-info/SOURCES.txt
+jellybyte.egg-info/dependency_links.txt
+jellybyte.egg-info/top_level.txt
