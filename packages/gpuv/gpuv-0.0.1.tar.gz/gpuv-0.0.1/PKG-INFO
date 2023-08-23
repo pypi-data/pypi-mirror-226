@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gpuv
+Version: 0.0.1
+Summary: gpuv
+Author: Jared Wilber, Jojo Ortiz
+Author-email: jared@cambioml.com
+Keywords: python,gpu,nvidia,gpustat,dashboard,gpuv
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+
+gpuv longer description
