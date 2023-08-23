@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/PyNutri.egg-info/PKG-INFO
+src/PyNutri.egg-info/SOURCES.txt
+src/PyNutri.egg-info/dependency_links.txt
+src/PyNutri.egg-info/top_level.txt
