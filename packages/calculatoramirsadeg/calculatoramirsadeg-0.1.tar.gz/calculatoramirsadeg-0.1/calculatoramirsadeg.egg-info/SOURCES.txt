@@ -1,0 +1,8 @@
+setup.py
+calculator/__init__.py
+calculator/hegzbe2.py
+calculator/mashinhesab.py
+calculatoramirsadeg.egg-info/PKG-INFO
+calculatoramirsadeg.egg-info/SOURCES.txt
+calculatoramirsadeg.egg-info/dependency_links.txt
+calculatoramirsadeg.egg-info/top_level.txt
