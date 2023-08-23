@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+xiplot_filetypes/__init__.py
+xiplot_filetypes.egg-info/PKG-INFO
+xiplot_filetypes.egg-info/SOURCES.txt
+xiplot_filetypes.egg-info/dependency_links.txt
+xiplot_filetypes.egg-info/entry_points.txt
+xiplot_filetypes.egg-info/requires.txt
+xiplot_filetypes.egg-info/top_level.txt

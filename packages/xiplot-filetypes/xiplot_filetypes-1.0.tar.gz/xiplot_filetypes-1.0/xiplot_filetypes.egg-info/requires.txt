@@ -1,0 +1,7 @@
+pandas
+
+[:platform_system != "Emscripten"]
+pyarrow>=11.0.0
+
+[:platform_system == "Emscripten"]
+fastparquet

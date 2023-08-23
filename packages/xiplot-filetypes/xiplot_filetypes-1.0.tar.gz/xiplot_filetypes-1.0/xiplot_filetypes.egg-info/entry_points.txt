@@ -1,0 +1,7 @@
+[xiplot.plugin.read]
+feather-read = xiplot_filetypes:read_feather
+parquet-read = xiplot_filetypes:read_parquet
+
+[xiplot.plugin.write]
+feather-write = xiplot_filetypes:write_feather
+parquet-write = xiplot_filetypes:write_parquet

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: xiplot-filetypes
+Version: 1.0
+Summary: Xiplot plugin for additional file types
+Author-email: Anton Björklund <anton.bjorklund@helsinki.fi>
+Project-URL: homepage, https://github.com/edahelsinki/xiplot
+Project-URL: repository, https://github.com/edahelsinki/xiplot.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# [&chi;iplot](https://github.com/edahelsinki/xiplot) plugin for additional file types
+
+This plugin adds support for additional file types (beside `csv` and `json`) to [&chi;iplot](https://github.com/edahelsinki/xiplot).
+Currently, this plugin adds support for `feather` and `parquet`.
+Note that in the [WASM version](https://edahelsinki.fi/xiplot) only support for `parquet` is added.
+
+## Installation
+
+In non-WASM [&chi;iplot](https://github.com/edahelsinki/xiplot) this plugin should be automatically installed.
+Otherwise you can use `pip install xiplot_filetypes` in the same Python environment.
+
+In the [WASM version](https://edahelsinki.fi/xiplot) you can install the plugin by going to the "Plugin" tab and selecting `xiplot_filetypes`.
