@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: wordlette
+Version: 0.1.0a3
+Summary: Simple and easy framework for building complex websites.
+License: MIT
+Author: ZechCodes
+Author-email: hi@zech.codes
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: bevy (>=2.0.0,<3.0.0)
+Requires-Dist: starlette (>=0.28.0,<0.29.0)
+Description-Content-Type: text/markdown
+
+# Wordlette 0.1.0-alpha.3
+
+> ⚠️ This is alpha software. It is not currently intended for production use.
+
+Simple and easy content management system that anyone can use.
+
+## Usage
+
+At this time `wordlette.core` is the only thing that is functional. It requires a bit of setup to get working. There is
+a [demo](demos/core) that provides a very basic working example. Clone this repo and install the dependencies using
+poetry:
+
+```bash
+poetry install
+```
+
+Then run the demo:
+
+```bash
+uvicorn demos.core.app:app
+```
+
+It should be accessible at [localhost:8000](http://localhost:8000).
