@@ -1,0 +1,22 @@
+[project]
+name = "lerspy"
+version = "1.0.0"
+authors = [
+  { name="Isaac Astell", email="isaacjulianastell@gmail.com" },
+]
+description = "Lightweight Enums, Rust-Styled! A package for Python featuring a custom interpretation of enumerations, heavily inspired by Rust's syntax and a focus on functionality + simplicity! "
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/IAmNotIsaac/python-lers/tree/main"
+"Bug Tracker" = "https://github.com/IAmNotIsaac/python-lers/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
