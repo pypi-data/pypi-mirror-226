@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/tam_email/Email.py
+src/tam_email/__init__.py
+src/tam_email.egg-info/PKG-INFO
+src/tam_email.egg-info/SOURCES.txt
+src/tam_email.egg-info/dependency_links.txt
+src/tam_email.egg-info/requires.txt
+src/tam_email.egg-info/top_level.txt
