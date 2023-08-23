@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+base_page/__init__.py
+base_page/base_page.py
+core_page.egg-info/PKG-INFO
+core_page.egg-info/SOURCES.txt
+core_page.egg-info/dependency_links.txt
+core_page.egg-info/requires.txt
+core_page.egg-info/top_level.txt
