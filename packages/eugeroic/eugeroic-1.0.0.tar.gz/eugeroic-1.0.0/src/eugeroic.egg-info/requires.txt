@@ -1,0 +1,18 @@
+
+[:platform_system == "Darwin"]
+pyobjc-framework-Cocoa>=9.2
+
+[dev]
+bumpversion
+
+[doc]
+sphinx
+sphinx_rtd_theme
+better_apidoc
+
+[test]
+pytest
+coverage
+pytest-cov
+hypothesis
+tox
