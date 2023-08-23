@@ -1,0 +1,12 @@
+gembox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gembox/debug_utils.py,sha256=iUSCwcxU6DxkbuMKlukq422KQK-RWXnAhFUma_c8q7U,4203
+gembox/io.py,sha256=NVWexPJu9W87aHP3HxjFXJUTzsBnn_Yw0uQmRNLauX4,2213
+gembox/multiprocess/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gembox/multiprocess/mp_async/__init__.py,sha256=WG5m1cKouv9CHBDluICG2VlbvQyMbWjUtlBdkKFP6AI,73
+gembox/multiprocess/mp_async/parallel_executor.py,sha256=56lTpK1fWLUkVE6Kw9UQZv14DpTzsjjidq-RdPLGhdE,2919
+gembox/multiprocess/mp_async/task.py,sha256=Z9TROdDB7bhkfwUipoVpctlnRKIIOvF2eI3nZmVJUHg,1990
+gembox/multiprocess/mp_async/task_spliter.py,sha256=nkYMvOeIQ2CAD3K4DEzwc_VypzCoL8DJIIxzkRljNr4,3236
+gembox-0.1.6.dist-info/METADATA,sha256=tvG227BhAVBdtlZXHgUGF8KmmQvzpXPAc63uSU97_UA,848
+gembox-0.1.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+gembox-0.1.6.dist-info/top_level.txt,sha256=jtw_9wYjyjQwesQQqgto8xURayMiWNyhQw0ES49_gew,7
+gembox-0.1.6.dist-info/RECORD,,
