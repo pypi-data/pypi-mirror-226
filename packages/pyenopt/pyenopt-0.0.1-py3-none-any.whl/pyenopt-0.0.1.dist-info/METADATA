@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pyenopt
+Version: 0.0.1
+Summary: Pyenopt package
+Author-email: Pieter Verveer <pieter.verveer@tno.nl>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pyenopt code
+This package contains code related to the pyenopt package for ensemble based
+optimization. 
+
+Currently it contains a plugin for the main pyenopt package to provide backwards
+compatibility with a legacy sqlite database interface ot pyenopt.
+
+The main pyenopt optimizer code itself is currently an internal project, but
+will be released as open-source in the near future. Until then, adding parts of
+the code that can be released already, like this plugin, are added
+incrementally.
+
+All files in this repository are released under the The GNU General Public
+License v3.0 (a copy is provided in the LICENSE file).
