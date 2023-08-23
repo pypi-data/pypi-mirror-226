@@ -1,0 +1,11 @@
+LICENSE
+setup.py
+seaplane.flow.egg-info/PKG-INFO
+seaplane.flow.egg-info/SOURCES.txt
+seaplane.flow.egg-info/dependency_links.txt
+seaplane.flow.egg-info/not-zip-safe
+seaplane.flow.egg-info/requires.txt
+seaplane.flow.egg-info/top_level.txt
+seaplane/flow/__init__.py
+seaplane/flow/processor.py
+tests/test_processor.py
