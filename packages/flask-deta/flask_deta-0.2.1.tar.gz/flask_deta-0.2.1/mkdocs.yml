@@ -1,0 +1,100 @@
+#  SITE NAME
+site_name: Flask-Deta
+
+site_description: "A Python library for seamless integration with DetaSpace in Flask"
+
+repo_url: https://github.com/Jesparzarom/Flask-Deta
+repo_name: "Flask-Deta"
+
+
+# NAVIGATION
+nav:
+  - Overview: index.md
+
+
+  - Gettin Started:
+    - Installation: guide/install.md
+    - Configurations: guide/config.md
+    - Quickstart : guide/start.md
+  
+  - DetaBase: detabase/base.md
+  - DetaDrive: detadrive/drive.md
+
+  - About:
+      - Changes: about/CHANGELOG.md
+      - License: about/LICENSE.md
+
+# THEME CONFIGURATIONS
+theme:
+  # NAME OF THEME
+  name: material
+  # LANGUAGE
+  language: en
+
+  # ICONS
+  icon:
+    repo: fontawesome/brands/github
+  
+  favicon: images/flaskdetafavicon.png
+  logo: images/flaskdetafavicon.png
+
+  highlightjs: true
+
+  # FONTS
+  font:
+    text: Fira Sans
+    code: Ubuntu Mono
+  # COLORS
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: cyan
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+
+  # FEATURES
+  features:
+    - navigation.footer
+    - content.code.copy
+    - content.code.hljs
+    - search.highlight
+    - navigation.instant
+    - navigation.instant.prefetch
+
+# PLUGINS FOR THE SITE
+plugins:
+  - search
+
+# EXTRAS
+extra:
+  version: 0.2.1
+
+
+copyright: Copyright &copy; 2023 J.P. Esparza.
+
+markdown_extensions:
+  - pymdownx.highlight: 
+      use_pygments: false
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - toc:
+      title: On this page
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js
+  - javascripts/highlight.js
+extra_css:
+  - stylesheets/framer.css
+
+
