@@ -1,0 +1,17 @@
+[package]
+name = "ironsnake-simple-pyo3"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ironsnake-simple = { path = "local_dependencies/ironsnake-simple" }
+pyo3 = { version = "0.19", features = ["extension-module"] }
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+
+[workspace]
