@@ -1,0 +1,4 @@
+setup authors
+	https://github.com/pytest-dev/pytest-django/blob/master/AUTHORS
+	PRs
+	email joern
