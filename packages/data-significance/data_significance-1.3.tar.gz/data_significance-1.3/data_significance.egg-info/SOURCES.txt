@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+glm.c
+glm.h
+main.c
+pyproject.toml
+ridge.c
+ridge.h
+setup.py
+util.c
+util.h
+data_significance.egg-info/PKG-INFO
+data_significance.egg-info/SOURCES.txt
+data_significance.egg-info/dependency_links.txt
+data_significance.egg-info/requires.txt
+data_significance.egg-info/top_level.txt
