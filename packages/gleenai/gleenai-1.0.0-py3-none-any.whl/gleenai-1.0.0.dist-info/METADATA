@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: gleenai
+Version: 1.0.0
+Summary: Python wrapper for GleenAI API.
+Author: Nagendra Kumar
+Author-email: nagendra@helix3.io
+License: MIT
+Keywords: gleenai api wrapper
+Requires-Dist: requests
+
