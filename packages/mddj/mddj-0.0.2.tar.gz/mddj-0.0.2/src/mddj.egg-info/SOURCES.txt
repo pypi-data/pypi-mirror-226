@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/mddj/__init__.py
+src/mddj/builder.py
+src/mddj/cli.py
+src/mddj/readers.py
+src/mddj.egg-info/PKG-INFO
+src/mddj.egg-info/SOURCES.txt
+src/mddj.egg-info/dependency_links.txt
+src/mddj.egg-info/entry_points.txt
+src/mddj.egg-info/requires.txt
+src/mddj.egg-info/top_level.txt
