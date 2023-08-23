@@ -1,0 +1,3 @@
+[console_scripts]
+typytemplate=src.typytemplate.main:main
+
