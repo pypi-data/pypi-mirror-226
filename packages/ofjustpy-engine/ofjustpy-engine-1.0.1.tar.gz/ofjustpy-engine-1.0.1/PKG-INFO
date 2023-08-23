@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ofjustpy-engine
+Version: 1.0.1
+Summary: JustPy is an object-oriented, component based, high-level Python Web Framework that requires no front-end programming
+Maintainer-email: Kabira K <kabira@monallabs.in>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: addict-tracking-changes
+Requires-Dist: py-tailwind-utils
+Requires-Dist: itsdangerous>=2.1.2
+Requires-Dist: jinja2>=3.1.2
+Requires-Dist: hjson>=3.1.0
+Requires-Dist: httpx>=0.23.0
+Requires-Dist: psutil>=5.9.2
+Requires-Dist: starlette>=0.20.4
+Requires-Dist: uvicorn>=0.18.3
+Requires-Dist: websockets
+Requires-Dist: aiofiles
+Project-URL: Documentation, https://monallabs-org.github.io/ofjustpy/core-engine
+Project-URL: Home, https://webworks.monallabs.in/ofjustpy/core-engine
+Project-URL: Source, https://github.com/Monallabs-org/
+
+# [JustPy-Svelte](https://github.com/Monallabs-org/justpy-svelte)
+---
+
+## Introduction
+Derived from [justpy](https://github.com/justpy-org/justpy), this repo provides the core engine for ofjustpy webdev framework. 
+
+
+### EndNotes
+- Developed By: webworks.monallabs.in 
+
+
+
+
