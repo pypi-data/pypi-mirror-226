@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: qwest-git
+Version: 0.1.5
+Summary: A ssssimple framework for building complex web applications.
+Home-page: https://python-poetry.org/
+Keywords: packaging,poetry
+Author: jenrey
+Author-email: jenrey@foxmail.com
+Maintainer: jenrey1
+Maintainer-email: jenrey1@foxmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AWS CDK :: 2
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: build (>=0.10.0,<0.11.0)
+Requires-Dist: twine (>=4.0.2,<5.0.0)
+Project-URL: Documentation, https://python-poetry.org/docs/
+Project-URL: Repository, https://git.i.mercedes-benz.com/ITT-China/azmodan
+Description-Content-Type: text/markdown
+
+test
+
+
+qweweqeqw
