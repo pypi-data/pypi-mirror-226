@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/singlebase/__init__.py
+src/singlebase/client.py
+src/singlebase/lib.py
+src/singlebase.egg-info/PKG-INFO
+src/singlebase.egg-info/SOURCES.txt
+src/singlebase.egg-info/dependency_links.txt
+src/singlebase.egg-info/requires.txt
+src/singlebase.egg-info/top_level.txt

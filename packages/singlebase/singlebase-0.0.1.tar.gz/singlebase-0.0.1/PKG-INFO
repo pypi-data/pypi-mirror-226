@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: singlebase
+Version: 0.0.1
+Summary: Singlebase.cloud Python SDK
+Home-page: https://github.com/singlebase/singlebase-py
+Author: Mardix/SinglebaseCloud.com
+Author-email: contact@singlebasecloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Singlebase-py
+
+## Install 
+
+```
+pip install singlebase
+```
