@@ -1,0 +1,5 @@
+Click>=7.0
+requests>=2.20
+tqdm>=4.60
+docstring_parser>=0.10
+aiohttp>=3.8
