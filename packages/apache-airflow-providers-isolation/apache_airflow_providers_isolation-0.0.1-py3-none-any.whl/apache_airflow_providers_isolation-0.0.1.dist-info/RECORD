@@ -1,0 +1,16 @@
+isolation/__init__.py,sha256=UlkqMsPtwq3QzhBljUkqt67SHXryh8GDfI4QFKrO75w,416
+isolation/util.py,sha256=5UkHZo83chz16Uh5Y744d3kvPF4D7VZ98LCuk0EufBc,5586
+isolation/example_dags/isolation_provider_example_dag.py,sha256=ipJfwWR1hLOdsg0_jeIDuf5TVUnWPn3onJALyPnmaws,1685
+isolation/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isolation/hooks/post_isolation.py,sha256=rOWed1bTM6dz_C3RNVF1XAGYBlVvI6QuLJ8mwNYNPRo,10011
+isolation/operators/__init__.py,sha256=FnGICSBXlS6oNYVKRD1mWQaIdJhTB4n6DDY4xdzszaI,84
+isolation/operators/isolation.py,sha256=0TE8EK6JqGzsv3CSvZblz21BfqPYOj063AtGgCsR6wI,1127
+isolation/operators/isolation_kubernetes.py,sha256=V35KgYQ8B8J6xz_JOoAnMcNdusuHUeivjGPSaQ5F1A8,18197
+isolationctl/__init__.py,sha256=yCh31YCiRcFFSuH-eKhNKvRtOLGvXmS4zMWUUPRMVXw,12284
+isolationctl/__main__.py,sha256=3fQfPFmkHQTdAIBGIE7JWMuZscCqTMP5yBQADCn4Bwk,14120
+apache_airflow_providers_isolation-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+apache_airflow_providers_isolation-0.0.1.dist-info/METADATA,sha256=cucZ1Fga1Sib5KjH0vUcB8pxcglN3QdO9B6wfiV6Unw,9947
+apache_airflow_providers_isolation-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+apache_airflow_providers_isolation-0.0.1.dist-info/entry_points.txt,sha256=TEdyqaKt6JpYYKhHIa5_012f8jXikkWjaetHX9XXa44,139
+apache_airflow_providers_isolation-0.0.1.dist-info/top_level.txt,sha256=UwD2yOf_cHu_xYabBGlkIFUMHyqAKZI7_E2T3LvWeeQ,23
+apache_airflow_providers_isolation-0.0.1.dist-info/RECORD,,

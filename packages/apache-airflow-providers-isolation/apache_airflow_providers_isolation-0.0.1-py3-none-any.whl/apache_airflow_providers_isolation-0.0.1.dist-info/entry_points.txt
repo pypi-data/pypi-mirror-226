@@ -1,0 +1,5 @@
+[apache_airflow_provider]
+provider_info = isolation.__init__:get_provider_info
+
+[console_scripts]
+isolationctl = isolationctl.__main__:cli
