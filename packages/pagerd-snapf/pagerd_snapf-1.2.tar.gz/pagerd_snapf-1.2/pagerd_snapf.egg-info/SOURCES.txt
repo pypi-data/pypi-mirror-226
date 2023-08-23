@@ -1,0 +1,8 @@
+setup.py
+pagerd_snapf/__init__.py
+pagerd_snapf/functions.py
+pagerd_snapf.egg-info/PKG-INFO
+pagerd_snapf.egg-info/SOURCES.txt
+pagerd_snapf.egg-info/dependency_links.txt
+pagerd_snapf.egg-info/requires.txt
+pagerd_snapf.egg-info/top_level.txt
