@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dataclasses-collections
+Version: 0.0.0
+Summary: Limited implementation of the Python collections module using dataclasses
+Author-email: "Roy T. Smart" <roytsmart@gmail.com>
+Project-URL: Homepage, https://github.com/byrdie/dataclasses-collections
+Project-URL: Documentation, https://dataclasses-collections.readthedocs.io/en/latest
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: doc
+Requires-Dist: pytest ; extra == 'doc'
+Requires-Dist: matplotlib ; extra == 'doc'
+Requires-Dist: graphviz ; extra == 'doc'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'doc'
+Requires-Dist: pydata-sphinx-theme ; extra == 'doc'
+Requires-Dist: ipykernel ; extra == 'doc'
+Requires-Dist: jupyter-sphinx ; extra == 'doc'
+Requires-Dist: sphinx-favicon ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# dataclasses-collections
+A Python library that provides a dataclasses-based implementation of some of the 
+types in the [collections](https://docs.python.org/3/library/collections.html#)
+module.
