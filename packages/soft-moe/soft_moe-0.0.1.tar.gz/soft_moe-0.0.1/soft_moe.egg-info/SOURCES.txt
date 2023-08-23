@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+soft_moe/__init__.py
+soft_moe/soft_moe.py
+soft_moe/vision_transformer.py
+soft_moe.egg-info/PKG-INFO
+soft_moe.egg-info/SOURCES.txt
+soft_moe.egg-info/dependency_links.txt
+soft_moe.egg-info/requires.txt
+soft_moe.egg-info/top_level.txt
+tests/__init__.py
+tests/test_soft_moe.py
+tests/test_vision_transformer.py
