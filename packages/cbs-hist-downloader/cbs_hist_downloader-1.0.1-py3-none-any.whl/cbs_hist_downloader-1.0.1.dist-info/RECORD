@@ -1,0 +1,8 @@
+cbs_hist_downloader/__init__.py,sha256=RUN0w2V8tr47oUSiZ3nrss-pJiVcDbh9b2dK1gFh3j4,38
+cbs_hist_downloader/find_next_page.py,sha256=hWN8k-v-wYdmATa6qSvZ9EsxRhrVvaCmwBPLMlk9CJo,1257
+cbs_hist_downloader/scrape_book.py,sha256=JyehmWW-S3zpcI70SrZILQS2vKakBNqNtWmfdkybPXA,1933
+cbs_hist_downloader-1.0.1.dist-info/LICENSE,sha256=6iSZnm_i_Z7aCQM68GODWRaST16ekXJjGUGK3-dFBn4,1064
+cbs_hist_downloader-1.0.1.dist-info/METADATA,sha256=Qq20ydl1HJfnXwtK5cesIHQkUVvgUDEunTwUFb2CpXw,1386
+cbs_hist_downloader-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cbs_hist_downloader-1.0.1.dist-info/top_level.txt,sha256=MCuobEEfRJj6V46_q7Q4Ysh5cFjDvCxLKPZSiuoTn-4,20
+cbs_hist_downloader-1.0.1.dist-info/RECORD,,
