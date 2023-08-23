@@ -1,0 +1,206 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = { attr = "isolation.__version__" }
+
+[tool.setuptools.packages.find]
+exclude = [
+    "*venv", "*venv.*",
+    "*tests.*", "*tests",
+    "*build", "*build.*",
+    "*dist", "*dist.*"
+]
+
+[project]
+name = "apache-airflow-providers-isolation"
+authors = [
+    { name = "Fritz Davenport", email = "fritz@astronomer.io" },
+    { name = "Astronomer", email = "humans@astronomer.io" }
+]
+license = { text = "Apache License 2.0" }
+description = "Runtime Operator Isolation in Airflow"
+classifiers = [
+    "Framework :: Apache Airflow",
+    "Framework :: Apache Airflow :: Provider",
+]
+dynamic = ["version"]
+requires-python = ">=3.8,<3.12"
+
+# Must specify either 'kubernetes' or 'cli'
+dependencies = []
+
+[project.entry-points.apache_airflow_provider]
+provider_info = "isolation.__init__:get_provider_info"
+
+[project.entry-points.console_scripts]
+isolationctl = "isolationctl.__main__:cli"
+
+
+[project.optional-dependencies]
+dev = [
+    'build',
+    'docutils',
+    'twine',
+    'pytest-sugar',
+    'pytest',
+    'pytest-cov',
+    'pytest-dotenv',
+    'pytest-integration',
+    'pytest-env',
+    'detect-secrets',
+    'ruff',
+    'black',
+    'bandit',
+    'pre-commit',
+    'pre-commit-hooks',
+    'pylint',
+    'docker',
+    'kubernetes',
+    'click',
+    'sh',
+    'apache-airflow'
+]
+
+kubernetes = [
+    "apache-airflow>=2.3,<2.8",
+    'apache-airflow-providers-cncf-kubernetes'
+]
+
+cli = [
+    "click",
+    "docker",
+    "sh",
+    "pyyaml"
+]
+
+#docker = ['apache-airflow-providers-docker']
+#fargate = ['apache-airflow-providers-amazon']
+#ssh = ['apache-airflow-providers-ssh']
+#python = ['apache-airflow']
+#all = [
+#    'apache-airflow-providers-cncf-kubernetes',
+#    'apache-airflow-providers-docker',
+#    'apache-airflow-providers-amazon',
+#    'apache-airflow-providers-ssh',
+#    'apache-airflow'
+#]
+
+
+
+[project.urls]
+Homepage = "https://astronomer.io"
+Source = "https://github.com/astronomer/apache-airflow-providers-isolation/"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.ruff]
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+# Enable flake8-bugbear (`B`) rules.
+select = ["E", "F", "B"]
+ignore = []
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Allow lines to be as long as 120 characters.
+line-length = 120
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.8
+target-version = "py38"
+
+[tool.ruff.per-file-ignores]
+"tests/isolationctl/__main__test.py" = ["E501"]
+
+[tool.black]
+# https://github.com/psf/black
+target-version = ["py38"]
+line-length = 120
+color = true
+
+exclude = '''
+/(
+    \.git
+    | build
+    | dist
+    | env
+    | venv
+    | tests/
+)/
+'''
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = [
+    "B324",
+    "B608",
+    "B106"
+]
+
+known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+include_trailing_comma = true
+profile = "black"
+multi_line_output = 3
+indent = 4
+color_output = true
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+norecursedirs = ["*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+testpaths = ["tests", "isolation", "isolationctl"]
+
+env = [
+    # for some reason Airflow kept erroring and saying we didn't have a google secrets backend?
+    "AIRFLOW__SECRETS__BACKEND="
+]
+
+doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
+addopts = [
+    "-s",
+    "--continue-on-collection-errors",
+    "--ignore=tests/resources",
+    "--ignore=isolation/example_dags",
+    "--strict-markers",
+    "--tb=short",
+    "--disable-warnings",
+    "--no-header",
+    "--doctest-modules",
+    "--doctest-continue-on-failure",
+]
