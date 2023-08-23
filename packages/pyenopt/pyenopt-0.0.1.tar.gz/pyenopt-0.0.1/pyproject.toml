@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyenopt"
+authors = [{name = "Pieter Verveer", email= "pieter.verveer@tno.nl"}]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+description = "Pyenopt package"
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pyenopt_sqlite"]
+
+[tool.setuptools.package-data]
+pyenopt_sqlite = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pyenopt_sqlite.version.__version__" }
+
+[tool.setuptools_scm]
+write_to = "src/pyenopt_sqlite/version.py"
