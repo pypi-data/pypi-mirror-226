@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+ignorify/__init__.py
+ignorify/pygnore.py
+ignorify.egg-info/PKG-INFO
+ignorify.egg-info/SOURCES.txt
+ignorify.egg-info/dependency_links.txt
+ignorify.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ignorify.py
