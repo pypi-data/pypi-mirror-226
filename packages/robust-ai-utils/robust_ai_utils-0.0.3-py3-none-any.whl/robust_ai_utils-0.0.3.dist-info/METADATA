@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: robust-ai-utils
+Version: 0.0.3
+Requires-Dist: pytest
+Requires-Dist: coverage
+Requires-Dist: urllib3
+
