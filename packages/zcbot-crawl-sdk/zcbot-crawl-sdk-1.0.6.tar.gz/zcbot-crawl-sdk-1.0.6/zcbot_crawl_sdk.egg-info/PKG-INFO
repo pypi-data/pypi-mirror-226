@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: zcbot-crawl-sdk
+Version: 1.0.6
+Summary: zcbot celery sdk for zsodata
+Home-page: http://www.zsodata.com
+Author: zsodata
+Author-email: team@zso.io
+License: BSD License
+Description: pip uninstall zcbot-crawl-sdk
+        
+        pip install --upgrade zcbot-crawl-sdk -i https://pypi.python.org/simple
+        pip show zcbot-crawl-sdk
+        
+Platform: all
+Requires-Python: >=3.7
