@@ -1,0 +1,10 @@
+multiform_validator/__init__.py,sha256=FPgMJlWIuM9yArdFsm0tjKsC1x4YMfIkDagNar8H31I,144
+multiform_validator/cnpjValidator.py,sha256=xiKgtR2XY8_ue3zP3ZRTbDjWMcTcNEv-bzaX4hclfE4,2320
+multiform_validator/cpfValidator.py,sha256=Z4vQNL0Ro_7CmtUSRo4qwO6-ENSznYWfCUN2PgsoInA,2554
+multiform_validator/getOnlyEmail.py,sha256=XUAyAIjQ_v6NTymAwWYmx3_ZOk90shE76VxqH3BI52w,1395
+multiform_validator/isEmail.py,sha256=kv5cnUZIKsqzGcD1Bs2K9Px5i2jbxoq4JgITO_ZFVFw,720
+multiform_validator-0.0.1.dist-info/LICENSE,sha256=FxtjQV26vvObELD-YVeIXcWG2VxErEz2iVlTnDpybFg,1074
+multiform_validator-0.0.1.dist-info/METADATA,sha256=-mF6ca_b_YvyXLT_UyTRT77as4F43nAOJ3YM7uKokjU,3675
+multiform_validator-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+multiform_validator-0.0.1.dist-info/top_level.txt,sha256=oPu51p_eFTaIcw6eMSxlv8wzRGWSt-IVBtBJgLz9s-Q,20
+multiform_validator-0.0.1.dist-info/RECORD,,
