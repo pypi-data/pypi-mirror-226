@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: edge-intelligence
+Version: 0.1.0
+Summary: edge-intelligenge package
+Requires-Dist: numpy ==1.23.4
+Requires-Dist: pandas ==1.4.0
+Requires-Dist: scikit-learn >=1.0.2
+Requires-Dist: tqdm ==4.61.0
+Requires-Dist: river ==0.14.0
+Requires-Dist: xgboost ==1.6.2
+
