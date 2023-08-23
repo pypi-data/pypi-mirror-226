@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: cdbc
+Version: 0.0.8
+Summary: Common Database Connector
+Home-page: https://github.com/friendlyblackwell/cdbc
+Author: Blackwell
+Author-email: friendlyblackwell@example.com
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: psycopg2-binary ==2.9.5
+Requires-Dist: redis
+
+# Common Database Connector
+
+
+
+## Cache / Redis
+
+```python
+import cdbc.cache
+
+redis_host = 'redis'
+redis_port = 6379
+redis_db = 0
+
+_pool = redis_connection_pool(redis_host=redis_host, redis_port=redis_port, redis_db=redis_db)
+```
+
+### Samples
+```python
+
+redis_host = 'redis'
+redis_port = 6379
+redis_db = 1
+_pool = redis_connection_pool(redis_host=redis_host, redis_port=redis_port, redis_db=redis_db)
+
+_kvs = get_all_kvs(pool=_pool)
+
+```
+
+## SQL / PostgreSQL
+```python
+import cdbc.postgresql
+
+host = 'postgresql'
+database = 'test'
+port = 5432
+user = 'test-user'
+password = 'test-passsword'
+_conn = conn(host=host, port=port, database=database, user=user, password=password)
+```
+
+#### Samples
+
+```python
+### Select
+
+n = 1
+while n < 200:
+    sql = 'select count(*) from table1'
+    _conn = conn(host=host, port=port, database=database, user=user, password=password)
+    _cursor = _conn.cursor()
+    select(cursor=_cursor,sql=sql)
+    n = n + 1
+    time.sleep(1)
+
+### Insert
+
+import random
+import string
+
+_conn = conn(host=host, port=port, database=database, user=user, password=password)
+
+table = 'sample'
+columns = 'col1, col2, col3'
+
+for _ in range(100):
+    value1 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    value2 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    k = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    v = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    values = "'" + value1 + "'" + ', '\
+         + "'" + value2 + "'" + ', '\
+         + "'" + json.dumps({k:v}) + "'"
+    cvs = [columns, values]
+    insert(conn=_conn, table=table, cvs=cvs)
+    n = n + 1
+
+```
