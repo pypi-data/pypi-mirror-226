@@ -1,0 +1,8 @@
+README.md
+setup.py
+libpkgs/__init__.py
+libpkgs/libpkgs.py
+libpkgs.egg-info/PKG-INFO
+libpkgs.egg-info/SOURCES.txt
+libpkgs.egg-info/dependency_links.txt
+libpkgs.egg-info/top_level.txt
