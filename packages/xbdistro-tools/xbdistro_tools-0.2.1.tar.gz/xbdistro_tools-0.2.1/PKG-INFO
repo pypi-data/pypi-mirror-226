@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: xbdistro_tools
+Version: 0.2.1
+Summary: Tools for reading and interacting with xbstrap distributions.
+Home-page: https://electrode.codes
+Author: electrodeyt
+Author-email: Alexander Richards <electrodeyt@gmail.com>
+Project-URL: Homepage, https://github.com/electrodeyt/xbdistro_tools
+Project-URL: Bug Tracker, https://github.com/electrodeyt/xbdistro_tools/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# XBDistro Tools
+
+This is a small python library to make reading and interacting with xbstrap distributions easier.
