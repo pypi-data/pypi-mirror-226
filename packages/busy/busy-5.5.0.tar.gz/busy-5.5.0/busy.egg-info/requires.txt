@@ -1,0 +1,7 @@
+platformdirs>=3.2.0
+wizlib>=0.5.1
+reportlab>=4.0.4
+punkeditor>=0.1.0
+
+[:platform_system == "Windows"]
+windows-curses
