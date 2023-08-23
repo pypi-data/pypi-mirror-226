@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "se3.ai"
+version="0.0.2"
+description="3D Computer Vision Made Simple"
+license = { text="Apache 2.0"}
+requires-python = ">=3.6.0"
+classifiers = [
+    "Programming Language :: Python",
+]
+dependencies = [
+    "requests"
+]
+
+[project.urls]
+"Homepage" = "https://se3.ai"
