@@ -1,0 +1,11 @@
+ccsf/__init__.py,sha256=L9ybHQLcUPTxEmJOMazu_AUTaFkayzBN_WiwCxaVog8,19
+ccsf/ccsf.py,sha256=oEA3FpRM2wQzxbwGTd0t_Fdqb82F0s0XedlLegb3HVY,12438
+ccsf/class_discriminative_opt/__init__.py,sha256=kcaFEy3Lh6zfX8zO6_nKrf7bDOM3rG5WaFARq2dCH-Q,39
+ccsf/class_discriminative_opt/class_discriminative_opt.py,sha256=Y9AeL0YaVi0BIIYeO25jtu9oehi4TZsZr1QEC3BU7YE,4640
+ccsf/group_centroid_opt/__init__.py,sha256=e7kVsD4rPUD3PUV5_90d_SDaOu2zC4rakX8239OYAT8,33
+ccsf/group_centroid_opt/group_centroid_opt.py,sha256=HCSAEfq9Ap4Z-Olg0uZisl_A8-qWxIBDvJaTbWNlHVA,4914
+ccsf-1.0.8.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ccsf-1.0.8.dist-info/METADATA,sha256=bdwnVwp77u1xMRl3F1XnqL0E-lyI928bfjOiXm5JPPU,8213
+ccsf-1.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ccsf-1.0.8.dist-info/top_level.txt,sha256=d7esQtdQI1M22JpB-05eRYHGwUXek__XXpVGMD6gWcA,5
+ccsf-1.0.8.dist-info/RECORD,,
