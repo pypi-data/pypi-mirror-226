@@ -1,0 +1,17 @@
+xiplot/__init__.py,sha256=9zOpQfIJg1bmm77r-58Oxp97vL01hmcMw3ShPnHt8Vk,145
+xiplot/__main__.py,sha256=x0kvu1WtyfMhqQdTmnBzdd8OXwnfkyOTxel_TIbRDDY,40
+xiplot/app.py,sha256=-Mt4m12oHu_C-GzONP64_9U5G_ogCXuUJUn8_aYsNTQ,4458
+xiplot/plugin.py,sha256=8Olz7N9gjTNCJgA3Z-KwfW1fp2I7O5r8L0GDMCFmmOY,2913
+xiplot/setup.py,sha256=uOPSL3Zb1rMHVjIlk2B0OghHctHJgAq9R0Jsb3WWHz0,2009
+xiplot/assets/RDKit_minimal.js,sha256=PONBdUVuEguQKLUQYKe4MeGajvHUiwTFWAgnbG6qga8,139362
+xiplot/assets/RDKit_minimal.wasm,sha256=BgqQkzIpZWLDAiyLbJzUD8iH3S8qVWJ1QUAGs-lhruA,5029552
+xiplot/assets/dcc_style.css,sha256=oIhFzItOcDnAqjq7LFoTmNTrvweJXiFE9jPZm9nZBK8,4319
+xiplot/assets/favicon.ico,sha256=Np_ChdLuJmW-fyULqSdoA-47JFtRw0iUNW1DvAnkFtY,6297
+xiplot/assets/html_components.css,sha256=ACv1HwjdKaQ1jBO2GZ70OP2SuAKm9PEYFWfiDQ8UzR8,1669
+xiplot/assets/stylesheet.css,sha256=fpQ6oQCoG1P5lcZcXrooikE2i9r63t90zd9cv8Mr4CI,2912
+xiplot-0.3.0.dist-info/LICENSE-MIT,sha256=kN3jx-V9YFZWKPpghJQJ65GzlL0jBhr85n1SjbaSRbA,1090
+xiplot-0.3.0.dist-info/METADATA,sha256=NzOHZvedBaSGBZlp6s_G_sPHZkZ0uYtWJ1wgg3WoYBo,5756
+xiplot-0.3.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+xiplot-0.3.0.dist-info/entry_points.txt,sha256=0dqE4Ac6jROITCNbKF9HKvjMio9qZGfE3hSZklbFdbM,38
+xiplot-0.3.0.dist-info/top_level.txt,sha256=NCTfK6T8WzSVTFpzExExKfIpBdSoenk0CFMnNhkobUU,7
+xiplot-0.3.0.dist-info/RECORD,,

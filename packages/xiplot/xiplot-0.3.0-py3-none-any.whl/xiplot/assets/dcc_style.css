@@ -1,0 +1,190 @@
+.dd-single {
+    margin-left: 10%;
+    width: 82%;
+}
+
+.dd-double-left,
+.dcc-input {
+    margin-left: 10%;
+    display: inline-block;
+    width: 40%;
+}
+
+.dcc-input input {
+    width: 90%;
+    background-color: white !important;
+    background-color: var(--bg-color) !important;
+    color: black !important;
+    color: var(--font-color) !important;
+}
+
+.dd-double-right {
+    margin-left: 2%;
+    display: inline-block;
+    width: 40%;
+}
+
+.dd-smiles {
+    width: 30%;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.slider-single {
+    width: 88.5%;
+    padding-left: 10%;
+}
+
+.color-rect {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.dcc-upload {
+    width: auto;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 8px;
+    border-radius: var(--large-radius);
+    margin: 10px;
+    text-align: center;
+    min-height: 1;
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.dash-uploader {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    min-height: 1;
+    align-self: stretch;
+    min-width: 12rem;
+    margin: 0px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.dash-uploader-default {
+    border-radius: 8px !important;
+    border-radius: var(--large-radius) !important;
+}
+
+.dash-uploader>* {
+    margin: 1rem;
+    width: auto !important;
+}
+
+.Select-control,
+.Select-menu-outer,
+.Select-input:not([aria-disabled='true']),
+.Select-input input {
+    background-color: white !important;
+    background-color: var(--bg-color) !important;
+    color: black;
+    color: var(--font-color);
+}
+
+.is-disabled .Select-control,
+.is-disabled .Select-menu-outer {
+    background-color: grey !important;
+    background-color: var(--bg-disabled-color) !important;
+}
+
+.Select-value-label {
+    color: black !important;
+    color: var(--font-color) !important;
+}
+
+
+.is-disabled .Select-value-label {
+    color: black !important;
+    color: var(--font-disabled-color) !important;
+}
+
+.Select-placeholder {
+    color: black !important;
+    color: var(--placeholder-color) !important;
+}
+
+.tab.jsx-535771872,
+.tab.jsx-3201076643 {
+    padding: 20px 25px 5px 25px;
+}
+
+.tab.jsx-535771872.tab,
+.tab.jsx-3201076643.tab,
+.tab.jsx-535771872:last-of-type,
+.tab.jsx-3201076643:last-of-type {
+    background-color: transparent;
+    border: none !important;
+    border-bottom: 2px solid #45A29E !important;
+    border-bottom: 2px solid var(--tab-underline) !important;
+}
+
+.tab.jsx-535771872.tab:hover,
+.tab.jsx-3201076643.tab:hover {
+    border-bottom: 4px solid #C5C6C7 !important;
+}
+
+.tab.jsx-535771872.tab.tab--selected,
+.tab.jsx-3201076643.tab.tab--selected {
+    color: black !important;
+    color: var(--font-color) !important;
+    border-bottom: 4px solid rgb(214, 214, 214) !important;
+    border-bottom: 4px solid var(--selected-tab-underline) !important;
+}
+
+.tab.jsx-535771872.tab.tab--selected:hover,
+.tab.jsx-3201076643.tab.tab--selected:hover {
+    background-color: transparent;
+}
+
+.tab-content {
+    padding: 10px;
+}
+
+.plots .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table,
+.plots .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th,
+.plots .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td,
+.plots .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner input:not([type="radio"]):not([type="checkbox"]) {
+    color: black;
+    color: var(--font-color);
+    background-color: white;
+    background-color: var(--bg-color);
+}
+
+
+[data-theme="dark"] .dash-spreadsheet {
+    border: 1px solid gray;
+    border-top: 0px;
+}
+
+.plots .dash-spreadsheet-menu .dash-spreadsheet-menu-item .show-hide-menu {
+    color: black;
+    color: var(--font-color);
+    background-color: white;
+    background-color: var(--bg-color);
+}
+
+.dash-table-container .previous-next-container button.previous-page,
+.dash-table-container .previous-next-container button.next-page,
+.dash-table-container .previous-next-container button.first-page,
+.dash-table-container .previous-next-container button.last-page {
+    border: 1px solid rgb(209, 213, 219);
+}
+
+.rc-slider-mark-text {
+    color: darkgray;
+    color: var(--font-disabled-color)
+}
+
+.rc-slider-mark-text-active {
+    color: black;
+    color: var(--font-color)
+}
+
+.Select--single>.Select-control .Select-value,
+.Select-placeholder {
+    overflow-x: scroll;
+}
