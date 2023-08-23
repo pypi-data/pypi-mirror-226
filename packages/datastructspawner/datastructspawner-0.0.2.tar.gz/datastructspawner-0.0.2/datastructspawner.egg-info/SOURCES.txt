@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+datastructspawner/__init__.py
+datastructspawner/structs.py
+datastructspawner.egg-info/PKG-INFO
+datastructspawner.egg-info/SOURCES.txt
+datastructspawner.egg-info/dependency_links.txt
+datastructspawner.egg-info/top_level.txt
