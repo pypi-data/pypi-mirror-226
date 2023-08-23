@@ -1,0 +1,12 @@
+rclip/const.py,sha256=7ljzUiTDvm7eihToDlPCQNWe7KgqwOd1KCpLNLH0qKw,158
+rclip/db.py,sha256=48oJ4mQVlTNj8xcPi8Rmi3w4y8Sb9KzEv578kzeh2CQ,2940
+rclip/main.py,sha256=0o5Wh6l0Mw6C0KK-ldSqD8rhhF0wrVdrZdMECu9zmQw,5891
+rclip/model.py,sha256=DOD2tFlfQ0cu9ZDAXcjAhGHguyGkwg2Gf7PefOXfiZA,5315
+rclip/utils/helpers.py,sha256=7vQy6yri1I5Dqmpo1HN9q6SXfzsMy0rW19dC-6bL3_E,5618
+rclip/utils/preview.py,sha256=2t-eONWLkp2uO_QcgSZauu4fgyTfQo88dY7-gy2xp9c,1153
+rclip/utils/snap.py,sha256=r33nzwGZeOxMfQsTg_lGnTZvfNqe1z08VEUdnw7ynpQ,1726
+rclip-1.6.0a2.dist-info/LICENSE,sha256=c9oFrcVkZwn4OfuJxzUAcbkJddpOBhW_-OVszIr8w80,1074
+rclip-1.6.0a2.dist-info/METADATA,sha256=VFmzn51T0zM72yN74md5pLCfW6tH68KE-TDV9p2hofM,7826
+rclip-1.6.0a2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+rclip-1.6.0a2.dist-info/entry_points.txt,sha256=7Q2YvQtDnvIC7w_5JitIDNetAfAllcbK-kLVzMb1j6A,41
+rclip-1.6.0a2.dist-info/RECORD,,
