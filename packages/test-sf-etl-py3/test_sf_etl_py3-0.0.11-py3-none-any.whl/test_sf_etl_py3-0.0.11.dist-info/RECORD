@@ -1,0 +1,13 @@
+sf_etl_py3/Utils.py,sha256=ylxVl3r80TGFcys0RW45tiyXgR5YEPlRyiq9wffpEos,6012
+sf_etl_py3/__init__.py,sha256=vGJuwBqonBKo7LzJS9y_LCneDU6aO9zidRJpiiJabBo,112
+sf_etl_py3/bot/__init__.py,sha256=wY2tPWRyUmzEIuWjY44O1JRDNrYmxaBN5rbaQ_EU6hk,91
+sf_etl_py3/bot/ding_bot.py,sha256=FV3PEak-F9ow4JDho4GJQmUT86Xdi2X3mh3ThLb9eXs,9451
+sf_etl_py3/xml/__init__.py,sha256=whOJjD2GQhJdULRZUTxPCm0Oe2LlsIXBrrZFqtoBMmU,273
+sf_etl_py3/xml/kettle_xml.py,sha256=WgB89xSLRYfQZKq7KwQrQ2mKkht5grBm9-KG3kJjQq8,11141
+sf_etl_py3/xml/sf_xml.py,sha256=NpaIqrJscud5UX6kQ5NPGLDhLR3uvh4BUUkkxyRvLSg,786
+sf_etl_py3/xml/tableau_xml.py,sha256=cUSpqDjaL56q71K04Idinh9h7cq1AWImOjF0p63jzys,4888
+test_sf_etl_py3-0.0.11.dist-info/LICENSE,sha256=HDbMJ7oItmxTn3jVtZFi6jUFAHovset5jzAPUderjOc,1073
+test_sf_etl_py3-0.0.11.dist-info/METADATA,sha256=IkOrJhYYqRzYmwMWnS8bk3vhunFJAAwI7_FnB62Nigs,1966
+test_sf_etl_py3-0.0.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+test_sf_etl_py3-0.0.11.dist-info/top_level.txt,sha256=lkxNHqn4Y3ohBLVRKPphUaSDLj2DXk9-ORbcVlrbeuM,11
+test_sf_etl_py3-0.0.11.dist-info/RECORD,,
