@@ -1,0 +1,10 @@
+mddj/__init__.py,sha256=OfphfIZmR_DmABiXa3DXcRfXLST90jfBFFneUaOd8eY,43
+mddj/builder.py,sha256=CI-QQIf5ezsmh703PeejQ9Taj5OaEP4vmi51DS1ZPq0,1123
+mddj/cli.py,sha256=j1IYI7seU6oTghQsRXS5IPRz4LeNVyhOZgThEFnEgdU,1635
+mddj/readers.py,sha256=oWdJDxwSC4FPt0yC1JtcqOuvl11XHG6IJT9RLfyMnN4,741
+mddj-0.0.1.dist-info/LICENSE.txt,sha256=NWsEzuxCFDzCdEkuNpvMKdrwyxZ92lF7cn0FDUjGNGQ,1099
+mddj-0.0.1.dist-info/METADATA,sha256=WezfYIbK4zNxstpzag6Pt8AEVOWJBU0s7AXl1dBOclY,1817
+mddj-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mddj-0.0.1.dist-info/entry_points.txt,sha256=gV7sA85o8GVLnTrsJHSjoI5Nb-8fZvxJAgAVOKnxBds,39
+mddj-0.0.1.dist-info/top_level.txt,sha256=zAO8fKfxE0sxxywO34ryw0QBJJnNaLtAE1vUMPLd7FU,5
+mddj-0.0.1.dist-info/RECORD,,
