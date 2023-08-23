@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ratingfish/__init__.py
+ratingfish/__version__.py
+ratingfish/agents.py
+ratingfish/endpoint.py
+ratingfish/website.py
+ratingfish.egg-info/PKG-INFO
+ratingfish.egg-info/SOURCES.txt
+ratingfish.egg-info/dependency_links.txt
+ratingfish.egg-info/requires.txt
+ratingfish.egg-info/top_level.txt
