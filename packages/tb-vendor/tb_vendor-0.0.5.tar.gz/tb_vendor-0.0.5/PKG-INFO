@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tb_vendor
+Version: 0.0.5
+Summary: Thingsboard and vendor integrations
+Author-email: CiberC Dev <dev@ciberc.com>, rdeleon <dev1@ciberc.com>
+Project-URL: Homepage, https://ciberc.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Thingsboard vendor integrations
+
+Create a generic package with utilities to integrate Thingsboards and vendors.
+
+## Thingsboard Issues
+
+Thingsboard Python SDK has a client for PE and other for CE.
