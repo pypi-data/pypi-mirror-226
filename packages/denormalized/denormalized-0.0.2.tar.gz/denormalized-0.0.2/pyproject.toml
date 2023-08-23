@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "denormalized"
+version = "0.0.2"
+description = "An API client for https://www.denormalized.io"
+authors = ["Matt Green <matt@denormalized.io>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+denormalized = 'denormalized.scripts.cli:app'
+
+[project.urls]
+Homepage = "https://www.denormalized.io"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.24.1"
+
+[tool.poetry.group.dev.dependencies]
+typer = {extras = ["all"], version = "^0.9.0"}
+rich = "^13.5.2"
+faker = "^19.3.0"
+flake8 = "^6.1.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+pre-commit = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: denormalized
+Version: 0.0.2
+Summary: An API client for https://www.denormalized.io
+Author: Matt Green
+Author-email: matt@denormalized.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Description-Content-Type: text/markdown
+
+
+# Denormalized Python Client
+
