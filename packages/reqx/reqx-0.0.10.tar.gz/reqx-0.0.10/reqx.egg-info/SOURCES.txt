@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+reqx/__init__.py
+reqx/__version__.py
+reqx/constants.py
+reqx/helpers.py
+reqx/main.py
+reqx.egg-info/PKG-INFO
+reqx.egg-info/SOURCES.txt
+reqx.egg-info/dependency_links.txt
+reqx.egg-info/requires.txt
+reqx.egg-info/top_level.txt
