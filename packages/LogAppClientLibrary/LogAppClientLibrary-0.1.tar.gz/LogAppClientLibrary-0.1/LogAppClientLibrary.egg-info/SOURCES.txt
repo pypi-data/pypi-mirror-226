@@ -1,0 +1,8 @@
+README.md
+setup.py
+LogAppClientLibrary.egg-info/PKG-INFO
+LogAppClientLibrary.egg-info/SOURCES.txt
+LogAppClientLibrary.egg-info/dependency_links.txt
+LogAppClientLibrary.egg-info/top_level.txt
+LogAppRestClientLibrary/Enviroment.py
+LogAppRestClientLibrary/__init__.py
