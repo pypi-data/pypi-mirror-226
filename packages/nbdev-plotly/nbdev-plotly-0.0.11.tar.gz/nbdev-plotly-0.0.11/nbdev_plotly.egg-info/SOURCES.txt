@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+nbdev_plotly/__init__.py
+nbdev_plotly/_modidx.py
+nbdev_plotly/plotly.py
+nbdev_plotly.egg-info/PKG-INFO
+nbdev_plotly.egg-info/SOURCES.txt
+nbdev_plotly.egg-info/dependency_links.txt
+nbdev_plotly.egg-info/entry_points.txt
+nbdev_plotly.egg-info/not-zip-safe
+nbdev_plotly.egg-info/requires.txt
+nbdev_plotly.egg-info/top_level.txt
