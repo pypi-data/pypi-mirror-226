@@ -1,0 +1,12 @@
+setup.py,sha256=LI8SNMLGoQyeB2DsDzQZKYXtycknjOxt2JDhZqhexVg,609
+dpimport/__init__.py,sha256=ha21SNx4jHn_4rhQZs-ZWGqz1No2vqnIZXSqlMmR0Q4,6191
+dpimport/__version__.py,sha256=ZpZDOxAGGjtAt9Q4UFi--rntmlbMEXk23jZ1z61nj0c,220
+dpimport/database/__init__.py,sha256=mgBj6P_7-xb5iNdrLIK90JbYY9CaPKyG0s8isrpv0j0,454
+dpimport/patterns/__init__.py,sha256=xh2ZZAPl-gd5foDgTw3JFgZfy56tjxJm6osJOZgkHZg,345
+scripts/import.py,sha256=LZCwYSpbtozm398VwRI20on-ggAJRyhnsJ2agtrk3TU,2297
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/database/__init__.py,sha256=OJPSawA9FRdDstu0wgdcAUjN2SHy5TVx_uU4_q644jw,1063
+tools/reader/__init__.py,sha256=Dc-Rl1v7NegMKerdI79HlJzD_3g5JtVvrDiUl7n9oO4,446
+dpimport_test_2-1.0.5.dist-info/METADATA,sha256=5m_s6fSJMV8ezxxBvaoZbfdr1BwctiaWitf3ug59NIg,2366
+dpimport_test_2-1.0.5.dist-info/WHEEL,sha256=fagL_Tj29mg80flwlxJNW45nBDbboxF04Tnbc_jt3Bg,105
+dpimport_test_2-1.0.5.dist-info/RECORD,,
