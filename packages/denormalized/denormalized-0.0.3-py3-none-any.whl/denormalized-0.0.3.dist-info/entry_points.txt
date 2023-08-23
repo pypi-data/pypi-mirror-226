@@ -1,0 +1,3 @@
+[console_scripts]
+denormalized=denormalized.scripts.cli:app
+
