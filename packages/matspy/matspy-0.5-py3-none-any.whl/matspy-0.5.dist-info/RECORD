@@ -1,0 +1,10 @@
+matspy/__init__.py,sha256=q_KNI0VeO46e7tNq0qYnMO_GkEi4LUOk16S52-hrEPw,5024
+matspy/spy_renderer.py,sha256=BW1MP20ZD41P5p-V-lHdI90HyYzbBvppaz7S5b839t4,8395
+matspy/adapters/__init__.py,sha256=ho4tLrCQlAHnBRSR4khqj088kSGpWBu2eBFNLH3IvJU,2611
+matspy/adapters/scipy_driver.py,sha256=3VymPjG9oRXnvusdONj7voUWFYkaC_zRQbZJxkoEjgM,520
+matspy/adapters/scipy_impl.py,sha256=FTZvQAzvxB58mMu0HKpXoGPtdylHzNHlV-4Ut8mBk-4,1802
+matspy-0.5.dist-info/LICENSE.txt,sha256=Jn1rOt4na2FlVjoNSgWxibnsb7SREzEPyjQNe-BLkb0,1270
+matspy-0.5.dist-info/METADATA,sha256=ZlZkvZnuJBg5U3jOCamyrwHQZp0Pdo_WEK3Kv8tL7go,4798
+matspy-0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+matspy-0.5.dist-info/top_level.txt,sha256=pvtxcnp7GLG9TvxfW06XOyyg6GfyXz22bGk7DBmGzTY,7
+matspy-0.5.dist-info/RECORD,,
