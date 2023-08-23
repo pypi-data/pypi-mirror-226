@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: dryjq
+Version: 1.3.1
+Summary: Drastically Reduced YAML / JSON Query
+Author-email: Rainer Schwarzbach <undisclosed@example.com>
+License: MIT License
+        
+        Copyright (c) 2021 Rainer Schwarzbach
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://gitlab.com/blackstream-x/python-dryjq
+Project-URL: Documentation, https://blackstream-x.gitlab.io/python-dryjq
+Project-URL: CI, https://gitlab.com/blackstream-x/python-dryjq/-/pipelines
+Project-URL: Bug Tracker, https://gitlab.com/blackstream-x/python-dryjq/-/issues
+Project-URL: Source Code, https://gitlab.com/blackstream-x/python-dryjq.git
+Keywords: json,yaml,query,extract,convert,merge
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Drastically Reduced YAML / JSON Query
+
+Lightweight package providing a subset of
+[yq](https://mikefarah.gitbook.io/yq/) or
+[jq](https://stedolan.github.io/jq/) functionality:
+
+-   get a single value from a YAML or JSON file
+-   change a single value in a YAML or JSON file
+
+
+## Requirements
+
+[PyYAML](https://pypi.org/project/PyYAML/) (Version 5.4.1 or newer)
+
+## Installation
+
+```
+pip install dryjq
+```
+
+Installation in a virtual environment is strongly recommended.
+
+
+## Usage
+
+Please see the documentation at <https://blackstream-x.gitlab.io/python-dryjq>
+for detailed usage information.
+
+The documentation is generated from the MarkDown files
+in this repository’s `docs/` directory.
+
+Output of `dryjq --help` (or `python3 -m dryjq --help`):
+
+```
+usage: dryjq [-h] [--version] [-i] [-d | -v | -q] [-o OUTPUT_FORMAT]
+             [--indent {2,4,8}] [--sort-keys] [--separator SEPARATOR]
+             [--subscript-indicators SUBSCRIPT_INDICATORS]
+             [query] [input_file]
+
+Drastically Reduced YAML / JSON Query
+
+positional arguments:
+  query                 the query (simplest form of yq/jq syntax, default is
+                        the separator character alone).
+  input_file            the input file name (by default, data will be read
+                        from standard input)
+
+options:
+  -h, --help            show this help message and exit
+  --version             print version and exit
+  -i, --inplace         modify the input file in place instead of writing the
+                        result to standard output
+
+Logging options:
+  control log level (default is WARNING)
+
+  -d, --debug           output all messages (log level DEBUG)
+  -v, --verbose         be more verbose (log level INFO)
+  -q, --quiet           be more quiet (log level ERROR)
+
+Output options:
+  control output formatting
+
+  -o OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
+                        output format (choice of 'JSON': set output format to
+                        JSON, 'YAML': set output fromat to YAML, 'input': keep
+                        input format, 'toggle': change JSON to YAML or vice
+                        versa; default: 'input')
+  --indent {2,4,8}      indentation depth of blocks, in spaces (default: 2)
+  --sort-keys           sort mapping keys (by default, mapping keys are left
+                        in input order)
+
+Query syntax options:
+  control the query syntax
+
+  --separator SEPARATOR
+                        the separator character (default: '.')
+  --subscript-indicators SUBSCRIPT_INDICATORS
+                        the subscript indicator character(s) (default: '[]')
+```
+
+## Issues, feature requests
+
+Please open an issue [here](https://gitlab.com/blackstream-x/python-dryjq/-/issues)
+if you found a bug or have a feature suggestion.
+

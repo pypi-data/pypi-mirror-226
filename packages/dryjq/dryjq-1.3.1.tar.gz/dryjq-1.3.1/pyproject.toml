@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dryjq"
+dynamic = ["version"]
+description = "Drastically Reduced YAML / JSON Query"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["json", "yaml", "query", "extract", "convert", "merge"]
+authors = [
+  {name = "Rainer Schwarzbach", email = "undisclosed@example.com"},
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Text Processing :: Filters",
+  "Topic :: Utilities",
+]
+
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/blackstream-x/python-dryjq"
+Documentation = "https://blackstream-x.gitlab.io/python-dryjq"
+CI = "https://gitlab.com/blackstream-x/python-dryjq/-/pipelines"
+"Bug Tracker" = "https://gitlab.com/blackstream-x/python-dryjq/-/issues"
+"Source Code" = "https://gitlab.com/blackstream-x/python-dryjq.git"
+
+[project.scripts]
+dryjq = "dryjq.__main__:main"
+"dryjq.convert" = "dryjq.convert:main"
+"dryjq.merge" = "dryjq.merge:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "dryjq.__version__"}
