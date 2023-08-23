@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Skylark_Yolov8
+Version: 0.1
+Summary: A video processing package
+Author: Prem Varma
+Author-email: prem.varma@skylarklabs.ai
+Description-Content-Type: text/markdown
+
+# Skylarklabs
+
+Skylark_Yolov8 is a package for video processing using YOLO object detection and optional classification. It allows you to process videos, apply detection, and optionally classify detected objects.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install Skylark_Yolov8

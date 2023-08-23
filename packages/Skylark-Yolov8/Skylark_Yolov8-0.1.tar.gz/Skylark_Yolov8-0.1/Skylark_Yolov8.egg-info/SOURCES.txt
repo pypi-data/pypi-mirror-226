@@ -1,0 +1,8 @@
+README.md
+setup.py
+Skylark_Yolov8/__init__.py
+Skylark_Yolov8.egg-info/PKG-INFO
+Skylark_Yolov8.egg-info/SOURCES.txt
+Skylark_Yolov8.egg-info/dependency_links.txt
+Skylark_Yolov8.egg-info/requires.txt
+Skylark_Yolov8.egg-info/top_level.txt
