@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: GraphSTAM
+Version: 0.1
+Summary: Graph Based Spatio-Temporal Attention Models For Demand Forecasting
+Author: Rahul Sinha
+Author-email: rahul.sinha@unilever.com
+Description-Content-Type: text/markdown
+
+# GraphSTAM
+Graph Based Spatio-Temporal Attention Models
