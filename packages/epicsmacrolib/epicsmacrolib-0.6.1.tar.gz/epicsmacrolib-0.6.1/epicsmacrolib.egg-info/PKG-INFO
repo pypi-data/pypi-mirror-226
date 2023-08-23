@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: epicsmacrolib
+Version: 0.6.1
+Summary: epics-base compliant macro tools
+Author: SLAC National Accelerator Laboratory
+License: Copyright (c) 2023, The Board of Trustees of the Leland Stanford Junior
+        University, through SLAC National Accelerator Laboratory (subject to receipt
+        of any required approvals from the U.S. Dept. of Energy). All rights reserved.
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        (1) Redistributions of source code must retain the above copyright notice,
+            this list of conditions and the following disclaimer.
+        
+        (2) Redistributions in binary form must reproduce the above copyright notice,
+            this list of conditions and the following disclaimer in the documentation
+            and/or other materials provided with the distribution.
+        
+        (3) Neither the name of the Leland Stanford Junior University, SLAC National
+            Accelerator Laboratory, U.S. Dept. of Energy nor the names of its
+            contributors may be used to endorse or promote products derived from this
+            software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER, THE UNITED STATES GOVERNMENT,
+        OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+        EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+        OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+        IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+        OF SUCH DAMAGE.
+        
+        You are under no obligation whatsoever to provide any bug fixes, patches, or
+        upgrades to the features, functionality or performance of the source code
+        ("Enhancements") to anyone; however, if you choose to make your Enhancements
+        available either publicly, or directly to SLAC National Accelerator Laboratory,
+        without imposing a separate written license agreement for such Enhancements,
+        then you hereby grant the following license: a non-exclusive, royalty-free
+        perpetual license to install, use, modify, prepare derivative works, incorporate
+        into other computer software, distribute, and sublicense such Enhancements or
+        derivative works thereof, in binary and source code form.
+        
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: docs
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+===============================
+epicsmacrolib
+===============================
+
+.. image:: https://img.shields.io/travis/pcdshub/epicsmacrolib.svg
+        :target: https://travis-ci.org/pcdshub/epicsmacrolib
+
+.. image:: https://img.shields.io/pypi/v/epicsmacrolib.svg
+        :target: https://pypi.python.org/pypi/epicsmacrolib
+
+
+epics-base compliant macro tools.
+
+---------
+What?
+---------
+
+Do you want epics-base compliant macro expansion, with all of its idiosyncracies?
+
+No? I didn't think so. This is a really boring project and you probably don't need it.
+
+---------
+Then why?
+---------
+
+This will be the future of the macro and IOC shell splitting tools in ``whatrecord``,
+removing its reliance on Cython and epicscorelibs.
+
+--------
+Examples
+--------
+
+``macros_from_string``
+
+.. code:: python
+
+    from epicsmacrolib import macros_from_string
+
+    macros_from_string("A=5,  B=$(A=3)")
+    # -> {'A': '5', 'B': '$(A=3)'}
+
+
+``MacroContext``
+
+.. code:: python
+
+    from epicsmacrolib import MacroContext
+
+    ctx = MacroContext(use_environment=True)
+    ctx.define(TEST="A")
+    print(ctx.expand("TEST=$(TEST) SHELL=$(SHELL)"))
+    # TEST=A SHELL=/bin/bash
+
+    ctx = MacroContext(use_environment=False)
+    ctx.define_from_string("A=5,B=6")
+    ctx.define(C="7")
+    print(ctx.expand("$(A) $(B) ${C} ${D=5} ${E}"))
+    # -> 5 6 7 5 $(E)
+
+    ctx = MacroContext(use_environment=False, show_warnings=True)
+    ctx.define_from_string("A=5,B=6")
+    ctx.define(C="7")
+    print(ctx.expand("$(A) $(B) ${C} ${D=5} ${E}"))
+    # -> 5 6 7 5 $(E,undefined)
+
+    ctx.define_from_string("A=5,B=$(B)")
+    print(ctx.expand("$(A) $(B)"))
+    # -> 5 $(B,recursive)
+
+    with ctx.scoped(A="10", B="0"):
+        print(ctx.expand("$(A)"))
+        # -> 10
+        with ctx.scoped(A="0"):
+            print(ctx.expand("$(A)"))
+            # -> 0
+        print(ctx.expand("$(A)"))
+        # -> 10
+
+
+``split_iocsh_line`` (like ``shlex.split``)
+
+.. code:: python
+
+    from epicsmacrolib import split_iocsh_line
+    split_iocsh_line("dbLoadRecords > output_filename")
+    # -> IocshSplit(
+    #     argv=["dbLoadRecords"],
+    #     redirects={1: IocshRedirect(fileno=1, name="output_filename", mode="w")},
+    #     error=None,
+    # )
+
+
+--------
+License
+--------
+
+The Python portions of this code is under a BSD-3 clause license
+(``LicenseRef-BSD-3-Clause-SLAC``, see ``LICENSE``).
+Portions of epics-base have been vendored in ``src`` under its original license
+(see ``src/LICENSE``).
