@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+PYPIREADME.rst
+README.md
+pyproject.toml
+setup.py
+src/unitc/__init__.py
+src/unitc/units.py
+src/unitc.egg-info/PKG-INFO
+src/unitc.egg-info/SOURCES.txt
+src/unitc.egg-info/dependency_links.txt
+src/unitc.egg-info/requires.txt
+src/unitc.egg-info/top_level.txt
+tests/test_units.py
