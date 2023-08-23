@@ -1,0 +1,9 @@
+bochscpu-stubs/__init__.pyi,sha256=dxBulgDaGoZiMlFXqAbUTVzu7zavTnGgo9YZ6URQDnE,31141
+bochscpu-stubs/cpu.pyi,sha256=WLvVrwPmmbhQwVOwYaGNfkSo5JaNvN-EERGGqpCXNZE,21017
+bochscpu-stubs/memory.pyi,sha256=ttlopqu-n_0H_sviEID80WmSwtfLLLULS_AtKiTlECo,1320
+bochscpu.cpython-39-x86_64-linux-gnu.so,sha256=XKqKQYMAnCBABCFYmbOeyodUvlyCdb85XG5wnHb-pU4,6043360
+bochscpu_python-0.1.4.dist-info/METADATA,sha256=RQs074k3jb0PYPcDzBiIuaYU3fzXLIhrO_yBAQlzGSk,3738
+bochscpu_python-0.1.4.dist-info/WHEEL,sha256=KiymJvIUumeQJCETyD-1twAfdr-loFZp0qqcZsYJwqI,115
+bochscpu_python-0.1.4.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bochscpu_python-0.1.4.dist-info/licenses/LICENSE,sha256=nHU18V9xlouRjSG7cizPZgdn9V4VNi5QayvF5lqvbSA,1068
+bochscpu_python-0.1.4.dist-info/RECORD,,
