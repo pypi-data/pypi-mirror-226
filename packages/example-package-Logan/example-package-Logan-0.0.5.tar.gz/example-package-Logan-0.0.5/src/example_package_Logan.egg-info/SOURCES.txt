@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/example-package-Logan/__init__.py
+src/example-package-Logan/example.py
+src/example_package_Logan.egg-info/PKG-INFO
+src/example_package_Logan.egg-info/SOURCES.txt
+src/example_package_Logan.egg-info/dependency_links.txt
+src/example_package_Logan.egg-info/top_level.txt
