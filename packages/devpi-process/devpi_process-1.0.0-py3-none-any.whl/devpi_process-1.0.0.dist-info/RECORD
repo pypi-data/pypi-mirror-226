@@ -1,0 +1,7 @@
+devpi_process/__init__.py,sha256=I_4Fj_OA04OTAOj-OROMBAqSXcf5glshozREHp1r4SM,7437
+devpi_process/_version.py,sha256=FrtOfsGtY3HPkXwopVTLnBRPrKexJ-VIfXoRzWX47O4,160
+devpi_process/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devpi_process-1.0.0.dist-info/METADATA,sha256=L-6Aajw2kASgQa54n9e-bRQ0DCO7yYrCjSzI-s_ROcE,3493
+devpi_process-1.0.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+devpi_process-1.0.0.dist-info/licenses/LICENSE.txt,sha256=dOVYRlVEF1M1gPTeeJ3MBJMzjokbbMQLjw8rLuZ2FBs,1024
+devpi_process-1.0.0.dist-info/RECORD,,
