@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: statmanager-kr
+Version: 0.0.2
+Summary: 사회과학의 맥락에서 통계를 손쉽게 사용할 수 있는 패키지 by Changseok Lee
+Home-page: 
+Author: ckdckd145
+Author-email: ckdckd145@gmail.com
+Keywords: statistic,socialscience,stats
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+
