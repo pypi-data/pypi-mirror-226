@@ -1,0 +1,7 @@
+tifffile!=2022.4.28,>=2021.7.4
+numpy
+pyproj
+zarr<2.13,>=2.12.0
+
+[dev]
+pytest
