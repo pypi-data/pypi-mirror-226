@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/cbs_hist_downloader/__init__.py
+src/cbs_hist_downloader/find_next_page.py
+src/cbs_hist_downloader/scrape_book.py
+src/cbs_hist_downloader.egg-info/PKG-INFO
+src/cbs_hist_downloader.egg-info/SOURCES.txt
+src/cbs_hist_downloader.egg-info/dependency_links.txt
+src/cbs_hist_downloader.egg-info/top_level.txt
