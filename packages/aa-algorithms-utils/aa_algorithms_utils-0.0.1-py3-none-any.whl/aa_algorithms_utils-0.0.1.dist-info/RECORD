@@ -1,0 +1,9 @@
+aa_algorithms_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aa_algorithms_utils/athena_data_provider.py,sha256=uh6HgEWdGVVOnY7G0fustUDt-TLcp7IauqmEsrhp34M,2591
+aa_algorithms_utils/logger.py,sha256=_EK5wWzuT_HaBDh1nS6s2IMGnbDXXandyyT2iTdH69M,3780
+aa_algorithms_utils/metrics.py,sha256=JC2bDU677BGtHVktPxkUtWhy7WOs38oi9YaqBk8gHp0,2261
+aa_algorithms_utils/s3_client.py,sha256=WOyuLtXk5DRd1Eo7bgOVfoPhQmTUdsYNpTO02tzyjN4,1016
+aa_algorithms_utils-0.0.1.dist-info/METADATA,sha256=CD9mtiJG5YamCWZmCDZ2GPvcUJNjbYvV6Yi1GIpt09g,1712
+aa_algorithms_utils-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+aa_algorithms_utils-0.0.1.dist-info/licenses/LICENSE,sha256=wuJc6SkaE_G-4alxueHO8BhgWRmEJAlJaPkoFuI9kqk,1070
+aa_algorithms_utils-0.0.1.dist-info/RECORD,,
