@@ -1,0 +1,14 @@
+LogAppRestClientLibrary/Enviroment.py,sha256=dnZdBN8LQcKqCVVg7o8rn27w9ruNvbk79iGPXv0X3rM,544
+LogAppRestClientLibrary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+LogAppRestClientLibrary/Endpoints/Alert.py,sha256=yTr1ifHXdkli2kNKsVAXywVEnLcLSH5TG8un1I4ZmuA,1438
+LogAppRestClientLibrary/Endpoints/AlertRule.py,sha256=eRMS5gJnBaKsHzq_y8drPW_F1QeN3Cs3Q4Rq8gSbrvI,1330
+LogAppRestClientLibrary/Endpoints/ConfigurationGroup.py,sha256=BOW_H7ByD9SCERQboFxTl8x8hauRx1R--ilVo2nu1CI,1282
+LogAppRestClientLibrary/Endpoints/LogAgent.py,sha256=uZrn1hHVW393zGiph6YEg_LMeqpqNE_Kz9sq7Q7Kwug,3786
+LogAppRestClientLibrary/Endpoints/__init__.py,sha256=EA09roc_XRoDXzpGicENZaXTjJbeXccRcunimSO4048,139
+LogAppRestClientLibrary/RequestHandlers/IRequestHandler.py,sha256=p4fek7VLNPP0-TgmeyGl638ODVtKJ0q3da85II0gpPQ,369
+LogAppRestClientLibrary/RequestHandlers/Real_request.py,sha256=uRuK9KaqWy-LQcPxdZZ1IOi3jalGWUXjEztDRqVVeeM,1781
+LogAppRestClientLibrary/RequestHandlers/__init__.py,sha256=DMYHn8NxmtU2gOLGdD5JUAL9sKewr8hNO3O6tXfRUJI,82
+LogAppClientLibrary-0.1.1.dist-info/METADATA,sha256=Hc3-IB7aYWQ7x6cA96sB1uOyyDtDUzzdK6STCLgKhPM,230
+LogAppClientLibrary-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+LogAppClientLibrary-0.1.1.dist-info/top_level.txt,sha256=P0BoFh3GQWlrNlSOcwtLsNq8pbgsv_quntLhYysausE,24
+LogAppClientLibrary-0.1.1.dist-info/RECORD,,
