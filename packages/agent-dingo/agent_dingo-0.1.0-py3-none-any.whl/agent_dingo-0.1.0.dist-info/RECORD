@@ -1,0 +1,16 @@
+agent_dingo/__init__.py,sha256=EKebBQ-2H_zx7KlD8NVwrMszrh5a2idlxQoqFX_cCeE,116
+agent_dingo/agent.py,sha256=f3YJOHV1AyvZdEEbE0JEtBzg4yPiErk6TSAfCxZ34-Y,8368
+agent_dingo/chat.py,sha256=PnN0iRsJd5LGMu6cdl2ZjDEHzcmMfowKMR6yQjTjYWk,1306
+agent_dingo/context.py,sha256=Y5e4nrApXgF8QRVd7NnVr83FE9a0SqdbgeOAeQgEvGM,113
+agent_dingo/docgen.py,sha256=_PIrc53ZR4Eu8KprLC94N1a0wGcLFxRpjKQpTpcXBoE,2166
+agent_dingo/function_descriptor.py,sha256=q2f8_e42WxamEKhkulroCDp6SmQDN8BfxRvSF723ZpQ,181
+agent_dingo/helpers.py,sha256=AXgWqEunwgYshWig8yjiRWE_g-pcNPIrH0SikkMddio,1472
+agent_dingo/langchain.py,sha256=923hQMYjb89Mt8mOngL5xW2-xbWsWgVNzeQiqxTmccI,968
+agent_dingo/parser.py,sha256=OwNK7NjGyFLXu46lFGhjTNJwjVapoi7F-cfR4h4qR8A,1909
+agent_dingo/usage.py,sha256=KqhUZ6OAFUfjqCMDiWCAkMcntVMHcQvkEG24Q8AUroQ,825
+agent_dingo/wrapper.py,sha256=qt48HD56EL82vKU015E9h-Lfh3mbmkmqdt5U9IPxEjY,3779
+agent_dingo-0.1.0.dist-info/LICENSE,sha256=T3TnLYmtB1e_bOaJz6YGVitu84d0Es4h6mSpgyEPY_I,1071
+agent_dingo-0.1.0.dist-info/METADATA,sha256=SLJISPFnIVZfGT9UUDFbtbK4DBYqKv2vDrcitQnK3vY,15941
+agent_dingo-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+agent_dingo-0.1.0.dist-info/top_level.txt,sha256=HH8zRETust2gD0EviZhu1DIlW8PUCCeKbUQQ5w5vVRM,12
+agent_dingo-0.1.0.dist-info/RECORD,,
