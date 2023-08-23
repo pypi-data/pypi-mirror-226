@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: extra-logging
+Version: 0.1.5
+Summary: Library complementing the `logging` library for quick customization of logging in the project
+Home-page: https://github.com/Kapysta38/extra_logging
+Author: Lev Mihalev
+Author-email: vinnipyx38@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Quick start
+
+```python
+import extra_logging as ex_log
+
+log = ex_log.Logging('app', 'log.log', max_bytes=ex_log.kb * 10).get_log
+
+for i in range(100):
+    log.info(i)
+
+```
