@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "gradiently"
+version = "0.0.1"
+description = ""
+authors = ["Andrew Tang <atreeleaf@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.build]
+script = "bin/generate_protos.py"
+
+
+[tool.poetry.scripts]
+submit-job = "gradiently.compute.entry:cli"
+build-docs = "bin.build_docs:main"
+build-protos = "bin.generate_protos:compile_protos"
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+grpcio = "^1.56.0"
+protobuf = "^4.23.4"
+grpcio-tools = "^1.56.0"
+pandas = "^2.0.3"
+pyspark = "3.3.0"
+snowflake-connector-python = "^3.0.4"
+chardet = "^5.1.0"
+pyyaml = "^6.0.1"
+databricks-sdk = "^0.2.1"
+boto3 = "^1.28.9"
+fastapi = "^0.100.0"
+alembic = "^1.11.1"
+psycopg2 = "^2.9.6"
+
+#[tool.poetry.extras]
+#compute = ["pyspark", "snowflake-connector-python"]
+psycopg2-binary = "^2.9.6"
+redis = "^4.6.0"
+aioredis = "^2.0.1"
+sphinx = "^7.1.2"
+furo = "^2023.7.26"
+sphinx-press-theme = "^0.8.0"
+python-docs-theme = "^2023.7"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
