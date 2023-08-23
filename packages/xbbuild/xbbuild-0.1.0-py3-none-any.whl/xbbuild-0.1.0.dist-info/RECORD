@@ -1,0 +1,12 @@
+xbbuild/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbbuild/__main__.py,sha256=FilxDfL0kb5S0q5-ZOUaQsXJJl7wpZGyDS7ywJQnJ7c,36
+xbbuild/config.py,sha256=02RUqXHwAKGos1Y5oysWVUsRANs1zUTKO3BnAZEMil8,329
+xbbuild/info.py,sha256=7s_H_Dt5lbhla93Oy7OwKfKoa95zDcc-oEvwdK7RRzs,2116
+xbbuild/main.py,sha256=0jJg-02ee2Oy1xLnkBrbcYGI71dBWuiOMr1jqEVn2_0,236
+xbbuild/zip_doc.py,sha256=3A2rfwYiONvihIjUeEj9kugUC3E0GoUqfW9LUGF27Xc,793
+xbbuild-0.1.0.dist-info/LICENSE,sha256=Nqnl3OoKCUd1moYzJnYwwAETVOpkA-3TkdvAB6z38KQ,435
+xbbuild-0.1.0.dist-info/METADATA,sha256=sVxVHzO3tUXAmPAU6ycWXpAYjE1k8KWL2Z1UAlq0008,375
+xbbuild-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+xbbuild-0.1.0.dist-info/entry_points.txt,sha256=6e7YFY3SjVmAwsPDYQaNwYc6js4cC_-ho-c-9kg0YUw,46
+xbbuild-0.1.0.dist-info/top_level.txt,sha256=L95psJFEpTVyMi2W-Sl_ZJ9g_lfIGg52J8Uibn3Kt7c,8
+xbbuild-0.1.0.dist-info/RECORD,,

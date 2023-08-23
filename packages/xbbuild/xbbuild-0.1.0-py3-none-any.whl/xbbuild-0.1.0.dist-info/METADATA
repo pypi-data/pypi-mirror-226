@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: xbbuild
+Version: 0.1.0
+Summary: Python Build utilities
+Home-page: https://github.com/exbee49/xbbuild
+Author: exbee49
+License: WTFPL
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: xbutils >=0.7.0
+
+Some Python build helper
