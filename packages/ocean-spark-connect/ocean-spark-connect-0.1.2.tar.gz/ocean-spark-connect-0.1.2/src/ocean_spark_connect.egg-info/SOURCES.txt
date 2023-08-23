@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ocean_spark_connect/__init__.py
+src/ocean_spark_connect/inverse_websockify.py
+src/ocean_spark_connect/ocean-spark-connect.py
+src/ocean_spark_connect.egg-info/PKG-INFO
+src/ocean_spark_connect.egg-info/SOURCES.txt
+src/ocean_spark_connect.egg-info/dependency_links.txt
+src/ocean_spark_connect.egg-info/requires.txt
+src/ocean_spark_connect.egg-info/top_level.txt
