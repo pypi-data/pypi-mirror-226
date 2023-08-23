@@ -1,0 +1,22 @@
+dash==2.6.2
+dash-extensions==0.1.4
+dash-mantine-components==0.10.2
+jsonschema~=4.6.0
+pandas<2.0.0,>=1.4.0
+plotly>=5.9.0
+
+[:platform_system != "Emscripten"]
+dash-uploader~=0.6.0
+kaleido~=0.2.1
+scikit-learn>=1.0
+xiplot_filetypes==1.0
+
+[dev]
+pytest
+black
+dash[testing]
+isort
+pyproject-flake8
+webdriver-manager
+selenium
+IPython
