@@ -1,0 +1,17 @@
+bizlogic/__init__.py,sha256=Hl6uc_QghLRUiTfKiHW4cFamzkQNmWWhezBC3HIbjxo,342
+bizlogic/application.py,sha256=o5Mt5KDLXIJK5vR7QY-_szJCysCiQMB7G0fNkHcW5bo,6009
+bizlogic/loan/__init__.py,sha256=zk_55jMWUgdnifWJ7AJtdPt4tSkvi7E8DkqtMXFfFqM,61
+bizlogic/loan/reader.py,sha256=AgVy6OR9yJDlCsBLhFyNt-Xh4Jn22P2ZDXtbaNodf98,8682
+bizlogic/loan/repayment.py,sha256=ewrT_rV14oeahv-TQjuaby-BSLp_RejK9wuffArTMZk,2742
+bizlogic/loan/status.py,sha256=Y8L7bQ8-sAtGRBLSpy_5vb8dlJnhDcQjSESIIany-uw,1298
+bizlogic/loan/writer.py,sha256=87gsn0WlHN0LLwgyMrFSJJ70_bwsmOYVNXaBqZuigO4,7164
+bizlogic/protoc/__init__.py,sha256=JpzMVSk8OMkWLrV7VzpEHtl4-Y8LMAwJV9pZTXBROHQ,48
+bizlogic/protoc/loan_application_pb2.py,sha256=d-R6O19yQbCwO0mbTdxNv1cjuel8-6vue5TB0DYWDD4,1053
+bizlogic/protoc/loan_pb2.py,sha256=5j-40gMhV-epp2I-xAg2jYHtVnrUPzAiCaCwDZq1bws,1732
+bizlogic/protoc/vouch_pb2.py,sha256=68r4mfcVbprR4HESGkgVygISzd9JIgw44n3X3jPRBSA,952
+bizlogic/utils.py,sha256=coCb2bzxU-hOMpFIbAuCMYE8ngtYDCc-4G0UrZp4KzE,3649
+bizlogic/vouch.py,sha256=Z0fRlg-zePPakGuf6bFJSkDmfXsngLFc-fPaqataz-I,4251
+bizlogic-0.2.20.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+bizlogic-0.2.20.dist-info/METADATA,sha256=AgDSNZruld_4CwsP-lWqIdU277XzR5updyp1k23Iovk,2723
+bizlogic-0.2.20.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bizlogic-0.2.20.dist-info/RECORD,,
