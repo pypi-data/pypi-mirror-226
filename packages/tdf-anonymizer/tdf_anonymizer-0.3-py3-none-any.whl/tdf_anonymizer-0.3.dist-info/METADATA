@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: tdf-anonymizer
+Version: 0.3
+Requires-Dist: nltk
+Requires-Dist: pydantic
+Requires-Dist: faker
+Requires-Dist: os
+Requires-Dist: pandas
+
