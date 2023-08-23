@@ -1,0 +1,5 @@
+setup.py
+pysimulacra.egg-info/PKG-INFO
+pysimulacra.egg-info/SOURCES.txt
+pysimulacra.egg-info/dependency_links.txt
+pysimulacra.egg-info/top_level.txt
