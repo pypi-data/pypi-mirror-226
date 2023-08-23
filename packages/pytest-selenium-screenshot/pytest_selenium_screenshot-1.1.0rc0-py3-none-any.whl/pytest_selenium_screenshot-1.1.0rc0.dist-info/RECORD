@@ -1,0 +1,12 @@
+pytest_selenium_screenshot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_selenium_screenshot/browser_settings.py,sha256=q6-u23J6rnnzY-TIYD4mmgEHbfXQziTdBK5yGljPQhM,2383
+pytest_selenium_screenshot/configuration_loader.py,sha256=elkH0YElHNnost13M0AIt3QbmsDL30qMVnUBlOTtGq0,7974
+pytest_selenium_screenshot/logger.py,sha256=x_ibTAM4Wojpc77yiI7BOPsncMl2Ptcj75SOYKXgMUg,2174
+pytest_selenium_screenshot/plugin.py,sha256=37-I0_utvFlnHMvFfP-jaDp1FU1Rz1UUAQTtBz_g2iQ,14543
+pytest_selenium_screenshot/utils.py,sha256=i0w_CBGzkPlxR2nrJcjURy-tGpGfj2COchzyDvonouk,6367
+pytest_selenium_screenshot/webdrivers.py,sha256=rmuZdiRhgITJQR97D3C6R7OfBgiJUCBdwq_dBZqdd4k,2626
+pytest_selenium_screenshot/resources/error.png,sha256=s8vvG59fOChrOaA-2oSR1oGmU8j0nevMSecCyrJzydk,33002
+pytest_selenium_screenshot-1.1.0rc0.dist-info/entry_points.txt,sha256=2vm3ax8ZA2fvQYdXtKUzcDG0egbKBhGU2P3LtvPmCSQ,66
+pytest_selenium_screenshot-1.1.0rc0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+pytest_selenium_screenshot-1.1.0rc0.dist-info/METADATA,sha256=lYQ2-9iAgUNkBZe9uCTOcGMLpcQYYMCfU-dtSQsRgxQ,1514
+pytest_selenium_screenshot-1.1.0rc0.dist-info/RECORD,,
