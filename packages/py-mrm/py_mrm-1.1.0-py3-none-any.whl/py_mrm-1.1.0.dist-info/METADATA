@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: py-mrm
+Version: 1.1.0
+Summary: Function for multiphase reactor modeling
+Author: E.A.J.F. Peters
+Author-email: e.a.j.f.peters@tue.nl
+Requires-Dist: numpy
+Requires-Dist: scipy
+
