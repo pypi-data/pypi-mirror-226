@@ -1,0 +1,2 @@
+[console_scripts]
+dims = dims.cli:dims
