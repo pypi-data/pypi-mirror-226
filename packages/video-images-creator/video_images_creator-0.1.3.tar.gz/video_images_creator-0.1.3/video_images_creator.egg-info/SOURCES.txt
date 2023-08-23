@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+video_images_creator/__init__.py
+video_images_creator/video_creator.py
+video_images_creator.egg-info/PKG-INFO
+video_images_creator.egg-info/SOURCES.txt
+video_images_creator.egg-info/dependency_links.txt
+video_images_creator.egg-info/requires.txt
+video_images_creator.egg-info/top_level.txt
