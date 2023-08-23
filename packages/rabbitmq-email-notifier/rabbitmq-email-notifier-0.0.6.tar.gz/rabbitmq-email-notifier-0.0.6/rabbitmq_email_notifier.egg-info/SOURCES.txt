@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+rabbitmq_email_notifier.egg-info/PKG-INFO
+rabbitmq_email_notifier.egg-info/SOURCES.txt
+rabbitmq_email_notifier.egg-info/dependency_links.txt
+rabbitmq_email_notifier.egg-info/requires.txt
+rabbitmq_email_notifier.egg-info/top_level.txt
+rabbitmqresources/__init__.py
+rabbitmqresources/worker.py
+rabbitmqresources/tasks/__init__.py
+rabbitmqresources/tasks/tasks.py
