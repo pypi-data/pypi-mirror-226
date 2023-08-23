@@ -1,0 +1,10 @@
+httpx[http2]
+nest-asyncio
+aiofiles
+tqdm
+orjson
+reqx
+pandas
+
+[:platform_system != "Windows"]
+uvloop
