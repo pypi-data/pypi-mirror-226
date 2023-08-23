@@ -1,0 +1,10 @@
+setup.py
+bin/dockclean
+dockclean/__init__.py
+dockclean/containers.py
+dockclean/images.py
+dockclean.egg-info/PKG-INFO
+dockclean.egg-info/SOURCES.txt
+dockclean.egg-info/dependency_links.txt
+dockclean.egg-info/requires.txt
+dockclean.egg-info/top_level.txt
