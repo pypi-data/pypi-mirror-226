@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: se3.ai
+Version: 0.0.2
+Summary: 3D Computer Vision Made Simple
+License: Apache 2.0
+Project-URL: Homepage, https://se3.ai
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6.0
+Requires-Dist: requests
+
