@@ -1,0 +1,15 @@
+typytemplate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typytemplate/main.py,sha256=9Wl6QRRXyWkxAR-5tFHWcJrbxgcbTxR5Wxa9OVKzuPc,4029
+typytemplate/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typytemplate/templates/dot_gitignore.py,sha256=UqEBKRMVuNtC7z5VJqhrJxuuKOdBVmplPwLmwNF6hyo,209
+typytemplate/templates/dot_pylintrc.py,sha256=icO8wCAJhij5GSzMKTRNmFgBFFSv5vlWRuuT2ZWgrGc,379
+typytemplate/templates/main_py.py,sha256=W7xo3kr4i6Aj_ofPzTTpvY_7kWLI8ggw9urlm2U7FwU,266
+typytemplate/templates/makefile.py,sha256=P8-bpZ_I68U3jyARA6VF_jzg_9-1tR3phqN9tvvloPA,443
+typytemplate/templates/pyproject_toml.py,sha256=3MTFWgF0gBcChvvEGCZeOj5Jf6zE8CA3bHuQ2piYLiQ,892
+typytemplate/templates/readme_md.py,sha256=qdI2z8I2ys6DcAxzx8QTLEmOCo-cFtWART63rRZHIMw,240
+typytemplate/templates/test_main_py.py,sha256=v3B4qmzY2XmPO87FVJR9jeXplOFLnBzshvtQAt7y7_g,305
+typytemplate/templates/vscode_settings_json.py,sha256=FhnIq9IzxXBocov49E96_l2_DW72yR-eumeHH5aRa_g,1148
+typytemplate-0.1.1.dist-info/METADATA,sha256=cgC9DOYF2bdzP4TypEr_EEo7J5N1180d2fdd5IU-GHc,1180
+typytemplate-0.1.1.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+typytemplate-0.1.1.dist-info/entry_points.txt,sha256=o81V4hsM5cXf2owEaQfO7n7QV4xQDiTF6Lsu7AaCMWg,55
+typytemplate-0.1.1.dist-info/RECORD,,
