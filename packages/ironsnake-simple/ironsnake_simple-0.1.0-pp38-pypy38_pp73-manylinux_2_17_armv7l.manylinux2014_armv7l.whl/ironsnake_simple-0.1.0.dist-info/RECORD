@@ -1,0 +1,8 @@
+ironsnake_simple-0.1.0.dist-info/METADATA,sha256=BPVkElyuo2VziaUGzlPO8DcMAY5LHN0McXdUmft2gws,1359
+ironsnake_simple-0.1.0.dist-info/WHEEL,sha256=mPJanrvC6GsM3UDrx_pRJDdlUC-VICHLmj-qsQ--Xms,134
+ironsnake_simple-0.1.0.dist-info/license_files/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ironsnake/simple/__init__.py,sha256=9ji5SlyT5Qg0WHALG0MKKbH73bLyg_YMkmJRqtEuMmo,86
+ironsnake/simple/module1.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ironsnake/simple/person.py,sha256=xjJfOhdeewRWCTU_p_4UGo4Hr9yz2oqt94eqPGorxsg,231
+ironsnake/simple/ironsnake_simple_pyo3.pypy38-pp73-arm-linux-gnu.so,sha256=Yx0LFZYCQ1rJ9Nw4kHUJ8VTt8vyNUhexepzeCyz4FwU,1921672
+ironsnake_simple-0.1.0.dist-info/RECORD,,
