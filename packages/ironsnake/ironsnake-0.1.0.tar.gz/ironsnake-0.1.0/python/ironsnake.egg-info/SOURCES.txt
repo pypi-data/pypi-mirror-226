@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+python/__init__.py
+python/ironsnake/__init__.py
+python/ironsnake/module0.py
+python/ironsnake.egg-info/PKG-INFO
+python/ironsnake.egg-info/SOURCES.txt
+python/ironsnake.egg-info/dependency_links.txt
+python/ironsnake.egg-info/top_level.txt
