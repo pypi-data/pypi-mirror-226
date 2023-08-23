@@ -1,0 +1,3 @@
+[console_scripts]
+geogrid-dask=geogrid_dask.__main__:main
+
