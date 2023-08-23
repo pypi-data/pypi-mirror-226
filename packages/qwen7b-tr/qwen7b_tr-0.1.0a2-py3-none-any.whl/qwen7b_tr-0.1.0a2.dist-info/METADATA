@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: qwen7b-tr
+Version: 0.1.0a2
+Summary: Translate/Chat via qwen-7b huggingface api
+Home-page: https://github.com/ffreemt/qwen7b-tr
+License: MIT
+Author: ffreemt
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: gradio-client (>=0.4.0,<0.5.0)
+Requires-Dist: loguru (>=0.7.0,<0.8.0)
+Requires-Dist: pyperclip (>=1.8.2,<2.0.0)
+Requires-Dist: rich (>=13.5.2,<14.0.0)
+Requires-Dist: typer (>=0.4.1,<0.5.0)
+Project-URL: Repository, https://github.com/ffreemt/qwen7b-tr
+Description-Content-Type: text/markdown
+
+# qwen7b-tr
+[![pytest](https://github.com/ffreemt/qwen7b-tr/actions/workflows/routine-tests.yml/badge.svg)](https://github.com/ffreemt/qwen7b-tr/actions)[![python](https://img.shields.io/static/v1?label=python+&message=3.8%2B&color=blue)](https://www.python.org/downloads/)[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![PyPI version](https://badge.fury.io/py/qwen7b-tr.svg)](https://badge.fury.io/py/qwen7b-tr)
+
+Translate/Chat using a qwen-7b-chat API at huggingface
+
+## Install it
+
+```shell
+pip install qwen7b-tr
+# pip install git+https://github.com/ffreemt/qwen7b-tr
+# poetry add git+https://github.com/ffreemt/qwen7b-tr
+# git clone https://github.com/ffreemt/qwen7b-tr && cd qwen7b-tr
+```
+
+## Use it
+```python
+from qwen7b_tr.__main__ import qwen7b_tr
+
+# This is in fact just chat with the qwen-7b-chat model
+print(qwen7b_tr("你好"))
+# 你好！有什么我能帮助你的吗？
+```
+
+## From command line
+```
+python -m qwen7b_tr test abc
+# or qwen7b-tr test abc
+```
+```bash
+三个版本如下：
+
+1. 测试abc
+
+2. ABC测试
+
+3. 三号测试 ABC
+```
+## Help and Manual
+```
+python -m qwen7b_tr --help
+
+# or
+qwen7b-tr --help
+```
+
+## Develop and Debug
+```
+set LOGURU_LEVEL=TRACE
+
+# or in linux
+export LOGURU_LEVEL=TRACE
+```
+to see a lot of debug messages
