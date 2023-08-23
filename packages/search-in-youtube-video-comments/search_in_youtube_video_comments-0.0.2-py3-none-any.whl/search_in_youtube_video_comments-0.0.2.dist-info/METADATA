@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: search-in-youtube-video-comments
+Version: 0.0.2
+Summary: Search in YouTube video comments
+Author: Benjamin Loison
+Project-URL: Homepage, https://codeberg.org/Benjamin_Loison/Search_in_YouTube_video_comments
+Project-URL: Bug Tracker, https://codeberg.org/Benjamin_Loison/Search_in_YouTube_video_comments/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Search in YouTube video comments
+
+Install with:
+
+```
+pip install search_in_youtube_video_comments
+```
+
+Use with:
+
+```
+search-in-youtube-video-comments
+```
