@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: mddj
+Version: 0.0.2
+Summary: A CLI for extracting python metadata from packages
+Author-email: Stephen Rosen <sirosen@globus.org>
+License: MIT
+Project-URL: source, https://github.com/sirosen/mddj
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata
+Requires-Dist: build
+Requires-Dist: click
+
+# mddj
+
+Your DJ of MetaData.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/mddj.svg)](https://pypi.org/project/mddj)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mddj.svg)](https://pypi.org/project/mddj)
+
+-----
+
+**Table of Contents**
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+
+## Overview
+
+A CLI for interacting with your python package metadata.
+
+Supports multiple packaging backends via a uniform interface.
+
+## Installation
+
+```console
+pipx install mddj
+```
+
+## Usage
+
+### `mddj read`
+
+Read metadata from your package by building it to an sdist and then inspecting
+that `sdist`.
+
+#### `mddj read requires-python`
+
+Show the `Requires-Python` data. Supports specialized options for parsing data
+like `--lower-bound`.
+
+See `--help` for details.
+
+## License
+
+`mddj` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
