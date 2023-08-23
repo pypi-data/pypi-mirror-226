@@ -1,0 +1,5 @@
+[project]
+name="robust_ai_utils"
+version="0.0.3"
+dependencies = ["pytest", "coverage", "urllib3"]
+
