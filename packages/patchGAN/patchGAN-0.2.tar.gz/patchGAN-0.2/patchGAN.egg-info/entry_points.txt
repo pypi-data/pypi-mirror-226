@@ -1,0 +1,3 @@
+[console_scripts]
+patchgan_infer = patchgan.infer:patchgan_infer
+patchgan_train = patchgan.train:patchgan_train
