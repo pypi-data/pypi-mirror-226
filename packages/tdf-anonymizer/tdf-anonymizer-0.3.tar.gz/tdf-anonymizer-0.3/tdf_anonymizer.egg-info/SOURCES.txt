@@ -1,0 +1,9 @@
+README.md
+setup.py
+anonymizer/__init__.py
+anonymizer/anonymizer.py
+tdf_anonymizer.egg-info/PKG-INFO
+tdf_anonymizer.egg-info/SOURCES.txt
+tdf_anonymizer.egg-info/dependency_links.txt
+tdf_anonymizer.egg-info/requires.txt
+tdf_anonymizer.egg-info/top_level.txt
