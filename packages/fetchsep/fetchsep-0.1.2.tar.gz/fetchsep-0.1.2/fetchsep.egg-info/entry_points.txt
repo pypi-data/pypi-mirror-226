@@ -1,0 +1,2 @@
+[console_scripts]
+fetchsep = fetchsep.cli:main

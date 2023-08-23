@@ -1,0 +1,14 @@
+astropy
+python-dateutil
+matplotlib
+numpy
+scipy
+pandas
+wget
+zulu
+asciitable
+lmfit
+cycler
+scikit-learn
+seaborn
+netCDF4
