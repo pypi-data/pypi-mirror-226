@@ -1,0 +1,12 @@
+.pre-commit-hooks.yaml,sha256=6nY32PzpV4tWr_mmSdJsdCbQCVWMQEuyHGZvOz9XtUw,212
+CHANGELOG.md,sha256=2NOkC0_COfbSwoFJQzZIjlm8QUCryVQBtBidhcdoQuM,1010
+LICENSE,sha256=8IzsZrMwCnGg582TvxKYEDoe6ESpm2SLKflLu8TM_8c,1073
+README.md,sha256=WqP5wHv_zBGxuCC86GnCTobIKLab20_PkMKk7hZk_bg,4104
+check_mkdocs/__init__.py,sha256=yUkskz7LovuYu4WMcrtESp_B5I_se11JTa9Dw3L0ZXo,101
+check_mkdocs/__main__.py,sha256=KESI3ZNIBj4wLBZu75sS9eJudqb16vmN16HWQHhhxvw,39
+check_mkdocs/check_mkdocs.py,sha256=sE6MyPLFa7e4-IM_MVK83TZPkt8CqCOzP-boGI9wcnE,6695
+check_mkdocs-1.2.0.dist-info/LICENSE,sha256=8IzsZrMwCnGg582TvxKYEDoe6ESpm2SLKflLu8TM_8c,1073
+check_mkdocs-1.2.0.dist-info/METADATA,sha256=zXekr6T8oWQk5TS0HDxJXqg6DBShTDtEnTTyFw1oNnE,5690
+check_mkdocs-1.2.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+check_mkdocs-1.2.0.dist-info/entry_points.txt,sha256=id6YGZRuOn6MeYeGt1Uw7Tz8qlb30hxV42MiyIYB2WM,59
+check_mkdocs-1.2.0.dist-info/RECORD,,
