@@ -1,0 +1,47 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "d9690580cbd9dde2534028159042290bee49bb12d73bf469eede8a644b069123"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.11"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "addict-tracking-changes": {
+            "hashes": [
+                "sha256:93b423d06fced021801d548a63d06afa2db090a3d98fc9b5ba71f36e771cec37",
+                "sha256:b96abf91f76cbbc64f1ebd662e67007f6bcc40f5e4284d32d97f0c60e6e06d2f"
+            ],
+            "index": "pypi",
+            "markers": "python_version > '3.11'",
+            "version": "==1.0.4"
+        },
+        "aenum": {
+            "hashes": [
+                "sha256:27b1710b9d084de6e2e695dab78fe9f269de924b51ae2850170ee7e1ca6288a5",
+                "sha256:8cbd76cd18c4f870ff39b24284d3ea028fbe8731a58df3aa581e434c575b9559",
+                "sha256:e0dfaeea4c2bd362144b87377e2c61d91958c5ed0b4daf89cb6f45ae23af6288"
+            ],
+            "index": "pypi",
+            "version": "==3.1.15"
+        },
+        "dpath": {
+            "hashes": [
+                "sha256:31407395b177ab63ef72e2f6ae268c15e938f2990a8ecf6510f5686c02b6db73",
+                "sha256:f1e07c72e8605c6a9e80b64bc8f42714de08a789c7de417e49c3f87a19692e47"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.1.6"
+        }
+    },
+    "develop": {}
+}
