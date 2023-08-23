@@ -1,0 +1,11 @@
+soft_moe/__init__.py,sha256=YI4dhaP0NPQ5eTk3fGPYFdKw0YbjF38pt9u6Yrw8JCA,337
+soft_moe/soft_moe.py,sha256=SQul3e_M4_Vrh4HGhFILBSxT6cK3E0_O3O5I775PC7I,3871
+soft_moe/vision_transformer.py,sha256=YATbJ0psjinZE4s-Inruin_do9LMo21wommqYtBmIZQ,13193
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_soft_moe.py,sha256=FoPcCiRvk0ZYFxm3n7nBHecBk9TU8_y7pi7XXrXowTI,3106
+tests/test_vision_transformer.py,sha256=9hdFaat92HYO46aXMPMGXaqfOw5bewxWvjowpkzdg3A,3379
+soft_moe-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+soft_moe-0.0.1.dist-info/METADATA,sha256=pEtYJd1t4uaZAgE0RZ3rKCfAQJ8lPXv6rzS7OV-d2gU,4133
+soft_moe-0.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+soft_moe-0.0.1.dist-info/top_level.txt,sha256=iMgGlVB2HokHwpt-aPc9KGRBd88zCGcAzMju9mZp55A,15
+soft_moe-0.0.1.dist-info/RECORD,,
