@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: MediaAPIClient
+Version: 0.0.11
+Summary: A library for working with REST API of CAG
+Home-page: https://github.com/Dragon4231/cag_library
+Author: Semyon Shilovskiy
