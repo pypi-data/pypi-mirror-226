@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sesamclient
+Version: 1.0.16
+Summary: sesamapi client
+Home-page: http://sesam.io
+Author: Sesam
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+
+This is the sesamclient library.
