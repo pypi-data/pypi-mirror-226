@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+PyElectroSim/__init__.py
+PyElectroSim/cargas.py
+PyElectroSim/conf.py
+PyElectroSim/simulador.py
+PyElectroSim/sistema.py
+PyElectroSim.egg-info/PKG-INFO
+PyElectroSim.egg-info/SOURCES.txt
+PyElectroSim.egg-info/dependency_links.txt
+PyElectroSim.egg-info/requires.txt
+PyElectroSim.egg-info/top_level.txt
