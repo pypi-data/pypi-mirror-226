@@ -1,0 +1,10 @@
+elody/__init__.py,sha256=d0Q6Fn44e7wFfLabDOBxpcJ1DPKWlFunGYDUBmO-4hA,22
+elody/client.py,sha256=niXIcOFy1C56nGUt8mtxLycvByXGIlTol4PF4_gv6wY,4158
+elody/exceptions.py,sha256=XKtZxQYhilIOO8utz2ocvrgRogfhxQ9Wq_9wRL3ddDI,483
+elody/loader.py,sha256=4pZie3GUz5grkIEPC9u3aVfcS6UvtYGnHejcwyN-2K0,2827
+elody/util.py,sha256=9Xib5JYEj0MjLn-_Nk_PFrVmnIHWRFNhfPuJwNdVVWM,3218
+elody-0.0.16.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+elody-0.0.16.dist-info/METADATA,sha256=ZP1_mqgvJLY1iv8H09hFVXdFNOKVOibfO_I5VpEOQz4,23078
+elody-0.0.16.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+elody-0.0.16.dist-info/top_level.txt,sha256=wW0TiPUfsMIzdYEwwI_W_4Envbj2-hx1-u8rjV29tFU,6
+elody-0.0.16.dist-info/RECORD,,
