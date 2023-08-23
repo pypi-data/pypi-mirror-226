@@ -1,0 +1,7 @@
+language-local-python-package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+language-local-python-package/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+language-local-python-package/src/language_enum_class.py,sha256=_0ILxF9PNRi93PkAXywKTdcQo1esrbGT509rmMsaAds,89
+language_local-0.0.3.dist-info/METADATA,sha256=1FJogu-5Mgl0bb8hH6UL4om3Gq2UE-3rkOc5b9QaNug,514
+language_local-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+language_local-0.0.3.dist-info/top_level.txt,sha256=ywRiXUaTDiFxffMFOsIYErLQGZqvBayYNJQyaHSU8us,30
+language_local-0.0.3.dist-info/RECORD,,
