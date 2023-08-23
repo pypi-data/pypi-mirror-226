@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "watchdir"
+version = "1.0.0"
+description = ""
+authors = ["Nicholas Devenish <ndevenish@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0",  "poetry-dynamic-versioning>=1.0.1,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+style = "pep440"
+format-jinja = "{% if distance == 0 %}{{ base }}.0{% else %}{{ base }}.{{ distance }}+{{ commit }}{% endif %}"
+
+[tool.poetry-dynamic-versioning.substitution]
+folders = [{ path = "src" }]
+
+[tool.poetry.scripts]
+watchdir = "watchdir.watcher:run"
+
+[tool.ruff]
+ignore = ["E501", "E741"]
+line-length = 88
+select = ["C9", "E", "F", "W", "I"]
+unfixable = ["F841"]
+
+[tool.isort]
+profile = "black"
