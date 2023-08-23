@@ -1,0 +1,3 @@
+include auto_download_undetected_chromedriver/requirements.txt
+include auto_download_undetected_chromedriver/thirdparty.json
+include auto_download_undetected_chromedriver/README.MD
