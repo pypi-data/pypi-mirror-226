@@ -1,0 +1,8 @@
+README.md
+setup.py
+edge_intelligence.egg-info/PKG-INFO
+edge_intelligence.egg-info/SOURCES.txt
+edge_intelligence.egg-info/dependency_links.txt
+edge_intelligence.egg-info/requires.txt
+edge_intelligence.egg-info/top_level.txt
+edgeintelligence/__init__.py
