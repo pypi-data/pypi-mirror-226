@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "grel-electricmeter"
+version = "0.1.0"
+description = "Grelinfo Electric Meter, compatible with Iskra MT 174 with USB Optical Probe."
+authors = ["Loïc Gremaud <loic.gremaud@grelinfo.ch>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "grel_electricmeter"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.2.1"
+pyserial = "^3.5"
+typer = {version = "^0.9.0", optional = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[tool.poetry.extras]
+console = ["typer"]
+
+[tool.poetry.scripts]
+grel-electricmeter = "grel_electricmeter._console:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.isort]
+profile = "black"
