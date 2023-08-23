@@ -1,0 +1,15 @@
+gamma/io/__init__.py,sha256=NTBF1U8kAKIUwve0NaIy2uvSinJbFnxzJFMfeaZaJXk,931
+gamma/io/__version__.py,sha256=pkmsbKcYEkyPobqHp7t68W11ca-08O3MRn2M262IxkU,35
+gamma/io/_arrow.py,sha256=rsdWL4mjuV4wcpBd3YPLxdkKxWl_OxjR6-33fYyC3d8,2631
+gamma/io/_dataset.py,sha256=n1ZU5sLJhoy8G2kdnQGY5hxgSt8x-YG5mpMmkhO3a5E,2761
+gamma/io/_fs.py,sha256=1qIdVj1avxlTisLdANF3yPA2F9EaNkLHmaXPY_aLGeg,2871
+gamma/io/_import_utils.py,sha256=zBhyACg0hzo5VbKNr90yLXgnnXbLump0jk4CsL5b4rc,237
+gamma/io/_logging.py,sha256=_BmDCMHuxVb4zHgLSHnQuOPglpeWUbNmoZHqfSto_ME,930
+gamma/io/_pandas.py,sha256=fVLHQ89n_R176ybL-vy8xo0VWkYBEB1qXRmtKiE-MSQ,3873
+gamma/io/_polars.py,sha256=3lZFjWGpBFWWKxfa0mqhREgiTVPLc8RdyXeWWSBxJ2A,3262
+gamma/io/_sql.py,sha256=eLJVCp4mGMEoZ0_b1xH5tn7jBbY1Vv2dahUOhk4IDbw,5872
+gamma/io/_types.py,sha256=QwRLDUjWvNPjd2wKzx2ETDIuDsEqA1iLCPlYCu9uaT0,1801
+gamma/io/config.py,sha256=qsOA3c06a_RnodohTtTjALZ4OO1k00NhwCg6MaH3DCE,1529
+gamma_io-0.1.2.dist-info/METADATA,sha256=c2dKz2r0PUBRKza2PkUMaoGmZyREqrZOCm-29hfF72Y,5062
+gamma_io-0.1.2.dist-info/WHEEL,sha256=bbAwydobi_oZ_0rI4gBBovxINCqHVHcC26TV6S2A2Io,90
+gamma_io-0.1.2.dist-info/RECORD,,
