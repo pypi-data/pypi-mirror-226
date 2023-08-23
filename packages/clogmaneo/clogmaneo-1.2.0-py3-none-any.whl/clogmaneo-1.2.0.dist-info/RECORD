@@ -1,0 +1,13 @@
+ogmaneo/__init__.py,sha256=O7KeBRInXuDb7CKAh3viZ_qFkX-Lb52ziWOCMFuwkPY,728
+ogmaneo/core.cl,sha256=8fjKX8mkqGdM_5je2PP_V6wMkQ-piiHAUaAYa9VNumU,19290
+ogmaneo/decoder.py,sha256=skB2NquXz4WsYG65Opw2g0mM9gVH9dEx8gmkw8ShJ6Y,8510
+ogmaneo/encoder.py,sha256=Kj7X5mhmeK6u9-VEkA_4TuS-ex905aHkdXfVBloxgFo,8517
+ogmaneo/extra.cl,sha256=1Ljjnjk75JhUCnYr_p4N5RiEvzovhAtLlmRJY2gQ-hE,11655
+ogmaneo/helpers.py,sha256=S8mUGaCH12bbd3x6qX3928yrcACDKLoaMzXpLsL-fEc,2193
+ogmaneo/hierarchy.py,sha256=cxLIcUZ4E54wElDCD-z_CJhsDNFN09AjIupyvw1tck4,13767
+ogmaneo/imageenc.py,sha256=JM6Me2yV9D3I3GVIOMLQYJa7TiimcDUnD5SKqoPP-iE,9400
+clogmaneo-1.2.0.dist-info/LICENSE.md,sha256=QXaB8IFjkOHoeXOEoAFZXCk5pOfn4CfqZcudu55C1Eg,17842
+clogmaneo-1.2.0.dist-info/METADATA,sha256=v0MS37VG_AN6IIc330Y9zrWkmHJfrDKZ1bKvBBHNiKw,23129
+clogmaneo-1.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+clogmaneo-1.2.0.dist-info/top_level.txt,sha256=TNIphRCvVs-6DTP5IfOWs3gBYq5DRNMtb7WN0NEsSGo,8
+clogmaneo-1.2.0.dist-info/RECORD,,
