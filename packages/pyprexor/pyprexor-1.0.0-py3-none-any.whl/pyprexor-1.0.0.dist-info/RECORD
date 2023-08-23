@@ -1,0 +1,10 @@
+pyprexor/__init__.py,sha256=KbO2skdw-8xr8OhFdB_-6xPa7LB6uECXLHLBpWn781s,62
+pyprexor/core.py,sha256=PSNq7IrUk5Nr5yLFYnLZ2-foKnsJm6f5HlhwaXwZkRE,1815
+pyprexor/datastore.py,sha256=VKiUvhpM2NRpWgGSpgSt3BiMx-XFAunvXgAwhzPlkfk,975
+pyprexor/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyprexor/tests/test_core.py,sha256=FVxGjcM13zt8IZ3yChx1sOZN4wNk04p39zkgLkOy0uA,1820
+pyprexor/tests/test_in_memory_datastore.py,sha256=VOoIfnl1G_8373Y8BHUfRKjoveO64Nfy1hdNaZsDEx8,514
+pyprexor-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyprexor-1.0.0.dist-info/METADATA,sha256=kFhyawRTabQ8pgQ3q3oAfj6TlSsssoxHiaHcHKG_ruE,1954
+pyprexor-1.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pyprexor-1.0.0.dist-info/RECORD,,
