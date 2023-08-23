@@ -1,0 +1,28 @@
+[build-system]
+# These are the assumed default build requirements from pip:
+# https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygeocity"
+version = "0.1.2"
+authors = [
+  { name="David Hintelmann", email="davidhin@mac.com" },
+]
+description = "This package will take a latitude and longitude coordinate which will return the country, city name, alternate name(s), population, timezone, and exact coordinates of the city."
+readme = "README.md"
+requires-python = ">=3.11.4"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pandas>=2.0.3",
+  "scipy>=1.11.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/davidhintelmann/pygeocity"
+"Bug Tracker" = "https://github.com/davidhintelmann/pygeocity/issues"

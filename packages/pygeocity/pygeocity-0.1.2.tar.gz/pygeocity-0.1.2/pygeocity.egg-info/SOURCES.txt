@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+geonames/__init__.py
+geonames/geonames.csv
+pygeocity.egg-info/PKG-INFO
+pygeocity.egg-info/SOURCES.txt
+pygeocity.egg-info/dependency_links.txt
+pygeocity.egg-info/requires.txt
+pygeocity.egg-info/top_level.txt
