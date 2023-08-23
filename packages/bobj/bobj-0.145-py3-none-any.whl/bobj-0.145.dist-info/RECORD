@@ -1,0 +1,14 @@
+bobj/__init__.py,sha256=jhTfIrH9wVfBkYYGJc0nLp3hp73z_2IUl7DjJR1dAYs,54
+bobj/category.py,sha256=DgvQ8o-rjtnrLsDklcljwEhWjXQBtQ_KPPNjch5kgM4,1360
+bobj/core.py,sha256=pnBCI4fGr1o5pL6jKYnC0BWsKh_TjqKPErG-h-wAOas,844
+bobj/folders.py,sha256=uDlhiZBR-gjtjaaO8mMRBh6o3HSWptn8DaexdaTP_cc,1398
+bobj/groups.py,sha256=oLMj9HH5ljgqLWlVijP39Ap9Nio4zCi8H5ILHj0XbJY,7901
+bobj/instances.py,sha256=UUMT138Z_n0VzvumeGgyOvQ_kadV1BQ6DQblR3AkOTI,2174
+bobj/login.py,sha256=AKafU06DkIQoZQcWK_B7j5YQJFKTB0M4LtyxJ88tm90,7759
+bobj/publications.py,sha256=oFYAQ9PMYInYuVtmP_ygdpOUp0dHX7Jj9fGpKAnx-5M,881
+bobj/support.py,sha256=CaRPJHxR8-MyTm6NAU45VhFwTt-HSl3HoRHcye9rjwg,1906
+bobj/users.py,sha256=0CfIpa31rBioNk52rtkzuD_T0fRBIPq8tqm46V-gfvE,7225
+bobj-0.145.dist-info/METADATA,sha256=0PCJVRHWaekJAPwJhlP0FJK1a6wdfawx_gXznVa59Do,3000
+bobj-0.145.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+bobj-0.145.dist-info/top_level.txt,sha256=lGDHzf2BifDTQebBoV4orx0IInJMe8SRkIfJYwuLKTg,5
+bobj-0.145.dist-info/RECORD,,
