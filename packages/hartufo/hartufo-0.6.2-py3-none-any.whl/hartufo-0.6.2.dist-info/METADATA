@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: hartufo
+Version: 0.6.2
+Summary: A Python toolkit for data-driven HRTF research
+Author-email: Johan Pauwels <johan.pauwels@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: matplotlib >=3.5
+Requires-Dist: netCDF4 >=1.5
+Requires-Dist: numpy >=1.22
+Requires-Dist: openpyxl >=3.1
+Requires-Dist: Pillow >=9
+Requires-Dist: pymatreader >=0.0.32
+Requires-Dist: samplerate >=0.1.0
+Requires-Dist: scipy >=1.7
+Requires-Dist: torchvision >=0.11
+Requires-Dist: tqdm
+Project-URL: Home, https://github.com/jpauwels/hartufo
+
+# Hartufo
+A Python toolkit for data-driven HRTF research
+
+## Installation
+
+The `hartufo` package is configured to be installable with `pip`, so you can simply run `pip install [--user] hartufo`.
+
+### Development Setup
+To contribute, it is best to check out the repo and install it in "editable mode" with the following procedure.
+
+- `git clone https://github.com/jpauwels/hartufo/`
+- `cd hartufo`
+- `pip install [--user] -e .`
+
+You can then simply update the package by calling `git pull` whenever the repo has been updated or even make your own edits and start contributing.
+
