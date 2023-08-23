@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+rr_delete_unused_packages.egg-info/PKG-INFO
+rr_delete_unused_packages.egg-info/SOURCES.txt
+rr_delete_unused_packages.egg-info/dependency_links.txt
+rr_delete_unused_packages.egg-info/not-zip-safe
+rr_delete_unused_packages.egg-info/top_level.txt
+rr_process/__init__.py
+rr_process/delete_unused_libs.py
