@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: safegrid
+Version: 0.0.0
+Summary: A pydantic powered, type hinted ORM for shotgrid
+License: GNU GPLv3
+Author: Austin Witherspoon
+Author-email: contact@austinwitherspoon.com
+Requires-Python: >=3.7
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pydantic (>=2.2.1,<3.0.0)
+Requires-Dist: shotgun-api3 (>=3.3.5,<4.0.0)
+Requires-Dist: typing-extensions (>=4.7.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# safegrid
+A Pydantic powered type hinted ORM for shotgrid
+
