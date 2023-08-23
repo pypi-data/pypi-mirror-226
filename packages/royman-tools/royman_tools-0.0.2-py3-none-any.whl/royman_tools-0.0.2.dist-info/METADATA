@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: royman-tools
+Version: 0.0.2
+Summary: A collection of tools
+Home-page: https://github.com/roymanigley/royman-tools
+Author: Roy Manigley
+Author-email: roy.manigley@gmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (>=8.1.3)
+
+# royman-tools
+> collection of tools
+
+## Installation
+```
+pip install royman-tools
+```
+or from Github:
+```
+git clone https://github.com/roymanigley/royman-tools.git
+cd royman-tools
+python setup.py install
+```
+
+## Tools
+
+### TCP
+
+#### Usage
+```
+from royman_tools import tcp
+with tcp.Client('127.0.0.1', 4040) as client:
+    client.send_str('Hello World')
+    print(client.read())
+
+with tcp.Server(4040) as server:
+    server.send_str('Hello World')
+    print(server.read())
+
+tcp.scan_range('127.0.0.1', list(range(1, 65535 + 1)))
+```
+
+### Project Creator
+
+#### Usage
+```
+royman-tools:create-project --help
+
+royman-tools:create-project --project_name my-project-name
+```
