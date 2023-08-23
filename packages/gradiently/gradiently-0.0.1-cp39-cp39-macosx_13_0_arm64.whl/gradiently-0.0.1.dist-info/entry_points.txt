@@ -1,0 +1,5 @@
+[console_scripts]
+build-docs=bin.build_docs:main
+build-protos=bin.generate_protos:compile_protos
+submit-job=gradiently.compute.entry:cli
+
