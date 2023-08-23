@@ -1,0 +1,10 @@
+setup.py
+bin/docker-clean
+docker_clean/__init__.py
+docker_clean/containers.py
+docker_clean/images.py
+docklean.egg-info/PKG-INFO
+docklean.egg-info/SOURCES.txt
+docklean.egg-info/dependency_links.txt
+docklean.egg-info/requires.txt
+docklean.egg-info/top_level.txt
