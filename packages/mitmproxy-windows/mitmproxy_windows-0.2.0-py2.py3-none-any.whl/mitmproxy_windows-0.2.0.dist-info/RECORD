@@ -1,0 +1,10 @@
+mitmproxy_windows/LICENSE,sha256=FKDLUhTVNuT9rmqj9WlvmB7toQbNAm6XlLukie551ig,61349
+mitmproxy_windows/WINDIVERT_VERSION,sha256=kZMEJfMdUTLnjgrXGVYg5DUSGi_fh89lX4MjqkWuBGg,6
+mitmproxy_windows/WinDivert.dll,sha256=weBg7hlESiWbIWL4rw8_6MRCihxvaU3OIN4ZSsjX2aI,47616
+mitmproxy_windows/WinDivert.lib,sha256=xWeNVE6wEhoYnRE59U4MZ4VNxk0ciXERon7y5SyzjrM,25422
+mitmproxy_windows/WinDivert64.sys,sha256=jaCFMyeCcI2HZ7ys5TJ6bscoPBfPuF5AsDzSMjqQ3cI,94144
+mitmproxy_windows/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mitmproxy_windows/windows-redirector.exe,sha256=sC-8xAU04vUpsY1W67D8uKiyIrJicIz-Z9lqEB12AU8,1087488
+mitmproxy_windows-0.2.0.dist-info/METADATA,sha256=VBFWRbaSlOMwbMPTdq-kSd7BciWsB-N5WS2hOERZ0gw,162
+mitmproxy_windows-0.2.0.dist-info/WHEEL,sha256=fagL_Tj29mg80flwlxJNW45nBDbboxF04Tnbc_jt3Bg,105
+mitmproxy_windows-0.2.0.dist-info/RECORD,,
