@@ -1,0 +1,5 @@
+[console_scripts]
+royman-tools:create-project = royman_tools.project_creator:main
+royman-tools:tcp-port-scan = royman_tools.tcp:port_scan
+royman-tools:tcp-rsh = royman_tools.tcp:rsh
+royman-tools:web-dir-scan = royman_tools.web:main
