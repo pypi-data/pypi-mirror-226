@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: sama
+Version: 0.0.1
+Summary: Sama Python Client
+Home-page: https://www.sama.com
+Author: Edward
+Author-email: echan@sama.com
+License: MIT
+License-File: LICENSE.txt
