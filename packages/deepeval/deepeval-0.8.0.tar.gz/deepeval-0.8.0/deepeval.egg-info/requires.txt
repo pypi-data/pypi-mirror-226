@@ -1,0 +1,11 @@
+requests
+tqdm
+transformers
+pytest
+tabulate
+sentence-transformers
+detoxify
+
+[bias]
+tensorflow
+Dbias
