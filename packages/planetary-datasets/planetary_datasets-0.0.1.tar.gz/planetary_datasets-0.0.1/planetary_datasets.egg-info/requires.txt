@@ -1,0 +1,7 @@
+odc-stac
+pystac-client
+planetary-computer
+rioxarray
+fsspec
+geopandas
+dask

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+planetary_datasets/__init__.py
+planetary_datasets/metnet.py
+planetary_datasets/utils.py
+planetary_datasets.egg-info/PKG-INFO
+planetary_datasets.egg-info/SOURCES.txt
+planetary_datasets.egg-info/dependency_links.txt
+planetary_datasets.egg-info/requires.txt
+planetary_datasets.egg-info/top_level.txt
