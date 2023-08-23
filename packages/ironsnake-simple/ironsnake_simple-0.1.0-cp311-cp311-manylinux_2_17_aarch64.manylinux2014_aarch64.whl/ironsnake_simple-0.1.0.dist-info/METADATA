@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ironsnake-simple
+Version: 0.1.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Summary: A project exploring building a Rust/Python package.
+Keywords: ironsnake,rust,python,interop
+Author-email: Ciarán Ryan-Anderson <cradevelop@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/ciaranra/ironsnake
+Project-URL: Repository, https://github.com/ciaranra/ironsnake
+
+# IronSnake
+[![CI](https://github.com/ciaranra/ironsnake/actions/workflows/CI.yml/badge.svg)](https://github.com/ciaranra/ironsnake/actions/workflows/CI.yml)
+
+IronSnake is an experimental project aimed at exploring advanced packaging of Rust and Python together.
