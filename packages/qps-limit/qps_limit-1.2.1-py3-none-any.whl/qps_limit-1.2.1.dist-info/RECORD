@@ -1,0 +1,8 @@
+qps_limit/__init__.py,sha256=OxKaa3_ncGd3H4nGXyIAitJjdlZLBDyDvGnGTERdA7c,263
+qps_limit/limiter.py,sha256=ooxUml27MPlTdRNSBYiWDY63GIrsIB8-kmSW33a-2MA,8410
+qps_limit/run.py,sha256=ipQ8Qu40fBXlR3Lf0RRyCA_mCWWRf0iRJqjSYb4D31M,3927
+qps_limit-1.2.1.dist-info/METADATA,sha256=jtn4j6fKC--zr-sj1-UyZsA74mCVwmJycXmh9RKooPk,3034
+qps_limit-1.2.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+qps_limit-1.2.1.dist-info/top_level.txt,sha256=vH2iImlC_yaDXYqPQn3x6ZXcQ5Ec2yAe-l0lLJqu0RY,10
+qps_limit-1.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+qps_limit-1.2.1.dist-info/RECORD,,
