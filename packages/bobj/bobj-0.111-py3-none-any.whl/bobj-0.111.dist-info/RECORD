@@ -1,0 +1,14 @@
+bobj/__init__.py,sha256=jhTfIrH9wVfBkYYGJc0nLp3hp73z_2IUl7DjJR1dAYs,54
+bobj/category.py,sha256=DgvQ8o-rjtnrLsDklcljwEhWjXQBtQ_KPPNjch5kgM4,1360
+bobj/core.py,sha256=jW7Muxk2Ei9N2YMhrDSjn9kOaZPiBHr6NN6UpK-5DBs,659
+bobj/folders.py,sha256=uDlhiZBR-gjtjaaO8mMRBh6o3HSWptn8DaexdaTP_cc,1398
+bobj/groups.py,sha256=LareUT41SVPRcn2TBNEoxmr7Hn9FiYnlvh6A5wjXNNQ,6801
+bobj/instances.py,sha256=lYxTi6CJrTmNcIiV9J-bdQ1KbYeueirztXSkK0bi4hw,1046
+bobj/login.py,sha256=TG3ufL2-dISzcNFCLKv6RSFxkEK6xMPylL6KTF0HzEY,7651
+bobj/publications.py,sha256=oFYAQ9PMYInYuVtmP_ygdpOUp0dHX7Jj9fGpKAnx-5M,881
+bobj/support.py,sha256=bkZR8onsG4-n2yyaCbrqxAXwqJ-Z1syT4yyjBmhGVYU,606
+bobj/users.py,sha256=qUz8bijBv4tOr-WUGScJz4rpX1JKlssRi6LIN-NEn4U,6829
+bobj-0.111.dist-info/METADATA,sha256=N-cSOSCparm2SBdQuYC1Cb50GEeMCA9ABBpODSpdRzQ,3000
+bobj-0.111.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+bobj-0.111.dist-info/top_level.txt,sha256=lGDHzf2BifDTQebBoV4orx0IInJMe8SRkIfJYwuLKTg,5
+bobj-0.111.dist-info/RECORD,,
