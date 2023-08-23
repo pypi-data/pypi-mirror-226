@@ -1,0 +1,2 @@
+[console_scripts]
+eeop = op2_parser.__main__:main
