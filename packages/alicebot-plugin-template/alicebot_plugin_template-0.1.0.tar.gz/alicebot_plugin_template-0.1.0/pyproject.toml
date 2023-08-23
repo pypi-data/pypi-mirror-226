@@ -1,0 +1,69 @@
+[project]
+name = "alicebot-plugin-template"
+version = "0.1.0"
+description = "AliceBot Plugin Template."
+authors = [{ name = "st1020", email = "stone_1020@qq.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["bot", "chatbot", "alicebot", "tag1", "tag2"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Library",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Chat",
+]
+requires-python = ">=3.8"
+dependencies = ["alicebot==0.7.1"]
+
+[tool.pdm.dev-dependencies]
+lint = ["black", "ruff"]
+
+[project.urls]
+Homepage = "https://docs.alicebot.dev/"
+Documentation = "https://docs.alicebot.dev/"
+Repository = "https://github.com/AliceBotProject/alicebot-plugin-template"
+Changelog = "https://docs.alicebot.dev/changelog.html"
+
+[tool.black]
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.ruff]
+line-length = 88
+select = ["ALL"]
+ignore = [
+    "D",      # pydocstyle
+    "BLE",    # flake8-blind-except
+    "FBT",    # flake8-boolean-trap
+    "COM",    # flake8-commas
+    "EM",     # flake8-errmsg
+    "INP",    # flake8-no-pep420
+    "TID",    # flake8-tidy-imports
+    "E501",   # Line too long, handled by black
+    "D415",   # First line should end with a period, question mark, or exclamation point
+    "ANN101", # Missing type annotation for self
+    "ANN102", # Missing type annotation for cls
+    "RUF001", # String contains ambiguous unicode character string
+    "RUF002", # Docstring contains ambiguous unicode character string
+    "RUF003", # Comment contains ambiguous unicode character string
+]
+target-version = "py38"
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.pyupgrade]
+keep-runtime-typing = true
+
+[tool.pyright]
+pythonVersion = "3.8"
+pythonPlatform = "All"
+typeCheckingMode = "strict"
+reportUnnecessaryIsInstance = false
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
