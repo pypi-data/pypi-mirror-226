@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+AutoReqs.egg-info/PKG-INFO
+AutoReqs.egg-info/SOURCES.txt
+AutoReqs.egg-info/dependency_links.txt
+AutoReqs.egg-info/entry_points.txt
+AutoReqs.egg-info/requires.txt
+AutoReqs.egg-info/top_level.txt
+AutoRequirements/AutoRequirements.py
+AutoRequirements/__init__.py
+tests/__init__.py
+tests/conftest.py
+tests/test_AutoRequirements.py
