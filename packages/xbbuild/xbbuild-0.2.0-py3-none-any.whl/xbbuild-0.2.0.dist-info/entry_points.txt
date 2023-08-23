@@ -1,0 +1,2 @@
+[console_scripts]
+xbbuild = xbbuild.main:main
