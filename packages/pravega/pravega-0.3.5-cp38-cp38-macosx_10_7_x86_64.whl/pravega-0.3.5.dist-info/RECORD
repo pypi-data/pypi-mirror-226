@@ -1,0 +1,5 @@
+pravega-0.3.5.dist-info/METADATA,sha256=M9pW6-uad4itbEEJW-gL8-hprWDL9ryyZTnVVe3-dtU,2788
+pravega-0.3.5.dist-info/WHEEL,sha256=gror7WjfaYYP9ZnCnckM34OQ0vgWQayokXttUJOBGPc,105
+pravega_client/__init__.py,sha256=Pq-fktxcIFdbHbKj3cNCZZB5uHJMN_9lPOxyUnASZRk,139
+pravega_client/pravega_client.cpython-38-darwin.so,sha256=0V31BX-lNh_vmC1Z9XXAjR7NHNZsySo6n-gDuXJb0wE,18509496
+pravega-0.3.5.dist-info/RECORD,,
