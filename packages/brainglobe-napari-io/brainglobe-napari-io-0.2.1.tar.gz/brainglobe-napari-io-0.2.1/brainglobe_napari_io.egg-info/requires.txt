@@ -1,0 +1,13 @@
+bg-atlasapi
+bg_space
+brainglobe-utils
+napari
+tifffile>=2020.8.13
+numpy
+pandas
+
+[dev]
+black
+pre-commit
+pytest
+pytest-cov
