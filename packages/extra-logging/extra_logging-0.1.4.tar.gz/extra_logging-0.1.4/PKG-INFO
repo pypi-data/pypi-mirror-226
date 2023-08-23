@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: extra_logging
+Version: 0.1.4
+Summary: Library complementing the `logging` library for quick customization of logging in the project
+Home-page: https://github.com/Kapysta38/extra_logging
+Author-email: vinnipyx38@gmail.com
+License: MIT
+License-File: LICENSE
+
+Example
