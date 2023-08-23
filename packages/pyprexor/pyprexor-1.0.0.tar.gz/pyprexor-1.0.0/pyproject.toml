@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pyprexor"
+version = "1.0.0"
+description = ""
+authors = ["_MircoWave_ <clarknick1990@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pyprexor"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^7.4.0"
+ruff = "^0.0.285"
+mypy = "^1.5.1"
+coverage = "^7.3.0"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.ruff]
+line-length = 120
