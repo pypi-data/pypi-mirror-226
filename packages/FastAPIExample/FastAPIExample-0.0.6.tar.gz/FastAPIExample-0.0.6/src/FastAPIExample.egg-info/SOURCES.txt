@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+src/__init__.py
+src/crud.py
+src/dbdef.py
+src/main.py
+src/models.py
+src/schemas.py
+src/FastAPIExample.egg-info/PKG-INFO
+src/FastAPIExample.egg-info/SOURCES.txt
+src/FastAPIExample.egg-info/dependency_links.txt
+src/FastAPIExample.egg-info/requires.txt
+src/FastAPIExample.egg-info/top_level.txt
+tests/test_main.py

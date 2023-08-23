@@ -1,0 +1,8 @@
+fastapi
+sqlalchemy
+
+[dev]
+git-it
+pytest
+pytest-cov
+uvicorn
