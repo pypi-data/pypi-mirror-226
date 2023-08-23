@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: video_images_creator
+Version: 0.1.12
+Summary: Steps/n1. Install package using pip/n2. Copy below, you can change image_urls and feature_names as per you like from video_images_creator import video_creator
+Home-page: 
+Author: Nikhil Sharma
+Author-email: nikhilsharma972@gmail.com
+License: BSD 2-clause
+License-File: LICENSE
