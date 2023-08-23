@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: metafora
+Version: 1.1.1
+Summary: METAR and TAF parser with dataclasses and regular expressions
+Home-page: https://github.com/ramondalmau/metafora.git
+Author: Ramon Dalmau-Codina
+Author-email: ramon.dalmau.codina@gmail.com
+Requires-Python: >=3.7
+Requires-Dist: dataclasses (>=0.6)
+Requires-Dist: marshmallow (>=3.17.0)
+Requires-Dist: dataclasses-json (>=0.5.7)
+

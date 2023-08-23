@@ -1,0 +1,12 @@
+metafora/__init__.py,sha256=EF3rIFE5drplhHywNq8GDgqmq4BckEyrIEP90ZrEw1k,184
+metafora/common.py,sha256=03h8Z5xL3xaqVPToWa7aA4v_Sl0sf4Ik2ZcJuvQvvxM,10481
+metafora/enums.py,sha256=owSldjfiry3qc1lRvQsWI3eYWndLkPDfP1N2R3D5dIY,2403
+metafora/metar.py,sha256=4MLoRGBC-f1ixQCrUfqVm3dXmGiCY2c400rLDTb8vV4,7218
+metafora/ml.py,sha256=bKUs-9vPPdpMmq4dcj0-BtkVorLDEi_fbi47tcvmZhU,1027
+metafora/parser.py,sha256=wQ1Ivozz83tHgVuqHTfTB77Dr2gA4O_8g2PQfk7JqiY,2509
+metafora/taf.py,sha256=yR14K9EBCocQyBRurhCy27sLlBPccUgaWSbql-AIfVE,7504
+metafora/utils.py,sha256=4-4_1jT0da8FMn7JcwPRczKurg50nl7h0aM37mJJ9KA,2423
+metafora-1.1.1.dist-info/METADATA,sha256=t8Fz1hwWQVfHA7n2lwAMeyBh6cP35S0bsVOvrTfwbxo,389
+metafora-1.1.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+metafora-1.1.1.dist-info/top_level.txt,sha256=Z9uCh8MuQ3_ovNXPN8DBfZfs9cfv41rQXiy4AuZI54A,9
+metafora-1.1.1.dist-info/RECORD,,
