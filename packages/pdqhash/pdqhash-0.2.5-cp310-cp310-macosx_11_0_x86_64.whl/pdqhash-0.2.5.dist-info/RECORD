@@ -1,0 +1,9 @@
+pdqhash/__init__.py,sha256=AOW0vCiIU8366yiGmqV0FCTJcxolNbk0o1XKdtw07Mw,151
+pdqhash/_version.py,sha256=ngln53eYO1DOpZPBCeCqVM-JVrbz6bkIRLcPgpR4hh4,497
+pdqhash/bindings.cpython-310-darwin.so,sha256=4-JW1ASs54X25NvOFHsRLGmJKHBUSwJa4q4E2DbB6C0,174752
+pdqhash/bindings.pyx,sha256=6E5XgzEe5vVhnQ41r1AhZLvWqlp25Ae-p6VX_b9atiI,5599
+pdqhash-0.2.5.dist-info/LICENSE,sha256=uV1--F0i2FZ6E4fVFH8LZ5XKYXrrHgz3pLhe2g0o5I0,1057
+pdqhash-0.2.5.dist-info/METADATA,sha256=le5SX_4USgsIPwSHxCNe0Ia8cGQ64DyNSuk_5oWMcQU,2015
+pdqhash-0.2.5.dist-info/WHEEL,sha256=PJVYZFdc4ZEUJDV-HOf33iti7eN5iox0qs02a3biDj8,111
+pdqhash-0.2.5.dist-info/top_level.txt,sha256=v3HuISLHlmcHiP23TJNgMnueEWgIVX9k09XcYozT-pI,8
+pdqhash-0.2.5.dist-info/RECORD,,
