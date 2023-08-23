@@ -1,0 +1,3 @@
+[console_scripts]
+wordlette=wordlette.cms.app:start_server
+
