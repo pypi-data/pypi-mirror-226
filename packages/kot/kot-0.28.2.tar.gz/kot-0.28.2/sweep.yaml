@@ -1,0 +1,17 @@
+# Sweep AI turns bug fixes & feature requests into code changes (https://sweep.dev)
+# For details on our config file, check out our docs at https://docs.sweep.dev
+
+# If you use this be sure to frequently sync your default branch(main, master) to dev.
+branch: 'master'
+# By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
+gha_enabled: True
+# This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
+# Here's an example: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
+description: 'KOT: Multithreaded Simultaneous Writing Key-Value DB. This project is a Python-based key-value database that supports multithreaded simultaneous writing. It provides efficient storage and retrieval of key-value pairs, making it suitable for various applications. The API endpoints can be found in the src/kot/api.py file. The GUI endpoints can be found in the src/kot/gui.py. The tests can be found in the tests/unit_tests.py. The docs can be found in the docs/. Make sure to write code that adheres to PEP8 guidelines.'
+docs: {"kot":"https://onuratakan.github.io/KOT/", "flet":"https://flet.dev/docs/", "fire":"https://github.com/google/python-fire/blob/master/docs/guide.md", "waitress":"https://docs.pylonsproject.org/projects/waitress/en/latest/", "flask":"https://flask.palletsprojects.com/", "docker":"https://docs.docker.com/"}
+# Default Values: https://github.com/sweepai/sweep/blob/main/sweep.yaml
+sandbox:
+  enabled: true
+  image: "Python3"
+  install: "python -m venv venv; . venv/bin/activate; pip install black"
+  formatter: ". venv/bin/activate; black {files}"
