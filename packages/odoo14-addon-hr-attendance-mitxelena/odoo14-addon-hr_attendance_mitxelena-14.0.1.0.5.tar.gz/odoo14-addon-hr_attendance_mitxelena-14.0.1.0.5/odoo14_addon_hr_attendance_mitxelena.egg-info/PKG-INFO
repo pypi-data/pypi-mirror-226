@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: odoo14-addon-hr-attendance-mitxelena
+Version: 14.0.1.0.5
+Summary: Employee Attendances Customizations for Mitxelena
+Home-page: https://www.coopdevs.org
+Author: Coopdevs
+License: UNKNOWN
+Description: 
+        Customizations of Employee Attendances for Mitxelena
+        ====================================================
+        This module includes customizations for handling employee attendances at Mitxelena, 
+        including custom rules for shifts, public holidays and calculation of extra hours.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 14.0
+Requires-Python: >=3.6
