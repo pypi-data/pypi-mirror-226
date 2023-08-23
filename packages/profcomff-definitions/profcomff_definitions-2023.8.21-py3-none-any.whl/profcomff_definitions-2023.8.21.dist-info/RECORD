@@ -1,0 +1,12 @@
+profcomff_definitions/__init__.py,sha256=fOK9GP8Cb3TPYOqa6b8bJPdZq8VWtIm3sjqUYw86wmk,72
+profcomff_definitions/base.py,sha256=0cC1_S2EvfQ_O-uAb2DTxn-TM6U8LcsXHop52TaDk5o,835
+profcomff_definitions/DM/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+profcomff_definitions/DWH/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+profcomff_definitions/ODS/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+profcomff_definitions/STG/__init__.py,sha256=2GDwJxEWSF__xiNASTwPP1MNo_TAfpd2xnqbN1vD2QI,66
+profcomff_definitions/STG/union_member.py,sha256=VTuBi6LTMNRCLC7DmQe0U8vkXL0LQkCO4VCRHtvjMQ4,1808
+profcomff_definitions-2023.8.21.dist-info/LICENSE,sha256=8GQHVw9dEnFOwEOdqjBtvW250ol4UFMe8ikFTolg3aI,1542
+profcomff_definitions-2023.8.21.dist-info/METADATA,sha256=3xEAkHfbVMjn5JVuOJ80KrY6nQoWj-CpZoWVO8Bz-48,470
+profcomff_definitions-2023.8.21.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+profcomff_definitions-2023.8.21.dist-info/top_level.txt,sha256=smu7qv0PXS7jKb_b_IFGndToMRfg6a9fOg6NVR-PaKw,22
+profcomff_definitions-2023.8.21.dist-info/RECORD,,
