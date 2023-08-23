@@ -1,0 +1,7 @@
+setup.py
+calculus_toolkit/__init__.py
+calculus_toolkit/mathfuncs.py
+calculus_toolkit.egg-info/PKG-INFO
+calculus_toolkit.egg-info/SOURCES.txt
+calculus_toolkit.egg-info/dependency_links.txt
+calculus_toolkit.egg-info/top_level.txt
