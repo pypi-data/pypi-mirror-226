@@ -1,0 +1,3 @@
+[console_scripts]
+check-mkdocs=check_mkdocs.__main__:main
+
