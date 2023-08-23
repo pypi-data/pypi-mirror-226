@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "atro-docs"
+version = "0.0.4"
+description = ""
+authors = ["atropos <sv7n@pm.me>"]
+readme = "README.md"
+packages = [{include = "atro_docs"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mkdocs-multirepo-plugin = "*"
+mkdocstrings = "*"
+mkdocstrings-python = "*"
+mkdocs-include-markdown-plugin = "*"
+mkdocs-material = "*"
+mkdocs = "*"
+pydantic = "^2.1.1"
+sh = "*"
+fastapi = "*"
+cleo = "*"
+uvicorn = "*"
+
+[tool.poetry.group.dev.dependencies]
+atro_pylog = "^0.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
