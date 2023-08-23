@@ -1,0 +1,6 @@
+PyYAML
+psycopg2-binary==2.9.5
+redis
+random
+string
+time
