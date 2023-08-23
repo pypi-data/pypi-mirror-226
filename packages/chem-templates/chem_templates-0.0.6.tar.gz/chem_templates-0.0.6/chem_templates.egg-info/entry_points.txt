@@ -1,0 +1,2 @@
+[nbdev]
+chem_templates = chem_templates._modidx:d
