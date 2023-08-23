@@ -1,0 +1,6 @@
+include smak.icns
+include smak.ico
+include smak_sm.jpg
+include colormaps.txt
+include oospec_calibration.txt
+recursive-include pyMcaConfigs/*
