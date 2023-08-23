@@ -1,0 +1,9 @@
+numpy
+cppyy
+torch>=1.8
+
+[cuda]
+cupy
+
+[test]
+pytest
