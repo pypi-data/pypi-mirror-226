@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: onepassword-secrets-backend
+Version: 0.0.4
+Summary: Custom 1password secrets backend for airflow
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# onepassword_secrets_backend
+Custom 1password secrets backend for airflow. Intended to store connections/variables/configs in 1password vaults.
+
+Secrets should be stored in 1password as a plain note text!
+
+### To use in airflow set the following environment variables:
+
+`AIRFLOW__SECRETS__BACKEND`=onepassword_secrets_backend.OnePasswordSecretsBackend
+
+`AIRFLOW__SECRETS__BACKEND_KWARGS` : kwargs for the Backend class, see class documentation for details
+
+`OP_CONNECT_TOKEN` : one password connect server token
+
+`OP_CONNECT_HOST` : one password connect server host

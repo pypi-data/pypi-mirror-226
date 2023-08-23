@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onepassword_secrets_backend"
+version = "0.0.4"
+authors = [
+
+]
+dependencies = [
+    'onepasswordconnectsdk==1.3.0',
+    'apache-airflow>=2.5.1',
+]
+description = "Custom 1password secrets backend for airflow"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Build Tools',
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
