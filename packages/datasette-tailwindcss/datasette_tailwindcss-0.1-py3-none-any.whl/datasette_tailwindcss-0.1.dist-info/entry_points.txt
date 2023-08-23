@@ -1,0 +1,2 @@
+[datasette]
+tailwindcss = datasette_tailwindcss
