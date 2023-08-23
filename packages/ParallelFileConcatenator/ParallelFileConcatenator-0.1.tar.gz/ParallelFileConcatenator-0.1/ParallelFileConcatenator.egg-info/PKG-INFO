@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ParallelFileConcatenator
+Version: 0.1
+Summary: ParallelFileConcatenator is a robust tool designed to efficiently combine data files of various formats (CSV, Feather, Parquet, XLSX, XLS) from a specified directory.
+Author: Kaleem Ullah Qasim
+Author-email: kaleem.qasim@gmail.com
+License: MIT
+Keywords: parallel file concatenation,data aggregation,data merging,data cleaning,data deduplication,data compression,file management,file processing,data analysis,data science,machine learning,big data,data engineering,data wrangling,data preparation
+Requires-Python: >=3.8

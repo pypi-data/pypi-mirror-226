@@ -1,0 +1,7 @@
+README.md
+setup.py
+ParallelFileConcatenator.egg-info/PKG-INFO
+ParallelFileConcatenator.egg-info/SOURCES.txt
+ParallelFileConcatenator.egg-info/dependency_links.txt
+ParallelFileConcatenator.egg-info/requires.txt
+ParallelFileConcatenator.egg-info/top_level.txt
