@@ -1,0 +1,8 @@
+LICENSE.rst
+setup.cfg
+setup.py
+shipdan_model.egg-info/PKG-INFO
+shipdan_model.egg-info/SOURCES.txt
+shipdan_model.egg-info/dependency_links.txt
+shipdan_model.egg-info/requires.txt
+shipdan_model.egg-info/top_level.txt
