@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: testcontainers-iris
+Version: 1.0.1
+Summary: InterSystems IRIS component of testcontainers-python.
+Home-page: https://github.com/caretdev/testcontainers-iris-python
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: testcontainers-core
+Requires-Dist: sqlalchemy
+Requires-Dist: sqlalchemy-iris
+
+InterSystems IRIS component of testcontainers-python.
+
