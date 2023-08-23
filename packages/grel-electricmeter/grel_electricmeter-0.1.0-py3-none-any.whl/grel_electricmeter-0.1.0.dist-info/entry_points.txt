@@ -1,0 +1,3 @@
+[console_scripts]
+grel-electricmeter=grel_electricmeter._console:app
+
