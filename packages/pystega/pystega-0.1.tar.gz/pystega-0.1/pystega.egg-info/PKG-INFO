@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: pystega
+Version: 0.1
+Summary: A simple Python library for steganography
+Author: github/slayy257
+License-File: LICENSE
