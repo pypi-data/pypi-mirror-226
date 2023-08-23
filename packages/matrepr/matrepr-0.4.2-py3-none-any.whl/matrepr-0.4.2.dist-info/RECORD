@@ -1,0 +1,17 @@
+matrepr/__init__.py,sha256=K5DlaP5lc5JdF4UUXb3P8RDUH2FoZA6YEtKDiGGZOTA,7147
+matrepr/base_formatter.py,sha256=eJJmssMbkDHXG2mpaB0mWhCGbQVCwHAoFBt3QRDD0wA,459
+matrepr/html_formatter.py,sha256=oYg9NqrmTrVOS9wTzDZ97CI7IBF46ELSmPv9h-ys5cw,5929
+matrepr/jupyter.py,sha256=qNFAeWoq7l003-JbVIZ0-eWcfRep-Gq2cr5GDTTuOwQ,482
+matrepr/jupyter_html.py,sha256=3VFJICq37HE-WdvPmjPbpZ4t2RA3kQPiTT4Tv-_swUk,800
+matrepr/jupyter_latex.py,sha256=3jN83XB2UzLZrQiBvXle6WhSEn5PcvYBMip1HP1xHrA,793
+matrepr/latex_formatter.py,sha256=kihCBQyyckPu2m5eBcV8TDWvHhnFAYT0HCFo5ib6vbk,3741
+matrepr/adapters/__init__.py,sha256=ijqbBxT7cA_zC04NCsyVmIH-1K3ZhQ7VI7hnKIZbb7k,10339
+matrepr/adapters/graphblas_driver.py,sha256=fnQNv1QOTpiikNIlPYxUZ7aULW1S6RcQMDVfTxr3J9E,955
+matrepr/adapters/graphblas_impl.py,sha256=5QI1mmCFfdEPAC_rA9607ZMbGphEbRt2ThL_YXwuBgc,1932
+matrepr/adapters/list_like.py,sha256=2RDfZrYUhIrQaZ3upSmZ9cpGHO7JXdIuLf7NUd3_vkg,1684
+matrepr/adapters/scipy_driver.py,sha256=HF1gOnEAKN6TYLA2m0MmAnMuUQHVdsPotr7o1ZVqIIw,1275
+matrepr/adapters/scipy_impl.py,sha256=Mt2ABC4V81meNM8kZ7EX6kLhFkjChHgO-j5OfOLjfu0,3452
+matrepr-0.4.2.dist-info/METADATA,sha256=X0no0TyEZwp2PK_iCsjCOAPmRWJmcCp9u6gMMXYCd-g,4541
+matrepr-0.4.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+matrepr-0.4.2.dist-info/top_level.txt,sha256=1CINOoCAwwOqbHda9x-bG5qXXvAXDvUxHrzTanFGugU,8
+matrepr-0.4.2.dist-info/RECORD,,
