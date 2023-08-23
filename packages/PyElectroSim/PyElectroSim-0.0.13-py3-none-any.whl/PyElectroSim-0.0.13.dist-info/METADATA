@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: PyElectroSim
+Version: 0.0.13
+Summary: PyElectroSim é uma biblioteca para simulação da trajetória de cargas elétricas em um sistema de coordenadas cartesianas.
+Author: Robson-tech
+Author-email: robson.junior@ufpi.edu.br
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+
+# PyElectroSim - SimulaÃ§Ãµes EletromagnÃ©ticas com Pygame
+
+## DescriÃ§Ã£o
+
+O PyElectroSim Ã© um pacote Python de cÃ³digo aberto que possibilita a criaÃ§Ã£o de simulaÃ§Ãµes interativas de cargas elÃ©tricas utilizando a biblioteca Pygame. O projeto foi idealizado com o objetivo de fornecer uma ferramenta acessÃ­vel para estudantes do ensino mÃ©dio e entusiastas da fÃ­sica explorarem conceitos de eletrostÃ¡tica e eletrodinÃ¢mica de maneira prÃ¡tica e visual.
+
+## Principais Recursos
+
+- Cargas ElÃ©tricas: O PyElectroSim permite adicionar cargas elÃ©tricas positivas e negativas em uma regiÃ£o de simulaÃ§Ã£o. As cargas podem ser colocadas em posiÃ§Ãµes especÃ­ficas e ter intensidades configurÃ¡veis.
+- Ajuste de ParÃ¢metros: O PyElectroSim oferece controles para ajustar parÃ¢metros como a posiÃ§Ã£o da carga na simulaÃ§Ã£o dentro de uma plano, o tamanho do raio da esfera que representa a carga no sistema, a intensidade da carga e a sua natureza elÃ©trica (positiva ou negativa), permitindo a customizaÃ§Ã£o das simulaÃ§Ãµes.
+
+## InstalaÃ§Ã£o
+
+Para utilizar o PyElectroSim, Ã© necessÃ¡rio ter o Python instalado em seu sistema. Em seguida, vocÃª pode instalar o pacote atravÃ©s do gerenciador de pacotes pip:
+
+```
+pip install PyElectroSim
+```
+
+## ContribuiÃ§Ã£o
+
+O PyElectroSim Ã© um projeto de cÃ³digo aberto e encorajamos contribuiÃ§Ãµes da comunidade. Se vocÃª deseja participar do desenvolvimento, reportar problemas ou sugerir melhorias, sinta-se Ã  vontade para abrir um issue ou enviar um pull request.
+
+## LicenÃ§a
+
+Este projeto Ã© licenciado sob a MIT License. Sinta-se livre para usar, modificar e distribuir conforme os termos da licenÃ§a.
+
+## Contato
+
+VocÃª pode entrar em contato com a equipe do PyElectroSim enviando um e-mail para robsonjuniorrj4@gmail.com. Sua opiniÃ£o e feedback sÃ£o muito importantes para nÃ³s!
+
+Aviso: Este projeto Ã© puramente educacional e nÃ£o deve ser utilizado para fins de anÃ¡lise eletromagnÃ©tica em ambientes reais.
