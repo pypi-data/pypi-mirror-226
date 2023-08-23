@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: vt-restful
+Version: 0.0.10
+Summary: Simple API wrapper for VirusTotal
+License: MIT
+Author: t-a-y-l-o-r
+Author-email: tcochran.dev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# vt
+Simple Wrapper for the Virus Total API
+
