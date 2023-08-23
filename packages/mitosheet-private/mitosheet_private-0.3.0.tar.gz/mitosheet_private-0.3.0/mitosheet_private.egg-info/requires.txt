@@ -1,0 +1,6 @@
+mitosheet>0.1.504
+
+[deploy]
+wheel
+twine
+setuptools==56.0.0
