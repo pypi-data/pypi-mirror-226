@@ -1,0 +1,11 @@
+BasicGraph/GraphModelLib_v6_Simplified.py,sha256=v_CouYF1ALYsh4eHIc8U6sYiZAcININwjxrcoQuakso,88775
+BasicGraph/__init__.py,sha256=1iDEW1TKgB_SYB442L95-QWUggYE-hfkWMVNHXJ5ywY,61
+SpatialTemporalGraph/GraphModelLib_v5_SpatialTemporal.py,sha256=xRuh6Wt9ben7mQ-z2tY9z45wqi_1uqM7seTM6Dkcy3c,113449
+SpatialTemporalGraph/__init__.py,sha256=Q3pHuk1hG4kWy2nm7wyo1y8t-r8gXWdcyW77eDbGAT4,76
+TemporalSpatialGraph/GraphModelLib_v6_TemporalSpatial.py,sha256=Dh42YbUJ44Sd_LamBCI2c9_1Jh7Kpho85QMuvqdP3To,104502
+TemporalSpatialGraph/GraphModelLib_v6_TemporalSpatial_Large.py,sha256=fATJJyPUnLakjsFWwFHtnAMzuiILks4m_aSkGX2uuxA,103980
+TemporalSpatialGraph/__init__.py,sha256=q9ysRi6DjN5dKXpCmJzaA3N9ATtlu1XJbxO6L-nGU90,159
+GraphSTAM-0.1.dist-info/METADATA,sha256=0SJ-7zhMJK2xd7Pj8NpztbJ2R_1lgxVLpNtEwDLr2C8,285
+GraphSTAM-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+GraphSTAM-0.1.dist-info/top_level.txt,sha256=4hRzMfOnKiTyGqu9AXeXKfnlxB068A4lStoLRWorSO8,53
+GraphSTAM-0.1.dist-info/RECORD,,
