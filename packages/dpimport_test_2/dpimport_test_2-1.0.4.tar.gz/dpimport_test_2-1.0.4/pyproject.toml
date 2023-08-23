@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dpimport-test-2"
+version = "1.0.4"
+description = "DPdash importer"
+readme = "README.md"
+license = ""
+authors = [
+    { name = "Neuroinformatics Research Group", email = "info@neuroinfo.org" },
+]
+dependencies = [
+    "pandas",
+    "pymongo==3.11.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/harvard-nrg/dpimport"
+
+[tool.hatch.version]
+path = "dpimport/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "Makefile",
+    ".vscode",
+    ".pytest_cache",
+]
+include = [
+    "/dpimport",
+]
+[tool.hatch.publish.index]
+disable = true
