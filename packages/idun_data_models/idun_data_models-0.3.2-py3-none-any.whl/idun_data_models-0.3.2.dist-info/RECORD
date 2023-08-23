@@ -1,0 +1,11 @@
+idun_data_models/__init__.py,sha256=G3VaJIrFw-NvHmpY9_lJFEFxxwTrIWqNnKFg4fQtcMY,781
+idun_data_models/device.py,sha256=7rcYlRcsR1KTC79ZUPaXl81BEk9ESwRI3_9KQYtA6Qo,823
+idun_data_models/parameters.py,sha256=mvNVxjF_doIsObIUhjepORSeS7IdgQnZDjde9C6dlUU,345
+idun_data_models/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+idun_data_models/rest_metadata.py,sha256=dti46SNoOLRZ3b0rIJRjWLcpsBiWLN_VjporAzHte_M,2574
+idun_data_models/rest_recording.py,sha256=Eofcm3I1tVPQj674GndTX-9GHbFuYcITc9LKD326Jug,3062
+idun_data_models/serialization.py,sha256=bybNMJTkfije9QFboNHxiV5naFjI1k8dM1223mPEaUM,583
+idun_data_models/websocket_data_model.py,sha256=k2ZBk3r1WehdFm54npvDyWJlzb2R7w7v1CFqi4qptlg,1114
+idun_data_models-0.3.2.dist-info/METADATA,sha256=t4naRdoEh6xga6C1M9SsycrkqXJlFh9G6gQrVi1CWzk,582
+idun_data_models-0.3.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+idun_data_models-0.3.2.dist-info/RECORD,,
