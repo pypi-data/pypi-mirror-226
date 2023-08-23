@@ -1,0 +1,67 @@
+[project]
+name = "raccoon"
+version = "3.1.1"
+authors = [
+  { name="Ryan Sheftel", email="rsheftel@alumni.upenn.edu" },
+]
+description = 'Python DataFrame with fast insert and appends'
+readme = "README.rst"
+requires-python = ">=3.4"
+keywords = ['dataframe', 'data', 'structure']
+license = { text="MIT" }
+classifiers = [
+        'Development Status :: 5 - Production/Stable',
+
+        # Indicate who your project is intended for
+        'Intended Audience :: Developers',
+        'Topic :: Software Development',
+
+        # Pick your license as you wish (should match "license" above)
+        'License :: OSI Approved :: MIT License',
+
+        # Specify the Python versions you support here. In particular, ensure
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+]
+dependencies = ['tabulate']
+
+[project.optional-dependencies]
+test = ['pytest']
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["raccoon"]
+
+[project.urls]
+"Homepage" = 'https://github.com/rsheftel/raccoon'
+"Source" = 'https://github.com/rsheftel/raccoon'
+"Documentation" = 'https://raccoon.readthedocs.io/en/latest/'
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+    ]
+
+ignore_errors = true
