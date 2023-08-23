@@ -1,0 +1,10 @@
+sapphire.py-0.1.15.data/data/sapphirepy_bin/sapphirewrapper-amd64.dylib,sha256=xGKHuAxsg5fe0tyWBL5zv-KFTANKBHnza_CwLBIpU9U,17625632
+sapphire.py-0.1.15.data/data/sapphirepy_bin/sapphirewrapper-amd64.so,sha256=ON0brtqotTCe7Zy_KFfISA47Wjj9iVkMk8d8N0d5yuw,24260600
+sapphire.py-0.1.15.data/data/sapphirepy_bin/sapphirewrapper-arm64.dylib,sha256=vZZouv74NpEaK8pITRWe4220kOsfLDy0QqgbgWyccAE,17005096
+sapphirepy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sapphirepy/wrapper.py,sha256=GLPLge-0HadtoOSo4PptPgApqzIOUNCdcVTWnZBTmH8,1916
+sapphire.py-0.1.15.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sapphire.py-0.1.15.dist-info/METADATA,sha256=iyYR6guUFJZ0wdD1SYZHVoPAgiiZa2jLyDHWsV98S6c,555
+sapphire.py-0.1.15.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sapphire.py-0.1.15.dist-info/top_level.txt,sha256=jpEbXYzFK1H5jGkV0Pdh6GwTcUlazNQx5VbGBW8v_wU,11
+sapphire.py-0.1.15.dist-info/RECORD,,
