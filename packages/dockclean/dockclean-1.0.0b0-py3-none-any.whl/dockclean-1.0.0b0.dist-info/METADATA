@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dockclean
+Version: 1.0.0b0
+Summary: Tool to clean up docker images and containers
+Author: Muhammad Hashim
+Author-email: hashim.muhammad9@gmail.com
+Requires-Dist: docker (==4.2.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: black (==20.8b1)
+
