@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "ib002"
+version = "0.1.0"
+description = "sorting algorithms"
+authors = ["Michal Šoltis <msoltis@redhat.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+hypothesis = "^6.82.0"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+pre-commit = "^3.3.3"
+pylint = "^2.17.4"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-rich = "^0.1.1"
+tox = "^4.6.3"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+  "poetry-core",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+strict_equality = true
+strict = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = "tests/*"
+disallow_untyped_decorators = false
