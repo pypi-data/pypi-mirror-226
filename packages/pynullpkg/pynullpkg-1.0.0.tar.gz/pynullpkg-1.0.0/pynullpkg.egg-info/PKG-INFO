@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pynullpkg
+Version: 1.0.0
+Summary: Python Test Package
+Home-page: https://github.com/mminichino/python-test-package
+Author: Michael Minichino
+Author-email: info@unix.us.com
+License: MIT License
+Keywords: devops,pytest
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+*******************
+python-test-package
+*******************
+A package to be used for testing pip and package management.
+
+Introduction
+============
+
+This package provides a simple module that can be easily installed and uninstalled.
+
+Usage
+=====
+
+Install
+
+```pip install pynullpkg```
+
+```pip install --user pynullpkg```
+
+Import
+
+```>>> import pynullpkg```
+
+```python -c 'import pynullpkg'```
+
+Uninstall
+
+```pip uninstall pynullpkg```
+  

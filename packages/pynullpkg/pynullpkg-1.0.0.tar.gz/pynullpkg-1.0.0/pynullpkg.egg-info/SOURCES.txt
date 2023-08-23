@@ -1,0 +1,8 @@
+README.md
+setup.py
+pynullpkg/__init__.py
+pynullpkg.egg-info/PKG-INFO
+pynullpkg.egg-info/SOURCES.txt
+pynullpkg.egg-info/dependency_links.txt
+pynullpkg.egg-info/requires.txt
+pynullpkg.egg-info/top_level.txt
