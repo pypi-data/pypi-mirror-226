@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/annotateiT.egg-info/PKG-INFO
+src/annotateiT.egg-info/SOURCES.txt
+src/annotateiT.egg-info/dependency_links.txt
+src/annotateiT.egg-info/top_level.txt
+src/label/__init__.py
+src/label/main.py
