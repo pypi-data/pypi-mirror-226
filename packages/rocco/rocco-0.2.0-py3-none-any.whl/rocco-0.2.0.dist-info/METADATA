@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rocco
+Version: 0.2.0
+License-File: LICENSE
+Requires-Dist: numpy (==1.23.2)
+Requires-Dist: cvxpy (==1.3.1)
+Requires-Dist: pandas (==1.5.3)
+Requires-Dist: pararead (==0.7.0)
+Requires-Dist: logmuse (==0.2.7)
+Requires-Dist: scipy (==1.10.1)
+Requires-Dist: pysam (==0.20.0)
+Requires-Dist: pybedtools (==0.9.0)
+Requires-Dist: ortools (==9.3.10497)
+
