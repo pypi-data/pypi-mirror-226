@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "qwest-git"
+readme = "README.md"
+version = "0.1.19"
+description = "A framework to build serverless application"
+homepage = "https://python-poetry.org/"
+repository = "https://git.i.mercedes-benz.com/ITT-China/azmodan"
+documentation = "https://git.i.mercedes-benz.com/ITT-China/azmodan/wiki"
+license = ""
+authors = ["Ruoran Li <ruoran.li@mercedes-benz.com>"]
+maintainers= [
+    "Hongming Liu <liuhongming@light2cloud.com>",
+    "Jinrui Sui <suijr@dcclouds.com>",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: AWS CDK :: 2",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+keywords = ["azmodan","framework","serverless"]
+packages = [
+    {include = "test_git"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9 || ^3.8 || ^3.10"
+# add your dependencies here, e.g.
+# requests = "^2.25.1"
+PyYAML = ">=3.10"
+boto3 = ">=1.28.10"
+apispec = "6.0.2"
+colorlog = "^6.7.0"
+python-json-logger = "^2.0.7"
+requests = "^2.31.0"
+
+[tool.poetry.dev-dependencies]
+# add your development dependencies here, e.g.
+# pytest = "^6.2.2"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = "default"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "nexus"
+url = "https://artifact.mercedes-benz.com.cn/repository/oap-pypi-hosted/simple/"
+priority = "explicit"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+

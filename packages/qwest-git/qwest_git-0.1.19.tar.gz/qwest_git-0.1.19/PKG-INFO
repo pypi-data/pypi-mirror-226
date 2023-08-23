@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: qwest-git
+Version: 0.1.19
+Summary: A framework to build serverless application
+Home-page: https://python-poetry.org/
+Keywords: azmodan,framework,serverless
+Author: Ruoran Li
+Author-email: ruoran.li@mercedes-benz.com
+Maintainer: Hongming Liu
+Maintainer-email: liuhongming@light2cloud.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AWS CDK :: 2
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: PyYAML (>=3.10)
+Requires-Dist: apispec (==6.0.2)
+Requires-Dist: boto3 (>=1.28.10)
+Requires-Dist: colorlog (>=6.7.0,<7.0.0)
+Requires-Dist: python-json-logger (>=2.0.7,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Documentation, https://git.i.mercedes-benz.com/ITT-China/azmodan/wiki
+Project-URL: Repository, https://git.i.mercedes-benz.com/ITT-China/azmodan
+Description-Content-Type: text/markdown
+
+test
+
+
+qweweqeqw
