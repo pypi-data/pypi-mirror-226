@@ -1,0 +1,13 @@
+opal/__init__.py,sha256=evWowCiJABrIHbjO34hZ6b9OLYdBlnyqJdAkoVtT3UY,67
+opal/conf.py,sha256=AUK7efMmnNTrwjl1MYVzfU1Yw-K3YvG-pWwFrCBf19E,367
+opal/evaluate.py,sha256=AhTGS5CUTc5LhKJ9Nl11gjq0KodSuODiH5NopMc1Jks,5226
+opal/models/README.md,sha256=ktb6U069CtyUGgMgdFcVymH-chIkgM2BWhfE78pfUqI,2456
+opal/models/V4/2023_08_01_performance_mania_top_10000_20230819163602.csv/lightning_logs/version_1/evaluation/model.ckpt,sha256=7jBtMC3aW1LiuvPb2S4qmxE0PJUWZSf_o9xgxGmn8Ks,7122549
+opal/module/__init__.py,sha256=sigILqz6Uh6Z5sHvPLh3SXMWu54OveahO3bv33O2Oe4,139
+opal/module/opal_net.py,sha256=a1QdzqmlElTQcMswZoLkeOgvZS-Z47FTPoLv8eVSMfg,5753
+opal/module/opal_net_module.py,sha256=-xtOm3BbaHdzpIUto9bmFp24Kr9j3jLEEliTW8a25yE,2668
+opal/score_datamodule.py,sha256=V7BbuFCoaNqbug721nHK8WF_YuveojyNJCBRrvdP2SQ,3436
+opal/train.py,sha256=uzCBQd-n5VtYCkCKBzRz-N_jFaIwS-pTM1CQXQTvSv4,2061
+opal_net-2023.8.4.dist-info/METADATA,sha256=0jbXxQvC83rA6UvUd__N4NhSrf2KzkyR8PIXozvtnp0,3823
+opal_net-2023.8.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+opal_net-2023.8.4.dist-info/RECORD,,
