@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "vectorama"
+version = "0.1.6"
+description = ""
+authors = ["Pierce Freeman <pierce@freeman.vc>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.2.0"
+
+[tool.ruff]
+select = ["E", "F", "T20", "I001"]
+extend-ignore = ["E501"]
+
+[tool.poetry.group.dev.dependencies]
+grpcio-tools = {extras = ["asyncio"], version = "^1.57.0"}
+mypy-protobuf = "^3.5.0"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+ruff = "^0.0.285"
+mypy = "^1.5.1"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+module = "grpc.*"
+ignore_missing_imports = true
