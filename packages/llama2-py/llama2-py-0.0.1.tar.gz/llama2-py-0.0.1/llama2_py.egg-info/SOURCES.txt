@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+./llama2_py.egg-info/PKG-INFO
+./llama2_py.egg-info/SOURCES.txt
+./llama2_py.egg-info/dependency_links.txt
+./llama2_py.egg-info/top_level.txt
