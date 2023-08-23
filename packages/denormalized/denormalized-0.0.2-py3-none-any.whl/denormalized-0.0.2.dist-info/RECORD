@@ -1,0 +1,8 @@
+denormalized/__init__.py,sha256=0uAS4prW3wwNMBCprPSlgbGKXmuoLFzNtPLsiM9YZZM,39
+denormalized/client.py,sha256=HkcB15DVcztM7vRhK1RvBGyCQDtFYbUWaDiNOuZf73s,1934
+denormalized/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+denormalized/scripts/cli.py,sha256=76g0qC7cQDHvbafRVlltUSbJosMjzM9VaY5jzLTmQcM,3124
+denormalized-0.0.2.dist-info/METADATA,sha256=jmlTNIxt8Yl5IluI5CBhhApblaA0D3fUKFzz_yRdID4,456
+denormalized-0.0.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+denormalized-0.0.2.dist-info/entry_points.txt,sha256=80r2QEyaK_nGbsg_yysSV2LK7WWRAxepV1E0fSkv2TI,61
+denormalized-0.0.2.dist-info/RECORD,,
