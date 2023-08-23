@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: grel-electricmeter
+Version: 0.1.1
+Summary: Grelinfo Electric Meter, compatible with Iskra MT 174 with USB Optical Probe.
+License: MIT
+Author: Loïc Gremaud
+Author-email: loic.gremaud@grelinfo.ch
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: console
+Requires-Dist: pydantic (>=2.2.1,<3.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0) ; extra == "console"
+Description-Content-Type: text/markdown
+
+# Grelinfo Electic Meter
+
