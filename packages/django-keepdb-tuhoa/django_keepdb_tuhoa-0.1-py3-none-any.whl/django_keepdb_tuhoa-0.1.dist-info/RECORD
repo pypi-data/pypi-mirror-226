@@ -1,0 +1,10 @@
+keepdb_tuhoa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keepdb_tuhoa/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keepdb_tuhoa/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keepdb_tuhoa/management/commands/test.py,sha256=dDvMQsrOxXy8-TeWPhRPkwiU-hPwUWw17NDAbCbt1aE,929
+django_keepdb_tuhoa-0.1.dist-info/METADATA,sha256=7y28WOWemPaDcIDpP1KxGXNw5LnyhSd3xrdVYiRdNlc,301
+django_keepdb_tuhoa-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_keepdb_tuhoa-0.1.dist-info/entry_points.txt,sha256=f8CqsQJaFkEyIaJhDUXTf902THq3qNSAJdYQIWZBiJ8,46
+django_keepdb_tuhoa-0.1.dist-info/historia.json,sha256=40ZZMk9kG5zCjotGk0J_Bivs_IIbEZ3MK_kBSfUoNCs,125
+django_keepdb_tuhoa-0.1.dist-info/top_level.txt,sha256=hlxRLUGvIiwzAzIqhjwZOPkuQEHdgEERoCuqLBWMG5Q,13
+django_keepdb_tuhoa-0.1.dist-info/RECORD,,
