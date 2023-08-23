@@ -1,0 +1,10 @@
+smsfusion/__about__.py,sha256=S7u1lbuWmM3A3ajykBialmPoJUK6Jg-WmNqM-9OZFdk,22
+smsfusion/__init__.py,sha256=ix32Kjspq522cjLnSueUqnWuwnABEzHoH1PsrpP8sMY,111
+smsfusion/_ahrs.py,sha256=OSwAK_TlhKgbFmtwRRNxzz4vfr4yklQLzXk7OoCIJBo,7403
+smsfusion/_ins.py,sha256=QifNFWfGf6cn3pAnabGVTFf2BLOFse2Zrhi7E9VT0do,8646
+smsfusion/_transforms.py,sha256=0dVPElLRvQrcW80L8_BPkom_a-bBGP21PDPFxyIBodo,5320
+smsfusion/_vectorops.py,sha256=su_hT1psiWw6Pxy2KmI5OfbcXe4dHi2iAAOUZzR_uvs,674
+smsfusion-0.0.5.dist-info/METADATA,sha256=uN_4Zk4XE56BTSEkeG92-8Buq3du_F8sX9emts6OkUA,705
+smsfusion-0.0.5.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+smsfusion-0.0.5.dist-info/licenses/LICENSE,sha256=oEQkXxrh0POZZPEv5oYwkmLuh-USLG0uH2JiaThmjA0,1064
+smsfusion-0.0.5.dist-info/RECORD,,
