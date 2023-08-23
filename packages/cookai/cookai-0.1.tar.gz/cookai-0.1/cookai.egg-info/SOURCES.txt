@@ -1,0 +1,6 @@
+README.md
+setup.py
+cookai.egg-info/PKG-INFO
+cookai.egg-info/SOURCES.txt
+cookai.egg-info/dependency_links.txt
+cookai.egg-info/top_level.txt
