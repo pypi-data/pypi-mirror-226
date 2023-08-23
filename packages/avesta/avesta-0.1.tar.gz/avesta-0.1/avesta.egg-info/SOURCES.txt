@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+avesta/__init__.py
+avesta/sample_usage.py
+avesta/similarity.py
+avesta.egg-info/PKG-INFO
+avesta.egg-info/SOURCES.txt
+avesta.egg-info/dependency_links.txt
+avesta.egg-info/requires.txt
+avesta.egg-info/top_level.txt
