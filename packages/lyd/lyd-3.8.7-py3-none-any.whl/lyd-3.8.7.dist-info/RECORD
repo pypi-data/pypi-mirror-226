@@ -1,0 +1,17 @@
+lyd/__init__.py,sha256=gQKblQ1OKzItfAqp5gTcWURKZpeDU4Z1YIMc9WkYEn4,1181
+lyd/lyd_system_client.cp310-win_amd64.pyd,sha256=URyQTSxEgvwgHic_FOxIfz_wqXFwLKeaiMRMFje8dk0,449536
+lyd/lyd_system_client.cp311-win_amd64.pyd,sha256=EbryyzQ0IJWoPZBfsPOKUSvy7um5Xlh0ilh91XdDLIE,452608
+lyd/lyd_system_client.cp39-win_amd64.pyd,sha256=PyVOAqq3nQRTb6RD2o4q56rvBWX9Ta3SCe9Mk6wGPok,437248
+lyd/lyd_system_client.cpython-310-x86_64-linux-gnu.so,sha256=n1zoPQtLcHqVY1HXuMAvcO-8HjEEWG4PmPYSFia8vho,3673328
+lyd/lyd_system_client.cpython-311-x86_64-linux-gnu.so,sha256=EVov_tpyHWiaPJGZctEKvuSQzdOEiv1bhQa9D44XK8Y,3820424
+lyd/lyd_system_client.cpython-39-x86_64-linux-gnu.so,sha256=Df3WYGUeCaXgruD8nYxpAHCVlim_oq7VxEp_Zl3VJ9I,3469728
+lyd/lyd_user_client.cp310-win_amd64.pyd,sha256=g7kjqY31Q4xUqHMfJQM_A3ygSBaiXc9tEXTVVBUI8bg,502784
+lyd/lyd_user_client.cp311-win_amd64.pyd,sha256=M-M_DR1U3DozRky3kKLET6Z7pv7kWLkAFcGgoKqTIPM,505856
+lyd/lyd_user_client.cp39-win_amd64.pyd,sha256=dNHFnoO-_QYHHzjkITXZTBWxhdx6YxUVQ0vTAm1kzYs,487424
+lyd/lyd_user_client.cpython-310-x86_64-linux-gnu.so,sha256=JlI2-iGIWrqC9NjTp_zSw-8_RwBm0VBYDgZr_jB4CMg,4421232
+lyd/lyd_user_client.cpython-311-x86_64-linux-gnu.so,sha256=4t44Yu03uk7g5u6R5CxFRKfjiWg78p3twPfuSNDOnEM,4670360
+lyd/lyd_user_client.cpython-39-x86_64-linux-gnu.so,sha256=DVr7bi5JXMWMzKmr_VFzLiEvTNIOlb8rjRHhJB5vXAs,4118880
+lyd-3.8.7.dist-info/METADATA,sha256=-aeWRuOerOs4ils3XQrpNHVHzHPSFJjkIYUs01DTJXU,468
+lyd-3.8.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+lyd-3.8.7.dist-info/top_level.txt,sha256=2XvUEXXKU6o2aB8v0BRfoI9sO5Sk3s3OvsRB6XPzz-A,4
+lyd-3.8.7.dist-info/RECORD,,
