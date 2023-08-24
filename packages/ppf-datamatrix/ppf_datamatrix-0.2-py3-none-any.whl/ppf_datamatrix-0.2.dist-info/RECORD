@@ -1,0 +1,14 @@
+ppf/datamatrix/__init__.py,sha256=lj-0Flk5wzslhtREOls_EghbK3xS5PxzXXZ5ob0SyAk,666
+ppf/datamatrix/codec_C40.py,sha256=w3SVkLaHHAYekUmjNoA5ml8bjNLOS1NJtbZZrDgM28A,1686
+ppf/datamatrix/codec_X12.py,sha256=zw5q3N2wH0aO6wLn8qaKZKwKIntNN2d6n_I0zE4Pgi4,1446
+ppf/datamatrix/codec_ascii.py,sha256=-Dtv61uWYdC2nNeR2BWQ7DB-WowUEXPlzD73XgTkj8w,1665
+ppf/datamatrix/codec_common.py,sha256=XGJCHF10rkzvzSQhh8XVuU5LuAIr2Lvgs_Lxt9Dx6ic,3982
+ppf/datamatrix/codec_edifact.py,sha256=D6_gADZjAT1WOL-95Kd5IlW-vwTS1cDccNkuLMxO3n4,2952
+ppf/datamatrix/codec_text.py,sha256=ajOzLaHCv_SdnON4mV4wuhEO5UaGP7YmrENtBx1CN1w,1708
+ppf/datamatrix/datamatrix.py,sha256=FBSSon8YHTLMryi6bf6SmKO8e-OU1O0sBaNtcaJUdkA,10639
+ppf/datamatrix/utils.py,sha256=fRr84ZTqMDFDDdeae1l5dGHPSozLNH5LiVGuSvx7nXU,287
+ppf_datamatrix-0.2.dist-info/LICENSE,sha256=ijEtC_Y9gRRgn6AY8zk2bVChRdyzHywXNmIkCXM7niw,2310
+ppf_datamatrix-0.2.dist-info/METADATA,sha256=nkhF0M-JiCFW5WcaCMrfCh277nEs0YSzsDwSuzT62_Q,1787
+ppf_datamatrix-0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ppf_datamatrix-0.2.dist-info/top_level.txt,sha256=UGdKy8kY4OroOHKsFu4nD0vmMm1vlwBAbS3ie2WMQOg,4
+ppf_datamatrix-0.2.dist-info/RECORD,,
