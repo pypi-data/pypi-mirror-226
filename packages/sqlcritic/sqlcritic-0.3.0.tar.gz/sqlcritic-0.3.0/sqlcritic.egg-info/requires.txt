@@ -1,0 +1,17 @@
+boto3
+opentelemetry-api>=1.11
+opentelemetry-sdk>=1.11
+PyGithub
+psycopg2
+
+[dev]
+black
+isort
+pytest
+pytest-cov
+pytest-mock
+vcrpy
+mypy
+types-python-dateutil
+types-psycopg2
+types-boto3
