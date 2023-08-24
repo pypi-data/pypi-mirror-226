@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "helm-tag-updater"
+version = "0.1.1"
+description = "A python `values.yaml` helm updater cli."
+authors = ["Ignat Belousov <ignat.belousov2000@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ruamel-yaml = "^0.17.32"
+
+[tool.poetry.scripts]
+APPLICATION-NAME = 'helm_tag_updater:main'
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
