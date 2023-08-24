@@ -1,0 +1,11 @@
+LICENSE
+README.md
+piiwee.py
+pyproject.toml
+setup.cfg
+setup.py
+piiwee.egg-info/PKG-INFO
+piiwee.egg-info/SOURCES.txt
+piiwee.egg-info/dependency_links.txt
+piiwee.egg-info/requires.txt
+piiwee.egg-info/top_level.txt
