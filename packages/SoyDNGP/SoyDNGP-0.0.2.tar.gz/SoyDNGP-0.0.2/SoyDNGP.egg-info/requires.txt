@@ -1,0 +1,6 @@
+cupy
+onnxruntime-gpu
+torch
+cudf
+pyyaml
+pandas
