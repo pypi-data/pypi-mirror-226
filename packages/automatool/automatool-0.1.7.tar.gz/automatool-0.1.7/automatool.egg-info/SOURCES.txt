@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+automatool/__init__.py
+automatool.egg-info/PKG-INFO
+automatool.egg-info/SOURCES.txt
+automatool.egg-info/dependency_links.txt
+automatool.egg-info/requires.txt
+automatool.egg-info/top_level.txt
