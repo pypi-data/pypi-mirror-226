@@ -1,0 +1,9 @@
+DEFAULT_DATE_VERSION_FORMAT = "%Y%m%d%H%M"
+
+VERSION_PREFIX = "v_"
+
+STEP_PREFIX = "step_"
+
+
+DEFAULT = "<<DEFAULT>>"
+INFER = "<<INFER>>"
