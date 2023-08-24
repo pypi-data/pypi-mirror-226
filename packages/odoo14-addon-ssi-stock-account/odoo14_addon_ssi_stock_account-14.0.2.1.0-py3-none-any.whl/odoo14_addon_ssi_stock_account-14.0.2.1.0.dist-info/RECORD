@@ -1,0 +1,17 @@
+odoo/addons/ssi_stock_account/README.rst,sha256=XkxGpHIwWLJKeY5EGwFeUMKz3ZUMm1Cwn9VAUEOjPrM,1221
+odoo/addons/ssi_stock_account/__init__.py,sha256=M7twq1SJz2cc98CkgeiDiDg05QWWFb09lt5oh03-axA,181
+odoo/addons/ssi_stock_account/__manifest__.py,sha256=HcC1UHfyIP6cAWKmjlQIcTu_GW9Ru8QMJv284qo__5U,778
+odoo/addons/ssi_stock_account/models/__init__.py,sha256=NFftsh_Y-wRKzVrbtZWox5zeLpFcwscBVODYFeimMbo,282
+odoo/addons/ssi_stock_account/models/picking_type_category.py,sha256=TuILLSjGxDS8xdeKonAEL5otafzlaf9-ReTuinOWmRc,1729
+odoo/addons/ssi_stock_account/models/stock_move.py,sha256=DJeLTI-DnbI-rVxUM_maiG5j4nxAhRHaUSukVCWwocU,4079
+odoo/addons/ssi_stock_account/models/stock_picking.py,sha256=zj2PBIpjJIZQJ8vztgkDoXgaKZiPBANYd46_exGlIW4,388
+odoo/addons/ssi_stock_account/models/stock_picking_type.py,sha256=kRgHTFNahg_BjO_auTaABCex0DNa7kDVyA5E7NO6bfw,1155
+odoo/addons/ssi_stock_account/models/stock_valuation_layer.py,sha256=AYqROQmWR8T2-eIDXj2QMHHae6_esGUAY_lufAj3ue4,3573
+odoo/addons/ssi_stock_account/static/description/icon.png,sha256=ilrOdaZsQ9IGvXoiOd_f-k_WPa0qzAB3rOWgUSGKNtM,20342
+odoo/addons/ssi_stock_account/views/stock_picking_type_views.xml,sha256=8fV-J3Oe9x3weDpG6FZZC8ahXEzdi3fxYFszRF_SVOM,2255
+odoo/addons/ssi_stock_account/views/stock_picking_views.xml,sha256=8eoEm8ngc9BixdIRqz_R9KvFfPqowzokQgNykJDQcZ4,1354
+odoo/addons/ssi_stock_account/views/stock_valuation_layer_views.xml,sha256=wjINQ0PdIwCo-Cy7TpMkWEGqFWcirwmxPRUkjWyYM5Y,1686
+odoo14_addon_ssi_stock_account-14.0.2.1.0.dist-info/METADATA,sha256=764FixCnx_jBPPKcGhBzf1jbfYUxojqq1HKRuAT3PBM,1930
+odoo14_addon_ssi_stock_account-14.0.2.1.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+odoo14_addon_ssi_stock_account-14.0.2.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_ssi_stock_account-14.0.2.1.0.dist-info/RECORD,,
