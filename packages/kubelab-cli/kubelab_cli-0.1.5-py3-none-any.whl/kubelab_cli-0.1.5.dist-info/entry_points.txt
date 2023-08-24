@@ -1,0 +1,2 @@
+[console_scripts]
+lab = kubelab_cli.lab:cli
