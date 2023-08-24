@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ebay_pictures_tool
+Version: 0.0.2
+Summary: An efficient tool for processing ebay images. 
+Author-email: Chris Busillo <cbusillo@gmail.com>
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+Welcome
+
+This project will be for efficiently processing images for eBay
