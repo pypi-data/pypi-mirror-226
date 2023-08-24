@@ -1,0 +1,2 @@
+[console_scripts]
+setupDlls = videometer.setupHelper.py
