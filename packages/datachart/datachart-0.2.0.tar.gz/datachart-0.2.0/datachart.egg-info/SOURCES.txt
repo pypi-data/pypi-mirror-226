@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+datachart/__init__.py
+datachart.egg-info/PKG-INFO
+datachart.egg-info/SOURCES.txt
+datachart.egg-info/dependency_links.txt
+datachart.egg-info/requires.txt
+datachart.egg-info/top_level.txt
+test/__init__.py
+test/test_attrs.py
+test/test_colors.py
+test/test_config.py
+test/test_stats.py

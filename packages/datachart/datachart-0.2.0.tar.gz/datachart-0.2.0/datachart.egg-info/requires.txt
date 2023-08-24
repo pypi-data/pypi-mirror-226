@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+mkdocs-material==8.5.11
+
+[all]
+datachart[dev,test]
+
+[dev]
+black
+flake8
+mkdocs-material==8.5.11
+
+[test]
+coverage
