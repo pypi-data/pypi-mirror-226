@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+trueskillthroughtime/__init__.py
+trueskillthroughtime.egg-info/PKG-INFO
+trueskillthroughtime.egg-info/SOURCES.txt
+trueskillthroughtime.egg-info/dependency_links.txt
+trueskillthroughtime.egg-info/top_level.txt
