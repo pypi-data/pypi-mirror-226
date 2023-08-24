@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tellmejokes
+Version: 0.1.1
+Summary: jokes cli app using APIs
+Author: Ejaz
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: halo (>=0.0.31,<0.0.32)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: twine (>=4.0.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+**Title:** Joke of the Day CLI Application
+
+**Description:** The "Joke of the Day" CLI application is a fun and lighthearted tool that fetches and displays a random joke for users to enjoy each day.
