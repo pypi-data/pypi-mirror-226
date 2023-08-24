@@ -1,0 +1,139 @@
+# tomodo
+
+
+**tomodo** is a **To**olbox for **Mo**ngoDB on **Do**cker.
+
+Use it upgrade existing standalone MongoDB deployments or
+[MongoDB Replica Sets](https://www.mongodb.com/docs/manual/replication/)
+deployed with Docker.
+
+## Installation
+
+You can install the tool using the [tomodo PyPi package](https://pypi.org/project/tomodo/)
+with pip:
+
+```bash
+pip install tomodo
+```
+
+## How Upgrades Work
+
+Upgrading MongoDB is officially supported through specific upgrade paths.
+For example, in order to upgrade a MongoDB database from version 3.6 to version
+6.0, one _cannot_ do it in a one-off upgrade.  Instead, there's a specific, well-documented
+upgrade path for each upgrade. For example:
+
+- Upgrading to version 4.0 can only be done from version 3.6 or later (see [docs](https://www.mongodb.com/docs/manual/release-notes/4.0-upgrade-replica-set/#upgrade-version-path))
+- Upgrading to version 4.2 can only be done from version 4.0 or later (see [docs](https://www.mongodb.com/docs/manual/release-notes/4.2-upgrade-replica-set/#upgrade-version-path))
+- Upgrading to version 4.4 can only be done from version 4.2 or later (see [docs](https://www.mongodb.com/docs/manual/release-notes/4.4-upgrade-replica-set/#upgrade-version-path))
+- etc.
+
+For this reason, if the process of upgrading from your current MongoDB version to a target version
+requires five hops (e.g., 3.6.x to 6.0.x), `tomodo` will perform five upgrades, one after
+the other.
+
+## Usage
+
+### MongoDB Version Upgrade
+
+Below is a simplified example of a `tomodo` command you can run
+in order to upgrade a locally-deployed MongoDB Replica Set to
+version 4.4:
+
+```bash
+tomodo \
+  --no-standalone \
+  --target-version 5.0 \
+  --hostname "mongodb://mongodb-rs-1:27011/?replicaSet=mongodbrs"
+```
+
+## Set Up a Test Environment
+
+In order to test the tool locally, you can create a local [MongoDB
+Replica Set](https://www.mongodb.com/docs/manual/replication/) and upgrade it.
+
+1. First, create a Docker network for your test deployment:
+
+    ```bash
+    docker network create mongodbnet > /dev/null 2>&1 || echo "Network already exists"
+    ````
+
+2. Next, deploy a MongoDB Replica Set with N members (3 members in the example below):
+
+    ```bash
+    members=3
+    mongodb_ver=3.6.18
+    for ((i=1; i<=members; i++)); do
+      rm -rf ./data/db${i}/* || echo 'Nothing to clean up'
+      mkdir -p ./data/db${i}
+      docker run -d \
+        -v $(pwd)/data/db${i}:/data/db${i} \
+        -h mongodb-rs-${i} \
+        --network-alias mongodb-rs-${i} \
+        --name mongodb-rs-${i} \
+        -u 1000:1000 \
+        -p "2701${i}:2701${i}" \
+        --network mongodbnet \
+        mongo:${mongodb_ver} \
+        --dbpath /data/db${i} \
+        --replSet mongodbrs \
+        --bind_ip_all \
+        --logpath /data/db${i}/mongod.log \
+        --port 2701${i}
+    done
+    ```
+
+3. Initialize a MongoDB Replica Set (replace the value of `members` if you chose a member count
+   that's different from `3`:
+
+    ```bash
+    members=3
+    hosts="127.0.0.1   mongodb-rs-1"
+    init_script="rs.initiate()"
+    for ((i=2; i<=members; i++)); do
+      init_script="${init_script}; rs.add('mongodb-rs-${i}:2701${i}')"
+      hosts="${hosts},mongodb-rs-${i}"
+    done
+    mongosh \
+      --quiet "mongodb://mongodb-rs-1:27011" \
+      --eval "${init_script}"
+    ```
+
+4. Optional, but recommended: add the host mapping to the containers:
+
+   ```bash
+   hosts="127.0.0.1   mongodb-rs-1"
+   for ((i=2; i<=members; i++)); do
+      hosts="${hosts},mongodb-rs-${i}"
+    done
+   echo $hosts | sudo tee -a /etc/hosts
+   ```
+
+5. Verify the deployment was successful by running the following `docker` command:
+
+   ```bash
+   docker ps
+   ```
+   
+   The output should be along the following lines:
+   ```bash
+   CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                                 NAMES
+   36ddd65fe63a   mongo:3.6.18   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27013->27013/tcp, 27017/tcp   mongodb-rs-3
+   0e9d3b357be9   mongo:3.6.18   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27012->27012/tcp, 27017/tcp   mongodb-rs-2
+   d7f43e5b0003   mongo:3.6.18   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27011->27011/tcp, 27017/tcp   mongodb-rs-1
+   ```
+
+6. Now that the Replica Set is initialized, you can connect to it using `mongosh`:
+
+   ```bash
+   mongosh \
+   "mongodb://mongodb-rs-1:27011,mongodb-rs-2:27012,mongodb-rs-3:27013/?replicaSet=mongodbrs"
+   ``` 
+
+## Outstanding Tasks:
+
+- [ ] Support rollbacks on failure
+- [ ] Support downgrades
+- [ ] Support Replica Set upgrades with multiple remote docker hosts
+- [ ] Customizable container selection (e.g., by name/ID)
+- [ ] Support configuration file
