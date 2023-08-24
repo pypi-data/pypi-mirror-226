@@ -1,0 +1,10 @@
+_mlpfile_bindings.cpython-311-x86_64-linux-gnu.so,sha256=VZXzkEtsjTiYbiwBXQ04iZGCbT4RaM8rZ3qa_yIdwZ0,435256
+mlpfile-0.1.0.dist-info/RECORD,,
+mlpfile-0.1.0.dist-info/WHEEL,sha256=48wUIcZcdQ2pWN7qt0HP02Cvv6HIQZGsSgx3PsepNj8,152
+mlpfile-0.1.0.dist-info/METADATA,sha256=UnKKMCgH3vavHdIlYLDdA46aQXWeqCohITfgQNVgvdo,4629
+mlpfile-0.1.0.dist-info/top_level.txt,sha256=CIwIildrSeWOHUC9ROjtaShO_kpcxuSANJdkdNcUOX0,26
+mlpfile/__init__.py,sha256=bMNGW4GbcWTGFJ2bMYJrIBNy0H2rwHDd3zXvvMGLkrw,567
+mlpfile/torch/__init__.py,sha256=KodI-fkzFnLNXuLD5fzLWBgNPwXO885PjsKTZGqhpQY,249
+mlpfile/torch/torch.py,sha256=xCEzHcsbz7BFVshEy_mmj9zwNbFNN7CDNopU38Os1Vg,2833
+mlpfile/cpp/mlpfile.cpp,sha256=r-SW_wRoQKzHtEFtiYxcfJyEgiTzGn7rAUxuShxPt_4,5996
+mlpfile/cpp/mlpfile.h,sha256=QPW6-zytUqruUmMQHQRaHNucsk4WLgbH_IU9B__XYh0,1398
