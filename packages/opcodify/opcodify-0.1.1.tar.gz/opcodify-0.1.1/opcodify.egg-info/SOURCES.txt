@@ -1,0 +1,11 @@
+setup.py
+opcodify/__init__.py
+opcodify/cli.py
+opcodify/contract_ops.py
+opcodify/visualiser.py
+opcodify.egg-info/PKG-INFO
+opcodify.egg-info/SOURCES.txt
+opcodify.egg-info/dependency_links.txt
+opcodify.egg-info/entry_points.txt
+opcodify.egg-info/requires.txt
+opcodify.egg-info/top_level.txt
