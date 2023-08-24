@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+docsdb/__init__.py
+docsdb/main.py
+docsdb/mongodb.py
+docsdb.egg-info/PKG-INFO
+docsdb.egg-info/SOURCES.txt
+docsdb.egg-info/dependency_links.txt
+docsdb.egg-info/entry_points.txt
+docsdb.egg-info/requires.txt
+docsdb.egg-info/top_level.txt
