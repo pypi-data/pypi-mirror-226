@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Sorry! We will be back soon.</title>
+		<style>
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+				color: #36414C;
+				font-weight: 300;
+			}
+
+			.page-container {
+				max-width: 800px;
+				padding: 15px;
+				vertical-align: middle;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				transform: translate(0%, -50%);
+			}
+
+			.svg-container {
+				float: left;
+				width: 150px;
+				padding-top: 24px;
+			}
+
+			.message-container {
+				float: left;
+				padding-left: 15px;
+				font-size: 16px;
+				line-height: 1.6;
+			}
+
+			.message-container h1 {
+				font-size: 48px;
+				line-height: 1.2;
+				font-weight: 200;
+			}
+
+			.message-container .message {
+				color: #8D99A6;
+			}
+
+			.clearfix {
+				clear: both;
+			}
+
+			a {
+				color: #5E64FF;
+			}
+
+			@media (max-width: 767px) {
+				.svg-container {
+					float: none;
+					padding-top: 0px;
+				}
+
+				.message-container {
+					float: none;
+					width: 100% !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-container">
+			<div class="svg-container">
+				<img src="./503.png" alt="503">
+			</div>
+			<div class="message-container" style="width: calc(100% - 170px);">
+				<h1>
+					Sorry! <br>
+					We will be back soon.
+				</h1>
+				<p class="message">
+					<strong>Don't panic.</strong> It's not you, it's us.<br>
+					Most likely, our engineers are updating the code,
+					and it should take a minute for the new code to load into memory.<br><br>
+					Try refreshing after a minute or two.
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</body>
+</html>
