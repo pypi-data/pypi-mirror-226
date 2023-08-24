@@ -1,0 +1,2 @@
+class CookieTimeOutError(Exception):
+    pass
