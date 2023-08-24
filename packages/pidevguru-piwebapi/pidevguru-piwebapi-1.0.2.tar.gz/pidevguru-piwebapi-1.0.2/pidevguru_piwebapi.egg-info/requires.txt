@@ -1,0 +1,4 @@
+six>=1.10
+requests
+requests-kerberos
+setuptools>=21.0.0
