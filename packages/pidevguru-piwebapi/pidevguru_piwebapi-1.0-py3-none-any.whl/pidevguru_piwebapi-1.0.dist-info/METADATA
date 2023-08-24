@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pidevguru-piwebapi
+Version: 1.0
+Summary: PI Web API client for Python
+Home-page: https://github.com/pidevguru/PI-Web-API-Client-Python
+Author: Marcos Loeff
+Author-email: pidevguru@gmail.com
+License: MIT
+Keywords: PI Web API
+Classifier: Development Status :: 5 - Production/Stable
+License-File: LICENSE.md
+Requires-Dist: six >=1.10
+Requires-Dist: requests
+Requires-Dist: requests-kerberos
+Requires-Dist: setuptools >=21.0.0
+
+    PI Web API client for Python
+    
