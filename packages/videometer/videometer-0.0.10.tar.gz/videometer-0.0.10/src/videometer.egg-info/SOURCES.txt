@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/videometer/HelpFunctions.py
+src/videometer/__init__.py
+src/videometer/setupHelper.py
+src/videometer/videometer.py
+src/videometer.egg-info/PKG-INFO
+src/videometer.egg-info/SOURCES.txt
+src/videometer.egg-info/dependency_links.txt
+src/videometer.egg-info/entry_points.txt
+src/videometer.egg-info/requires.txt
+src/videometer.egg-info/top_level.txt
+src/videometer/tests/test.py
+src/videometer/tests/tmp.py
