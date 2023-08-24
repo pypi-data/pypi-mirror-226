@@ -1,0 +1,17 @@
+langlearncopilot/__init__.py,sha256=rwsdepkJQRNdEnQbOc8qpnIUZH0QfGN-CvGad8ow5OI,136
+langlearncopilot/generators/__init__.py,sha256=7XDWTK9KDJYROttOuCAkXnjhCVau-vRmLv-wKYAVONo,221
+langlearncopilot/generators/configs/prompts.yml,sha256=m58o_tqHXnJziZ4DdYMQEK7U617FpmGR7Y-yx7BkUMM,652
+langlearncopilot/generators/main.py,sha256=N-FP73Im2oO9AoTFWyz-Mj5nwVihUtesUPlUKHye268,2375
+langlearncopilot/generators/utils.py,sha256=76Ss1im1ptqiL9_ctuog3m1O7L3NGJhScAoBCC2c9Bs,551
+langlearncopilot/llm_calls/__init__.py,sha256=rvUrByBcHZuV-PD_xQyCs8GzMHQu-Zl2ewHc3jxta8g,126
+langlearncopilot/llm_calls/llama2_call.py,sha256=beB2h_4HWlZ17LrsQdZ5MuLNe10PeAC5tYY5dfnc8js,34
+langlearncopilot/llm_calls/openai_call.py,sha256=L3jDi-MvLTdVMngDaJymvRUW387gjHxY2Qse9kdH_F8,2047
+langlearncopilot/llm_calls/set_credentials.py,sha256=UA1PZJKDjrkKbBkHoGLZsURKEWjuaAhnXno93dyXSHY,170
+langlearncopilot/parsers/__init__.py,sha256=fTq3S9E0ziRxScVqHahhdgOLYO4J5bsXKFPj1GtX7a0,102
+langlearncopilot/parsers/llm_phrase_parser.py,sha256=dfodrAVzQCMRLJ5FFAuczjf_TACm6J0PnWbcSTn1z9g,1987
+langlearncopilot/parsers/site_parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langlearncopilot/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langlearncopilot-0.1.0.dist-info/LICENSE,sha256=Gj5-R_GMfbdEyvx82039iPuvCJMJTMwklZGc36gx3SU,1070
+langlearncopilot-0.1.0.dist-info/METADATA,sha256=SUJVB-ootQIVbm4oY4o89OX3uS3Dl7dlf5CPjajPqJk,2776
+langlearncopilot-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+langlearncopilot-0.1.0.dist-info/RECORD,,
