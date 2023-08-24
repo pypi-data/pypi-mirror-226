@@ -1,0 +1,35 @@
+# Netbox Sync Status
+
+[Netbox](https://github.com/netbox-community/netbox) plugin that adds the capability to report system sync status backup to NetBix
+
+
+## Compatibility
+
+This plugin in compatible with [NetBox](https://netbox.readthedocs.org/) 3.4 and later.
+
+## Installation
+
+If Netbox was installed according to the standard installation instructions. It may be necessary to activate the virtual environment.
+
+```
+source /opt/netbox/venv/bin/activate
+```
+
+The plugin is available as a Python package in pypi and can be installed with pip
+
+```
+pip install netbox-sync-status
+```
+Enable the plugin in /opt/netbox/netbox/netbox/configuration.py:
+```
+PLUGINS = ['netbox-sync-status']
+```
+Restart NetBox and add `netbox-sync-status` to your local_requirements.txt
+
+## Contributing
+Developing tools for this project based on [ntc-netbox-plugin-onboarding](https://github.com/networktocode/ntc-netbox-plugin-onboarding) repo.
+
+Issues and pull requests are welcomed.
+
+## Screenshots
+TBC
