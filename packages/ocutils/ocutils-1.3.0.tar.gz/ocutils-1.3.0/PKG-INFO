@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ocutils
+Version: 1.3.0
+Summary: Utility functions for oceanography related work
+Home-page: https://github.com/marcuskd/ocutils
+Author: Marcus Donnelly
+Author-email: marcus.k.donnelly@gmail.com
+License: MIT
+Keywords: Oceanography
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE.txt
