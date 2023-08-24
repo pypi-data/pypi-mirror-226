@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+contact-local-python-package/__init__.py
+contact-local-python-package/contact_api/__init__.py
+contact-local-python-package/contact_api/contact.py
+contact-local-python-package/db/__init__.py
+contact-local-python-package/db/contactView.py
+contact-local-python-package/db/database.py
+contact-local-python-package/tests/__init__.py
+contact-local-python-package/tests/contact_test.py
+contact_local.egg-info/PKG-INFO
+contact_local.egg-info/SOURCES.txt
+contact_local.egg-info/dependency_links.txt
+contact_local.egg-info/top_level.txt
