@@ -1,0 +1,10 @@
+pytz
+
+[linting]
+pytest
+mypy
+lxml
+types-pytz
+
+[testing]
+pytest
