@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: mesonic
+Version: 0.2.0
+Summary: Sonification Framework
+Home-page: https://github.com/dreinsch/mesonic/
+Author: Dennis Reinsch
+Author-email: dreinsch@techfak.uni-bielefeld.de
+License: MIT
+Project-URL: Documentation, https://mesonic.readthedocs.io/
+Project-URL: Source, https://github.com/dreinsch/mesonic/
+Project-URL: Changelog, https://mesonic.readthedocs.io/en/latest/changelog.html
+Project-URL: Tracker, https://github.com/dreinsch/mesonic/issues
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+Provides-Extra: all
+Provides-Extra: sc3nb
+Provides-Extra: testing
+Provides-Extra: examples
+Provides-Extra: dev
+Provides-Extra: notebook
+Provides-Extra: ipykernel
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+
+=======
+mesonic
+=======
+
+.. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/pre-commit/pre-commit
+   :alt: pre-commit
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: black
+
+.. image:: https://github.com/dreinsch/mesonic/actions/workflows/main.yml/badge.svg?branch=main
+    :target: https://github.com/dreinsch/mesonic/actions/workflows/main.yml
+    :alt: github-actions
+
+a Sonification Framework
+
+
+Installation
+============
+
+You can install mesonic with the default backend `sc3nb`_ using pip
+
+    pip install mesonic[sc3nb]
+
+Note that to run the notebooks mesonic also requires a backend like `SuperCollider`_ and/or `pya`_ to be installed.
+
+Developer Installation
+======================
+
+To clone and install mesonic with dependencies required for the notebooks run::
+
+    git clone https://github.com/interactive-sonification/mesonic.git
+    cd mesonic
+    pip install -e ".[notebooks]"
+
+Running Tests & Building
+========================
+
+We use `tox`_ for the automation of tasks like testing and building.
+
+Please refer to the tox.ini file for more details
+
+
+Making Changes & Contributing
+=============================
+
+This project uses `pre-commit`_, please make sure to install it before making any
+changes::
+
+    pip install pre-commit
+    cd mesonic
+    pre-commit install
+
+
+update the hooks to the latest version::
+
+    pre-commit autoupdate
+
+.. _sc3nb: https://github.com/interactive-sonification/sc3nb
+.. _SuperCollider: https://github.com/supercollider/supercollider
+.. _tox: https://github.com/tox-dev/tox
+.. _pre-commit: https://pre-commit.com/
+.. _pya: https://github.com/interactive-sonification/pya#installation
