@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: wwwml
+Version: 0.1.0
+Summary: What's wrong with my linux? A LLM based tool to diagnose linux problems.
+Project-URL: homepage, https://github.com/iaalm/wwwml
+Project-URL: repository, https://github.com/iaalm/wwwml
+Author-email: iaalm <iaalmsimon@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Requires-Dist: langchain>=0.0.271
+Requires-Dist: openai>=0.27.9
+Description-Content-Type: text/markdown
+
+# wwwml
+What's wrong with my linux? A LLM based tool to diagnose linux problems.
+
+## Install
+```bash
+pip install -U wwwml
+```
+
+Or, to use Azure OpenAI endpoint, set following environment variable:
+```
+
+```bash
+export OPENAI_API_KEY=
+export OPENAI_API_BASE=
+export OPENAI_API_TYPE=azure
+export OPENAI_API_VERSION=2023-07-01-preview
+# Use a deploymetn of gpt-3.5-turbo or gpt-4 with version 0613 or later
+export WWWML_DEPLOYMENT=
+```
+
+## Usage
+```bash
+python -m wwwml
+```
