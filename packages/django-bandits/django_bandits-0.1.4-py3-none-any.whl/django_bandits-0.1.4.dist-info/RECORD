@@ -1,0 +1,12 @@
+django_bandits/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_bandits/admin.py,sha256=EQuuJPZLZSPKqbq050EsY1QxRwFPSxHgfqXUOGEQz2E,3085
+django_bandits/apps.py,sha256=v0BDHkL_yKi5J4RK6CmAs_14r1DANZAHNI2FWpWHhUI,159
+django_bandits/forms.py,sha256=vQdyiif4Nvcj5qx2Ph8h6zyaULMYIyMjj_buCHxVwvk,643
+django_bandits/middleware.py,sha256=gLV_9XNYEi1g3zBSJqLtmBVo10lgLZ9sFpoj4Ols4JQ,5534
+django_bandits/migrations/0001_squashed_0004_remove_epsilondecaymodel_beta.py,sha256=Fydm63LCcRZEwbW-kot02QgM2oyUKFMkr4sGLkAmPH4,17849
+django_bandits/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_bandits/models.py,sha256=M1iENjjNlrtc4wrEqIQPjMKui01j-48rTsCk8bUSI38,11764
+django_bandits-0.1.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_bandits-0.1.4.dist-info/METADATA,sha256=PDXSyeQlfRq2jYwIQSRb1oQigP75WtRxM0tNev7DLgk,5765
+django_bandits-0.1.4.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+django_bandits-0.1.4.dist-info/RECORD,,
