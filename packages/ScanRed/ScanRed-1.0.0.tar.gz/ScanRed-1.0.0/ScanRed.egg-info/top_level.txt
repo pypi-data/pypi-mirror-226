@@ -1,0 +1,2 @@
+ScanHost
+ScanPort
