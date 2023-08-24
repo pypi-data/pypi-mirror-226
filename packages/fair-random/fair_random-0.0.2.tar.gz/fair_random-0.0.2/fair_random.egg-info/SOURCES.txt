@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+fair_random/__init__.py
+fair_random/dice.py
+fair_random/lib.py
+fair_random/majiang.py
+fair_random/types.py
+fair_random.egg-info/PKG-INFO
+fair_random.egg-info/SOURCES.txt
+fair_random.egg-info/dependency_links.txt
+fair_random.egg-info/top_level.txt
