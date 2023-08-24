@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: chatclicks
+Version: 0.2.5
+Summary: A package for handling chat clicks through websockets.
+Home-page: https://github.com/WillPiledriver/chatclicks
+Author: WillPiledriver
+Author-email: smifthsmurfth@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: python-socketio
+
