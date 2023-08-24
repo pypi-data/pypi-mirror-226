@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: GeoSolver
+Version: 1.0.1
+Summary: A library to solve 3D-geometry
+Home-page: https://github.com/KareEnges/GeoSolver
+Author: EngelsVon/FengHaoen
+Author-email: engelsvon3@gmail.com
+License: MIT
