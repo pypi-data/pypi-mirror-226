@@ -1,0 +1,9 @@
+bbrio_package_initial/__init__.py,sha256=s6RceNnTrKzNuaPPQhVmeUfiFwtFg1n1qN6Ca79uiUQ,120
+bbrio_package_initial/chi_performance.py,sha256=7LZKWW5pBUn2BctHkAUaJF1dfI9sVFZe40lC-nXuYDY,2090
+bbrio_package_initial/chi_performance_parsed_table.py,sha256=TCYmyObf0GKTcVVDxovRyL7w37_mBH6MCDCgv4XbMNY,2064
+bbrio_package_initial/word_joining.py,sha256=ZREv5eJ5Rj6zhdx-mVXOmRuG9ZuCjdK1v0FUF5xm9po,275
+bbrio_package_initial-0.0.6.dist-info/LICENSE.txt,sha256=BmuYe-ufK-8pZA5FVqfMPlk6kuVWxwI_n7u1eens9Q4,1091
+bbrio_package_initial-0.0.6.dist-info/METADATA,sha256=pmxpnc6RgY8juyIMuhfSiXq-YYHRWQi_3q2E9tup4wc,398
+bbrio_package_initial-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bbrio_package_initial-0.0.6.dist-info/top_level.txt,sha256=EFW7yhg2iaPGhhiH9pyb3yur6eNHdn_KAOoP10XjMQg,22
+bbrio_package_initial-0.0.6.dist-info/RECORD,,
