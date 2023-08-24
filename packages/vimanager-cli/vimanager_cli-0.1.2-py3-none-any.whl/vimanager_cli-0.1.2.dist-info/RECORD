@@ -1,0 +1,17 @@
+vimanager/__init__.py,sha256=k2uxF16_NmJQHJQI6EOe7ijLSnnfw9awMhNi3hFyXzM,354
+vimanager/edit.py,sha256=0lT0uzqFJqaj36RhH5kdjesUCa7jI_vsHeuyaZZSzyg,3899
+vimanager/inspector.py,sha256=egu-ZQzuvBYhm-JzgnH4kBYuUb9Er6z4uc_9gw4lgDs,3392
+vimanager/main.py,sha256=qYWTI_7E8tFnH-M4kPbYWYNZSBys-xQsO9sEIIBXQBY,1807
+vimanager/models.py,sha256=f8tLXLe1eRoNRo4oyuafD1JIsFVaXKSkLKWYVCaCyqU,3276
+vimanager/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vimanager/sorter.py,sha256=HZ7zFyHlqeSqn3kiY3hV_euNuYETsaCgTdcjdnGfC-s,3521
+vimanager/utils.py,sha256=o7lpdsFduoe6HKKcglJpZynJit8DOgGi3QA4kkzCluk,2548
+vimanager/spotify/__init__.py,sha256=19tuZb6j5AbxDWYF0BNNIaOttskHUd8heGm38KW4mkY,8976
+vimanager/spotify/matching.py,sha256=3DgFeP4p0f8VvvaVcQMXhe8pyBxtIxPLkSNH1R24Tt4,8802
+vimanager/spotify/models.py,sha256=JPG_ckjxGqfokiRSc7mXDH1ly-XohWi7F5QZgOaiQ6A,5480
+vimanager_cli-0.1.2.dist-info/LICENSE,sha256=FwSYfw2MEEd9IfaAOySoNcsazKaN2BdcFaCJ6ogpISs,1060
+vimanager_cli-0.1.2.dist-info/METADATA,sha256=zoNIk3rakW9Xmoms6xDOKE12NgWgk-3fOo3SBNdnDVk,3353
+vimanager_cli-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vimanager_cli-0.1.2.dist-info/entry_points.txt,sha256=9B35VoJQc4E-p3Vfy3gj8gHhDvMu3W40i895QL3ljNs,56
+vimanager_cli-0.1.2.dist-info/top_level.txt,sha256=lRzLcO9sOllR27kzu5F0vcsdHwGuIcUK7LLWRezNWWU,28
+vimanager_cli-0.1.2.dist-info/RECORD,,
