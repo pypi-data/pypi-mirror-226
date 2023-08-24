@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: covidimpact
+Version: 0.0.1
+Summary: Imapct of Covid-19 is shown.
+Home-page: https://github.com/i-inose/covidimpact
+Author: Izuru Inose
+Author-email: i.inose0304@gmail.com
+Project-URL: Bug Tracker, https://github.com/i-inose/covidimpact
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
