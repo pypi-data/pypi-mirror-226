@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: abi2le-mirror-bert-colinglab
+Version: 0.0.1
+Summary: This is an adaptation of the original MirrorBERT repository, with minor tweaks to use it within the Abi2le project. Original repo description: Code repo for the EMNLP 2021 paper: Fast, Effective, and Self-Supervised: Transforming Masked Language Models into Universal Lexical and Sentence Encoders by Fangyu Liu, Ivan Vulić, Anna Korhonen, and Nigel Collier.
+Author: Fangyu Liu, Ivan Vulić, Anna Korhonen, and Nigel Collier, Cambridge Language Technology Lab
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.9
+License-File: LICENSE
+
