@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: llmutils
+Version: 0.1.2
+Summary: A few utility classes for working with LLMs
+Author: ttthree
+Author-email: tongjie@gmail.com
+Requires-Dist: faiss-cpu
+Requires-Dist: openai
+Requires-Dist: jinja2
+Requires-Dist: python-dotenv
+Requires-Dist: tiktoken
+
