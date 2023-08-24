@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+takinai/__init__.py
+takinai/__main__.py
+takinai/viewer.py
+takinai.egg-info/PKG-INFO
+takinai.egg-info/SOURCES.txt
+takinai.egg-info/dependency_links.txt
+takinai.egg-info/entry_points.txt
+takinai.egg-info/requires.txt
+takinai.egg-info/top_level.txt

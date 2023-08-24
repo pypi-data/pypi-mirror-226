@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: takinai
+Version: 0.0.1
+Summary: The official Python library for the TakinAI API
+Home-page: https://github.com/datamonet/takinai-python
+Author: DataMonet LLC
+Author-email: support@takin.ai
+License: MIT
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# About
+The official Python library for the TakinAI API
+
+## Installation
+
+```
+pip install takinai
+```
+
+## Test
+
+```bash
+pip install pytest
+python -m pytest
+```
+
+## Packaging and Upload
+
+```
+python setup.py sdist
+twine upload dist/*
+```
