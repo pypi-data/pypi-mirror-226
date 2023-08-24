@@ -1,0 +1,11 @@
+tomodo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tomodo/cmd.py,sha256=IHFt_EQdj4le-uvE7_a_z9jSUQNkqyF5MBChM6GjDvg,3508
+tomodo/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tomodo/common/config.py,sha256=-t3VHBJPOQDBGZPtUXEo3KXyZA1JCS4CPDoMjZQTTpk,1227
+tomodo/common/upgrader.py,sha256=0WXN-3wBogSPH8WukswbLaMEIjCUaUltR6w_7njp5x8,6178
+tomodo/common/util.py,sha256=v_vCPnEE9FYiWMBAEhaVBfheZJTMDcRL_uDHy9wJVhg,1245
+tomodo-0.1.0rc3.dist-info/LICENSE,sha256=vZDsGvl3UyiGUwRkfdUURGgSGxKdchcK-11D-g1GxjI,1096
+tomodo-0.1.0rc3.dist-info/METADATA,sha256=KYDLmjEcvm4X0g1Awpb1hXRJ9GAw_gh8ApGX0gNWt4g,5525
+tomodo-0.1.0rc3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+tomodo-0.1.0rc3.dist-info/entry_points.txt,sha256=jOhSepEhBedUD0mrQeJxqZDqTsqVtE0EO2SmHS6f-50,41
+tomodo-0.1.0rc3.dist-info/RECORD,,
