@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/manual_export/__init__.py
+src/manual_export/dlt.py
+src/manual_export.egg-info/PKG-INFO
+src/manual_export.egg-info/SOURCES.txt
+src/manual_export.egg-info/dependency_links.txt
+src/manual_export.egg-info/top_level.txt
+test/test.py
