@@ -1,0 +1,10 @@
+scyllapy-1.0.7.dist-info/METADATA,sha256=KydpUhrnUkFEOkIM9GOr0Dq-43psXqn-Kx98Q5URzNg,7457
+scyllapy-1.0.7.dist-info/WHEEL,sha256=fEuvyTnWBaFFqUK_-nJdc8PSyUVWaUnyNgRH_ePN1nU,90
+scyllapy-1.0.7.dist-info/license_files/LICENSE,sha256=83OdUPC4kbFz7EjF7cYgy2r8jq9GM8EBmmgHF1Wy8hI,1088
+scyllapy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scyllapy/types.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scyllapy/_internal/extra_types.pyi,sha256=03Gglu6Dd-pq2bQp7e2Kw6yy30MJSLCoO7WfxOdXFl8,708
+scyllapy/_internal/__init__.pyi,sha256=m2qe6dTgAi8q1GwIBLnqdl3F5l2PMCx7h_tS0eZdo-Q,7322
+scyllapy/__init__.py,sha256=oax2GGxM_q6dlB7VWVA9q5B2N9XthgumxmEr-chOs3Y,426
+scyllapy/_internal.pyd,sha256=bmY_EqfFKiCjMPCZdChycbDBIcv7nuhbwo9vgHODnZI,3205632
+scyllapy-1.0.7.dist-info/RECORD,,
