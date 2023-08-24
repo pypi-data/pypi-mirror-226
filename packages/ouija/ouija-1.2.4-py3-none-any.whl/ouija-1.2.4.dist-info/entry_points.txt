@@ -1,0 +1,2 @@
+[console_scripts]
+ouija = ouija.server:main
