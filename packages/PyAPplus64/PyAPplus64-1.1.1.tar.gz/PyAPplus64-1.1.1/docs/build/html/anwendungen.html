@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>typische Anwendungsfälle &#8212; PyAPplus64 1.1.0 Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Abhängigkeiten" href="abhaengigkeiten.html" />
+    <link rel="prev" title="Beschreibung" href="beschreibung.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="abhaengigkeiten.html" title="Abhängigkeiten"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="beschreibung.html" title="Beschreibung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">typische Anwendungsfälle</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="typische-anwendungsfalle">
+<h1>typische Anwendungsfälle<a class="headerlink" href="#typische-anwendungsfalle" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="einfache-admin-aufgaben">
+<h2>einfache Admin-Aufgaben<a class="headerlink" href="#einfache-admin-aufgaben" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Selten auftretende Admin-Aufgaben lassen sich gut mittels Python-Scripten automatisieren.
+Es ist sehr einfach möglich, auf die DB, aber auch auf SOAP-Schnittstelle zuzugreifen.
+Ich habe dies vor allem für Wartungsarbeiten an Anpassungstabellen, die für eigene Erweiterungen
+entwickelt wurden, genutzt.</p>
+<p>Als triviales Beispiel sucht folgender Code alle <cite>DOCUMENTS</cite> Einträge in
+Artikeln (angezeigt als <cite>Bild</cite> in <cite>ArtikelRec.aspx</cite>), für die Datei, auf die
+verwiesen wird, nicht im Dateisystem existiert. Diese fehlenden Dateien werden
+ausgegeben und das Feld <cite>DOCUMENTS</cite> gelöscht. Das Löschen erfolgt dabei über
+<cite>useXML</cite>, so dass die Felder <cite>UPDDATE</cite> und <cite>UPDUSER</cite> korrekt gesetzt werden.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">updateDB</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">docDir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">if</span> <span class="n">docDir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">11</span>        <span class="n">docDir</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getInstallPathWebServer</span><span class="p">()</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;DocLib&quot;</span><span class="p">))</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="n">sql</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;ARTIKEL&quot;</span><span class="p">,</span> <span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">)</span>
+<span class="linenos">15</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addConditionFieldStringNotEmpty</span><span class="p">(</span><span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">server</span><span class="o">.</span><span class="n">dbQueryAll</span><span class="p">(</span><span class="n">sql</span><span class="p">):</span>
+<span class="linenos">18</span>        <span class="n">doc</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">docDir</span> <span class="o">+</span> <span class="n">row</span><span class="o">.</span><span class="n">DOCUMENTS</span><span class="p">)</span>
+<span class="linenos">19</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<span class="linenos">20</span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bild &#39;</span><span class="si">{}</span><span class="s2">&#39; für Artikel &#39;</span><span class="si">{}</span><span class="s2">&#39; nicht gefunden&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">ARTIKEL</span><span class="p">))</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>            <span class="k">if</span> <span class="n">updateDB</span><span class="p">:</span>
+<span class="linenos">23</span>                <span class="n">upd</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">mkUseXMLRowUpdate</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+<span class="linenos">24</span>                <span class="n">upd</span><span class="o">.</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="linenos">25</span>                <span class="n">upd</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">29</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Man kann alle Python Bibliotheken nutzen. Als Erweiterung wäre es in obigem Script
+zum Beispiel einfach möglich, alle BMP-Bilder zu suchen, nach PNG zu konvertieren
+und den DB-Eintrag anzupassen.</p>
+</section>
+<section id="ad-hoc-reports">
+<h2>Ad-hoc Reports<a class="headerlink" href="#ad-hoc-reports" title="Link zu dieser Überschrift">¶</a></h2>
+<p>APplus erlaubt es mittels Jasper-Reports, flexible und schöne Reports zu erzeugen.
+Dies funktioniert gut und ist für regelmäßig benutzte Reports sehr sinnvoll.</p>
+<p>Für ad-hoc Reports, die nur sehr selten oder sogar nur einmal benutzt werden, ist die
+Erstellung eines Jasper-Reports und die Einbindung in APplus jedoch zu zeitaufwändig.
+Teilweise genügen die Ergebnisse einer SQL-Abfrage, die direkt im MS SQL Server abgesetzt
+werden kann. Wird es etwas komplizierter oder sollen die Ergebnisse noch etwas verarbeitet
+werden, bietet sich evtl. Python an.</p>
+<p>Folgendes Script erzeugt zum Beispiel eine Excel-Tabelle, mit einer Übersicht,
+welche Materialen wie oft für Artikel benutzt werden:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 7</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">)</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="c1"># Einfache SQL-Anfrage</span>
+<span class="linenos">10</span>    <span class="n">sql1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;select Material, count(*) as Anzahl from ARTIKEL &quot;</span>
+<span class="linenos">11</span>            <span class="s2">&quot;group by MATERIAL having MATERIAL is not null &quot;</span>
+<span class="linenos">12</span>            <span class="s2">&quot;order by Anzahl desc&quot;</span><span class="p">)</span>
+<span class="linenos">13</span>    <span class="n">df1</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql1</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="c1"># Sql Select-Statements können auch über SqlStatementSelect zusammengebaut</span>
+<span class="linenos">16</span>    <span class="c1"># werden. Die ist bei vielen, komplizierten Bedingungen teilweise hilfreich.</span>
+<span class="linenos">17</span>    <span class="n">sql2</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">)</span>
+<span class="linenos">18</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;Material&quot;</span><span class="p">,</span> <span class="s2">&quot;count(*) as Anzahl&quot;</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">addGroupBy</span><span class="p">(</span><span class="s2">&quot;MATERIAL&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">having</span><span class="o">.</span><span class="n">addConditionFieldIsNotNull</span><span class="p">(</span><span class="s2">&quot;MATERIAL&quot;</span><span class="p">)</span>
+<span class="linenos">21</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="s2">&quot;Anzahl desc&quot;</span>
+<span class="linenos">22</span>    <span class="n">df2</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql2</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="c1"># Ausgabe als Excel mit 2 Blättern</span>
+<span class="linenos">25</span>    <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">exportToExcel</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="p">[(</span><span class="n">df1</span><span class="p">,</span> <span class="s2">&quot;Materialien&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="s2">&quot;Materialien 2&quot;</span><span class="p">)],</span> <span class="n">addTable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">29</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">,</span> <span class="s2">&quot;myout.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dieses kurze Script nutzt Standard-Pandas Methoden zur Erzeugung der Excel-Datei. Allerdings
+sind diese Methoden in den Aufrufen von <cite>pandasReadSql</cite> und <cite>exportToExcel</cite> gekapselt,
+so dass der Aufruf sehr einfach ist. Zudem ist es sehr einfach, die Verbindung zur Datenbank
+und zum APP-Server mittels der YAML-Konfigdatei herzustellen. Bei diesem
+Aufruf kann optional ein Nutzer und eine Umgebung übergeben werden, die die Standard-Werte aus
+der YAML-Datei überschreiben. <cite>pandasReadSql</cite> nutzt intern <cite>completeSQL</cite>, so dass
+der für die Umgebung korrekte Mandant automatisch verwendet wird.</p>
+</section>
+<section id="anbindung-eigener-tools">
+<h2>Anbindung eigener Tools<a class="headerlink" href="#anbindung-eigener-tools" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ursprünglich wurde <cite>PyAPplus64</cite> für die Anbindung einer APplus-Anpassung geschrieben. Diese Anpassung ist
+als Windows-Service auf einem eigenen Rechner installiert und überwacht dort ein bestimmtes Verzeichnis.
+Bei Änderungen an Dateien in diesem Verzeichnis (Hinzufügen, Ändern, Löschen) werden die Dateien verarbeitet
+und die Ergebnisse an APplus gemeldet. Dafür werden DB-Operationen aber auch SOAP-Calls benutzt.
+Ebenso wird auf die SysConf zugegriffen.</p>
+<p>Viele solcher Anpassungen lassen sich gut und sinnvoll im App-Server einrichten und als Job regelmäßig aufrufen.
+Im konkreten Fall wird jedoch für die Verarbeitung der Dateien viel Rechenzeit benötigt. Dies würde dadurch
+verschlimmert, dass die Dateien nicht auf der gleichen Maschine wie der App-Server liegen und somit
+viele, relativ langsame Dateizugriffe über das Netzwerk nötig wären. Hinzu kommt, dass die
+Verarbeitung der Dateien dank existierender Bibliotheken in Python einfacher ist.</p>
+<p><cite>PyAPplus64</cite> kann für solche Anpassungen eine interessante Alternative zur Implementierung im App-Server
+oder zur Entwicklung eines Tools ohne spezielle Bibliotheken sein. Nach Initialisierung des Servers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="s2">&quot;my-applus-server.yaml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>bietet <cite>P2APplus64</cite> wie oben demonstriert einfachen lesenden und schreibenden Zugriff auf die DB. Hierbei
+werden automatisch die für die Umgebung nötigen Mandanten zu den SQL Statements hinzugefügt. Zudem ist einfach ein
+Zugriff auf die Sysconf möglich:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;MYLAND&quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getList</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;EULAENDER&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Dank der Bibliothek <cite>zeep</cite> ist es auch sehr einfach möglich, auf beliebige SOAP-Methoden zuzugreifen.
+Beispielsweise kann auf die Sys-Config auch händisch, d.h. durch direkten Aufruf einer SOAP-Methode
+des APP-Servers zugegriffen werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">server_conn</span><span class="o">.</span><span class="n">getAppClient</span><span class="p">(</span><span class="s2">&quot;p2system&quot;</span><span class="p">,</span> <span class="s2">&quot;SysConf&quot;</span><span class="p">);</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;MYLAND&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhaltsverzeichnis</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">typische Anwendungsfälle</a><ul>
+<li><a class="reference internal" href="#einfache-admin-aufgaben">einfache Admin-Aufgaben</a></li>
+<li><a class="reference internal" href="#ad-hoc-reports">Ad-hoc Reports</a></li>
+<li><a class="reference internal" href="#anbindung-eigener-tools">Anbindung eigener Tools</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="beschreibung.html"
+                        title="vorheriges Kapitel">Beschreibung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="abhaengigkeiten.html"
+                        title="nächstes Kapitel">Abhängigkeiten</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/anwendungen.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="abhaengigkeiten.html" title="Abhängigkeiten"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="beschreibung.html" title="Beschreibung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">typische Anwendungsfälle</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Thomas Tuerk.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

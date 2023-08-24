@@ -1,0 +1,6 @@
+pyodbc
+PyYAML
+SQLAlchemy
+pandas
+XlsxWriter
+zeep

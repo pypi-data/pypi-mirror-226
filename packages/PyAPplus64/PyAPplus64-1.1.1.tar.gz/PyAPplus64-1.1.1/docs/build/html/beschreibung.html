@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Beschreibung &#8212; PyAPplus64 1.1.0 Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="typische Anwendungsfälle" href="anwendungen.html" />
+    <link rel="prev" title="PyAPplus64 Dokumentation" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="anwendungen.html" title="typische Anwendungsfälle"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyAPplus64 Dokumentation"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Beschreibung</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="beschreibung">
+<h1>Beschreibung<a class="headerlink" href="#beschreibung" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Das Paket <cite>PyAPplus64</cite> enthält eine Sammlung von Python Tools für die Interaktion mit dem ERP-System APplus 6.4.
+Es sollte auch für andere APplus Versionen nützlich sein.</p>
+<p>Zielgruppe sind APplus-Administratoren und Anpassungs-Entwickler. <cite>PyAPplus64</cite> erlaubt u.a.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>einfacher Zugriff auf SOAP-Schnittstelle des APP-Servers</dt><dd><ul>
+<li><p>damit Zugriff auf SysConfig</p></li>
+<li><p>Zugriff auf Tools wie z.B. <cite>nextNumber</cite> für Erzeugung der nächsten Nummer für ein Business-Object</p></li>
+<li><p>…</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Zugriff auf APplus DB per direktem DB-Zugriff und mittels SOAP</dt><dd><ul>
+<li><p>automatischer Aufruf von <cite>completeSQL</cite>, um per AppServer SQL-Statements um z.B. Mandanten erweitern zu lassen</p></li>
+<li><p>Tools für einfache Benutzung von <cite>useXML</cite>, d.h. für das Einfügen, Löschen und Ändern von Datensätzen
+mit Hilfe des APP-Servers. Genau wie bei Änderungen an Datensätzen über die Web-Oberfläche und im Gegensatz
+zum direkten Zugriff über die Datenbank werden dabei evtl. zusätzliche
+Checks ausgeführt, bestimmte Felder automatisch gesetzt oder bestimmte Aktionen angestoßen.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>das Duplizieren von Datensätzen</dt><dd><ul>
+<li><p>zu kopierende Felder aus XML-Definitionen werden ausgewertet</p></li>
+<li><p>Abhängige Objekte können einfach ebenfalls mit-kopiert werden</p></li>
+<li><p>Änderungen wie beispielsweise Nummer des Objektes möglich</p></li>
+<li><p>Unterstützung für Kopieren dyn. Attribute</p></li>
+<li><p>Anlage neuer Objekte mittels APP-Server</p></li>
+<li><p>Datensätze können zwischen Systemen kopiert und auch in Dateien gespeichert werden</p></li>
+<li><p>Beispiel: Kopieren von Artikeln mit Arbeitsplan und Stückliste zwischen Deploy- und Prod-System</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>einfaches Erstellen von Excel-Reports aus SQL-Abfragen</dt><dd><ul>
+<li><p>mittels Pandas und XlsxWriter</p></li>
+<li><p>einfache Wrapper um andere Libraries, spart aber Zeit</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>…</p></li>
+</ul>
+<p>In <cite>PyAPplus64</cite> wurden die Features (vielleicht leicht verallgemeinert)
+implementiert, die ich für konkrete Aufgabenstellungen benötigte. Ich gehe davon
+aus, dass im Laufe der Zeit weitere Features hinzukommen.</p>
+<section id="warnung">
+<h2>Warnung<a class="headerlink" href="#warnung" title="Link zu dieser Überschrift">¶</a></h2>
+<p><cite>PyAPplus64</cite> erlaubt den schreibenden Zugriff auf die APplus Datenbank und beliebige
+Aufrufe von SOAP-Methoden. Unsachgemäße Nutzung kann Ihre Daten zerstören. Benutzen Sie
+<cite>PyAPplus64</cite> daher bitte vorsichtig. Zudem kann ich leider nicht garantieren, dass <cite>PyAPplus64</cite> fehlerfrei ist.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhaltsverzeichnis</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Beschreibung</a><ul>
+<li><a class="reference internal" href="#warnung">Warnung</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="index.html"
+                        title="vorheriges Kapitel">PyAPplus64 Dokumentation</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="anwendungen.html"
+                        title="nächstes Kapitel">typische Anwendungsfälle</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/beschreibung.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="anwendungen.html" title="typische Anwendungsfälle"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyAPplus64 Dokumentation"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Beschreibung</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Thomas Tuerk.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

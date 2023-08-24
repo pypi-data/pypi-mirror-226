@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Beispiele &#8212; PyAPplus64 1.1.0 Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="PyAPplus64 package" href="generated/PyAPplus64.html" />
+    <link rel="prev" title="Abhängigkeiten" href="abhaengigkeiten.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="generated/PyAPplus64.html" title="PyAPplus64 package"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="abhaengigkeiten.html" title="Abhängigkeiten"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Beispiele</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="beispiele">
+<h1>Beispiele<a class="headerlink" href="#beispiele" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Im Verzeichnis <code class="docutils literal notranslate"><span class="pre">examples</span></code> finden sich Python Dateien, die die Verwendung von <cite>PyAPplus64</cite> demonstrieren.</p>
+<section id="config-dateien">
+<h2>Config-Dateien<a class="headerlink" href="#config-dateien" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Viele Scripte teilen sich Einstellungen. Beispielsweise greifen fast alle Scripte irgendwie auf APplus zu und benötigen Informationen,
+mit welchem APP-Server, welchem Web-Server und welcher Datenbank sie sich verbinden sollen. Solche Informationen, insbesondere die Passwörter, werden nicht in
+jedem Script gespeichert, sondern nur in den Config-Dateien. Es bietet sich wohl meist an, 3 Konfigdateien zu erstellen, je eine für
+das Deploy-, das Test- und das Prod-System. Ein Beispiel ist im Unterverzeichnis <code class="docutils literal notranslate"><span class="pre">examples/applus-server.yaml</span></code> zu finden.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Einstellung für die Verbindung mit dem APP-, Web- und DB-Server.</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="c1"># Viele der Einstellungen sind im APplus Manager zu finden</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="nt">appserver </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="nt">  server </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;some-server&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="nt">  port </span><span class="p">:</span><span class="w"> </span><span class="nv">2037</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="nt">  user </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;asol.projects&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="nt">  env  </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default-umgebung&quot;</span><span class="w"> </span><span class="c1"># hier wirklich Umgebung, nicht Mandant verwenden</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="nt">webserver </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="nt">  baseurl </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://some-server/APplusProd6/&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos">12</span><span class="nt">  user </span><span class="p">:</span><span class="w"> </span><span class="nv">null</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="c1"># oft &quot;ASOL.Projects&quot;, wenn nicht gesetzt, wird aktueller Windows-Nutzer verwendet</span><span class="w"></span>
+<span class="linenos">13</span><span class="nt">  userDomain </span><span class="p">:</span><span class="w"> </span><span class="nv">null</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="c1"># Domain für ASOL.PROJECTS</span><span class="w"></span>
+<span class="linenos">14</span><span class="nt">  password </span><span class="p">:</span><span class="w"> </span><span class="nv">null</span><span class="w"> </span><span class="c1"># das Passwort</span><span class="w"></span>
+<span class="linenos">15</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="nt">dbserver </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="nt">  server </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;some-server&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos">18</span><span class="nt">  db </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;APplusProd6&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="nt">  user </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SA&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="linenos">20</span><span class="nt">  password </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;your-db-password&quot;</span><span class="w"></span>
+<span class="linenos">21</span><span class="p p-Indicator">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Damit nicht in jedem Script immer wieder neu die Konfig-Dateien ausgewählt werden müssen, werden die Konfigs für
+das Prod-, Test- und Deploy-System in <code class="docutils literal notranslate"><span class="pre">examples/applus_configs.py</span></code> hinterlegt. Diese Datei wird in allen Scripten importiert,
+so dass das Config-Verzeichnis und die darin enthaltenen Configs einfach zur Verfügung stehen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">basedir</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">configdir</span> <span class="o">=</span> <span class="n">basedir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">serverConfYamlDeploy</span> <span class="o">=</span> <span class="n">configdir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;applus-server-deploy.yaml&quot;</span><span class="p">)</span>
+<span class="linenos">7</span><span class="n">serverConfYamlTest</span> <span class="o">=</span> <span class="n">configdir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;applus-server-test.yaml&quot;</span><span class="p">)</span>
+<span class="linenos">8</span><span class="n">serverConfYamlProd</span> <span class="o">=</span> <span class="n">configdir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;applus-server-prod.yaml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="read-settings-py">
+<h2><code class="docutils literal notranslate"><span class="pre">read_settings.py</span></code><a class="headerlink" href="#read-settings-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einfaches Beispiel für Auslesen der SysConf und bestimmter Einstellungen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Einfaches Script, das verschiedene Werte des Servers ausliest.</span>
+<span class="linenos"> 2</span><span class="c1"># Dies sind SysConfig-Einstellungen, aber auch der aktuelle Mandant,</span>
+<span class="linenos"> 3</span><span class="c1"># Systemnamen, ...</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 7</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 8</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">],</span> <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">12</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">SysConf Lookups:&quot;</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Default Auftragsart:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULTAUFTRAGSART&quot;</span><span class="p">))</span>
+<span class="linenos">17</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Auftragsarten:&quot;</span><span class="p">)</span>
+<span class="linenos">18</span>    <span class="n">arten</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getList</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;AUFTRAGSART&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">arten</span><span class="p">:</span>
+<span class="linenos">20</span>        <span class="n">arten</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">21</span>    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">arten</span><span class="p">:</span>
+<span class="linenos">22</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    - &quot;</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Firmen-Nr. automatisch vergeben:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getBoolean</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;FIRMAAUTOMATIK&quot;</span><span class="p">))</span>
+<span class="linenos">25</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Anzahl Artikelstellen:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">sysconf</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s2">&quot;STAMM&quot;</span><span class="p">,</span> <span class="s2">&quot;ARTKLASSIFNRLAENGE&quot;</span><span class="p">))</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">ScriptTool:&quot;</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  CurrentDate:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getCurrentDate</span><span class="p">())</span>
+<span class="linenos">30</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  CurrentTime:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getCurrentTime</span><span class="p">())</span>
+<span class="linenos">31</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  CurrentDateTime:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getCurrentDateTime</span><span class="p">())</span>
+<span class="linenos">32</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  LoginName:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getLoginName</span><span class="p">())</span>
+<span class="linenos">33</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  UserName:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getUserName</span><span class="p">())</span>
+<span class="linenos">34</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  UserFullName:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getUserFullName</span><span class="p">())</span>
+<span class="linenos">35</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  SystemName:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getSystemName</span><span class="p">())</span>
+<span class="linenos">36</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Mandant:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getMandant</span><span class="p">())</span>
+<span class="linenos">37</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  MandantName:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getMandantName</span><span class="p">())</span>
+<span class="linenos">38</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  InstallPath:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getInstallPath</span><span class="p">())</span>
+<span class="linenos">39</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  InstallPathAppServer:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getInstallPathAppServer</span><span class="p">())</span>
+<span class="linenos">40</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  InstallPathWebServer:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getInstallPathWebServer</span><span class="p">())</span>
+<span class="linenos">41</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  ServerInfo - Version:&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getServerInfo</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span>    <span class="n">client</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">getWebClient</span><span class="p">(</span><span class="s2">&quot;masterdata/artikel.asmx&quot;</span><span class="p">)</span>
+<span class="linenos">44</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ARTIKEL-ASMX Date:&quot;</span><span class="p">,</span> <span class="n">client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">getServerDate</span><span class="p">())</span>
+<span class="linenos">45</span>
+<span class="linenos">46</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">47</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="check-dokumente-py">
+<h2><code class="docutils literal notranslate"><span class="pre">check_dokumente.py</span></code><a class="headerlink" href="#check-dokumente-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einfaches Beispiel für lesenden und schreibenden Zugriff auf APplus Datenbank.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">updateDB</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">docDir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">if</span> <span class="n">docDir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">11</span>        <span class="n">docDir</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getInstallPathWebServer</span><span class="p">()</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;DocLib&quot;</span><span class="p">))</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="n">sql</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;ARTIKEL&quot;</span><span class="p">,</span> <span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">)</span>
+<span class="linenos">15</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addConditionFieldStringNotEmpty</span><span class="p">(</span><span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">server</span><span class="o">.</span><span class="n">dbQueryAll</span><span class="p">(</span><span class="n">sql</span><span class="p">):</span>
+<span class="linenos">18</span>        <span class="n">doc</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">docDir</span> <span class="o">+</span> <span class="n">row</span><span class="o">.</span><span class="n">DOCUMENTS</span><span class="p">)</span>
+<span class="linenos">19</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<span class="linenos">20</span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bild &#39;</span><span class="si">{}</span><span class="s2">&#39; für Artikel &#39;</span><span class="si">{}</span><span class="s2">&#39; nicht gefunden&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">ARTIKEL</span><span class="p">))</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>            <span class="k">if</span> <span class="n">updateDB</span><span class="p">:</span>
+<span class="linenos">23</span>                <span class="n">upd</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">mkUseXMLRowUpdate</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+<span class="linenos">24</span>                <span class="n">upd</span><span class="o">.</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;DOCUMENTS&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="linenos">25</span>                <span class="n">upd</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">29</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="adhoc-report-py">
+<h2><code class="docutils literal notranslate"><span class="pre">adhoc_report.py</span></code><a class="headerlink" href="#adhoc-report-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sehr einfaches Beispiel zur Erstellung einer Excel-Tabelle aus einer SQL-Abfrage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 7</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">)</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="c1"># Einfache SQL-Anfrage</span>
+<span class="linenos">10</span>    <span class="n">sql1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;select Material, count(*) as Anzahl from ARTIKEL &quot;</span>
+<span class="linenos">11</span>            <span class="s2">&quot;group by MATERIAL having MATERIAL is not null &quot;</span>
+<span class="linenos">12</span>            <span class="s2">&quot;order by Anzahl desc&quot;</span><span class="p">)</span>
+<span class="linenos">13</span>    <span class="n">df1</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql1</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="c1"># Sql Select-Statements können auch über SqlStatementSelect zusammengebaut</span>
+<span class="linenos">16</span>    <span class="c1"># werden. Die ist bei vielen, komplizierten Bedingungen teilweise hilfreich.</span>
+<span class="linenos">17</span>    <span class="n">sql2</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;ARTIKEL&quot;</span><span class="p">)</span>
+<span class="linenos">18</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;Material&quot;</span><span class="p">,</span> <span class="s2">&quot;count(*) as Anzahl&quot;</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">addGroupBy</span><span class="p">(</span><span class="s2">&quot;MATERIAL&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">having</span><span class="o">.</span><span class="n">addConditionFieldIsNotNull</span><span class="p">(</span><span class="s2">&quot;MATERIAL&quot;</span><span class="p">)</span>
+<span class="linenos">21</span>    <span class="n">sql2</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="s2">&quot;Anzahl desc&quot;</span>
+<span class="linenos">22</span>    <span class="n">df2</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql2</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="c1"># Ausgabe als Excel mit 2 Blättern</span>
+<span class="linenos">25</span>    <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">exportToExcel</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="p">[(</span><span class="n">df1</span><span class="p">,</span> <span class="s2">&quot;Materialien&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="s2">&quot;Materialien 2&quot;</span><span class="p">)],</span> <span class="n">addTable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">29</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">,</span> <span class="s2">&quot;myout.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="mengenabweichung-py">
+<h2><code class="docutils literal notranslate"><span class="pre">mengenabweichung.py</span></code><a class="headerlink" href="#mengenabweichung-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Etwas komplizierteres Beispiel zur Erstellung einer Excel-Datei aus SQL-Abfragen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># Erzeugt Excel-Tabellen mit Werkstattaufträgen und Werkstattauftragspositionen mit Mengenabweichungen</span>
+<span class="linenos">  2</span>
+<span class="linenos">  3</span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="linenos">  4</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos">  5</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos">  6</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># type: ignore</span>
+<span class="linenos">  7</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos">  8</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="linenos">  9</span>
+<span class="linenos"> 10</span>
+<span class="linenos"> 11</span><span class="k">def</span> <span class="nf">ladeAlleWerkstattauftragMengenabweichungen</span><span class="p">(</span>
+<span class="linenos"> 12</span>        <span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span>
+<span class="linenos"> 13</span>        <span class="n">cond</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlCondition</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="linenos"> 14</span>    <span class="n">sql</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;WAUFTRAG w&quot;</span><span class="p">)</span>
+<span class="linenos"> 15</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addLeftJoin</span><span class="p">(</span><span class="s2">&quot;personal p&quot;</span><span class="p">,</span> <span class="s2">&quot;w.UPDUSER = p.PERSONAL&quot;</span><span class="p">)</span>
+<span class="linenos"> 16</span>
+<span class="linenos"> 17</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFieldsTable</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;BAUFTRAG&quot;</span><span class="p">,</span> <span class="s2">&quot;POSITION&quot;</span><span class="p">)</span>
+<span class="linenos"> 18</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;(w.MENGE-w.MENGE_IST) as MENGENABWEICHUNG&quot;</span><span class="p">)</span>
+<span class="linenos"> 19</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFieldsTable</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;MENGE&quot;</span><span class="p">,</span> <span class="s2">&quot;MENGE_IST&quot;</span><span class="p">,</span>
+<span class="linenos"> 20</span>                       <span class="s2">&quot;APLAN as ARTIKEL&quot;</span><span class="p">,</span> <span class="s2">&quot;NAME as ARTIKELNAME&quot;</span><span class="p">)</span>
+<span class="linenos"> 21</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;w.UPDDATE&quot;</span><span class="p">,</span> <span class="s2">&quot;p.NAME as UPDNAME&quot;</span><span class="p">)</span>
+<span class="linenos"> 22</span>
+<span class="linenos"> 23</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addConditionFieldGe</span><span class="p">(</span><span class="s2">&quot;w.STATUS&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos"> 24</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addCondition</span><span class="p">(</span><span class="s2">&quot;abs(w.MENGE-w.MENGE_IST) &gt; 0.001&quot;</span><span class="p">)</span>
+<span class="linenos"> 25</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addCondition</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+<span class="linenos"> 26</span>    <span class="n">sql</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="s2">&quot;w.UPDDATE&quot;</span>
+<span class="linenos"> 27</span>    <span class="n">dfOrg</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+<span class="linenos"> 28</span>
+<span class="linenos"> 29</span>    <span class="c1"># Add Links</span>
+<span class="linenos"> 30</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">dfOrg</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="linenos"> 31</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">])</span>
+<span class="linenos"> 32</span>    <span class="c1"># df = df[[&#39;POSITION&#39;, &#39;BAUFTRAG&#39;, &#39;MENGE&#39;]] # reorder / filter columns</span>
+<span class="linenos"> 33</span>
+<span class="linenos"> 34</span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;POSITION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">mkHyperlinkDataframeColumn</span><span class="p">(</span>
+<span class="linenos"> 35</span>                        <span class="n">dfOrg</span><span class="p">,</span>
+<span class="linenos"> 36</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">POSITION</span><span class="p">,</span>
+<span class="linenos"> 37</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">makeWebLinkWauftrag</span><span class="p">(</span>
+<span class="linenos"> 38</span>                            <span class="n">bauftrag</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">,</span> <span class="n">accessid</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">ID</span><span class="p">))</span>
+<span class="linenos"> 39</span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;BAUFTRAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">mkHyperlinkDataframeColumn</span><span class="p">(</span>
+<span class="linenos"> 40</span>                        <span class="n">dfOrg</span><span class="p">,</span>
+<span class="linenos"> 41</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">,</span>
+<span class="linenos"> 42</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">makeWebLinkBauftrag</span><span class="p">(</span><span class="n">bauftrag</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">))</span>
+<span class="linenos"> 43</span>
+<span class="linenos"> 44</span>    <span class="n">colNames</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 45</span>        <span class="s2">&quot;BAUFTRAG&quot;</span><span class="p">:</span> <span class="s2">&quot;Betriebsauftrag&quot;</span><span class="p">,</span>
+<span class="linenos"> 46</span>        <span class="s2">&quot;POSITION&quot;</span><span class="p">:</span> <span class="s2">&quot;Pos&quot;</span><span class="p">,</span>
+<span class="linenos"> 47</span>        <span class="s2">&quot;MENGENABWEICHUNG&quot;</span><span class="p">:</span> <span class="s2">&quot;Mengenabweichung&quot;</span><span class="p">,</span>
+<span class="linenos"> 48</span>        <span class="s2">&quot;MENGE&quot;</span><span class="p">:</span> <span class="s2">&quot;Menge&quot;</span><span class="p">,</span>
+<span class="linenos"> 49</span>        <span class="s2">&quot;MENGE_IST&quot;</span><span class="p">:</span> <span class="s2">&quot;Menge-Ist&quot;</span><span class="p">,</span>
+<span class="linenos"> 50</span>        <span class="s2">&quot;ARTIKEL&quot;</span><span class="p">:</span> <span class="s2">&quot;Artikel&quot;</span><span class="p">,</span>
+<span class="linenos"> 51</span>        <span class="s2">&quot;ARTIKELNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Artikel-Name&quot;</span><span class="p">,</span>
+<span class="linenos"> 52</span>        <span class="s2">&quot;UPDDATE&quot;</span><span class="p">:</span> <span class="s2">&quot;geändert am&quot;</span><span class="p">,</span>
+<span class="linenos"> 53</span>        <span class="s2">&quot;UPDNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;geändert von&quot;</span>
+<span class="linenos"> 54</span>    <span class="p">}</span>
+<span class="linenos"> 55</span>    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">colNames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 56</span>
+<span class="linenos"> 57</span>    <span class="k">return</span> <span class="n">df</span>
+<span class="linenos"> 58</span>
+<span class="linenos"> 59</span>
+<span class="linenos"> 60</span><span class="k">def</span> <span class="nf">ladeAlleWerkstattauftragPosMengenabweichungen</span><span class="p">(</span>
+<span class="linenos"> 61</span>        <span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span>
+<span class="linenos"> 62</span>        <span class="n">cond</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlCondition</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="linenos"> 63</span>    <span class="n">sql</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlStatementSelect</span><span class="p">(</span><span class="s2">&quot;WAUFTRAGPOS w&quot;</span><span class="p">)</span>
+<span class="linenos"> 64</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addLeftJoin</span><span class="p">(</span><span class="s2">&quot;personal p&quot;</span><span class="p">,</span> <span class="s2">&quot;w.UPDUSER = p.PERSONAL&quot;</span><span class="p">)</span>
+<span class="linenos"> 65</span>
+<span class="linenos"> 66</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFieldsTable</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;BAUFTRAG&quot;</span><span class="p">,</span> <span class="s2">&quot;POSITION&quot;</span><span class="p">,</span> <span class="s2">&quot;AG&quot;</span><span class="p">)</span>
+<span class="linenos"> 67</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;(w.MENGE-w.MENGE_IST) as MENGENABWEICHUNG&quot;</span><span class="p">)</span>
+<span class="linenos"> 68</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFieldsTable</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;MENGE&quot;</span><span class="p">,</span> <span class="s2">&quot;MENGE_IST&quot;</span><span class="p">,</span> <span class="s2">&quot;APLAN as ARTIKEL&quot;</span><span class="p">)</span>
+<span class="linenos"> 69</span>    <span class="n">sql</span><span class="o">.</span><span class="n">addFields</span><span class="p">(</span><span class="s2">&quot;w.UPDDATE&quot;</span><span class="p">,</span> <span class="s2">&quot;p.NAME as UPDNAME&quot;</span><span class="p">)</span>
+<span class="linenos"> 70</span>
+<span class="linenos"> 71</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addConditionFieldEq</span><span class="p">(</span><span class="s2">&quot;w.STATUS&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="linenos"> 72</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addCondition</span><span class="p">(</span><span class="s2">&quot;abs(w.MENGE-w.MENGE_IST) &gt; 0.001&quot;</span><span class="p">)</span>
+<span class="linenos"> 73</span>    <span class="n">sql</span><span class="o">.</span><span class="n">where</span><span class="o">.</span><span class="n">addCondition</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+<span class="linenos"> 74</span>    <span class="n">sql</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="s2">&quot;w.UPDDATE&quot;</span>
+<span class="linenos"> 75</span>
+<span class="linenos"> 76</span>    <span class="n">dfOrg</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">pandasReadSql</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+<span class="linenos"> 77</span>
+<span class="linenos"> 78</span>    <span class="c1"># Add Links</span>
+<span class="linenos"> 79</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">dfOrg</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="linenos"> 80</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">])</span>
+<span class="linenos"> 81</span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;POSITION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">mkHyperlinkDataframeColumn</span><span class="p">(</span>
+<span class="linenos"> 82</span>                        <span class="n">dfOrg</span><span class="p">,</span>
+<span class="linenos"> 83</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">POSITION</span><span class="p">,</span>
+<span class="linenos"> 84</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">makeWebLinkWauftrag</span><span class="p">(</span>
+<span class="linenos"> 85</span>                            <span class="n">bauftrag</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">,</span> <span class="n">accessid</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">ID</span><span class="p">))</span>
+<span class="linenos"> 86</span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;BAUFTRAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">mkHyperlinkDataframeColumn</span><span class="p">(</span>
+<span class="linenos"> 87</span>                        <span class="n">dfOrg</span><span class="p">,</span>
+<span class="linenos"> 88</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">,</span>
+<span class="linenos"> 89</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">makeWebLinkBauftrag</span><span class="p">(</span><span class="n">bauftrag</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">))</span>
+<span class="linenos"> 90</span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;AG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">mkHyperlinkDataframeColumn</span><span class="p">(</span>
+<span class="linenos"> 91</span>                        <span class="n">dfOrg</span><span class="p">,</span>
+<span class="linenos"> 92</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">AG</span><span class="p">,</span>
+<span class="linenos"> 93</span>                        <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">makeWebLinkWauftragPos</span><span class="p">(</span>
+<span class="linenos"> 94</span>                            <span class="n">bauftrag</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">BAUFTRAG</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">POSITION</span><span class="p">,</span> <span class="n">accessid</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">ID</span><span class="p">))</span>
+<span class="linenos"> 95</span>
+<span class="linenos"> 96</span>    <span class="c1"># Demo zum Hinzufügen einer berechneten Spalte</span>
+<span class="linenos"> 97</span>    <span class="c1"># df[&#39;BAUFPOSAG&#39;] = PyAPplus64.pandas.mkDataframeColumn(dfOrg,</span>
+<span class="linenos"> 98</span>    <span class="c1">#                     lambda r: &quot;{}.{} AG {}&quot;.format(r.BAUFTRAG, r.POSITION, r.AG))</span>
+<span class="linenos"> 99</span>
+<span class="linenos">100</span>    <span class="c1"># Rename Columns</span>
+<span class="linenos">101</span>    <span class="n">colNames</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">102</span>        <span class="s2">&quot;BAUFTRAG&quot;</span><span class="p">:</span> <span class="s2">&quot;Betriebsauftrag&quot;</span><span class="p">,</span>
+<span class="linenos">103</span>        <span class="s2">&quot;POSITION&quot;</span><span class="p">:</span> <span class="s2">&quot;Pos&quot;</span><span class="p">,</span>
+<span class="linenos">104</span>        <span class="s2">&quot;AG&quot;</span><span class="p">:</span> <span class="s2">&quot;AG&quot;</span><span class="p">,</span>
+<span class="linenos">105</span>        <span class="s2">&quot;MENGENABWEICHUNG&quot;</span><span class="p">:</span> <span class="s2">&quot;Mengenabweichung&quot;</span><span class="p">,</span>
+<span class="linenos">106</span>        <span class="s2">&quot;MENGE&quot;</span><span class="p">:</span> <span class="s2">&quot;Menge&quot;</span><span class="p">,</span>
+<span class="linenos">107</span>        <span class="s2">&quot;MENGE_IST&quot;</span><span class="p">:</span> <span class="s2">&quot;Menge-Ist&quot;</span><span class="p">,</span>
+<span class="linenos">108</span>        <span class="s2">&quot;ARTIKEL&quot;</span><span class="p">:</span> <span class="s2">&quot;Artikel&quot;</span><span class="p">,</span>
+<span class="linenos">109</span>        <span class="s2">&quot;UPDDATE&quot;</span><span class="p">:</span> <span class="s2">&quot;geändert am&quot;</span><span class="p">,</span>
+<span class="linenos">110</span>        <span class="s2">&quot;UPDNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;geändert von&quot;</span>
+<span class="linenos">111</span>    <span class="p">}</span>
+<span class="linenos">112</span>    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">colNames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">113</span>    <span class="k">return</span> <span class="n">df</span>
+<span class="linenos">114</span>
+<span class="linenos">115</span>
+<span class="linenos">116</span><span class="k">def</span> <span class="nf">computeInYearMonthCond</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="linenos">117</span>                           <span class="n">month</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlCondition</span><span class="p">]:</span>
+<span class="linenos">118</span>    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+<span class="linenos">119</span>        <span class="k">if</span> <span class="n">month</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">120</span>            <span class="k">return</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlConditionDateTimeFieldInYear</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+<span class="linenos">121</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">122</span>            <span class="k">return</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlConditionDateTimeFieldInMonth</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="linenos">123</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">124</span>        <span class="k">return</span> <span class="kc">None</span>
+<span class="linenos">125</span>
+<span class="linenos">126</span>
+<span class="linenos">127</span><span class="k">def</span> <span class="nf">computeFileName</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">month</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos">128</span>    <span class="k">if</span> <span class="n">year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">129</span>        <span class="k">return</span> <span class="s1">&#39;mengenabweichungen-all.xlsx&#39;</span>
+<span class="linenos">130</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">131</span>        <span class="k">if</span> <span class="n">month</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">132</span>            <span class="k">return</span> <span class="s1">&#39;mengenabweichungen-</span><span class="si">{:04d}</span><span class="s1">.xlsx&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="linenos">133</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">134</span>            <span class="k">return</span> <span class="s1">&#39;mengenabweichungen-</span><span class="si">{:04d}</span><span class="s1">-</span><span class="si">{:02d}</span><span class="s1">.xlsx&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="linenos">135</span>
+<span class="linenos">136</span>
+<span class="linenos">137</span><span class="k">def</span> <span class="nf">_exportInternal</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span> <span class="n">fn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<span class="linenos">138</span>                    <span class="n">cond</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PyAPplus64</span><span class="o">.</span><span class="n">SqlCondition</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="linenos">139</span>    <span class="n">df1</span> <span class="o">=</span> <span class="n">ladeAlleWerkstattauftragMengenabweichungen</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+<span class="linenos">140</span>    <span class="n">df2</span> <span class="o">=</span> <span class="n">ladeAlleWerkstattauftragPosMengenabweichungen</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+<span class="linenos">141</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erzeuge &quot;</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span>
+<span class="linenos">142</span>    <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">pandas</span><span class="o">.</span><span class="n">exportToExcel</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="p">[(</span><span class="n">df1</span><span class="p">,</span> <span class="s2">&quot;WAuftrag&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="s2">&quot;WAuftrag-Pos&quot;</span><span class="p">)],</span> <span class="n">addTable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">143</span>    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="linenos">144</span>
+<span class="linenos">145</span>
+<span class="linenos">146</span><span class="k">def</span> <span class="nf">exportVonBis</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span> <span class="n">fn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<span class="linenos">147</span>                 <span class="n">von</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">],</span> <span class="n">bis</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="linenos">148</span>    <span class="n">cond</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">sql_utils</span><span class="o">.</span><span class="n">SqlConditionDateTimeFieldInRange</span><span class="p">(</span><span class="s2">&quot;w.UPDDATE&quot;</span><span class="p">,</span> <span class="n">von</span><span class="p">,</span> <span class="n">bis</span><span class="p">)</span>
+<span class="linenos">149</span>    <span class="k">return</span> <span class="n">_exportInternal</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+<span class="linenos">150</span>
+<span class="linenos">151</span>
+<span class="linenos">152</span><span class="k">def</span> <span class="nf">exportYearMonth</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span>
+<span class="linenos">153</span>                    <span class="n">year</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">month</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="linenos">154</span>    <span class="n">cond</span> <span class="o">=</span> <span class="n">computeInYearMonthCond</span><span class="p">(</span><span class="s2">&quot;w.UPDDATE&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="n">month</span><span class="p">)</span>
+<span class="linenos">155</span>    <span class="n">fn</span> <span class="o">=</span> <span class="n">computeFileName</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="n">month</span><span class="p">)</span>
+<span class="linenos">156</span>    <span class="k">return</span> <span class="n">_exportInternal</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+<span class="linenos">157</span>
+<span class="linenos">158</span>
+<span class="linenos">159</span><span class="k">def</span> <span class="nf">computePreviousMonthYear</span><span class="p">(</span><span class="n">cyear</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="linenos">160</span>    <span class="k">if</span> <span class="n">cmonth</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos">161</span>        <span class="k">return</span> <span class="p">(</span><span class="n">cyear</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="linenos">162</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">163</span>        <span class="k">return</span> <span class="p">(</span><span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">164</span>
+<span class="linenos">165</span>
+<span class="linenos">166</span><span class="k">def</span> <span class="nf">computeNextMonthYear</span><span class="p">(</span><span class="n">cyear</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="linenos">167</span>    <span class="k">if</span> <span class="n">cmonth</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
+<span class="linenos">168</span>        <span class="k">return</span> <span class="p">(</span><span class="n">cyear</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="linenos">169</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">170</span>        <span class="k">return</span> <span class="p">(</span><span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">171</span>
+<span class="linenos">172</span>
+<span class="linenos">173</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">],</span> <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">174</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+<span class="linenos">175</span>
+<span class="linenos">176</span>    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="linenos">177</span>    <span class="p">(</span><span class="n">cmonth</span><span class="p">,</span> <span class="n">cyear</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="linenos">178</span>    <span class="p">(</span><span class="n">pyear</span><span class="p">,</span> <span class="n">pmonth</span><span class="p">)</span> <span class="o">=</span> <span class="n">computePreviousMonthYear</span><span class="p">(</span><span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">)</span>
+<span class="linenos">179</span>
+<span class="linenos">180</span>    <span class="c1"># Ausgaben</span>
+<span class="linenos">181</span>    <span class="n">exportYearMonth</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">)</span>  <span class="c1"># Aktueller Monat</span>
+<span class="linenos">182</span>    <span class="n">exportYearMonth</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">pyear</span><span class="p">,</span> <span class="n">pmonth</span><span class="p">)</span>  <span class="c1"># Vorheriger Monat</span>
+<span class="linenos">183</span>    <span class="c1"># export(cyear) # aktuelles Jahr</span>
+<span class="linenos">184</span>    <span class="c1"># export(cyear-1) # letztes Jahr</span>
+<span class="linenos">185</span>    <span class="c1"># export() # alles</span>
+<span class="linenos">186</span>
+<span class="linenos">187</span>
+<span class="linenos">188</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">189</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="mengenabweichung-gui-py">
+<h2><code class="docutils literal notranslate"><span class="pre">mengenabweichung_gui.py</span></code><a class="headerlink" href="#mengenabweichung-gui-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beispiel für eine sehr einfache GUI, die die Eingabe einfacher Parameter erlaubt.
+Die GUI wird um die Erzeugung von Excel-Dateien mit Mengenabweichungen gebaut.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">PySimpleGUI</span> <span class="k">as</span> <span class="nn">sg</span>  <span class="c1"># type: ignore</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">mengenabweichung</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="k">def</span> <span class="nf">parseDate</span><span class="p">(</span><span class="n">dateS</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]:</span>
+<span class="linenos">11</span>    <span class="k">if</span> <span class="n">dateS</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">dateS</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="linenos">13</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">14</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">15</span>            <span class="k">return</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dateS</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+<span class="linenos">16</span>        <span class="k">except</span><span class="p">:</span>
+<span class="linenos">17</span>            <span class="n">sg</span><span class="o">.</span><span class="n">popup_error</span><span class="p">(</span><span class="s2">&quot;Fehler beim Parsen des Datums &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dateS</span><span class="p">))</span>
+<span class="linenos">18</span>            <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="k">def</span> <span class="nf">createFile</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">APplusServer</span><span class="p">,</span> <span class="n">fileS</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vonS</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bisS</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">22</span>    <span class="p">(</span><span class="n">von</span><span class="p">,</span> <span class="n">vonOK</span><span class="p">)</span> <span class="o">=</span> <span class="n">parseDate</span><span class="p">(</span><span class="n">vonS</span><span class="p">)</span>
+<span class="linenos">23</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">vonOK</span><span class="p">:</span>
+<span class="linenos">24</span>        <span class="k">return</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="p">(</span><span class="n">bis</span><span class="p">,</span> <span class="n">bisOK</span><span class="p">)</span> <span class="o">=</span> <span class="n">parseDate</span><span class="p">(</span><span class="n">bisS</span><span class="p">)</span>
+<span class="linenos">27</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">bisOK</span><span class="p">:</span>
+<span class="linenos">28</span>        <span class="k">return</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>    <span class="k">if</span> <span class="p">(</span><span class="n">fileS</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">fileS</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+<span class="linenos">31</span>        <span class="n">sg</span><span class="o">.</span><span class="n">popup_error</span><span class="p">(</span><span class="s2">&quot;Es wurde keine Ausgabedatei ausgewählt.&quot;</span><span class="p">)</span>
+<span class="linenos">32</span>        <span class="k">return</span>
+<span class="linenos">33</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">34</span>        <span class="n">file</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">fileS</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">mengenabweichung</span><span class="o">.</span><span class="n">exportVonBis</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span> <span class="n">von</span><span class="p">,</span> <span class="n">bis</span><span class="p">)</span>
+<span class="linenos">37</span>    <span class="n">sg</span><span class="o">.</span><span class="n">popup_ok</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> Datensätze erfolgreich in Datei &#39;</span><span class="si">{}</span><span class="s2">&#39; geschrieben.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">file</span><span class="p">))</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">],</span> <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">41</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span>    <span class="n">layout</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">44</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">((</span><span class="s1">&#39;Bitte geben Sie an, für welchen Zeitraum die &#39;</span>
+<span class="linenos">45</span>                  <span class="s1">&#39;Mengenabweichungen ausgegeben werden sollen:&#39;</span><span class="p">))],</span>
+<span class="linenos">46</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Von (einschließlich)&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">sg</span><span class="o">.</span><span class="n">InputText</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;Von&#39;</span><span class="p">),</span>
+<span class="linenos">47</span>         <span class="n">sg</span><span class="o">.</span><span class="n">CalendarButton</span><span class="p">(</span><span class="s2">&quot;Kalender&quot;</span><span class="p">,</span> <span class="n">close_when_date_chosen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">48</span>                           <span class="n">target</span><span class="o">=</span><span class="s2">&quot;Von&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">)],</span>
+<span class="linenos">49</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Bis (ausschließlich)&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">sg</span><span class="o">.</span><span class="n">InputText</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;Bis&#39;</span><span class="p">),</span>
+<span class="linenos">50</span>         <span class="n">sg</span><span class="o">.</span><span class="n">CalendarButton</span><span class="p">(</span><span class="s2">&quot;Kalender&quot;</span><span class="p">,</span> <span class="n">close_when_date_chosen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">51</span>                           <span class="n">target</span><span class="o">=</span><span class="s2">&quot;Bis&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">)],</span>
+<span class="linenos">52</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Ausgabedatei&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">sg</span><span class="o">.</span><span class="n">InputText</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;File&#39;</span><span class="p">),</span>
+<span class="linenos">53</span>         <span class="n">sg</span><span class="o">.</span><span class="n">FileSaveAs</span><span class="p">(</span><span class="n">button_text</span><span class="o">=</span><span class="s2">&quot;wählen&quot;</span><span class="p">,</span>
+<span class="linenos">54</span>                       <span class="n">target</span><span class="o">=</span><span class="s2">&quot;File&quot;</span><span class="p">,</span>
+<span class="linenos">55</span>                       <span class="n">file_types</span><span class="o">=</span><span class="p">((</span><span class="s1">&#39;Excel Files&#39;</span><span class="p">,</span> <span class="s1">&#39;*.xlsx&#39;</span><span class="p">),),</span>
+<span class="linenos">56</span>                       <span class="n">default_extension</span><span class="o">=</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)],</span>
+<span class="linenos">57</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Aktueller Monat&quot;</span><span class="p">),</span> <span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Letzter Monat&quot;</span><span class="p">),</span>
+<span class="linenos">58</span>         <span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Aktuelles Jahr&quot;</span><span class="p">),</span> <span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Letztes Jahr&quot;</span><span class="p">)],</span>
+<span class="linenos">59</span>        <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Speichern&quot;</span><span class="p">),</span> <span class="n">sg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Beenden&quot;</span><span class="p">)]</span>
+<span class="linenos">60</span>    <span class="p">]</span>
+<span class="linenos">61</span>
+<span class="linenos">62</span>    <span class="n">systemName</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getSystemName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">server</span><span class="o">.</span><span class="n">scripttool</span><span class="o">.</span><span class="n">getMandant</span><span class="p">()</span>
+<span class="linenos">63</span>    <span class="n">window</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="s2">&quot;Mengenabweichung &quot;</span> <span class="o">+</span> <span class="n">systemName</span><span class="p">,</span> <span class="n">layout</span><span class="p">)</span>
+<span class="linenos">64</span>    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="linenos">65</span>    <span class="p">(</span><span class="n">cmonth</span><span class="p">,</span> <span class="n">cyear</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="linenos">66</span>    <span class="p">(</span><span class="n">pyear</span><span class="p">,</span> <span class="n">pmonth</span><span class="p">)</span> <span class="o">=</span> <span class="n">mengenabweichung</span><span class="o">.</span><span class="n">computePreviousMonthYear</span><span class="p">(</span><span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">)</span>
+<span class="linenos">67</span>    <span class="p">(</span><span class="n">nyear</span><span class="p">,</span> <span class="n">nmonth</span><span class="p">)</span> <span class="o">=</span> <span class="n">mengenabweichung</span><span class="o">.</span><span class="n">computeNextMonthYear</span><span class="p">(</span><span class="n">cyear</span><span class="p">,</span> <span class="n">cmonth</span><span class="p">)</span>
+<span class="linenos">68</span>
+<span class="linenos">69</span>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">70</span>        <span class="n">event</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="linenos">71</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="n">sg</span><span class="o">.</span><span class="n">WIN_CLOSED</span> <span class="ow">or</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Beenden&#39;</span><span class="p">:</span>
+<span class="linenos">72</span>            <span class="k">break</span>
+<span class="linenos">73</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Aktueller Monat&#39;</span><span class="p">:</span>
+<span class="linenos">74</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Von&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.</span><span class="si">{:02d}</span><span class="s2">.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmonth</span><span class="p">,</span> <span class="n">cyear</span><span class="p">))</span>
+<span class="linenos">75</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Bis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.</span><span class="si">{:02d}</span><span class="s2">.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nmonth</span><span class="p">,</span> <span class="n">nyear</span><span class="p">))</span>
+<span class="linenos">76</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Letzter Monat&#39;</span><span class="p">:</span>
+<span class="linenos">77</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Von&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.</span><span class="si">{:02d}</span><span class="s2">.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pmonth</span><span class="p">,</span> <span class="n">pyear</span><span class="p">))</span>
+<span class="linenos">78</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Bis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.</span><span class="si">{:02d}</span><span class="s2">.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmonth</span><span class="p">,</span> <span class="n">cyear</span><span class="p">))</span>
+<span class="linenos">79</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Aktuelles Jahr&#39;</span><span class="p">:</span>
+<span class="linenos">80</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Von&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.01.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cyear</span><span class="p">))</span>
+<span class="linenos">81</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Bis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.01.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cyear</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="linenos">82</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Letztes Jahr&#39;</span><span class="p">:</span>
+<span class="linenos">83</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Von&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.01.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cyear</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="linenos">84</span>            <span class="n">window</span><span class="p">[</span><span class="s1">&#39;Bis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;01.01.</span><span class="si">{:04d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cyear</span><span class="p">))</span>
+<span class="linenos">85</span>        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;Speichern&#39;</span><span class="p">:</span>
+<span class="linenos">86</span>            <span class="k">try</span><span class="p">:</span>
+<span class="linenos">87</span>                <span class="n">createFile</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="linenos">88</span>                           <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Von&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="n">values</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Bis&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="linenos">89</span>            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="linenos">90</span>                <span class="n">sg</span><span class="o">.</span><span class="n">popup_error_with_traceback</span><span class="p">(</span><span class="s2">&quot;Beim Erzeugen der Excel-Datei trat ein Fehler auf:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="linenos">91</span>
+<span class="linenos">92</span>    <span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="linenos">93</span>
+<span class="linenos">94</span>
+<span class="linenos">95</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">96</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlProd</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="copy-artikel-py">
+<h2><code class="docutils literal notranslate"><span class="pre">copy_artikel.py</span></code><a class="headerlink" href="#copy-artikel-py" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beispiel, wie Artikel inklusive Arbeitsplan und Stückliste dupliziert werden kann.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">PyAPplus64</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">applus_configs</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">yaml</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">confFile</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">artikel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">artikelNeu</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="c1"># Server verbinden</span>
+<span class="linenos">11</span>    <span class="n">server</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">applus</span><span class="o">.</span><span class="n">applusFromConfigFile</span><span class="p">(</span><span class="n">confFile</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1"># DuplicateBusinessObject für Artikel erstellen</span>
+<span class="linenos">14</span>    <span class="n">dArt</span> <span class="o">=</span> <span class="n">PyAPplus64</span><span class="o">.</span><span class="n">duplicate</span><span class="o">.</span><span class="n">loadDBDuplicateArtikel</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">artikel</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1"># DuplicateBusinessObject zur Demonstration in YAML konvertieren und zurück</span>
+<span class="linenos">17</span>    <span class="n">dArtYaml</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dArt</span><span class="p">)</span>
+<span class="linenos">18</span>    <span class="nb">print</span><span class="p">(</span><span class="n">dArtYaml</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="n">dArt2</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dArtYaml</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">UnsafeLoader</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="c1"># Neue Artikel-Nummer bestimmen und DuplicateBusinessObject in DB schreiben</span>
+<span class="linenos">22</span>    <span class="c1"># Man könnte hier genauso gut einen anderen Server verwenden</span>
+<span class="linenos">23</span>    <span class="k">if</span> <span class="p">(</span><span class="n">artikelNeu</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+<span class="linenos">24</span>        <span class="n">artikelNeu</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">nextNumber</span><span class="p">(</span><span class="s2">&quot;Artikel&quot;</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">dArt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+<span class="linenos">27</span>        <span class="n">dArt</span><span class="o">.</span><span class="n">setFields</span><span class="p">({</span><span class="s2">&quot;artikel&quot;</span><span class="p">:</span> <span class="n">artikelNeu</span><span class="p">})</span>
+<span class="linenos">28</span>        <span class="n">res</span> <span class="o">=</span> <span class="n">dArt</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+<span class="linenos">29</span>        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">33</span>    <span class="c1"># Logger Einrichten</span>
+<span class="linenos">34</span>    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="linenos">35</span>    <span class="c1"># logger = logging.getLogger(&quot;PyAPplus64.applus_db&quot;);</span>
+<span class="linenos">36</span>    <span class="c1"># logger.setLevel(logging.ERROR)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="n">main</span><span class="p">(</span><span class="n">applus_configs</span><span class="o">.</span><span class="n">serverConfYamlTest</span><span class="p">,</span> <span class="s2">&quot;my-artikel&quot;</span><span class="p">,</span> <span class="n">artikelNeu</span><span class="o">=</span><span class="s2">&quot;my-artikel-copy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhaltsverzeichnis</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Beispiele</a><ul>
+<li><a class="reference internal" href="#config-dateien">Config-Dateien</a></li>
+<li><a class="reference internal" href="#read-settings-py"><code class="docutils literal notranslate"><span class="pre">read_settings.py</span></code></a></li>
+<li><a class="reference internal" href="#check-dokumente-py"><code class="docutils literal notranslate"><span class="pre">check_dokumente.py</span></code></a></li>
+<li><a class="reference internal" href="#adhoc-report-py"><code class="docutils literal notranslate"><span class="pre">adhoc_report.py</span></code></a></li>
+<li><a class="reference internal" href="#mengenabweichung-py"><code class="docutils literal notranslate"><span class="pre">mengenabweichung.py</span></code></a></li>
+<li><a class="reference internal" href="#mengenabweichung-gui-py"><code class="docutils literal notranslate"><span class="pre">mengenabweichung_gui.py</span></code></a></li>
+<li><a class="reference internal" href="#copy-artikel-py"><code class="docutils literal notranslate"><span class="pre">copy_artikel.py</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="abhaengigkeiten.html"
+                        title="vorheriges Kapitel">Abhängigkeiten</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="generated/PyAPplus64.html"
+                        title="nächstes Kapitel">PyAPplus64 package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/examples.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python-Modulindex"
+             >Module</a> |</li>
+        <li class="right" >
+          <a href="generated/PyAPplus64.html" title="PyAPplus64 package"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="abhaengigkeiten.html" title="Abhängigkeiten"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyAPplus64 1.1.0 Dokumentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Beispiele</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Thomas Tuerk.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>
