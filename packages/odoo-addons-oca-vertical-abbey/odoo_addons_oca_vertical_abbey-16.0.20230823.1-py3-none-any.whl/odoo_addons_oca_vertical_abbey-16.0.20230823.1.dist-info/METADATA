@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-vertical-abbey
+Version: 16.0.20230823.1
+Summary: Meta package for oca-vertical-abbey Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-donation-mass (<16.1dev,>=16.0dev)
+Requires-Dist: odoo-addon-donation-stay (<16.1dev,>=16.0dev)
+Requires-Dist: odoo-addon-mass (<16.1dev,>=16.0dev)
+Requires-Dist: odoo-addon-stay (<16.1dev,>=16.0dev)
+Requires-Dist: odoo-addon-stay-report-py3o (<16.1dev,>=16.0dev)
+
+UNKNOWN
+
