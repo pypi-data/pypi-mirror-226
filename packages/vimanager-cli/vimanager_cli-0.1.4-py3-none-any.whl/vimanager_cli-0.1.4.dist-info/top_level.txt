@@ -1,0 +1,3 @@
+vimanager
+vimanager/cli
+vimanager/cli/spotify
