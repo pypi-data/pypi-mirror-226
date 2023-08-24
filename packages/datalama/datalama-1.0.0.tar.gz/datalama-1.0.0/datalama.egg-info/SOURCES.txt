@@ -1,0 +1,12 @@
+README.md
+setup.py
+datalama/__init__.py
+datalama/__version__.py
+datalama/api.py
+datalama/asyncapi.py
+datalama/base.py
+datalama.egg-info/PKG-INFO
+datalama.egg-info/SOURCES.txt
+datalama.egg-info/dependency_links.txt
+datalama.egg-info/requires.txt
+datalama.egg-info/top_level.txt
