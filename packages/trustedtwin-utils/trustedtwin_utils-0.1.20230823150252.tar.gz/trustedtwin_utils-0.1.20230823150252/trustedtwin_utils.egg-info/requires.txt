@@ -1,0 +1,6 @@
+pydantic==2.2.1
+setuptools==68.1.2
+pydantic==2.2.1
+twine
+wheel
+pip
