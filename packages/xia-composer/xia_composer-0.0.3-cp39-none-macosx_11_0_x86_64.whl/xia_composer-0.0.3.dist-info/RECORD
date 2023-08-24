@@ -1,0 +1,15 @@
+xia_composer/__init__.py,sha256=4E719u7TDe8z803N4ImKQ8ng93r4nXc8MkClp4dYjEk,451
+xia_composer/actor.cpython-39-darwin.so,sha256=LQ0Ca-mP-EEMXlhvLjnG9vAF-yagIStUK1D9cr9DPKY,305544
+xia_composer/campaign.cpython-39-darwin.so,sha256=s2XI4dhzJXJR3IWekyv8H8mUN-1BAkdcO-9twxGZOx4,218400
+xia_composer/dialog.cpython-39-darwin.so,sha256=SJzyfdBhF1NDqvQE4XMrzr-IRTS1SsqOiLlzKJBtbC4,234704
+xia_composer/knowledge.cpython-39-darwin.so,sha256=YwXE7Y5dPS6iDQx_4o8JgpIIS5-s6MP7jeHu6i622_I,269840
+xia_composer/mission.cpython-39-darwin.so,sha256=8GXQd8y7LW7aCtwHyBZ_F2Ibp3YKzHbXxXi_ggW4vvQ,406608
+xia_composer/task.cpython-39-darwin.so,sha256=0wXWcOvyDD4_JTLCDIPuTvOpKCWUmFySBHE4fWVhTfU,269896
+xia_composer/templates/missions/product_design.json,sha256=QVHad7nTgWQPGF6kbfLPgThq-WDEngjnoq6mh6F9PtE,393
+xia_composer/templates/prompts/generator.prompt,sha256=WusTmwwRXesUglqCVGw6BVllSuMQhQDSK4wSLAoQIaE,775
+xia_composer/templates/tasks/requirements/requirement_analysis.prompt,sha256=bnUBks0twCPYmXq8dC51C5vAFKmCLTusZ9C8S-kRxvw,346
+xia_composer-0.0.3.dist-info/LICENSE.txt,sha256=IrHnMppnQ6016SlLoilZCHzBHEnrdEnr1FwBzTTZ8Jg,153
+xia_composer-0.0.3.dist-info/METADATA,sha256=3UtbQU00jOIkRHLoH_q2KHGFjQIli1REH8rl1ikNTdQ,470
+xia_composer-0.0.3.dist-info/WHEEL,sha256=NsapCMY7EanMRKZsZABtoiyq2rs4aXJ4FKsV_kV91NE,108
+xia_composer-0.0.3.dist-info/top_level.txt,sha256=L9HGsbEYSQK12f9k4YONKIkeAzNTpok4NnEaNShfYEU,13
+xia_composer-0.0.3.dist-info/RECORD,,

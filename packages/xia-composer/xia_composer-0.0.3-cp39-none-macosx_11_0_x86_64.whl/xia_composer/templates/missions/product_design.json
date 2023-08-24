@@ -1,0 +1,16 @@
+{
+  "profile": "You are a product manager; the goal is to design a concise, usable, efficient product",
+  "contexts": [
+    "requirements/original_requirements"
+  ],
+  "tasks": [
+    {
+      "type": "Produce",
+      "name": "requirements/requirement_analysis",
+      "title": "Requirement Analysis",
+      "required_contexts": [
+        "requirements/original_requirements"
+      ]
+    }
+  ]
+}
