@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: python-chianode
+Version: 0.1.1
+Summary: Python wrapper for Chia blockchain node APIs
+Home-page: https://github.com/circuitdao/python-chianode
+License: MIT
+Keywords: Chia,blockchain,node,full node,wrapper,API
+Author: CircuitDAO
+Author-email: info@circuitdao.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: anyio (==3.6.2)
+Requires-Dist: async-generator (==1.10)
+Requires-Dist: build (==0.10.0)
+Requires-Dist: certifi (==2023.7.22)
+Requires-Dist: h11 (==0.14.0)
+Requires-Dist: h2 (==4.1.0)
+Requires-Dist: hpack (==4.0.0)
+Requires-Dist: httpcore (==0.17.3)
+Requires-Dist: httpx (==0.24.1)
+Requires-Dist: hyperframe (==6.0.1)
+Requires-Dist: idna (==3.4)
+Requires-Dist: iniconfig (==2.0.0)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: pluggy (==1.2.0)
+Requires-Dist: pyproject_hooks (==1.0.0)
+Requires-Dist: pyyaml (>=6.0.0,<7.0.0)
+Requires-Dist: sniffio (==1.3.0)
+Project-URL: Bug Tracker, https://github.com/python-poetry/poetry/issues
+Description-Content-Type: text/markdown
+
+# About
+
+Python-chianode is a Python wrapper for [Chia blockchain](https://www.chia.net) full node APIs.
+
+The package supports the [official RPC API](https://docs.chia.net/full-node-rpc) for Chia nodes running on localhost, as well as the [Mojonode API](https://api.mojonode.com/docs). Calls are made asynchronously, and it is possible to receive streaming responses.
+
+Mojonode provides advanced REST calls not available via the official RPC interface, blockchain data via SQL query, and an event stream for blockchain and mempool events. Note that Mojonode does not implement all official RPCs. The ```get_routes``` endpoint returns a list of available endpoints.
+
+# Installation
+
+To install python-chianode, run
+
+```pip install python-chianode```
+
+# Quick start
+
+Import and instantiate the Chia node client in your Python file as follows
+
+```
+from chianode.mojoclient import MojoClient
+
+node = MojoClient()
+```
+
+By default, both MojoClient and RpcClient connect to Mojonode. To connect to a local node only, do
+```
+from chianode.rpcclient import RpcClient
+from chianode.constants import LOCALHOST
+
+node = RpcClient(base_url=LOCALHOST)
+```
+
+To use Mojonode in conjunction with a local node, do
+```
+from chianode.mojoclient import MojoClient
+from chianode.constants import LOCALHOST
+
+node = MojoClient(base_url=LOCALHOST)
+```
+
+More detailed examples on how to use the wrapper can be found in ```example_rpc.py``` and ```example_events.py``` files.
