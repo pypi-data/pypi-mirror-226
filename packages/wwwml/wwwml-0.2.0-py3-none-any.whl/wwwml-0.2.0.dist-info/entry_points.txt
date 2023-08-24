@@ -1,0 +1,2 @@
+[console_scripts]
+wwwml = wwwml.__main__:main

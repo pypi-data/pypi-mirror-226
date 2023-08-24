@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: wwwml
+Version: 0.2.0
+Summary: What's wrong with my linux? A LLM based tool to diagnose linux problems.
+Project-URL: homepage, https://github.com/iaalm/wwwml
+Project-URL: repository, https://github.com/iaalm/wwwml
+Author-email: iaalm <iaalmsimon@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Requires-Dist: langchain>=0.0.271
+Requires-Dist: openai>=0.27.9
+Description-Content-Type: text/markdown
+
+# wwwml [![PyPI version](https://badge.fury.io/py/wwwml.svg)](https://badge.fury.io/py/wwwml) [![Release Building](https://github.com/iaalm/wwwml/actions/workflows/release.yml/badge.svg)](https://github.com/iaalm/wwwml/actions/workflows/release.yml) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+What's wrong with my linux? A LLM based tool to diagnose linux problems.
+
+## Install
+```bash
+pip install -U wwwml
+```
+
+Set environment variable in your `~/.bashrc`, `~/.zshrc`, etc.
+```bash
+export OPENAI_API_KEY=sk~XXXXXXXX
+```
+Or, to use Azure OpenAI endpoint, set following environment variable:
+```bash
+export OPENAI_API_KEY=XXXXXXXXXX
+export OPENAI_API_BASE=https://XXXXXX.openai.azure.com/
+export OPENAI_API_TYPE=azure
+export OPENAI_API_VERSION=2023-07-01-preview
+# Use a deploymetn of gpt-3.5-turbo or gpt-4 with version 0613 or later
+export WWWML_DEPLOYMENT=gpt-35-turbo-16k
+```
+
+## Usage
+```bash
+python -m wwwml
+# or
+wwwml
+```
+
+## Dependency
+This tool currently call following command to get system information
+- sysstat
+  - iostat
+  - mpstat
+  - vmstat
