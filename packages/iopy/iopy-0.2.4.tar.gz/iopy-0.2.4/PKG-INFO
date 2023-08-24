@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: iopy
+Version: 0.2.4
+Summary: iopy is a (small) library providing input/output capabilities
+Home-page: https://gitlab.com/bendub/iopy
+Author: Benoit Dubois
+Author-email: benoit.dubois@femto-engineering.fr
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Provides-Extra: fx2
+Provides-Extra: smdp
+License-File: LICENSE.txt

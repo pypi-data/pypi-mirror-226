@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README
+setup.py
+iopy/__init__.py
+iopy/fx2.py
+iopy/prologix.py
+iopy/smdp.py
+iopy/version.py
+iopy.egg-info/PKG-INFO
+iopy.egg-info/SOURCES.txt
+iopy.egg-info/dependency_links.txt
+iopy.egg-info/requires.txt
+iopy.egg-info/top_level.txt

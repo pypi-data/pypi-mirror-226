@@ -1,0 +1,47 @@
+============
+iopy
+============
+
+CONTENTS OF THIS FILE
+============
+
+* Introduction
+* Requirements
+* Installation
+
+
+INTRODUCTION
+============
+
+iopy is a (small) library providing input/output capabilities:
+
+ * Fx2 serial to USB device,
+
+ * Prologix GPIB-Ethernet adapter,
+
+ * SDMP - Sycon Multi Drop Protocol (serial link protocol).
+
+
+REQUIREMENTS
+============
+
+Preferably a Linux system with a Debian distribution (not tested with others OS
+nor others distributions).
+The program requires the folowing packages:
+
+ * Python 3 (Normally already installed on a Debian system)
+          $ [sudo] apt-get install python3.4
+
+ * PySerial (for SDMP)
+
+ * PyUsb (for Fx2)
+
+
+INSTALLATION
+============
+
+* PyPi:
+        $ python3 -m pip install --user iopy
+
+* From source:
+        $ python3 -m pip install --user iopy-x.x.tar.gz
