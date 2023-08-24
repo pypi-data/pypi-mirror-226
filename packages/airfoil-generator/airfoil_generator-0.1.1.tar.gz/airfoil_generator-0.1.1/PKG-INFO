@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: airfoil_generator
+Version: 0.1.1
+Summary: Airfoil data points generator with multiple methods.
+Home-page: https://github.com/open-foil
+Author: OpenFoil
+Author-email: openfoil.project@gmail.com
+License: MIT
+Download-URL: https://github.com/open-foil/airfoil-generator/archive/refs/tags/v0.1.1.tar.gz
+Description: UNKNOWN
+Keywords: airfoil,generator,aerodynamics,naca,cst
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
