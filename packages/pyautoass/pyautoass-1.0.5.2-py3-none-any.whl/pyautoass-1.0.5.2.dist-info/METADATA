@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pyautoass
+Version: 1.0.5.2
+Summary: 基于键鼠、图片定位的自动化gui工作套件。
+Author: awise
+Requires-Python: >=3
+Requires-Dist: pyautogui
+Requires-Dist: opencv-python
+Requires-Dist: pywin32
+
