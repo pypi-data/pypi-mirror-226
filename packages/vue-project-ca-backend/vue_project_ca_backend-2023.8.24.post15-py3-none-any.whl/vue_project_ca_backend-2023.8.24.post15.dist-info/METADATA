@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: vue-project-ca-backend
+Version: 2023.8.24.post15
+Summary: ca授权
+Home-page: https://gitee.com/bean_jun/vue-project-ca-backend
+Author: Bean-jun
+Author-email: 1342104001@qq.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: Flask >=2.3.2
+Requires-Dist: Flask-Caching >=2.0.2
+Requires-Dist: Flask-Mail >=0.9.1
+Requires-Dist: Flask-RESTful >=0.3.9
+Requires-Dist: Flask-SQLAlchemy >=3.0.5
+Requires-Dist: marshmallow >=3.19.0
+Requires-Dist: Pillow >=9.5.0
+Requires-Dist: PyJWT >=2.6.0
+Requires-Dist: pycryptodome >=3.17
+Requires-Dist: redis >=4.5.4
+Requires-Dist: APScheduler >=3.10.1
+Requires-Dist: Flask-Limiter >=3.3.1
+
+## 一. 项目CA授权
+
+## 二. 软件安装
+
+2.1 方式1 源码安装
+
+- 确定目标平台windows、linux、macOS
+- 本地使用对应系统进行打包 (执行build.bat 或者 build.sh)
+- 将out文件夹中打包好的文件迁移至目标平台中进行部署 (需要自行安装数据库、服务容器等第三方软件)
+
+2.2 方式2 docker-compose安装
+
+- 本地使用对应系统进行打包 (执行build.sh)
+- 将以下目录拷贝至目标平台中
+    
+    ```shell
+    .
+    ├── Dockerfile
+    ├── README.md
+    ├── docker-compose.yaml
+    ├── out
+    └── requirements-deploy.txt
+    ```
+- 执行docker-compose up .
+    
+
+2.3 方式3 双击安装 (只能在windows平台使用)
+
+- 执行build_execute.py编译exe文件
+
+## 三. 目录说明
+
+```shell
+.
+├── Dockerfile
+├── README.md
+├── build.bat
+├── build.sh
+├── docker-compose.yaml
+├── setup.py              # 支持方式3安装的启动器
+├── out                         # 打包输出目录
+├── python3913.zip              # windows下的python解释器
+├── Inno Setup 6.zip            # windows下的打包器
+├── requirements-build.txt      # 打包专用依赖
+├── requirements-deploy.txt     # 部署专用依赖
+├── requirements.txt            # 开发过程中使用的依赖
+└── src                         # 源码
+```
+
