@@ -1,0 +1,9 @@
+gamma/__init__.py,sha256=XXcSFJoi-ILqx-hkUpsOAG6RK7m77REfIz-b3_BhFKM,41
+gamma/base.py,sha256=-C9s7XG8UfR92GCGP7IqnXvEetYgZBM2vphSfQZjj8w,1044
+gamma/errors.py,sha256=aD936NOpDEMbApC3yHZiOHtsEjraojIzczwtIs1DmXM,97
+gamma/models.py,sha256=a6F_J2yhy01afuAG0wc38tmzberc4-pz-vRZhKHhj1s,373
+gamma/table.py,sha256=Bu4aTEYPAO7unGsMGP0BJiuSXH2yokhpxv8jZo-MkP0,6069
+gamma_kit-0.1.dist-info/METADATA,sha256=vUoU2rvRmdbnFfetKFEMDZOD0AX7jvgJAwaZOxKP2Vc,460
+gamma_kit-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gamma_kit-0.1.dist-info/top_level.txt,sha256=rppjBqIFQXr93RQxbMHQ1eBKmPG-EIZdzmQ5Je4HDOI,6
+gamma_kit-0.1.dist-info/RECORD,,
