@@ -1,0 +1,12 @@
+skscope/base_solver.py,sha256=aw43c0sOEinv_IuYQsEQUl1dPgqF88njgvP2UcNFOE0,26104
+skscope/solver.py,sha256=2OKnZiuqeUocQX-UY_JrR2F2Oq3jxMayM6ss3BdRDPk,72144
+skscope/__init__.py,sha256=p4s1CHEMYxpral3FwWoNCpKiUW5dR0ZMlOz1tK4OI5g,621
+skscope/layer.py,sha256=giXaQo0Gp_45hVIuWOJ6XNceDAb6siLmiiJGEhJcI4c,6552
+skscope/_scope.cpython-311-darwin.so,sha256=C-ZgjBJmNKeYmBL3o6C5SkhV2JkuJbty5OotJlbvrUI,476856
+skscope/skmodel.py,sha256=3ZDszuTnxiIqZoGFgLDWmx3l6cR89rSRA8V3-CTwWWg,13924
+skscope/numeric_solver.py,sha256=MCGBV46Ys_UCIDr7qhSWy-rGvnFGGkyHBHnitgGJyrw,2132
+skscope-0.1.4.dist-info/RECORD,,
+skscope-0.1.4.dist-info/LICENSE,sha256=YrYLv_tkzQdJWbSm3AouP5QfqIl4D7Xhb9jsy0X93Rg,1067
+skscope-0.1.4.dist-info/WHEEL,sha256=1K25WgJ_KyfvTx-UW0AtTToB1lRjnG-GzH7SmFlnRPw,111
+skscope-0.1.4.dist-info/top_level.txt,sha256=quKo8OCkw-NTGUvVQNUNs28HPGm5HlUP09A6AyyQSSM,8
+skscope-0.1.4.dist-info/METADATA,sha256=81eh-AiHkkeDrsNilk-oMPM-aupHWLdzNfvYkEy0Qgk,10856
