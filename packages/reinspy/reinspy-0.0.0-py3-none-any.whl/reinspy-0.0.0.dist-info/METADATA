@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: reinspy
+Version: 0.0.0
+Summary: reinspy - a Python Reinsurance Package
+Home-page: https://github.com/genedan/reinspy
+Author: Gene Dan
+Author-email: genedan@gmail.com
+Project-URL: Documentation, https://reinspy.com/docs
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: chainladder
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: rich
+
+# reinspy - a Python Reinsurance Package
