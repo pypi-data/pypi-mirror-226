@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ediacara
+Version: 0.2.1
+Summary: EGF's alignment reporter
+Author: Peter Vegh
+License: GPLv3+
+Keywords: biology,sequencing
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Ediacara
+========
+
+The Edinburgh Genome Foundry's alignment reporter.
+
+
+**Install:**
+
+.. code:: bash
+
+    pip install ediacara
+
+
+**Copyright:** Copyright 2021 Edinburgh Genome Foundry
+
+

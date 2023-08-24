@@ -1,0 +1,195 @@
+#sidebar: p {{sidebar_text}}
+
+.logos
+  img(src="file:///{{ egf_logo_url }}" style="height:40px; width: auto")
+  img(src="file:///{{ ediacara_logo_url }}" style="width:70px; height:auto; float:right")
+
+hr
+h1 Sequencing analysis report
+hr
+
+p.
+  This document reports the sequencing results of the <b>{{ sequencinggroup.name }}</b> project.
+  There are <b>{{ sequencinggroup.number_of_barcodes }}</b> barcodes in the analysis.
+  Each chapter details the results of one barcode, and within a chapter each section reports on one plasmid.
+  Please see the Appendix on the last page for an explanation of the report.
+
+p.
+  There are <b>{{ sequencinggroup.number_of_reads }}</b> filtered reads in the analysed barcodes of this sequencing run.
+
+div(style="margin-top:1cm; margin-bottom:1cm;")
+
+<div style = "display:block; clear:both; page-break-after:always;"></div>
+
+
+each comparatorgroup in sequencinggroup.comparatorgroups
+
+  h2 Barcode: {{ comparatorgroup.barcode }}
+  hr
+
+  p.
+    Results for the <b>{{ comparatorgroup.number_of_constructs }}</b> construct(s) in the pool:
+    <b>#[span.green {{ comparatorgroup.result_good }}] / #[span.yellow {{ comparatorgroup.result_warning }}] / 
+    #[span.red {{ comparatorgroup.result_error }} ] / #[span.grey {{ comparatorgroup.result_uncertain }} ]
+    </b> (pass / warning / fail / low coverage).
+
+  {{ comparatorgroup.report_table }}
+
+  p Histogram of the <b>{{ comparatorgroup.n_fastq_reads }}</b> FASTQ reads:
+
+  img#diff-figure(src="{{ comparatorgroup.fastq_figure_data }}")
+
+  p The vertical red lines show the expected construct lengths.
+
+  <div style = "display:block; clear:both; page-break-after:always;"></div>
+
+  each comparator in comparatorgroup.comparators
+
+    div(style="margin-top:1cm; margin-bottom:1cm;")
+
+
+    if comparator.is_uncertain
+      p(style="text-align:left;")
+        b(style='font-size: 45px;') #[span.grey ⍰] &ensp; #[span.grey {{ comparator.record.id }}]
+    else
+      if comparator.has_errors
+        p(style="text-align:left;")
+          b(style='font-size: 45px;') #[span.red ☒] &ensp; #[span.grey {{ comparator.record.id }}]
+      else
+        if comparator.has_warnings
+          p(style="text-align:left;")
+            b(style='font-size: 45px;') #[span.yellow ⚠] &ensp; #[span.grey {{ comparator.record.id }}]
+
+        else
+          //- all good
+          p(style="text-align:left;")
+            b(style='font-size: 45px;') #[span.green ☑] &ensp; #[span.grey {{ comparator.record.id }}]
+          //- b(style='font-size: 20px;') &emsp;&emsp; Success!
+
+    p Result: {{ comparator.result }}
+
+    p Length of reference: 
+      strong {{ comparator.reference_length }}
+      |  bp.
+
+    h3 Coverage plot
+
+    if comparator.has_low_coverage
+      p
+        strong #[span.yellow ⚠] Low sequencing depth!
+
+    img#diff-figure(src="{{ comparator.figure_data }}")
+
+    p Positions with zero coverage: #[span.red {{ comparator.zero_coverage_positions_string }} ]
+
+    p Positions with low coverage (<{{ comparator.coverage_cutoff_pct }}%): #[span.red {{ comparator.low_coverage_positions_string }} ]
+
+    p Cumulative plot of longest unaligned interval in each read ({{ comparator.insert_pct_above_cutoff }}% above cutoff. mode: {{ comparator.insert_mode }} bp):
+
+    img#diff-figure(src="{{ comparator.insert_plot_data }}")
+
+    if comparator.has_consensus
+      h3 Comparison with reference
+
+      if comparator.vcf_table_message
+          strong #[span.yellow ⚠] Note: only the first {{ sequencinggroup.vcf_cutoff }} variants are displayed.
+
+      {{ comparator.vcf_table_html }}
+
+      if comparator.has_comparison_error
+        p
+          strong #[span.red ☒] {{ comparator.geneblocks_text }}
+      else
+
+        div(style="display:block; clear:both; page-break-after:always")
+
+        p {{ comparator.geneblocks_text }}
+
+        img#diff-figure(src="{{ comparator.comparison_figure_data }}")
+
+    div(style="display:block; clear:both; page-break-after:always")
+
+    //- <div style = "display:block; clear:both; page-break-after:always;"></div>
+
+
+
+h2 Appendix
+
+p Each barcode chapter consists of a summary and analysis sections.
+
+p
+  h5 Summary page
+p The first page summarises the results and other details for each plasmid construct.
+
+p
+  h5 Analysis pages
+p.
+  Each plasmid construct is analysed separately. The result is summarised with a symbol:<br>
+  #[span.green ☑ / {{ sequencinggroup.result_keywords.good }} ] : correct construct, based on no detection of errors<br>
+  #[span.yellow ⚠ / {{ sequencinggroup.result_keywords.warning }} ] : warning signs are present, review the results and make a decision<br>
+  #[span.red ☒ / {{ sequencinggroup.result_keywords.error }} ] : errors were detected in the construct<br>
+  #[span.grey ⍰ / {{ sequencinggroup.result_keywords.uncertain }} ] : sequencing problems, insufficient reads<br>
+
+p.
+  Depending on settings and input data, some of the described plots may not be in the report.
+
+p
+  strong Coverage
+p.
+  The coverage plot displays the number of reads
+  aligning to each base of the reference, in blue. This is useful for detecting deletions.
+  The grey line shows the median. The dashed lines show the ±stdev.
+  Positions with low coverage are also listed, if there are any.
+  Low coverage = below the coverage threshold.
+
+p
+  strong Comparison with reference
+p.
+  If a consensus (or <i>de novo</i> assembly) sequence is created from the reads,
+  then it is compared with the reference. If the lengths differ more than 5%,
+  then an error is displayed here, otherwise a
+  <a href="https://edinburgh-genome-foundry.github.io/Geneblocks/">GeneBlocks</a>
+  plot is made. In this plot, the reference is displayed,
+  and annotated with changes compared to the consensus obtained from the reads
+  (unless a note tells otherwise). For example, <code>+G</code> means that the reference
+  file has an extra G compared to the DNA sample, in other words, the DNA has a G deletion.
+  A VCF (variant call format) table is also displayed.
+  Both the reported and the VCF table positions are zero-based,
+  but the VCF table reports the position of the variation, rather than the nucleotide.
+  Note that the reported depths (DP) may be lower than the ones in the coverage plot,
+  depending on how the variant call was performed. The columns of the table are:
+   <ul>
+    <li>LOC: 0-based position index (where the first nucleotide has index 0)</li>
+    <li>REF: Reference sequence</li>
+    <li>ALT: Alternative sequence</li>
+    <li>TYPE: The type of allele (either snp, mnp, ins, del or complex)</li>
+    <li>DP: Total read depth at the locus</li>
+    <li>RO: Reference allele observation count</li>
+    <li>AO: Alternate allele observations</li>
+  </ul>
+
+  An additional column T is provided to mark entries (1) that are deemed true mutations. 
+  Inconclusive mutations at repeats (homopolymers) were shown to be systematic sequencing errors, and can be ignored.
+
+p
+  strong Ediacara
+p.
+  The report was generated by <a href="https://edinburgh-genome-foundry.github.io/Ediacara/">Ediacara</a>,
+  a software published by the Edinburgh Genome Foundry (EGF).
+  Ediacara is part of the <a href="https://edinburgh-genome-foundry.github.io/">EGF Codons</a>
+  engineering biology software suite for DNA design, manufacturing and validation.
+
+
+style.
+  .green {
+    color: #86bf86
+  }
+  .grey {
+    color: #a9a9a9
+  }
+  .red {
+    color: #fd5a31
+  }
+  .yellow {
+    color: #f7b500
+  }
