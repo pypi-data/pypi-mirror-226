@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pdferli/README.MD
+pdferli/__init__.py
+pdferli/requirements.txt
+pdferli/thirdparty.json
+pdferli.egg-info/PKG-INFO
+pdferli.egg-info/SOURCES.txt
+pdferli.egg-info/dependency_links.txt
+pdferli.egg-info/requires.txt
+pdferli.egg-info/top_level.txt

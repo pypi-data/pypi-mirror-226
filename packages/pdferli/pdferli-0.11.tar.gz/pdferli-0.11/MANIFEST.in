@@ -1,0 +1,3 @@
+include pdferli/requirements.txt
+include pdferli/thirdparty.json
+include pdferli/README.MD
