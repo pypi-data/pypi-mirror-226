@@ -1,0 +1,9 @@
+armada/__init__.py,sha256=FBk-vExjWZPCDC72hz-xnovOkKWleoRMQ2oVqosuFCk,23
+armada/config.py,sha256=BVfiQznTf-vYz7KCt3tbF6BzTidFm_xlKc31ZnLJrt0,2743
+armada/hermes.py,sha256=R2oX5P8uJfh7l6IV68IAvlIWJic4Ec-l4PrDhk8i3uI,5205
+armada/service_discovery.py,sha256=ESE4dr_K2tkWGTTYoEmUylYG9hHZmGFSoJxf7M27_00,1478
+armada-1.5.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+armada-1.5.dist-info/METADATA,sha256=gygQ1tMJfG13t9nW8YlaQFZRqVfqNW6mJR-8INiDnGQ,421
+armada-1.5.dist-info/WHEEL,sha256=05Ahrak1u2K61DpLp9CDNSbUImLTITCMom_cqTFk6pE,116
+armada-1.5.dist-info/top_level.txt,sha256=SaKoRDJJ1bkA2Lly_EYCX5D9VxncOV0eEI5NYBHU-bs,7
+armada-1.5.dist-info/RECORD,,
