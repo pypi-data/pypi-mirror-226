@@ -1,0 +1,12 @@
+dnfile
+pefile
+click>=8.0.2
+tqdm
+xxhash
+pyyaml
+urllib3
+platformdirs
+
+[:python_version < "3.10"]
+typing_extensions
+importlib_resources

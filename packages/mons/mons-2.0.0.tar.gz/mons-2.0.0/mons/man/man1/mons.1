@@ -1,0 +1,398 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "MONS" "1" "Aug 23, 2023" "" "mons"
+.sp
+Install and manage mods for Celeste.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons [OPTIONS] COMMAND [ARGS]...
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-\-version
+Show the version and exit.
+.UNINDENT
+.SH ADD
+.sp
+Register an existing Celeste (or Everest) install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons add [OPTIONS] NAME PATH
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-\-overlay <overlay>
+Overlay this install on top of PATH.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.INDENT 0.0
+.TP
+.B PATH
+Required argument
+.UNINDENT
+.SH HELP
+.sp
+Display help text for a command.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons help [OPTIONS] [COMMAND]...
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B COMMAND
+Optional argument(s)
+.UNINDENT
+.SH INSTALL
+.sp
+Install Everest.
+.sp
+\fI\%VERSIONSPEC\fP can be a branch name, build number, or version number.
+.sp
+mons can install \(aqmain\(aq and \(aqolympus\-build\(aq artifacts.
+.sp
+If VERSIONSPEC is not supplied, mons will attempt to determine the branch
+that is currently installed, and install the latest build from that branch.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons install [OPTIONS] NAME [SOURCE]
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-\-latest
+Install latest available build, branch\-ignorant.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-src
+Build and install from source folder.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-no\-build
+Use with \fI\%\-\-src\fP to install without building.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-configuration <OPTION>
+Configuration/Framework to build for.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-publish, \-\-no\-publish
+Invoke the \(aqPublish\(aq target when building.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-launch
+Launch Celeste after installing.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.INDENT 0.0
+.TP
+.B SOURCE
+Optional argument
+.UNINDENT
+.SH LAUNCH
+.sp
+Launch the game associated with an install.
+.sp
+Any additional arguments are passed to the launched process.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons launch [OPTIONS] NAME [ARGS]...
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-\-wait
+Wait for game process to exit.
+.UNINDENT
+.sp
+Game Arguments
+.INDENT 0.0
+.TP
+.B \-\-console
+Attach output of game process (implies \fI\%\-\-wait\fP).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-vanilla
+Launch Celeste without Everest.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME [ARGS]...
+Required argument
+.UNINDENT
+.SH LIST
+.sp
+List existing installs.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons list [OPTIONS]
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-v, \-\-verbose
+Enable verbose logging.
+.UNINDENT
+.SH MODS
+.sp
+Manage Everest mods
+.sp
+mons-mods(1)
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons mods [OPTIONS] COMMAND [ARGS]...
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH REMOVE
+.sp
+Remove an existing install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons remove [OPTIONS] NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-\-force
+Skip confirmation prompt.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.SH RENAME
+.sp
+Rename a Celeste install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons rename [OPTIONS] OLD NEW
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B OLD
+Required argument
+.UNINDENT
+.INDENT 0.0
+.TP
+.B NEW
+Required argument
+.UNINDENT
+.SH SET-PATH
+.sp
+Change the path of an existing install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons set\-path [OPTIONS] NAME PATH
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.INDENT 0.0
+.TP
+.B PATH
+Required argument
+.UNINDENT
+.SH SHOW
+.sp
+Display information for a specific install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons show [OPTIONS] NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-v, \-\-verbose
+Enable verbose logging.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.SH UNINSTALL
+.sp
+Uninstall Everest from an overlay install.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons uninstall [OPTIONS] NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.SH USE
+.sp
+Set the default install for mons commands.
+.sp
+To un\-set, run \fIexport MONS_DEFAULT_INSTALL=\fP
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mons use [OPTIONS] NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Options
+.INDENT 0.0
+.TP
+.B \-e, \-\-eval
+Print \fIexport MONS_DEFAULT_INSTALL={NAME}\fP to stdout.
+.UNINDENT
+.sp
+Arguments
+.INDENT 0.0
+.TP
+.B NAME
+Required argument
+.UNINDENT
+.SH COPYRIGHT
+2022-2023, coloursofnoise
+.\" Generated by docutils manpage writer.
+.
