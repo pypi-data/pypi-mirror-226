@@ -1,0 +1,19 @@
+with: assimilations metathesis
+
+#letters: p b t d k g m n ŋ nk ng f v ð s z ʃ s ʧ ch h ʒ h ts ʤ dj w j l ɹ h y ɪ ɛ iː e ʌ ɑ uː a o ʊ ɔː ɑː a ɔɪ aɪ oʊ eɪ aʊ 
+
+# English: (s) + (C) + (r,l,w,y) + (V) + V + (C) + (C) + (C)
+C = p b t d k g m n ŋ f v ð s z ʃ ʒ h ts ʤ w j l ɹ h
+R = n ɹ l t k
+V = ɪ ɛ iː eɪ ʌ ɑ uː aɪ oʊ ɔː ɑː aʊ ɔɪ
+
+$S = CVR?
+words: C?V$S C?V$S$S CVCV? $S$S $S
+
+reject: (..+)\1+
+reject: (..+).\1+
+
+spelling: ɹ > r; ʤ > dj; ʃ > sh; ŋk > nk; ʧ > ch; ŋ > ng; ʒ > zh
+spelling: ɪ > i; ɛ > e; iː > y; eɪ > ei; aɪ > ai; aʊ > au; ʌ > u; ɑː > ā; ɑ > a; uː > û; oʊ > o; ɔː > â; ɔɪ > âi
+
+reject: ɪ$
