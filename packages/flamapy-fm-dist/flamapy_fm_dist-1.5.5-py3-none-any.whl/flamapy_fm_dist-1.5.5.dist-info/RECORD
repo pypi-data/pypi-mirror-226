@@ -1,0 +1,11 @@
+flamapy/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flamapy/interfaces/command_line/__init__.py,sha256=-VR77gKdfzvGEZkdKf7rmDQeUcyykcmLub6uATbt0Lk,1889
+flamapy/interfaces/python/FLAMAFeatureModel.py,sha256=PwzhOtC55qOezLaipIx4cWWJsD27_CD3nDf7elHfYwY,13551
+flamapy/interfaces/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flamapy/interfaces/rest/operations_routes.py,sha256=Cd6YaFaY6Ybouh3tSQ_oJ_eG7esN9k-Ow1Yi74fVb6U,10887
+flamapy_fm_dist-1.5.5.dist-info/LICENSE,sha256=jDSfgHZNBkjmRfQe8jdypwyZWgkktSNfc19KPQnfEnw,14197
+flamapy_fm_dist-1.5.5.dist-info/METADATA,sha256=ogta__vE-owmMqrkTO_d3yo2RxnN7ciYwDe0EduyUQo,12227
+flamapy_fm_dist-1.5.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+flamapy_fm_dist-1.5.5.dist-info/entry_points.txt,sha256=15NQrFS_mPGmvNIuaPb8-3YUY_c5Dbs9CNo7l7jLL-k,77
+flamapy_fm_dist-1.5.5.dist-info/top_level.txt,sha256=2YBI9dg4GVk28AJuyNu6dldi5Riwt5SP0zpNe2lSU5M,8
+flamapy_fm_dist-1.5.5.dist-info/RECORD,,
