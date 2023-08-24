@@ -1,0 +1,15 @@
+xia_composer/__init__.py,sha256=4E719u7TDe8z803N4ImKQ8ng93r4nXc8MkClp4dYjEk,451
+xia_composer/actor.cpython-311-darwin.so,sha256=dmWuFSqBBspAC-vQRjeACypaNMq93TNYt2SfDHowFDM,358416
+xia_composer/campaign.cpython-311-darwin.so,sha256=3xlERh9n5jqWZtr9Tlitykwu7qM7zkGD5hHRTfos9i4,288208
+xia_composer/dialog.cpython-311-darwin.so,sha256=3aESpovo_TkXCG55tjzyyp4fTMGHsIJeZIzlqv948Oo,304464
+xia_composer/knowledge.cpython-311-darwin.so,sha256=WqP7O6NPZ4mIMWNhtdoQqXFCtCCG6nUjoucrp5AlzFQ,322976
+xia_composer/mission.cpython-311-darwin.so,sha256=lj2_4Ijb637teLdAsovMRsIWw_JQoumTSNGuzXzMHvo,508624
+xia_composer/task.cpython-311-darwin.so,sha256=rwCWN5GcR9gOomd-XXXbAIrjivjyD02vZMPHxM29348,339376
+xia_composer/templates/missions/product_design.json,sha256=QVHad7nTgWQPGF6kbfLPgThq-WDEngjnoq6mh6F9PtE,393
+xia_composer/templates/prompts/generator.prompt,sha256=WusTmwwRXesUglqCVGw6BVllSuMQhQDSK4wSLAoQIaE,775
+xia_composer/templates/tasks/requirements/requirement_analysis.prompt,sha256=bnUBks0twCPYmXq8dC51C5vAFKmCLTusZ9C8S-kRxvw,346
+xia_composer-0.0.3.dist-info/LICENSE.txt,sha256=IrHnMppnQ6016SlLoilZCHzBHEnrdEnr1FwBzTTZ8Jg,153
+xia_composer-0.0.3.dist-info/METADATA,sha256=zWjNyjUa7A2Bejc6zzDxhWZs2yWVTzz-dal-Pe0qa0g,416
+xia_composer-0.0.3.dist-info/WHEEL,sha256=h6AHtO7cSDs0NqJlOU-pxFlAjKPuMapTPklGT2yNXZQ,109
+xia_composer-0.0.3.dist-info/top_level.txt,sha256=L9HGsbEYSQK12f9k4YONKIkeAzNTpok4NnEaNShfYEU,13
+xia_composer-0.0.3.dist-info/RECORD,,
