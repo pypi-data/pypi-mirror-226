@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: torchnyan
+Version: 0.1.2
+Home-page: https://github.com/speedcell4/torchnyan
+Author: speedcell4
+Author-email: speedcell4@gmail.com
+License: MIT
+Requires-Python: >=3.9
