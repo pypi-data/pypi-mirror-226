@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lawkpyaibox
+Version: 0.0.2
+Summary: python工具包，用于快速递归搜索文件路径、管理oss、json、合并视频等
+Home-page: https://gitlab.com/lawk_metaos/metaos_facear/pyaibox
+Author: yingzhi
+Author-email: jackhenry1992@gmail.com
+License: apache 3.0
+Requires: numpy
+Requires: matplotlib
+Requires: os
+Requires: pyaudio
+Requires: moviepy
+Description-Content-Type: text/markdown
+
+README.md
