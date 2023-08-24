@@ -1,0 +1,15 @@
+quasielasticbayes.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
+quasielasticbayes.libs/libgfortran-040039e1.so.5.0.0,sha256=FK-zEpsai1C8QKOwggx_EVLqm8EBIaqxUpQ_cFdHKIY,2686065
+quasielasticbayes/ResNorm.cpython-310-x86_64-linux-gnu.so,sha256=zWDAQf4AeF2EOTn5kpb0vqmbnQqwziEB4tnqsUD2QT8,367769
+quasielasticbayes/QLse.cpython-310-x86_64-linux-gnu.so,sha256=ynKbKtq0Gsz1d1pyUOsuO71Zg8WpmleD0HHhJY4z1gw,482585
+quasielasticbayes/Quest.cpython-310-x86_64-linux-gnu.so,sha256=e84JGmEqqxePpXqYr2yUQ-kjD19obUtiFNffch_9_t0,466201
+quasielasticbayes/QLres.cpython-310-x86_64-linux-gnu.so,sha256=bksomWz2JNyWUbfkNC_nkz5lqFnISIvcZrOZMXb2G_Q,408729
+quasielasticbayes/QLdata.cpython-310-x86_64-linux-gnu.so,sha256=nBVIhrWb2_CpdfuBc6bMjLdbkH8ZXdnHaRwj3hYjFIg,425145
+quasielasticbayes/testing.py,sha256=88URDVewiWSgKW9Qtx78YfNA_DnFYekOUHxFPdTXabA,1487
+quasielasticbayes/__init__.py,sha256=DhSaRY9Ht1_NyK9zGNSBunkIV5UhwZ0H96FR62ztdRU,335
+quasielasticbayes/Four.cpython-310-x86_64-linux-gnu.so,sha256=DA-oFXnmJCt1Mzi-7ARoWEuabCfT6zh__NM8yxhQOqE,100569
+quasielasticbayes-0.2.0.dist-info/WHEEL,sha256=ZrrSt1fsSqwm5WLe8zxIW8_reaPHoodZsEVNH1Lux0k,152
+quasielasticbayes-0.2.0.dist-info/top_level.txt,sha256=ygAX-SNMG0DyqWT-Xmh988ahlmbZkz3xWmbzDD5dtd4,18
+quasielasticbayes-0.2.0.dist-info/METADATA,sha256=X8qroHTlIiLCUJ4I5BvkwHRV7Gs2JbC8vS_gciluAcM,512
+quasielasticbayes-0.2.0.dist-info/LICENSE.txt,sha256=UobD18Fw9i4uiBPGun1ha5ApddXDXwqPMNiIJ_Y5LEc,1462
+quasielasticbayes-0.2.0.dist-info/RECORD,,
