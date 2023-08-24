@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: reqx
+Version: 0.0.14
+Summary: The Efficient Web Scraping Library
+Home-page: https://github.com/trevorhobenshield/reqx
+Author: Trevor Hobenshield
+Author-email: trevorhobenshield@gmail.com
+License: GPLv3
+Keywords: http networking async concurrency efficient webscraping scraping scraper automation
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# reqX
+
+### The Efficient Web Scraping Library
+
+A flexible interface for quickly making high volumes of asynchronous HTTP requests.
+
+## Todo
+
+- [ ] Spoof TLS/JA3/HTTP2 fingerprint option
+- [ ] Data management system
+
+## Examples
+
+### Run batches of async requests
+
+These attributes can be passed iterables to build a request for each value.
+
+```python
+{'headers', 'params', 'cookies', 'content', 'data', 'files', 'json'}
+```
+
+E.g. Supplying these parameters will result in 15 requests. `len(size) * len(page) = 15`
+
+```python
+'size': [37, 61, 13],
+'page': range(2, 7),
+```
+
+Contrived example showing how to batch unrelated/independent requests together to be collected and sent asynchronously.
+
+```python
+import asyncio
+import reqx
+
+urls = ['https://www.bcliquorstores.com/ajax/browse']
+params = {'size': [37, 61, 13], 'page': range(2, 7), 'category': 'spirits', 'sort': 'featuredProducts:desc'}
+headers = {'user-agent': '(iPhone; CPU iPhone OS 15_6 like Mac OS X)'}
+
+urls2 = ['https://jsonplaceholder.typicode.com/posts']
+payload = {'title': 'foo', 'body': 'bar', 'userId': range(1, 4)}
+headers2 = {'content-type': 'application/json'}
+
+urls3 = ['https://jsonplaceholder.typicode.com/posts/1']
+payload2 = {'title': 'foo', 'body': 'bar', 'userId': range(7, 11)}
+headers3 = {'content-type': 'application/json'}
+
+res = asyncio.run(
+    reqx.collect(
+        [
+            *reqx.send('GET', urls, params=params, headers=headers, debug=True, m=20, b=2, max_retries=8),
+            *reqx.send('POST', urls2, json=payload, headers=headers2, debug=True, m=11, b=2, max_retries=3),
+            *reqx.send('PUT', urls3, json=payload2, headers=headers3, debug=True, m=7, b=2, max_retries=5),
+        ],
+        http2=True,
+        desc='Example requests'
+    )
+)
+```
+
+#### Explanation:
+
+```python
+asyncio.run(
+    # collect these tasks (asyncio.gather)
+    reqx.collect(
+        # iterable of partials
+        [
+            # collection of partials
+            *reqx.send(
+                # httpx.Request options
+                'GET',
+                urls,
+                params=params,
+                headers=headers,
+                debug=True,
+                # exponential backoff options
+                m=20,
+                b=2,
+                max_retries=8
+            ),
+            # more collections of partials
+            ...,
+            ...,
+        ],
+        # httpx.AsyncClient options
+        http2=True,
+        # add description to display a progress bar
+        desc='Example requests'
+    )
+)
+```
+
+### Run single batch of async requests
+Convenience function to send a single batch of requests.
+
+```python
+import asyncio
+import reqx
+
+urls = ['https://www.bcliquorstores.com/ajax/browse']
+params = {'size': [37, 61, 13], 'page': range(2, 7), 'category': 'spirits', 'sort': 'featuredProducts:desc'}
+headers = {'user-agent': '(iPhone; CPU iPhone OS 15_6 like Mac OS X)'}
+
+# same options available in `reqx.send()`
+res = asyncio.run(reqx.r('GET', urls, params=params, headers=headers, http2=True, desc='GET'))
+```
+
+### Run batch of downloads
+
+Convenience function to download files.
+
+```python
+import asyncio
+import reqx
+
+urls = [...]
+
+asyncio.run(reqx.download(urls, desc='Downloading Files'))
+```
+
+
