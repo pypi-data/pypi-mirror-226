@@ -1,0 +1,9 @@
+nbdev_plotly/__init__.py,sha256=8ss7zPyQ3YfaQJw9IIGX35NOL7ASZ7-LErAxKnQDN7c,23
+nbdev_plotly/_modidx.py,sha256=DN50PBFe_FjBuvfcp25Ayl60cJpJiBG1OhhAzHg8yhI,693
+nbdev_plotly/plotly.py,sha256=EF8-Ql95F2A1zXyxqcYQSnS2uTvxcO-GB-hpdhqZSG4,2873
+nbdev_plotly-0.0.16.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nbdev_plotly-0.0.16.dist-info/METADATA,sha256=6AvMLWtHnVO6zV1pXZf6I8KQq0T0E-eNq7MxiNFyggA,1074
+nbdev_plotly-0.0.16.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+nbdev_plotly-0.0.16.dist-info/entry_points.txt,sha256=Y_Yyv-nWgEMKF4toqlIxn6VDodlOhP5hFKGNi10Cmbw,46
+nbdev_plotly-0.0.16.dist-info/top_level.txt,sha256=aaCauSVjxzQNHfdcpUpv4eo9-bP1ttHznDB7Z_oIYOc,13
+nbdev_plotly-0.0.16.dist-info/RECORD,,
