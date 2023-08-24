@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: cdbc
+Version: 0.0.13
+Summary: Common Database Connector
+Home-page: https://github.com/friendlyblackwell/cdbc
+Author: Blackwell
+Author-email: friendlyblackwell@example.com
+Description-Content-Type: text/markdown
+
+# Common Database Connector
+
+
+
+## Cache / Redis
+
+```python
+from cdbc.cache import redis_connection_pool as redis_pool
+
+redis_host = 'redis'
+redis_port = 16382
+redis_db = 0
+
+_pool = redis_pool(redis_host=redis_host, redis_port=redis_port, redis_db=redis_db)
+
+```
+
+### Samples
+```python
+from cdbc.cache import redis_connection_pool as redis_pool
+from cdbc.cache import redis_get_kvs as redis_get_kvs
+
+redis_host = 'redis'
+redis_port = 16382
+redis_db = 0
+
+_pool = redis_pool(redis_host=redis_host, redis_port=redis_port, redis_db=redis_db)
+_kvs = redis_get_kvs(pool=_pool)
+
+redis_host = 'redis'
+redis_port = 16382
+redis_db = 1
+
+c = Redis(redis_host=redis_host, redis_port=redis_port, redis_db=redis_db)
+c.create_redis_conn()
+c.kvs()
+c.kvs()
+c.set('a', 'b')
+kvs = {
+    'a1': 111,
+    'b1': 222,
+    'c1': 333
+}
+c.set(batch=True, kvs=kvs)
+c.kvs()
+
+
+```
+
+## SQL / PostgreSQL
+```python
+import cdbc.postgresql
+
+host = 'postgresql'
+database = 'test'
+port = 5432
+user = 'test-user'
+password = 'test-passsword'
+
+p = PG(host=host, port=port, database=database, user=user, password=password)
+
+p.create_pg_conn()
+p.select('select version();')
+p.select('select count(1) from table1;')
+
+# pool mode
+p.create_pg_pool()
+p.select_from_pool('select version();')
+p.select_from_pool('select count(1) from table1;')
+
+
+
+### Select
+p = PG(host=host, port=port, database=database, user=user, password=password)
+p.create_pg_conn()
+
+for _ in range(5):
+    sql = 'select count(1) from table1'
+    p.select(sql=sql)
+    time.sleep(1)
+    
+for _ in range(5):
+    sql = 'select count(1) from table1'
+    p.select_from_pool(sql=sql)
+    time.sleep(1)
+    
+### Insert
+
+import random
+import string
+
+host = 'freedbs'
+port = 15432
+database = 'testdb02'
+user = 'postgresql-user'
+password = 'postgresql-Passw0rd'
+
+p = PG(host=host, port=port, database=database, user=user, password=password)
+table = 'table1'
+columns = 'col1, col2, col3'
+p.create_pg_conn()
+
+for _ in range(10):
+    value1 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    value2 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    k = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    v = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    values = "'" + value1 + "'" + ', '\
+         + "'" + value2 + "'" + ', '\
+         + "'" + json.dumps({k:v}) + "'"
+    cvs = [columns, values]
+    p.insert(table=table, cvs=cvs)
+
+# insert via pg pool 
+p.create_pg_pool()
+for _ in range(10):
+    value1 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    value2 = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(10)])
+    k = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    v = ''.join([random.choice(string.ascii_lowercase + string.digits) for _n in range(5)])
+    values = "'" + value1 + "'" + ', '\
+         + "'" + value2 + "'" + ', '\
+         + "'" + json.dumps({k:v}) + "'"
+    cvs = [columns, values]
+    p.insert_with_pool(table=table, cvs=cvs)
+
+```
