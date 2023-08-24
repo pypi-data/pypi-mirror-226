@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Conanmail
+Version: 1.0.19
+Summary: Helping you delete your old accounts
+Home-page: https://github.com/Gobutsu/Conan
+Author: Gobutsu
+Requires-Python: >=3.6
