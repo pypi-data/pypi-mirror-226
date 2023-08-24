@@ -1,0 +1,6 @@
+setup.py
+mobi_synpop.egg-info/PKG-INFO
+mobi_synpop.egg-info/SOURCES.txt
+mobi_synpop.egg-info/dependency_links.txt
+mobi_synpop.egg-info/not-zip-safe
+mobi_synpop.egg-info/top_level.txt
