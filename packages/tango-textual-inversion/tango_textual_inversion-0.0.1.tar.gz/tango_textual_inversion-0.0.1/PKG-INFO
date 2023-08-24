@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: tango-textual-inversion
+Version: 0.0.1
+Summary: allenai/tango version of textual inversion
+Author: Shunsuke KITADA
+Author-email: shunsuke.kitada.0831@gmail.com
+Requires-Python: >=3.9,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: accelerate (>=0.20.3,<0.21.0)
+Requires-Dist: ai2-tango[datasets,examples,torch,transformers,wandb] (>=1.2.1,<2.0.0)
+Requires-Dist: diffusers (>0.8.0)
+Requires-Dist: tango-extensions (>=0.2.0,<0.3.0)
+Requires-Dist: torchvision (<0.15.0)
+Requires-Dist: urllib3 (<2)
+Description-Content-Type: text/markdown
+
+# [`allenai/tango`](https://github.com/allenai/tango) version of [`textual inversion`](https://arxiv.org/abs/2208.01618)
+
+## Install dependencies
+
+```shell
+poetry install
+```
+
+## Login through `huggingface-cli`
+
+```shell
+poetry run huggingface-cli login
+```
+
+## Run a tango experiment
+
+```shell
+poetry run tango run configs/textual_inversion.jsonnet -w workspace
+```
+
+## Examples of generated image
+
+- Prompt: `A <cat-toy> backpack`
+
+![](./cat-backpack.png)
+
+
+## Watch the workspace with `tango server`
+
+```shell
+poetry run tango server -w workspace/
+```
+
+![](./tango_server.png)
+

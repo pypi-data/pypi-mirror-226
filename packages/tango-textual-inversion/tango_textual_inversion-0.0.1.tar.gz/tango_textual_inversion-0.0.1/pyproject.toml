@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "tango-textual-inversion"
+version = "0.0.1" # specified by poetry-dynamic-versioning
+description = "allenai/tango version of textual inversion"
+authors = ["Shunsuke KITADA <shunsuke.kitada.0831@gmail.com>"]
+readme = "README.md"
+packages = [{include = "textual_inversion"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+ai2-tango = { extras = [
+    "datasets",
+    "examples",
+    "torch",
+    "transformers",
+    "wandb",
+], version = "^1.2.1" }
+diffusers = ">0.8.0"
+torchvision = "<0.15.0"
+urllib3 = "<2"
+accelerate = "^0.20.3"
+tango-extensions = "^0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.275"
+black = "^23.3.0"
+mypy = "^1.4.1"
+pytest = "^7.4.0"
+
+[tool.ruff]
+line-length = 120
+
+[tool.poetry-dynamic-versioning]
+enable = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
