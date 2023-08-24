@@ -1,0 +1,10 @@
+matplotlib
+numpy
+pandas
+weighted_levenshtein
+biopython
+dna_features_viewer
+geneblocks
+cyvcf2
+pdf_reports
+portion
