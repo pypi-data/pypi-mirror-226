@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: vcenter-bindings
+Version: 0.1
+Summary: Python bindings for vCenter
+Author: Hiren Vikhram

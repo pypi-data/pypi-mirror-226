@@ -1,0 +1,6 @@
+README.md
+setup.py
+vcenter_bindings.egg-info/PKG-INFO
+vcenter_bindings.egg-info/SOURCES.txt
+vcenter_bindings.egg-info/dependency_links.txt
+vcenter_bindings.egg-info/top_level.txt
