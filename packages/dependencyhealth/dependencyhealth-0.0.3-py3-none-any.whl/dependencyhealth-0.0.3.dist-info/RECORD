@@ -1,0 +1,8 @@
+dependencyhealth/__init__.py,sha256=GMpCUUYhnlNck3ktzaPYLPnNIOJUdjpRk9vWMVGahek,44
+dependencyhealth/abstract_client.py,sha256=h7nOxh4U3PFlF4t-rdXpGwc5OUQ0ohVnr62wyFuZek8,1516
+dependencyhealth/npm/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+dependencyhealth/npm/client.py,sha256=FA8_QjVe_J4Fryaq2ll8R62wVxA54CvaQCRPsKQEBUg,249
+dependencyhealth-0.0.3.dist-info/LICENSE,sha256=TMLutt3LmiGlGgHS69eS9b7GSLstAhhkkLTQ0aCFs5k,1073
+dependencyhealth-0.0.3.dist-info/METADATA,sha256=UEhymWb1DWj_MlqovOxccr9wIYMDDzLah1Nr5am-TPM,1317
+dependencyhealth-0.0.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+dependencyhealth-0.0.3.dist-info/RECORD,,
