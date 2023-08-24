@@ -1,0 +1,36 @@
+[project]
+name = "Fastoo"
+description = "A super-charged FastAPI framework for even faster delivery"
+readme = "README.md"
+maintainers = [{name = "Abdur-Rahmaan Janhangeer", email = "arj.python@gmail.com"}]
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Application Frameworks"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi",
+    "fastapi",
+    "uvicorn",
+    "pydantic-settings",
+    "toml",
+    "pyyaml",
+    "importlib-metadata>=3.6.0; python_version < '3.10'",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "fastoo.__version__"}
+
+[project.urls]
+"Source Code" = "https://github.com/Abdur-rahmaanJ/fastoo"
+"Issue Tracker" = "https://github.com/Abdur-rahmaanJ/fastoo/issues/"
+
+[project.scripts]
+fastoo = "fastoo.api.cli:cli"
+
+[options]
+include_package_data = true
