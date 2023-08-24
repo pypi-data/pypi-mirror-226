@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: openpipe
+Version: 3.0.0
+Summary: 
+License: Apache-2.0
+Author: Kyle Corbitt
+Author-email: kyle@openpipe.ai
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: attrs (>=23.1.0,<24.0.0)
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Requires-Dist: openai (>=0.27.8,<0.28.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
