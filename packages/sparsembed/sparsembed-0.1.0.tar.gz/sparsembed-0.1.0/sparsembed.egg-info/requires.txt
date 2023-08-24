@@ -1,0 +1,10 @@
+torch>=1.13
+tqdm>=4.65
+transformers>=4.30.2
+
+[eval]
+torch>=1.13
+tqdm>=4.65
+transformers>=4.30.2
+ranx>=0.3.16
+beir>=2.0.0
