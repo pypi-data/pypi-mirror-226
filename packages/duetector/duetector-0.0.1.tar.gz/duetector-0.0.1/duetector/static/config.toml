@@ -1,0 +1,40 @@
+# This is a auto generated config file for duetector🔍
+# You can modify this file to change duetector's behavior
+# For more information, please visit https://github.com/hitsz-ids/duetector
+
+# All config keys will be converted to lower case.
+# It's ok to use upper case or camel case for readability.
+
+[filter]
+disabled = false
+
+[filter.defaultfilter]
+disabled = false
+
+[tracer]
+disabled = false
+
+[tracer.opentracer]
+disabled = false
+
+[collector]
+disabled = false
+
+[collector.dbcollector]
+disabled = false
+statis_id = ""
+
+[collector.dbcollector.db]
+table_prefix = "duetector_tracking"
+
+[collector.dbcollector.db.engine]
+url = "sqlite:///duetector-dbcollector.sqlite3"
+
+[collector.dequecollector]
+disabled = true
+statis_id = ""
+maxlen = 1024
+
+[monitor.bcc]
+disabled = false
+auto_init = true
