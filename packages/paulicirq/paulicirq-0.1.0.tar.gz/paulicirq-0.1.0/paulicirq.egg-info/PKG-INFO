@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: paulicirq
+Version: 0.1.0
+Home-page: https://github.com/Psrit/paulicirq
+Author: xiaojx
+Author-email: xiaojx13@outlook.com
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# paulicirq
+
+This is a toolkit for developing quantum computing projects, which is based on [Cirq](https://github.com/quantumlib/Cirq), [OpenFermion](https://github.com/quantumlib/OpenFermion) and [TensorFlow Quantum](https://github.com/tensorflow/quantum).
+
+This package contains implementations for some quantum algorithms like overlap test, gates which may be used as building blocks in quantum circuits, and quantum layers that can get trained in TensorFlow Quantum models.
