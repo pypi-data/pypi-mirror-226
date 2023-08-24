@@ -1,0 +1,24 @@
+
+[:platform_system == "Darwin"]
+pyobjc-framework-Cocoa>=9.2
+
+[:platform_system == "Linux"]
+dbus-next>=0.2.3
+
+[:python_version < "3.11"]
+backports.strenum>=1.1.1
+
+[dev]
+bumpversion
+
+[doc]
+sphinx
+sphinx_rtd_theme
+better_apidoc
+
+[test]
+pytest
+coverage
+pytest-cov
+hypothesis
+tox
