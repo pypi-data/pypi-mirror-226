@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+QSugar/__init__.py
+QSugar.egg-info/PKG-INFO
+QSugar.egg-info/SOURCES.txt
+QSugar.egg-info/dependency_links.txt
+QSugar.egg-info/requires.txt
+QSugar.egg-info/top_level.txt
