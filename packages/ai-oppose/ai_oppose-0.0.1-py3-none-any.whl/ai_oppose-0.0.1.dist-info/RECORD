@@ -1,0 +1,7 @@
+ai_oppose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_oppose/functions.py,sha256=xomLMqVkUg4X0Cdp1-uHjhGanBYrqrSmiUaJKZSyWVE,12427
+ai_oppose/data/egodepletion_literature.csv,sha256=ten2hgfxA8nh1PJ9qNDrIcdn7INO6XRItsQup3wUmfI,131851
+ai_oppose-0.0.1.dist-info/METADATA,sha256=_bwTzKDUfVk3Tfv_yINQPXut4F4-VlFDpo-_Ldms6Js,775
+ai_oppose-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ai_oppose-0.0.1.dist-info/top_level.txt,sha256=iybj9LZRhFT3t6i0QYL3kz_TSAy_Zp_OhP9Nq_oVyRw,10
+ai_oppose-0.0.1.dist-info/RECORD,,
