@@ -1,0 +1,11 @@
+pyoverleaf/__init__.py,sha256=yajgPwA0C0hOZQeeDkpUop4rfFQsPVAyAkD-rWy5ZIM,228
+pyoverleaf/__main__.py,sha256=bj971eKSgRm-R-qaf_izTicWQw_j5y9mDFrDDAaQ9Lc,3312
+pyoverleaf/_io.py,sha256=U9NJLVsLepu7mRX_WnEHSQ5mWJ7Y9sP2V4iw4ObSoBc,6587
+pyoverleaf/_version.py,sha256=iyxbHkgS1yJGtIeySh-gmqzwOuLbVveAe9CoQYWfZ0c,160
+pyoverleaf/_webapi.py,sha256=YsJmxxae73XVX5MMRaCmGVC77jrmLy510yLHmKUE-TM,16664
+pyoverleaf-0.1.0.dist-info/LICENSE,sha256=1NB5CG-Mfk2VphThKcYWaRqm5Y7x4u15vYsoueGT0j0,1071
+pyoverleaf-0.1.0.dist-info/METADATA,sha256=gU-KK5P86BnpuUI-IapwnRlaRH1vKcPC7sqGn16Fmgo,4083
+pyoverleaf-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyoverleaf-0.1.0.dist-info/entry_points.txt,sha256=zbuFXZHkcWTwLyRUFfd2fzOVTAANstzmgRNI-H83K3k,56
+pyoverleaf-0.1.0.dist-info/top_level.txt,sha256=_yl8z1PX_SHeaaOVGhc3gvhZ4qTtqjW11KqISiRC1Yw,11
+pyoverleaf-0.1.0.dist-info/RECORD,,
