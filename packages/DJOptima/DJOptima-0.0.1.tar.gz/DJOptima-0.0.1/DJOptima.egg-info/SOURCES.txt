@@ -1,0 +1,17 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+DJOptima.egg-info/PKG-INFO
+DJOptima.egg-info/SOURCES.txt
+DJOptima.egg-info/dependency_links.txt
+DJOptima.egg-info/entry_points.txt
+DJOptima.egg-info/requires.txt
+DJOptima.egg-info/top_level.txt
+djangokit/Base.py
+djangokit/Host.py
+djangokit/Template.py
+djangokit/VercelKit.py
+djangokit/__init__.py
+djangokit/templatetage.py
