@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: plotai
+Version: 0.0.0
+Summary: Create plots in Python with AI
+Home-page: https://github.com/mljar/plotai
+Author: MLJAR Sp. z o.o.
+Author-email: contact@mljar.com
+License: Apache 2.0
+Description: # plotai
+        The easiest way to create plots in Python
+        
+Keywords: plot,visualization,charts,matplotlib,llm,openai,mljar
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7.1
+Description-Content-Type: text/markdown

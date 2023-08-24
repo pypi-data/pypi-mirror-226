@@ -1,0 +1,12 @@
+README.md
+setup.py
+plotai/__init__.py
+plotai/plotai.py
+plotai.egg-info/PKG-INFO
+plotai.egg-info/SOURCES.txt
+plotai.egg-info/dependency_links.txt
+plotai.egg-info/requires.txt
+plotai.egg-info/top_level.txt
+plotai/llm/__init__.py
+plotai/llm/openai.py
+plotai/prompt/__init__.py
