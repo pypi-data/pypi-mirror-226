@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: xtyle
+Version: 0.1.4
+Summary: Xtyle (Toolkit)
+Author-Email: hlop3z <23062270+hlop3z@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/hlop3z/xtyle-python/
+Requires-Python: >=3.10
+Requires-Dist: py-mini-racer>=0.6.0
+Requires-Dist: css-html-js-minify>=2.5.5
+Requires-Dist: libsass>=0.22.0
+Description-Content-Type: text/markdown
+
+# Xtyle
+
+Python (**JSX-Toolkit**) Documentation
+
+## Introduction
+
+Welcome to the Xtyle! This tool allows you to work with JSX components.
+
+It is **powered by**.
+
+- Python: `py-mini-racer`, `css-html-js-minify`, and `libsass`
+- JavaScript: `babel`, and `prettier`
+
+## Example (**JSX**)
+
+```python
+import xtyle
+
+code_js = xtyle.jsx("const App = () => <div>Hello World</div>")
+
+print(code_js)
+```
+
+## Example (**SCSS**)
+
+```python
+import xtyle
+
+code_css = xtyle.scss("$color: red; body { color: $color; }")
+
+print(code_css)
+```
