@@ -1,0 +1,16 @@
+batchspawner>=1.0
+jinja2
+jupyterhub
+pydantic<3,>=2.0
+traitlets
+
+[dev]
+black
+build
+bump2version
+check-manifest
+flake8
+jupyter_server
+mypy
+pytest
+pytest-asyncio
