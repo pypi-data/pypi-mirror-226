@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: huggingbutt
+Version: 0.0.1rc0
+Summary: Client library to download and publish environments, agents on the huggingbutt.com hub
+Author-email: huggingbutt <huggingbutt@outlook.com>
+Project-URL: homepage, https://huggingbutt.com
+Project-URL: source, https://github.com/huggingbutt/huggingbutt
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# HuggingButt Python Client 
+Client library to download and publish environments, agents on the huggingbutt.com hub
+
+## Installation
+After testing, this package can run stably under python version 3.9 on Windows/MacOS platform. Other versions of python may not be able to install this package, mainly because mlagents-envs has not been updated recently. I will address these issues later on. 
+
+Create a new python environment using anaconda or miniconda
+```shell
+conda create -n p39 python=3.9
+```
+
+install from pypi
+```shell
+pip install huggingbutt
+```
+or from source code
+```shell
+
+```
