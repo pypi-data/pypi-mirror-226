@@ -1,0 +1,10 @@
+Changelog.rst
+MANIFEST.in
+README.rst
+setup.py
+olchiki/__init__.py
+olchiki.egg-info/PKG-INFO
+olchiki.egg-info/SOURCES.txt
+olchiki.egg-info/dependency_links.txt
+olchiki.egg-info/not-zip-safe
+olchiki.egg-info/top_level.txt

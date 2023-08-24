@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: olchiki
+Version: 0.0.1
+Summary: Olchiki is a package for Olchiki language users with various functionalities including Olchiki date and Olchiki numeric conversation.
+Home-page: UNKNOWN
+Author: Shivnath Kisku
+Author-email: 
+License: MIT
+Keywords: olchiki,olchiki language,Program
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+UNKNOWN
+
