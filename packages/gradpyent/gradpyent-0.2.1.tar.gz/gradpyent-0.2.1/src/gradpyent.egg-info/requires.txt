@@ -1,0 +1,14 @@
+pandas
+
+[dev]
+Flake8-pyproject
+isort
+pydocstyle[toml]
+pytest
+pytest-cov
+pytest-mock
+
+[docs]
+recommonmark
+sphinx
+sphinx-rtd-theme

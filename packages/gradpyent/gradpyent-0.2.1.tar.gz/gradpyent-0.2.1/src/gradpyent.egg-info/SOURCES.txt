@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/gradpyent/__init__.py
+src/gradpyent/gradient.py
+src/gradpyent.egg-info/PKG-INFO
+src/gradpyent.egg-info/SOURCES.txt
+src/gradpyent.egg-info/dependency_links.txt
+src/gradpyent.egg-info/requires.txt
+src/gradpyent.egg-info/top_level.txt
+src/gradpyent/library/__init__.py
+src/gradpyent/library/colors.py
+src/gradpyent/library/formats.py
+src/gradpyent/library/rgb.py
