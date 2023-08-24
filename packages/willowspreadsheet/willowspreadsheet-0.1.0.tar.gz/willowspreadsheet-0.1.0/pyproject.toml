@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "willowspreadsheet"
+version = "0.1.0"
+description = ""
+authors = ["willow <brmagrini@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gspread = "^5.10.0"
+oauth2client = "^4.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
