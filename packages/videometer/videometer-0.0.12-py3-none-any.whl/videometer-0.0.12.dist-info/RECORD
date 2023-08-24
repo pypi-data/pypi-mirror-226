@@ -1,0 +1,11 @@
+videometer/HelpFunctions.py,sha256=VL5zbdI7XhHHgZPizha3ceiWkOGH7BUqHyF79fufBDc,10064
+videometer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+videometer/setupHelper.py,sha256=sfvDgPOnAuuz_0xHNS1MVYhmqnryhD8rBguPUxeLP20,1435
+videometer/videometer.py,sha256=GjRAZ3EDfJbPh-tljB7-D7r4ZESjSRAQ9CbE2VmpGws,23178
+videometer/tests/test.py,sha256=lkt1KJghobATSPtZXqlQoHsv3_1rPm9kzUOvUz1MKmw,21840
+videometer/tests/tmp.py,sha256=HHp4_EQYBlQogze0lff7G5-D7N-9yUSgntc1NR4_81w,78
+videometer-0.0.12.dist-info/LICENSE.txt,sha256=rwEBnVHZXQyLJTKmo2X0pfgiwmBnlcZvlRFjmoeYd-s,1716
+videometer-0.0.12.dist-info/METADATA,sha256=LRJsAIE8hasC7oumEzS9m_h1u1z18zFpcMqhhSz_nK4,3549
+videometer-0.0.12.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+videometer-0.0.12.dist-info/top_level.txt,sha256=l-Z6_BFbqsEJPcnAvx4PK0OWQtOFju0GbD5MIrb5KLg,11
+videometer-0.0.12.dist-info/RECORD,,
