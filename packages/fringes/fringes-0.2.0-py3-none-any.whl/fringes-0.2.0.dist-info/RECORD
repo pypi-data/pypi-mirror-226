@@ -1,0 +1,12 @@
+fringes/__init__.py,sha256=mNKhG-KFyRcFjr7r1fYJ3aat_ZBLtNMuEBwqV1bweyA,494
+fringes/decoder.py,sha256=B7NTy9J4Hiicj0z-e9iwnrZmnQbBEd-AwUNzd5j-ziw,16439
+fringes/decoder2.py,sha256=60llmodOajkR-Y1Tznny9ZFNJGtH-eCnG8j6AX0seuc,16996
+fringes/decoder3.py,sha256=vmoMZrR28pwTPuP3sCgexEYj1UaQLziqUY32O8UwGpk,17003
+fringes/decoder4.py,sha256=iios7fJSAyHYp0zEA3AeY9r1hcHBzBKXwu_5oSVkNJI,15633
+fringes/fringes.py,sha256=pvM7-oe1OEIZTEMsF1BP5zYAVf7Cl6EL79jaMsBSKuc,142958
+fringes/grid.py,sha256=GprZ16INzOkpE6Iob_I4cb12hMMcr5laqlSeNfOXChM,1480
+fringes/util.py,sha256=mdP_9cqeZBENLpA4A04vl95L7-EViqrIEHDbs0nGnbY,12350
+fringes-0.2.0.dist-info/LICENSE.txt,sha256=f31gAGveKAadeDhLwyYVewa1cvt1CbdvrpcoDWjb6ik,21278
+fringes-0.2.0.dist-info/METADATA,sha256=5IZCRehFm0DPGE8a64ilBJPUa_9QrFwLPJt0kCr2hFM,28628
+fringes-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+fringes-0.2.0.dist-info/RECORD,,
