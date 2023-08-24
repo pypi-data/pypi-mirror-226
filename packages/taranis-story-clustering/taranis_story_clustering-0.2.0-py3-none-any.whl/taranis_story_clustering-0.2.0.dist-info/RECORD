@@ -1,0 +1,14 @@
+story_clustering/__init__.py,sha256=8O43c2QU4ZWbde7UKVpqp1ZfeuOowqxd9AbhM1Dsy6o,74
+story_clustering/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+story_clustering/clustering.py,sha256=zkEeokaUnZJbpgf--hFo9LUgvb5pT1FBprX7tPUsLV4,6936
+story_clustering/document_representation.py,sha256=OLJceKTqPuoD-FeycNU29krIPbrohtZhtOlKquyBDGA,7110
+story_clustering/event_organizer.py,sha256=oZeKsqU7Xc83vKTbSJ946KXSFcIq2qITHkJv77QN4XA,2489
+story_clustering/eventdetector.py,sha256=7F4d0ZJ_S5KZ4Fv-jg8zwWjZ3v5Uv2QLeqvWMOms-do,8128
+story_clustering/keywords_organizer.py,sha256=BtyZeWswkf15AgdpcGfsG9gnjIvYD9g2fKnnohH5fk4,14129
+story_clustering/nlp_utils.py,sha256=AXDc0kf8WJ35KGsPLzeQQX_pRj33IwTHx7rjX0WVcoM,1593
+story_clustering/story_maker.py,sha256=Wkflf1fyOjWPzk8wvX3gK1r01eRcKkHuuPXjwhSETSA,13438
+taranis_story_clustering-0.2.0.dist-info/LICENSE.md,sha256=b8nnCcy_4Nd_v_okJ6mDKCvi64jkexzbSfIag7TR5mU,13827
+taranis_story_clustering-0.2.0.dist-info/METADATA,sha256=P8OSwpR7mvCds2-g5VBsWV_wFvd_YaaTm027OqFUEMM,18689
+taranis_story_clustering-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+taranis_story_clustering-0.2.0.dist-info/top_level.txt,sha256=Zq7xdw7M5A2KnTDAm-zy681zk1YbkU7VnGwxfV96v_g,17
+taranis_story_clustering-0.2.0.dist-info/RECORD,,
