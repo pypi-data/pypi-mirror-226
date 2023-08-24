@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: harrywang-greeter
+Version: 0.0.1
+Summary: A minimal PyPI package
+Home-page: https://github.com/harrywang/greeter-python
+Author: Harry Wang
+Author-email: harryjwang@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# About
+
+A minimal PyPI package template, e.g., https://pypi.org/project/harrywang-greeter/
+
+
+Find classifier (such as supported licenses) from https://pypi.org/classifiers/ for `setup.py`, then:
+
+```
+python setup.py sdist
+twine upload dist/*
+```

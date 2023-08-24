@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+harrywang_greeter/__init__.py
+harrywang_greeter.egg-info/PKG-INFO
+harrywang_greeter.egg-info/SOURCES.txt
+harrywang_greeter.egg-info/dependency_links.txt
+harrywang_greeter.egg-info/top_level.txt
