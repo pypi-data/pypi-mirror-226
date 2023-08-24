@@ -1,0 +1,6 @@
+rr_process/__init__.py,sha256=jD-XdFt1-_tKPQSJl9zvaqf44IvO69HRWLcixIuqRXM,2077
+rr_process/delete_unused_libs.py,sha256=AK70T2Pt6nJIQQBbQwFsySKQ2YG2ISJE6o9Y4-Jdx84,3973
+rr_delete_unused_packages-0.1.dist-info/METADATA,sha256=GDiT-t27EqCrVPk75dQOZ7nXpxE-7vf7zmyfhKx9LJ4,2014
+rr_delete_unused_packages-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+rr_delete_unused_packages-0.1.dist-info/top_level.txt,sha256=aNZxhFre-AptHmEgdti89J4XCMzGpAh6CoVva-wiB1k,11
+rr_delete_unused_packages-0.1.dist-info/RECORD,,
