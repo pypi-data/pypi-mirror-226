@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jqtui
+Version: 0.0.1
+Summary: 
+Author: Solomon Huang
+Author-email: huang.solomon@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pyjq (>=2.6.0,<3.0.0)
+Requires-Dist: textual (>=0.34.0,<0.35.0)
+Description-Content-Type: text/markdown
+
+# jqtui
+TUI for JQ
+
