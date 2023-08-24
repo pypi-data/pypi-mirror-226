@@ -1,0 +1,16 @@
+invoice_parser/__init__.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+invoice_parser/_modidx.py,sha256=H9Bdbi3J_yUE2w-7N5IgjDfVWko2C7W8BEGGSIlnzJw,6297
+invoice_parser/app.py,sha256=WYTws5GkYSwu1vjW5G16v9SpmyUr_yiGPXdRy3js5xo,2010
+invoice_parser/core.py,sha256=6w4RmEWvsrus5SpDBD3siRijG28VQ4JyNhGfqEVsIwk,21728
+invoice_parser/imports.py,sha256=2ZHUd3RkaxMtMj_XmbZvFYOQUutTtXam3fJjntsVcKo,966
+invoice_parser/utils.py,sha256=msrI2aCbdlDmpcVsrdm7a-ubXJznTMv2nLtVbkfbJTA,1339
+invoice_parser/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invoice_parser/api/app.py,sha256=TI_qskXs9VkuMQpMDnPW5SsUp6pQFAXGo-c3VLjHyLk,1379
+invoice_parser/api/imports.py,sha256=ZIXxAyIs_8cChUWPKAqqUYe4Pthj_EGUh9U1Qs6zVhw,291
+invoice_parser/api/utils.py,sha256=NtRAtjTtbqcCtBn5DU65hCgWK_JZP1GP8CxOUZtevoo,1260
+invoice_parser-0.0.6.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+invoice_parser-0.0.6.dist-info/METADATA,sha256=gKsoQuFaEj0dxvcSjfFDBL18SU7aVieY1mwSK7NDN2Q,1064
+invoice_parser-0.0.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+invoice_parser-0.0.6.dist-info/entry_points.txt,sha256=xvveb1cZXnBtqBLVbWOO_JFlBxJNjbd4qlV9Jw7SU5w,50
+invoice_parser-0.0.6.dist-info/top_level.txt,sha256=xiZd8LwMcqPMqf6Var2Nyj9EcNXg1SFQfd4rfwOnGpk,15
+invoice_parser-0.0.6.dist-info/RECORD,,
