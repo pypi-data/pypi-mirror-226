@@ -1,0 +1,15 @@
+async_termux/__init__.py,sha256=tyfyg7OVITQF-wu5IDb5HO5RUTHyZpuJ7PFntEm0YWo,133
+async_termux/_task.py,sha256=HKP25uYWZfzCQ5KiTfllGtb53LjV-UTY9WzqxNRPVBE,2824
+async_termux/_test.py,sha256=3Ad-GipBMEdoOmk4QeUb76zHkPrHk3m2NUsyDVLUoTY,919
+async_termux/adb.py,sha256=eH7OyYg6XQspxoUEEKRv24K4Et4pxAbpR-wj4iT4tAE,4734
+async_termux/media.py,sha256=rBHzh4Tm8CfMX9WZM70Gbtavb3L78VtEfd8xmTNrnlM,907
+async_termux/misc.py,sha256=qHUsIVJ2tCdFnVOkaAeb-8Q0sibk7eoOPuJWxekP86g,1631
+async_termux/notify.py,sha256=zghWqgNqQ-OqiB5VJ3L7GD_G0tt5AX6ZVlsDV22aYEg,11059
+async_termux/sensor.py,sha256=GWFE6LkvTTXehF_kwY8PcqihGFZRdeoMyf8gAOp2054,2365
+async_termux/version.py,sha256=QqMXHVJs6Mh0abjyoct_OcIt77Rz1dSmEAy-kWDxGc8,18
+async_termux-0.0.3.dist-info/LICENSE,sha256=MvySm4aWL9qdyOxpUJMTiZKrMfa4j2bvgYI19Ly_5LM,1067
+async_termux-0.0.3.dist-info/METADATA,sha256=QyT1eLLZDmhYRJsWjJIevVSP7RUE8wcSQ8Rpej2lxlg,479
+async_termux-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+async_termux-0.0.3.dist-info/top_level.txt,sha256=lveNkfR3ck6WFsrJIIaJ87qxIog33mQT9anAbsy9CAg,13
+async_termux-0.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+async_termux-0.0.3.dist-info/RECORD,,
