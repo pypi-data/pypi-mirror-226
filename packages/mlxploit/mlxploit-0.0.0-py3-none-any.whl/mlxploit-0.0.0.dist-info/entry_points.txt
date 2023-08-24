@@ -1,0 +1,3 @@
+[console_scripts]
+mlxploit=mlxploit.main:app
+
