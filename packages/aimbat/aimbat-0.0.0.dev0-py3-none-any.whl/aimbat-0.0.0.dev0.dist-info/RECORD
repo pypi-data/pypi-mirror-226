@@ -1,0 +1,11 @@
+aimbat/__init__.py,sha256=VeAooorxfQigZ3-3z7Dzmd2SpaESUf4gfNY3gVtbhbo,860
+aimbat/cli.py,sha256=Gk8BZakeVCEV_k3VIE2Ogb9Z6xwh0SD-R5hXakITbTA,643
+aimbat/commands/checkdata.py,sha256=hcKjJpKNCQw7UrsqUhfHP2sDzZZje664aKz4LFtRsHE,674
+aimbat/commands/defaults.py,sha256=hxMk9zF8YXW0KxUmuOmrP2z_FuFPkhTWQ8cZJwD3WuI,1011
+aimbat/commands/sampledata.py,sha256=zyNeVldQa17n2PZHpgj96fmvp3P8ruyJvaA3kNsN6IY,2075
+aimbat/lib/defaults.py,sha256=hZDX6U-onrBDz7c9uW7Rmw2Nal5OkNAq565gLwtpLQQ,4601
+aimbat/lib/defaults.yml,sha256=sAFfaUASkljbpDv-k7e12Iikmfaoir-KxyO-LMavUL4,589
+aimbat-0.0.0.dev0.dist-info/METADATA,sha256=9Z7ppp_p47zLww4ldmWkHOukNGBSfb-gE1ARB4456aU,4055
+aimbat-0.0.0.dev0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+aimbat-0.0.0.dev0.dist-info/entry_points.txt,sha256=iCTy9xkM6pQKnYYkgizIBi50sFjIwTuInnZwfOXdvy0,41
+aimbat-0.0.0.dev0.dist-info/RECORD,,
