@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: postat
+Version: 0.9.0
+Summary: Simple Python wrapper to fetch data from Austrian Post (post.at)
+Project-URL: Homepage, https://kumig.it/kumitterer/postat
+Project-URL: Bug Tracker, https://kumig.it/kumitterer/postat/issues
+Author-email: Kumi Mitterer <postat@kumi.email>
+License: Copyright (c) 2023 Kumi Mitterer <postat@kumi.email>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Python wrapper for Austrian Post web services
+
+This is a Python wrapper for web services provided by [Austrian Post](https://www.post.at/).
+
+Currently, it only supports looking up shipment details by tracking number.
+
+Groundwork for services requiring authentication is laid out, but not working
+yet. If you want to contribute, please feel free to do so.
+
+## Installation
+
+```bash
+pip install git+https://kumig.it/kumitterer/postat.git
+```
+
+## Usage
+
+```python
+from postat.classes.api import PostAPI
+
+api = PostAPI()
+
+# Get shipment details
+
+shipment_details = api.get_shipment_details("123456789012345678901234567890")
+
+shipment = shipment["data"]["einzelsendung"]
+
+# Get latest event
+
+latest_event = shipment["sendungsEvents"][-1]
+```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
