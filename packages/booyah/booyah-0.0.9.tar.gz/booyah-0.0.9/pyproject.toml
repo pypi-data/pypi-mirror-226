@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "booyah"
+version = "0.0.9"
+authors = [
+  { name="Marcelo Ribeiro", email="themarceloribeiro@gmail.com" },
+]
+description = "A joyful python web framework"
+readme = "README.md"
+requires-python = ">= 3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+"Homepage" = "https://github.com/marceloribeiro/booyah"
+"Bug Tracker" = "https://github.com/marceloribeiro/booyah/issues"
+
+[tool.ruff]
+exclude = ["src/generators", "src/server"]
+
+[project.scripts]
+booyah = "booyah.__main__"
