@@ -1,0 +1,7 @@
+config_server.cpython-38-x86_64-linux-gnu.so,sha256=CQPfBVt4Jj8qchJDI2A88PnqjcKRVZuAKJokRc81c-0,969720
+config_server.pyi,sha256=hLrymERGuTsz2fNlpzEeuQGN4GWeblQ2OcdR82S2RtM,1102
+config_server/static/index.html,sha256=V86AVW3VPukmeKN1McCj_tEv5oHGafb-fVXGgWnZI3s,1988809
+config_server-0.4.1.dist-info/METADATA,sha256=i3fCf7ltiB3gqaGLIn0DWYUhFqI6vpqbNqqk53YL4ww,13488
+config_server-0.4.1.dist-info/WHEEL,sha256=GNBFqmx9JvpYOrbmFf2b5yXaVIzG1sc0lm9AbAp8amc,98
+config_server-0.4.1.dist-info/top_level.txt,sha256=bLRSAzsmh78QVIGcUYvkkBssHkk27ww8eRQCVW4neGg,14
+config_server-0.4.1.dist-info/RECORD,,
