@@ -1,0 +1,61 @@
+[build-system]
+
+requires = ["setuptools",
+            "setuptools_scm",
+            "wheel"]
+
+build-backend = 'setuptools.build_meta'
+
+[tool.towncrier]
+    package = "fiasco"
+    filename = "CHANGELOG.rst"
+    directory = "changelog/"
+    issue_format = "`#{issue} <https://github.com/wtbarnes/fiasco/pull/{issue}>`__"
+
+    [[tool.towncrier.type]]
+        directory = "breaking"
+        name = "Backwards Incompatible Changes"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "api"
+        name = "API Changes"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+      directory = "removal"
+      name = "Deprecations and Removals"
+      showcontent = true
+
+    [[tool.towncrier.type]]
+      directory = "feature"
+      name = "Features"
+      showcontent = true
+
+    [[tool.towncrier.type]]
+      directory = "bugfix"
+      name = "Bug Fixes"
+      showcontent = true
+
+    [[tool.towncrier.type]]
+      directory = "doc"
+      name = "Improved Documentation"
+      showcontent = true
+
+    [[tool.towncrier.type]]
+      directory = "trivial"
+      name = "Trivial/Internal Changes"
+      showcontent = true
+
+[tool.isort]
+line_length = 88
+wrap_length = 80
+sections = ["FUTURE", "STDLIB", "FIRSTPARTY", "LOCALFOLDER"]
+known_first_party = ["fiasco", ]
+default_section = "STDLIB"
+multi_line_output = 3
+use_parentheses = true
+include_trailing_comma = true
+force_alphabetical_sort_within_sections = true
+honor_noqa = true
+lines_between_types = 1
