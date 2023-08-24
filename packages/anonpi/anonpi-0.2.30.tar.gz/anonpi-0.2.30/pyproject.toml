@@ -1,0 +1,18 @@
+[metadata]
+name = "anonpi"
+version = "0.2.30"
+author = "Adistar"
+author_email = "adityasamalllll6@gmail.com"
+description = "The \"anonpi\" module is a powerful Python package that provides a convenient interface for interacting with calling systems. It simplifies the development of applications that require functionalities such as machine detection, IVR (Interactive Voice Response), DTMF (Dual-Tone Multi-Frequency) handling, recording, playback, and more"
+long_description = "file: README.MD"
+long_description_content_type = "text/markdown"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+packages = [
+    "anonpi"
+]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
