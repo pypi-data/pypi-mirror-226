@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/django-template-tag/__init__.py
+src/django-template-tag/linked_list.py
+src/django_template_tag.egg-info/PKG-INFO
+src/django_template_tag.egg-info/SOURCES.txt
+src/django_template_tag.egg-info/dependency_links.txt
+src/django_template_tag.egg-info/top_level.txt
+src/tests/__init__.py
