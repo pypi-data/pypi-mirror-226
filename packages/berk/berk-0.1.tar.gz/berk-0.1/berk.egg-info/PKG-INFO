@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: berk
+Version: 0.1
+Summary: A package for producing and managing MeerKAT continuum survey data.
+Author: Matt Hilton
+Author-email: matt.hilton@wits.ac.za
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+License-File: LICENSE
