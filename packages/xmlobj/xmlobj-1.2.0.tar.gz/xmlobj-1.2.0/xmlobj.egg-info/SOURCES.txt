@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+xmlobj/__init__.py
+xmlobj/xmlmapping.py
+xmlobj.egg-info/PKG-INFO
+xmlobj.egg-info/SOURCES.txt
+xmlobj.egg-info/dependency_links.txt
+xmlobj.egg-info/requires.txt
+xmlobj.egg-info/top_level.txt
