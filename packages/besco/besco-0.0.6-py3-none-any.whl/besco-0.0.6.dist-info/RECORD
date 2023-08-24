@@ -1,0 +1,10 @@
+besco/__init__.py,sha256=2LZwzkGKg8VqoqRGr2kPg5gP0GHlcKpDj_wAPZ4bBMQ,38
+besco/besco.py,sha256=3-U1sOf1OISrsVRY2cQnzIBqc6xpz4ZFomc6wGZpBeU,2088
+besco/csv2turtle.py,sha256=cGplL_YM0v6ZDbYKWkuswC2TIfCy974VL2FFo6dDuKY,827
+besco/svg2csv.py,sha256=v31iW7fRve712AKCFcNoRqeCbD1bNlamHynrKCzWNuk,1096
+besco-0.0.6.dist-info/LICENSE.md,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+besco-0.0.6.dist-info/METADATA,sha256=1TQ7thzvZz2jSzyZKszW2NArt8Txkch4kjmtXdGZXJQ,896
+besco-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+besco-0.0.6.dist-info/entry_points.txt,sha256=-zpYSBOwJM6vtS6G6w-JEoqQxsKBdXXEpJ9MYtuCP54,43
+besco-0.0.6.dist-info/top_level.txt,sha256=370eLmXLgcAKKGjqBDkmc0lC82lwFDM1YcsRxtgdmWc,6
+besco-0.0.6.dist-info/RECORD,,
