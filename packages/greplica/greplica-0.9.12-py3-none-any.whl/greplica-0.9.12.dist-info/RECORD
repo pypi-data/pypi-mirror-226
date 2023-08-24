@@ -1,0 +1,9 @@
+greplica/__init__.py,sha256=ATlzg8jIvouk_zHVI9kIjSUCeAQBeJX1fvOStmSGh7w,19
+greplica/__main__.py,sha256=-bZBVKxL2BGbz_rIQnjxOYUVqlqB3jOIOx6m9a634ws,326
+greplica/grep.py,sha256=L6uqvKnRHHsyO-NYKRdD3pR5A7lPAD2slfpWaQIeBsQ,80102
+greplica-0.9.12.dist-info/LICENSE.md,sha256=dXMeP6p4v9OvVmaa-X7oZcPjBSYA__ww3KVh2gm91vQ,1067
+greplica-0.9.12.dist-info/METADATA,sha256=AluwsL8eSb_Myve4OS0heytMNxO3khyvhOgnNCkM5qc,6914
+greplica-0.9.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+greplica-0.9.12.dist-info/entry_points.txt,sha256=CtcLw2z0PoSqXQHdRcE1P18hkJ8ICdGkzKWwE1rXRJ8,83
+greplica-0.9.12.dist-info/top_level.txt,sha256=8ePE65Kc5TdZI6COtctCkXjvUObF6Qycbnxf-UbMla0,9
+greplica-0.9.12.dist-info/RECORD,,
