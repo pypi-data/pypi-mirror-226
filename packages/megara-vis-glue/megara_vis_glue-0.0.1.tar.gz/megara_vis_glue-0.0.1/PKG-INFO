@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: megara_vis_glue
+Version: 0.0.1
+Summary: Paquete visualizador MEGARA
+Home-page: https://github.com/zadejuarez/GlueMegara
+Author: Sherezade Juarez
+License: UNKNOWN
+Platform: UNKNOWN
+
+Paquete para visualizador de MEGARA empleando Glue
+

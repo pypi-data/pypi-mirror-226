@@ -1,0 +1,9 @@
+README.md
+config.py
+setup.cfg
+setup.py
+megara_vis_glue.egg-info/PKG-INFO
+megara_vis_glue.egg-info/SOURCES.txt
+megara_vis_glue.egg-info/dependency_links.txt
+megara_vis_glue.egg-info/requires.txt
+megara_vis_glue.egg-info/top_level.txt
