@@ -1,0 +1,9 @@
+sqlalchemy_altibase/__init__.py,sha256=nSNy_Do20nD4Y0iPyQQBnbW94XxiIol3_jcrntRNmxs,1213
+sqlalchemy_altibase/base.py,sha256=MHiNP9Cb3hwx_uk3JnX1cqDnO5VG19URd4OnRcAbSu4,19986
+sqlalchemy_altibase/pyodbc.py,sha256=DL6x4XOC7ue8rF9tk8puruUjJi1-6h4k7nshtHKYL94,5742
+sqlalchemy_altibase/requirements.py,sha256=hHL8KUNApK-ZDEnaZ3sEWdLS3Ub0e0z7S0BoV0dQg00,2421
+sqlalchemy_altibase-1.0.3.dev0.dist-info/METADATA,sha256=Mmf842ZiEc885NkQo4UwG3YKAw_lbAnN_YbNC4cqyWA,830
+sqlalchemy_altibase-1.0.3.dev0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+sqlalchemy_altibase-1.0.3.dev0.dist-info/entry_points.txt,sha256=oFhGvXTTgNnow_sqFSyYIvHGQHSzFb652R3upFgAsCo,90
+sqlalchemy_altibase-1.0.3.dev0.dist-info/top_level.txt,sha256=7sX_vHYUw7NG1wM5YDxSUM2PAN1GysEBxh2dx09jvMU,20
+sqlalchemy_altibase-1.0.3.dev0.dist-info/RECORD,,
