@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: SoybeanNext
+Version: 0.0.1
+Summary: A deeplearning driving bioinformatic toolkit
+Project-URL: Homepage, https://github.com/IndigoFloyd/SoybeanNext/
+Project-URL: Bug Tracker, https://github.com/IndigoFloyd/SoybeanNext/issues
+Author-email: XtLab <wangxt881@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
