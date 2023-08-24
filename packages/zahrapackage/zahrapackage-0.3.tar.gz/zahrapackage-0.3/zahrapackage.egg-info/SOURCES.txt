@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+mylib/__init__.py
+mylib/count.py
+mylib/message.py
+zahrapackage.egg-info/PKG-INFO
+zahrapackage.egg-info/SOURCES.txt
+zahrapackage.egg-info/dependency_links.txt
+zahrapackage.egg-info/not-zip-safe
+zahrapackage.egg-info/top_level.txt
