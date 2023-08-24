@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: loopquest
+Version: 0.1.1
+Summary: A Production Tool for Embodied AI.
+Home-page: https://github.com/LoopMind-AI/loopquest
+Author: LoopMind
+Author-email: contactus@loopmind.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types (==0.5.0)
+Requires-Dist: certifi (==2023.7.22)
+Requires-Dist: charset-normalizer (==3.2.0)
+Requires-Dist: cloudpickle (==2.2.1)
+Requires-Dist: Farama-Notifications (==0.0.4)
+Requires-Dist: gymnasium (==0.29.0)
+Requires-Dist: idna (==3.4)
+Requires-Dist: iniconfig (==2.0.0)
+Requires-Dist: numpy (==1.25.1)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: Pillow (==10.0.0)
+Requires-Dist: pluggy (==1.2.0)
+Requires-Dist: pydantic (==2.1.1)
+Requires-Dist: pydantic-core (==2.4.0)
+Requires-Dist: pygame (==2.5.0)
+Requires-Dist: pytest (==7.4.0)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: shortuuid (==1.0.11)
+Requires-Dist: typing-extensions (==4.7.1)
+Requires-Dist: urllib3 (==2.0.4)
+
+# Loopquest
+
+A Production Tool for Embodied AI.
+
+Tutorial Video:
+
+Major features:
+
+- Log all the observation, action, reward, rendered images into database with only ONE extra line of code.
+
+```python
+env = gymnasium.make("MountainCarContinuous-v0", render_mode="rgb_array")
+```
+
+->
+
+```python
+env = LoopquestGymWrapper(
+    gymnasium.make("MountainCarContinuous-v0", render_mode="rgb_array")
+)
+```
+
+- Beautiful frontend to visualize all the data and rendered images / videos of the simulation environment.
+- (Coming Soon) Compare your experiments in an intuitive way.
+- (Coming Soon) Directly trainable data for robotics foundation model. Select and download the (observation, action, reward) data with the dataloader interfaces of the most popular deep learning frameworks (e.g. tensorflow, pytorch, huggingface dataset apis).
+
+# Installation (dev only for now)
+
+Clone the git to your local machine by running
+
+```
+git clone https://github.com/LoopMind-AI/loopquest.git
+```
+
+Change to the project root folder and install the package
+
+```
+cd loopquest
+pip install -e .
+```
+
+# How to run (dev only for now)
+
+At `loopquest` folder, bring up the backend server and database,
+
+```
+docker compose up --build
+```
+
+Bring up the frontend web app,
+
+```
+cd frontend
+npm run dev
+```
+
+Then run quickstart script,
+
+```
+python examples/quickstart.py
+```
+
+The command prompt should mention "Check your experiment progress on `http://localhost:3000/experiment/<exp_id>`".
+
+# Quick Start Example
+
+```python
+import gymnasium
+from loopquest.gym_wrappers import LoopquestGymWrapper
+
+frontend_url = "http://localhost:3000"
+backend_url = "http://localhost:8000"
+user_id = "dope_robotics_hacker"
+experiment_name = "a test"
+env = LoopquestGymWrapper(
+    gymnasium.make("MountainCarContinuous-v0", render_mode="rgb_array"),
+    frontend_url,
+    backend_url,
+    user_id,
+    experiment_name,
+)
+obs, info = env.reset()
+for i in range(100):
+    action = env.action_space.sample()
+    obs, reward, terminated, truncated, info = env.step(action)
+    rgb_array = env.render()
+    if terminated or truncated:
+        break
+env.close()
+```
