@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+md2notionpage/__init__.py
+md2notionpage/cli.py
+md2notionpage/core.py
+md2notionpage.egg-info/PKG-INFO
+md2notionpage.egg-info/SOURCES.txt
+md2notionpage.egg-info/dependency_links.txt
+md2notionpage.egg-info/entry_points.txt
+md2notionpage.egg-info/requires.txt
+md2notionpage.egg-info/top_level.txt
