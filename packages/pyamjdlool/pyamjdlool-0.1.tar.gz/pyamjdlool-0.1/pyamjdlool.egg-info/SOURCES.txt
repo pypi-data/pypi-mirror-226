@@ -1,0 +1,7 @@
+License.txt
+setup.py
+code/__init__.py
+pyamjdlool.egg-info/PKG-INFO
+pyamjdlool.egg-info/SOURCES.txt
+pyamjdlool.egg-info/dependency_links.txt
+pyamjdlool.egg-info/top_level.txt
