@@ -1,0 +1,30 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
+*.so
+*~
+
+# due to using tox and pytest
+.tox
+.cache
+
+# due to using coverage
+.coverage
+htmlcov/
+coverage.lcov
+
+# due to vscode:
+.vscode/
+
+# due to Mac:
+**/.DS_Store
+
+# due to comparing against the code we port from:
+datamatrix-svg/
+
+# experimental code
+experimental/

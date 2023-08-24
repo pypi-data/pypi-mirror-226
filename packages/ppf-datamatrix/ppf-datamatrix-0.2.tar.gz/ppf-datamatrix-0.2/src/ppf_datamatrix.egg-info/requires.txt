@@ -1,0 +1,10 @@
+
+[dev]
+tox
+twine
+
+[test]
+flake8
+check-manifest
+pytest
+coverage
