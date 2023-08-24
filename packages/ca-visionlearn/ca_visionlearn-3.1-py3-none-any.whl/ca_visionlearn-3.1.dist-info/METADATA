@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ca-visionlearn
+Version: 3.1
+Summary: Computer Vision Learning Package
+Home-page: https://github.com/sdave-connexion/ca-visionlearn
+Author: Shantanu Dave
+Author-email: daveshantanu1@gmail.com
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: imutils
+Requires-Dist: matplotlib
+
