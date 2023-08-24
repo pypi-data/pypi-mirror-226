@@ -1,0 +1,16 @@
+anonpi/__init__.py,sha256=7wDRxvI_co5g8EmshHF02FvXrreYNUL_iyfJDzNRcl8,2047
+anonpi/call.py,sha256=6w-00Tm9Hni4ZdElL_SG1yvVWq-Er2qKa-qruKy16RU,2257
+anonpi/example.py,sha256=1KfDhdUaJcddXIEm0RdtEzykeP1sTgcgaBz-oCgtmog,282
+anonpi/control/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anonpi/control/_api.py,sha256=D9jmHaVmHUFOg_F9huxtjZv1xv1KjNxZ3Ia2cIpkNn0,1749
+anonpi/control/_base.py,sha256=FOtnWJRqIWbpv7RuGuEI3MhkLrH_JzF-Lqm6PsrV4pA,1421
+anonpi/control/_callstate.py,sha256=4VUxMYfezZH1e3mcw4QYCrsaCEIbZ7V7M5dAwp2igWQ,5658
+anonpi/control/_control.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anonpi/control/_recording.py,sha256=n8rnscSEzqnqMGztIKsl99bb_w8rnKgqLoQIWNCMX0g,360
+anonpi/resources/__init__.py,sha256=1dprkPt-9WmT-Pzoi9RIAjAEKbHJounx4m3K8-1u0WQ,52
+anonpi/resources/_endpoints.py,sha256=WOG-0qevVogPNo_7stmUohZ4Gb9MssmSTzt3bQeOjDg,2081
+anonpi/resources/exceptions.py,sha256=5fNGbWKnG5Zg9oduOCrJxgV6x8rfZgHwKKST3n-oTgY,679
+anonpi-0.2.40.dist-info/METADATA,sha256=7cbPOMiwxLfSw_rDw5v8w3ig75i1HsqkniNk62TqxzE,2241
+anonpi-0.2.40.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+anonpi-0.2.40.dist-info/top_level.txt,sha256=xVEc87EWZdTbx2POmHtyKB95fCWBN0-deloe1HVB7ig,7
+anonpi-0.2.40.dist-info/RECORD,,
