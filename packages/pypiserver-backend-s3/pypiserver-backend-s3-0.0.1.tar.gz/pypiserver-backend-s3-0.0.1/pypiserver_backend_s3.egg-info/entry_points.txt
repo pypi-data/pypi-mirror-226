@@ -1,0 +1,2 @@
+[pypiserver_backends]
+s3 = pypiserver_backend_s3.backend:S3Backend

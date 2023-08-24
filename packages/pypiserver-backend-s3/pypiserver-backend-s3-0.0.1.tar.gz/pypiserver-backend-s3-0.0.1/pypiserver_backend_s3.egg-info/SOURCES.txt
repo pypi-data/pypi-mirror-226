@@ -1,0 +1,15 @@
+.flake8
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+.github/workflows/build-and-publish.yml
+pypiserver_backend_s3/__init__.py
+pypiserver_backend_s3/backend.py
+pypiserver_backend_s3.egg-info/PKG-INFO
+pypiserver_backend_s3.egg-info/SOURCES.txt
+pypiserver_backend_s3.egg-info/dependency_links.txt
+pypiserver_backend_s3.egg-info/entry_points.txt
+pypiserver_backend_s3.egg-info/requires.txt
+pypiserver_backend_s3.egg-info/top_level.txt
