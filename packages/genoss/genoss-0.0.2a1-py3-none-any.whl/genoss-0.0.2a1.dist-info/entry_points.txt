@@ -1,0 +1,3 @@
+[console_scripts]
+genoss-server=genoss.commands.start_genoss_server:main
+
