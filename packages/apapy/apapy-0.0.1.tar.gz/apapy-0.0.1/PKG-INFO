@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: apapy
+Version: 0.0.1
+Summary: A library to download from aparat
+Home-page: 
+Author: Aryan-Sina
+Author-email: ostadmantegh@gmail.com
+License: MIT
+License-File: LICENCE.txt
+
+This is a library that helps you download videos from aparat site and...
+
+Change Log
+==========
+
+0.0.1 (22/08/2023)
+------------------
+- First Release
