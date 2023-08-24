@@ -1,0 +1,9 @@
+numpy
+cvxpy
+pandas
+pararead
+logmuse
+scipy
+pysam
+pybedtools
+ortools
