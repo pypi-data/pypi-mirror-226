@@ -1,0 +1,8 @@
+pypiserver_backend_s3/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+pypiserver_backend_s3/backend.py,sha256=rWmtfXLL-v7B0gRcA-c90bWaUjXKVvGbuyVLfkq20tw,3633
+pypiserver_backend_s3-0.0.1.dist-info/LICENSE,sha256=nutBnATD-9uv22H2HAZ8F8V6_qnYbJwbCOiS3MsMZvs,1071
+pypiserver_backend_s3-0.0.1.dist-info/METADATA,sha256=WfCsjvpN9ScP7fsBzStjYIfoIcbkXDr0J-6kM02dLQY,2194
+pypiserver_backend_s3-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pypiserver_backend_s3-0.0.1.dist-info/entry_points.txt,sha256=_pFS6-CwNOB8BHlOcPxIGqlkAM05RlVjSyeXyFpEPhg,67
+pypiserver_backend_s3-0.0.1.dist-info/top_level.txt,sha256=9jpwRbOzSzkLK9097_B9pImmEfWOpiY3d3z8Tvos9hI,22
+pypiserver_backend_s3-0.0.1.dist-info/RECORD,,
