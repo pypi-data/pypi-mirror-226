@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: df-xfyun-speech
+Version: 0.1.0
+Summary: 对讯飞语音合成\识别WS API的封装
+Author: Liu Lei
+Author-email: liu.lei@dfrobot.com
+Requires-Python: >=3.7.2
+License-File: LICENSE

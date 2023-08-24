@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+df_xfyun_speech/__init__.py
+df_xfyun_speech.egg-info/PKG-INFO
+df_xfyun_speech.egg-info/SOURCES.txt
+df_xfyun_speech.egg-info/dependency_links.txt
+df_xfyun_speech.egg-info/requires.txt
+df_xfyun_speech.egg-info/top_level.txt
+tests/test_iat.py
+tests/test_tts.py
