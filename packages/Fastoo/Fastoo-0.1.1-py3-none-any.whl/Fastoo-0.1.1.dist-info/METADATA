@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: Fastoo
+Version: 0.1.1
+Summary: A super-charged FastAPI framework for even faster delivery
+Maintainer-email: Abdur-Rahmaan Janhangeer <arj.python@gmail.com>
+Project-URL: Source Code, https://github.com/Abdur-rahmaanJ/fastoo
+Project-URL: Issue Tracker, https://github.com/Abdur-rahmaanJ/fastoo/issues/
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic-settings
+Requires-Dist: toml
+Requires-Dist: pyyaml
+Requires-Dist: importlib-metadata >=3.6.0 ; python_version < "3.10"
+
+# fastoo
+
+A powerful framework for dealing with FastAPI apps.
+
+It includes various utilities for building big FastAPI apps, inclding templates and modules.
+
+## Quickstart
+
+-m means add default modules
+
+```
+python -m pip install fastoo==0.1.1
+fastoo new blog -m
+cd blog
+uvicorn app:app --reload
+```
+
+### Configs
+
+Define configuration profile in init (development, production, testing)
+
+In your apps import get_settings from init
+
+
+### Render templates 
+
+consider this
+
+```
+.
+├── api
+│   ├── __init__.py
+│   ├── module.py
+│   └── templates.py
+├── app.py
+├── cli.py
+├── config.py
+├── __init__.py
+├── init.py
+├── modules
+│   └── auth
+│       ├── business.py
+│       ├── models.py
+│       ├── templates
+│       │   └── abc.html
+│       └── view.py
+└── templates
+    └── themes
+        ├── back
+        └── front
+            └── dingy
+                └── index.html
+```
+
+imports 
+
+```python
+
+
+from fastoo.api.module import Module
+
+from fastapi import APIRouter
+from fastapi import Request
+from fastapi import Depends
+
+from typing import Annotated
+
+from pydantic_settings import BaseSettings
+
+from init import get_settings
+
+```
+If we set render_own_templates to True, render_template will look in a folder called templates in the mdoules folder 
+
+```python
+
+router = APIRouter(include_in_schema=False)
+module = Module(__file__, render_own_templates=True)
+
+@router.get("/login/")
+def login(request: Request):
+    with module.set(request) as m:
+        return module.render_template("abc.html", {})
+```
+
+This can be overriden using 
+
+```py
+module = Module(__file__, render_own_templates=True, templates="custom/path")
+```
+
+If you don't want the whole goodies, just call
+
+
+```py
+from fastoo import render_template
+...
+
+    return render_template("template/path", {}, request, directory="custom/templates/path")
+```
+
+## Modules
+
+Modules must contain info.toml like this
+
+```toml
+[base]
+url_prefix = "/auth"
+```
