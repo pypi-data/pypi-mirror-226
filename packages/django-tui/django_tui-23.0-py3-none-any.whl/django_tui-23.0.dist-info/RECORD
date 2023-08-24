@@ -1,0 +1,10 @@
+django_tui/__about__.py,sha256=3N9womz1mW5CIU-iis9bT8l-kEIKyRAtNViJMGo1RCA,122
+django_tui/__init__.py,sha256=b6taqPEJ1KJxDwpKbtiSXfuZLNMoLxsDpDlzrDm9060,101
+django_tui/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tui/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tui/management/commands/trogon.scss,sha256=_y95-zuDyw2Ik38mfGurni2PYZvWJkt47a-_iiAnn4Y,4017
+django_tui/management/commands/tui.py,sha256=CnQNElWaQFVvyrAA5X1OWjGuKQHHZoKkmS4FsQCDDoQ,13495
+django_tui-23.0.dist-info/METADATA,sha256=M7DjnejsH0KwaON3UzgMrWEuEbfxaWvLEHG84rGf2Xo,2171
+django_tui-23.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+django_tui-23.0.dist-info/licenses/LICENSE.txt,sha256=W_TqC0HJzB0rn6QOIDZmpxpCmFFSHgDjVCoEWXPX300,1093
+django_tui-23.0.dist-info/RECORD,,
