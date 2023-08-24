@@ -1,0 +1,12 @@
+rclip/const.py,sha256=7ljzUiTDvm7eihToDlPCQNWe7KgqwOd1KCpLNLH0qKw,158
+rclip/db.py,sha256=eBHMYrrg34YOGqZixg3qQpT4puTSBECsucH10JpGyGQ,2981
+rclip/main.py,sha256=YNoZm8rNYWU6T-UvJSpb_N4sJ47aUHIrUSgiwRqFL48,5915
+rclip/model.py,sha256=DOD2tFlfQ0cu9ZDAXcjAhGHguyGkwg2Gf7PefOXfiZA,5315
+rclip/utils/helpers.py,sha256=2gkleWUFiyKkm-JGwUhZ2D95B_PxWYAZIMJ_7xyD15M,5634
+rclip/utils/preview.py,sha256=2t-eONWLkp2uO_QcgSZauu4fgyTfQo88dY7-gy2xp9c,1153
+rclip/utils/snap.py,sha256=r33nzwGZeOxMfQsTg_lGnTZvfNqe1z08VEUdnw7ynpQ,1726
+rclip-1.6.1.dist-info/LICENSE,sha256=c9oFrcVkZwn4OfuJxzUAcbkJddpOBhW_-OVszIr8w80,1074
+rclip-1.6.1.dist-info/METADATA,sha256=cPLBrPxMKMBT8wnveCWIkzD2mTIMzu8-EPgCijv9zgs,7888
+rclip-1.6.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+rclip-1.6.1.dist-info/entry_points.txt,sha256=7Q2YvQtDnvIC7w_5JitIDNetAfAllcbK-kLVzMb1j6A,41
+rclip-1.6.1.dist-info/RECORD,,
