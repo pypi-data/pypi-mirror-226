@@ -1,0 +1,10 @@
+[console_scripts]
+pypi-server = pypiserver.__main__:main
+
+[paste.app_factory]
+main = pypiserver:paste_app_factory
+
+[pypiserver_backends]
+auto = pypiserver.backend:get_file_backend
+cached-dir = pypiserver.backend:CachingFileBackend
+simple-dir = pypiserver.backend:SimpleFileBackend
