@@ -1,0 +1,3 @@
+fwlib
+fwlipy
+pyfanuc
