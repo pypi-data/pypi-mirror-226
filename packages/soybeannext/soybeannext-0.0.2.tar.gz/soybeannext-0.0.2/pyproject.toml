@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "soybeannext"
+version = "0.0.2"
+description = "A deeplearning driving bioinformatic toolkit"
+authors = ["XtLab"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
