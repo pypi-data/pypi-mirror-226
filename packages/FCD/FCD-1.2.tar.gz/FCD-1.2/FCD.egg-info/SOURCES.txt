@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+FCD.egg-info/PKG-INFO
+FCD.egg-info/SOURCES.txt
+FCD.egg-info/dependency_links.txt
+FCD.egg-info/requires.txt
+FCD.egg-info/top_level.txt
+fcd/ChemNet_v0.13_pretrained.pt
+fcd/__init__.py
+fcd/fcd.py
+fcd/torch_layers.py
+fcd/utils.py
+test/test_fcd.py
