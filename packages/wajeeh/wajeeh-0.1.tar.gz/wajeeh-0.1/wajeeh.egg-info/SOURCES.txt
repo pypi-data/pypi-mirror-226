@@ -1,0 +1,5 @@
+setup.py
+wajeeh.egg-info/PKG-INFO
+wajeeh.egg-info/SOURCES.txt
+wajeeh.egg-info/dependency_links.txt
+wajeeh.egg-info/top_level.txt
