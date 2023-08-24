@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "reg-stat-inference"
+version = "0.1.6"
+description = "Treat multicollinearity and non-significant variables from your statsmodels linear and logistic regressions"
+authors = ["Dirceu Silva <ddasilvajunior@vio.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+statsmodels = "*"
+pandas = "*"
+numpy = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+scikit-learn = "*"
+seaborn = "*"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+requests-mock = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
