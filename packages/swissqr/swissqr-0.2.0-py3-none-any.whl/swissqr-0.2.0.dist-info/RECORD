@@ -1,0 +1,9 @@
+swissqr/__init__.py,sha256=783pRXWjkKoc_vCTegAuZyOXbygvbUcdsWD00ON2rZo,173
+swissqr/exceptions.py,sha256=9H1QY3r-PZW7HaV-p5VVo1N3AZxd4qBLH4dqpmoBV24,45
+swissqr/paymentparty.py,sha256=mAr4c6aiuY1QMbXl554jpR6A9fRQ_P5Cfno4whNVgLI,4752
+swissqr/qr.py,sha256=5ePrPsRcaic5LC1pkJ1NZjYjojenLmXNW7_ih5GFjKY,2771
+swissqr/qrdata.py,sha256=Y7k9Wbm4VYJpcYHKbhTr87f4IHY-TbTDMZ3KvEn_d9Y,5192
+swissqr-0.2.0.dist-info/METADATA,sha256=GXZ4vvqILBwAyEUySuPMcaCCiQ7bj29lJ00dNflquF0,2110
+swissqr-0.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+swissqr-0.2.0.dist-info/top_level.txt,sha256=eTFox1YWtLBLhr_FEuOSFDi0JlqISl4UPyPCHjTKjJg,8
+swissqr-0.2.0.dist-info/RECORD,,
