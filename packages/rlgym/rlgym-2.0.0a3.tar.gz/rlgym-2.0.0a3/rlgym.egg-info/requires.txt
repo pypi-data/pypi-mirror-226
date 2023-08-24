@@ -1,0 +1,13 @@
+rlgym-api==2.0.0-alpha-1
+
+[all]
+rlgym-rocket-league[all]==2.0.0-alpha-3
+
+[rl]
+rlgym-rocket-league[all]==2.0.0-alpha-3
+
+[rl-game]
+rlgym-rocket-league[game]==2.0.0-alpha-3
+
+[rl-sim]
+rlgym-rocket-league[sim]==2.0.0-alpha-3
