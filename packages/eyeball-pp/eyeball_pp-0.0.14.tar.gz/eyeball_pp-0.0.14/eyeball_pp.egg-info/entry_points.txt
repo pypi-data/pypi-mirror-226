@@ -1,0 +1,2 @@
+[console_scripts]
+evaluate_system = eyeball_pp:evaluate_system_cmd
