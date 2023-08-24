@@ -1,0 +1,12 @@
+contact-local-python-package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contact-local-python-package/contact_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contact-local-python-package/contact_api/contact.py,sha256=-cg8osQmjPaElfZhiYN6anRwJBH-_38_ScKUlZUki78,6478
+contact-local-python-package/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contact-local-python-package/db/contactView.py,sha256=qJGuHRApKSJpW8vs36ooXSynahSWZ1uLitWkuxdm2kU,5144
+contact-local-python-package/db/database.py,sha256=wVVlEeVeeXdpdVNr0fQri6Anesx0LSs6i77tpzJNKgY,285
+contact-local-python-package/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contact-local-python-package/tests/contact_test.py,sha256=q5_L-2r-4vbJg9k5WOQO-HfolE7xyUluKoCz5uirRno,2688
+contact_local-0.0.9.dist-info/METADATA,sha256=l2P80afFbd1S2s1oGoD12u6V5VELMVSiUufwt_TUCkU,479
+contact_local-0.0.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+contact_local-0.0.9.dist-info/top_level.txt,sha256=LN8J7whCYCNJs3cwGyFg7xpNJY2Q0JvG32YWga4zxEY,29
+contact_local-0.0.9.dist-info/RECORD,,
