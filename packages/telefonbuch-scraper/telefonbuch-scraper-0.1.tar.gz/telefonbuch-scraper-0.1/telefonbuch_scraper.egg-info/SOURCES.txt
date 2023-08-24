@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+my_telefonbuch/__init__.py
+my_telefonbuch/telefonbuch.py
+telefonbuch_scraper.egg-info/PKG-INFO
+telefonbuch_scraper.egg-info/SOURCES.txt
+telefonbuch_scraper.egg-info/dependency_links.txt
+telefonbuch_scraper.egg-info/entry_points.txt
+telefonbuch_scraper.egg-info/requires.txt
+telefonbuch_scraper.egg-info/top_level.txt

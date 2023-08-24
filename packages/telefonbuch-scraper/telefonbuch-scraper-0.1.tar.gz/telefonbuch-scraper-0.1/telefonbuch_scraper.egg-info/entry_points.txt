@@ -1,0 +1,2 @@
+[console_scripts]
+telefonbuch-scraper = my_telefonbuch.telefonbuch:main
