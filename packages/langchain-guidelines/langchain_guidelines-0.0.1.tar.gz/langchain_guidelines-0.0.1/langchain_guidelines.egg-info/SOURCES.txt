@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+langchain_guidelines/__init__.py
+langchain_guidelines/_modidx.py
+langchain_guidelines/core.py
+langchain_guidelines.egg-info/PKG-INFO
+langchain_guidelines.egg-info/SOURCES.txt
+langchain_guidelines.egg-info/dependency_links.txt
+langchain_guidelines.egg-info/entry_points.txt
+langchain_guidelines.egg-info/not-zip-safe
+langchain_guidelines.egg-info/requires.txt
+langchain_guidelines.egg-info/top_level.txt
