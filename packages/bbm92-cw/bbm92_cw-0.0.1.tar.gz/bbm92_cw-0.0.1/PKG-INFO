@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bbm92_cw
+Version: 0.0.1
+Summary: Python package that allows to model the expected keyrates in a BBM92 protocol based on SPDC pumped with a CW laser.
+Author-email: Thomas Jaeken <tj2022@hw.ac.uk>
+Project-URL: Bug Tracker, https://github.com/Thomas-Jaeken/BBM92_CW/issues
+Project-URL: Homepage, https://github.com/Thomas-Jaeken/BBM92_CW
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# BBM92_CW
+This project is an implementation of the model laid out in [Neumann et al.](https://link.aps.org/doi/10.1103/PhysRevA.104.022406)
+The model treats a Continuous Wave (CW) source of photon pairs that are perfectly correlated in time, 
+and formalises what the expected asymptotic secure key rate (AKR) is if you use them to perform passive BBM92.
+
+The package is meant to calculate the optimal brightness, coincidence window and corresponding AKR for a given link loss.
+
+# Examples
+[see here](https://github.com/Thomas-Jaeken/BBM92_CW)
