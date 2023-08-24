@@ -1,0 +1,17 @@
+.version
+README.md
+pyproject.toml
+punkeditor/__init__.py
+punkeditor/__main__.py
+punkeditor/editbox.py
+punkeditor/handler.py
+punkeditor.egg-info/PKG-INFO
+punkeditor.egg-info/SOURCES.txt
+punkeditor.egg-info/dependency_links.txt
+punkeditor.egg-info/entry_points.txt
+punkeditor.egg-info/requires.txt
+punkeditor.egg-info/top_level.txt
+punkeditor/command/__init__.py
+punkeditor/command/edit_command.py
+punkeditor/command/key_command.py
+test/test_nothing.py
