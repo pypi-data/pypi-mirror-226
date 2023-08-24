@@ -1,0 +1,13 @@
+borehole_temperature_models/Constants.py,sha256=2vJIKybH30n9nzAUXIZZH44Oy1k9JVpoQx9KJvWpnUA,1401
+borehole_temperature_models/ModelMeasured.py,sha256=CBTKI_K2OuslGW2I3Tuq7QBYcaZmB8goDinrw7icN70,3713
+borehole_temperature_models/TemperatureModel.py,sha256=UiwrZqUq01TQD0iMzlM5uSAd3vC16xnFG6fJYchdkI8,17188
+borehole_temperature_models/Utilities.py,sha256=u9i01GVhCmg-E4uZvsqrS7NjFDl8uBiNBviOFP26g2c,1464
+borehole_temperature_models/__init__.py,sha256=Hxvxmld4VETB_5WbC59oL-3yyE6ZoMo3NK4yGfCCBPA,273
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_ModelMeasured.py,sha256=HA24D1mkQQlkxNm-dtG7ZXDqPRhl-aymD_fJet9hQBM,998
+tests/test_TemperatureModel.py,sha256=KGoqaTzoeJS-bq6I28mBSr13XCaPQbl5B3f9E364L44,5008
+icetemp-0.1.0.dist-info/LICENSE.txt,sha256=7d0fD0XGgWW2tB9DfkTQFUiq6N_Zwqrf_LOH0t-Q3oc,1102
+icetemp-0.1.0.dist-info/METADATA,sha256=n1R1f3IrsTKDYm8syIChkeTDjREwFRiiE3ESwYOOGhA,2004
+icetemp-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+icetemp-0.1.0.dist-info/top_level.txt,sha256=DM1LeRlTHIQ_I9TbWEr1etZvL878OqGX26iMI1jmwOc,34
+icetemp-0.1.0.dist-info/RECORD,,
