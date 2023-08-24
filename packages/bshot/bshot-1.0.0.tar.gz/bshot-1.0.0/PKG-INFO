@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: bshot
+Version: 1.0.0
+Summary: Python package to take screenshots of windows that are in background
+Home-page: https://github.com/sandbox-pokhara/bshot
+Author: Pradish Bijukchhe
+Author-email: pradishbijukchhe@gmail.com
+Project-URL: Bug Tracker, https://github.com/sandbox-pokhara/bshot/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# bshot
+
+Python package to take screenshots of windows that are in background
+
+## Installation
+
+```
+pip install bshot
+```
+
+## Usage
+
+```python
+import cv2
+import win32gui
+
+from bshot.screenshot import get_image
+
+hwnd = win32gui.FindWindow(None, "Untitled - Notepad")
+img = get_image(hwnd)
+cv2.imshow("", img)
+cv2.waitKey(0)
+```
+
+## Limitations
+
+- `get_image` does not properly crop the contents of window
