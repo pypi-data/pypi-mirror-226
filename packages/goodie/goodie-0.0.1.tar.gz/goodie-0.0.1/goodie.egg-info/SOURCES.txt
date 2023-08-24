@@ -1,0 +1,9 @@
+setup.py
+goodie/__init__.py
+goodie/ocr.py
+goodie/pth.py
+goodie/utils.py
+goodie.egg-info/PKG-INFO
+goodie.egg-info/SOURCES.txt
+goodie.egg-info/dependency_links.txt
+goodie.egg-info/top_level.txt
