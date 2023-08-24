@@ -1,0 +1,2 @@
+[datasette]
+debug_permissions = datasette_debug_permissions
