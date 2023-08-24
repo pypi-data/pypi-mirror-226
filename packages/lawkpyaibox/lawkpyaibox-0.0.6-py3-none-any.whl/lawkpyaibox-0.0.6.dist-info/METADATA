@@ -1,0 +1,184 @@
+Metadata-Version: 2.1
+Name: lawkpyaibox
+Version: 0.0.6
+Summary: python工具包，用于快速递归搜索文件路径、管理oss、json、合并视频等
+Home-page: https://gitlab.com/lawk_metaos/metaos_facear/pyaibox
+Author: yingzhi
+Author-email: jackhenry1992@gmail.com
+License: apache 3.0
+Requires: numpy
+Requires: matplotlib
+Requires: os
+Requires: pyaudio
+Requires: moviepy
+Description-Content-Type: text/markdown
+
+# pyaibox
+- compile:   
+`python3 setup.py bdist_wheel`
+
+- install:   
+`python3 -m pip install lawkpyaibox-0.0.1-py3-none-any.whl --force-reinstall`  
+
+
+# Example
+
+### search_target_extfile & 录音
+
+```python
+import lawkpyaibox
+
+"""
+迭代查找指定路径的视频路径
+"""
+videopaths = lawkpyaibox.search_target_extfile(args.data_rootdir, ".mp4")
+
+"""
+对指定的视频列表提取出音频文件
+"""
+lawkpyaibox.extract_audio_from_video(videopaths, videoext='.mp4')
+
+"""
+录音
+"""
+from lawkpyaibox import audio_recorder
+r = audio_recorder.AudioRecorder(min_record_length=20, max_record_time=100)
+r.recoder("audio_recorder.wav")
+```
+
+### 多进程 
+```python
+"""
+多进程示例
+"""
+def run_process_functor(thidx, datalst):
+    print("Start loop:{}".format(thidx))
+    threadst = time.time()
+    for idx, data in enumerate(datalst):
+        # TODO: process your data here
+        headstr = "specify-yourself-headstr".format()
+        lawkpyaibox.thread_show_progress(thidx,
+                                     time.time(),
+                                     threadst,
+                                     idx,
+                                     len(datalst),
+                                     headerstr=headstr)
+    print("Finish loop:{}".format(thidx))
+
+datalist = []
+lawkpyaibox.multiprocess_data_interpreter(run_process_functor, thread_num=8,
+                                      datalst=datalist)
+```
+
+### OSS
+```python
+"""
+oss manager示例　
+"""
+ossmanager = lawkpyaibox.OSSManager(
+    oss_key="YourOssKey",
+    oss_secret="YourSecret",
+    oss_endpoint="http://oss-cn-beijing.aliyuncs.com",
+    oss_bucketname="YourBucket")
+
+# list oss files 
+files = ossmanager.list_oss_path(
+    oss_path="YourOssPath",
+    file_postfix='.json')
+print(files)
+
+
+# upload file to oss
+oss_remotepath = "YourOssPath"
+ossmanager.push_file_to_oss(file_localpath=localfile,
+                            file_osspath=oss_remotepath)
+
+# reset ossbucket 
+ossmanager.reset_ossbucket(oss_bucketname="YourBucketName")
+```
+
+### redis
+```python
+"""
+redis manager
+"""
+redis_host = "YourRedisHost"
+redis_port = 6379
+redis_pwd = "YourPasswd"
+redismanager = redis_manager.RedisManager(
+    redis_identity="lawkcloud_ttseas",
+    redis_host=redis_host,
+    redis_port=redis_port,
+    redis_pwd=redis_pwd,
+    redis_timeout=12000)
+
+# get data by key
+keyid = "redisKey"
+redisvalue = redismanager.redis_get_data(keyid)
+print(redisvalue[0])
+# write dictionary
+redismanager.redis_write_datas(datadict)
+```
+
+
+### mysql
+```python
+mysqltabel_name = "MySqlName"
+mysqlrds_manager = MysqlRdsManager(
+    host='',
+    user="",
+    password="",
+    schema_database='')
+
+# insert into
+updatetime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+createtime = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+
+querycmd = "replace into {} values(%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s);".format(
+    mysqltabel_name)
+values = (
+    'lushu-879821.json',
+    'mapnavi_gpx/lushu_manual_library/lushu-879821.json', '建设四路拉练',
+    '浙江省杭州市萧山区瓜沥镇-浙江省杭州市萧山区瓜沥镇-浙江省杭州市萧山区新街街道',
+    'mapnavi_gpx/lushu_manual_library/lushu-1162143.png', 'ride',
+    'lawk_manual_000', '浙江省杭州市萧山区瓜沥镇横青线', '浙江省杭州市萧山区新街街道塘新线', '10351.56',
+    0.0, 0.0, 0.0,
+    '[30.194291, 30.194211, 30.194211, 30.194876, 30.195472, 30.196187, 30.196336]',
+    'activate', updatetime, createtime)
+mysqlrds_manager.query(querycmd, values)
+print(querycmd)
+
+# select result
+print("\n\n")
+print("*** selection from MySQL ***")
+select_querycmd = "select * from {} where `create_time` > '20220505' ".format(
+    mysqltabel_name)
+results = mysqlrds_manager.query(select_querycmd, values=None)
+for item in results:
+    print("\n", item['map_id'], item['map_ossurl'], item['map_name'])
+
+```
+
+
+### 视频编辑工具
+>merge videos
+```python
+# merge two videos in row,
+merge_videos_with_startidx([videopath1, videopath2, videopath3], outputpath, axis=0)
+
+# merge two videos in col
+merge_videos_with_startidx([videopath1, videopath2], outputpath, axis=1)
+```
+
+### json工具
+```
+import lawkpyaibox
+lawkpyaibox.save_json(filepath, jdatas)
+
+# 加载json文件
+lawkpyaibox.load_json(filepath)
+
+def process_callback(line):
+    print(line)
+lawkpyaibox.load_json_line(filepath, process_callback)
+```
