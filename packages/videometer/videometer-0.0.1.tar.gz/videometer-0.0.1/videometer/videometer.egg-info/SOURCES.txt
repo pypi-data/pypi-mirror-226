@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+tests/test.py
+videometer/videometer.egg-info/PKG-INFO
+videometer/videometer.egg-info/SOURCES.txt
+videometer/videometer.egg-info/dependency_links.txt
+videometer/videometer.egg-info/requires.txt
+videometer/videometer.egg-info/top_level.txt
