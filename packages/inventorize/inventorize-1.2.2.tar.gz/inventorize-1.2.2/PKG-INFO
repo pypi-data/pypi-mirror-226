@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: inventorize
+Version: 1.2.2
+Summary: inventory analytics,revenue management and cost calculations for SKUs
+Author: Haytham Omar
+Author-email: haytham@rescaleanalytics.com
+Keywords: inventory,pricing,markdowns
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Package: inventorize
+Title: Inventory Analytics,Markdowns and Pricing.
+Version: 1.2.2
+Authors person("Haytham", "Omar", email = "haytham@rescaleanalytics.com", role = c("aut", "cre"))
+Description: Simulate inventory policies, facilitate inventory analysis calculations such as  stock levels and re-order points,pricing and promotions calculations. 
+  The package includes calculations of inventory metrics, stock-out calculations and ABC analysis calculations.
+    The package includes revenue management techniques such as Multi-product optimization,logit model optimization.
+  The functions are referenced from :
+  1-Harris, Ford W. (1913). "How many parts to make at once". Factory, The Magazine of Management. <isbn10: 135–136, 152>.
+  2- Nahmias, S. Production and Operations Analysis. McGraw-Hill International Edition. <isbn: 0-07- 2231265-3. Chapter 4>.
+  3-Silver, E.A., Pyke, D.F., Peterson, R. Inventory Management and Production Planning and Scheduling. <isbn: 978-0471119470>. 
+  4-Ballou, R.H. Business Logistics Management. <isbn: 978-0130661845>. Chapter 9.
+  5-MIT Micromasters Program.
+  6- Columbia University  course for supply and demand analysis.
+  8- Price Elasticity of Demand MATH 104,Mark Mac Lean (with assistance from Patrick Chan) 2011W
+  For further details or correspondence :<www.linkedin.com/in/haythamomar>, <www.rescaleanalytics.com>.
+
+Change Log
+==========
+
+1.2.2 (23/08/2023)
+-------------------
+- second   Release
+1- R.s.S inventory policy is added.
+2- Max policy is added (different than Min Max)
+2- you can compare forecasting impact on inventory not just relying on the average.
+3- the forecasts can be one step like exponential smoothing/croston or multi-steps like machine learning models or seasonal arimas.
+4- the plots are automatically added with a TRUE or FALSE arguments.
+5- polynomial price optimization is added with the current linear and logit.
+6- the markdown model for seasonal merchandizing from (walker 1999) is added to identify the viability and the percentage of the markdown.
+7- In static policies, you can can recalculate the min and the max during the simulation horizon. Also user can manually define the min, max, quantity, saftey stock if required.
+
+8- the classification of the demand is added as an output.
+9- average flow time is added which is how much time on average a unit stays in stock.
+10- initial inventory level can be set manually.
+11- also because many have asked the ABC thresholds can be changed and up to two attributes can be added in the function abc_dynamic().
+12- negative binomial and gamme distributions are added
+13- comparing distributions of demand.
+
+
+
+0.0.8 (29/08/2020)
+-------------------
+- first  Release
+
+
