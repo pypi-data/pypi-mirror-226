@@ -1,0 +1,13 @@
+bambooai/__init__.py,sha256=pS7PobwG5weR-OiQSoRrMtIhXgUm4MHX4H_vl9bk7FE,208
+bambooai/bambooai.py,sha256=MkfYydPPAWXw5MttjZyHJdLs0_4X9DJAPJvqEf_y0w4,30117
+bambooai/func_calls.py,sha256=kmDtnnp5Wen93ToyJzPLZhLHYEDcnM2sQ2FkR6nUzhg,1247
+bambooai/google_search.py,sha256=pTkTiHCSO4KoUEnGU0mHdTvUMyrrdhpp8Huq1qzDZaE,6330
+bambooai/local_models.py,sha256=6klWGFsGI1p7OqPc294gr8JedQOw0yNRGjNLBZ_4sTM,4503
+bambooai/models.py,sha256=zVbcaFEYMS7BYzIAYqZDFflbCBtFq4Luu5Iv2MCdCMY,6191
+bambooai/prompts.py,sha256=WTpCtKbI78zZ6-LNZ01J6q8mhMrOI_kcmqdFTKWOHr8,11017
+bambooai/qa_retrieval.py,sha256=bSol8is-03Twd2UXNe65N0-6LsqQDf1k1QKdv15CBfI,4189
+bambooai/reg_ex.py,sha256=7ZV4M0i81KPOBLX2Og9MHn5HnCLVKg5OAPvJE1iQGaI,3822
+bambooai-0.3.18.dist-info/METADATA,sha256=7yrSrTpfifqpGX5BmcHiUYAc1rcxgBj_ahG0BIjkCeI,9112
+bambooai-0.3.18.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+bambooai-0.3.18.dist-info/top_level.txt,sha256=kk42AHhQU4h0wlnqM1-F9QMjrxqjVM38cJUnJwVC5vY,9
+bambooai-0.3.18.dist-info/RECORD,,
