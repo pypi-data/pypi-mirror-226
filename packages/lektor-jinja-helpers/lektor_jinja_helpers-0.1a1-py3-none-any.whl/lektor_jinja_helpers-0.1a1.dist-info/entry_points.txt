@@ -1,0 +1,3 @@
+[lektor.plugins]
+jinja-helpers = lektor_jinja_helpers:JinjaHelpersPlugin
+
