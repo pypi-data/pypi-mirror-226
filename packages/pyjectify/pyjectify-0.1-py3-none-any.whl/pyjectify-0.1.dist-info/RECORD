@@ -1,0 +1,16 @@
+pyjectify/__init__.py,sha256=6z6-JJWTT-FHVZTuANOpi_L2RjmHPLeb5n186v-20w4,309
+pyjectify/windows/__init__.py,sha256=VdofppAaORsh9OBK4OpjEfLxZsMYaGKI7uwQEEe2BJQ,1708
+pyjectify/windows/core/defines.py,sha256=oDB9EF-9injXii6g-Ta3QpR3adTeANudRr3AzX8q5ag,17637
+pyjectify/windows/core/pe.py,sha256=FiEJp5PjIr_891_1EglydZ2xIx_MV8oamVg2T53Sgks,12822
+pyjectify/windows/core/process.py,sha256=iIOkjDCkAJgEcNpyoV6AvZ6qgK4V2AruE05-R_46eMs,17612
+pyjectify/windows/modules/hook.py,sha256=b2loKUiIRKf9YY_L7oHPRsIr5WScc2OJZjMCtsTbDOk,2233
+pyjectify/windows/modules/inject.py,sha256=pvUExh1k_U0UkJKue_ppTdOk3-1LdG7SaR83i4ya2mg,5909
+pyjectify/windows/modules/memscan.py,sha256=nGT6RTDakNO3u-WvKZg1Jib7uEzPo4SMsiRwvOnqXjo,2021
+pyjectify/windows/modules/pythonlib.py,sha256=BGCmCUSW20ymS43XL3zDIcHdrTGNxPdJ1N8IJR6inJA,5599
+pyjectify/windows/utils/apisetschema.py,sha256=GkLX5k0nGDwAqOTKi43VWpZqoCCEoO3qcU12A0KBiGo,5789
+pyjectify/windows/utils/syscall.py,sha256=fp_DKg3oRpIkYCW7dDLoIqXyAqFrP703CndrfSXWRDM,3927
+pyjectify-0.1.dist-info/LICENSE,sha256=eyZHKizmLNC-NsM5lTYVnxH5iqnD3Ya_5D_xvhh_j6U,1064
+pyjectify-0.1.dist-info/METADATA,sha256=bkL74CZ1ym-sxteFkjXjwRpph5LKDE5jXZsZgz5s_fY,3715
+pyjectify-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyjectify-0.1.dist-info/top_level.txt,sha256=aKfhGc35qj8qcTxoQfKc27x96RYVDj1hUFwGXkKLft8,10
+pyjectify-0.1.dist-info/RECORD,,
