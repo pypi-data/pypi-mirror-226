@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: imgdt
+Version: 0.0.1
+Summary: Small package to prepare images for a dataset.
+Home-page: https://github.com/MikiTwenty/Python/tree/main/Libraries/video-streaming
+Author: MikiTwenty
+Author-email: terminetor.xx@gmail.com
+License: MIT
+Keywords: python,dataset,transformer,images
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Small package to prepare images for a dataset

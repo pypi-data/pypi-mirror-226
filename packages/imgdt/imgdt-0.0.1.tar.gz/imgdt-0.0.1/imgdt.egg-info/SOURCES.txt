@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+imgdt/__init__.py
+imgdt/imgdt.py
+imgdt/tools.py
+imgdt/utils.py
+imgdt.egg-info/PKG-INFO
+imgdt.egg-info/SOURCES.txt
+imgdt.egg-info/dependency_links.txt
+imgdt.egg-info/requires.txt
+imgdt.egg-info/top_level.txt
