@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+DataMason.egg-info/PKG-INFO
+DataMason.egg-info/SOURCES.txt
+DataMason.egg-info/dependency_links.txt
+DataMason.egg-info/requires.txt
+DataMason.egg-info/top_level.txt
+datamason/__init__.py
+datamason/analyze.py
+datamason/interface.py
+datamason/prepare.py
+datamason/transform.py
+datamason/validate.py
+datamason/visualize.py
