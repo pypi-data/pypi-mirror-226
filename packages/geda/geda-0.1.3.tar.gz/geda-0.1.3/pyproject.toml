@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "geda"
+version = "0.1.3"
+description = ""
+authors = ["thawro <tomaszhawro.kontakt@gmail.com>"]
+homepage = "https://github.com/thawro/geda"
+repository = "https://github.com/thawro/geda"
+readme = "README.md"
+packages = [{ include = "geda" }]
+
+[tool.poetry.dependencies]
+python = "<3.13,>=3.9"
+pre-commit = "^3.2.2"
+black = "^23.3.0"
+isort = "^5.12.0"
+rich = "^13.3.5"
+colorlog = "^6.7.0"
+mat73 = "^0.60"
+colored = "^1.4.4"
+tqdm = "^4.65.0"
+pillow = "^10.0.0"
+opencv-python = "^4.8.0.76"
+numpy = "^1.25.2"
+scipy = "^1.11.2"
+pypng = "^0.20220715.0"
+matplotlib = "^3.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
