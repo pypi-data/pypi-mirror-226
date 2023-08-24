@@ -1,0 +1,13 @@
+colorama
+
+[dev]
+AutoDict
+coverage
+pylint
+toml
+yapf>=0.40.0
+
+[test]
+AutoDict
+coverage
+pylint
