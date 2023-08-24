@@ -1,0 +1,8 @@
+setup.py
+invoicing/__init__.py
+invoicing/invoice.py
+somethingdarkside.egg-info/PKG-INFO
+somethingdarkside.egg-info/SOURCES.txt
+somethingdarkside.egg-info/dependency_links.txt
+somethingdarkside.egg-info/requires.txt
+somethingdarkside.egg-info/top_level.txt
