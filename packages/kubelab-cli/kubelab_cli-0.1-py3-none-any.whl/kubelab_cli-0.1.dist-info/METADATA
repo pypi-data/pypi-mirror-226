@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: kubelab-cli
+Version: 0.1
+Summary: kubelab-cli Kubernetes made easy - handle clusters and product with simple commands!
+Home-page: https://github.com/KubeLab-cloud/kubelab-cli
+Download-URL: https://github.com/KubeLab-cloud/kubelab-cli/archive/kubelab-cli-0.1.tar.gz
+Author: KubeLab team
+Author-email: dev@kubelab.cloud
+License: MIT
+Keywords: kubernetes,cli,iac,k9s,kubectl
+License-File: LICENSE.txt
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: click
+Requires-Dist: jmespath
+Requires-Dist: MarkupSafe
+Requires-Dist: python-dateuti
+Requires-Dist: PyYA
+Requires-Dist: s3transfer
+Requires-Dist: six
+Requires-Dist: urllib3
+Requires-Dist: build
+Requires-Dist: wheel
+Requires-Dist: setuptools
+Requires-Dist: flake8
+Requires-Dist: mccabe
+Requires-Dist: pycodestyle
+Requires-Dist: pyflakes
+Requires-Dist: kubernetes
+Requires-Dist: requests
+Requires-Dist: pytest
+

@@ -1,0 +1,9 @@
+kubelab-cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kubelab-cli/deploy.py,sha256=uiDuPaClGITf7I6J_uavcWjgteYRC2Y10P0Ksxius_c,9058
+kubelab-cli/lab.py,sha256=_f5MJxzQ1AJTvhuNCaBU82y-okRus1ZIFeZPVyIDU0I,54562
+kubelab_cli-0.1.dist-info/LICENSE.txt,sha256=_4ckgs62-1SOQDGAEUtMJBB-U3OfZ9HIMWV-Y6WkqCs,1054
+kubelab_cli-0.1.dist-info/METADATA,sha256=g6agr7sXJwsfR4yoLe13KhydeGzy0HJri0kWJaMmDEQ,896
+kubelab_cli-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kubelab_cli-0.1.dist-info/entry_points.txt,sha256=9Sx_udygx0KLAh77I-UC_dJSOWxb3unhHx4XT5tUPSI,44
+kubelab_cli-0.1.dist-info/top_level.txt,sha256=EwG5j5AQLVBM4078Zdrr6fayRlpf0z8V7kG5CE_HILA,12
+kubelab_cli-0.1.dist-info/RECORD,,
