@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: dataclass-rest
+Version: 0.4
+Summary: An utility for writing simple clients for REST like APIs
+Home-page: https://github.com/reagento/dataclass-rest
+Author: A. Tikhonov
+Author-email: 17@itishka.org
+License: Apache2
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: adaptix
+Requires-Dist: dataclasses ; python_version < "3.7"
+Requires-Dist: typing-extensions ; python_version < "3.8"
+
+# Dataclass REST
+
+[![PyPI version](https://badge.fury.io/py/dataclass-rest.svg)](https://badge.fury.io/py/dataclass-rest)
+[![Build Status](https://travis-ci.org/Tishka17/dataclass_rest.svg?branch=master)](https://travis-ci.org/Tishka17/dataclass_rest)
+
+A modern and simple way to create clients for REST like APIs
+
+## Quickstart
+
+
+Step 1. Install
+```bash
+pip install dataclass_rest requests
+```
+
+
+Step 2. Declare models
+
+```python
+@dataclass
+class Todo:
+    id: int
+    user_id: int
+    title: str
+    completed: bool
+```
+
+Step 3. Create and configure client
+
+```python
+
+from requests import Session
+from dataclass_rest.http.requests import RequestsClient
+
+class RealClient(RequestsClient):
+    def __init__(self):
+        super().__init__("https://example.com/api", Session())
+```
+
+Step 4. Declare methods using `get`/`post`/`delete`/`patch`/`put` decorators. 
+Type hints are required. Body of method is ignored.
+
+Use any method arguments to format URL.
+`body` argument is sent as request body with json. Other arguments, not used in URL are passed as query parameters.
+`get` and `delete` does not have body.
+
+```python
+from typing import Optional, List
+from requests import Session
+from dataclass_rest import get, post, delete
+from dataclass_rest.http.requests import RequestsClient
+
+class RealClient(RequestsClient):
+    def __init__(self):
+        super().__init__("https://example.com/api", Session())
+
+    @get("todos/{id}")
+    def get_todo(self, id: str) -> Todo:
+        pass
+
+    @get("todos")
+    def list_todos(self, user_id: Optional[int]) -> List[Todo]:
+        pass
+
+    @delete("todos/{id}")
+    def delete_todo(self, id: int):
+        pass
+
+    @post("todos")
+    def create_todo(self, body: Todo) -> Todo:
+        """Создаем Todo"""
+```
+
+## Asyncio
+
+To use async client insted of sync:
+
+1. Install `aiohttp` (instead of `requests`)
+2. Change `dataclass_rest.http.requests.RequestsClient` to `dataclass_rest.http.aiohttp.AiohttpClient`
+3. Add `async` keyword to your methods 
+
+## Configuration
+
+### Parsing and serialization
+
+All parsing and serialization is done using instances of `FactoryProtocol`.
+They are create by client object during its initialization. Default implementation creates `Retort` from [adaptix](https://adaptix.readthedocs.io/)
+
+There are 3 of them:
+
+1. Request body factory. Created using `_init_request_body_factory`. It is used to convert body object to simple python classes before senging to the server
+2. Request args factory. Created using `_init_request_args_factory`. It is used to convert other parameters of method. All parameters are passed as a single object.
+Type of that object is generated and can be retrieved from your client methods using `.methodspec.query_params_type`
+3. Response body factory. Created using `_init_response_body_factory`. It is used to parse a server response.
+
+### Error handling
+
+You can attach error handler to single method using `@yourmethod.on_error` decorator in your class.
+
+To set same behavior for all methods inherit from BoundMethod class, override `_on_error_default` method and set that class as `Client.method_class`
+
+### Other params
+
+You can use different body argument name if you want. Just pass `body_name` to the decorator.
