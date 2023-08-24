@@ -1,0 +1,17 @@
+pylance-0.6.5.dist-info/METADATA,sha256=k5PTEWp5j0c7BInkl1p0UrVFaVrQf9O2gprOLQ4uLtA,6634
+pylance-0.6.5.dist-info/WHEEL,sha256=80Knmk0NZ6SDYvEAKj9ZVOR46T_vywk1-vge-4sx2G4,104
+pylance-0.6.5.dist-info/license_files/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+lance/conftest.py,sha256=NzroJAJkSU6Rp7kMAOGKwy8Z_4A3SeO5rMhRghdohUA,482
+lance/vector.py,sha256=1LdQbyVehZ-R2EyMgER7PDf5-BORtZhrtxklb-tqZe4,4243
+lance/util.py,sha256=TWp7C8Q94QCky1edlf_B448NFUccF11A6F-whSXM2ms,1478
+lance/arrow.py,sha256=Qqo3_sHT_hL56Fw6qiei57ZcySPB8etDDopkWgvwai4,4965
+lance/commit.py,sha256=YJbS3TQK7GuFa62cRozxfYStise7UXQl7VCOF4lfyk0,773
+lance/__init__.py,sha256=pzPcPahk9WkMXreHPZWVcEg0Lw9HctXaRYxHQVimB_4,2940
+lance/dataset.py,sha256=-OsTrgQLCPV3HJ2un2SV5oQf8iyQr300or0MAEgzNtU,36329
+lance/fragment.py,sha256=nRnXiZ9SvP3UNcl0UBBTQZk9zAJiZssJAULrhSNJW3s,11138
+lance/progress.py,sha256=Ab9GnWMFySaz9PvlD27EYSTfLfFI4o-MLKiYLsrG5y0,5512
+lance/tf/__init__.py,sha256=PNyOcvOV7ofQOk3NJ-kBhq4aK7kp5ZrwUqBJVDG8V6I,802
+lance/tf/data.py,sha256=RgWuCV4-fG6dXdde88FsbOM9ejwQLLVKl3U9oKQ4uMY,7472
+lance/schema.py,sha256=_pomos1d85NDgfWZiVlKtxFMIb9DFzbT9NjtNEjcmpQ,1213
+lance/lance.abi3.so,sha256=tWpSsxBBxtCW5kNufoGNHTfWeT1iAfvyaVM32LtG3GU,54077032
+pylance-0.6.5.dist-info/RECORD,,
