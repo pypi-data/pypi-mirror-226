@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: abaqustools
+Version: 2.1
+Summary: Tools for FEM software ABAQUS.
+Author-email: "O. W. Petersen" <oyvind.w.petersen@ntnu.no>
+Keywords: abaqus,suspension,bridge,fem,odb
+Requires-Python: >=3
+License-File: LICENSE
