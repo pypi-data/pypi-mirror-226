@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bottle-oauthlib
+Version: 1.9.0
+Summary: Bottle adapter for OAuthLib framework (OAuth2.0)
+Home-page: https://github.com/Refinitiv/bottle-oauthlib
+Author: Refinitiv
+Author-email: EikonEdge.Infra-Dev@Refinitiv.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: bottle
+Requires-Dist: oauthlib
+Requires-Dist: requests
+
+UNKNOWN
+
