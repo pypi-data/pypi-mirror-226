@@ -1,0 +1,6 @@
+pyproject.toml
+setup.cfg
+fxw.egg-info/PKG-INFO
+fxw.egg-info/SOURCES.txt
+fxw.egg-info/dependency_links.txt
+fxw.egg-info/top_level.txt
