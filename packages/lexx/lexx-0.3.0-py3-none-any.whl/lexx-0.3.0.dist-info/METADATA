@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: lexx
+Version: 0.3.0
+Summary: A conlang building tool
+Project-URL: Documentation, https://github.com/justinian/lexx#readme
+Project-URL: Issues, https://github.com/justinian/lexx/issues
+Project-URL: Source, https://github.com/justinian/lexx
+Author-email: "Justin C. Miller" <justin@justin.cm>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: conlang,conlangs,lexicon,linguistics,phonetics
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: click
+Requires-Dist: editor
+Requires-Dist: lark
+Description-Content-Type: text/markdown
+
+# lexx
+
+[![PyPI - Version](https://img.shields.io/pypi/v/lexx.svg)](https://pypi.org/project/lexx)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lexx.svg)](https://pypi.org/project/lexx)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install lexx
+```
+
+## License
+
+`lexx` is distributed under the terms of the [MIT][] license. The word
+generation code is taken from [lexifer][] by William S. Annis, also released
+under the MIT license.
+
+[MIT]: https://spdx.org/licenses/MIT.html
+[lexifer]: https://lingweenie.org/conlang/lexifer.html
