@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: CK-InoDrive-API
+Version: 0.2.8b0
+Summary: InoDrive API library
+Home-page: https://cardinalkinetic.com
+Author: Cardinal Kinetic
+Author-email: support@cardinalkinetic.com
+License: https://www.cardinalkinetic.com/about-us/terms-of-service
+Project-URL: Documentation, http://docs.cardinalkinetic.com/api/inodrive-python/latest/index.html
+Keywords: InoWorx InoDrive InoSync MotionControl ServoControl
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: websocket-client
+Requires-Dist: ifaddr
+Requires-Dist: msgpack
+
+#### **Installation**
+
+```
+pip install CK-InoDrive-API
+```
+
+#### **Usage**
+
+Import
+
+```python
+# Import InoDrive API library
+import CkInoDriveAPI
+```
+
+Create InoDrive Object instance over WebSocket connection.
+
+```python
+# Connect by Module Name
+drive = CkInoDriveAPI.InoDrive(target='Name')
+# Connect by Module Serial Number
+drive = CkInoDriveAPI.InoDrive(target='SN')
+# Connect by IP Address
+drive = CkInoDriveAPI.InoDrive(target='IPv4 Address')
+# Optional parameter to have Module automatically connect upon creation
+drive = CkInoDriveAPI.InoDrive(target='IPv4 Address', autoConnect=True)
+```
+
+Get Discovery Information from Module.
+
+```python
+# Connect by Module Name
+drive = CkInoDriveAPI.InoDrive(target='Name')
+
+# Get Discovery Information
+discoverInfo = drive.get_discover_info()
+
+# Disconnect from the drive
+drive.disconnect()
+# Drive object cleanup
+drive.dispose()
+```
+
+Read variable from the Module and based on condition write a variable back.
+
+```python
+# Create InoDrive instance by Module Serial Number and connect
+drive = CkInoDriveAPI.InoDrive(target='SN', autoConnect=True)
+# Read variable with name 'VariableName'
+var1 = drive.read_var('VariableName')
+
+# Write out new value to variable 'VariableName' if it's value equals 1
+if var1 == 1:
+	drive.write_var('VariableName', 2)
+	
+# Disconnect from the drive
+drive.disconnect()
+# Drive object cleanup
+drive.dispose()
+```
+
+Read the Module configuration file and change it's Name. Change takes effect after power cycle.
+
+```python
+# Create InoDrive instance by Module Serial Number and connect
+drive = CkInoDriveAPI.InoDrive(target='SN', autoConnect=True)
+
+# Get Module Configuration File
+content = drive.read_module_config()
+
+# Change Module Name
+content['name'] = "NewName"
+
+#Write Out to Configuration File
+drive.write_module_config(content)
+
+# Disconnect from the drive
+drive.disconnect()
+# Drive object cleanup
+drive.dispose()
+```
