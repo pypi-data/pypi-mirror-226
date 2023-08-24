@@ -1,0 +1,281 @@
+Metadata-Version: 2.1
+Name: interphase
+Version: 0.0.3
+Summary: Package for genarating typescript interface with git submodule folder structure
+Author-email: Rajat Sandeep <rajatsandeepsen1839@gmail.com>
+Project-URL: Homepage, https://github.com/rajatsandeepsen/interphase
+Project-URL: Bug Tracker, https://github.com/rajatsandeepsen/interphase/isssues
+Keywords: python,api,backend,typescript,interface,git,submodule
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## Interphase - Bridging Backend and Frontend Development with Git Submodule
+
+### Introduction
+`Interphase` is a powerful `tool` + `git structure` designed to streamline the collaboration between backend and frontend developers by facilitating the sharing of critical information, including types, example data, API URLs, and documentation. The core concept is to provide an interconnected platform that enables seamless communication between these two development environments, thereby reducing friction and enhancing productivity, thus bridging the gap between the two development repository.
+
+### Currently Available Support Packages
+- [Interphase](https://pypi.org/project/Interphase/) - Python → Typescript
+- [Comming Soon]() - Go → Typescript
+
+<!-- ### Table of Contents
+1. Installation
+2. Quick Start
+3. Usage
+   - Basic Usage
+   - Advanced Options
+4. Examples
+5. API Reference
+6. Configuration
+7. FAQs
+8. Troubleshooting
+9. Contributing
+10. License
+
+--- -->
+
+### Requirements
+> `Python >= 3.7`
+
+### 1. Installation
+
+
+```bash
+$ pip install Interphase
+```
+
+### 2. Quick Start
+
+
+#### 📁  Simple folder structure
+```
+📁  your_project
+|
+├──📁 types (requied)
+|   |
+│   └──📄api.d.ts (optional)
+|
+└──📄main.py
+```
+
+
+#### 📄main.py
+```python
+from Interphase import Interphase
+
+ts = Interphase("./types")
+
+userData = {
+    "name": "John Doe",
+    "age": 30,
+    "email": "example@demo.com",
+    "skills": ["Python", "TypeScript", "JavaScript"]
+}
+
+ts.write('api', 'UserData', userData)
+```
+
+#### 📄 api.d.ts
+```typescript
+export type UserData = {
+    name: string;
+    age: number;
+    email: string;
+    skills: string[];
+}
+```
+
+
+### 3. Real Life Developer Usage
+
+
+#### .gitmodules
+
+```toml
+[submodule "api"]
+	path = api
+	url = https://github.com/username/api.git
+```
+
+#### Frontend
+
+```
+📁 FrontEnd-repo
+│
+├──📁 api (git submodule)
+│   │
+│   ├──📄__init__.py
+│   ├──📄setup.py
+│   │
+│   └──📁 types
+│       │
+│       └──📄 api.d.ts
+│
+├──📁 src
+│   │
+│   └──📄 (other frontend files, where /api/types are imported and used)
+│   
+├──📄 package.json
+├──📄 .gitmodules (important)
+└──📄 .gitignore
+```
+
+#### Backend
+
+```
+📁 Backend-repo
+│
+├──📁 api (git submodule)
+│   │
+│   ├──📄__init__.py
+│   ├──📄setup.py
+│   │
+│   └──📁 types
+│       │
+│       └──📄 api.d.ts
+│
+├──📁 src
+│   │
+│   └──📄 (other backend files, where helps to create types for /api)
+│   
+├──📄 requirements.txt
+├──📄 .gitmodules (important)
+└──📄 .gitignore
+```
+
+### 4. Configuration
+
+##### 📄 /api/setup.py 
+
+```python
+config = Interphase("./types", d_ts=True) # base setup
+```
+##### 📄 /api/\_\_init\_\_.py
+
+```python
+from .setup import config as ts
+```
+
+### 5. API Reference
+
+##### export types | interface
+```python
+ts = Interphase("./types") 
+
+# default is export enabled
+ts.write('api', 'UserData', userData)
+ts.write('api', 'UserData2', userData, export=False)
+
+# default is type and interface can be enabled
+ts.write('api', 'UserData3', userData, interface=True)
+ts.write('api', 'UserData3', userData, export=False, interface=True)
+```
+```typescript
+export type UserData = {...}
+type UserData2 = {...}
+
+export interface UserData3 {...}
+interface UserData3 {...}
+```
+
+##### base folder
+```python
+# base directory can't be empty string
+ts = Interphase("types") 
+ts = Interphase("./types") 
+
+
+# d.ts is defualt
+# .ts can be enabled
+ts = Interphase("./types", d_ts=False) 
+ts.write('api', 'UserData', userData)
+```
+```typescript
+export type UserData = {...} // api.ts 
+```
+
+
+##### file name
+```python
+# type name and file name can't be empty string
+ts.write('api.ts', 'UserData', userData)
+ts.write('api.d.ts', 'UserData', userData)
+
+
+# d.ts is defualt
+ts.write('api', 'UserData', userData)
+```
+
+### 7. FAQs
+List and answer frequently asked questions users might have about your package.
+
+### 8. Troubleshooting
+Provide solutions to common issues users might encounter and how to resolve them.
+
+### 9. Contributing
+Encourage others to contribute to your project. Include guidelines for submitting bug reports, feature requests, and pull requests.
+
+### 10. License
+Specify the license under which your package is released.
+
+---
+
+Remember that your documentation should be clear, concise, and easy to follow. Use a consistent tone and style throughout, and consider using code snippets, diagrams, and examples to enhance understanding. Regularly update the documentation as your package evolves to ensure it remains accurate and helpful to your users.
+
+# Interphase
+
+# interface is not supported yet
+
+defualt is export On
+default is type = 
+need file name
+need type name
+need any data
+
+base directory can be empty string
+d.ts is supported & it is defualt
+
+
+# dev
+
+```bash
+pip install --upgrade setuptools
+pip install --upgrade build #python -m build
+```
+
+```bash
+$ pip install -q build
+$ python -m build
+```
+
+pyproject.toml `https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html`
+
+```
+dist/
+    meowpkg-0.0.1.whl
+    meowpkg-0.0.1.tar.gz
+```
+
+```bash
+$ pip install dist/meowpkg-0.0.1.whl
+$ pip install dist/meowpkg-0.0.1.tar.gz
+```
+
+upload to pypi
+```bash
+$ python -m twine upload --repository pypi dist/*
+```
+.
+ * [tree-md](./tree-md)
+ * [dir2](./dir2)
+   * [file21.ext](./dir2/file21.ext)
+   * [file22.ext](./dir2/file22.ext)
+   * [file23.ext](./dir2/file23.ext)
+ * [dir1](./dir1)
+   * [file11.ext](./dir1/file11.ext)
+   * [file12.ext](./dir1/file12.ext)
+ * [file_in_root.ext](./file_in_root.ext)
+ * [README.md](./README.md)
+ * [dir3](./dir3)

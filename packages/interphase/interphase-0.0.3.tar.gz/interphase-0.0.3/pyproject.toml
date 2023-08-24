@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interphase"
+dynamic = ["version", "dependencies"]
+authors = [
+    {name = "Rajat Sandeep", email = "rajatsandeepsen1839@gmail.com"},
+]
+description = "Package for genarating typescript interface with git submodule folder structure"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    # "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["python", "api", "backend", "typescript", "interface", "git", "submodule"]
+
+[project.urls]
+"Homepage" = "https://github.com/rajatsandeepsen/interphase"
+"Bug Tracker" = "https://github.com/rajatsandeepsen/interphase/isssues"

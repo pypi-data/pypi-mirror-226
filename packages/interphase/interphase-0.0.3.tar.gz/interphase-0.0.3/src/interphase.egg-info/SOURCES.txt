@@ -1,0 +1,15 @@
+.env.example
+.gitignore
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+.github/workflows/python-publish.yml
+src/interphase/__init__.py
+src/interphase/addons.py
+src/interphase/interphase.py
+src/interphase/module.py
+src/interphase.egg-info/PKG-INFO
+src/interphase.egg-info/SOURCES.txt
+src/interphase.egg-info/dependency_links.txt
+src/interphase.egg-info/top_level.txt
