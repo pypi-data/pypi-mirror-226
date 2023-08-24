@@ -1,0 +1,14 @@
+boto3
+colorlog
+einops
+hydra-core>=1.2
+matplotlib
+numpy>=1.2
+omegaconf
+opencv-python
+pytest
+pytest-mock
+pytorch-ignite>=0.4.12
+tabulate
+tensorboard
+tqdm
