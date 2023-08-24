@@ -1,0 +1,26 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "mirror_source"
+version = "0.0.5"
+description = "快速设置国内镜像源,方便记不住源地址的小伙子"
+authors = [ "hbh112233abc <hbh112233abc@163.com>",]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/hbh112233abc/mirror-source"
+repository = "https://github.com/hbh112233abc/mirror-source"
+documentation = "https://github.com/hbh112233abc/mirror-source"
+keywords = [ "pip", "mirror",]
+[[tool.poetry.source]]
+name = "pypi.tuna.tsinghua.edu.cn"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.13"
+toml = "^0.10.2"
+colorama = "^0.4.6"
+
+[tool.poetry.dev-dependencies]
