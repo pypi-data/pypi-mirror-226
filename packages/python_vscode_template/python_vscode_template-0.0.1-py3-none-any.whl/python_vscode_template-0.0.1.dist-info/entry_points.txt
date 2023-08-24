@@ -1,0 +1,3 @@
+[console_scripts]
+my_script=python_vscode_template.my_script:main
+
