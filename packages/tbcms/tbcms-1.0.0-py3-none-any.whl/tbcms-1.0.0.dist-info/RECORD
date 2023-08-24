@@ -1,0 +1,11 @@
+tbcms/__init__.py,sha256=sN7M5xvwtT2x3kmLAB8J82FdZ1Og5nHlD2DJjMFu3IY,47
+tbcms/__main__.py,sha256=tprTuOQrwc1P5FNfG8rMLFXNPt8uX4pzjt3cIxSrNG0,788
+tbcms/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tbcms/server.py,sha256=V70SdyG6NZ113YSPdvPjcjygV3bxa9hqnTHDOKzwSFo,6207
+tbcms/files/presents.json,sha256=bBIufyee8ubT_5WKB1ZFfi-QwA_D1Toep35DlJ3TZoo,10542
+tbcms/files/version.txt,sha256=klIfw8vZZL3J9YSpkbif3apXVO0cyW1tQkRTOGacEwU,5
+tbcms-1.0.0.dist-info/LICENSE,sha256=n1ruSdBvzUJPu4HqsgDZm-VyHy8fOj05fmCG_WlLVr8,1071
+tbcms-1.0.0.dist-info/METADATA,sha256=YP9bE9K0LLaV23EOb78t1BvZI0rnrrppTFZeWvmnG-E,6486
+tbcms-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tbcms-1.0.0.dist-info/top_level.txt,sha256=KOZtxpFO1oW0j6DzG9mgLmq-SzrBr1fue1q5Utgflqw,6
+tbcms-1.0.0.dist-info/RECORD,,
