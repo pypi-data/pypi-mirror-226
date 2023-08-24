@@ -1,0 +1,9 @@
+ca_visionlearn/__init__.py,sha256=wjCxC-yjGZT5L-60ma_3gJrpwXbUrsOwDZCGjUK1zHI,173
+ca_visionlearn/color_utils.py,sha256=jh5Wc_Lc8-5HbuI259fsdsC_o74dFAnDWlKvUJh5GL0,5545
+ca_visionlearn/metrics.py,sha256=-kObY75-hpfbyHzzEqndqzqgM2iRLkB7e26zFVwpJnE,3393
+ca_visionlearn/product_color_processor.py,sha256=NqtPi86d6oSx-NfHu7T0N_ie1QvbMnXXIXM1yxRWtWA,6195
+ca_visionlearn/skin_tone_extraction.py,sha256=p1wUFX-YtpA3tQmHmMOfJ-rMMsCvwN-_aW2n5fJAKQU,5438
+ca_visionlearn-2.0.dist-info/METADATA,sha256=8HPOgVxJTS2Dbwe0XTgrlTCVq_uCWOI758YfzPgUusw,397
+ca_visionlearn-2.0.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+ca_visionlearn-2.0.dist-info/top_level.txt,sha256=pd1-m5BaqvzOosFu0qrcPn4xJ0K4DjGuYiXZVwsM4uc,15
+ca_visionlearn-2.0.dist-info/RECORD,,
