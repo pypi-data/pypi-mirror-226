@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: mesonic
+Version: 0.2.0
+Summary: Sonification Framework
+Home-page: https://github.com/dreinsch/mesonic/
+Author: Dennis Reinsch
+Author-email: dreinsch@techfak.uni-bielefeld.de
+License: MIT
+Project-URL: Documentation, https://mesonic.readthedocs.io/
+Project-URL: Source, https://github.com/dreinsch/mesonic/
+Project-URL: Changelog, https://mesonic.readthedocs.io/en/latest/changelog.html
+Project-URL: Tracker, https://github.com/dreinsch/mesonic/issues
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+Requires-Dist: pyamapping
+Requires-Dist: attrs
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: all
+Requires-Dist: sc3nb ; extra == 'all'
+Requires-Dist: pre-commit ; extra == 'all'
+Requires-Dist: nbstripout ; extra == 'all'
+Requires-Dist: check-manifest ; extra == 'all'
+Requires-Dist: black ; extra == 'all'
+Requires-Dist: isort ; extra == 'all'
+Requires-Dist: setuptools ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest-timeout ; extra == 'all'
+Requires-Dist: pytest-rerunfailures ; extra == 'all'
+Requires-Dist: seaborn ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: PyQt5 ; extra == 'all'
+Requires-Dist: notebook ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: nbstripout ; extra == 'dev'
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Provides-Extra: examples
+Requires-Dist: sc3nb ; extra == 'examples'
+Requires-Dist: seaborn ; extra == 'examples'
+Requires-Dist: matplotlib ; extra == 'examples'
+Requires-Dist: numpy ; extra == 'examples'
+Requires-Dist: scipy ; extra == 'examples'
+Requires-Dist: PyQt5 ; extra == 'examples'
+Provides-Extra: ipykernel
+Requires-Dist: sc3nb ; extra == 'ipykernel'
+Requires-Dist: seaborn ; extra == 'ipykernel'
+Requires-Dist: matplotlib ; extra == 'ipykernel'
+Requires-Dist: numpy ; extra == 'ipykernel'
+Requires-Dist: scipy ; extra == 'ipykernel'
+Requires-Dist: PyQt5 ; extra == 'ipykernel'
+Requires-Dist: ipykernel ; extra == 'ipykernel'
+Provides-Extra: notebook
+Requires-Dist: sc3nb ; extra == 'notebook'
+Requires-Dist: seaborn ; extra == 'notebook'
+Requires-Dist: matplotlib ; extra == 'notebook'
+Requires-Dist: numpy ; extra == 'notebook'
+Requires-Dist: scipy ; extra == 'notebook'
+Requires-Dist: PyQt5 ; extra == 'notebook'
+Requires-Dist: notebook ; extra == 'notebook'
+Provides-Extra: sc3nb
+Requires-Dist: sc3nb ; extra == 'sc3nb'
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-timeout ; extra == 'testing'
+Requires-Dist: pytest-rerunfailures ; extra == 'testing'
+
+=======
+mesonic
+=======
+
+.. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/pre-commit/pre-commit
+   :alt: pre-commit
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: black
+
+.. image:: https://github.com/dreinsch/mesonic/actions/workflows/main.yml/badge.svg?branch=main
+    :target: https://github.com/dreinsch/mesonic/actions/workflows/main.yml
+    :alt: github-actions
+
+a Sonification Framework
+
+
+Installation
+============
+
+You can install mesonic with the default backend `sc3nb`_ using pip
+
+    pip install mesonic[sc3nb]
+
+Note that to run the notebooks mesonic also requires a backend like `SuperCollider`_ and/or `pya`_ to be installed.
+
+Developer Installation
+======================
+
+To clone and install mesonic with dependencies required for the notebooks run::
+
+    git clone https://github.com/interactive-sonification/mesonic.git
+    cd mesonic
+    pip install -e ".[notebooks]"
+
+Running Tests & Building
+========================
+
+We use `tox`_ for the automation of tasks like testing and building.
+
+Please refer to the tox.ini file for more details
+
+
+Making Changes & Contributing
+=============================
+
+This project uses `pre-commit`_, please make sure to install it before making any
+changes::
+
+    pip install pre-commit
+    cd mesonic
+    pre-commit install
+
+
+update the hooks to the latest version::
+
+    pre-commit autoupdate
+
+.. _sc3nb: https://github.com/interactive-sonification/sc3nb
+.. _SuperCollider: https://github.com/supercollider/supercollider
+.. _tox: https://github.com/tox-dev/tox
+.. _pre-commit: https://pre-commit.com/
+.. _pya: https://github.com/interactive-sonification/pya#installation
