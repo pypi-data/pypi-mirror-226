@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dotmagic/__init__.py
+dotmagic/config.py
+dotmagic/utils.py
+dotmagic.egg-info/PKG-INFO
+dotmagic.egg-info/SOURCES.txt
+dotmagic.egg-info/dependency_links.txt
+dotmagic.egg-info/requires.txt
+dotmagic.egg-info/top_level.txt
