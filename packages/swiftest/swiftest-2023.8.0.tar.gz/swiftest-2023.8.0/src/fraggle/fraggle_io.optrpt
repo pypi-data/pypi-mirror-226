@@ -1,0 +1,986 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _fraggle_classes.s_fraggle_io._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_fraggle_classes.s_fraggle_io._) [1/4=25.0%] fraggle_io.f90(1,28)
+
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_io.f90(1,28):remark #34051: REGISTER ALLOCATION : [_fraggle_classes.s_fraggle_io._] fraggle_io.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_GENERATE
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_GENERATE) [2/4=50.0%] fraggle_io.f90(6,22)
+  -> EXTERN: (18,7) _for_open
+  -> EXTERN: (19,7) _for_write_seq_lis
+  -> EXTERN: (20,7) _for_write_seq_lis
+  -> EXTERN: (21,7) _for_write_seq_lis
+  -> EXTERN: (22,7) _for_write_seq_lis
+  -> EXTERN: (23,7) _for_write_seq_fmt
+  -> EXTERN: (24,7) _for_write_seq_fmt
+  -> EXTERN: (24,7) _for_write_seq_fmt_xmit
+  -> EXTERN: (24,46) OPERATOR_MAG_DP
+  -> EXTERN: (24,98) OPERATOR_MAG_DP
+  -> EXTERN: (25,7) _for_write_seq_fmt
+  -> EXTERN: (26,7) _for_write_seq_fmt
+  -> EXTERN: (26,7) _for_write_seq_fmt_xmit
+  -> EXTERN: (27,7) _for_write_seq_fmt
+  -> EXTERN: (27,7) _for_write_seq_fmt_xmit
+  -> EXTERN: (28,7) _for_write_seq_fmt
+  -> EXTERN: (28,7) _for_write_seq_fmt_xmit
+  -> EXTERN: (29,7) _for_write_seq_fmt
+  -> EXTERN: (30,7) _for_write_seq_lis
+  -> EXTERN: (31,7) _for_write_seq_lis
+  -> EXTERN: (33,10) _for_write_seq_lis_xmit
+  -> EXTERN: (33,10) _for_write_seq_lis
+  -> EXTERN: (35,7) _for_write_seq_lis
+  -> EXTERN: (37,10) __resetsp_inlined
+  -> EXTERN: (37,10) __getsp_inlined
+  -> EXTERN: (37,10) _for_write_seq_lis
+  -> EXTERN: (37,10) _alloca
+  -> EXTERN: (37,10) _for_write_seq_lis_xmit
+  -> EXTERN: (39,7) _for_write_seq_lis
+  -> EXTERN: (41,10) __getsp_inlined
+  -> EXTERN: (41,10) _alloca
+  -> EXTERN: (41,10) _for_write_seq_lis_xmit
+  -> EXTERN: (41,10) __resetsp_inlined
+  -> EXTERN: (41,10) _for_write_seq_lis
+  -> EXTERN: (43,7) _for_write_seq_lis
+  -> EXTERN: (45,10) __getsp_inlined
+  -> EXTERN: (45,10) _for_write_seq_lis
+  -> EXTERN: (45,10) __resetsp_inlined
+  -> EXTERN: (45,10) _for_write_seq_lis_xmit
+  -> EXTERN: (45,10) _alloca
+  -> EXTERN: (47,7) _for_write_seq_lis
+  -> EXTERN: (49,10) _alloca
+  -> EXTERN: (49,10) __getsp_inlined
+  -> EXTERN: (49,10) _for_write_seq_lis
+  -> EXTERN: (49,10) __resetsp_inlined
+  -> EXTERN: (49,10) _for_write_seq_lis_xmit
+  -> EXTERN: (51,7) _for_write_seq_lis
+  -> EXTERN: (53,10) _alloca
+  -> EXTERN: (53,10) __getsp_inlined
+  -> EXTERN: (53,10) _for_write_seq_lis
+  -> EXTERN: (53,10) __resetsp_inlined
+  -> EXTERN: (53,10) _for_write_seq_lis_xmit
+  -> EXTERN: (56,13) _for_close
+  -> EXTERN: (60,7) __getsp_inlined
+  -> EXTERN: (60,7) __resetsp_inlined
+  -> EXTERN: (60,7) _for_write_seq_lis
+  -> EXTERN: (60,64) _for_concat
+  -> EXTERN: (60,64) _alloca
+  -> EXTERN: (60,67) _for_trim
+  -> EXTERN: (60,72) _for_adjustl
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_io.f90(24,46)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference at (24:52) has aligned access   [ fraggle_io.f90(24,52) ]
+   remark #15389: vectorization support: reference frag%LTOT_AFTER(:) has unaligned access
+   remark #15389: vectorization support: reference frag%LTOT_BEFORE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(32,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (33:10) and at (33:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (33:10) and at (33:10)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(33,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(33,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (33:10) and at (33:10)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (33:10) and at (33:10)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(36,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (37:10) and at (37:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (37:10) and at (37:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(37,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (37:10) and at (37:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (37:10) and at (37:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(37,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (37:27) has aligned access   [ fraggle_io.f90(37,27) ]
+         remark #15389: vectorization support: reference frag(:,i) has unaligned access   [ fraggle_io.f90(37,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(37,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(40,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (41:10) and at (41:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (41:10) and at (41:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(41,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (41:10) and at (41:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (41:10) and at (41:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(41,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (41:27) has aligned access   [ fraggle_io.f90(41,27) ]
+         remark #15389: vectorization support: reference frag(:,i) has unaligned access   [ fraggle_io.f90(41,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(41,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(44,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (45:10) and at (45:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (45:10) and at (45:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(45,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (45:10) and at (45:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (45:10) and at (45:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(45,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (45:27) has aligned access   [ fraggle_io.f90(45,27) ]
+         remark #15389: vectorization support: reference frag(:,i) has unaligned access   [ fraggle_io.f90(45,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(45,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(48,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (49:10) and at (49:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (49:10) and at (49:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(49,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (49:10) and at (49:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (49:10) and at (49:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(49,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (49:27) has aligned access   [ fraggle_io.f90(49,27) ]
+         remark #15389: vectorization support: reference frag(:,i) has unaligned access   [ fraggle_io.f90(49,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(49,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(52,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (53:10) and at (53:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (53:10) and at (53:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(53,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (53:10) and at (53:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (53:10) and at (53:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(53,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (53:27) has aligned access   [ fraggle_io.f90(53,27) ]
+         remark #15389: vectorization support: reference frag(:,i) has unaligned access   [ fraggle_io.f90(53,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(53,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_io.f90(37,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(37,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(37,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(41,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(41,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(41,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(45,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(45,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(45,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(49,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(49,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(49,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(53,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(53,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(53,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(6,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_io_log_generate_] fraggle_io.f90:6
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   19[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     563
+            Global    :     140
+            Local     :     423
+        Regenerable   :     325
+        Spilled       :      39
+        
+    Routine stack
+        Variables     :    2304 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :     113 [1.50e+01 ~ 15.0%]
+        Spills        :     280 bytes*
+            Reads     :      69 [3.56e+00 ~ 3.6%]
+            Writes    :      39 [7.76e-01 ~ 0.8%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_PL) [3/4=75.0%] fraggle_io.f90(64,22)
+  -> EXTERN: (76,7) _for_open
+  -> EXTERN: (77,7) _for_write_seq_lis
+  -> EXTERN: (79,7) _for_write_seq_lis
+  -> EXTERN: (80,7) _for_write_seq_lis
+  -> EXTERN: (81,7) _for_write_seq_lis
+  -> EXTERN: (82,7) _for_write_seq_lis
+  -> EXTERN: (84,10) _for_write_seq_lis_xmit
+  -> EXTERN: (84,10) _for_write_seq_lis
+  -> EXTERN: (84,10) _for_write_seq_lis_xmit
+  -> EXTERN: (86,7) _for_write_seq_lis
+  -> EXTERN: (88,10) _for_write_seq_lis_xmit
+  -> EXTERN: (88,10) _for_write_seq_lis
+  -> EXTERN: (88,10) _for_write_seq_lis_xmit
+  -> EXTERN: (90,7) _for_write_seq_lis
+  -> EXTERN: (92,10) _for_write_seq_lis_xmit
+  -> EXTERN: (92,10) _for_write_seq_lis
+  -> EXTERN: (94,7) _for_write_seq_lis
+  -> EXTERN: (96,10) _alloca
+  -> EXTERN: (96,10) __getsp_inlined
+  -> EXTERN: (96,10) _for_write_seq_lis
+  -> EXTERN: (96,10) __resetsp_inlined
+  -> EXTERN: (96,10) _for_write_seq_lis_xmit
+  -> EXTERN: (98,7) _for_write_seq_lis
+  -> EXTERN: (100,10) _alloca
+  -> EXTERN: (100,10) __getsp_inlined
+  -> EXTERN: (100,10) _for_write_seq_lis
+  -> EXTERN: (100,10) __resetsp_inlined
+  -> EXTERN: (100,10) _for_write_seq_lis_xmit
+  -> EXTERN: (102,7) _for_write_seq_lis
+  -> EXTERN: (104,10) _for_write_seq_lis_xmit
+  -> EXTERN: (104,10) __getsp_inlined
+  -> EXTERN: (104,10) _for_write_seq_lis
+  -> EXTERN: (104,10) __resetsp_inlined
+  -> EXTERN: (104,10) _alloca
+  -> EXTERN: (106,7) _for_write_seq_lis
+  -> EXTERN: (108,10) __getsp_inlined
+  -> EXTERN: (108,10) _for_write_seq_lis
+  -> EXTERN: (108,10) __resetsp_inlined
+  -> EXTERN: (108,10) _for_write_seq_lis_xmit
+  -> EXTERN: (108,10) _alloca
+  -> EXTERN: (112,10) _for_write_seq_lis
+  -> EXTERN: (114,13) _for_write_seq_lis
+  -> EXTERN: (114,13) _alloca
+  -> EXTERN: (114,13) __resetsp_inlined
+  -> EXTERN: (114,13) _for_write_seq_lis_xmit
+  -> EXTERN: (114,13) __getsp_inlined
+  -> EXTERN: (116,10) _for_write_seq_lis
+  -> EXTERN: (118,13) _alloca
+  -> EXTERN: (118,13) __resetsp_inlined
+  -> EXTERN: (118,13) __getsp_inlined
+  -> EXTERN: (118,13) _for_write_seq_lis
+  -> EXTERN: (118,13) _for_write_seq_lis_xmit
+  -> EXTERN: (123,10) _for_write_seq_lis
+  -> EXTERN: (125,13) _for_write_seq_lis_xmit
+  -> EXTERN: (125,13) _for_write_seq_lis
+  -> EXTERN: (127,10) _for_write_seq_lis
+  -> EXTERN: (129,13) _for_write_seq_lis_xmit
+  -> EXTERN: (129,13) _for_write_seq_lis
+  -> EXTERN: (131,10) _for_write_seq_lis
+  -> EXTERN: (133,13) _for_write_seq_lis
+  -> EXTERN: (133,13) _for_write_seq_lis_xmit
+  -> EXTERN: (137,13) _for_close
+  -> EXTERN: (141,7) __getsp_inlined
+  -> EXTERN: (141,7) __resetsp_inlined
+  -> EXTERN: (141,7) _for_write_seq_lis
+  -> EXTERN: (141,64) _for_concat
+  -> EXTERN: (141,64) _alloca
+  -> EXTERN: (141,67) _for_trim
+  -> EXTERN: (141,72) _for_adjustl
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_io.f90(83,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (84:10) and at (84:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (84:10) and at (84:10)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(84,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(84,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(84,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (84:10) and at (84:10)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (84:10) and at (84:10)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(87,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (88:10) and at (88:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (88:10) and at (88:10)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(88,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(88,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(88,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (88:10) and at (88:10)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (88:10) and at (88:10)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(91,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (92:10) and at (92:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (92:10) and at (92:10)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(92,10) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(92,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (92:10) and at (92:10)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (92:10) and at (92:10)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(95,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (96:10) and at (96:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (96:10) and at (96:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(96,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (96:10) and at (96:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (96:10) and at (96:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(96,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (96:27) has aligned access   [ fraggle_io.f90(96,27) ]
+         remark #15389: vectorization support: reference at (96:27) has unaligned access   [ fraggle_io.f90(96,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(96,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(99,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (100:10) and at (100:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (100:10) and at (100:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(100,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (100:10) and at (100:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (100:10) and at (100:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(100,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (100:27) has aligned access   [ fraggle_io.f90(100,27) ]
+         remark #15389: vectorization support: reference at (100:27) has unaligned access   [ fraggle_io.f90(100,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(100,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(103,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (104:10) and at (104:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (104:10) and at (104:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(104,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (104:10) and at (104:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (104:10) and at (104:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(104,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (104:27) has aligned access   [ fraggle_io.f90(104,27) ]
+         remark #15389: vectorization support: reference at (104:27) has unaligned access   [ fraggle_io.f90(104,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(104,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(107,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (108:10) and at (108:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (108:10) and at (108:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(108,10)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (108:10) and at (108:10)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (108:10) and at (108:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(108,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (108:27) has aligned access   [ fraggle_io.f90(108,27) ]
+         remark #15389: vectorization support: reference at (108:27) has unaligned access   [ fraggle_io.f90(108,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(108,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(113,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (114:13) and at (114:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (114:13) and at (114:13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(114,13)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (114:13) and at (114:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (114:13) and at (114:13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(114,13)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (114:30) has aligned access   [ fraggle_io.f90(114,30) ]
+         remark #15389: vectorization support: reference at (114:30) has unaligned access   [ fraggle_io.f90(114,30) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(114,13)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(117,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (118:13) and at (118:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (118:13) and at (118:13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(118,13)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (118:13) and at (118:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (118:13) and at (118:13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_io.f90(118,13)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (118:30) has aligned access   [ fraggle_io.f90(118,30) ]
+         remark #15389: vectorization support: reference at (118:30) has unaligned access   [ fraggle_io.f90(118,30) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_io.f90(118,13)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(124,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (125:13) and at (125:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (125:13) and at (125:13)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(125,13) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(125,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (125:13) and at (125:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (125:13) and at (125:13)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(128,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (129:13) and at (129:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (129:13) and at (129:13)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(129,13) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(129,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (129:13) and at (129:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (129:13) and at (129:13)
+LOOP END
+
+LOOP BEGIN at fraggle_io.f90(132,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (133:13) and at (133:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (133:13) and at (133:13)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ fraggle_io.f90(133,13) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ fraggle_io.f90(133,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (133:13) and at (133:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (133:13) and at (133:13)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_io.f90(96,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(96,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(96,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(100,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(100,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(100,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(104,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(104,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(104,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(108,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(108,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(108,10):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(114,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(114,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(114,13):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(118,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(118,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(118,13):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(64,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_io_log_pl_] fraggle_io.f90:64
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   14[ rax rdx rcx rsi rdi r8-r15 zmm0]
+        
+    Routine temporaries
+        Total         :     656
+            Global    :     190
+            Local     :     466
+        Regenerable   :     360
+        Spilled       :      44
+        
+    Routine stack
+        Variables     :    2248 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :     112 [1.48e+01 ~ 14.8%]
+        Spills        :     328 bytes*
+            Reads     :     116 [3.94e+00 ~ 3.9%]
+            Writes    :      64 [8.22e-01 ~ 0.8%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_REGIME
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_IO::FRAGGLE_IO_LOG_REGIME) [4/4=100.0%] fraggle_io.f90(145,22)
+  -> EXTERN: (156,7) _for_open
+  -> EXTERN: (157,7) _for_write_seq_lis
+  -> EXTERN: (158,7) _for_write_seq_lis
+  -> EXTERN: (159,7) _for_write_seq_lis
+  -> EXTERN: (160,7) _for_write_seq_lis
+  -> EXTERN: (161,7) _for_write_seq_lis
+  -> EXTERN: (162,7) _for_write_seq_lis_xmit
+  -> EXTERN: (162,7) _for_write_seq_lis
+  -> EXTERN: (163,7) __resetsp_inlined
+  -> EXTERN: (163,7) _alloca
+  -> EXTERN: (163,7) _for_write_seq_lis_xmit
+  -> EXTERN: (163,7) _for_write_seq_lis
+  -> EXTERN: (163,7) __getsp_inlined
+  -> EXTERN: (164,7) _for_write_seq_lis
+  -> EXTERN: (165,7) _for_write_seq_lis
+  -> EXTERN: (165,7) _for_write_seq_lis_xmit
+  -> EXTERN: (166,7) _for_write_seq_lis
+  -> EXTERN: (166,7) _for_write_seq_lis_xmit
+  -> EXTERN: (167,7) _for_write_seq_lis
+  -> EXTERN: (167,7) _for_write_seq_lis_xmit
+  -> EXTERN: (168,7) _for_write_seq_lis
+  -> EXTERN: (168,7) _for_write_seq_lis_xmit
+  -> EXTERN: (169,7) _for_write_seq_lis
+  -> EXTERN: (169,7) _for_write_seq_lis_xmit
+  -> EXTERN: (170,7) _for_write_seq_lis
+  -> EXTERN: (170,7) _for_write_seq_lis_xmit
+  -> EXTERN: (171,7) _for_write_seq_lis
+  -> EXTERN: (171,7) _for_write_seq_lis_xmit
+  -> EXTERN: (172,7) _for_write_seq_lis
+  -> EXTERN: (172,7) _for_write_seq_lis_xmit
+  -> EXTERN: (173,7) _for_write_seq_lis
+  -> EXTERN: (173,7) _for_write_seq_lis_xmit
+  -> EXTERN: (174,7) _for_write_seq_lis
+  -> EXTERN: (174,7) _for_write_seq_lis_xmit
+  -> EXTERN: (175,7) _for_write_seq_lis
+  -> EXTERN: (175,7) _for_write_seq_lis_xmit
+  -> EXTERN: (176,7) _for_write_seq_lis_xmit
+  -> EXTERN: (176,7) _for_write_seq_lis
+  -> EXTERN: (177,7) _for_write_seq_lis
+  -> EXTERN: (177,7) _for_write_seq_lis_xmit
+  -> EXTERN: (178,7) _for_write_seq_lis
+  -> EXTERN: (178,7) _for_write_seq_lis_xmit
+  -> EXTERN: (179,7) _for_write_seq_lis
+  -> EXTERN: (179,7) _for_write_seq_lis_xmit
+  -> EXTERN: (180,7) _for_write_seq_lis_xmit
+  -> EXTERN: (180,7) _for_write_seq_lis
+  -> EXTERN: (181,7) _for_write_seq_lis
+  -> EXTERN: (184,10) _for_write_seq_lis
+  -> EXTERN: (186,10) _for_write_seq_lis
+  -> EXTERN: (188,10) _for_write_seq_lis
+  -> EXTERN: (190,10) _for_write_seq_lis
+  -> EXTERN: (192,10) _for_write_seq_lis
+  -> EXTERN: (194,7) _for_write_seq_lis
+  -> EXTERN: (195,7) _for_write_seq_lis
+  -> EXTERN: (195,7) _for_write_seq_lis_xmit
+  -> EXTERN: (196,7) _for_write_seq_lis_xmit
+  -> EXTERN: (196,7) _for_write_seq_lis
+  -> EXTERN: (197,7) _for_write_seq_lis
+  -> EXTERN: (197,7) _for_write_seq_lis_xmit
+  -> EXTERN: (198,7) _for_write_seq_lis
+  -> EXTERN: (198,7) _for_write_seq_lis_xmit
+  -> EXTERN: (199,7) _for_write_seq_lis_xmit
+  -> EXTERN: (199,7) _for_write_seq_lis
+  -> EXTERN: (200,7) _for_write_seq_lis
+  -> EXTERN: (200,7) _for_write_seq_lis_xmit
+  -> EXTERN: (201,7) _for_write_seq_lis
+  -> EXTERN: (201,7) _for_write_seq_lis_xmit
+  -> EXTERN: (202,7) _for_write_seq_lis
+  -> EXTERN: (203,13) _for_close
+  -> EXTERN: (207,7) __getsp_inlined
+  -> EXTERN: (207,7) __resetsp_inlined
+  -> EXTERN: (207,7) _for_write_seq_lis
+  -> EXTERN: (207,75) _for_concat
+  -> EXTERN: (207,75) _alloca
+  -> EXTERN: (207,78) _for_trim
+  -> EXTERN: (207,83) _for_adjustl
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_io.f90(163,7)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (163:7) and at (163:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (163:7) and at (163:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_io.f90(163,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (163:56) has aligned access   [ fraggle_io.f90(163,56) ]
+      remark #15389: vectorization support: reference colliders(:) has unaligned access   [ fraggle_io.f90(163,56) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.500 
+      remark #15478: estimated potential speedup: 6.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_io.f90(163,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_io.f90(163,7):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(163,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_io.f90(163,7):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_io.f90(145,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_io_log_regime_] fraggle_io.f90:145
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   14[ rax rdx rcx rsi rdi r8-r15 zmm0]
+        
+    Routine temporaries
+        Total         :     607
+            Global    :      40
+            Local     :     567
+        Regenerable   :     525
+        Spilled       :       6
+        
+    Routine stack
+        Variables     :    2672 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :     176 [2.10e+01 ~ 21.0%]
+        Spills        :      16 bytes*
+            Reads     :       2 [2.45e-02 ~ 0.0%]
+            Writes    :       2 [2.45e-02 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

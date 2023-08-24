@@ -1,0 +1,16 @@
+include *.txt
+include *.txt
+include *.py
+include *.toml
+include *.yml
+graft README_figs
+graft README_tables
+graft buildscripts
+graft cmake
+graft examples
+graft paper
+graft src
+graft swiftest
+global-exclude __pycache__ *.py[cod] *.so *.o
+prune _skbuild apptainer bin docker include lib singularity
+

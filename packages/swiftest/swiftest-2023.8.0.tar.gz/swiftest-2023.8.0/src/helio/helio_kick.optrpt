@@ -1,0 +1,770 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _helio_classes.s_helio_kick._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_helio_classes.s_helio_kick._) [1/5=20.0%] helio_kick.f90(1,26)
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_kick.f90(1,26):remark #34051: REGISTER ALLOCATION : [_helio_classes.s_helio_kick._] helio_kick.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_GETACCH_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_GETACCH_PL) [2/5=40.0%] helio_kick.f90(5,22)
+  -> INDIRECT-: (23,15)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_pl_$SELF_V$ca61.0.2 + 56(SI64)))))[30(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (25,18)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_pl_$SELF_V$ca61.0.2 + 56(SI64)))))[16(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (32,21)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_pl_$SELF_V$ca61.0.2 + 56(SI64)))))[31(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (40,34)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_pl_$SELF_V$ca61.0.2 + 56(SI64)))))[20(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (41,25)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_pl_$SELF_V$ca61.0.2 + 56(SI64)))))[42(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_kick.f90(27,16)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference CB%AOBLBEG(:) has unaligned access
+   remark #15389: vectorization support: reference CB%AOBL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(29,16)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference CB%AOBLEND(:) has unaligned access
+   remark #15389: vectorization support: reference CB%AOBL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(34,19)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference CB%ATIDEBEG(:) has unaligned access
+   remark #15389: vectorization support: reference CB%ATIDE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(36,19)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference CB%ATIDEEND(:) has unaligned access
+   remark #15389: vectorization support: reference CB%ATIDE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_kick.f90(22,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+helio_kick.f90(22,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+helio_kick.f90(5,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_kick_getacch_pl_] helio_kick.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   16[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      72
+            Global    :      14
+            Local     :      58
+        Regenerable   :       0
+        Spilled       :       6
+        
+    Routine stack
+        Variables     :     128 bytes*
+            Reads     :       4 [1.25e+00 ~ 1.3%]
+            Writes    :      12 [9.64e+00 ~ 9.6%]
+        Spills        :       8 bytes*
+            Reads     :       1 [1.28e-01 ~ 0.1%]
+            Writes    :       1 [1.28e-01 ~ 0.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_GETACCH_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_GETACCH_TP) [3/5=60.0%] helio_kick.f90(48,22)
+  -> EXTERN: (68,18) __getsp_inlined
+  -> EXTERN: (68,18) _alloca
+  -> INDIRECT-: (68,18)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_tp_$SELF_V$cd72.0.3 + 56(SI64)))))[29(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (68,18) __resetsp_inlined
+  -> EXTERN: (68,38) _alloca
+  -> EXTERN: (70,18) __getsp_inlined
+  -> EXTERN: (70,18) __resetsp_inlined
+  -> INDIRECT-: (70,18)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_tp_$SELF_V$cd72.0.3 + 56(SI64)))))[29(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (70,18) _alloca
+  -> EXTERN: (70,38) _alloca
+  -> INDIRECT-: (72,31)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_tp_$SELF_V$cd72.0.3 + 56(SI64)))))[16(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (73,34)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_tp_$SELF_V$cd72.0.3 + 56(SI64)))))[20(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (74,25)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_getacch_tp_$SELF_V$cd72.0.3 + 56(SI64)))))[37(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_kick.f90(68,18)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:18) and at (68:18)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:18) and at (68:18)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(68,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (68:38) has aligned access   [ helio_kick.f90(68,38) ]
+      remark #15389: vectorization support: reference PL(:) has unaligned access   [ helio_kick.f90(68,38) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.000 
+      remark #15478: estimated potential speedup: 3.200 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(68,18)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(68,38)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:38) and at (68:38)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:38) and at (68:38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(68,38)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:38) and at (68:38)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (68:38) and at (68:38)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_kick.f90(68,38)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference at (68:55) has unaligned access   [ helio_kick.f90(68,55) ]
+         remark #15389: vectorization support: reference PL(:,:) has unaligned access   [ helio_kick.f90(68,55) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(68,38)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(68,38)
+   remark #25401: memcopy(with guard) generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between at (68:38) and PL(:) (68:38)
+   remark #17106: parallel dependence: assumed FLOW dependence between PL(:) (68:38) and at (68:38)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at helio_kick.f90(68,38)
+   <Multiversioned v2>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between PL(:) (68:38) and at (68:38)
+      remark #17106: parallel dependence: assumed ANTI dependence between at (68:38) and PL(:) (68:38)
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(68,38)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(68,55)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between at (68:55) and PL(:,:) (68:55)
+   remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (68:55) and at (68:55)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at helio_kick.f90(68,55)
+      remark #25401: memcopy(with guard) generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (68:55) and PL(:,:) (68:55)
+      remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (68:55) and at (68:55)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at helio_kick.f90(68,55)
+      <Multiversioned v2>
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (68:55) and at (68:55)
+         remark #17106: parallel dependence: assumed ANTI dependence between at (68:55) and PL(:,:) (68:55)
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(68,55)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(70,18)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:18) and at (70:18)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:18) and at (70:18)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(70,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (70:38) has aligned access   [ helio_kick.f90(70,38) ]
+      remark #15389: vectorization support: reference PL(:) has unaligned access   [ helio_kick.f90(70,38) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.000 
+      remark #15478: estimated potential speedup: 3.200 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(70,18)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(70,38)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:38) and at (70:38)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:38) and at (70:38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(70,38)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:38) and at (70:38)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (70:38) and at (70:38)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_kick.f90(70,38)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference at (70:55) has unaligned access   [ helio_kick.f90(70,55) ]
+         remark #15389: vectorization support: reference PL(:,:) has unaligned access   [ helio_kick.f90(70,55) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(70,38)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(70,38)
+   remark #25401: memcopy(with guard) generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between at (70:38) and PL(:) (70:38)
+   remark #17106: parallel dependence: assumed FLOW dependence between PL(:) (70:38) and at (70:38)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at helio_kick.f90(70,38)
+   <Multiversioned v2>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between PL(:) (70:38) and at (70:38)
+      remark #17106: parallel dependence: assumed ANTI dependence between at (70:38) and PL(:) (70:38)
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(70,38)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(70,55)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between at (70:55) and PL(:,:) (70:55)
+   remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (70:55) and at (70:55)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at helio_kick.f90(70,55)
+      remark #25401: memcopy(with guard) generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (70:55) and PL(:,:) (70:55)
+      remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (70:55) and at (70:55)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at helio_kick.f90(70,55)
+      <Multiversioned v2>
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between PL(:,:) (70:55) and at (70:55)
+         remark #17106: parallel dependence: assumed ANTI dependence between at (70:55) and PL(:,:) (70:55)
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(70,55)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_kick.f90(65,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+helio_kick.f90(65,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+helio_kick.f90(65,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+helio_kick.f90(65,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+helio_kick.f90(68,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,18):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(68,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(68,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(68,55):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,55):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(68,55):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(70,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,18):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(70,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(70,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(70,55):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,55):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(70,55):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_kick.f90(48,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_kick_getacch_tp_] helio_kick.f90:48
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :     420
+            Global    :     138
+            Local     :     282
+        Regenerable   :      10
+        Spilled       :      46
+        
+    Routine stack
+        Variables     :     928 bytes*
+            Reads     :       8 [4.17e-01 ~ 0.4%]
+            Writes    :     104 [5.60e+00 ~ 5.6%]
+        Spills        :     336 bytes*
+            Reads     :     151 [7.22e+00 ~ 7.2%]
+            Writes    :      63 [2.02e+00 ~ 2.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_VB_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_VB_PL) [4/5=80.0%] helio_kick.f90(81,22)
+  -> INDIRECT-: (103,15)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_vb_pl_$SELF_V$d004.0.4 + 56(SI64)))))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (105,18)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_vb_pl_$SELF_V$d004.0.4 + 56(SI64)))))[37(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (107,18)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_vb_pl_$SELF_V$d004.0.4 + 56(SI64)))))[37(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at helio_kick.f90(109,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_kick.f90(102,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self%HELIO (102:10) and self(:,:) (102:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (102:10) and self%HELIO (102:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(102,10)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between self%HELIO (102:10) and self(:,:) (102:10)
+      remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (102:10) and self%HELIO (102:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_kick.f90(102,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(102,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(109,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(1,i)>, masked, 64-bit indexed, part of address is linear but may overflow   [ helio_kick.f90(110,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(110,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(110,13) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(2,i)>, masked, 64-bit indexed, part of address is linear but may overflow   [ helio_kick.f90(111,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(111,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(111,13) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(3,i)>, masked, 64-bit indexed, part of address is linear but may overflow   [ helio_kick.f90(112,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(112,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler   [ helio_kick.f90(112,13) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.035
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15459: masked indexed (or scatter) stores: 3 
+   remark #15460: masked strided loads: 6 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 27 
+   remark #15477: vector cost: 201.500 
+   remark #15478: estimated potential speedup: 0.130 
+   remark #15487: type converts: 3 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_kick.f90(102,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(102,10):remark #34026: call to memset implemented as a call to optimized library version
+helio_kick.f90(81,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_kick_vb_pl_] helio_kick.f90:81
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   18[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :     196
+            Global    :      35
+            Local     :     161
+        Regenerable   :      55
+        Spilled       :       6
+        
+    Routine stack
+        Variables     :     236 bytes*
+            Reads     :       6 [1.19e-01 ~ 0.1%]
+            Writes    :      32 [4.75e+00 ~ 4.7%]
+        Spills        :      88 bytes*
+            Reads     :      21 [1.73e+00 ~ 1.7%]
+            Writes    :      16 [2.43e+00 ~ 2.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_VB_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_KICK::HELIO_KICK_VB_TP) [5/5=100.0%] helio_kick.f90(120,22)
+  -> INDIRECT-: (142,15)  (*((P64*) *((P64*) (_helio_classes_mp_helio_kick_vb_tp_$SELF_V$d079.0.5 + 56(SI64)))))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at helio_kick.f90(143,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_kick.f90(141,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self%HELIO (141:10) and self(:,:) (141:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (141:10) and self%HELIO (141:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(141,10)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between self%HELIO (141:10) and self(:,:) (141:10)
+      remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (141:10) and self%HELIO (141:10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_kick.f90(141,10)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at helio_kick.f90(141,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_kick.f90(144,55)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_kick.f90(144,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(144,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 8 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 3.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at helio_kick.f90(144,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_kick.f90(141,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_kick.f90(141,10):remark #34026: call to memset implemented as a call to optimized library version
+helio_kick.f90(120,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_kick_vb_tp_] helio_kick.f90:120
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   17[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm2]
+        
+    Routine temporaries
+        Total         :     203
+            Global    :      55
+            Local     :     148
+        Regenerable   :      46
+        Spilled       :      11
+        
+    Routine stack
+        Variables     :      44 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :       8 [2.48e+00 ~ 2.5%]
+        Spills        :     128 bytes*
+            Reads     :      27 [2.87e+00 ~ 2.9%]
+            Writes    :      21 [2.36e+00 ~ 2.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+

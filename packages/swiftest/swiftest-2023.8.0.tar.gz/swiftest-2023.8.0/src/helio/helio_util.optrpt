@@ -1,0 +1,192 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _helio_classes.s_helio_util._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_helio_classes.s_helio_util._) [1/4=25.0%] helio_util.f90(1,26)
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_util.f90(1,26):remark #34051: REGISTER ALLOCATION : [_helio_classes.s_helio_util._] helio_util.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_PL) [2/4=50.0%] helio_util.f90(5,22)
+  -> EXTERN: (13,12) UTIL_DEALLOC_PL
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_util.f90(5,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_util_final_pl_] helio_util.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    9[ rax rdx rcx rsi rdi r8-r11]
+        
+    Routine temporaries
+        Total         :      28
+            Global    :       6
+            Local     :      22
+        Regenerable   :      19
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :     128 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :      14 [1.05e+01 ~ 10.5%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_SYSTEM) [3/4=75.0%] helio_util.f90(19,22)
+  -> EXTERN: (27,12) UTIL_DEALLOC_SYSTEM
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_util.f90(19,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_util_final_system_] helio_util.f90:19
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    9[ rax rdx rcx rsi rdi r8-r11]
+        
+    Routine temporaries
+        Total         :      23
+            Global    :       6
+            Local     :      17
+        Regenerable   :      13
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :     128 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :      14 [2.64e+01 ~ 26.4%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_UTIL::HELIO_UTIL_FINAL_TP) [4/4=100.0%] helio_util.f90(33,22)
+  -> EXTERN: (41,12) UTIL_DEALLOC_TP
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_util.f90(33,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_util_final_tp_] helio_util.f90:33
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    9[ rax rdx rcx rsi rdi r8-r11]
+        
+    Routine temporaries
+        Total         :      28
+            Global    :       6
+            Local     :      22
+        Regenerable   :      19
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :     128 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :      14 [1.05e+01 ~ 10.5%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

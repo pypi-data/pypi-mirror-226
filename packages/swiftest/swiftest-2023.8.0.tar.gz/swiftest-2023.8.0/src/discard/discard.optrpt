@@ -1,0 +1,7 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.6.0 Build 20220226_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2022.1.0/include -no-wrap-margin -O3 -qopt-prefetch=0 -qopt-matmul -qmkl -sox -simd -xhost -align all -align array64 -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel-source-info=2 -fp-model=fast -qopt-report=5 -g -traceback -c

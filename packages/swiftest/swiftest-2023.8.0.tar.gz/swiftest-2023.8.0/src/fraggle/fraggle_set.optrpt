@@ -1,0 +1,2359 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _fraggle_classes.s_fraggle_set._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_fraggle_classes.s_fraggle_set._) [1/6=16.7%] fraggle_set.f90(1,28)
+
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(1,28):remark #34051: REGISTER ALLOCATION : [_fraggle_classes.s_fraggle_set._] fraggle_set.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_BUDGETS_FRAGMENTS
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_BUDGETS_FRAGMENTS) [2/6=33.3%] fraggle_set.f90(5,22)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_set.f90(20,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference dl(:) has aligned access
+   remark #15389: vectorization support: reference detot%LTOT_AFTER(:) has unaligned access
+   remark #15389: vectorization support: reference detot%LTOT_BEFORE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(22,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference detot%L_BUDGET(:) has unaligned access
+   remark #15388: vectorization support: reference dl(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.070 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(22,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(23,58)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference detot%VBCOM(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.636
+   remark #15355: vectorization support: at (23:58) is double type reduction
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 5.500 
+   remark #15478: estimated potential speedup: 0.710 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(5,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_set_budgets_fragments_] fraggle_set.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   19[ rax rsi rdi zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :      31
+            Global    :       0
+            Local     :      31
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_MASS_DIST_FRAGMENTS
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_MASS_DIST_FRAGMENTS) [3/6=50.0%] fraggle_set.f90(30,22)
+  -> EXTERN: (56,66) ___powr8i4
+  -> EXTERN: (73,25) _strcmp
+  -> EXTERN: (79,24) _ceil
+  -> EXTERN: (79,57) _log
+  -> EXTERN: (89,39) _pow
+  -> INDIRECT-: (96,18)  (*((P64*) *((P64*) (_fraggle_classes_mp_fraggle_set_mass_dist_fragments_$SELF_V$9257.0.3 + 56(SI64)))))[19(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (98,18)  (*((P64*) *((P64*) (_fraggle_classes_mp_fraggle_set_mass_dist_fragments_$SELF_V$9257.0.3 + 56(SI64)))))[19(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (105,13) _for_write_seq_lis
+  -> EXTERN: (105,13) _for_write_seq_lis_xmit
+  -> EXTERN: (115,36) _pow
+  -> EXTERN: (144,107) _pow
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_set.f90(56,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access   [ fraggle_set.f90(56,38) ]
+   remark #15388: vectorization support: reference volume(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.462
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 12 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 1.260 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(57,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference ip_avg(:) has aligned access
+   remark #15389: vectorization support: reference colliders%IP(:,1) has unaligned access   [ fraggle_set.f90(57,23) ]
+   remark #15389: vectorization support: reference colliders%IP(:,2) has unaligned access   [ fraggle_set.f90(57,63) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.209
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 36 
+   remark #15477: vector cost: 21.500 
+   remark #15478: estimated potential speedup: 1.220 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(57,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(102,34)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15389: vectorization support: reference colliders%IP(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.700 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(73,25)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(88,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between mremaining (90:39) and mremaining (91:16)
+   remark #17106: parallel dependence: assumed FLOW dependence between mremaining (91:16) and mremaining (90:39)
+   remark #17106: parallel dependence: assumed ANTI dependence between mremaining (90:39) and mremaining (91:16)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ fraggle_set.f90(92,16) ]
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(114,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self%MASS_DIST(2) (115:13) and self(i) (116:13)
+   remark #17106: parallel dependence: assumed FLOW dependence between self(i) (116:13) and self%MASS_DIST(2) (115:13)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between self%MASS_DIST(2) (115:13) and self(i) (116:13)
+   remark #15346: vector dependence: assumed FLOW dependence between self(i) (116:13) and self%MASS_DIST(2) (115:13)
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(126,39)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(126,39)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.450
+   remark #15355: vectorization support: at (126:39) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(126,39)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 5.333
+   remark #15355: vectorization support: at (126:39) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(126,39)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(127,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(127,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(127,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.200
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(127,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(130,35)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(130,35)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.450
+   remark #15355: vectorization support: at (130:35) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(130,35)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 5.333
+   remark #15355: vectorization support: at (130:35) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(130,35)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(138,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15389: vectorization support: reference colliders%IP(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.700 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(143,51)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference volume(:) has aligned access
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 2.600
+   remark #15355: vectorization support: at (143:51) is double type reduction
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 0.550 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(143,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(143,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.917
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(143,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference self(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.667
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(143,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ ? ? } lastprivate={ } firstlastprivate={ } reduction={ }
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15389: vectorization support: reference self(:) has unaligned access   [ fraggle_set.f90(144,72) ]
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.148
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 136 
+   remark #15477: vector cost: 28.750 
+   remark #15478: estimated potential speedup: 4.490 
+   remark #15482: vectorized math library calls: 1 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(145,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at fraggle_set.f90(146,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15388: vectorization support: reference ip_avg(:) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 3.000 
+      remark #15478: estimated potential speedup: 0.920 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15389: vectorization support: reference self(:) has unaligned access   [ fraggle_set.f90(144,72) ]
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.148
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 136 
+   remark #15477: vector cost: 28.750 
+   remark #15478: estimated potential speedup: 4.490 
+   remark #15482: vectorized math library calls: 1 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(144,10)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(30,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_set_mass_dist_fragments_] fraggle_set.f90:30
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   28[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm13]
+        
+    Routine temporaries
+        Total         :     585
+            Global    :     167
+            Local     :     418
+        Regenerable   :      91
+        Spilled       :      31
+        
+    Routine stack
+        Variables     :     256 bytes*
+            Reads     :      10 [9.61e-01 ~ 1.0%]
+            Writes    :      26 [3.97e-01 ~ 0.4%]
+        Spills        :     288 bytes*
+            Reads     :      70 [3.63e+00 ~ 3.6%]
+            Writes    :      62 [3.18e+00 ~ 3.2%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_COORDINATE_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_COORDINATE_SYSTEM) [4/6=66.7%] fraggle_set.f90(155,22)
+  -> EXTERN: (155,22) __getsp_inlined
+  -> EXTERN: (155,22) _alloca
+  -> EXTERN: (171,23) OPERATOR_MAG_DP
+  -> EXTERN: (173,23) OPERATOR_MAG_DP
+  -> EXTERN: (179,43) OPERATOR_MAG_DP
+  -> EXTERN: (181,52) OPERATOR_CROSS_DP
+  -> EXTERN: (184,10) __resetsp_inlined
+  -> EXTERN: (184,10) _for_dealloc_allocatable
+  -> EXTERN: (184,10) __getsp_inlined
+  -> EXTERN: (184,25) _alloca
+  -> EXTERN: (184,25) OPERATOR_MAG_EL_DP
+  -> EXTERN: (186,15) _for_random_number
+  -> EXTERN: (189,13) _alloca
+  -> EXTERN: (189,13) __resetsp_inlined
+  -> EXTERN: (189,13) __getsp_inlined
+  -> EXTERN: (191,13) __resetsp_inlined
+  -> EXTERN: (191,13) __getsp_inlined
+  -> EXTERN: (191,58) _alloca
+  -> EXTERN: (191,58) OPERATOR_MAG_DP
+  -> EXTERN: (192,13) __resetsp_inlined
+  -> EXTERN: (192,13) __getsp_inlined
+  -> EXTERN: (192,35) _alloca
+  -> EXTERN: (192,55) OPERATOR_CROSS_DP
+  -> EXTERN: (192,55) _alloca
+  -> EXTERN: (193,13) __resetsp_inlined
+  -> EXTERN: (193,13) __getsp_inlined
+  -> EXTERN: (193,58) OPERATOR_MAG_DP
+  -> EXTERN: (193,58) _alloca
+  -> EXTERN: (198,4) __resetsp_inlined
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at fraggle_set.f90(188,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_set.f90(170,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference delta_v(:) has aligned access
+   remark #15389: vectorization support: reference colliders%VB(:,2) has unaligned access
+   remark #15389: vectorization support: reference colliders%VB(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(172,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference delta_r(:) has aligned access
+   remark #15389: vectorization support: reference colliders%XB(:,2) has unaligned access
+   remark #15389: vectorization support: reference colliders%XB(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(177,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference ltot(:) has aligned access
+   remark #15389: vectorization support: reference colliders%L_ORBIT(:,1) has unaligned access
+   remark #15389: vectorization support: reference colliders%L_ORBIT(:,2) has unaligned access
+   remark #15389: vectorization support: reference colliders%L_SPIN(:,1) has unaligned access   [ fraggle_set.f90(177,40) ]
+   remark #15389: vectorization support: reference colliders%L_SPIN(:,2) has unaligned access   [ fraggle_set.f90(177,65) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.923
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 4 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 12 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 0.970 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(178,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference at (178:10) has unaligned access
+   remark #15388: vectorization support: reference delta_r(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.108
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 18.500 
+   remark #15478: estimated potential speedup: 1.260 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(178,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(179,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference at (179:10) has unaligned access
+   remark #15388: vectorization support: reference ltot(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.108
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 18.500 
+   remark #15478: estimated potential speedup: 1.260 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(179,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(181,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self%X_COLL_UNIT(:) has unaligned access
+   remark #15388: vectorization support: reference at (181:10) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(183,19)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(183,19)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=15
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(183,19)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.820
+      remark #15355: vectorization support: at (183:19) is int type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 12 
+      remark #15477: vector cost: 3.120 
+      remark #15478: estimated potential speedup: 3.310 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(183,19)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,25)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (184:25) and at (184:25)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (184:25) and at (184:25)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(184,25)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (184:25) and at (184:25)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (184:25) and at (184:25)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_set.f90(184,25)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference at (184:31) has unaligned access   [ fraggle_set.f90(184,31) ]
+         remark #15389: vectorization support: reference self(:,:) has unaligned access   [ fraggle_set.f90(184,31) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(184,25)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,31)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between at (184:31) and self(:,:) (184:31)
+   remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (184:31) and at (184:31)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(184,31)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (184:31) and self(:,:) (184:31)
+      remark #17106: parallel dependence: assumed FLOW dependence between self(:,:) (184:31) and at (184:31)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at fraggle_set.f90(184,31)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15389: vectorization support: reference at (184:31) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(184,31)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,10)
+<Multiversioned v1>
+   remark #25233: Loop multiversioned for stride tests on Assumed shape arrays
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between self(:) (184:10) and at (184:10)
+   remark #17106: parallel dependence: assumed ANTI dependence between at (184:10) and self(:) (184:10)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between self(:) (184:10) and at (184:10)
+   remark #15346: vector dependence: assumed ANTI dependence between at (184:10) and self(:) (184:10)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,10)
+<Remainder, Multiversioned v1>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,10)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between self(:) (184:10) and at (184:10)
+   remark #17106: parallel dependence: assumed ANTI dependence between at (184:10) and self(:) (184:10)
+   remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(184,10)
+<Remainder, Multiversioned v2>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(186,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:_for_random_number (186:15) and call:_for_random_number (186:15)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:_for_random_number (186:15) and call:_for_random_number (186:15)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(186,15)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:_for_random_number (186:15) and call:_for_random_number (186:15)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:_for_random_number (186:15) and call:_for_random_number (186:15)
+      remark #15389: vectorization support: reference l_sigma(:,:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.051
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 103 
+      remark #15477: vector cost: 39.000 
+      remark #15478: estimated potential speedup: 1.670 
+      remark #15482: vectorized math library calls: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(186,15)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(188,37)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self(i) (189:55) and at (193:58)
+   remark #17106: parallel dependence: assumed FLOW dependence between at (193:58) and self(i) (189:55)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(189,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(189,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(189,55) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.097
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 9.000 
+      remark #15478: estimated potential speedup: 3.030 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(189,13)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(189,55) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(189,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(190,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between self(:,i) (190:13) and self%Z_COLL_UNIT(:) (190:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between self%Z_COLL_UNIT(:) (190:13) and self(:,i) (190:13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (190:13) and self%Z_COLL_UNIT(:) (190:13)
+      remark #15346: vector dependence: assumed ANTI dependence between self%Z_COLL_UNIT(:) (190:13) and self(:,i) (190:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,58)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (191:58) and at (191:58)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (191:58) and at (191:58)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(191,58)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (191:64) has aligned access   [ fraggle_set.f90(191,64) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(191,64) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(191,58)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,64)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (191:64) and self(:,i) (191:64)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (191:64) and self(:,i) (191:64)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(191,64)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (191:64) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(191,64)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.079
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,13)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(191,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(192,55)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (192:55) and at (192:55)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (192:55) and at (192:55)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(192,55)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (192:35) has aligned access   [ fraggle_set.f90(192,35) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(192,35) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(192,55)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(192,35)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (192:35) and at (192:35)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (192:35) and at (192:35)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(192,35)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (192:63) has aligned access   [ fraggle_set.f90(192,63) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(192,63) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(192,35)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(192,35)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (192:35) and self(:,i) (192:35)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (192:35) and self(:,i) (192:35)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(192,35)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (192:35) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(192,35)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(192,63)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (192:63) and self(:,i) (192:63)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (192:63) and self(:,i) (192:63)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(192,63)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (192:63) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(192,63)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(192,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between self(:,i) (192:13) and at (192:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between at (192:13) and self(:,i) (192:13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (192:13) and at (192:13)
+      remark #15346: vector dependence: assumed ANTI dependence between at (192:13) and self(:,i) (192:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,58)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (193:58) and at (193:58)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (193:58) and at (193:58)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(193,58)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (193:64) has aligned access   [ fraggle_set.f90(193,64) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ fraggle_set.f90(193,64) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(193,58)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,64)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (193:64) and self(:,i) (193:64)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (193:64) and self(:,i) (193:64)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at fraggle_set.f90(193,64)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (193:64) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at fraggle_set.f90(193,64)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.079
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,13)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(193,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+remark #25050: 
+Tempoary Array Elimination (FTAE) Report: 
+ftae for the loop at line +189 fraggle_set.f90
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(191,58):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(191,58):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(191,58):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(191,64):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(191,64):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(191,64):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(192,55):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,55):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,55):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(192,35):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,35):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,35):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(192,35):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,35):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,35):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(192,63):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,63):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(192,63):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(193,58):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(193,58):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(193,58):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(193,64):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(193,64):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(193,64):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(184,25):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(184,25):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(184,25):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(184,31):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(184,31):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+fraggle_set.f90(184,31):remark #34026: call to memcpy implemented as a call to optimized library version
+fraggle_set.f90(155,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_set_coordinate_system_] fraggle_set.f90:155
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   29[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     981
+            Global    :     273
+            Local     :     708
+        Regenerable   :     219
+        Spilled       :      84
+        
+    Routine stack
+        Variables     :    1436 bytes*
+            Reads     :      40 [5.01e-01 ~ 0.5%]
+            Writes    :      86 [3.38e+00 ~ 3.4%]
+        Spills        :     688 bytes*
+            Reads     :     274 [2.43e+00 ~ 2.4%]
+            Writes    :     128 [1.17e+00 ~ 1.2%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_NATURAL_SCALE_FACTORS
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_NATURAL_SCALE_FACTORS) [5/6=83.3%] fraggle_set.f90(201,22)
+  -> EXTERN: (236,10) _for_realloc_lhs
+  -> EXTERN: (237,10) _for_realloc_lhs
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_set.f90(215,54)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%VB(:,1) has unaligned access
+   remark #15389: vectorization support: reference colliders%VB(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.000
+   remark #15355: vectorization support: at (215:54) is double type reduction
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.670 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(215,126)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%VB(:,2) has unaligned access
+   remark #15389: vectorization support: reference colliders%VB(:,2) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.000
+   remark #15355: vectorization support: at (215:126) is double type reduction
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.670 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(216,24)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 2.667
+   remark #15355: vectorization support: at (216:10) is double type reduction   [ fraggle_set.f90(216,10) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.450 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(223,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self%XBCOM(:) has unaligned access
+   remark #15389: vectorization support: reference self%XBCOM(:) has unaligned access   [ fraggle_set.f90(223,42) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.184
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 19.000 
+   remark #15478: estimated potential speedup: 1.200 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(223,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(224,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self%VBCOM(:) has unaligned access
+   remark #15389: vectorization support: reference self%VBCOM(:) has unaligned access   [ fraggle_set.f90(224,42) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.184
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 19.000 
+   remark #15478: estimated potential speedup: 1.200 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(224,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(225,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+   remark #25015: Estimate of max trip count of loop=2
+
+   LOOP BEGIN at fraggle_set.f90(225,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%XB(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%XB(:,:) has unaligned access   [ fraggle_set.f90(225,50) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.184
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 19.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(225,10)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(226,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+   remark #25015: Estimate of max trip count of loop=2
+
+   LOOP BEGIN at fraggle_set.f90(226,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%VB(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%VB(:,:) has unaligned access   [ fraggle_set.f90(226,50) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.184
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 19.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(226,10)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(227,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%MASS(:) has unaligned access
+   remark #15389: vectorization support: reference colliders%MASS(:) has unaligned access   [ fraggle_set.f90(227,50) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.184
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 19.000 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(228,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access   [ fraggle_set.f90(228,54) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.184
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 19.000 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(229,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+   remark #25015: Estimate of max trip count of loop=2
+
+   LOOP BEGIN at fraggle_set.f90(229,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,:) has unaligned access   [ fraggle_set.f90(229,58) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.184
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 19.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(229,10)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(231,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+   remark #25015: Estimate of max trip count of loop=2
+
+   LOOP BEGIN at fraggle_set.f90(232,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (232:13) has aligned access
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,i) has unaligned access   [ fraggle_set.f90(232,59) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.111
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 36 
+      remark #15477: vector cost: 18.000 
+      remark #15478: estimated potential speedup: 1.420 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(232,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%ROT(:,i) has unaligned access
+      remark #15388: vectorization support: reference at (232:13) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(232,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(236,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(236,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference at (236:10) has aligned access
+   remark #15388: vectorization support: reference at (236:34) has aligned access   [ fraggle_set.f90(236,34) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.079
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 8.750 
+   remark #15478: estimated potential speedup: 3.110 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(236,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference at (236:10) has aligned access
+   remark #15388: vectorization support: reference at (236:34) has aligned access   [ fraggle_set.f90(236,34) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.314
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 8.750 
+   remark #15478: estimated potential speedup: 3.110 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(236,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(237,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(237,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference at (237:10) has aligned access
+   remark #15388: vectorization support: reference at (237:38) has aligned access   [ fraggle_set.f90(237,38) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.079
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 8.750 
+   remark #15478: estimated potential speedup: 3.110 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(237,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference at (237:10) has aligned access
+   remark #15388: vectorization support: reference at (237:38) has aligned access   [ fraggle_set.f90(237,38) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.314
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 8.750 
+   remark #15478: estimated potential speedup: 3.110 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(237,10)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(201,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_set_natural_scale_factors_] fraggle_set.f90:201
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   27[ rax rdx rcx rbx rsi rdi r8 r12-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     202
+            Global    :      57
+            Local     :     145
+        Regenerable   :      10
+        Spilled       :       8
+        
+    Routine stack
+        Variables     :     168 bytes*
+            Reads     :       2 [5.13e-01 ~ 0.5%]
+            Writes    :      18 [2.43e+00 ~ 2.4%]
+        Spills        :      32 bytes*
+            Reads     :       9 [1.08e+00 ~ 1.1%]
+            Writes    :       3 [3.84e-01 ~ 0.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_ORIGINAL_SCALE_FACTORS
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FRAGGLE_CLASSES@S_FRAGGLE_SET::FRAGGLE_SET_ORIGINAL_SCALE_FACTORS) [6/6=100.0%] fraggle_set.f90(245,22)
+  -> EXTERN: (258,12) ___for_ieee_get_halting_mode_
+  -> EXTERN: (259,12) ___for_ieee_set_halting_mode_
+  -> EXTERN: (278,10) _for_realloc_lhs
+  -> EXTERN: (279,10) _for_realloc_lhs
+  -> EXTERN: (280,10) _for_realloc_lhs
+  -> EXTERN: (281,10) _for_realloc_lhs
+  -> EXTERN: (282,10) _for_realloc_lhs
+  -> EXTERN: (296,12) ___for_ieee_set_halting_mode_
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at fraggle_set.f90(258,12)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15382: vectorization support: call to function ___for_ieee_get_halting_mode_ cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(259,12)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15382: vectorization support: call to function ___for_ieee_set_halting_mode_ cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(264,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self%XBCOM(:) has unaligned access
+   remark #15389: vectorization support: reference self%XBCOM(:) has unaligned access   [ fraggle_set.f90(264,42) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.875
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.850 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(265,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self%VBCOM(:) has unaligned access
+   remark #15389: vectorization support: reference self%VBCOM(:) has unaligned access   [ fraggle_set.f90(265,42) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.875
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.850 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(267,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%MASS(:) has unaligned access
+   remark #15389: vectorization support: reference colliders%MASS(:) has unaligned access   [ fraggle_set.f90(267,44) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.875
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(268,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access
+   remark #15389: vectorization support: reference colliders%RADIUS(:) has unaligned access   [ fraggle_set.f90(268,48) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.875
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(269,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+   remark #25436: completely unrolled by 2  
+
+   LOOP BEGIN at fraggle_set.f90(269,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%XB(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%XB(:,:) has unaligned access   [ fraggle_set.f90(269,40) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.875
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 0.850 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(269,10)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(270,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+   remark #25436: completely unrolled by 2  
+
+   LOOP BEGIN at fraggle_set.f90(270,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%VB(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%VB(:,:) has unaligned access   [ fraggle_set.f90(270,40) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.875
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 0.850 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(270,10)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(271,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+   remark #25436: completely unrolled by 2  
+
+   LOOP BEGIN at fraggle_set.f90(271,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,:) has unaligned access
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,:) has unaligned access   [ fraggle_set.f90(271,48) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.875
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 0.850 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(271,10)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(272,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+   remark #25015: Estimate of max trip count of loop=2
+
+   LOOP BEGIN at fraggle_set.f90(273,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (273:13) has aligned access
+      remark #15389: vectorization support: reference colliders%L_SPIN(:,i) has unaligned access   [ fraggle_set.f90(273,59) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 12 
+      remark #15477: vector cost: 3.000 
+      remark #15478: estimated potential speedup: 1.630 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(273,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference colliders%ROT(:,i) has unaligned access
+      remark #15388: vectorization support: reference at (273:13) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(273,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(278,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(278,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference at (278:10) has aligned access
+   remark #15388: vectorization support: reference at (278:34) has aligned access   [ fraggle_set.f90(278,34) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(278,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference at (278:10) has aligned access
+   remark #15388: vectorization support: reference at (278:34) has aligned access   [ fraggle_set.f90(278,34) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.200
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(278,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(279,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(279,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference at (279:10) has aligned access
+   remark #15388: vectorization support: reference at (279:38) has aligned access   [ fraggle_set.f90(279,38) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(279,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference at (279:10) has aligned access
+   remark #15388: vectorization support: reference at (279:38) has aligned access   [ fraggle_set.f90(279,38) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.200
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.060 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(279,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(280,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(280,10)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(280,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (280:10) has aligned access
+      remark #15388: vectorization support: reference at (280:32) has aligned access   [ fraggle_set.f90(280,32) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.079
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(280,10)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (280:10) has unaligned access
+      remark #15389: vectorization support: reference at (280:32) has unaligned access   [ fraggle_set.f90(280,32) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 8.750 
+      remark #15478: estimated potential speedup: 3.110 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(280,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(281,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(281,10)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(281,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (281:10) has aligned access
+      remark #15388: vectorization support: reference at (281:38) has aligned access   [ fraggle_set.f90(281,38) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.550
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 4.060 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(281,10)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (281:10) has unaligned access
+      remark #15389: vectorization support: reference at (281:38) has unaligned access   [ fraggle_set.f90(281,38) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 2.125
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 4.060 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(281,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(282,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fraggle_set.f90(282,10)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(282,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (282:10) has aligned access
+      remark #15388: vectorization support: reference at (282:38) has aligned access   [ fraggle_set.f90(282,38) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.550
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 4.060 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(282,10)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (282:10) has unaligned access
+      remark #15389: vectorization support: reference at (282:38) has unaligned access   [ fraggle_set.f90(282,38) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 2.125
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 4.060 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(282,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(284,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between at (285:13) and at (286:13)
+   remark #17106: parallel dependence: assumed ANTI dependence between at (286:13) and at (285:13)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between at (285:13) and at (286:13)
+   remark #15346: vector dependence: assumed ANTI dependence between at (286:13) and at (285:13)
+
+   LOOP BEGIN at fraggle_set.f90(285,13)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+
+   LOOP BEGIN at fraggle_set.f90(286,13)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+LOOP END
+
+LOOP BEGIN at fraggle_set.f90(296,12)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15382: vectorization support: call to function ___for_ieee_set_halting_mode_ cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+fraggle_set.f90(245,22):remark #34051: REGISTER ALLOCATION : [_fraggle_classes_mp_fraggle_set_original_scale_factors_] fraggle_set.f90:245
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     446
+            Global    :     145
+            Local     :     301
+        Regenerable   :      20
+        Spilled       :      30
+        
+    Routine stack
+        Variables     :     476 bytes*
+            Reads     :       2 [8.66e-02 ~ 0.1%]
+            Writes    :      51 [1.13e+00 ~ 1.1%]
+        Spills        :     200 bytes*
+            Reads     :      38 [1.58e+00 ~ 1.6%]
+            Writes    :      26 [4.52e-01 ~ 0.5%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+

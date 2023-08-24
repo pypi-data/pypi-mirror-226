@@ -1,0 +1,399 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _swiftest_classes.s_tides_kick_getacch._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_swiftest_classes.s_tides_kick_getacch._) [1/2=50.0%] tides_getacch_pl.f90(1,29)
+
+
+    Report from: Code generation optimizations [cg]
+
+tides_getacch_pl.f90(1,29):remark #34051: REGISTER ALLOCATION : [_swiftest_classes.s_tides_kick_getacch._] tides_getacch_pl.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_TIDES_KICK_GETACCH::TIDES_KICK_GETACCH_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_TIDES_KICK_GETACCH::TIDES_KICK_GETACCH_PL) [2/2=100.0%] tides_getacch_pl.f90(5,22)
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (36,35) OPERATOR_CROSS_DP
+  -> EXTERN: (37,39) OPERATOR_CROSS_DP
+  -> EXTERN: (42,58) ___powr8i4
+  -> EXTERN: (43,61) ___powr8i4
+  -> EXTERN: (45,53) ___powr8i4
+  -> EXTERN: (46,50) ___powr8i4
+  -> EXTERN: (48,28) ___powr8i4
+  -> EXTERN: (50,13) _for_deallocate
+  -> EXTERN: (51,63) _for_allocate
+  -> EXTERN: (51,63) OPERATOR_CROSS_DP
+  -> EXTERN: (52,63) OPERATOR_CROSS_DP
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at tides_getacch_pl.f90(29,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at tides_getacch_pl.f90(29,10)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at tides_getacch_pl.f90(29,10)
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at tides_getacch_pl.f90(29,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at tides_getacch_pl.f90(30,10)
+   remark #15389: vectorization support: reference CB%ATIDE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 0.810 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at tides_getacch_pl.f90(31,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at tides_getacch_pl.f90(32,20)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25439: unrolled with remainder by 2  
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 2
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(32,20)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(33,20)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25439: unrolled with remainder by 2  
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 2
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(33,20)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(34,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between r_unit(:) (34:13) and self(:,i) (34:13)
+      remark #15346: vector dependence: assumed ANTI dependence between self(:,i) (34:13) and r_unit(:) (34:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(35,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between v_unit(:) (35:13) and self(:,i) (35:13)
+      remark #15346: vector dependence: assumed ANTI dependence between self(:,i) (35:13) and v_unit(:) (35:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(36,13)
+      remark #15388: vectorization support: reference h_unit(:) has aligned access
+      remark #15388: vectorization support: reference at (36:13) has aligned access
+      remark #15305: vectorization support: vector length 2
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.710 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(37,13)
+      remark #15388: vectorization support: reference theta_unit(:) has aligned access
+      remark #15388: vectorization support: reference at (37:13) has aligned access
+      remark #15305: vectorization support: vector length 2
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.710 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(38,25)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(38,13)
+      remark #15388: vectorization support: reference theta_dot(:) has aligned access
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.333
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.280 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(50,47)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(51,63)
+      remark #15389: vectorization support: reference at (51:35) has unaligned access   [ tides_getacch_pl.f90(51,35) ]
+      remark #15389: vectorization support: reference at (51:63) has unaligned access
+      remark #15388: vectorization support: reference theta_dot(:) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15315: loop was not vectorized: estimated number of iterations (3) is insufficient for vectorization
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 5.000 
+      remark #15478: estimated potential speedup: 0.810 
+      remark #15488: --- end vector cost summary ---
+      remark #25439: unrolled with remainder by 2  
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(51,63)
+   <Remainder>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(52,63)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between at (52:63) and CB%ROT(:) (52:63)
+      remark #15346: vector dependence: assumed ANTI dependence between CB%ROT(:) (52:63) and at (52:63)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(50,13)
+      remark #15388: vectorization support: reference f_t(:) has aligned access
+      remark #15388: vectorization support: reference r_unit(:) has aligned access   [ tides_getacch_pl.f90(50,23) ]
+      remark #15388: vectorization support: reference at (51:34) has aligned access   [ tides_getacch_pl.f90(51,34) ]
+      remark #15388: vectorization support: reference at (52:34) has aligned access   [ tides_getacch_pl.f90(52,34) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.231
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 3 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 47 
+      remark #15477: vector cost: 6.500 
+      remark #15478: estimated potential speedup: 2.230 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(53,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between CB%ATIDE(:) (53:13) and f_t(:) (53:13)
+      remark #15346: vector dependence: assumed ANTI dependence between f_t(:) (53:13) and CB%ATIDE(:) (53:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(54,13)
+      remark #15388: vectorization support: reference at (54:13) has aligned access
+      remark #15388: vectorization support: reference f_t(:) has aligned access   [ tides_getacch_pl.f90(54,38) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.029
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 30 
+      remark #15477: vector cost: 17.500 
+      remark #15478: estimated potential speedup: 1.360 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(54,13)
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15388: vectorization support: reference at (54:13) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 3.000 
+      remark #15478: estimated potential speedup: 0.920 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(36,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(37,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(38,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(50,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at tides_getacch_pl.f90(54,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at tides_getacch_pl.f90(57,10)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (58:13) and CB%ATIDE(:) (58:13)
+   remark #15346: vector dependence: assumed ANTI dependence between CB%ATIDE(:) (58:13) and self(:,i) (58:13)
+
+   LOOP BEGIN at tides_getacch_pl.f90(58,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (58:13) and CB%ATIDE(:) (58:13)
+      remark #15346: vector dependence: assumed ANTI dependence between CB%ATIDE(:) (58:13) and self(:,i) (58:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+tides_getacch_pl.f90(28,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+tides_getacch_pl.f90(28,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+tides_getacch_pl.f90(29,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+tides_getacch_pl.f90(29,10):remark #34026: call to memset implemented as a call to optimized library version
+tides_getacch_pl.f90(5,22):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_tides_kick_getacch_pl_] tides_getacch_pl.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     472
+            Global    :     125
+            Local     :     347
+        Regenerable   :      83
+        Spilled       :      31
+        
+    Routine stack
+        Variables     :    1352 bytes*
+            Reads     :      41 [5.29e+00 ~ 5.3%]
+            Writes    :     131 [1.54e+01 ~ 15.4%]
+        Spills        :     192 bytes*
+            Reads     :      46 [4.78e+00 ~ 4.8%]
+            Writes    :      28 [2.51e+00 ~ 2.5%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

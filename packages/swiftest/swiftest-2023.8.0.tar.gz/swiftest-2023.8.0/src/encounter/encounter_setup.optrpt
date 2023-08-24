@@ -1,0 +1,813 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _encounter_classes.s_encounter_setup._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_encounter_classes.s_encounter_setup._) [1/3=33.3%] encounter_setup.f90(1,31)
+
+
+    Report from: Code generation optimizations [cg]
+
+encounter_setup.f90(1,31):remark #34051: REGISTER ALLOCATION : [_encounter_classes.s_encounter_setup._] encounter_setup.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: ENCOUNTER_CLASSES@S_ENCOUNTER_SETUP::ENCOUNTER_SETUP_AABB
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (ENCOUNTER_CLASSES@S_ENCOUNTER_SETUP::ENCOUNTER_SETUP_AABB) [2/3=66.7%] encounter_setup.f90(5,22)
+  -> EXTERN: (23,13) _for_alloc_allocatable
+  -> EXTERN: (23,13) _for_check_mult_overflow64
+  -> EXTERN: (25,13) _for_dealloc_allocatable
+  -> EXTERN: (26,13) __resetsp_inlined
+  -> EXTERN: (26,13) _alloca
+  -> EXTERN: (26,13) __getsp_inlined
+  -> EXTERN: (30,13) _for_check_mult_overflow64
+  -> EXTERN: (30,13) _for_alloc_allocatable
+  -> EXTERN: (31,13) __resetsp_inlined
+  -> EXTERN: (31,13) __getsp_inlined
+  -> EXTERN: (31,28) _alloca
+  -> EXTERN: (31,28) _alloca
+  -> EXTERN: (32,13) _for_dealloc_allocatable
+  -> EXTERN: (37,46) _for_dealloc_allocatable
+  -> EXTERN: (38,10) _for_alloc_allocatable
+  -> EXTERN: (38,10) _for_check_mult_overflow64
+  -> EXTERN: (39,46) _for_dealloc_allocatable
+  -> EXTERN: (40,10) _for_alloc_allocatable
+  -> EXTERN: (40,10) _for_check_mult_overflow64
+  -> EXTERN: (44,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at encounter_setup.f90(26,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between ITMP (23:13) and self%ENCOUNTER_BOUNDING (26:13)
+   remark #17106: parallel dependence: assumed ANTI dependence between self%ENCOUNTER_BOUNDING (26:13) and ITMP (23:13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(24,29)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between self%ENCOUNTER_BOUNDING (24:29) and ITMP(:) (24:29)
+      remark #17106: parallel dependence: assumed FLOW dependence between ITMP(:) (24:29) and self%ENCOUNTER_BOUNDING (24:29)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at encounter_setup.f90(24,29)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference ITMP(:) has unaligned access
+         remark #15389: vectorization support: reference self(dim,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 4.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(24,29)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(26,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (26:13) and at (26:13)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (26:13) and at (26:13)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (26:13) and at (26:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between at (26:13) and at (26:13)
+      remark #15388: vectorization support: reference at (26:13) has aligned access
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.100
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 4.140 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(26,13)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference at (26:13) has aligned access
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.571
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 5.330 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(26,13)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between self%ENCOUNTER_BOUNDING (26:13) and self(dim,:) (26:13)
+      remark #17106: parallel dependence: assumed FLOW dependence between self(dim,:) (26:13) and self%ENCOUNTER_BOUNDING (26:13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at encounter_setup.f90(26,13)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(dim,:) has unaligned access
+         remark #15388: vectorization support: reference at (26:13) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.620 
+         remark #15478: estimated potential speedup: 5.330 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(26,13)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(31,28)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between ITMP (30:13) and ITMP (32:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between ITMP (32:13) and ITMP (30:13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (31:98) has aligned access   [ encounter_setup.f90(31,98) ]
+      remark #15388: vectorization support: reference at (31:98) has aligned access   [ encounter_setup.f90(31,98) ]
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.250
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 12 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 5.590 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15355: vectorization support: at (31:28) is int64 type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 2.750 
+      remark #15478: estimated potential speedup: 3.740 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (31:28) and at (31:28)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (31:28) and at (31:28)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (31:28) and at (31:28)
+      remark #17106: parallel dependence: assumed ANTI dependence between at (31:28) and at (31:28)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (31:28) and at (31:28)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (31:28) and at (31:28)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between at (31:28) and at (31:28)
+      remark #15346: vector dependence: assumed FLOW dependence between at (31:28) and at (31:28)
+      remark #15346: vector dependence: assumed FLOW dependence between at (31:28) and at (31:28)
+      remark #15346: vector dependence: assumed ANTI dependence between at (31:28) and at (31:28)
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,28)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(31,13)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between ITMP(:) (31:13) and ITMP(:) (31:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between ITMP(:) (31:13) and ITMP(:) (31:13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at encounter_setup.f90(31,13)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference ITMP(:) has unaligned access
+         remark #15388: vectorization support: reference at (31:13) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.620 
+         remark #15478: estimated potential speedup: 5.330 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(31,13)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference ITMP(:) has aligned access
+         remark #15388: vectorization support: reference at (31:13) has aligned access
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 3.333
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.620 
+         remark #15478: estimated potential speedup: 5.330 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(36,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self (37:46) and self(dim) (40:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between self(dim) (40:10) and self (37:46)
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ encounter_setup.f90(37,46) ]
+   remark #15382: vectorization support: call to function _for_check_mult_overflow64 cannot be vectorized   [ encounter_setup.f90(38,10) ]
+   remark #15382: vectorization support: call to function _for_alloc_allocatable cannot be vectorized   [ encounter_setup.f90(38,10) ]
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ encounter_setup.f90(39,46) ]
+   remark #15382: vectorization support: call to function _for_check_mult_overflow64 cannot be vectorized   [ encounter_setup.f90(40,10) ]
+   remark #15382: vectorization support: call to function _for_alloc_allocatable cannot be vectorized   [ encounter_setup.f90(40,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between self (37:46) and self(dim) (40:10)
+   remark #15346: vector dependence: assumed FLOW dependence between self(dim) (40:10) and self (37:46)
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+encounter_setup.f90(16,50):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+encounter_setup.f90(31,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(31,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(31,13):remark #34026: call to memcpy implemented as a call to optimized library version
+encounter_setup.f90(32,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 32 (and use __assume_aligned) to increase the width of stores
+encounter_setup.f90(32,13):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (1, 0)
+encounter_setup.f90(24,29):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(24,29):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(24,29):remark #34026: call to memcpy implemented as a call to optimized library version
+encounter_setup.f90(25,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 32 (and use __assume_aligned) to increase the width of stores
+encounter_setup.f90(25,13):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (1, 0)
+encounter_setup.f90(26,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(26,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(26,13):remark #34026: call to memcpy implemented as a call to optimized library version
+encounter_setup.f90(5,22):remark #34051: REGISTER ALLOCATION : [_encounter_classes_mp_encounter_setup_aabb_] encounter_setup.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   25[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm11]
+        
+    Routine temporaries
+        Total         :    1001
+            Global    :     187
+            Local     :     814
+        Regenerable   :      60
+        Spilled       :      59
+        
+    Routine stack
+        Variables     :     104 bytes*
+            Reads     :      23 [1.30e+00 ~ 1.3%]
+            Writes    :      25 [1.84e+00 ~ 1.8%]
+        Spills        :     512 bytes*
+            Reads     :      78 [3.58e+00 ~ 3.6%]
+            Writes    :      59 [1.06e+00 ~ 1.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: ENCOUNTER_CLASSES@S_ENCOUNTER_SETUP::ENCOUNTER_SETUP_LIST
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (ENCOUNTER_CLASSES@S_ENCOUNTER_SETUP::ENCOUNTER_SETUP_LIST) [3/3=100.0%] encounter_setup.f90(47,22)
+  -> EXTERN: (59,35) _for_dealloc_allocatable
+  -> EXTERN: (60,35) _for_dealloc_allocatable
+  -> EXTERN: (61,35) _for_dealloc_allocatable
+  -> EXTERN: (62,35) _for_dealloc_allocatable
+  -> EXTERN: (63,32) _for_dealloc_allocatable
+  -> EXTERN: (64,32) _for_dealloc_allocatable
+  -> EXTERN: (65,31) _for_dealloc_allocatable
+  -> EXTERN: (66,31) _for_dealloc_allocatable
+  -> EXTERN: (67,31) _for_dealloc_allocatable
+  -> EXTERN: (68,31) _for_dealloc_allocatable
+  -> EXTERN: (69,30) _for_dealloc_allocatable
+  -> EXTERN: (74,7) _for_check_mult_overflow64
+  -> EXTERN: (74,7) _for_alloc_allocatable
+  -> EXTERN: (75,7) _for_check_mult_overflow64
+  -> EXTERN: (75,7) _for_alloc_allocatable
+  -> EXTERN: (76,7) _for_alloc_allocatable
+  -> EXTERN: (76,7) _for_check_mult_overflow64
+  -> EXTERN: (77,7) _for_check_mult_overflow64
+  -> EXTERN: (77,7) _for_alloc_allocatable
+  -> EXTERN: (78,7) _for_check_mult_overflow64
+  -> EXTERN: (78,7) _for_alloc_allocatable
+  -> EXTERN: (79,7) _for_alloc_allocatable
+  -> EXTERN: (79,7) _for_check_mult_overflow64
+  -> EXTERN: (80,7) _for_check_mult_overflow64
+  -> EXTERN: (80,7) _for_alloc_allocatable
+  -> EXTERN: (81,7) _for_check_mult_overflow64
+  -> EXTERN: (81,7) _for_alloc_allocatable
+  -> EXTERN: (82,7) _for_check_mult_overflow64
+  -> EXTERN: (82,7) _for_alloc_allocatable
+  -> EXTERN: (83,7) _for_check_mult_overflow64
+  -> EXTERN: (83,7) _for_alloc_allocatable
+  -> EXTERN: (84,7) _for_alloc_allocatable
+  -> EXTERN: (84,7) _for_check_mult_overflow64
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at encounter_setup.f90(86,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (86:7) and self(:) (86:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (86:7) and self(:) (86:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(86,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(86,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(87,7)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(87,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 4.220 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(87,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(88,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (88:7) and self(:) (88:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (88:7) and self(:) (88:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(88,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(88,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(89,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (89:7) and self(:) (89:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (89:7) and self(:) (89:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(89,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(89,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(90,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (90:7) and self(:) (90:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (90:7) and self(:) (90:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(90,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(90,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(91,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (91:7) and self(:) (91:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (91:7) and self(:) (91:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(91,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(91,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(92,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(92,7)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (92:7) and self(:,:) (92:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (92:7) and self(:,:) (92:7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at encounter_setup.f90(92,7)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(92,7)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(93,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(93,7)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (93:7) and self(:,:) (93:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (93:7) and self(:,:) (93:7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at encounter_setup.f90(93,7)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(93,7)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(94,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(94,7)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (94:7) and self(:,:) (94:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (94:7) and self(:,:) (94:7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at encounter_setup.f90(94,7)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(94,7)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(95,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(95,7)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (95:7) and self(:,:) (95:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (95:7) and self(:,:) (95:7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at encounter_setup.f90(95,7)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at encounter_setup.f90(95,7)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at encounter_setup.f90(96,7)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (96:7) and self(:) (96:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (96:7) and self(:) (96:7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at encounter_setup.f90(96,7)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.440 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at encounter_setup.f90(96,7)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+encounter_setup.f90(86,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(86,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(88,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(88,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(89,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(89,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(90,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(90,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(91,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(91,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(92,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(92,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(93,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(93,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(94,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(94,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(95,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(95,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(96,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+encounter_setup.f90(96,7):remark #34026: call to memset implemented as a call to optimized library version
+encounter_setup.f90(47,22):remark #34051: REGISTER ALLOCATION : [_encounter_classes_mp_encounter_setup_list_] encounter_setup.f90:47
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rbx rsi rdi r8-r15 zmm0]
+        
+    Routine temporaries
+        Total         :    1265
+            Global    :     173
+            Local     :    1092
+        Regenerable   :     117
+        Spilled       :      17
+        
+    Routine stack
+        Variables     :      88 bytes*
+            Reads     :      11 [2.11e-01 ~ 0.2%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :      96 bytes*
+            Reads     :      20 [7.66e-01 ~ 0.8%]
+            Writes    :      12 [2.07e-01 ~ 0.2%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

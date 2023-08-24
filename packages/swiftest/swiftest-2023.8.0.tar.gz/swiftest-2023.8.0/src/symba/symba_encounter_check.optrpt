@@ -1,0 +1,1552 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _symba_classes.s_symba_encounter_check._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_symba_classes.s_symba_encounter_check._) [1/6=16.7%] symba_encounter_check.f90(1,27)
+
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(1,27):remark #34051: REGISTER ALLOCATION : [_symba_classes.s_symba_encounter_check._] symba_encounter_check.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ALL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ALL) [2/6=33.3%] symba_encounter_check.f90(5,15)
+  -> INLINE: (37,15) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE (isz = 67) (sz = 94)
+    -> EXTERN: (271,48) ___powr8i4
+    -> EXTERN: (276,20) RMVS_CHK_IND
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at symba_encounter_check.f90(22,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_encounter_check.f90(22,13)
+   remark #15382: vectorization support: call to function RMVS_CHK_IND cannot be vectorized   [ symba_encounter_check.f90(276,20) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between lencounter(k) (35:10) and lencounter(k) (276:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between lencounter(k) (276:7) and lencounter(k) (35:10)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(5,15):remark #34051: REGISTER ALLOCATION : [_symba_classes.s_symba_encounter_check_mp_symba_encounter_check_all_] symba_encounter_check.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     200
+            Global    :      49
+            Local     :     151
+        Regenerable   :      67
+        Spilled       :      22
+        
+    Routine stack
+        Variables     :     112 bytes*
+            Reads     :       5 [7.77e-01 ~ 0.8%]
+            Writes    :      15 [7.21e+00 ~ 7.2%]
+        Spills        :     216 bytes*
+            Reads     :      34 [1.53e+01 ~ 15.3%]
+            Writes    :      32 [9.62e+00 ~ 9.6%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_PL) [3/6=50.0%] symba_encounter_check.f90(45,4)
+  -> EXTERN: (67,10) _for_alloc_allocatable
+  -> EXTERN: (67,10) _for_check_mult_overflow64
+  -> EXTERN: (68,10) _for_alloc_allocatable
+  -> EXTERN: (68,10) _for_check_mult_overflow64
+  -> INLINE: (70,15) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ALL (isz = 229) (sz = 250)
+    -> INLINE: (37,15) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE (isz = 67) (sz = 94)
+      -> EXTERN: (271,48) ___powr8i4
+      -> EXTERN: (276,20) RMVS_CHK_IND
+  -> INDIRECT-: (79,21)  (*((P64*) _symba_classes_mp_symba_encounter_check_pl_$PLPLENC_LIST$_1884$126_V$f4c6.0.3))[5(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (80,16) _for_deallocate
+  -> EXTERN: (80,16) _for_deallocate
+  -> EXTERN: (80,46) _for_allocate
+  -> EXTERN: (80,46) _for_allocate
+  -> EXTERN: (81,16) _for_deallocate
+  -> EXTERN: (81,16) _for_deallocate
+  -> EXTERN: (81,16) _for_deallocate
+  -> EXTERN: (81,44) _for_allocate
+  -> EXTERN: (81,44) _for_allocate
+  -> EXTERN: (81,44) _for_allocate
+  -> EXTERN: (82,16) _for_dealloc_allocatable
+  -> EXTERN: (82,16) _for_dealloc_allocatable
+  -> EXTERN: (105,4) _for_dealloc_allocatable
+  -> EXTERN: (105,4) _for_dealloc_allocatable
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at symba_encounter_check.f90(22,13) inlined into symba_encounter_check.f90(70,15)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+OpenMP Construct at symba_encounter_check.f90(72,16)
+remark #16204: OpenMP multithreaded code generation for SINGLE was successful
+OpenMP Construct at symba_encounter_check.f90(72,16)
+remark #16201: OpenMP DEFINED REGION WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(80,46)
+      remark #15389: vectorization support: reference at (80:73) has unaligned access   [ symba_encounter_check.f90(80,73) ]
+      remark #15389: vectorization support: reference LENCOUNTER(:) has unaligned access   [ symba_encounter_check.f90(80,73) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(80,46)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.455
+   remark #15355: vectorization support: at (80:46) is int64 type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 2.750 
+   remark #15478: estimated potential speedup: 3.450 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (80:46) and at (80:46)
+   remark #15346: vector dependence: assumed FLOW dependence between at (80:46) and at (80:46)
+   remark #15346: vector dependence: assumed FLOW dependence between at (80:46) and at (80:46)
+   remark #15346: vector dependence: assumed ANTI dependence between at (80:46) and at (80:46)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,46)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(80,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(80,16)
+      remark #15389: vectorization support: reference PLPLENC(:) has unaligned access
+      remark #15389: vectorization support: reference at (80:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(80,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+   remark #15389: vectorization support: reference at (81:44) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 2.500 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(81,44)
+      remark #15389: vectorization support: reference at (81:75) has unaligned access   [ symba_encounter_check.f90(81,75) ]
+      remark #15389: vectorization support: reference LENCOUNTER(:) has unaligned access   [ symba_encounter_check.f90(81,75) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(81,44)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.455
+   remark #15355: vectorization support: at (81:44) is int64 type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 2.750 
+   remark #15478: estimated potential speedup: 3.450 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (81:44) and at (81:44)
+   remark #15346: vector dependence: assumed FLOW dependence between at (81:44) and at (81:44)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,44)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(81,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(81,16)
+      remark #15389: vectorization support: reference PLPLENC(:) has unaligned access
+      remark #15389: vectorization support: reference at (81:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 2.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(81,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(83,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLPLENC(:) (83:16) and self(1,PLPLENC(:)) (83:16)
+   remark #15346: vector dependence: assumed ANTI dependence between self(1,PLPLENC(:)) (83:16) and PLPLENC(:) (83:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(83,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(84,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLPLENC(:) (84:16) and self(2,PLPLENC(:)) (84:16)
+   remark #15346: vector dependence: assumed ANTI dependence between self(2,PLPLENC(:)) (84:16) and PLPLENC(:) (84:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(84,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(85,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLPLENC(:) (85:16) and self(PLPLENC(:)) (85:16)
+   remark #15346: vector dependence: assumed ANTI dependence between self(PLPLENC(:)) (85:16) and PLPLENC(:) (85:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(85,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(86,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLPLENC(:) (86:16) and self(PLPLENC(:)) (86:16)
+   remark #15346: vector dependence: assumed ANTI dependence between self(PLPLENC(:)) (86:16) and PLPLENC(:) (86:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(86,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(87,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PLPLENC(k) (88:19) and self(j) (99:19)
+   remark #15346: vector dependence: assumed FLOW dependence between self(j) (99:19) and PLPLENC(k) (88:19)
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(22,13) inlined into symba_encounter_check.f90(70,15)
+   remark #15382: vectorization support: call to function RMVS_CHK_IND cannot be vectorized   [ symba_encounter_check.f90(276,20) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:10) and at (276:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (276:7) and at (35:10)
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(73,17)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(73,17)
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.346
+   remark #15355: vectorization support: at (73:10) is int type reduction   [ symba_encounter_check.f90(73,10) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.620 
+   remark #15478: estimated potential speedup: 5.190 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(73,17)
+<Remainder loop for vectorization>
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 2.714
+   remark #15355: vectorization support: at (73:10) is int type reduction   [ symba_encounter_check.f90(73,10) ]
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.620 
+   remark #15478: estimated potential speedup: 5.190 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(73,17)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(61,57):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(61,45):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(78,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(78,13):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(80,46):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(80,46):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(80,46):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(80,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(80,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(80,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(81,44):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(81,44):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(81,44):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(81,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(81,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(81,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(45,4):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_encounter_check_pl_] symba_encounter_check.f90:45
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :    1021
+            Global    :     233
+            Local     :     788
+        Regenerable   :     186
+        Spilled       :      63
+        
+    Routine stack
+        Variables     :    1300 bytes*
+            Reads     :      64 [1.17e+00 ~ 1.2%]
+            Writes    :     139 [8.75e+00 ~ 8.8%]
+        Spills        :     504 bytes*
+            Reads     :     149 [8.03e+00 ~ 8.0%]
+            Writes    :      95 [6.08e+00 ~ 6.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK) [4/6=66.7%] symba_encounter_check.f90(108,4)
+  -> EXTERN: (108,4) _for_array_initialize
+  -> EXTERN: (108,4) _for_array_initialize
+  -> EXTERN: (132,19) _strcmp
+  -> EXTERN: (139,19) _strcmp
+  -> EXTERN: (141,22) _strcmp
+  -> EXTERN: (143,13) _for_check_mult_overflow64
+  -> EXTERN: (143,13) _for_alloc_allocatable
+  -> INLINE: (152,24) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE (isz = 67) (sz = 94)
+    -> EXTERN: (271,48) ___powr8i4
+    -> EXTERN: (276,20) RMVS_CHK_IND
+  -> INLINE: (156,24) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE (isz = 67) (sz = 94)
+    -> EXTERN: (271,48) ___powr8i4
+    -> EXTERN: (276,20) RMVS_CHK_IND
+  -> EXTERN: (184,4) _for_dealloc_allocatable
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at symba_encounter_check.f90(146,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_encounter_check.f90(139,19)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(141,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(144,13)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(144,13)
+   remark #15389: vectorization support: reference LENCMASK(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.630
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 24 
+   remark #15477: vector cost: 3.370 
+   remark #15478: estimated potential speedup: 5.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(144,13)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(145,22)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(145,22)
+   remark #15389: vectorization support: reference LENCMASK(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 7.000
+   remark #15355: vectorization support: at (145:22) is int type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.620 
+   remark #15478: estimated potential speedup: 2.510 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(145,22)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(152,24)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at symba_encounter_check.f90(150,19)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between xr(:) (150:19) and PL%pl(:,self(k)) (150:19)
+      remark #15346: vector dependence: assumed ANTI dependence between PL%pl(:,self(k)) (150:19) and xr(:) (150:19)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(151,19)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between vr(:) (151:19) and PL%pl(:,self(k)) (151:19)
+      remark #15346: vector dependence: assumed ANTI dependence between PL%pl(:,self(k)) (151:19) and vr(:) (151:19)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(154,19)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between xr(:) (154:19) and TP%tp(:,self(k)) (154:19)
+      remark #15346: vector dependence: assumed ANTI dependence between TP%tp(:,self(k)) (154:19) and xr(:) (154:19)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(155,19)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between vr(:) (155:19) and TP%tp(:,self(k)) (155:19)
+      remark #15346: vector dependence: assumed ANTI dependence between TP%tp(:,self(k)) (155:19) and vr(:) (155:19)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(164,26)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at symba_encounter_check.f90(132,19)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at symba_encounter_check.f90(132,19)
+      remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(127,45):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(139,19):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(139,19):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(141,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(141,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(108,4):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_encounter_check_] symba_encounter_check.f90:108
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     680
+            Global    :     112
+            Local     :     568
+        Regenerable   :     129
+        Spilled       :      33
+        
+    Routine stack
+        Variables     :     544 bytes*
+            Reads     :      25 [1.84e+00 ~ 1.8%]
+            Writes    :      60 [6.77e+00 ~ 6.8%]
+        Spills        :     304 bytes*
+            Reads     :      64 [2.89e+00 ~ 2.9%]
+            Writes    :      43 [2.41e+00 ~ 2.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_TP) [5/6=83.3%] symba_encounter_check.f90(187,4)
+  -> EXTERN: (187,4) _for_array_initialize
+  -> EXTERN: (187,4) _for_array_initialize
+  -> EXTERN: (209,10) _for_alloc_allocatable
+  -> EXTERN: (209,10) _for_check_mult_overflow64
+  -> EXTERN: (209,10) _for_alloc_allocatable
+  -> EXTERN: (209,10) _for_check_mult_overflow64
+  -> (216,21) SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE (isz = 67) (sz = 94)
+     [[ Inlining inhibited by overrideable criterion  <2>]]
+  -> INDIRECT-: (224,21)  (*((P64*) _symba_classes_mp_symba_encounter_check_tp_$PLTPENC_LIST$_1891$141_V$f847.0.5))[5(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (227,16) _for_deallocate
+  -> EXTERN: (227,16) _for_deallocate
+  -> EXTERN: (227,46) _for_allocate
+  -> EXTERN: (227,46) _for_allocate
+  -> EXTERN: (228,16) _for_deallocate
+  -> EXTERN: (228,16) _for_allocate
+  -> EXTERN: (228,16) _for_deallocate
+  -> EXTERN: (228,16) _for_deallocate
+  -> EXTERN: (228,16) _for_deallocate
+  -> EXTERN: (228,16) _for_deallocate
+  -> EXTERN: (228,46) _for_allocate
+  -> EXTERN: (228,51) _for_allocate
+  -> EXTERN: (228,51) _for_allocate
+  -> EXTERN: (228,51) _for_allocate
+  -> EXTERN: (229,16) _for_allocate
+  -> EXTERN: (229,16) _for_deallocate
+  -> EXTERN: (229,16) _for_deallocate
+  -> EXTERN: (229,16) _for_deallocate
+  -> EXTERN: (229,16) _for_deallocate
+  -> EXTERN: (229,16) _for_deallocate
+  -> EXTERN: (229,46) _for_allocate
+  -> EXTERN: (229,51) _for_allocate
+  -> EXTERN: (229,51) _for_allocate
+  -> EXTERN: (229,51) _for_allocate
+  -> EXTERN: (232,28) _strcmp
+  -> EXTERN: (252,4) _for_dealloc_allocatable
+  -> EXTERN: (252,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_encounter_check.f90(210,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(210,10)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at symba_encounter_check.f90(210,10)
+         remark #15389: vectorization support: reference LENCOUNTER(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 2 
+         remark #15477: vector cost: 0.620 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(210,10)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(212,10)
+   remark #15382: vectorization support: call to function SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE cannot be vectorized   [ symba_encounter_check.f90(216,21) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL%SWIFTEST (214:16) and LENCOUNTER(i,j) (216:21)
+   remark #15346: vector dependence: assumed FLOW dependence between LENCOUNTER(i,j) (216:21) and PL%SWIFTEST (214:16)
+
+   LOOP BEGIN at symba_encounter_check.f90(213,13)
+      remark #15382: vectorization support: call to function SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE cannot be vectorized   [ symba_encounter_check.f90(216,21) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between PL%SWIFTEST (214:16) and LENCOUNTER(i,j) (216:21)
+      remark #15346: vector dependence: assumed FLOW dependence between LENCOUNTER(i,j) (216:21) and PL%SWIFTEST (214:16)
+
+      LOOP BEGIN at symba_encounter_check.f90(214,16)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between xr(:) (214:16) and at (214:16)
+         remark #15346: vector dependence: assumed ANTI dependence between at (214:16) and xr(:) (214:16)
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(215,16)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between vr(:) (215:16) and at (215:16)
+         remark #15346: vector dependence: assumed ANTI dependence between at (215:16) and vr(:) (215:16)
+         remark #25436: completely unrolled by 3  
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(220,17)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(220,17)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(220,17)
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.385
+      remark #15355: vectorization support: at (220:10) is int type reduction   [ symba_encounter_check.f90(220,10) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 1.620 
+      remark #15478: estimated potential speedup: 5.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(220,17)
+   <Remainder loop for vectorization>
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 2.714
+      remark #15355: vectorization support: at (220:10) is int type reduction   [ symba_encounter_check.f90(220,10) ]
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 1.620 
+      remark #15478: estimated potential speedup: 5.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(220,17)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(225,16)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(225,16)
+      remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(225,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(226,16)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(226,16)
+   remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.667
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 4.190 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(226,16)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(227,46)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at symba_encounter_check.f90(227,46)
+         remark #15389: vectorization support: reference at (227:77) has unaligned access   [ symba_encounter_check.f90(227,77) ]
+         remark #15389: vectorization support: reference LENCOUNTER(:,:) has unaligned access   [ symba_encounter_check.f90(227,77) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 4.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(227,46)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(227,46)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.455
+      remark #15355: vectorization support: at (227:46) is int64 type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 2.750 
+      remark #15478: estimated potential speedup: 3.530 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(227,46)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (227:46) and at (227:46)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (227:46) and at (227:46)
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between at (227:46) and at (227:46)
+      remark #15346: vector dependence: assumed FLOW dependence between at (227:46) and at (227:46)
+      remark #15346: vector dependence: assumed FLOW dependence between at (227:46) and at (227:46)
+      remark #15346: vector dependence: assumed ANTI dependence between at (227:46) and at (227:46)
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(227,46)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(227,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(227,16)
+      remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+      remark #15389: vectorization support: reference at (227:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(227,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=15
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+   remark #15389: vectorization support: reference at (228:51) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.100
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.620 
+   remark #15478: estimated potential speedup: 3.960 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+   remark #15389: vectorization support: reference at (228:51) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.167
+   remark #15301: OUTER LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 4.890 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at symba_encounter_check.f90(228,51)
+      remark #15389: vectorization support: reference at (228:51) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <at (228:51)>, stride is unknown to compiler
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.125
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 0.660 
+      remark #15488: --- end vector cost summary ---
+      remark #15548: loop was vectorized along with the outer loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+<Remainder loop for vectorization>
+
+   LOOP BEGIN at symba_encounter_check.f90(228,51)
+      remark #25460: No loop optimizations reported
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,51)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(228,51)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at symba_encounter_check.f90(228,51)
+         remark #15389: vectorization support: reference at (228:98) has unaligned access   [ symba_encounter_check.f90(228,98) ]
+         remark #15389: vectorization support: reference LENCOUNTER(:,:) has unaligned access   [ symba_encounter_check.f90(228,98) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 4.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(228,51)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,46)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(228,46)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(228,46)
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.455
+      remark #15355: vectorization support: at (228:46) is int64 type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 2.750 
+      remark #15478: estimated potential speedup: 3.530 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(228,46)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,46)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (228:46) and at (228:46)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (228:46) and at (228:46)
+
+   LOOP BEGIN at symba_encounter_check.f90(228,46)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between at (228:46) and at (228:46)
+      remark #15346: vector dependence: assumed FLOW dependence between at (228:46) and at (228:46)
+      remark #15346: vector dependence: assumed ANTI dependence between at (228:46) and at (228:46)
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(228,46)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(228,16)
+      remark #15389: vectorization support: reference at (228:16) has unaligned access
+      remark #15389: vectorization support: reference at (228:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(228,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(228,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(228,16)
+      remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+      remark #15389: vectorization support: reference at (228:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(228,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,51)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=15
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,51)
+   remark #15389: vectorization support: reference at (229:51) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.100
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.620 
+   remark #15478: estimated potential speedup: 3.960 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,51)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,51)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(229,51)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at symba_encounter_check.f90(229,51)
+         remark #15389: vectorization support: reference at (229:51) has unaligned access
+         remark #15389: vectorization support: reference at (229:51) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 4.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(229,51)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,51)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(229,51)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at symba_encounter_check.f90(229,51)
+         remark #15389: vectorization support: reference at (229:98) has unaligned access   [ symba_encounter_check.f90(229,98) ]
+         remark #15389: vectorization support: reference LENCOUNTER(:,:) has unaligned access   [ symba_encounter_check.f90(229,98) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 4.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at symba_encounter_check.f90(229,51)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=24
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,46)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(229,46)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(229,46)
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.455
+      remark #15355: vectorization support: at (229:46) is int64 type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 2.750 
+      remark #15478: estimated potential speedup: 3.530 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(229,46)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,46)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (229:46) and at (229:46)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (229:46) and at (229:46)
+
+   LOOP BEGIN at symba_encounter_check.f90(229,46)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between at (229:46) and at (229:46)
+      remark #15346: vector dependence: assumed FLOW dependence between at (229:46) and at (229:46)
+      remark #15346: vector dependence: assumed ANTI dependence between at (229:46) and at (229:46)
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(229,46)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(229,16)
+      remark #15389: vectorization support: reference at (229:16) has unaligned access
+      remark #15389: vectorization support: reference at (229:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(229,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(229,16)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(229,16)
+      remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+      remark #15389: vectorization support: reference at (229:16) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(229,16)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(230,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLTPENC(:) (230:16) and PL(PLTPENC(:)) (230:16)
+   remark #15346: vector dependence: assumed ANTI dependence between PL(PLTPENC(:)) (230:16) and PLTPENC(:) (230:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(230,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(231,16)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLTPENC(:) (231:16) and self(PLTPENC(:)) (231:16)
+   remark #15346: vector dependence: assumed ANTI dependence between self(PLTPENC(:)) (231:16) and PLTPENC(:) (231:16)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(231,16)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(232,28)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(234,19)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_encounter_check.f90(234,19)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_encounter_check.f90(234,19)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_encounter_check.f90(235,19)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PLTPENC(k) (236:22) and self(tpind) (244:22)
+   remark #15346: vector dependence: assumed FLOW dependence between self(tpind) (244:22) and PLTPENC(k) (236:22)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(204,64):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(204,52):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(208,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(208,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(210,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(210,10):remark #34026: call to memset implemented as a call to optimized library version
+symba_encounter_check.f90(223,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(223,13):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(225,16):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(225,16):remark #34026: call to memset implemented as a call to optimized library version
+symba_encounter_check.f90(227,46):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(227,46):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(227,46):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(227,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(227,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(227,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(228,51):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,51):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,51):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(228,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(228,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(228,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(229,51):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,51):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,51):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(229,51):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,51):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,51):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(229,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(229,16):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,16):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(229,16):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_encounter_check.f90(232,28):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_encounter_check.f90(232,28):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_encounter_check.f90(234,19):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_encounter_check.f90(234,19):remark #34026: call to memset implemented as a call to optimized library version
+symba_encounter_check.f90(187,4):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_encounter_check_tp_] symba_encounter_check.f90:187
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   26[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm11]
+        
+    Routine temporaries
+        Total         :    1081
+            Global    :     319
+            Local     :     762
+        Regenerable   :     128
+        Spilled       :      65
+        
+    Routine stack
+        Variables     :    1508 bytes*
+            Reads     :      95 [3.24e+00 ~ 3.2%]
+            Writes    :     125 [3.38e+00 ~ 3.4%]
+        Spills        :     480 bytes*
+            Reads     :     299 [3.58e+00 ~ 3.6%]
+            Writes    :     174 [1.38e+00 ~ 1.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_ENCOUNTER_CHECK::SYMBA_ENCOUNTER_CHECK_ONE) [6/6=100.0%] symba_encounter_check.f90(255,37)
+  -> EXTERN: (271,48) ___powr8i4
+  -> EXTERN: (276,20) RMVS_CHK_IND
+
+
+    Report from: Code generation optimizations [cg]
+
+symba_encounter_check.f90(255,37):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_encounter_check_one_] symba_encounter_check.f90:255
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   28[ rax rdx rcx rbx rsi rdi r8-r9 r12-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :      70
+            Global    :      19
+            Local     :      51
+        Regenerable   :      18
+        Spilled       :       6
+        
+    Routine stack
+        Variables     :      32 bytes*
+            Reads     :       1 [1.20e+00 ~ 1.2%]
+            Writes    :       4 [4.82e+00 ~ 4.8%]
+        Spills        :       8 bytes*
+            Reads     :       1 [1.20e+00 ~ 1.2%]
+            Writes    :       1 [1.20e+00 ~ 1.2%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+
+<2> The compiler's heuristics predict that it is not profitable to inline the
+    call.  Add "!DIR$ATTRIBUTES FORCEINLINE" to the declaration of the called 
+    subprogram, or add "!DIR$ FORCEINLINE" before the call site.
+

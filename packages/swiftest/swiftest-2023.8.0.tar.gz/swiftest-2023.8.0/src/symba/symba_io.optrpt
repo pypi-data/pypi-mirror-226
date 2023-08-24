@@ -1,0 +1,687 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _symba_classes.s_symba_io._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_symba_classes.s_symba_io._) [1/4=25.0%] symba_io.f90(1,27)
+
+
+    Report from: Code generation optimizations [cg]
+
+symba_io.f90(1,27):remark #34051: REGISTER ALLOCATION : [_symba_classes.s_symba_io._] symba_io.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_PARAM_READER
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_PARAM_READER) [2/4=50.0%] symba_io.f90(5,22)
+  -> EXTERN: (30,15) IO_PARAM_READER
+  -> EXTERN: (32,15) _for_random_seed_bit_size
+  -> EXTERN: (33,37) _for_dealloc_allocatable
+  -> EXTERN: (34,10) _for_check_mult_overflow64
+  -> EXTERN: (34,10) _for_alloc_allocatable
+  -> EXTERN: (35,10) _for_rewind
+  -> EXTERN: (37,13) _for_read_seq_fmt
+  -> EXTERN: (38,13) _memcpy
+  -> EXTERN: (38,13) _for_dealloc_allocatable
+  -> EXTERN: (38,13) _for_alloc_allocatable
+  -> EXTERN: (38,25) _for_trim
+  -> EXTERN: (38,30) _for_adjustl
+  -> EXTERN: (43,16) _memcpy
+  -> EXTERN: (43,16) _for_dealloc_allocatable
+  -> EXTERN: (43,16) _for_dealloc_allocatable
+  -> EXTERN: (43,16) _for_alloc_allocatable
+  -> EXTERN: (43,29) IO_GET_TOKEN
+  -> EXTERN: (44,31) _for_cpstr
+  -> EXTERN: (45,21) IO_TOUPPER
+  -> EXTERN: (47,16) _memcpy
+  -> EXTERN: (47,16) _for_dealloc_allocatable
+  -> EXTERN: (47,16) _for_alloc_allocatable
+  -> EXTERN: (47,16) _for_dealloc_allocatable
+  -> EXTERN: (47,30) IO_GET_TOKEN
+  -> EXTERN: (49,22) _for_cpstr
+  -> EXTERN: (50,24) IO_TOUPPER
+  -> EXTERN: (51,35) _for_cpstr
+  -> EXTERN: (51,61) _for_cpstr
+  -> EXTERN: (52,22) _for_cpstr
+  -> EXTERN: (53,19) _for_read_int_lis
+  -> EXTERN: (54,22) _for_cpstr
+  -> EXTERN: (55,19) _for_read_int_lis
+  -> EXTERN: (56,21) _for_cpstr
+  -> EXTERN: (57,19) _for_read_int_lis
+  -> EXTERN: (63,22) _for_dealloc_allocatable
+  -> EXTERN: (64,22) _for_check_mult_overflow64
+  -> EXTERN: (64,22) _for_alloc_allocatable
+  -> EXTERN: (67,25) _for_dealloc_allocatable
+  -> EXTERN: (67,25) _memcpy
+  -> EXTERN: (67,25) _for_alloc_allocatable
+  -> EXTERN: (67,25) _for_dealloc_allocatable
+  -> EXTERN: (67,39) IO_GET_TOKEN
+  -> EXTERN: (68,25) _for_read_int_lis
+  -> EXTERN: (73,25) _for_alloc_allocatable
+  -> EXTERN: (73,25) _for_dealloc_allocatable
+  -> EXTERN: (73,25) _memcpy
+  -> EXTERN: (73,25) _for_dealloc_allocatable
+  -> EXTERN: (73,39) IO_GET_TOKEN
+  -> EXTERN: (74,25) _for_read_int_lis
+  -> EXTERN: (76,22) _for_allocate
+  -> EXTERN: (76,22) _for_deallocate
+  -> EXTERN: (76,22) _for_deallocate
+  -> EXTERN: (76,64) _for_allocate
+  -> EXTERN: (85,13) _for_write_int_lis_xmit
+  -> EXTERN: (85,13) _for_write_int_lis
+  -> EXTERN: (89,13) _for_write_seq_lis
+  -> EXTERN: (89,13) _for_write_seq_lis_xmit
+  -> EXTERN: (92,10) _for_write_seq_lis
+  -> EXTERN: (92,10) _for_write_seq_lis_xmit
+  -> EXTERN: (95,21) _for_deallocate
+  -> EXTERN: (95,21) _for_allocate
+  -> EXTERN: (95,21) _for_random_seed_put
+  -> EXTERN: (97,21) _for_allocate
+  -> EXTERN: (97,21) _for_random_seed_get
+  -> EXTERN: (97,21) _for_deallocate
+  -> EXTERN: (97,39) _for_realloc_lhs
+  -> EXTERN: (99,13) _for_allocate
+  -> EXTERN: (99,13) _for_write_seq_lis_xmit
+  -> EXTERN: (99,13) _for_write_seq_lis_xmit
+  -> EXTERN: (99,13) _for_write_seq_lis
+  -> EXTERN: (99,13) _for_deallocate
+  -> EXTERN: (101,13) _for_write_seq_lis_xmit
+  -> EXTERN: (101,13) _for_write_seq_lis
+  -> EXTERN: (105,13) _for_write_int_lis
+  -> EXTERN: (110,15) FRAGGLE_IO_LOG_START
+  -> EXTERN: (117,4) _for_dealloc_allocatable
+  -> EXTERN: (117,4) _for_dealloc_allocatable
+  -> EXTERN: (117,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_io.f90(65,22)
+   remark #15382: vectorization support: call to function IO_GET_TOKEN cannot be vectorized   [ symba_io.f90(67,39) ]
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ symba_io.f90(67,25) ]
+   remark #15382: vectorization support: call to function _for_alloc_allocatable cannot be vectorized   [ symba_io.f90(67,25) ]
+   remark #15382: vectorization support: call to function _memcpy cannot be vectorized   [ symba_io.f90(67,25) ]
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ symba_io.f90(67,25) ]
+   remark #15382: vectorization support: call to function _for_read_int_lis cannot be vectorized   [ symba_io.f90(68,25) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between ilast (66:25) and ilast (67:39)
+   remark #15346: vector dependence: assumed FLOW dependence between ilast (67:39) and ilast (66:25)
+LOOP END
+
+LOOP BEGIN at symba_io.f90(71,22)
+   remark #15382: vectorization support: call to function IO_GET_TOKEN cannot be vectorized   [ symba_io.f90(73,39) ]
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ symba_io.f90(73,25) ]
+   remark #15382: vectorization support: call to function _for_alloc_allocatable cannot be vectorized   [ symba_io.f90(73,25) ]
+   remark #15382: vectorization support: call to function _memcpy cannot be vectorized   [ symba_io.f90(73,25) ]
+   remark #15382: vectorization support: call to function _for_dealloc_allocatable cannot be vectorized   [ symba_io.f90(73,25) ]
+   remark #15382: vectorization support: call to function _for_read_int_lis cannot be vectorized   [ symba_io.f90(74,25) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between ilast (72:25) and ilast (73:39)
+   remark #15346: vector dependence: assumed FLOW dependence between ilast (73:39) and ilast (72:25)
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,64)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=15
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,64)
+   remark #15389: vectorization support: reference at (76:64) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.929
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 6.640 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,64)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference at (76:64) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.250
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 6.640 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,64)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,22)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(76,22)
+      remark #15389: vectorization support: reference at (76:22) has unaligned access
+      remark #15389: vectorization support: reference at (76:22) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(76,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_io.f90(76,22)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(76,22)
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15389: vectorization support: reference at (76:22) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(76,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_io.f90(95,21)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(95,21)
+      remark #15389: vectorization support: reference at (95:39) has unaligned access   [ symba_io.f90(95,39) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ symba_io.f90(95,39) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(95,21)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_io.f90(97,21)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(97,21)
+      remark #15389: vectorization support: reference at (97:39) has unaligned access   [ symba_io.f90(97,39) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ symba_io.f90(97,39) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(97,21)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_io.f90(97,39)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(97,39)
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15389: vectorization support: reference at (97:39) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(97,39)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_io.f90(99,13)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_io.f90(99,13)
+      remark #15389: vectorization support: reference at (99:62) has unaligned access   [ symba_io.f90(99,62) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ symba_io.f90(99,62) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_io.f90(99,13)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at symba_io.f90(40,18)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_io.f90(24,63):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(24,51):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(24,41):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(38,13):remark #34014: optimization advice for _memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(38,13):remark #34026: call to _memcpy implemented as a call to optimized library version
+symba_io.f90(43,16):remark #34014: optimization advice for _memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(43,16):remark #34014: optimization advice for _memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(43,16):remark #34026: call to _memcpy implemented as a call to optimized library version
+symba_io.f90(47,16):remark #34014: optimization advice for _memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(47,16):remark #34014: optimization advice for _memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(47,16):remark #34026: call to _memcpy implemented as a call to optimized library version
+symba_io.f90(67,25):remark #34014: optimization advice for _memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(67,25):remark #34014: optimization advice for _memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(67,25):remark #34026: call to _memcpy implemented as a call to optimized library version
+symba_io.f90(73,25):remark #34014: optimization advice for _memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(73,25):remark #34014: optimization advice for _memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(73,25):remark #34026: call to _memcpy implemented as a call to optimized library version
+symba_io.f90(76,22):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(76,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(76,22):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(76,22):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(76,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(76,22):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(95,21):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(95,21):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(95,21):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(97,21):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(97,21):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(97,21):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(97,39):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(97,39):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(97,39):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(99,13):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(99,13):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_io.f90(99,13):remark #34026: call to memcpy implemented as a call to optimized library version
+symba_io.f90(5,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_io_param_reader_] symba_io.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   21[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm6]
+        
+    Routine temporaries
+        Total         :    1365
+            Global    :     172
+            Local     :    1193
+        Regenerable   :     251
+        Spilled       :      45
+        
+    Routine stack
+        Variables     :    2748 bytes*
+            Reads     :      89 [4.45e+00 ~ 4.5%]
+            Writes    :     150 [9.03e+00 ~ 9.0%]
+        Spills        :     320 bytes*
+            Reads     :     129 [1.25e+00 ~ 1.3%]
+            Writes    :      57 [1.13e+00 ~ 1.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_PARAM_WRITER
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_PARAM_WRITER) [3/4=75.0%] symba_io.f90(120,22)
+  -> EXTERN: (150,15) IO_PARAM_WRITER
+  -> EXTERN: (154,10) _for_write_int_fmt
+  -> EXTERN: (154,44) _for_write_int_fmt
+  -> EXTERN: (154,83) _for_write_seq_fmt_xmit
+  -> EXTERN: (154,83) _for_write_seq_fmt
+  -> EXTERN: (154,127) _for_adjustl
+  -> EXTERN: (154,148) _for_adjustl
+  -> EXTERN: (155,10) _for_write_int_fmt
+  -> EXTERN: (155,48) _for_write_int_fmt
+  -> EXTERN: (155,91) _for_write_seq_fmt_xmit
+  -> EXTERN: (155,91) _for_write_seq_fmt
+  -> EXTERN: (155,135) _for_adjustl
+  -> EXTERN: (155,156) _for_adjustl
+  -> EXTERN: (156,10) _for_write_int_fmt
+  -> EXTERN: (156,51) _for_write_int_fmt
+  -> EXTERN: (156,99) _for_write_seq_fmt
+  -> EXTERN: (156,99) _for_write_seq_fmt_xmit
+  -> EXTERN: (156,143) _for_adjustl
+  -> EXTERN: (156,164) _for_adjustl
+  -> EXTERN: (158,13) _for_write_int_fmt
+  -> EXTERN: (159,41) _for_dealloc_allocatable
+  -> EXTERN: (160,13) _for_alloc_allocatable
+  -> EXTERN: (160,13) _for_check_mult_overflow64
+  -> EXTERN: (161,13) _for_write_int_fmt
+  -> EXTERN: (163,16) _for_write_int_fmt
+  -> EXTERN: (165,13) _for_write_seq_fmt_xmit
+  -> EXTERN: (165,13) _for_write_seq_fmt
+  -> EXTERN: (165,71) _for_adjustl
+  -> EXTERN: (165,92) _for_adjustl
+  -> EXTERN: (168,19) _for_write_seq_fmt
+  -> EXTERN: (168,77) _for_adjustl
+  -> EXTERN: (170,19) _for_write_seq_fmt
+  -> EXTERN: (170,63) _for_adjustl
+  -> EXTERN: (180,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_io.f90(162,13)
+   remark #15382: vectorization support: call to function _for_write_int_fmt cannot be vectorized   [ symba_io.f90(163,16) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (163:16) and at (163:16)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (163:16) and at (163:16)
+LOOP END
+
+LOOP BEGIN at symba_io.f90(166,13)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ symba_io.f90(168,19) ]
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_io.f90(146,59):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(120,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_io_param_writer_] symba_io.f90:120
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   16[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :     434
+            Global    :      68
+            Local     :     366
+        Regenerable   :     245
+        Spilled       :      11
+        
+    Routine stack
+        Variables     :    3059 bytes*
+            Reads     :      11 [8.39e-01 ~ 0.8%]
+            Writes    :      96 [1.67e+01 ~ 16.7%]
+        Spills        :      48 bytes*
+            Reads     :      10 [4.96e-03 ~ 0.0%]
+            Writes    :       8 [3.90e-03 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_WRITE_DISCARD
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_IO::SYMBA_IO_WRITE_DISCARD) [4/4=100.0%] symba_io.f90(183,22)
+  -> EXTERN: (202,42) IO_WRITE_DISCARD
+  -> EXTERN: (203,22) _strcmp
+  -> EXTERN: (208,33) _for_cpstr
+  -> EXTERN: (208,76) _for_cpstr
+  -> EXTERN: (209,21) NETCDF_OPEN
+  -> INDIRECT-: (210,21)  (*((P64*) _symba_classes_mp_symba_io_write_discard_$PL_DISCARDS$_1157$67_V$86a2.0.4))[4(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (211,21) NETCDF_CLOSE
+  -> EXTERN: (214,35) _for_cpstr
+  -> EXTERN: (216,16) _memcpy
+  -> EXTERN: (218,16) _for_cpystr
+  -> EXTERN: (221,18) _for_cpstr
+  -> EXTERN: (222,16) _for_open
+  -> EXTERN: (223,18) _for_cpstr
+  -> EXTERN: (223,25) _for_cpstr
+  -> EXTERN: (223,36) _for_cpstr
+  -> EXTERN: (224,16) _for_open
+  -> EXTERN: (226,16) _for_write_seq_lis_xmit
+  -> EXTERN: (226,16) _for_write_seq_lis
+  -> EXTERN: (226,64) _for_trim
+  -> EXTERN: (226,69) _for_adjustl
+  -> EXTERN: (227,21) UTIL_EXIT
+  -> INDIRECT-: (231,21)  (*((P64*) _symba_classes_mp_symba_io_write_discard_$PL_DISCARDS$_1157$67_V$86a2.0.4))[12(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (232,21)  (*((P64*) _symba_classes_mp_symba_io_write_discard_$PL_ADDS$_1156$64_V$8514.0.4))[12(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (235,13) _for_write_seq_fmt_xmit
+  -> EXTERN: (235,13) _for_write_seq_fmt_xmit
+  -> EXTERN: (235,13) _for_write_seq_fmt
+  -> EXTERN: (243,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (243,22) _for_write_seq_fmt
+  -> EXTERN: (243,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (244,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (244,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (244,22) _for_write_seq_fmt
+  -> EXTERN: (245,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (245,22) _for_write_seq_fmt
+  -> EXTERN: (245,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (253,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (253,22) _for_write_seq_fmt
+  -> EXTERN: (253,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (254,22) _for_write_seq_fmt
+  -> EXTERN: (254,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (254,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (255,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (255,22) _for_write_seq_fmt
+  -> EXTERN: (255,22) _for_write_seq_fmt_xmit
+  -> EXTERN: (263,19) _for_close
+  -> EXTERN: (270,7) _for_deallocate
+  -> EXTERN: (270,7) _for_write_seq_lis
+  -> EXTERN: (270,49) _for_concat
+  -> EXTERN: (270,49) _for_allocate
+  -> EXTERN: (270,52) _for_trim
+  -> EXTERN: (270,57) _for_adjustl
+  -> EXTERN: (271,12) UTIL_EXIT
+  -> EXTERN: (272,4) _for_dealloc_all_nocheck
+  -> EXTERN: (272,4) _for_dealloc_allocatable
+  -> EXTERN: (272,4) _for_finalize
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_io.f90(203,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_io.f90(242,28)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ symba_io.f90(250,16) ]
+LOOP END
+
+LOOP BEGIN at symba_io.f90(252,28)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ symba_io.f90(260,16) ]
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at symba_io.f90(238,13)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_io.f90(191,48):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(200,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_io.f90(200,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(200,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_io.f90(200,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(203,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_io.f90(203,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(216,16):remark #34014: optimization advice for _memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_io.f90(216,16):remark #34000: call to _memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_io.f90(183,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_io_write_discard_] symba_io.f90:183
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   18[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :     639
+            Global    :     120
+            Local     :     519
+        Regenerable   :     326
+        Spilled       :      15
+        
+    Routine stack
+        Variables     :    4720 bytes*
+            Reads     :      22 [3.45e+00 ~ 3.4%]
+            Writes    :     189 [2.80e+01 ~ 28.0%]
+        Spills        :      80 bytes*
+            Reads     :      26 [3.21e-02 ~ 0.0%]
+            Writes    :      14 [2.87e-02 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+

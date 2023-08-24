@@ -1,0 +1,248 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _whm_classes.s_whm_step._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_whm_classes.s_whm_step._) [1/4=25.0%] whm_step.f90(1,24)
+
+
+    Report from: Code generation optimizations [cg]
+
+whm_step.f90(1,24):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_step._] whm_step.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_STEP::WHM_STEP_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_STEP::WHM_STEP_SYSTEM) [2/4=50.0%] whm_step.f90(5,22)
+  -> INDIRECT-: (21,15)  (*((P64*) _whm_classes_mp_whm_step_system_$PL$_1289$75_V$a152.0.2))[8(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (22,15)  (*((P64*) _whm_classes_mp_whm_step_system_$TP$_1289$76_V$a164.0.2))[8(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (23,28)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_system_$SELF_V$a0cf.0.2 + 56(SI64)))))[15(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Code generation optimizations [cg]
+
+whm_step.f90(19,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(19,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(19,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(19,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(19,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(19,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(5,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_step_system_] whm_step.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rbx rsi rdi r8-r13 r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      90
+            Global    :      12
+            Local     :      78
+        Regenerable   :       6
+        Spilled       :       4
+        
+    Routine stack
+        Variables     :     384 bytes*
+            Reads     :       7 [4.87e+00 ~ 4.9%]
+            Writes    :      38 [2.59e+01 ~ 25.9%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_STEP::WHM_STEP_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_STEP::WHM_STEP_PL) [3/4=75.0%] whm_step.f90(29,22)
+  -> INDIRECT-: (51,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (52,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[40(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (53,25)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[42(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (54,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (55,25)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[42(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (56,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[39(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (57,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_pl_$SELF_V$a519.0.3 + 56(SI64)))))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Code generation optimizations [cg]
+
+whm_step.f90(49,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(49,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(29,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_step_pl_] whm_step.f90:29
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   16[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      81
+            Global    :      14
+            Local     :      67
+        Regenerable   :      18
+        Spilled       :       5
+        
+    Routine stack
+        Variables     :     144 bytes*
+            Reads     :       3 [1.99e+00 ~ 2.0%]
+            Writes    :      17 [1.08e+01 ~ 10.8%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_STEP::WHM_STEP_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_STEP::WHM_STEP_TP) [4/4=100.0%] whm_step.f90(64,22)
+  -> EXTERN: (83,19) _strcmp
+  -> INDIRECT-: (87,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_tp_$SELF_V$a7e2.0.4 + 56(SI64)))))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (88,28)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_tp_$SELF_V$a7e2.0.4 + 56(SI64)))))[36(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (89,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_tp_$SELF_V$a7e2.0.4 + 56(SI64)))))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (90,28)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_tp_$SELF_V$a7e2.0.4 + 56(SI64)))))[36(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (91,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_step_tp_$SELF_V$a7e2.0.4 + 56(SI64)))))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_step.f90(83,19)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_step.f90(85,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(85,10):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(85,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_step.f90(85,10):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_step.f90(64,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_step_tp_] whm_step.f90:64
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   16[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :     112
+            Global    :      22
+            Local     :      90
+        Regenerable   :      22
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     400 bytes*
+            Reads     :       2 [7.71e-01 ~ 0.8%]
+            Writes    :      41 [1.93e+01 ~ 19.3%]
+        Spills        :      24 bytes*
+            Reads     :       6 [0.00e+00 ~ 0.0%]
+            Writes    :       3 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+

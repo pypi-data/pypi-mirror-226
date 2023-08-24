@@ -1,0 +1,1594 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _whm_classes.s_whm_kick._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_whm_classes.s_whm_kick._) [1/8=12.5%] whm_kick.f90(1,24)
+
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(1,24):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_kick._] whm_kick.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_PL) [2/8=25.0%] whm_kick.f90(5,22)
+  -> EXTERN: (5,22) _for_array_initialize
+  -> INDIRECT-: (26,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[24(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (28,10) _for_deallocate
+  -> EXTERN: (28,10) _for_deallocate
+  -> INLINE: (28,19) WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH0 (isz = 130) (sz = 141)
+  -> EXTERN: (28,19) _for_allocate
+  -> EXTERN: (28,40) _for_allocate
+  -> INLINE: (33,15) WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH1 (isz = 239) (sz = 246)
+    -> EXTERN: (133,20) _for_array_initialize
+    -> EXTERN: (133,20) _for_array_initialize
+  -> (34,15) WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH2 (isz = 275) (sz = 282)
+     [[ Inlining would exceed -inline-max-size value (282>253) <2>]]
+  -> INDIRECT-: (35,15)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[29(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (38,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[16(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (46,21)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[30(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (51,25)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[41(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (53,34)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_pl_$SELF_V$a1ba.0.2 + 56(SI64)))))[20(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(149,10) inlined into whm_kick.f90(33,15)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(28,19)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(28,19)
+      remark #15389: vectorization support: reference at (28:40) has unaligned access   [ whm_kick.f90(28,40) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ whm_kick.f90(28,40) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 2.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(28,19)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(28,40)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(28,40)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(28,40)
+         remark #15389: vectorization support: reference at (28:57) has unaligned access   [ whm_kick.f90(28,57) ]
+         remark #15389: vectorization support: reference self(:,:) has unaligned access   [ whm_kick.f90(28,57) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(28,40)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(120,7) inlined into whm_kick.f90(28,19)
+   remark #15388: vectorization support: reference at (120:7) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.500 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(120,7) inlined into whm_kick.f90(28,19)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(121,7) inlined into whm_kick.f90(28,19)
+   remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model   [ whm_kick.f90(126,10) ]
+
+   LOOP BEGIN at whm_kick.f90(122,15) inlined into whm_kick.f90(28,19)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(126,10) inlined into whm_kick.f90(28,19)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(122,15) inlined into whm_kick.f90(28,19)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(28,40)
+   remark #25399: memcopy generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(28,40)
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15389: vectorization support: reference at (28:40) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 2.000 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(28,40)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=12
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(28,57)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(28,57)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(28,57)
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15389: vectorization support: reference at (28:57) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(28,57)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(28,10)
+   remark #15388: vectorization support: reference ah0(:) has aligned access
+   remark #15388: vectorization support: reference at (28:10) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(28,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(29,10)
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <self(:,i)>, stride is unknown to compiler   [ whm_kick.f90(30,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self(:,i)>, stride is unknown to compiler   [ whm_kick.f90(30,13) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.727
+   remark #15301: OUTER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15452: unmasked strided loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 5.500 
+   remark #15478: estimated potential speedup: 1.080 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at whm_kick.f90(30,13)
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15388: vectorization support: reference ah0(:) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 5.000 
+      remark #15478: estimated potential speedup: 0.810 
+      remark #15488: --- end vector cost summary ---
+      remark #15548: loop was vectorized along with the outer loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(29,10)
+<Remainder loop for vectorization>
+
+   LOOP BEGIN at whm_kick.f90(30,13)
+      remark #25460: No loop optimizations reported
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(40,16)
+   remark #15389: vectorization support: reference CB%AOBLBEG(:) has unaligned access
+   remark #15389: vectorization support: reference CB%AOBL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(42,16)
+   remark #15389: vectorization support: reference CB%AOBLEND(:) has unaligned access
+   remark #15389: vectorization support: reference CB%AOBL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(45,16)
+   remark #15389: vectorization support: reference CB%ATIDEBEG(:) has unaligned access
+   remark #15389: vectorization support: reference CB%AOBL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(47,16)
+   remark #15389: vectorization support: reference CB%ATIDEEND(:) has unaligned access
+   remark #15389: vectorization support: reference CB%ATIDE(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(33,15)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(150,13) inlined into whm_kick.f90(33,15)
+      remark #15388: vectorization support: reference ah1j(:) has aligned access
+      remark #15389: vectorization support: reference pl(:,i) has unaligned access   [ whm_kick.f90(150,37) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.571
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 3.500 
+      remark #15478: estimated potential speedup: 1.050 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(151,13) inlined into whm_kick.f90(33,15)
+      remark #15388: vectorization support: reference ah1h(:) has aligned access
+      remark #15389: vectorization support: reference pl(:,i) has unaligned access   [ whm_kick.f90(151,37) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.571
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 3.500 
+      remark #15478: estimated potential speedup: 1.050 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(152,13) inlined into whm_kick.f90(33,15)
+      remark #15389: vectorization support: reference pl(:,i) has unaligned access
+      remark #15389: vectorization support: reference pl(:,i) has unaligned access   [ whm_kick.f90(152,41) ]
+      remark #15388: vectorization support: reference ah1j(:) has aligned access   [ whm_kick.f90(152,41) ]
+      remark #15388: vectorization support: reference ah1h(:) has aligned access   [ whm_kick.f90(152,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 1.030 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(150,13) inlined into whm_kick.f90(33,15)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(151,13) inlined into whm_kick.f90(33,15)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(152,13) inlined into whm_kick.f90(33,15)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(25,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_kick.f90(25,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_kick.f90(28,19):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,19):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,19):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(28,40):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,40):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(28,40):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,40):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(28,57):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,57):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(28,57):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(5,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_kick_getacch_pl_] whm_kick.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     491
+            Global    :     121
+            Local     :     370
+        Regenerable   :      85
+        Spilled       :      30
+        
+    Routine stack
+        Variables     :     748 bytes*
+            Reads     :      33 [3.59e+00 ~ 3.6%]
+            Writes    :      74 [4.25e+00 ~ 4.3%]
+        Spills        :     280 bytes*
+            Reads     :      84 [2.71e+00 ~ 2.7%]
+            Writes    :      66 [2.37e+00 ~ 2.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH2
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH2) [3/8=37.5%] whm_kick.f90(160,20)
+  -> EXTERN: (160,20) _for_array_initialize
+  -> EXTERN: (160,20) _for_array_initialize
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(180,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(177,10)
+   remark #25045: Fused Loops: ( 177 178 )
+
+   remark #15388: vectorization support: reference ah2(:) has aligned access
+   remark #15388: vectorization support: reference ah2o(:) has aligned access   [ whm_kick.f90(178,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15301: FUSED LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.500 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(178,10)
+   remark #25046: Loop lost in Fusion 
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(177,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(182,33)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(185,13)
+      remark #15388: vectorization support: reference ah2o(:) has aligned access
+      remark #15388: vectorization support: reference ah2(:) has aligned access
+      remark #15305: vectorization support: vector length 2
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.710 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(183,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between ah2(:) (183:13) and pl(:,i) (183:13)
+      remark #15346: vector dependence: assumed ANTI dependence between pl(:,i) (183:13) and ah2(:) (183:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(184,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between pl(:,i) (184:13) and ah2(:) (184:13)
+      remark #15346: vector dependence: assumed ANTI dependence between ah2(:) (184:13) and pl(:,i) (184:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(185,13)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(160,20):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_kick_mp_whm_kick_getacch_ah2_] whm_kick.f90:160
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     193
+            Global    :      27
+            Local     :     166
+        Regenerable   :      63
+        Spilled       :       3
+        
+    Routine stack
+        Variables     :     108 bytes*
+            Reads     :       6 [5.22e-01 ~ 0.5%]
+            Writes    :      14 [7.82e+00 ~ 7.8%]
+        Spills        :      64 bytes*
+            Reads     :      13 [2.06e+00 ~ 2.1%]
+            Writes    :      13 [3.39e+00 ~ 3.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_TP) [4/8=50.0%] whm_kick.f90(60,22)
+  -> EXTERN: (60,22) _for_array_initialize
+  -> EXTERN: (83,13) _for_deallocate
+  -> EXTERN: (83,13) _for_deallocate
+  -> EXTERN: (83,22) _for_allocate
+  -> (83,22) WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH0 (isz = 130) (sz = 141)
+     [[ Inlining inhibited by overrideable criterion  <3>]]
+  -> EXTERN: (83,43) _for_allocate
+  -> EXTERN: (87,18) _for_deallocate
+  -> EXTERN: (87,18) _for_allocate
+  -> INDIRECT-: (87,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_tp_$SELF_V$a5e2.0.3 + 56(SI64)))))[28(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (87,18) _for_deallocate
+  -> EXTERN: (87,31) _for_allocate
+  -> EXTERN: (89,13) _for_deallocate
+  -> EXTERN: (89,13) _for_deallocate
+  -> EXTERN: (89,22) _for_allocate
+  -> (89,22) WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH0 (isz = 130) (sz = 141)
+     [[ Inlining inhibited by overrideable criterion  <3>]]
+  -> EXTERN: (89,43) _for_allocate
+  -> EXTERN: (93,18) _for_allocate
+  -> EXTERN: (93,18) _for_deallocate
+  -> INDIRECT-: (93,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_tp_$SELF_V$a5e2.0.3 + 56(SI64)))))[28(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (93,18) _for_deallocate
+  -> EXTERN: (93,31) _for_allocate
+  -> INDIRECT-: (96,31)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_tp_$SELF_V$a5e2.0.3 + 56(SI64)))))[16(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (97,34)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_tp_$SELF_V$a5e2.0.3 + 56(SI64)))))[20(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (98,25)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_getacch_tp_$SELF_V$a5e2.0.3 + 56(SI64)))))[35(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(84,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+OpenMP Construct at whm_kick.f90(90,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(83,22)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(83,22)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(83,22)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(83,43)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL(:,:) (83:43) and at (83:43)
+   remark #15346: vector dependence: assumed FLOW dependence between at (83:43) and PL(:,:) (83:43)
+
+   LOOP BEGIN at whm_kick.f90(83,43)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(83,43)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(83,43)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(83,43)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(83,43)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(83,43)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(83,60)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (83:60) and PL(:,:) (83:60)
+   remark #15346: vector dependence: assumed FLOW dependence between PL(:,:) (83:60) and at (83:60)
+
+   LOOP BEGIN at whm_kick.f90(83,60)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(83,60)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(83,60)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(83,13)
+   remark #15388: vectorization support: reference ah0(:) has aligned access
+   remark #15388: vectorization support: reference at (83:13) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(83,13)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(87,18)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(87,18)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(87,18)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(87,31)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL(:,:) (87:31) and at (87:31)
+   remark #15346: vector dependence: assumed FLOW dependence between at (87:31) and PL(:,:) (87:31)
+
+   LOOP BEGIN at whm_kick.f90(87,31)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(87,31)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(87,31)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(87,31)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(87,31)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(87,31)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(87,48)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (87:48) and PL(:,:) (87:48)
+   remark #15346: vector dependence: assumed FLOW dependence between PL(:,:) (87:48) and at (87:48)
+
+   LOOP BEGIN at whm_kick.f90(87,48)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(87,48)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(87,48)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,22)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(89,22)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(89,22)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,43)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL(:,:) (89:43) and at (89:43)
+   remark #15346: vector dependence: assumed FLOW dependence between at (89:43) and PL(:,:) (89:43)
+
+   LOOP BEGIN at whm_kick.f90(89,43)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(89,43)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(89,43)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,43)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(89,43)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(89,43)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,60)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (89:60) and PL(:,:) (89:60)
+   remark #15346: vector dependence: assumed FLOW dependence between PL(:,:) (89:60) and at (89:60)
+
+   LOOP BEGIN at whm_kick.f90(89,60)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(89,60)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(89,60)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,13)
+   remark #15388: vectorization support: reference ah0(:) has aligned access
+   remark #15388: vectorization support: reference at (89:13) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(89,13)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(93,18)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(93,18)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(93,18)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(93,31)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL(:,:) (93:31) and at (93:31)
+   remark #15346: vector dependence: assumed FLOW dependence between at (93:31) and PL(:,:) (93:31)
+
+   LOOP BEGIN at whm_kick.f90(93,31)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(93,31)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(93,31)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(93,31)
+   remark #25401: memcopy(with guard) generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at whm_kick.f90(93,31)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(93,31)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(93,48)
+   remark #15382: vectorization support: call to function _?1memcpy cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between at (93:48) and PL(:,:) (93:48)
+   remark #15346: vector dependence: assumed FLOW dependence between PL(:,:) (93:48) and at (93:48)
+
+   LOOP BEGIN at whm_kick.f90(93,48)
+      remark #25401: memcopy(with guard) generated
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at whm_kick.f90(93,48)
+      <Multiversioned v2>
+         remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+         remark #25439: unrolled with remainder by 2  
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(93,48)
+      <Remainder, Multiversioned v2>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(90,38)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (91:16) and ah0(:) (91:16)
+   remark #15346: vector dependence: assumed ANTI dependence between ah0(:) (91:16) and self(:,i) (91:16)
+
+   LOOP BEGIN at whm_kick.f90(91,16)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (91:16) and ah0(:) (91:16)
+      remark #15346: vector dependence: assumed ANTI dependence between ah0(:) (91:16) and self(:,i) (91:16)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(84,38)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (85:16) and ah0(:) (85:16)
+   remark #15346: vector dependence: assumed ANTI dependence between ah0(:) (85:16) and self(:,i) (85:16)
+
+   LOOP BEGIN at whm_kick.f90(85,16)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between self(:,i) (85:16) and ah0(:) (85:16)
+      remark #15346: vector dependence: assumed ANTI dependence between ah0(:) (85:16) and self(:,i) (85:16)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(78,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_kick.f90(78,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_kick.f90(78,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_kick.f90(78,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_kick.f90(83,22):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,22):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(83,43):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,43):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,43):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(83,43):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,43):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,43):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(83,60):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,60):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(83,60):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(87,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,18):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(87,31):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,31):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,31):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(87,31):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,31):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,31):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(87,48):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,48):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(87,48):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(89,22):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,22):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(89,43):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,43):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,43):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(89,43):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,43):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,43):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(89,60):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,60):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(89,60):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(93,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,18):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(93,31):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,31):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,31):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(93,31):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,31):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,31):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(93,48):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,48):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(93,48):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_kick.f90(60,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_kick_getacch_tp_] whm_kick.f90:60
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :    1154
+            Global    :     306
+            Local     :     848
+        Regenerable   :     145
+        Spilled       :      79
+        
+    Routine stack
+        Variables     :    2444 bytes*
+            Reads     :      72 [1.64e+00 ~ 1.6%]
+            Writes    :     247 [1.19e+01 ~ 11.9%]
+        Spills        :     672 bytes*
+            Reads     :     344 [6.05e+00 ~ 6.1%]
+            Writes    :     151 [3.07e+00 ~ 3.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH0
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH0) [5/8=62.5%] whm_kick.f90(105,13)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(120,7)
+   remark #15389: vectorization support: reference ah0(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.750 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(121,7)
+   remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model   [ whm_kick.f90(126,10) ]
+
+   LOOP BEGIN at whm_kick.f90(122,15)
+      remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(126,10)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(122,15)
+   <Remainder>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(105,13):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_kick_mp_whm_kick_getacch_ah0_] whm_kick.f90:105
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   27[ rax rdx rcx rbx rsi rdi r8-r11 r13-r15 zmm0-zmm13]
+        
+    Routine temporaries
+        Total         :      53
+            Global    :      25
+            Local     :      28
+        Regenerable   :       3
+        Spilled       :       4
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :      24 bytes*
+            Reads     :       3 [7.12e-01 ~ 0.7%]
+            Writes    :       3 [7.12e-01 ~ 0.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH1
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_GETACCH_AH1) [6/8=75.0%] whm_kick.f90(133,20)
+  -> EXTERN: (133,20) _for_array_initialize
+  -> EXTERN: (133,20) _for_array_initialize
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(149,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(152,41)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between pl(i) (150:37) and ah1h(:) (151:13)
+   remark #15346: vector dependence: assumed FLOW dependence between ah1h(:) (151:13) and pl(i) (150:37)
+
+   LOOP BEGIN at whm_kick.f90(150,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between ah1j(:) (150:13) and pl(:,i) (150:13)
+      remark #15346: vector dependence: assumed ANTI dependence between pl(:,i) (150:13) and ah1j(:) (150:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(151,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between ah1h(:) (151:13) and pl(:,i) (151:13)
+      remark #15346: vector dependence: assumed ANTI dependence between pl(:,i) (151:13) and ah1h(:) (151:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(152,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between pl(:,i) (152:13) and ah1j(:) (152:13)
+      remark #15346: vector dependence: assumed ANTI dependence between ah1j(:) (152:13) and pl(:,i) (152:13)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(133,20):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_kick_mp_whm_kick_getacch_ah1_] whm_kick.f90:133
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     193
+            Global    :      25
+            Local     :     168
+        Regenerable   :      56
+        Spilled       :       1
+        
+    Routine stack
+        Variables     :      92 bytes*
+            Reads     :       5 [2.65e-01 ~ 0.3%]
+            Writes    :       8 [6.36e+00 ~ 6.4%]
+        Spills        :      48 bytes*
+            Reads     :      11 [1.56e+00 ~ 1.6%]
+            Writes    :      11 [2.91e+00 ~ 2.9%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_VH_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_VH_PL) [7/8=87.5%] whm_kick.f90(193,22)
+  -> INDIRECT-: (215,21)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_pl_$SELF_V$ab41.0.7 + 56(SI64)))))[38(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (217,21)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_pl_$SELF_V$ab41.0.7 + 56(SI64)))))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (220,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_pl_$SELF_V$ab41.0.7 + 56(SI64)))))[36(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (223,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_pl_$SELF_V$ab41.0.7 + 56(SI64)))))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (224,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_pl_$SELF_V$ab41.0.7 + 56(SI64)))))[36(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(226,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(216,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(216,16)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(216,16)
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(216,16)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(222,13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(222,13)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(222,13)
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(222,13)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(226,35)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(227,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(227,13)
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 8 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 3.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(227,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(211,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+whm_kick.f90(211,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+whm_kick.f90(216,16):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(216,16):remark #34026: call to memset implemented as a call to optimized library version
+whm_kick.f90(222,13):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(222,13):remark #34026: call to memset implemented as a call to optimized library version
+whm_kick.f90(193,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_kick_vh_pl_] whm_kick.f90:193
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   18[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :     294
+            Global    :      72
+            Local     :     222
+        Regenerable   :      62
+        Spilled       :      13
+        
+    Routine stack
+        Variables     :     364 bytes*
+            Reads     :      10 [2.88e-01 ~ 0.3%]
+            Writes    :      45 [5.76e+00 ~ 5.8%]
+        Spills        :     144 bytes*
+            Reads     :      38 [2.79e+00 ~ 2.8%]
+            Writes    :      27 [2.13e+00 ~ 2.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_KICK::WHM_KICK_VH_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_KICK::WHM_KICK_VH_TP) [8/8=100.0%] whm_kick.f90(235,22)
+  -> INDIRECT-: (260,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_tp_$SELF_V$abe1.0.8 + 56(SI64)))))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (267,18)  (*((P64*) *((P64*) (_whm_classes_mp_whm_kick_vh_tp_$SELF_V$abe1.0.8 + 56(SI64)))))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_kick.f90(257,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+OpenMP Construct at whm_kick.f90(264,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+OpenMP Construct at whm_kick.f90(269,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_kick.f90(257,38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(258,16)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(258,16)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(258,16)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(264,38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(265,16)
+      remark #25408: memset generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_kick.f90(265,16)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at whm_kick.f90(265,16)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at whm_kick.f90(269,35)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_kick.f90(270,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(270,13)
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 8 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 3.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at whm_kick.f90(270,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_kick.f90(265,16):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(265,16):remark #34026: call to memset implemented as a call to optimized library version
+whm_kick.f90(258,16):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_kick.f90(258,16):remark #34026: call to memset implemented as a call to optimized library version
+whm_kick.f90(235,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_kick_vh_tp_] whm_kick.f90:235
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   18[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :     381
+            Global    :      86
+            Local     :     295
+        Regenerable   :     113
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :      76 bytes*
+            Reads     :      15 [1.37e-01 ~ 0.1%]
+            Writes    :      16 [4.83e+00 ~ 4.8%]
+        Spills        :      96 bytes*
+            Reads     :      28 [2.82e+00 ~ 2.8%]
+            Writes    :      27 [2.53e+00 ~ 2.5%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+
+<2> The subprogram is larger than the inliner would normally inline.  Use the
+    option -inline-max-size to increase the size of any subprogram that would
+    normally be inlined, add "!DIR$ATTRIBUTES FORCEINLINE" to the
+    declaration of the called function, or add "!DIR$ FORCEINLINE" before
+    the call site.
+
+<3> The compiler's heuristics predict that it is not profitable to inline the
+    call.  Add "!DIR$ATTRIBUTES FORCEINLINE" to the declaration of the called 
+    subprogram, or add "!DIR$ FORCEINLINE" before the call site.
+

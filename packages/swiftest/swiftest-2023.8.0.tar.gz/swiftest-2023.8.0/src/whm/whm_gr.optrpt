@@ -1,0 +1,640 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _whm_classes.s_whm_gr._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_whm_classes.s_whm_gr._) [1/5=20.0%] whm_gr.f90(1,24)
+
+
+    Report from: Code generation optimizations [cg]
+
+whm_gr.f90(1,24):remark #34051: REGISTER ALLOCATION : [_whm_classes.s_whm_gr._] whm_gr.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_GR::WHM_GR_KICK_GETACCH_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_GR::WHM_GR_KICK_GETACCH_PL) [2/5=40.0%] whm_gr.f90(5,22)
+  -> EXTERN: (5,22) _for_array_initialize
+  -> EXTERN: (25,15) GR_KICK_GETACCH
+  -> EXTERN: (35,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_gr.f90(26,10)
+   remark #15388: vectorization support: reference suma(:) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.500 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(26,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(27,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(27,10)
+   remark #15388: vectorization support: reference self(:,1) has aligned access
+   remark #15388: vectorization support: reference self(:,1) has aligned access
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.542
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 3.480 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(27,10)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15389: vectorization support: reference self(:,1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.111
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 3.480 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(27,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at whm_gr.f90(28,10)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between self(i) (29:33) and suma(:) (29:13)
+   remark #15346: vector dependence: assumed FLOW dependence between suma(:) (29:13) and self(i) (29:33)
+
+   LOOP BEGIN at whm_gr.f90(29,13)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(30,13)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_gr.f90(19,55):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+whm_gr.f90(5,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_gr_kick_getacch_pl_] whm_gr.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     217
+            Global    :      48
+            Local     :     169
+        Regenerable   :      27
+        Spilled       :      14
+        
+    Routine stack
+        Variables     :     456 bytes*
+            Reads     :       7 [3.84e+00 ~ 3.8%]
+            Writes    :      48 [8.67e+00 ~ 8.7%]
+        Spills        :      72 bytes*
+            Reads     :      15 [1.94e+00 ~ 1.9%]
+            Writes    :      12 [1.45e+00 ~ 1.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_GR::WHM_GR_KICK_GETACCH_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_GR::WHM_GR_KICK_GETACCH_TP) [3/5=60.0%] whm_gr.f90(38,22)
+  -> EXTERN: (56,15) GR_KICK_GETACCH
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_gr.f90(57,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_gr.f90(57,10)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(57,10)
+      remark #15388: vectorization support: reference self(:,:) has aligned access
+      remark #15388: vectorization support: reference self(:,:) has aligned access
+      remark #15389: vectorization support: reference self(:,:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.542
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 3.480 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(57,10)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,:) has unaligned access
+      remark #15389: vectorization support: reference self(:,:) has unaligned access
+      remark #15389: vectorization support: reference self(:,:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 2.111
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 3.480 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(57,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_gr.f90(38,22):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_gr_kick_getacch_tp_] whm_gr.f90:38
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   22[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm7]
+        
+    Routine temporaries
+        Total         :     114
+            Global    :      36
+            Local     :      78
+        Regenerable   :      14
+        Spilled       :       8
+        
+    Routine stack
+        Variables     :     336 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :      38 [2.64e+00 ~ 2.6%]
+        Spills        :      40 bytes*
+            Reads     :       5 [1.17e+00 ~ 1.2%]
+            Writes    :       5 [3.12e-01 ~ 0.3%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_GR::WHM_GR_P4_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_GR::WHM_GR_P4_PL) [4/5=80.0%] whm_gr.f90(64,27)
+  -> EXTERN: (82,18) _for_allocate
+  -> EXTERN: (82,18) GR_P4_POS_KICK
+  -> EXTERN: (82,18) _for_deallocate
+  -> EXTERN: (82,18) _for_deallocate
+  -> EXTERN: (82,40) _for_allocate
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_gr.f90(81,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_gr.f90(81,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_gr.f90(82,18)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(82,18)
+         remark #15388: vectorization support: reference at (82:40) has aligned access   [ whm_gr.f90(82,40) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ whm_gr.f90(82,40) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(82,18)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(82,40)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(82,40)
+         remark #15388: vectorization support: reference at (82:53) has aligned access   [ whm_gr.f90(82,53) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ whm_gr.f90(82,53) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(82,40)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(82,40)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(82,40)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (82:40) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(82,40)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(82,53)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(82,53)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (82:53) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(82,53)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_gr.f90(82,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(82,18):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(82,40):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(82,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(82,40):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(82,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(82,53):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(82,53):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(64,27):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_gr_p4_pl_] whm_gr.f90:64
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rbx rsi rdi r8-r15 zmm0]
+        
+    Routine temporaries
+        Total         :     336
+            Global    :      76
+            Local     :     260
+        Regenerable   :     131
+        Spilled       :      23
+        
+    Routine stack
+        Variables     :     484 bytes*
+            Reads     :      16 [0.00e+00 ~ 0.0%]
+            Writes    :       9 [4.26e+00 ~ 4.3%]
+        Spills        :     224 bytes*
+            Reads     :      52 [8.30e+00 ~ 8.3%]
+            Writes    :      39 [5.91e+00 ~ 5.9%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: WHM_CLASSES@S_WHM_GR::WHM_GR_P4_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (WHM_CLASSES@S_WHM_GR::WHM_GR_P4_TP) [5/5=100.0%] whm_gr.f90(89,27)
+  -> EXTERN: (107,18) _for_allocate
+  -> EXTERN: (107,18) GR_P4_POS_KICK
+  -> EXTERN: (107,18) _for_deallocate
+  -> EXTERN: (107,18) _for_deallocate
+  -> EXTERN: (107,40) _for_allocate
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at whm_gr.f90(106,10)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at whm_gr.f90(106,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at whm_gr.f90(107,18)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(107,18)
+         remark #15388: vectorization support: reference at (107:40) has aligned access   [ whm_gr.f90(107,40) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ whm_gr.f90(107,40) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(107,18)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(107,40)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(107,40)
+         remark #15388: vectorization support: reference at (107:53) has aligned access   [ whm_gr.f90(107,53) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ whm_gr.f90(107,53) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(107,40)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(107,40)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(107,40)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (107:40) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(107,40)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at whm_gr.f90(107,53)
+      remark #25399: memcopy generated
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at whm_gr.f90(107,53)
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (107:53) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at whm_gr.f90(107,53)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+whm_gr.f90(107,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(107,18):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(107,40):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(107,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(107,40):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(107,40):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(107,53):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+whm_gr.f90(107,53):remark #34026: call to memcpy implemented as a call to optimized library version
+whm_gr.f90(89,27):remark #34051: REGISTER ALLOCATION : [_whm_classes_mp_whm_gr_p4_tp_] whm_gr.f90:89
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rbx rsi rdi r8-r15 zmm0]
+        
+    Routine temporaries
+        Total         :     336
+            Global    :      76
+            Local     :     260
+        Regenerable   :     131
+        Spilled       :      23
+        
+    Routine stack
+        Variables     :     484 bytes*
+            Reads     :      16 [0.00e+00 ~ 0.0%]
+            Writes    :       9 [4.26e+00 ~ 4.3%]
+        Spills        :     224 bytes*
+            Reads     :      52 [8.30e+00 ~ 8.3%]
+            Writes    :      39 [5.91e+00 ~ 5.9%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

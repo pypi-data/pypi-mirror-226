@@ -1,0 +1,1315 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _helio_classes.s_helio_drift._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_helio_classes.s_helio_drift._) [1/8=12.5%] helio_drift.f90(1,27)
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(1,27):remark #34051: REGISTER ALLOCATION : [_helio_classes.s_helio_drift._] helio_drift.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_BODY
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_BODY) [2/8=25.0%] helio_drift.f90(5,22)
+  -> EXTERN: (27,10) _for_alloc_allocatable
+  -> EXTERN: (27,10) _for_check_mult_overflow64
+  -> EXTERN: (29,10) _for_check_mult_overflow64
+  -> EXTERN: (29,10) _for_alloc_allocatable
+  -> EXTERN: (31,15) DRIFT_ALL
+  -> EXTERN: (35,35) _for_write_seq_lis
+  -> EXTERN: (35,35) _for_write_seq_lis_xmit
+  -> EXTERN: (35,35) _for_write_seq_lis_xmit
+  -> EXTERN: (40,7) _for_dealloc_allocatable
+  -> EXTERN: (40,7) _for_dealloc_allocatable
+  -> EXTERN: (42,4) _for_dealloc_allocatable
+  -> EXTERN: (42,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(28,10)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(28,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference IFLAG(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(28,10)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.917
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.667
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 2.188
+   remark #15355: vectorization support: at (32:14) is int type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 4.440 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.083
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15457: masked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 5.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(34,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(22,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(21,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(28,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(28,10):remark #34026: call to memset implemented as a call to optimized library version
+helio_drift.f90(5,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_drift_body_] helio_drift.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   21[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm6]
+        
+    Routine temporaries
+        Total         :     438
+            Global    :      78
+            Local     :     360
+        Regenerable   :      68
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     672 bytes*
+            Reads     :      18 [8.92e-01 ~ 0.9%]
+            Writes    :      82 [1.05e+01 ~ 10.5%]
+        Spills        :      16 bytes*
+            Reads     :       6 [2.74e-01 ~ 0.3%]
+            Writes    :       6 [2.74e-01 ~ 0.3%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_PL) [3/8=37.5%] helio_drift.f90(45,22)
+  -> INLINE: (56,12) HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_BODY (isz = 775) (sz = 786)
+    -> EXTERN: (27,10) _for_check_mult_overflow64
+    -> EXTERN: (27,10) _for_alloc_allocatable
+    -> EXTERN: (29,10) _for_check_mult_overflow64
+    -> EXTERN: (29,10) _for_alloc_allocatable
+    -> EXTERN: (31,15) DRIFT_ALL
+    -> EXTERN: (35,35) _for_write_seq_lis
+    -> EXTERN: (35,35) _for_write_seq_lis_xmit
+    -> EXTERN: (35,35) _for_write_seq_lis_xmit
+    -> EXTERN: (40,7) _for_dealloc_allocatable
+    -> EXTERN: (40,7) _for_dealloc_allocatable
+    -> EXTERN: (42,4) _for_dealloc_allocatable
+    -> EXTERN: (42,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(56,12)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(56,12)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference IFLAG(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(56,12)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(56,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(56,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.917
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(56,12)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.667
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(56,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(56,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(56,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 2.188
+   remark #15355: vectorization support: at (32:14) is int type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 4.440 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(56,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(56,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(56,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.083
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15457: masked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 5.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(56,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(34,13) inlined into helio_drift.f90(56,12)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(22,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(21,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(28,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(28,10):remark #34026: call to memset implemented as a call to optimized library version
+helio_drift.f90(45,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_drift_pl_] helio_drift.f90:45
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   21[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm6]
+        
+    Routine temporaries
+        Total         :     438
+            Global    :      78
+            Local     :     360
+        Regenerable   :      68
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     672 bytes*
+            Reads     :      18 [8.92e-01 ~ 0.9%]
+            Writes    :      82 [1.05e+01 ~ 10.5%]
+        Spills        :      16 bytes*
+            Reads     :       6 [2.74e-01 ~ 0.3%]
+            Writes    :       6 [2.74e-01 ~ 0.3%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_TP) [4/8=50.0%] helio_drift.f90(62,22)
+  -> INLINE: (73,12) HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_BODY (isz = 775) (sz = 786)
+    -> EXTERN: (27,10) _for_check_mult_overflow64
+    -> EXTERN: (27,10) _for_alloc_allocatable
+    -> EXTERN: (29,10) _for_check_mult_overflow64
+    -> EXTERN: (29,10) _for_alloc_allocatable
+    -> EXTERN: (31,15) DRIFT_ALL
+    -> EXTERN: (35,35) _for_write_seq_lis
+    -> EXTERN: (35,35) _for_write_seq_lis_xmit
+    -> EXTERN: (35,35) _for_write_seq_lis_xmit
+    -> EXTERN: (40,7) _for_dealloc_allocatable
+    -> EXTERN: (40,7) _for_dealloc_allocatable
+    -> EXTERN: (42,4) _for_dealloc_allocatable
+    -> EXTERN: (42,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(73,12)
+   remark #25408: memset generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between IFLAG(:) (28:10) and IFLAG(:) (28:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(73,12)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference IFLAG(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(28,10) inlined into helio_drift.f90(73,12)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(73,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(73,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.917
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(73,12)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference MU(:) has aligned access
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.667
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 3.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(30,10) inlined into helio_drift.f90(73,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(73,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(73,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 2.188
+   remark #15355: vectorization support: at (32:14) is int type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 4.440 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(32,14) inlined into helio_drift.f90(73,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(73,12)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(73,12)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.083
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15457: masked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 5.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(33,36) inlined into helio_drift.f90(73,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(34,13) inlined into helio_drift.f90(73,12)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15382: vectorization support: call to function _for_write_seq_lis cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15382: vectorization support: call to function _for_write_seq_lis_xmit cannot be vectorized   [ helio_drift.f90(35,35) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (35:35) and at (35:35)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(22,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(21,49):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+helio_drift.f90(28,10):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(28,10):remark #34026: call to memset implemented as a call to optimized library version
+helio_drift.f90(62,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_drift_tp_] helio_drift.f90:62
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   21[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm6]
+        
+    Routine temporaries
+        Total         :     438
+            Global    :      78
+            Local     :     360
+        Regenerable   :      68
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     672 bytes*
+            Reads     :      18 [8.92e-01 ~ 0.9%]
+            Writes    :      82 [1.05e+01 ~ 10.5%]
+        Spills        :      16 bytes*
+            Reads     :       6 [2.74e-01 ~ 0.3%]
+            Writes    :       6 [2.74e-01 ~ 0.3%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ONE
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ONE) [5/8=62.5%] helio_drift.f90(79,30)
+
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(79,30):remark #34051: REGISTER ALLOCATION : [_helio_classes.s_helio_drift_mp_helio_drift_linear_one_] helio_drift.f90:79
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   11[ rax rdx rcx rsi rdi r8-r9 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :      26
+            Global    :       0
+            Local     :      26
+        Regenerable   :       1
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ALL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ALL) [6/8=75.0%] helio_drift.f90(92,15)
+  -> INLINE: (105,24) HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ONE (isz = 16) (sz = 33)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at helio_drift.f90(103,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(103,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between xhx (84:7) and xhx (84:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between xhx (84:7) and xhx (84:7)
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <xh(1,i)>, stride is unknown to compiler   [ helio_drift.f90(105,52) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <xh(2,i)>, stride is unknown to compiler   [ helio_drift.f90(105,61) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <xh(3,i)>, stride is unknown to compiler   [ helio_drift.f90(105,70) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhx>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(84,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhx>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(84,7) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhy>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(85,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhy>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(85,7) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhz>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(86,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhz>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(86,7) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.047
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 3 
+   remark #15458: masked indexed (or gather) loads: 3 
+   remark #15459: masked indexed (or scatter) stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 148.500 
+   remark #15478: estimated potential speedup: 0.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(103,13)
+<Remainder loop for vectorization>
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(92,15):remark #34051: REGISTER ALLOCATION : [_helio_classes.s_helio_drift_mp_helio_drift_linear_all_] helio_drift.f90:92
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   27[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm12]
+        
+    Routine temporaries
+        Total         :     241
+            Global    :      67
+            Local     :     174
+        Regenerable   :      54
+        Spilled       :       9
+        
+    Routine stack
+        Variables     :      64 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :      10 [5.93e+00 ~ 5.9%]
+        Spills        :     104 bytes*
+            Reads     :      18 [2.53e+00 ~ 2.5%]
+            Writes    :      18 [3.82e+00 ~ 3.8%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_PL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_PL) [7/8=87.5%] helio_drift.f90(113,22)
+  -> EXTERN: (138,15) __resetsp_inlined
+  -> INLINE: (138,15) HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ALL (isz = 81) (sz = 94)
+    -> INLINE: (105,24) HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_ONE (isz = 16) (sz = 33)
+  -> EXTERN: (138,15) _alloca
+  -> EXTERN: (138,15) __getsp_inlined
+  -> EXTERN: (138,38) _alloca
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at helio_drift.f90(103,13) inlined into helio_drift.f90(138,15)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(134,18)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self(1,:)>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.183
+   remark #15355: vectorization support: at (134:10) is double type reduction   [ helio_drift.f90(134,10) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15456: masked unaligned unit stride loads: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 26.000 
+   remark #15478: estimated potential speedup: 0.530 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(134,18)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(135,18)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self(2,:)>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.183
+   remark #15355: vectorization support: at (135:10) is double type reduction   [ helio_drift.f90(135,10) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15456: masked unaligned unit stride loads: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 26.000 
+   remark #15478: estimated potential speedup: 0.530 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(135,18)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(136,18)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference self(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self(3,:)>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.183
+   remark #15355: vectorization support: at (136:10) is double type reduction   [ helio_drift.f90(136,10) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15456: masked unaligned unit stride loads: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 26.000 
+   remark #15478: estimated potential speedup: 0.530 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(136,18)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(137,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference pt(:) has aligned access
+   remark #15388: vectorization support: reference pt(:) has aligned access   [ helio_drift.f90(137,26) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.029
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 17.500 
+   remark #15478: estimated potential speedup: 1.360 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(137,10)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(138,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:15) and at (138:15)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:15) and at (138:15)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(138,15)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:15) and at (138:15)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:15) and at (138:15)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_drift.f90(138,15)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference at (138:38) has unaligned access   [ helio_drift.f90(138,38) ]
+         remark #15389: vectorization support: reference self(:,:) has unaligned access   [ helio_drift.f90(138,38) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at helio_drift.f90(138,15)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(138,38)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:38) and at (138:38)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (138:38) and at (138:38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(138,38)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (138:66) has aligned access   [ helio_drift.f90(138,66) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ helio_drift.f90(138,66) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.500 
+      remark #15478: estimated potential speedup: 6.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(138,38)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(138,38)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (138:38) and self(:,:) (138:38)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (138:38) and self(:,:) (138:38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(138,38)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (138:38) and self(:,:) (138:38)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,:) (138:38) and self(:,:) (138:38)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at helio_drift.f90(138,38)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,:) has unaligned access
+         remark #15389: vectorization support: reference at (138:38) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.500 
+         remark #15478: estimated potential speedup: 2.000 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at helio_drift.f90(138,38)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(138,66)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (138:66) and self(:) (138:66)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between self(:) (138:66) and self(:) (138:66)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(138,66)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15388: vectorization support: reference at (138:66) has aligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 5.330 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(138,66)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(141,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference cb%PTBEG(:) has unaligned access
+   remark #15388: vectorization support: reference pt(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(143,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference cb%PTEND(:) has unaligned access
+   remark #15388: vectorization support: reference pt(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(103,13) inlined into helio_drift.f90(138,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between xhx (84:7) and xhx (84:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between xhx (84:7) and xhx (84:7)
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <at (105:52)>, stride is unknown to compiler   [ helio_drift.f90(105,52) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <at (105:61)>, stride is unknown to compiler   [ helio_drift.f90(105,61) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <at (105:70)>, stride is unknown to compiler   [ helio_drift.f90(105,70) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhx>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(84,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhx>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(84,7) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhy>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(85,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhy>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(85,7) ]
+   remark #15328: vectorization support: indirect load was emulated for the variable <xhz>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(86,7) ]
+   remark #15329: vectorization support: indirect store was emulated for the variable <xhz>, masked, 64-bit indexed, part of address is read from memory   [ helio_drift.f90(86,7) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.047
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 3 
+   remark #15458: masked indexed (or gather) loads: 3 
+   remark #15459: masked indexed (or scatter) stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 148.500 
+   remark #15478: estimated potential speedup: 0.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(103,13) inlined into helio_drift.f90(138,15)
+<Remainder loop for vectorization>
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(138,15):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,15):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,15):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_drift.f90(138,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_drift.f90(138,38):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,38):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,38):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_drift.f90(138,66):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,66):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(138,66):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_drift.f90(113,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_drift_linear_pl_] helio_drift.f90:113
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   26[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm12]
+        
+    Routine temporaries
+        Total         :     504
+            Global    :     145
+            Local     :     359
+        Regenerable   :      62
+        Spilled       :      33
+        
+    Routine stack
+        Variables     :     496 bytes*
+            Reads     :      11 [2.51e-01 ~ 0.3%]
+            Writes    :      60 [3.81e+00 ~ 3.8%]
+        Spills        :     288 bytes*
+            Reads     :      82 [5.27e+00 ~ 5.3%]
+            Writes    :      56 [3.38e+00 ~ 3.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (HELIO_CLASSES@S_HELIO_DRIFT::HELIO_DRIFT_LINEAR_TP) [8/8=100.0%] helio_drift.f90(151,22)
+  -> EXTERN: (177,10) _alloca
+  -> EXTERN: (180,13) __resetsp_inlined
+  -> EXTERN: (180,13) __getsp_inlined
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at helio_drift.f90(173,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference pt(:) has aligned access
+   remark #15389: vectorization support: reference cb%PTBEG(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.090 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(173,13)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(175,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference pt(:) has aligned access
+   remark #15389: vectorization support: reference cb%PTEND(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.090 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(175,13)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(177,10)
+   remark #25399: memcopy generated
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (177:10) and at (177:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between at (177:10) and at (177:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at helio_drift.f90(177,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference at (177:17) has aligned access   [ helio_drift.f90(177,17) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ helio_drift.f90(177,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.500 
+      remark #15478: estimated potential speedup: 6.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at helio_drift.f90(177,10)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(178,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(1,:)>, masked, 64-bit indexed, part of address is linear but may overflow
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.045
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15459: masked indexed (or scatter) stores: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 55.000 
+   remark #15478: estimated potential speedup: 0.300 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(178,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(179,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(2,:)>, masked, 64-bit indexed, part of address is linear but may overflow
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.045
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15459: masked indexed (or scatter) stores: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 55.000 
+   remark #15478: estimated potential speedup: 0.300 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(179,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(180,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: indirect store was emulated for the variable <self(3,:)>, masked, 64-bit indexed, part of address is linear but may overflow
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <self>, masked, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.045
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15459: masked indexed (or scatter) stores: 1 
+   remark #15460: masked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 55.000 
+   remark #15478: estimated potential speedup: 0.300 
+   remark #15488: --- end vector cost summary ---
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at helio_drift.f90(180,13)
+<Remainder>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+helio_drift.f90(177,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(177,10):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+helio_drift.f90(177,10):remark #34026: call to memcpy implemented as a call to optimized library version
+helio_drift.f90(151,22):remark #34051: REGISTER ALLOCATION : [_helio_classes_mp_helio_drift_linear_tp_] helio_drift.f90:151
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rsi rdi r8 r12-r15 zmm0-zmm4]
+        
+    Routine temporaries
+        Total         :     134
+            Global    :      44
+            Local     :      90
+        Regenerable   :       2
+        Spilled       :       5
+        
+    Routine stack
+        Variables     :      24 bytes*
+            Reads     :       3 [7.79e-01 ~ 0.8%]
+            Writes    :       3 [5.20e-01 ~ 0.5%]
+        Spills        :       8 bytes*
+            Reads     :       1 [2.60e-01 ~ 0.3%]
+            Writes    :       1 [2.60e-01 ~ 0.3%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

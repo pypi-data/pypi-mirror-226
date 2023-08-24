@@ -1,0 +1,2075 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.4.0 Build 20210910_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/include -I/opt/intel/oneapi/mkl/2021.4.0/include -g -O2 -qopt-report=5 -shared-intel -traceback -simd -xhost -align all -pad -assume contiguous_assumed_shape -vecabi=cmdtarget -fp-model no-except -fma -qopenmp -parallel -fp-model=fast -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _swiftest_classes.s_gr._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_swiftest_classes.s_gr._) [1/8=12.5%] gr.f90(1,29)
+
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(1,29):remark #34051: REGISTER ALLOCATION : [_swiftest_classes.s_gr._] gr.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_PV2VH_BODY
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_PV2VH_BODY) [2/8=25.0%] gr.f90(138,27)
+  -> EXTERN: (152,10) _for_alloc_allocatable
+  -> EXTERN: (152,19) _for_dealloc_allocatable
+  -> INLINE: (154,18) SWIFTEST_CLASSES@S_GR::GR_PSEUDOVEL2VEL (isz = 116) (sz = 129)
+  -> EXTERN: (154,18) _alloca
+  -> EXTERN: (154,18) __resetsp_inlined
+  -> EXTERN: (154,18) __getsp_inlined
+  -> EXTERN: (154,54) _alloca
+  -> EXTERN: (156,10) _for_dealloc_allocatable
+  -> EXTERN: (160,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(153,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self%SWIFTEST(0) (154:18) and VH(:) (131:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between VH(:) (131:10) and self%SWIFTEST(0) (154:18)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(154,18)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (154:18) and at (154:18)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (154:18) and at (154:18)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at gr.f90(154,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (154:54) has aligned access   [ gr.f90(154,54) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(154,54) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(154,18)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(154,54)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (154:54) and at (154:54)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (154:54) and at (154:54)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at gr.f90(154,54)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (154:69) has aligned access   [ gr.f90(154,69) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(154,69) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(154,54)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(128,18) inlined into gr.f90(154,18)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(128,18) inlined into gr.f90(154,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference at (128:18) has unaligned access
+      remark #15389: vectorization support: reference at (128:18) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (128:18) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(128,18) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (128:18) has unaligned access
+      remark #15389: vectorization support: reference at (128:18) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (128:18) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(128,18) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(129,18) inlined into gr.f90(154,18)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(129,18) inlined into gr.f90(154,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference at (129:18) has unaligned access
+      remark #15389: vectorization support: reference at (129:18) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (129:18) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(129,18) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (129:18) has unaligned access
+      remark #15389: vectorization support: reference at (129:18) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (129:18) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(129,18) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(131,10) inlined into gr.f90(154,18)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(131,10) inlined into gr.f90(154,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference VH(:) has aligned access
+      remark #15389: vectorization support: reference at (131:10) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.583
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 3.470 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(131,10) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference VH(:) has unaligned access
+      remark #15389: vectorization support: reference at (131:10) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 2.125
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(131,10) inlined into gr.f90(154,18)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(154,54)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (154:54) and self(:,i) (154:54)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (154:54) and self(:,i) (154:54)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at gr.f90(154,54)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (154:54) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(154,54)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(154,69)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (154:69) and self(:,i) (154:69)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (154:69) and self(:,i) (154:69)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at gr.f90(154,69)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (154:69) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(154,69)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(148,52):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+gr.f90(154,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,18):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(154,54):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,54):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,54):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(154,54):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,54):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,54):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(154,69):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,69):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(154,69):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(156,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 32 (and use __assume_aligned) to increase the width of stores
+gr.f90(156,10):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (1, 0)
+gr.f90(138,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_pv2vh_body_] gr.f90:138
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   22[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm8]
+        
+    Routine temporaries
+        Total         :     461
+            Global    :     130
+            Local     :     331
+        Regenerable   :      28
+        Spilled       :      28
+        
+    Routine stack
+        Variables     :     384 bytes*
+            Reads     :      12 [1.53e-01 ~ 0.2%]
+            Writes    :      50 [2.15e+00 ~ 2.1%]
+        Spills        :     184 bytes*
+            Reads     :      76 [4.24e+00 ~ 4.2%]
+            Writes    :      36 [1.40e+00 ~ 1.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_VH2PV_BODY
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_VH2PV_BODY) [3/8=37.5%] gr.f90(240,27)
+  -> EXTERN: (254,10) _for_alloc_allocatable
+  -> EXTERN: (254,19) _for_dealloc_allocatable
+  -> INLINE: (256,18) SWIFTEST_CLASSES@S_GR::GR_VEL2PSEUDOVEL (isz = 565) (sz = 578)
+  -> EXTERN: (256,18) _alloca
+  -> EXTERN: (256,18) __resetsp_inlined
+  -> EXTERN: (256,18) __getsp_inlined
+  -> EXTERN: (256,54) _alloca
+  -> EXTERN: (258,10) _for_dealloc_allocatable
+  -> EXTERN: (262,4) _for_dealloc_allocatable
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(255,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between self%SWIFTEST(0) (256:18) and PV(3) (232:13)
+   remark #17106: parallel dependence: assumed FLOW dependence between PV(3) (232:13) and self%SWIFTEST(0) (256:18)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(256,18)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (256:18) and at (256:18)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (256:18) and at (256:18)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (256:54) has aligned access   [ gr.f90(256,54) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(256,54) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(256,18)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(256,54)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (256:54) and at (256:54)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between at (256:54) and at (256:54)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at gr.f90(256,54)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference at (256:69) has aligned access   [ gr.f90(256,69) ]
+         remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(256,69) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.000 
+         remark #15478: estimated potential speedup: 3.200 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(256,54)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(191,10) inlined into gr.f90(256,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference PV(:) has unaligned access
+      remark #15389: vectorization support: reference at (191:10) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 0.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at gr.f90(192,27) inlined into gr.f90(256,18)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(192,27) inlined into gr.f90(256,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference at (192:27) has unaligned access
+      remark #15389: vectorization support: reference at (192:27) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (192:27) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(192,27) inlined into gr.f90(256,18)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (192:27) has unaligned access
+      remark #15389: vectorization support: reference at (192:27) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (192:27) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(192,27) inlined into gr.f90(256,18)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(193,15) inlined into gr.f90(256,18)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(193,15) inlined into gr.f90(256,18)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference at (193:15) has unaligned access
+      remark #15389: vectorization support: reference at (193:15) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (193:15) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(193,15) inlined into gr.f90(256,18)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (193:15) has unaligned access
+      remark #15389: vectorization support: reference at (193:15) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (193:15) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(193,15) inlined into gr.f90(256,18)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(194,10) inlined into gr.f90(256,18)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between PV(:) (195:19) and PV(3) (232:13)
+      remark #17106: parallel dependence: assumed FLOW dependence between PV(3) (232:13) and PV(:) (195:19)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=50
+
+      LOOP BEGIN at gr.f90(195,19) inlined into gr.f90(256,18)
+      <Peeled loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(195,19) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference PV(:) has unaligned access
+         remark #15389: vectorization support: reference PV(:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.036
+         remark #15355: vectorization support: at (195:19) is double type reduction
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 1.750 
+         remark #15478: estimated potential speedup: 3.400 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at gr.f90(195,19) inlined into gr.f90(256,18)
+      <Remainder loop for vectorization>
+         remark #15389: vectorization support: reference PV(:) has unaligned access
+         remark #15389: vectorization support: reference PV(:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 4.000
+         remark #15355: vectorization support: at (195:19) is double type reduction
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at gr.f90(195,19) inlined into gr.f90(256,18)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at gr.f90(197,13) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference f(:) has aligned access
+         remark #15389: vectorization support: reference PV(:) has unaligned access
+         remark #15389: vectorization support: reference at (197:26) has unaligned access   [ gr.f90(197,26) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.636
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 8 
+         remark #15477: vector cost: 5.500 
+         remark #15478: estimated potential speedup: 0.920 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at gr.f90(198,21) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference f(:) has aligned access
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 2.600
+         remark #15355: vectorization support: at (198:21) is double type reduction
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 5 
+         remark #15477: vector cost: 2.500 
+         remark #15478: estimated potential speedup: 0.650 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at gr.f90(201,13) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+         remark #25015: Estimate of max trip count of loop=3
+
+         LOOP BEGIN at gr.f90(202,16) inlined into gr.f90(256,18)
+            remark #17108: loop was not parallelized: insufficient computational work
+            remark #15389: vectorization support: reference j(i,k) has unaligned access   [ gr.f90(204,22) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.300
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 16 
+            remark #15477: vector cost: 10.000 
+            remark #15478: estimated potential speedup: 1.140 
+            remark #15488: --- end vector cost summary ---
+            remark #25015: Estimate of max trip count of loop=1
+         LOOP END
+
+         LOOP BEGIN at gr.f90(202,16) inlined into gr.f90(256,18)
+         <Remainder loop for vectorization>
+            remark #25436: completely unrolled by 1  
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at gr.f90(228,13) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+         remark #25436: completely unrolled by 3  
+
+         LOOP BEGIN at gr.f90(228,13) inlined into gr.f90(256,18)
+            remark #17108: loop was not parallelized: insufficient computational work
+            remark #15389: vectorization support: reference jinv(:,:) has unaligned access
+            remark #15389: vectorization support: reference jinv(:,:) has unaligned access
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.875
+            remark #15450: unmasked unaligned unit stride loads: 1 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 6 
+            remark #15477: vector cost: 4.000 
+            remark #15478: estimated potential speedup: 0.850 
+            remark #15488: --- end vector cost summary ---
+            remark #25436: completely unrolled by 3  
+         LOOP END
+
+         LOOP BEGIN at gr.f90(228,13) inlined into gr.f90(256,18)
+         LOOP END
+
+         LOOP BEGIN at gr.f90(228,13) inlined into gr.f90(256,18)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at gr.f90(230,29) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference f(:) has aligned access
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(1,:)>, stride is 3
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.444
+         remark #15355: vectorization support: at (230:29) is double type reduction
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 0.720 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at gr.f90(231,29) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference f(:) has aligned access
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(2,:)>, stride is 3
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.444
+         remark #15355: vectorization support: at (231:29) is double type reduction
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 0.720 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at gr.f90(232,29) inlined into gr.f90(256,18)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15388: vectorization support: reference f(:) has aligned access
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(3,:)>, stride is 3
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.444
+         remark #15355: vectorization support: at (232:29) is double type reduction
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 0.720 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(256,54)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (256:54) and self(:,i) (256:54)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (256:54) and self(:,i) (256:54)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at gr.f90(256,54)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (256:54) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(256,54)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(256,69)
+      remark #25399: memcopy generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (256:69) and self(:,i) (256:69)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between self(:,i) (256:69) and self(:,i) (256:69)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at gr.f90(256,69)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference self(:,i) has unaligned access
+         remark #15388: vectorization support: reference at (256:69) has aligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 2.660 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=3
+      LOOP END
+
+      LOOP BEGIN at gr.f90(256,69)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(250,55):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (32, 0)
+gr.f90(256,18):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,18):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,18):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(256,54):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,54):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,54):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(256,54):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,54):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,54):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(256,69):remark #34014: optimization advice for memcpy: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,69):remark #34014: optimization advice for memcpy: increase the source's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(256,69):remark #34026: call to memcpy implemented as a call to optimized library version
+gr.f90(258,10):remark #34014: optimization advice for memcpy: increase the destination's alignment to 32 (and use __assume_aligned) to increase the width of stores
+gr.f90(258,10):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (32, 0), and destination (alignment, offset): (1, 0)
+gr.f90(240,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_vh2pv_body_] gr.f90:240
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   29[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     559
+            Global    :     155
+            Local     :     404
+        Regenerable   :      34
+        Spilled       :      35
+        
+    Routine stack
+        Variables     :     456 bytes*
+            Reads     :      21 [1.43e+00 ~ 1.4%]
+            Writes    :      53 [2.67e+00 ~ 2.7%]
+        Spills        :     256 bytes*
+            Reads     :      85 [2.67e+00 ~ 2.7%]
+            Writes    :      45 [7.12e-01 ~ 0.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_KICK_GETACCB_NS_BODY
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_KICK_GETACCB_NS_BODY) [4/8=50.0%] gr.f90(5,27)
+  -> EXTERN: (31,13) __getsp_inlined
+  -> EXTERN: (31,13) _alloca
+  -> EXTERN: (31,13) __resetsp_inlined
+  -> EXTERN: (31,53) ___powr8i4
+  -> EXTERN: (34,22) _strcmp
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(27,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between self (31:13) and self (31:13)
+   remark #17106: parallel dependence: assumed ANTI dependence between self (31:13) and self (31:13)
+   remark #17106: parallel dependence: assumed ANTI dependence between self (31:13) and self (31:13)
+   remark #17106: parallel dependence: assumed FLOW dependence between self (31:13) and self (31:13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(28,20)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(28,20)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (28:20) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 4
+   LOOP END
+
+   LOOP BEGIN at gr.f90(28,20)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (28:20) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 77 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 5.240 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+
+   LOOP BEGIN at gr.f90(28,20)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(29,21)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(29,21)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (29:21) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 4
+   LOOP END
+
+   LOOP BEGIN at gr.f90(29,21)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (29:21) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 77 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 5.240 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+
+   LOOP BEGIN at gr.f90(29,21)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(30,21)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(30,21)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15355: vectorization support: at (30:21) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 3.030 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(30,21)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 3.889
+      remark #15355: vectorization support: at (30:21) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 77 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 5.240 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(30,21)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(31,13)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(31,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference self(:,i) has aligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(31,111) ]
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(31,83) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ gr.f90(31,65) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.120
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 77 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 5.240 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(31,13)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference self(:,i) has unaligned access
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(31,111) ]
+      remark #15389: vectorization support: reference self(:,i) has unaligned access   [ gr.f90(31,83) ]
+      remark #15389: vectorization support: reference self(:) has unaligned access   [ gr.f90(31,65) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.520
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 77 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 5.240 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(31,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at gr.f90(34,22)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at gr.f90(36,13)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference CB%AGR(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 0.810 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at gr.f90(37,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between SELF(i) (38:40) and CB%AGR(:) (38:16)
+   remark #17106: parallel dependence: assumed FLOW dependence between CB%AGR(:) (38:16) and SELF(i) (38:40)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between SELF(i) (38:40) and CB%AGR(:) (38:16)
+   remark #15346: vector dependence: assumed FLOW dependence between CB%AGR(:) (38:16) and SELF(i) (38:40)
+
+   LOOP BEGIN at gr.f90(38,16)
+      remark #25436: completely unrolled by 3   (pre-vector) 
+   LOOP END
+LOOP END
+remark #25050: 
+Tempoary Array Elimination (FTAE) Report: 
+ftae for the loop at line +31 gr.f90
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(25,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+gr.f90(25,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+gr.f90(5,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_kick_getaccb_ns_body_] gr.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   29[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     464
+            Global    :     176
+            Local     :     288
+        Regenerable   :      13
+        Spilled       :      56
+        
+    Routine stack
+        Variables     :     128 bytes*
+            Reads     :       2 [1.08e-01 ~ 0.1%]
+            Writes    :      12 [3.26e-01 ~ 0.3%]
+        Spills        :     416 bytes*
+            Reads     :     116 [7.15e+00 ~ 7.2%]
+            Writes    :      66 [3.13e+00 ~ 3.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_KICK_GETACCH
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_KICK_GETACCH) [5/8=62.5%] gr.f90(47,27)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at gr.f90(67,7)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(66,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(66,7)
+      remark #25408: memset generated
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between agr(:,:) (66:7) and agr(:,:) (66:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between agr(:,:) (66:7) and agr(:,:) (66:7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=1
+
+      LOOP BEGIN at gr.f90(66,7)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference agr(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 3 
+         remark #15477: vector cost: 1.250 
+         remark #15478: estimated potential speedup: 1.440 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at gr.f90(66,7)
+      <Remainder loop for vectorization>
+         remark #25015: Estimate of max trip count of loop=12
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at gr.f90(70,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between rjmag4 (68:10) and rjmag4 (68:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between rjmag4 (68:10) and rjmag4 (68:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between beta (69:10) and beta (69:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between beta (69:10) and beta (69:10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(68,20)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(68,20)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference x(:,i) has unaligned access
+      remark #15389: vectorization support: reference x(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (68:20) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(68,20)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference x(:,i) has unaligned access
+      remark #15389: vectorization support: reference x(:,i) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (68:20) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 34 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 3.220 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(68,20)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(70,10)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(70,10)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference agr(:,i) has aligned access
+      remark #15389: vectorization support: reference x(:,i) has unaligned access   [ gr.f90(70,24) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.099
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 34 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 3.220 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(70,10)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference agr(:,i) has unaligned access
+      remark #15389: vectorization support: reference x(:,i) has unaligned access   [ gr.f90(70,24) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.450
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 34 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 3.220 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(70,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(66,7):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+gr.f90(66,7):remark #34026: call to memset implemented as a call to optimized library version
+gr.f90(47,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_kick_getacch_] gr.f90:47
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   27[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm12]
+        
+    Routine temporaries
+        Total         :     254
+            Global    :      77
+            Local     :     177
+        Regenerable   :      59
+        Spilled       :       9
+        
+    Routine stack
+        Variables     :      84 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :      11 [1.63e+00 ~ 1.6%]
+        Spills        :     112 bytes*
+            Reads     :      20 [1.65e+00 ~ 1.7%]
+            Writes    :      19 [1.05e+00 ~ 1.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_P4_POS_KICK
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_P4_POS_KICK) [6/8=75.0%] gr.f90(77,27)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(98,15)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(98,15)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference v(:) has unaligned access
+   remark #15389: vectorization support: reference v(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.036
+   remark #15355: vectorization support: at (98:15) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(98,15)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference v(:) has unaligned access
+   remark #15389: vectorization support: reference v(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15355: vectorization support: at (98:15) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(98,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at gr.f90(99,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference dr(:) has aligned access
+   remark #15389: vectorization support: reference v(:) has unaligned access   [ gr.f90(99,33) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 1.430 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=1
+LOOP END
+
+LOOP BEGIN at gr.f90(99,7)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at gr.f90(100,7)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference x(:) has unaligned access
+   remark #15389: vectorization support: reference x(:) has unaligned access
+   remark #15388: vectorization support: reference dr(:) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.583
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 0.880 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(77,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_p4_pos_kick_] gr.f90:77
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   21[ rax rdx rcx rsi rdi r8-r11 zmm0-zmm11]
+        
+    Routine temporaries
+        Total         :      83
+            Global    :      26
+            Local     :      57
+        Regenerable   :       3
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_PSEUDOVEL2VEL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_PSEUDOVEL2VEL) [7/8=87.5%] gr.f90(106,27)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(128,18)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(128,18)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.036
+   remark #15355: vectorization support: at (128:18) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(128,18)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15355: vectorization support: at (128:18) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(128,18)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at gr.f90(129,18)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(129,18)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.036
+   remark #15355: vectorization support: at (129:18) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(129,18)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15355: vectorization support: at (129:18) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(129,18)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at gr.f90(131,10)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(131,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15388: vectorization support: reference vh(:) has aligned access
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.583
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 3.470 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(131,10)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.125
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 3.470 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(131,10)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(106,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_pseudovel2vel_] gr.f90:106
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r11 r15 zmm0-zmm8]
+        
+    Routine temporaries
+        Total         :     155
+            Global    :      61
+            Local     :      94
+        Regenerable   :       6
+        Spilled       :       2
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SWIFTEST_CLASSES@S_GR::GR_VEL2PSEUDOVEL
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SWIFTEST_CLASSES@S_GR::GR_VEL2PSEUDOVEL) [8/8=100.0%] gr.f90(163,27)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at gr.f90(191,10)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference pv(:) has unaligned access
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.660 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at gr.f90(192,27)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(192,27)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.036
+   remark #15355: vectorization support: at (192:27) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(192,27)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15389: vectorization support: reference xh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15355: vectorization support: at (192:27) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(192,27)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at gr.f90(193,15)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at gr.f90(193,15)
+   remark #17108: loop was not parallelized: insufficient computational work
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.036
+   remark #15355: vectorization support: at (193:15) is double type reduction
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(193,15)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15389: vectorization support: reference vh(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15355: vectorization support: at (193:15) is double type reduction
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 3.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at gr.f90(193,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at gr.f90(196,26)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between pv(:) (195:19) and pv(3) (232:13)
+   remark #17106: parallel dependence: assumed FLOW dependence between pv(3) (232:13) and pv(:) (195:19)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at gr.f90(195,19)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at gr.f90(195,19)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15389: vectorization support: reference pv(:) has unaligned access
+      remark #15389: vectorization support: reference pv(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.036
+      remark #15355: vectorization support: at (195:19) is double type reduction
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(195,19)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference pv(:) has unaligned access
+      remark #15389: vectorization support: reference pv(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.000
+      remark #15355: vectorization support: at (195:19) is double type reduction
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 0.720 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at gr.f90(195,19)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at gr.f90(197,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference f(:) has aligned access
+      remark #15389: vectorization support: reference pv(:) has unaligned access
+      remark #15389: vectorization support: reference vh(:) has unaligned access   [ gr.f90(197,26) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.636
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 8 
+      remark #15477: vector cost: 5.500 
+      remark #15478: estimated potential speedup: 0.920 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at gr.f90(198,21)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference f(:) has aligned access
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 2.600
+      remark #15355: vectorization support: at (198:21) is double type reduction
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 0.650 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at gr.f90(201,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+      remark #25015: Estimate of max trip count of loop=3
+
+      LOOP BEGIN at gr.f90(202,16)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference j(i,k) has unaligned access   [ gr.f90(204,22) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.300
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 16 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 1.140 
+         remark #15488: --- end vector cost summary ---
+         remark #25015: Estimate of max trip count of loop=1
+      LOOP END
+
+      LOOP BEGIN at gr.f90(202,16)
+      <Remainder loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(228,13)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+      remark #25436: completely unrolled by 3  
+
+      LOOP BEGIN at gr.f90(228,13)
+         remark #17108: loop was not parallelized: insufficient computational work
+         remark #15389: vectorization support: reference jinv(:,:) has unaligned access
+         remark #15389: vectorization support: reference jinv(:,:) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.875
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 4.000 
+         remark #15478: estimated potential speedup: 0.850 
+         remark #15488: --- end vector cost summary ---
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at gr.f90(228,13)
+      LOOP END
+
+      LOOP BEGIN at gr.f90(228,13)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at gr.f90(230,29)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference f(:) has aligned access
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(1,:)>, stride is 3
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.444
+      remark #15355: vectorization support: at (230:29) is double type reduction
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 0.720 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at gr.f90(231,29)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference f(:) has aligned access
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(2,:)>, stride is 3
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.444
+      remark #15355: vectorization support: at (231:29) is double type reduction
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 0.720 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+
+   LOOP BEGIN at gr.f90(232,29)
+      remark #17108: loop was not parallelized: insufficient computational work
+      remark #15388: vectorization support: reference f(:) has aligned access
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <jinv(3,:)>, stride is 3
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.444
+      remark #15355: vectorization support: at (232:29) is double type reduction
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 0.720 
+      remark #15488: --- end vector cost summary ---
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+gr.f90(163,27):remark #34051: REGISTER ALLOCATION : [_swiftest_classes_mp_gr_vel2pseudovel_] gr.f90:163
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   29[ rax rdx rcx rbx rsi rdi r8-r13 r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     253
+            Global    :      86
+            Local     :     167
+        Regenerable   :      13
+        Spilled       :      12
+        
+    Routine stack
+        Variables     :      72 bytes*
+            Reads     :      11 [1.85e+00 ~ 1.9%]
+            Writes    :       3 [2.02e+00 ~ 2.0%]
+        Spills        :      72 bytes*
+            Reads     :      10 [1.93e+00 ~ 1.9%]
+            Writes    :       8 [4.86e-01 ~ 0.5%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

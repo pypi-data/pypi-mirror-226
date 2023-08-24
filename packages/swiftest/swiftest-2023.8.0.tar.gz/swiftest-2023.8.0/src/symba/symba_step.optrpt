@@ -1,0 +1,1023 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _symba_classes.s_symba_step._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_symba_classes.s_symba_step._) [1/6=16.7%] symba_step.f90(1,27)
+
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(1,27):remark #34051: REGISTER ALLOCATION : [_symba_classes.s_symba_step._] symba_step.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_SYSTEM) [2/6=33.3%] symba_step.f90(5,22)
+  -> EXTERN: (22,19) _strcmp
+  -> EXTERN: (24,22) _strcmp
+  -> EXTERN: (26,25) _strcmp
+  -> INDIRECT-: (28,21)  (*((P64*) *((P64*) (_symba_classes_mp_symba_step_system_$SELF_V$f411.0.2 + 56(SI64)))))[23(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (29,29)  (*((P64*) _symba_classes_mp_symba_step_system_$PL$_1881$128_V$f496.0.2))[42(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (29,66)  (*((P64*) _symba_classes_mp_symba_step_system_$TP$_1882$129_V$f4c0.0.2))[38(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (31,24)  (*((P64*) *((P64*) (_symba_classes_mp_symba_step_system_$SELF_V$f411.0.2 + 56(SI64)))))[20(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> EXTERN: (35,24) HELIO_STEP_SYSTEM
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_step.f90(22,19)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(24,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(26,25)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(22,19):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(22,19):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(24,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(24,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(5,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_step_system_] symba_step.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   16[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :     125
+            Global    :      37
+            Local     :      88
+        Regenerable   :      24
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     384 bytes*
+            Reads     :       7 [6.82e-01 ~ 0.7%]
+            Writes    :      40 [5.72e+00 ~ 5.7%]
+        Spills        :      24 bytes*
+            Reads     :      16 [0.00e+00 ~ 0.0%]
+            Writes    :       8 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_INTERP_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_INTERP_SYSTEM) [3/6=50.0%] symba_step.f90(45,22)
+  -> EXTERN: (64,22) _strcmp
+  -> EXTERN: (66,25) _strcmp
+  -> EXTERN: (68,28) _strcmp
+  -> INDIRECT-: (71,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[33(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (72,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[38(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (73,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (74,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (76,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[32(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (77,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[35(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (78,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (79,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (81,24)  (*((P64*) *((P64*) (_symba_classes_mp_symba_step_interp_system_$SELF_V$f99a.0.3 + 56(SI64)))))[22(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (83,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (84,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[34(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (85,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$PL$_1885$139_V$fa30.0.3))[38(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (87,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[6(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (88,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[31(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (89,24)  (*((P64*) _symba_classes_mp_symba_step_interp_system_$TP$_1886$140_V$fa5a.0.3))[35(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_step.f90(64,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(66,25)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(68,28)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(76,24)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between at (76:24) and CB%HELIO(:) (76:24)
+   remark #15346: vector dependence: assumed ANTI dependence between CB%HELIO(:) (76:24) and at (76:24)
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at symba_step.f90(88,24)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between at (88:24) and CB%HELIO(:) (88:24)
+   remark #15346: vector dependence: assumed ANTI dependence between CB%HELIO(:) (88:24) and at (88:24)
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(64,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(64,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(66,25):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(66,25):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(68,28):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(68,28):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(45,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_step_interp_system_] symba_step.f90:45
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     217
+            Global    :      40
+            Local     :     177
+        Regenerable   :      82
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     584 bytes*
+            Reads     :      39 [2.31e+00 ~ 2.3%]
+            Writes    :      79 [8.49e+00 ~ 8.5%]
+        Spills        :      16 bytes*
+            Reads     :      12 [0.00e+00 ~ 0.0%]
+            Writes    :       6 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_SET_RECUR_LEVELS_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_SET_RECUR_LEVELS_SYSTEM) [4/6=66.7%] symba_step.f90(99,22)
+  -> EXTERN: (114,22) _strcmp
+  -> EXTERN: (116,25) _strcmp
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_step.f90(114,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(116,25)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(120,61)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_step.f90(120,61)
+   remark #15389: vectorization support: reference PL(:) has unaligned access
+   remark #15389: vectorization support: reference PL(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 5.090 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_step.f90(120,61)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_step.f90(121,62)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_step.f90(121,62)
+   remark #15389: vectorization support: reference TP(:) has unaligned access
+   remark #15389: vectorization support: reference TP(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 5.090 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_step.f90(121,62)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_step.f90(122,99)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_step.f90(122,99)
+   remark #15389: vectorization support: reference PLPLENC(:) has unaligned access
+   remark #15389: vectorization support: reference PLPLENC(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 5.090 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_step.f90(122,99)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_step.f90(123,99)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at symba_step.f90(123,99)
+   remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+   remark #15389: vectorization support: reference PLTPENC(:) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 5.090 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_step.f90(123,99)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(113,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(113,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(113,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(113,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(114,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(114,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(116,25):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(116,25):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(99,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_step_set_recur_levels_system_] symba_step.f90:99
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   19[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm4]
+        
+    Routine temporaries
+        Total         :     213
+            Global    :      84
+            Local     :     129
+        Regenerable   :      11
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :     512 bytes*
+            Reads     :       8 [1.30e+00 ~ 1.3%]
+            Writes    :      48 [1.19e+01 ~ 11.9%]
+        Spills        :      40 bytes*
+            Reads     :      20 [0.00e+00 ~ 0.0%]
+            Writes    :      10 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_RECUR_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_RECUR_SYSTEM) [5/6=83.3%] symba_step.f90(135,32)
+  -> EXTERN: (135,32) _for_array_initialize
+  -> EXTERN: (135,32) _for_array_initialize
+  -> EXTERN: (156,22) _strcmp
+  -> EXTERN: (158,25) _strcmp
+  -> EXTERN: (161,39) ___powi4i4
+  -> EXTERN: (164,19) _for_write_seq_lis
+  -> EXTERN: (165,19) _for_write_seq_lis
+  -> EXTERN: (166,19) _for_write_seq_lis
+  -> EXTERN: (167,24) UTIL_EXIT
+  -> INDIRECT-: (176,32)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[8(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (176,86)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[8(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (178,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (179,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (181,27)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (182,27)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (185,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PL$_1892$160_V$fd59.0.5))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (186,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$TP$_1893$161_V$fd83.0.5))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (188,35)  (*((P64*) *((P64*) (_symba_classes_mp_symba_step_recur_system_$SELF_V$fc82.0.5 + 56(SI64)))))[22(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (191,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (192,24)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (194,27)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (195,27)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[9(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (199,40)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[7(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (200,40)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[7(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (202,43)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLPLENC_LIST$_1891$158_V$fcf5.0.5))[13(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (203,43)  (*((P64*) _symba_classes_mp_symba_step_recur_system_$PLTPENC_LIST$_1891$159_V$fd23.0.5))[10(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (206,24)  (*((P64*) *((P64*) (_symba_classes_mp_symba_step_recur_system_$SELF_V$fc82.0.5 + 56(SI64)))))[21(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_step.f90(156,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(158,25)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(175,16)
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(176,32) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(176,86) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(178,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(179,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(181,27) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(182,27) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(185,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(186,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(188,35) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(191,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(192,24) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(194,27) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(195,27) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(199,40) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(200,40) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(202,43) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(203,43) ]
+   remark #15382: vectorization support: call to function (Indirect call) cannot be vectorized   [ symba_step.f90(206,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between PLPLENC_LIST%PLPLENC_LIST (176:32) and call:(Indirect call) (203:43)
+   remark #15346: vector dependence: assumed ANTI dependence between call:(Indirect call) (203:43) and PLPLENC_LIST%PLPLENC_LIST (176:32)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(155,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(155,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(155,7):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(155,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(156,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(156,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(158,25):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(158,25):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(135,32):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_step_recur_system_] symba_step.f90:135
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     320
+            Global    :      50
+            Local     :     270
+        Regenerable   :     143
+        Spilled       :      10
+        
+    Routine stack
+        Variables     :     732 bytes*
+            Reads     :      41 [9.39e+00 ~ 9.4%]
+            Writes    :      83 [1.26e+01 ~ 12.6%]
+        Spills        :      40 bytes*
+            Reads     :      21 [2.11e+00 ~ 2.1%]
+            Writes    :       9 [6.19e-01 ~ 0.6%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_RESET_SYSTEM
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (SYMBA_CLASSES@S_SYMBA_STEP::SYMBA_STEP_RESET_SYSTEM) [6/6=100.0%] symba_step.f90(217,22)
+  -> EXTERN: (232,22) _strcmp
+  -> EXTERN: (234,25) _strcmp
+  -> EXTERN: (239,27) _for_deallocate
+  -> EXTERN: (239,27) _for_allocate
+  -> INDIRECT-: (239,27)  (*((P64*) _symba_classes_mp_symba_step_reset_system_$PL$_1895$167_V$ff5a.0.6))[45(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (249,27)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PLPLENC_LIST$25_V$1110 + 56(SI64)))))[1(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (250,27)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PLPLENC_LIST$25_V$1110 + 56(SI64)))))[1(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (252,27)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PLPLCOLLISION_LIST$26_V$1140 + 56(SI64)))))[1(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (262,27)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PLTPENC_LIST$24_V$10e0 + 56(SI64)))))[1(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (263,27)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PLTPENC_LIST$24_V$10e0 + 56(SI64)))))[1(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (267,24)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$PL_ADDS$23_V$10b0 + 56(SI64)))))[19(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+  -> INDIRECT-: (268,24)  (*((P64*) *((P64*) (&(_symba_classes_mp_symba_step_reset_system_$SELF_V$fed5.0.6->QNCAtemplate.dim31_dv_template.addr_a0_V$ff46.0.6)->SYMBA_NBODY_SYSTEM$HELIO_NBODY_SYSTEM$22_V$1076 + 56(SI64)))))[19(SI64)]
+     [[ Unable to inline indirect callsite  <1>]]
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at symba_step.f90(232,22)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(234,25)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at symba_step.f90(238,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(238,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(238,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(239,27)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=15
+LOOP END
+
+LOOP BEGIN at symba_step.f90(239,27)
+   remark #15389: vectorization support: reference at (239:27) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.100
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.620 
+   remark #15478: estimated potential speedup: 3.960 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at symba_step.f90(239,27)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at symba_step.f90(240,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(240,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(240,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(241,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(241,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(241,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(242,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(242,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(242,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(243,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(243,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(243,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(244,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(244,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(244,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(245,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(245,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(245,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(246,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(246,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(246,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(247,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(247,22)
+      remark #15389: vectorization support: reference PL(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(247,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(256,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(256,22)
+      remark #15389: vectorization support: reference TP(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(256,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(257,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(257,22)
+      remark #15389: vectorization support: reference TP(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(257,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(258,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(258,22)
+      remark #15389: vectorization support: reference TP(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(258,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(259,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(259,22)
+      remark #15389: vectorization support: reference TP(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(259,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at symba_step.f90(260,22)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at symba_step.f90(260,22)
+      remark #15389: vectorization support: reference TP(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at symba_step.f90(260,22)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+symba_step.f90(232,22):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(232,22):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(234,25):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+symba_step.f90(234,25):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+symba_step.f90(238,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(238,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(240,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(240,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(241,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(241,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(242,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(242,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(243,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(243,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(244,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(244,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(245,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(245,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(246,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(246,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(247,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(247,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(256,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(256,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(257,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(257,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(258,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(258,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(259,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(259,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(260,22):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+symba_step.f90(260,22):remark #34026: call to memset implemented as a call to optimized library version
+symba_step.f90(217,22):remark #34051: REGISTER ALLOCATION : [_symba_classes_mp_symba_step_reset_system_] symba_step.f90:217
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   19[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm4]
+        
+    Routine temporaries
+        Total         :     421
+            Global    :     156
+            Local     :     265
+        Regenerable   :      60
+        Spilled       :       6
+        
+    Routine stack
+        Variables     :     404 bytes*
+            Reads     :      24 [5.64e-01 ~ 0.6%]
+            Writes    :      39 [2.60e+00 ~ 2.6%]
+        Spills        :       8 bytes*
+            Reads     :       1 [4.60e-02 ~ 0.0%]
+            Writes    :       1 [4.60e-02 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING FOOTNOTES:
+
+<1> The indirectly called subprogram must be resolved to its targets before it 
+can be inlined.  Consider compiling with -ipo or -prof-gen followed by 
+-prof-use.
+

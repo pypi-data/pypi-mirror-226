@@ -1,0 +1,304 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.2.0 Build 20210228_000000
+
+Compiler options: -I/Users/daminton/git/swiftest/include -I/usr/local/Cellar/netcdf/4.8.0_2/include -init=snan,arrays -no-wrap-margin -O3 -fp-model strict -fp-model no-except -prec-div -prec-sqrt -assume protect-parens -qopenmp -simd -xhost -align all -assume contiguous_assumed_shape -vecabi=cmdtarget -prec-div -prec-sqrt -assume protect-parens -heap-arrays 1048576 -qopt-report=5 -g -traceback -c
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: _rmvs_classes.s_rmvs_chk._
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (_rmvs_classes.s_rmvs_chk._) [1/3=33.3%] rmvs_encounter_check.f90(1,26)
+
+
+    Report from: Code generation optimizations [cg]
+
+rmvs_encounter_check.f90(1,26):remark #34051: REGISTER ALLOCATION : [_rmvs_classes.s_rmvs_chk._] rmvs_encounter_check.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    0[ reg_null]
+        
+    Routine temporaries
+        Total         :       6
+            Global    :       0
+            Local     :       6
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: RMVS_CLASSES@S_RMVS_CHK::RMVS_ENCOUNTER_CHECK_TP
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (RMVS_CLASSES@S_RMVS_CHK::RMVS_ENCOUNTER_CHECK_TP) [2/3=66.7%] rmvs_encounter_check.f90(5,4)
+  -> EXTERN: (5,4) _for_array_initialize
+  -> EXTERN: (5,4) _for_deallocate
+  -> EXTERN: (5,4) _for_allocate
+  -> EXTERN: (5,4) __getsp_inlined
+  -> EXTERN: (5,4) _for_array_initialize
+  -> EXTERN: (5,4) _for_array_initialize
+  -> EXTERN: (29,19) _strcmp
+  -> INLINE: (42,27) RMVS_CLASSES@S_RMVS_CHK::RMVS_CHK_IND (isz = 46) (sz = 59)
+  -> EXTERN: (51,4) _for_deallocate
+  -> EXTERN: (51,4) __resetsp_inlined
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at rmvs_encounter_check.f90(29,19)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(32,13)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between PL(:) (32:52) and r2crit(:) (32:13)
+   remark #15346: vector dependence: assumed FLOW dependence between r2crit(:) (32:13) and PL(:) (32:52)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(32,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(33,13)
+   remark #25408: memset generated
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rmvs_encounter_check.f90(33,13)
+      remark #15389: vectorization support: reference self(:) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.620 
+      remark #15478: estimated potential speedup: 2.660 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at rmvs_encounter_check.f90(33,13)
+   <Remainder loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=24
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(34,13)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rmvs_encounter_check.f90(35,16)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at rmvs_encounter_check.f90(37,19)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between xr(:) (37:19) and self(:,i) (37:19)
+         remark #15346: vector dependence: assumed ANTI dependence between self(:,i) (37:19) and xr(:) (37:19)
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at rmvs_encounter_check.f90(38,19)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between vr(:) (38:19) and self(:,i) (38:19)
+         remark #15346: vector dependence: assumed ANTI dependence between self(:,i) (38:19) and vr(:) (38:19)
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at rmvs_encounter_check.f90(39,24)
+         remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at rmvs_encounter_check.f90(40,24)
+         remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+         remark #25436: completely unrolled by 3  
+      LOOP END
+
+      LOOP BEGIN at rmvs_encounter_check.f90(41,27)
+         remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model
+         remark #25436: completely unrolled by 3  
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rmvs_encounter_check.f90(45,29)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at rmvs_encounter_check.f90(45,29)
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.800
+      remark #15355: vectorization support: at (45:16) is int type reduction   [ rmvs_encounter_check.f90(45,16) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 6.250 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rmvs_encounter_check.f90(45,29)
+   <Remainder loop for vectorization>
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 3.545
+      remark #15355: vectorization support: at (45:16) is int type reduction   [ rmvs_encounter_check.f90(45,16) ]
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 6.250 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rmvs_encounter_check.f90(45,29)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(47,26)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(47,26)
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 2.333
+   remark #15355: vectorization support: at (47:13) is int type reduction   [ rmvs_encounter_check.f90(47,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 4.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at rmvs_encounter_check.f90(47,26)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+rmvs_encounter_check.f90(29,19):remark #34014: optimization advice for memcpy: increase the source's alignment to 32 (and use __assume_aligned) to increase the width of loads
+rmvs_encounter_check.f90(29,19):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (32, 0)
+rmvs_encounter_check.f90(33,13):remark #34014: optimization advice for memset: increase the destination's alignment to 16 (and use __assume_aligned) to speed up library implementation
+rmvs_encounter_check.f90(33,13):remark #34026: call to memset implemented as a call to optimized library version
+rmvs_encounter_check.f90(5,4):remark #34051: REGISTER ALLOCATION : [_rmvs_classes_mp_rmvs_encounter_check_tp_] rmvs_encounter_check.f90:5
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   29[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     323
+            Global    :      92
+            Local     :     231
+        Regenerable   :      30
+        Spilled       :      19
+        
+    Routine stack
+        Variables     :     248 bytes*
+            Reads     :       7 [3.56e-01 ~ 0.4%]
+            Writes    :      22 [2.01e+00 ~ 2.0%]
+        Spills        :     120 bytes*
+            Reads     :      26 [3.63e+00 ~ 3.6%]
+            Writes    :      16 [1.39e+00 ~ 1.4%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: RMVS_CLASSES@S_RMVS_CHK::RMVS_CHK_IND
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (RMVS_CLASSES@S_RMVS_CHK::RMVS_CHK_IND) [3/3=100.0%] rmvs_encounter_check.f90(54,4)
+
+
+    Report from: Code generation optimizations [cg]
+
+rmvs_encounter_check.f90(54,4):remark #34051: REGISTER ALLOCATION : [_rmvs_classes_mp_rmvs_chk_ind_] rmvs_encounter_check.f90:54
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   12[ rax rdx rcx rsi rdi r8 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :      37
+            Global    :      15
+            Local     :      22
+        Regenerable   :       2
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
