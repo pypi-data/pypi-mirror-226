@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: plucogen
+Version: 0.2.4
+Summary: Pluggable universal code generator using dataformats like JSON and YAML to generate files with template languages like Jinja2.
+License: LGPL-3
+Author: Jörn Krenzer
+Author-email: plucogen@joern.krenzer.space
+Requires-Python: >=3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: ConfigArgParse (>=1.5.3,<2.0.0)
+Requires-Dist: Jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: jsonschema[format] (>=4.17.3,<5.0.0)
+Requires-Dist: ruamel.yaml[jinja2] (>=0.17.32,<0.18.0)
+Description-Content-Type: text/markdown
+
+# PluCoGen Core
+
+## Introduction
+
+PluCoGen, or Pluggable universal Code Generator, is conceived to be a modular program which reads data from datafiles (YAML, JSON,...) or databases and generates generic code with the help of templates (e.g. Jinja2). 
+
+While YAML, JSON and Jinja2 are part of the core (for now), PluCoGen offers the possibility to add new formats by plugin modules.
+
+## Current State
+
+The project is currently in a very early stage and experiences rapid development. Until version 1.0.0 is reached, breaking of the API might occure at any time.
+
+## Versioning
+
+PluCoGen uses semantic versioning according to the SemVer specification.
+
+## Contributing to Development
+
+Merge requests are welcome! Clone the repository an preferably use the devcontainer environment or the included Dockerfile to setup a development environment.
