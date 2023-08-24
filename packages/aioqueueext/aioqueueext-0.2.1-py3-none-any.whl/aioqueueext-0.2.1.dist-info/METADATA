@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: aioqueueext
+Version: 0.2.1
+Summary: Asyncio queues with extended functionality: peeking, setting put and get callbacks.
+Author-email: darkhaniop <darkhaniop@google.com>
+Project-URL: Homepage, https://github.com/gw-tools/aioqueueext
+Project-URL: Bug Tracker, https://github.com/gw-tools/aioqueueext/issues
+Keywords: asyncio,queue
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: AsyncIO
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# aioqueueext
+
+A package that provides asyncio Queues with additional functionality.
+
+## Work-in-Progress
+
+The repository contains modules extracted from my other project and was refactored as a separate package.
+
+In the current version, I have not verified all of the functions.
+
+Additional functions I plan to implement are:
+- `return_when_*()` - async functions to ease synchronization tasks
+- `set_on_get_callback()`
+- `set_on_put_callback()`
+- `peek_nowait()` - returns the "up-next" item without removing it from the queue
+- `peek_and_get()` - async peek and conditionally get (pop) an item from the queue
+
+## Examples
+
+### Sync Peeking
+
+```
+async def sync_peeking_example() -> None:
+    queue1 = QueueExt()
+
+    await queue1.put("apple")
+
+    item = queue1.peek_nowait()
+    print(f"first peek: {item}")  # "apple"
+
+    await queue1.put("banana")
+
+    item = queue1.peek_nowait()
+    print(f"second peek: {item}")  # "apple"
+
+    item = await queue1.get()  # popped "apple"
+
+    item = queue1.peek_nowait()
+    print(f"third peek: {item}")  # "banana"
+
+    item = await queue1.get()  # popped "banana"
+
+    # the next peek raises the QueueEmpty exception
+    try:
+        print(f"fourth peek: {queue1.peek_nowait()}")
+    except asyncio.QueueEmpty:
+        print("fourth peek failed: QueueEmpty")
+
+```
