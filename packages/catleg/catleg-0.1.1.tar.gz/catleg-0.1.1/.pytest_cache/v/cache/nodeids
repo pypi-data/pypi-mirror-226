@@ -1,0 +1,17 @@
+[
+  "tests/test_catala_parsing.py::test_emit_markdown",
+  "tests/test_catala_parsing.py::test_find_id_in_string",
+  "tests/test_catala_parsing.py::test_parse_article_id",
+  "tests/test_catala_parsing.py::test_parse_markdown",
+  "tests/test_legifrance_queries.py::test_keep_newlines",
+  "tests/test_legifrance_queries.py::test_no_extraneous_nota",
+  "tests/test_legifrance_queries.py::test_nota_format",
+  "tests/test_legifrance_queries.py::test_null_notas",
+  "tests/test_legifrance_queries.py::test_query_article",
+  "tests/test_legifrance_queries.py::test_query_article_2",
+  "tests/test_legifrance_queries.py::test_query_articles",
+  "tests/test_legifrance_queries.py::test_query_codes[100]",
+  "tests/test_legifrance_queries.py::test_query_codes[20]",
+  "tests/test_legifrance_queries.py::test_strip_links_from_markdown",
+  "tests/test_skeleton.py::test_markdown_skeleton"
+]
