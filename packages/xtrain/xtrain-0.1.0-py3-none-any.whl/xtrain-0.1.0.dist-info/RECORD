@@ -1,0 +1,13 @@
+xtrain/__init__.py,sha256=6464kZaDYWdsWwfKH9dWAU5mXHKzRa79cZDWzx3gYoA,346
+xtrain/data/__init__.py,sha256=eQdMj9ztXoxuXoYkE2BC8bzkBy6o8AeVtngXgKgK2MM,300
+xtrain/data/tf_dataset_adapter.py,sha256=55F0PoHDN_73ByHDyIaoow-3tfrRYW_b9G7lXK-nGbs,517
+xtrain/data/torch_dataloader_adapter.py,sha256=LDsPLZJ1suBM6_JRC3DYhK9blcLKdVQ_wT7Z_npBa20,795
+xtrain/data/utils.py,sha256=_eYgzB8RLbNEFq6O-di54d722EscuUUGWfgw_pJI63I,802
+xtrain/loss.py,sha256=Po6qhwggauCxirHV2RFsXzEZQWAofKgV0cYCSWSNDxU,3608
+xtrain/strategy.py,sha256=f5sVSRYMbkxaSwIEB_JkcRpHzPp6AsI0Sms2tJXFzjA,4287
+xtrain/trainer.py,sha256=jv9yrBSEy5bw0NNaKGphLt6pSr8PU3GtfAwE-oVnfZc,13083
+xtrain/types.py,sha256=9bQR4S4TK_AxEm9eOP-gVyRa0M9jhSDgZcLa_TlkZxg,942
+xtrain/utils.py,sha256=L_ZZKEwTEpGPc4q4IaYfpKTmai_qBKJua5WW1KAsKIM,2292
+xtrain-0.1.0.dist-info/METADATA,sha256=H0t4PO1ydj_ZGi5R6a7RX63VUh-_NqcVreOffXFSUIs,472
+xtrain-0.1.0.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+xtrain-0.1.0.dist-info/RECORD,,
