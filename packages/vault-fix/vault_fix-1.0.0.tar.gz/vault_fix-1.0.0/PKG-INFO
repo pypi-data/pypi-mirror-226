@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: vault-fix
+Version: 1.0.0
+Summary: Tool for importing and exporting vault fixture files
+Project-URL: Homepage, https://github.com/SnijderC/vault-fixtures
+Author-email: Chris Snijder <github@chrissnijder.nl>
+License: Copyright 2023 Chris Snijder
+        
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        
+            http://www.apache.org/licenses/LICENSE-2.0
+        
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+License-File: LICENSE.txt
+Keywords: fixture,hasicorp,migration,testing,vault
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Requires-Dist: cryptography~=41.0.0
+Requires-Dist: hvac~=1.1.0
+Requires-Dist: pyyaml~=6.0
+Requires-Dist: rich~=13.5.2
+Requires-Dist: typer[all]~=0.9.0
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: coverage>=7.2.7; extra == 'dev'
+Requires-Dist: hatch>=1.7.0; extra == 'dev'
+Requires-Dist: pip-tools>=7.1.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest-random-order>=1.1.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.2; extra == 'dev'
