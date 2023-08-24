@@ -1,0 +1,11 @@
+fictus/__init__.py,sha256=OK13cGqF-YOfQjtmiuk-3lmUOgat0CZqk7m_yDJICKQ,26
+fictus/constants.py,sha256=tBXLbi_9t_ibnRTEhJ5-6n6Ds56ZrmVS-wus9h_et8k,88
+fictus/file.py,sha256=h1at4gWNDP8-qem2kfA3xaAg94ryEJJiQU2eCz6xfaw,256
+fictus/folder.py,sha256=qBOYgdGtqW1WiIp-LqdfNzJtIEvjd8oo7WG4rdVEGZA,1882
+fictus/renderer.py,sha256=kZTI6TU0LWD2fTiRjE_2lyaJE0V4BjAJQb4om628Q0w,1848
+fictus/system.py,sha256=JmLXCu4kScyWKi3Ob6wBFXtfJMgbbh6ufATRwgQDviU,5850
+fictus-0.0.2.dist-info/LICENSE.md,sha256=TBUYsNhhjYJdOLBcgXA09GE4rqPP296zeHKSLwBAL-g,1062
+fictus-0.0.2.dist-info/METADATA,sha256=eDtqB0bFBO1nhCYGLitmHR96O4wap-wtdcapE7AT72c,2224
+fictus-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+fictus-0.0.2.dist-info/top_level.txt,sha256=FFku38hBYHtWxuze4m6a5xjTGa371GCCcV87fglbUhc,7
+fictus-0.0.2.dist-info/RECORD,,
