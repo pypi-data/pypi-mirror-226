@@ -1,0 +1,13 @@
+odoo/addons/ssi_appointment_project/README.rst,sha256=4A7asUBU5tZRO-VCiAP9HuNLEzP9KfB9Qo-Zsi2UwpQ,1269
+odoo/addons/ssi_appointment_project/__init__.py,sha256=VAkFvJXefoz7CVUwbL97HBfpLAYmvQPYXfYs71LOpzU,181
+odoo/addons/ssi_appointment_project/__manifest__.py,sha256=WzFu9zhcNxClVou6YDmudqSEBi2InAITai0RaPwHqvE,697
+odoo/addons/ssi_appointment_project/models/__init__.py,sha256=qWW9xR2pOFj1QndmTurigLPhwfOP1lrCMCeLSqpjkxw,217
+odoo/addons/ssi_appointment_project/models/appointment_schedule.py,sha256=gU263yjH04BGUUwjO0FkasqIv2TSHkTg1kfdDnxdDq0,5412
+odoo/addons/ssi_appointment_project/models/appointment_type.py,sha256=bXldDnsPof5gk9VaKyTsJNzbpo5EW9aA_P_Z_oJBLxM,815
+odoo/addons/ssi_appointment_project/static/description/icon.png,sha256=jgYgyZWITRehrxs2TO0VLVYAlqVRlwNBVNsS58dr77w,23851
+odoo/addons/ssi_appointment_project/views/appointment_schedule_views.xml,sha256=hHeOQ96jjmzBIJszAoHxkM7DpSMiDpPCnphpLYFk5xM,1592
+odoo/addons/ssi_appointment_project/views/appointment_type_views.xml,sha256=_tRh4v6ycke8572_CIKHN08vPQUlMTpETOQSAmJVxDc,844
+odoo14_addon_ssi_appointment_project-14.0.1.6.0.dist-info/METADATA,sha256=gctoxlyj5Q8yWFzFsb4INN-7Kb50kWu3WCFN6B4Xht8,1971
+odoo14_addon_ssi_appointment_project-14.0.1.6.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+odoo14_addon_ssi_appointment_project-14.0.1.6.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_ssi_appointment_project-14.0.1.6.0.dist-info/RECORD,,
