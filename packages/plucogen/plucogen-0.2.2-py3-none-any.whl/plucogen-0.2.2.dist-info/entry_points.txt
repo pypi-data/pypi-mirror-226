@@ -1,0 +1,6 @@
+[console_scripts]
+plucogen=plucogen.cli.__main__:main
+
+[plucogen.plugin.generators]
+generatorArgParsers=plucogen.generators:generatorParsers
+
