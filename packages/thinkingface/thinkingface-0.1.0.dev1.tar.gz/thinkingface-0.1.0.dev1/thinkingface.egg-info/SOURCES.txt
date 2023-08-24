@@ -1,0 +1,10 @@
+LICENSE
+README.md
+main.py
+pyproject.toml
+thinkingface.egg-info/PKG-INFO
+thinkingface.egg-info/SOURCES.txt
+thinkingface.egg-info/dependency_links.txt
+thinkingface.egg-info/entry_points.txt
+thinkingface.egg-info/requires.txt
+thinkingface.egg-info/top_level.txt
