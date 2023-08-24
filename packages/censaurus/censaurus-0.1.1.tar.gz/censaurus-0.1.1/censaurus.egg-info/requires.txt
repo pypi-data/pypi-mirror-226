@@ -1,0 +1,13 @@
+Fiona
+geopandas
+httpx
+importlib_resources
+matplotlib
+numpy
+pandas
+python_Levenshtein
+pyvis
+scipy
+setuptools
+Shapely
+thefuzz
