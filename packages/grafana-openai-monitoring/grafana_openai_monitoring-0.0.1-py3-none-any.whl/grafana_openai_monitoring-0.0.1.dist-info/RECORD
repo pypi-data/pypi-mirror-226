@@ -1,0 +1,6 @@
+grafana_openai_monitoring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grafana_openai_monitoring/monitor.py,sha256=_glGvJ7wskdKqpfCoxmY-1rcSwaw9zql9LGTqTfBVWQ,8801
+grafana_openai_monitoring-0.0.1.dist-info/LICENSE.txt,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+grafana_openai_monitoring-0.0.1.dist-info/METADATA,sha256=54tmHhrEhIlmNLju92dZyTOPAYmwc0LJ8dJnDxSBOcU,3621
+grafana_openai_monitoring-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+grafana_openai_monitoring-0.0.1.dist-info/RECORD,,
