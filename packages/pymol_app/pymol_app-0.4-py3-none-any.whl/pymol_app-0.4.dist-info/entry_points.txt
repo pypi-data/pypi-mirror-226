@@ -1,0 +1,3 @@
+[console_scripts]
+pymol=pymol_app._app:app
+
