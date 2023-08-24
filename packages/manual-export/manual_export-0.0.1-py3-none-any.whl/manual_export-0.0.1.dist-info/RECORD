@@ -1,0 +1,11 @@
+manual_export/__init__.py,sha256=bTsewJ3mf0s5XwjrOi6B9VRNaQZ6lA0JPVmtCt1Ggig,68
+manual_export/enums.py,sha256=L6XDvf4yKYkEhsW80xE_EtWxsiDcJvKQ1-UbRcAqoyM,361
+manual_export/exportInfluxdbEMS.py,sha256=7uZjWlHIQ-x-6EdjTKSHEoib54qNLOu-6gowNa0nMTc,18569
+manual_export/main.py,sha256=qNGSYAL8fAVQgv24286Qjm5pFW1oFimVHfPBIY2FD-s,4346
+manual_export/manual_export_ems.py,sha256=KZGVAibWNhl1BQGlCKD_2ivnuJO_cVx24-vbvvahmoc,4669
+manual_export/utils.py,sha256=kqps5eCWKGjJfJs0Uy5sUOhSv5-6Ok7FvSdUAQaPZiQ,6747
+manual_export-0.0.1.dist-info/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+manual_export-0.0.1.dist-info/METADATA,sha256=B1ViHKzaKi-LkGT0RhlhdcuZU50EE9xOmXPPDvLnPV4,249
+manual_export-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+manual_export-0.0.1.dist-info/top_level.txt,sha256=p3K3w41vXm1R0l1nCywFaF2ZHq3DKc_vjA8krYuLGyw,14
+manual_export-0.0.1.dist-info/RECORD,,

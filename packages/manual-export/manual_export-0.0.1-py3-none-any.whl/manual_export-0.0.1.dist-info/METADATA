@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: manual-export
+Version: 0.0.1
+Summary: example package
+Author: zhangxh1047
+Requires-Python: >=3.8.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# study Package
+This is a simple study package.
