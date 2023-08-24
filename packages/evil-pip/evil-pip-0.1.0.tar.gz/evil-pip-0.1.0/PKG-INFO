@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: evil-pip
+Version: 0.1.0
+Summary: Malicious Python Package
+Home-page: https://github.com/0xe2d0/evil-pip
+Download-URL: https://github.com/0xe2d0/evil-pip/tarball/master
+Author: 0xe2d0
+License: MIT
