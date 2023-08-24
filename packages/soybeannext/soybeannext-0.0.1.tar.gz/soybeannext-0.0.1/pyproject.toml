@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "SoybeanNext"
+version = "0.0.1"
+authors = [
+  { name="XtLab", email="wangxt881@gmail.com" },
+]
+description = "A deeplearning driving bioinformatic toolkit"
+#readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.extras]
+data = ["data/n_trait.yaml", "data/p_trait.yaml", "data/snp.txt"]
+
+[project.urls]
+"Homepage" = "https://github.com/IndigoFloyd/SoybeanNext/"
+"Bug Tracker" = "https://github.com/IndigoFloyd/SoybeanNext/issues"
