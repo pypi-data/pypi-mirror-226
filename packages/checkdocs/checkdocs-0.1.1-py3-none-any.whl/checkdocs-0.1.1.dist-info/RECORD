@@ -1,0 +1,14 @@
+checkdocs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+checkdocs/checkers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+checkdocs/checkers/check_file.py,sha256=AnSw0T96Qw52v3Pk40zavyxb63Cbex5PDSf6vRiwS98,1066
+checkdocs/checkers/check_folder.py,sha256=49Y0zrZ-UiZbg1-7KulFTLtHENaSR61Sg1jqDRd-5L4,462
+checkdocs/checkers/make_check.py,sha256=8Lgwa3RHkRngNQhl676f7k_uaCuZ3__O6gNhdi-4zZE,2496
+checkdocs/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+checkdocs/config/config.py,sha256=9Ydkfp6ONMov8zXBoQhwOn0BDsT8bsJT_VUYifcTgpQ,476
+checkdocs/main.py,sha256=UOG1Y0a4h8mZpdxHc256RidfsRbZ1w2KZDX2eL1Yrzc,830
+checkdocs/printers.py,sha256=5CKgZEALwuyqrmQxx57yRk7ZV2dxkPER2FN-tMMo8WM,2559
+checkdocs-0.1.1.dist-info/entry_points.txt,sha256=pq38CCxuXoUXCR0iE3qHriN_KXXR6ahmWQtYp_vQbak,48
+checkdocs-0.1.1.dist-info/LICENSE,sha256=jRyitTnx59uv9o_GLUg5R6SBauHiZQBtlrrN7CoPfOI,1092
+checkdocs-0.1.1.dist-info/METADATA,sha256=nGxNsLHct6gVgoyX5Lw02e-Z3p4ln0TYxiOoJwHR5oM,1015
+checkdocs-0.1.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+checkdocs-0.1.1.dist-info/RECORD,,
