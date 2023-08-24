@@ -1,0 +1,4 @@
+[console_scripts]
+grep = greplica.__main__:main
+greplica = greplica.__main__:main
+
