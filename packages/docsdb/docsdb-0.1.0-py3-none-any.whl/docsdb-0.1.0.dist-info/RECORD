@@ -1,0 +1,8 @@
+docsdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docsdb/main.py,sha256=8bMtya3YvKiyc46ZHpuXDRG2hrZt6_t5Ey7yhnnmt7E,242
+docsdb/mongodb.py,sha256=kXF3byNJhDsu5-QPRthwenZqoe-NbtAZaOOcqR2bPJI,3719
+docsdb-0.1.0.dist-info/METADATA,sha256=1krfhGP2NZzm9CqpB13vfkooBZJsnXUeb2hR3cKto1Q,291
+docsdb-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+docsdb-0.1.0.dist-info/entry_points.txt,sha256=I7CJKh21ElUlCGN86yWoUtKlDl9j07l3K3fR6hhB-J0,43
+docsdb-0.1.0.dist-info/top_level.txt,sha256=1XBXlUMkejAFLZwYDs53e5wdANSJwdFCG5olqGASvhA,7
+docsdb-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: docsdb
+Version: 0.1.0
+Summary: docsdb - generate static documentation for your database
+Author: deji
+Author-email: deji.a.ibrahim@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: click ==8.1.7
+Requires-Dist: pymongo ==4.3.3
+
+# docsdb
