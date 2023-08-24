@@ -1,0 +1,12 @@
+traceloop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+traceloop/decorators/__init__.py,sha256=Wt0N7U7y5L6h-15ttjNY-qZ8DmrjMjjrBeLJHqMaYsc,3564
+traceloop/instrumentation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+traceloop/instrumentation/openai/__init__.py,sha256=OjX__NARdIi9mnozpjt7rypipW-NlaaVP4Jk2Yp6lUc,7092
+traceloop/semconv/__init__.py,sha256=xDnxzs5WW4UafeX8X2UaWQ-K1Uo_PHkFdphx7M2sE8Q,1352
+traceloop/tracing/__init__.py,sha256=LgZGVM4Du6YjK7DP-1OSQVg3lnnGIxxfOZ_y9_dGddg,44
+traceloop/tracing/no_log_span_batch_processor.py,sha256=8FPzDXAFn4gsZEegVtrvdGJBy2tUwq9_rTOlkhk1ziU,1300
+traceloop/tracing/tracer.py,sha256=RGT9JHCCwX6WgTQPUC_B4dAOIsWj3FigFUsXwuV81oc,4251
+traceloop/utils/__init__.py,sha256=svrVY8YHqUsW8A6fBbJrMuFg0reyI-QiR_wkPH-MzSM,395
+traceloop_sdk-0.0.22.dist-info/METADATA,sha256=_SMjq2RhXL76hrpRs63tkZT3TY7ybpW7vF4lYfRIjyA,774
+traceloop_sdk-0.0.22.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+traceloop_sdk-0.0.22.dist-info/RECORD,,
