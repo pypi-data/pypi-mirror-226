@@ -1,0 +1,15 @@
+LICENSE.md
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+besco/__init__.py
+besco/besco.py
+besco/csv2turtle.py
+besco/svg2csv.py
+besco.egg-info/PKG-INFO
+besco.egg-info/SOURCES.txt
+besco.egg-info/dependency_links.txt
+besco.egg-info/entry_points.txt
+besco.egg-info/requires.txt
+besco.egg-info/top_level.txt
