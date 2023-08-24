@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mosaic_benchmark"
+version = "0.2.2"
+description = "A package to create modular link streams used for testing dynamic community detection algoritms"
+authors = ["Yasaman Asgari <yasasgary@gmail.com>"]
+readme = "README.md"
+license="MIT"
+homepage="https://yasasgari.github.io/Mosaic-benchmark/"
+repository="https://github.com/YasAsgari/Mosaic-benchmark"
+keywords=["Temporal networks", "community detection", "Graphs","Complex networks"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
