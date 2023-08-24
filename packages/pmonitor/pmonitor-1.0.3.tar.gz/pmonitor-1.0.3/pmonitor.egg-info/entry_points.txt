@@ -1,0 +1,3 @@
+[console_scripts]
+pmonitor = run_monitor:main
+
