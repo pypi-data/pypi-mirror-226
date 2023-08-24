@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: probstat
+Version: 0.0.1
+Summary: Simple python package for stats
+Author-email: Asa Rentschler <asa.rentschler@proton.me>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+Simple python package for stats.
