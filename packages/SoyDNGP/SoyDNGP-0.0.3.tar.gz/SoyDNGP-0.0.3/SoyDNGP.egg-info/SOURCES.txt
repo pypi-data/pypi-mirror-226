@@ -1,0 +1,11 @@
+setup.py
+SoyDNGP.egg-info/PKG-INFO
+SoyDNGP.egg-info/SOURCES.txt
+SoyDNGP.egg-info/dependency_links.txt
+SoyDNGP.egg-info/requires.txt
+SoyDNGP.egg-info/top_level.txt
+SoybeanNext/__init__.py
+SoybeanNext/forward.py
+SoybeanNext/main.py
+SoybeanNext/reader.py
+SoybeanNext/transform.py
