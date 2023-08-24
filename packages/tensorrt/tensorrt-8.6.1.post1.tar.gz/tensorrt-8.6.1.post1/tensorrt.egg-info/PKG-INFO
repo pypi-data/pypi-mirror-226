@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: tensorrt
+Version: 8.6.1.post1
+Summary: A high performance deep learning inference library
+Home-page: https://developer.nvidia.com/tensorrt
+Author: NVIDIA Corporation
+License: Proprietary
+Download-URL: https://github.com/nvidia/tensorrt/tags
+Keywords: nvidia tensorrt deeplearning inference
+Platform: UNKNOWN
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: numpy
+License-File: LICENSE.txt
+
+A high performance deep learning inference library
+
+To install, please execute the following:
+```
+pip install tensorrt --extra-index-url https://pypi.nvidia.com
+```
+Or add the index URL to the (space-separated) PIP_EXTRA_INDEX_URL environment variable:
+```
+export PIP_EXTRA_INDEX_URL='https://pypi.nvidia.com'
+pip install tensorrt
+```
+When the extra index url does not contain `https://pypi.nvidia.com`, a nested `pip install` will run with the proper extra index url hard-coded.
+
+
