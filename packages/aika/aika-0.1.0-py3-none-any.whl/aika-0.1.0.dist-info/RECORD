@@ -1,0 +1,11 @@
+aika/__init__.py,sha256=MXHy5DmZHPKTZCfgqSG52cowLnYWueA6jZKCAUlZOkw,52
+aika/core.py,sha256=-J0uXvZ5BIZ4O0PMfKYVJyE0iDeLUDVgkaRdurVNcmY,4135
+aika/dateparser_german.py,sha256=U1T83Z8SRGhnx0UvQjxRr8mS4400WAKAFIbb0C1Frzo,11481
+aika/daterangeparser_german.py,sha256=JL7EYkhNCNGlk8cAeHJlC-glDZ4ZEWhgdlXUA4Uoulg,6814
+aika/model.py,sha256=8XMqnrBVEj4gtDnuQTg5Yethu1xYk0sSU8WjqrQitiE,318
+aika/util.py,sha256=fXTVw1184WMpJrE9-3LQxhQnHoDg_9q7oi6eX6SQmjg,558
+aika-0.1.0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+aika-0.1.0.dist-info/METADATA,sha256=kwFtOWQYWOiVh-oMsuT96OMPLUjIR2xgaR4sbNd-JIc,5981
+aika-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+aika-0.1.0.dist-info/top_level.txt,sha256=FvXzRkOCP8_urRuRrrIGnvdgt6L2w8EI2eAFiETptK4,5
+aika-0.1.0.dist-info/RECORD,,
