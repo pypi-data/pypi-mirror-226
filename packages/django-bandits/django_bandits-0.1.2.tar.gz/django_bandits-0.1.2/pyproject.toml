@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "django-bandits"
+version = "0.1.2"
+description = "A package enabling multi-armed bandits for site optimization and Django."
+authors = ["Christian <christiandhubbs@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+homepage = "https://github.com/hubbs5/django-bandits"
+packages = [{include = "django_bandits"}]
+classifiers = [
+    "Framework :: Django",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+numpy = "^1.25.2"
+django-waffle = "^4.0.0"
+django = "^4.2.4"
+scipy = "^1.11.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+pytest-dependency = "^0.5.1"
+pytest-django = "^4.5.2"
+pytest-mock = "^3.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.test_settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = "--reuse-db"
+django_find_project = false
