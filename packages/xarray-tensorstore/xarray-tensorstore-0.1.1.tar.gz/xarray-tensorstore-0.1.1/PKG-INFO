@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xarray-tensorstore
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/google/xarray-tensorstore
+Author: Google LLC
+Author-email: noreply@google.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Provides-Extra: tests
+License-File: LICENSE
+
+UNKNOWN
+
