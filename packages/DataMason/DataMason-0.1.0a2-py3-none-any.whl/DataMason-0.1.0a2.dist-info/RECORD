@@ -1,0 +1,12 @@
+datamason/__init__.py,sha256=1_NiNZsvKDuTZS-ngKzQFHCWUER07QOx2U49paDl0so,1249
+datamason/analyze.py,sha256=4_SVpCDgX1NktVPRq-FSV3FkFCCmpjQektFMtvp46G0,2222
+datamason/interface.py,sha256=tNU3WvtUy29EiIYRNTJ4A_zFgYYJsQE1_fuepeE0Gxo,2068
+datamason/prepare.py,sha256=_pc04loZF2UXQEsttVSrybVkMRwOPaT0pE6YjWQ0kGo,2641
+datamason/transform.py,sha256=4otNJoGEK27vAzbpVnzjG6qJ9UtpWyEhsVeKt8vHVDg,2612
+datamason/validate.py,sha256=GcCNv8LGI7hxbXEzR63PFN_z8ycv82_Cf8g64W4UT9Q,2280
+datamason/visualize.py,sha256=_xnwISIOw6o9m0JujXdbZvmeHamEIgFEoAnrIqZ6uaI,2640
+DataMason-0.1.0a2.dist-info/LICENSE,sha256=KuRcTeIjgH-CB3VUESEYJsLi0BUpS8kKqYP7T0VVASE,2163
+DataMason-0.1.0a2.dist-info/METADATA,sha256=FMHiZw0Eaw0USXfic_wa7MRkrd5WUs2DSOB0CSzqqyk,4135
+DataMason-0.1.0a2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+DataMason-0.1.0a2.dist-info/top_level.txt,sha256=ZjMHHl_s3jzcGiCVie_1SEkv2A1IE3O5AueHE-BmPo4,10
+DataMason-0.1.0a2.dist-info/RECORD,,
