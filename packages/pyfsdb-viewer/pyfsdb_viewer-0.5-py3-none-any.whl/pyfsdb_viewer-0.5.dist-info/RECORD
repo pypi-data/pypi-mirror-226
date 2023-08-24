@@ -1,0 +1,9 @@
+pyfsdb_viewer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyfsdb_viewer/dataloader.py,sha256=ZsT9Ya3wggbIbxr3YHWgP7ERJHOP4cIDW1LPJVariF4,948
+pyfsdb_viewer/pyfsdb_viewer.css,sha256=nF7Pr4zfY9jUhyMwbVxDCf_Sm-72Tkj7E3ef-U0zh58,940
+pyfsdb_viewer/view.py,sha256=6JIHM8F68HLwYhal1VVG5Sh-f_DLwLpxQ4T5AEc74q4,14019
+pyfsdb_viewer-0.5.dist-info/METADATA,sha256=ifrtD3TSkbHNbS5qKAgLG-B5wh7ivsHuVt2Mj9IJIrc,647
+pyfsdb_viewer-0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyfsdb_viewer-0.5.dist-info/entry_points.txt,sha256=HGuWccGTIa5VBRiUYrCStvptkAn4gz154SYDPzGbCAs,52
+pyfsdb_viewer-0.5.dist-info/top_level.txt,sha256=nROHAkZTXhn_-4b_TBs95M0kGj51gyAbVuIfZ2mwDR8,14
+pyfsdb_viewer-0.5.dist-info/RECORD,,
