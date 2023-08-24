@@ -1,0 +1,17 @@
+roughpy/Libalgebra_lite.dll,sha256=U2I2eLmxtaqhWfQhdLJB1vaReL0kXWPNZt3B0GdnPOM,346624
+roughpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roughpy/version.py,sha256=uOVF9tCES-MfxFlepyvKHBRfwqYYjNTQt4mnp4XbUmA,227
+roughpy/_roughpy.cp39-win_amd64.pyd,sha256=CkziEskO2GKpsOYF_-Bhl2Jd35z6XyyUqf3_3ybttSo,30670848
+roughpy/_roughpy.pyi,sha256=_cz-qJ2GI2oYpyqmvmRHvczFGyLP8pty3s7rGksI8xk,19850
+roughpy/__init__.py,sha256=AQu0IQusfg4v4DChYM3vuFt3znE_amp0j5226qOIV70,2141
+roughpy/__init__.pyi,sha256=6vTvSSc6QoBmeZRuTKU28X9iwIKp4qG9j95KNVqC8M4,25
+roughpy/streams/tick_stream.py,sha256=bqDv1guypHyNAPugRVmgENK8VlLRdWBm7-LyoCxpqzc,6356
+roughpy/streams/__init__.py,sha256=AkBYB7wsLqbKvNXKdrM6_cC5Cs7FUA_WnGv_QHi3hoo,1587
+roughpy-0.0.7.dist-info/DELVEWHEEL,sha256=IG6I_z634atSouAG77H4F0FcVsWoPIGDufeEjRVnTGg,415
+roughpy-0.0.7.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roughpy-0.0.7.dist-info/METADATA,sha256=2YH4PBRY6xBQAwSQCaYQryd-ZCWxNVd0d8A41Px_yWA,9498
+roughpy-0.0.7.dist-info/RECORD,,
+roughpy-0.0.7.dist-info/WHEEL,sha256=lvztscYgjuWZSlb0621AMkdLV7rWH8iI4QSbn6IzKiI,103
+roughpy-0.0.7.dist-info/licenses/LICENSE.txt,sha256=AZ2fKEL_S8TCfxL5IP3zX9VQ8V2F3taq_Zv_NDFB3bA,1515
+roughpy.libs/.load-order-roughpy-0.0.7,sha256=V_TEVm9CzQEzGW922sVvjfYgzdhz-JalPeA5-XCw76A,13
+roughpy.libs/msvcp140.dll,sha256=7FK3VWFW3K6unFY4IOM-PV5H1NFinMeJpX1YtxDYoPw,621960
