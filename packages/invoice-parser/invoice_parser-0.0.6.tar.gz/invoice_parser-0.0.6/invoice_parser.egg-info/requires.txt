@@ -1,0 +1,7 @@
+dreamai
+langchain_ray
+pdfplumber
+pypdf
+einops
+
+[dev]
