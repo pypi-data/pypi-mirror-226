@@ -1,0 +1,2 @@
+[console_scripts]
+vplot = vplot.command_line:_entry_point
