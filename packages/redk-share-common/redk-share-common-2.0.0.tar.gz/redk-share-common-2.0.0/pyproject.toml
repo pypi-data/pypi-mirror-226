@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redk-share-common"
+version = "2.0.0"
+dependencies = [
+    "django",
+    'djangorestframework',
+]
+
+[tool.setuptools]
+packages = ["share_common","share_common.utils","share_common.migrations","share_common.configurations"]

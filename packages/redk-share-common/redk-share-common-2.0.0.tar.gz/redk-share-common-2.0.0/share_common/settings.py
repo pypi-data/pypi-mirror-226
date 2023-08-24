@@ -1,0 +1,1 @@
+from share_common.configurations.rest_framework import DEFAULT_REST_FRAMEWORK_BASE
