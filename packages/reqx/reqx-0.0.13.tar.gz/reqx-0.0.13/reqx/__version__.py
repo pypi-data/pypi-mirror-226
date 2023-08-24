@@ -1,0 +1,5 @@
+__title__ = "reqx"
+__description__ = "The Efficient Web Scraping Library"
+__version__ = "0.0.13"
+__author__ = "Trevor Hobenshield"
+__license__ = "GPLv3"
