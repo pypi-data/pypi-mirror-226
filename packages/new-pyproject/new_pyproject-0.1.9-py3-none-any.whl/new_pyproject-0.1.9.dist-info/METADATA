@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: new_pyproject
+Version: 0.1.9
+Summary: Project template for pypi packages & RTD docs
+Keywords: python,packages,pypi,RTD,Sphinx
+Author: Mike Knerr
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: homepage, https://github.com/mkner/new-pyproject/
+
+**Project template for both python packages & Read The Docs**
+
+Basic directory structures and template files for building both python pypi\
+packages and documentation for RTD (Read The Docs) using the sphinx theme.
+
+RTD documentation is here: https://new-pyproject.readthedocs.io/en/latest/
+
+
+
+
