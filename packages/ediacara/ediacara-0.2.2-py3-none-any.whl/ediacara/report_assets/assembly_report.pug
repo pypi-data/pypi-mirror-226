@@ -1,0 +1,90 @@
+#sidebar: p {{sidebar_text}}
+
+.logos
+  img(src="file:///{{ egf_logo_url }}" style="height:40px; width: auto")
+  img(src="file:///{{ ediacara_logo_url }}" style="width:70px; height:auto; float:right")
+
+hr
+h1 Assembly analysis report
+hr
+
+p.
+  This document reports the sequencing results of the <b>{{ assemblybatch.name }}</b> project.
+  Each chapter details the results of a plasmid (assembly).
+  Please see the Appendix on the last page for an explanation of the report.
+ 
+div(style="margin-top:1cm; margin-bottom:1cm;")
+
+<div style = "display:block; clear:both; page-break-after:always;"></div>
+
+
+each assembly in assemblybatch.assemblies
+
+  h2 {{ assembly.reference.id }}
+  hr
+
+  if assembly.reverse_complement
+    p
+      strong Note
+      | : the assembly is in reverse complement, compared to the reference.
+
+
+  p Plot of the aligning parts:
+
+  img#diff-figure(src="{{ assembly.assembly_figure_data }}")
+
+  //- if assembly.has_assembly_plan
+  //-   p Has assembly plan. 
+  //- else
+  //-   p No assembly plan.
+
+  p Alignment table:
+
+  {{ assembly.report_table }}
+
+  <div style = "display:block; clear:both; page-break-after:always;"></div>
+
+//- <div style = "display:block; clear:both; page-break-after:always;"></div>
+
+
+
+h2 Appendix
+
+p.
+  Each chapter describes results on a plasmid sequence (<i>de novo</i> assembly).
+  The provided (part) sequences were aligned against the sequence assembled from the reads.
+  The plot shows alignment regions as annotations. If there are unannotated segments, 
+  then none of the parts aligned there. If an assembly plan is provided,
+  then annotations are coloured based on whether they are expected in the plasmid: 
+  green: part is expected in the construct; red: part shouldn't be in the construct.
+  Grey is the reference expected sequence for the plasmid.
+  The alignments are provided in a 
+  <a href="https://github.com/lh3/miniasm/blob/master/PAF.md">PAF (pairwise mapping format) table</a>.
+  The columns of the table are:
+   <ul>
+    <li>Name: Query sequence name</li>
+    <li>Length: Query sequence length</li>
+    <li>Start: Query start coordinate</li>
+    <li>End: Query end coordinate</li>
+    <li>Strand: `+` if query and target on the same strand; `–` if opposite</li>
+    <li>T Start: Target start coordinate on the original strand</li>
+    <li>T End: Target end coordinate on the original strand</li>
+    <li>Matches: Number of matching bases in the mapping (includes mismatches but not indels)</li>
+    <li>Size: Number bases, including gaps (indels), in the mapping</li>
+    <li>Quality: Mapping quality (0–255 with 255 for missing)</li>
+  </ul> 
+
+
+style.
+  .green {
+    color: #86bf86
+  }
+  .grey {
+    color: #a9a9a9
+  }
+  .red {
+    color: #fd5a31
+  }
+  .yellow {
+    color: #f7b500
+  }
