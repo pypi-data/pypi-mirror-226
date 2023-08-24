@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: iJustWantTemplating
+Version: 1.0.1
+Summary: A very simplistic templating "language" for quick and easy development of static sites.
+Author: Neo Sahadeo
+Author-email: 
+Keywords: python,templating,static sites,static generation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+
