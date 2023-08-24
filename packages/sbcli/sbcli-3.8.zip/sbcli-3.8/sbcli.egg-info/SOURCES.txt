@@ -1,0 +1,7 @@
+README.md
+sbcli.egg-info/PKG-INFO
+sbcli.egg-info/SOURCES.txt
+sbcli.egg-info/dependency_links.txt
+sbcli.egg-info/entry_points.txt
+sbcli.egg-info/requires.txt
+sbcli.egg-info/top_level.txt
