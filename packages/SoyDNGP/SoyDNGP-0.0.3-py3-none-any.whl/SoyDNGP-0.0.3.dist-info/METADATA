@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: SoyDNGP
+Version: 0.0.3
+Summary: A deeplearning driving bioinformatic toolkit.
+Author: XtLab
+Requires-Dist: cupy
+Requires-Dist: onnxruntime-gpu
+Requires-Dist: torch
+Requires-Dist: cudf
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+
