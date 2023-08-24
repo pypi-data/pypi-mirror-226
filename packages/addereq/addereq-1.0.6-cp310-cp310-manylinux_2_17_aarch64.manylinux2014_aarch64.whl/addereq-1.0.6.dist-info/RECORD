@@ -1,0 +1,10 @@
+addereq/plotting.cpython-310-aarch64-linux-gnu.so,sha256=DANMsPpPkTmhUOZ_9rAE6vwTCl4Z74U5L3TeQu6g4dM,2190040
+addereq/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+addereq/fetching.cpython-310-aarch64-linux-gnu.so,sha256=7H8AMEyWOf6Xc6DBhRsnC9nV4bkcLZH0thWh6ked6Is,1408992
+addereq/fetching_mysql.cpython-310-aarch64-linux-gnu.so,sha256=_3RXNgVJSAZeqQN46JiJ740PAGk4OJo5EKuw6oMu6uE,1252904
+addereq/cleaning.cpython-310-aarch64-linux-gnu.so,sha256=Ka7csJvlTtYEwPktTaRuNQmQqlhoPC1kVK_XH3gFV2E,469864
+addereq-1.0.6.dist-info/RECORD,,
+addereq-1.0.6.dist-info/WHEEL,sha256=mUS4hxNBfx59QyErIFB-zSc7bBe3KLfW0jXT5R7XFVw,154
+addereq-1.0.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+addereq-1.0.6.dist-info/METADATA,sha256=W1qDI27U4yA2c-1F0Wvw5ez52lxuesdt7xI3Mq8XI6A,775
+addereq-1.0.6.dist-info/top_level.txt,sha256=kTOP05dPDJJ_BcjbvtEfnk5o3vVaHkqY_JPbOoDhkUc,8
