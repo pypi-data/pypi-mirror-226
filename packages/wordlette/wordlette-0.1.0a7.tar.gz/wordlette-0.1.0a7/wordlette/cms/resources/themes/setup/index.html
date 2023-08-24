@@ -1,0 +1,18 @@
+{% include 'head.html' %}
+<header>
+    <div class="container">
+        <div class="column">
+            <h1>{{ title }}</h1>
+            {% if subtitle %}
+            <h3>{{ subtitle }}</h3>
+            {% endif %}
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="column">
+        <p>Welcome to <i>Wordlette</i>! Your site needs some setup before it'll be ready to use.</p>
+        <a href="/setup/database" class="button setup-welcome-next">Let's Get Started</a>
+    </div>
+</div>
+{% include "foot.html" %}

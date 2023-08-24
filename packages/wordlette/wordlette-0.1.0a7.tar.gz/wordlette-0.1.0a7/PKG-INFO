@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: wordlette
+Version: 0.1.0a7
+Summary: Simple and easy framework for building complex websites.
+License: MIT
+Author: ZechCodes
+Author-email: hi@zech.codes
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: cms
+Provides-Extra: sql
+Provides-Extra: toml
+Provides-Extra: yaml
+Requires-Dist: bevy (>=2.0.0,<3.0.0)
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0) ; extra == "cms"
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0) ; extra == "yaml"
+Requires-Dist: sqlalchemy (>=2.0.19,<3.0.0) ; extra == "sql"
+Requires-Dist: starlette (>=0.28.0,<0.29.0)
+Requires-Dist: tomlkit (>=0.11.8,<0.12.0) ; extra == "toml"
+Requires-Dist: uvicorn (>=0.22.0,<0.23.0) ; extra == "cms"
+Description-Content-Type: text/markdown
+
+# Wordlette 0.1.0-alpha.5
+
+> ⚠️ This is alpha software. It is not currently intended for production use.
+
+Simple and easy content management system that anyone can use.
+
+## Usage
+
+Currently `wordlette.core` is all that is fully functional. It requires a bit of setup to get working. There is
+a [demo](https://github.com/ZechCodes/Wordlette/tree/main/demos/core) that provides a very basic working example. Clone
+this repo and install the dependencies using
+poetry:
+
+```bash
+poetry install
+```
+
+Then run the demo:
+
+```bash
+uvicorn demos.core.app:app
+```
+
+It should be accessible at [localhost:8000](http://localhost:8000).
+
+### Wordlette CMS
+
+The Wordlette CMS has been started but has no functionality. If you'd like to launch it and see what is there you just
+need to install wordlette and use its script entry point to start the server.
+
+```bash
+pip install wordlette[cms]
+wordlette serve
+```
+
+That'll start a uvicorn server on [localhost:800](HTTP://localhost:8000).
+
