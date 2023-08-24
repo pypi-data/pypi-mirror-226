@@ -1,0 +1,11 @@
+pvgispy/__init__.py,sha256=g9zTSDUPUrEyE0pB-fw0SZas40xtdB3VVmd76X61b_I,190
+pvgispy/base.py,sha256=Af6pIA_T8HsEPShzXLSrX5ur7XkIXiNzmWajRm9Lmyg,2221
+pvgispy/daily.py,sha256=t7cAsq-1K0P9Ez3DoF6-TxbghlcUlo1af5UA-nHilS4,5122
+pvgispy/hourly.py,sha256=G5z2EN_0Z7Dhe1d_gF2azCYnaTBjT8eefBxoF3J42w0,5807
+pvgispy/monthly.py,sha256=4zqC4xQowB5AlPX-I0XnO5seZ2rrc8nkOOnchg-eC_M,2014
+pvgispy/tmy.py,sha256=xqMaH18tSpyvzxMqxw0Pu9FLy1sI26qyzRPvRRNKw1U,4212
+pvgispy-0.1.2.dist-info/LICENSE,sha256=9NqoZYOv6TSHSWjOWWA5Szgax7A3EmX5Z7e_xuB1aHg,1071
+pvgispy-0.1.2.dist-info/METADATA,sha256=la5SqJb_xI3qb3sC7N95MB23tteyI4bW4d1CkQe5t8w,111
+pvgispy-0.1.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pvgispy-0.1.2.dist-info/top_level.txt,sha256=6E3051gQUaXLMoRLgNTV6tZWilqqPbwI9-Xo__nk518,8
+pvgispy-0.1.2.dist-info/RECORD,,
