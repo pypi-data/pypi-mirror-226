@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/manual_export/__init__.py
+src/manual_export/enums.py
+src/manual_export/exportInfluxdbEMS.py
+src/manual_export/main.py
+src/manual_export/manual_export_ems.py
+src/manual_export/utils.py
+src/manual_export.egg-info/PKG-INFO
+src/manual_export.egg-info/SOURCES.txt
+src/manual_export.egg-info/dependency_links.txt
+src/manual_export.egg-info/top_level.txt
