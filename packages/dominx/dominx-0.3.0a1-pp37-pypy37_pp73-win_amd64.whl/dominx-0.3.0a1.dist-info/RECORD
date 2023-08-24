@@ -1,0 +1,10 @@
+dominx/__init__.py,sha256=1-dOW788W2NkVETgd8hXztgtw9mD6_4cNTFi-aeQaDM,451
+dominx/display.c,sha256=vuFSdDFkP0y-VoS74hXptJXdI7O-G2L0t-53RFQrgzk,292
+dominx/display.pypy37-pp73-win_amd64.pyd,sha256=0s4ZkL8dJgiGUCVIo7cruvu8QJ6rwMOeVu8n1mEv9s8,10752
+dominx/stream.c,sha256=_2JOcvMhnUqcBJRFpbYy4UoTkuRCQrr9EtzBp_UmDRk,932
+dominx/stream.pypy37-pp73-win_amd64.pyd,sha256=VuDft-NEZbIumLf4o9kpKMsrwZc1GP9HD3ZA2wxG0K8,11264
+dominx-0.3.0a1.dist-info/LICENSE.txt,sha256=xjJG8u61GiOEG_eyc9wJMZyFSnMeOrSDEm0CqobMobA,1084
+dominx-0.3.0a1.dist-info/METADATA,sha256=0v6T6JvsbfdiZgsFg1-QAlW4ZWLeaQwQmkYoM6Ol_3c,6033
+dominx-0.3.0a1.dist-info/WHEEL,sha256=JnzCsUHxyjsmd_CHnPlf1TKNofFrt-y2POTXU6f7wps,107
+dominx-0.3.0a1.dist-info/top_level.txt,sha256=W2JgAtrUh4RL0CaPWlInd_dApzzYjssQBObWKR0y0OM,7
+dominx-0.3.0a1.dist-info/RECORD,,
