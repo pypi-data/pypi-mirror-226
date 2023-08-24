@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/MRpro.egg-info/PKG-INFO
+src/MRpro.egg-info/SOURCES.txt
+src/MRpro.egg-info/dependency_links.txt
+src/MRpro.egg-info/requires.txt
+src/MRpro.egg-info/top_level.txt
+src/mrpro/__init__.py
+src/mrpro/data/__init__.py
+src/mrpro/data/data.py
