@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: megaopen
+Version: 1.0.0
+Summary: llm sdk
+Home-page: https://megatechai.com
+Author: MegatechAI
+Author-email: huoshuai@megatechai.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## package of megatechai

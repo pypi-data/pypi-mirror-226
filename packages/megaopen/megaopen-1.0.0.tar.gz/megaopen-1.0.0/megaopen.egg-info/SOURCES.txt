@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+megaopen/__init__.py
+megaopen.egg-info/PKG-INFO
+megaopen.egg-info/SOURCES.txt
+megaopen.egg-info/dependency_links.txt
+megaopen.egg-info/top_level.txt
+megaopen/model_api/__init__.py
+megaopen/model_api/api.py
+megaopen/model_api/mega_params.py
+megaopen/model_api/params.py
+megaopen/utils/__init__.py
+megaopen/utils/http_client.py
+megaopen/utils/jwt_token.py
+megaopen/utils/sse_client.py
