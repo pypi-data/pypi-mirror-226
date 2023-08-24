@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rocco
+Version: 0.3.0
+Summary: Robust ATAC-seq Peak Calling for Many Samples via Convex Optimization
+Home-page: https://github.com/nolan-h-hamilton/rocco
+Author: Nolan Holt Hamilton
+Author-email: nolan.hamilton@unc.edu
+Keywords: peak-caller,atac-seq,consensus-peaks
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: cvxpy
+Requires-Dist: pandas
+Requires-Dist: pararead
+Requires-Dist: logmuse
+Requires-Dist: scipy
+Requires-Dist: pysam
+Requires-Dist: pybedtools
+Requires-Dist: ortools
+
