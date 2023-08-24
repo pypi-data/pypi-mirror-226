@@ -1,0 +1,5 @@
+reg_stat_inference/__init__.py,sha256=y3avCliWo0JDVhoQWSCyum5UUOaFWSPBywbWKIhumOY,95
+reg_stat_inference/main.py,sha256=UKw-SJ3h0Dnw126clXCJNlxAYum7y0w5Fa3tnSPwmMw,8024
+reg_stat_inference-0.1.2.dist-info/METADATA,sha256=SDSQ-PBvK0FxFSY1qIK9AnjBUBOHOL_FquLijEkGUlM,2899
+reg_stat_inference-0.1.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+reg_stat_inference-0.1.2.dist-info/RECORD,,
