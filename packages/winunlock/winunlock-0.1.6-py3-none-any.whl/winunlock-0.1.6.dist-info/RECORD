@@ -1,0 +1,11 @@
+winunlock/__init__.py,sha256=H4LU8dqnEsN9RR57Zuui0ywsphR_z3iG3CmUhGspwZ0,67
+winunlock/_iotype.py,sha256=uLB_G4OYo8YSXR1Kgry7qq12iWQ_6p-RoaRa9IfPCuc,183
+winunlock/_monkeypatch.py,sha256=QA97J67wAZkir-ZX1V2x8Yb2uQ2CKnDjhqhtqNuBk5s,3254
+winunlock/_open.py,sha256=ij8xY1gT6TUd2tChGiZbCvcaM9W2rIOx0g9M53VLI9I,5728
+winunlock/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+winunlock/version.py,sha256=i-htwMkLH5GTiz4x6dUJLL5fJLKIitlQCLIaKMKBsYc,160
+winunlock-0.1.6.dist-info/LICENSE,sha256=z6Aua0iVUcj5M9FHBwyAzr7BQ9WqgxgE8okICv6pdEU,1069
+winunlock-0.1.6.dist-info/METADATA,sha256=bPevoA5g23eodVKlAk1fw6jpct8mpwCyja-CU7gFtrk,3062
+winunlock-0.1.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+winunlock-0.1.6.dist-info/top_level.txt,sha256=ovg824nvJdAoiO6F217UbjkIxsJgVA84_g9Hgs-Qcpo,10
+winunlock-0.1.6.dist-info/RECORD,,
