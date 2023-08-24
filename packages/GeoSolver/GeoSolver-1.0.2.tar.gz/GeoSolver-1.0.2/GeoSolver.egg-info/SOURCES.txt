@@ -1,0 +1,15 @@
+MANIFEST.in
+__init__.py
+constraint.py
+doc.md
+point.py
+processor.py
+setup.py
+solver.py
+surface.py
+vector.py
+GeoSolver.egg-info/PKG-INFO
+GeoSolver.egg-info/SOURCES.txt
+GeoSolver.egg-info/dependency_links.txt
+GeoSolver.egg-info/requires.txt
+GeoSolver.egg-info/top_level.txt
