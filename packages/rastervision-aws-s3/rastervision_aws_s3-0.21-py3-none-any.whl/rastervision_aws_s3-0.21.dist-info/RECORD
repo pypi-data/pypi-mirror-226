@@ -1,0 +1,6 @@
+rastervision/aws_s3/__init__.py,sha256=0hVEaWBhM2mTzv6WlDOwMvTD7NjHqSy4qVB-vbZfvzc,421
+rastervision/aws_s3/s3_file_system.py,sha256=FCQlKL89QiuAkeyelDY3f-VzDxKZBJ_RRib-KgzcwBE,10519
+rastervision_aws_s3-0.21.dist-info/METADATA,sha256=uon8a_TU-HDk9HZ2Gnltq-3tsf1FstfUzSGMh6yDFDc,691
+rastervision_aws_s3-0.21.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+rastervision_aws_s3-0.21.dist-info/top_level.txt,sha256=EIHUN3CKBMQRXnkKnPXjUTE6umajbcPPQvtcET5e1x0,13
+rastervision_aws_s3-0.21.dist-info/RECORD,,
