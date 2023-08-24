@@ -1,0 +1,6 @@
+setup.py
+cicdservice.egg-info/PKG-INFO
+cicdservice.egg-info/SOURCES.txt
+cicdservice.egg-info/dependency_links.txt
+cicdservice.egg-info/not-zip-safe
+cicdservice.egg-info/top_level.txt
