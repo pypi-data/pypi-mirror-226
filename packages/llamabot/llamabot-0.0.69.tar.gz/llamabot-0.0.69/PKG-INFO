@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: llamabot
+Version: 0.0.69
+Requires-Python: >3.10
+Provides-Extra: tests
+Provides-Extra: docs
+Provides-Extra: prompts
+Provides-Extra: all
