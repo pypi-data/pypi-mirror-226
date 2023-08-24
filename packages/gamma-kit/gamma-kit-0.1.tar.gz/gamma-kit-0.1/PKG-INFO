@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gamma-kit
+Version: 0.1
+Home-page: https://blacktre.es
+Author: Johannes Daniel Nümm
+Author-email: code@blacktre.es
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
