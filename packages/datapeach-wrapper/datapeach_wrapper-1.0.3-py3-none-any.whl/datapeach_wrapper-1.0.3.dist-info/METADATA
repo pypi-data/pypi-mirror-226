@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: datapeach-wrapper
+Version: 1.0.3
+Summary: datapeach wrapper
+Home-page: UNKNOWN
+Author: datapeach
+Author-email: datapeach@gigarion.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mysql.connector
+Requires-Dist: nbconvert
+Requires-Dist: nbformat
+Requires-Dist: pandas
+Requires-Dist: pulsar
+Requires-Dist: pyyaml
+
+## Datapeach Wrapper
+
+
+## How to build
+```sh
+python3 setup.py sdist bdist_wheel
+```
+
