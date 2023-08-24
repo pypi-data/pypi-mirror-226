@@ -1,0 +1,3 @@
+[console_scripts]
+print-steps = bp_help.print_steps:run_student_file
+step-machine = bp_help.text_gui:run
