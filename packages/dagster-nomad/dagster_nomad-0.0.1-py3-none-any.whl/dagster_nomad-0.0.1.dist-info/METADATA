@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dagster-nomad
+Version: 0.0.1
+Summary: Dagster integration library for Nomad
+Home-page: https://github.com/paylead/dagster-nomad
+License: Apache-2.0
+Keywords: dagster,nomad,run launcher
+Author: Bruno Bonfils
+Author-email: asyd@asyd.net
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: dagster (>=1.3.5,<2.0.0)
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Project-URL: Repository, https://github.com/paylead/dagster-nomad
+Description-Content-Type: text/markdown
+
+# Dagster Nomad
+
+This is a Dagster integration for Nomad that allows running Dagster pipelines on Nomad.
+
