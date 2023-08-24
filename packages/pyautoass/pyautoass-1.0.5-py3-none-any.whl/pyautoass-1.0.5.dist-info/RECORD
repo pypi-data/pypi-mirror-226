@@ -1,0 +1,15 @@
+pyAutoAss/__init__.py,sha256=ikE14bAYSQwxUJnXk8RtKYJ7zGT2q_vCCNeQAvxmrXA,36
+pyAutoAss/pyAutoGui.py,sha256=brLVEKAngH3AqRC9VzMgErugCdXg8rjfXB0V1QHO7II,1619
+pyAutoAss/pyAutoKeyboard.py,sha256=lyXnxPUEZ1ene3yzEQnve8KiNezZ2mhhRdhzfmuvqPo,1807
+pyAutoAss/pyAutoMouse.py,sha256=5j9d-i2HxbwTaSXgenlVNwTy1zcZSK99SZcPLf6H6p0,4635
+pyAutoAss/pyautoAss.py,sha256=BiYEZVGirclyd2K368KPqun-G_oKxj3wDExVvmYnkdg,3128
+pyAutoAss/pyclipboard.py,sha256=xgo0TtXswYgRd2OkFSXNBl-WGzz8fKIeh5ZM7kCXga8,1182
+pyAutoAss/dependent/DataType.py,sha256=vUWxF8fkIogwon82ThszlPb9ydF8l2drPdyDSLkg4MY,2217
+pyAutoAss/utils/Hook.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyAutoAss/utils/Utils.py,sha256=0OfDr-Enr_Y2BXxRnccpmpQY_YGAV4UOXzrPW8k91Jg,2850
+pyAutoAss/utils/VKCODE.py,sha256=IQi5UjS420HR1fjnnFswkWQuNf_UOSIT6Eswc2CKwDw,4158
+pyautoass-1.0.5.dist-info/METADATA,sha256=qcotrru9Wj7o5jC1QpT6LMdz43pc3IGF0bNW7rQPfVU,243
+pyautoass-1.0.5.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+pyautoass-1.0.5.dist-info/top_level.txt,sha256=L-vr-DxRL8U8JNYUqTJhti3vU9Gtiuzh1q2X_7EgdoY,10
+pyautoass-1.0.5.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyautoass-1.0.5.dist-info/RECORD,,
