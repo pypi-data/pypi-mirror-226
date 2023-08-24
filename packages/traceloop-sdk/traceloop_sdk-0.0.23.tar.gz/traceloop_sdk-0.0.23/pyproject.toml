@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "traceloop-sdk"
+version = "0.0.23"
+description = ""
+authors = ["Gal Kleinman <gal@traceloop.com>", "Nir Gazit <nir@traceloop.com>", "Tomer Friedman <tomer@traceloop.com>"]
+readme = "README.md"
+packages = [{ include = "traceloop" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+opentelemetry-sdk = "^1.19.0"
+opentelemetry-api = "^1.19.0"
+opentelemetry-exporter-otlp-proto-http = "^1.19.0"
+opentelemetry-instrumentation-requests = "^0.40b0"
+opentelemetry-instrumentation-pymysql = "^0.40b0"
+opentelemetry-instrumentation-urllib3 = "^0.40b0"
+pymysql = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
