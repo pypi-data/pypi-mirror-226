@@ -1,0 +1,2 @@
+[nbdev]
+langchain_guidelines = langchain_guidelines._modidx:d
