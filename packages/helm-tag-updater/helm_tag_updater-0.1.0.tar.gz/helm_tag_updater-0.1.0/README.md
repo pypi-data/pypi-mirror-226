@@ -1,0 +1,106 @@
+<div align="center">
+<h1> ⎈ helm_tag_updater</h1>
+<p>A python CLI application which updates a helm `values.yaml` image tag</p>
+
+:Badges:
+</div>
+
+## Introducing
+
+`helm_tag_updater` is a python cli tool which can update `values.yaml` fields inside a CI/CD pipeline. Also it's an easy to use tool for implementing [GitOps](https://about.gitlab.com/topics/gitops/#:~:text=GitOps%20is%20an%20operational%20framework,applies%20them%20to%20infrastructure%20automation.) principles.
+
+## Why `helm_tag_updater` / Alternatives
+
+:TODO:
+yq
+kustomize
+sed
+
+## Installation
+
+You can install `helm_tag_updater` using:
+
+**Docker**
+
+```bash
+docker pull fayvori/helm_tag_updater
+```
+
+**pip**
+```bash
+pip install helm_tag_updater
+```
+
+**Brew**
+```bash 
+brew install fayvori/helm_tag_updater
+```
+
+## Usage
+
+![helm_image_updater tag](./assets/help-message.png)
+
+ flag                        | default                       | purpose
+-----------------------------|-------------------------------|---------
+ `--help`, `-h`              |  `None`                       | Prints `help` message and exit
+ `--tag`,  `-t`              |  `None`                       | Tag that should be applied on `values.yaml` file. NOTE: If you set `-p` or `--prod` flag tag should match regular expression `-e` `--expression` flag
+ `--filepath`, &nbsp; `-f`   |  `None`                       | Path to the `values.yaml` file
+ `--prod`, `-p`              |  `False`                      | Enables `prod` mode (e.g. enables regular expression matching)
+ `--expression`, `-e`        |  `v[0-9].[0-9].[0-9]`         | Expression that tag should match if `prod` mode is enabled
+ `--yaml_path`, `-y`         |  `image.tag`                  | A field that should be changed, nested fields separated with 
+
+## Quick start
+
+:here too:
+
+## Contributing
+
+If you want to submit a pull request to fix a bug or enhance an existing
+feature, please first open an issue and link to that issue when you
+submit your pull request.
+
+If you have any questions about a possible submission, feel free to open
+an issue too.
+
+### Pull request process
+
+1. Fork this repository
+1. Create a branch in your fork to implement the changes. We recommend using
+the issue number as part of your branch name, e.g. `1234-fixes`
+1. Ensure that any documentation is updated with the changes that are required
+by your fix.
+1. Ensure that any samples are updated if the base image has been changed.
+1. Submit the pull request. *Do not leave the pull request blank*. Explain exactly
+what your changes are meant to do and provide simple steps on how to validate
+your changes. Ensure that you reference the issue you created as well.
+The pull request will be review before it is merged.
+
+## Made by
+
+- [fayvori](https://github.com/fayvori)
+
+## License
+
+```
+MIT License
+
+Copyright (c) 2023 Ignat Belousov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
