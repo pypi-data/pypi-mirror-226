@@ -1,0 +1,5 @@
+sqlalchemy_pytest/__init__.py,sha256=5xvN_gb61nKeq5TER5dSfcArTP3DVasZGN_MQq5dNpA,23
+sqlalchemy_pytest/database.py,sha256=5Z0y4epFxpwZuGopp7MuhZsWsRDr0Ee--4fWcDZmli8,3729
+sqlalchemy_pytest-0.1.1.dist-info/WHEEL,sha256=B19PGBCYhWaz2p_UjAoRVh767nYQfk14Sn4TpIZ-nfU,87
+sqlalchemy_pytest-0.1.1.dist-info/METADATA,sha256=lu9RaSKQDdu19iW4DhXd_05Q_pATi4tmH_FRt9PhZ7Y,211
+sqlalchemy_pytest-0.1.1.dist-info/RECORD,,
