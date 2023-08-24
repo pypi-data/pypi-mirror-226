@@ -1,0 +1,526 @@
+conda mambabuild . -c bioconda
+Updating build index: /Users/mlandis/opt/miniconda3/conda-bld
+
+No numpy version specified in conda_build_config.yaml.  Falling back to default numpy value of 1.21
+WARNING:conda_build.metadata:No numpy version specified in conda_build_config.yaml.  Falling back to default numpy value of 1.21
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Attempting to finalize metadata for phyddle
+INFO:conda_build.metadata:Attempting to finalize metadata for phyddle
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/35adf087.json" was modified by another program
+bioconda/osx-64 (check zst)                         Checked  0.6s
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/2a957770.json" was modified by another program
+bioconda/noarch (check zst)                         Checked  0.1s
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/31ce02e0.json" was modified by another program
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/09cdf8bf.json" was modified by another program
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/7fb2ce72.json" was modified by another program
+pkgs/main/osx-64 (check zst)                       Checked  0.1s
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/3e39a7aa.json" was modified by another program
+pkgs/main/noarch (check zst)                       Checked  0.0s
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/dd44a73b.json" was modified by another program
+pkgs/r/osx-64 (check zst)                          Checked  0.1s
+warning  libmamba Cache file "/Users/mlandis/opt/miniconda3/pkgs/cache/4ea078d6.json" was modified by another program
+pkgs/r/noarch (check zst)                          Checked  0.0s
+pkgs/main/osx-64                                     5.0MB @   5.7MB/s  0.9s
+pkgs/main/noarch                                   696.7kB @ 658.0kB/s  0.2s
+pkgs/r/osx-64                                      820.9kB @ 652.0kB/s  0.2s
+pkgs/r/noarch                                        1.3MB @ 834.0kB/s  0.3s
+bioconda/osx-64                                      4.2MB @   1.7MB/s  2.6s
+conda-forge/noarch                                  12.1MB @   3.3MB/s  3.6s
+bioconda/noarch                                      4.6MB @   1.2MB/s  3.9s
+conda-forge/osx-64                                  26.6MB @   4.7MB/s  5.7s
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @ 250.0kB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @ 266.2kB/s  0.0s
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @   2.1MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   2.5MB/s  0.0s
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @   2.2MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   3.1MB/s  0.0s
+BUILD START: ['phyddle-development-py39_0.tar.bz2']
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @   2.0MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   2.4MB/s  0.0s
+
+## Package Plan ##
+
+  environment location: /Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+
+
+The following NEW packages will be INSTALLED:
+
+    bzip2:              1.0.8-h0d85af4_4          conda-forge
+    c-ares:             1.19.1-h0dc2134_0         conda-forge
+    ca-certificates:    2023.7.22-h8857fd0_0      conda-forge
+    curl:               8.2.1-h5f667d7_0          conda-forge
+    editables:          0.3-pyhd8ed1ab_0          conda-forge
+    gettext:            0.21.1-h8a4c099_0         conda-forge
+    git:                2.41.0-pl5321h5c607e1_0   conda-forge
+    git-lfs:            3.4.0-h694c41f_0          conda-forge
+    hatchling:          1.18.0-pyhd8ed1ab_0       conda-forge
+    importlib-metadata: 6.8.0-pyha770c72_0        conda-forge
+    krb5:               1.21.2-hb884880_0         conda-forge
+    libcurl:            8.2.1-h5f667d7_0          conda-forge
+    libcxx:             16.0.6-hd57cbcb_0         conda-forge
+    libedit:            3.1.20191231-h0678c8f_2   conda-forge
+    libev:              4.33-haf1e3a3_1           conda-forge
+    libexpat:           2.5.0-hf0c8a7f_1          conda-forge
+    libffi:             3.4.2-h0d85af4_5          conda-forge
+    libiconv:           1.17-hac89ed1_0           conda-forge
+    libnghttp2:         1.52.0-he2ab024_0         conda-forge
+    libsqlite:          3.42.0-h58db7d2_0         conda-forge
+    libssh2:            1.11.0-hd019ec5_0         conda-forge
+    libzlib:            1.2.13-h8a1eda9_5         conda-forge
+    ncurses:            6.4-hf0c8a7f_0            conda-forge
+    openssl:            3.1.2-h8a1eda9_0          conda-forge
+    packaging:          23.1-pyhd8ed1ab_0         conda-forge
+    pathspec:           0.11.2-pyhd8ed1ab_0       conda-forge
+    pcre2:              10.40-h1c4e4bc_0          conda-forge
+    perl:               5.32.1-4_h0dc2134_perl5   conda-forge
+    pip:                23.2.1-pyhd8ed1ab_0       conda-forge
+    pluggy:             1.2.0-pyhd8ed1ab_0        conda-forge
+    python:             3.9.17-h07e1443_0_cpython conda-forge
+    readline:           8.2-h9e318b2_1            conda-forge
+    setuptools:         68.0.0-pyhd8ed1ab_0       conda-forge
+    tk:                 8.6.12-h5dbffcc_0         conda-forge
+    tomli:              2.0.1-pyhd8ed1ab_0        conda-forge
+    trove-classifiers:  2023.8.7-pyhd8ed1ab_0     conda-forge
+    tzdata:             2023c-h71feb2d_0          conda-forge
+    wheel:              0.41.1-pyhd8ed1ab_0       conda-forge
+    xz:                 5.2.6-h775f41a_0          conda-forge
+    zipp:               3.16.2-pyhd8ed1ab_0       conda-forge
+    zstd:               1.5.2-h829000d_7          conda-forge
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @   2.2MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   2.9MB/s  0.0s
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      127.0 B @   1.3MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   1.7MB/s  0.0s
+
+## Package Plan ##
+
+  environment location: /Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_build_env
+
+
+Source cache directory is: /Users/mlandis/opt/miniconda3/conda-bld/src_cache
+INFO:conda_build.source:Source cache directory is: /Users/mlandis/opt/miniconda3/conda-bld/src_cache
+No hash (md5, sha1, sha256) provided for phyddle-0.0.8.tar.gz.  Source download forced.  Add hash to recipe to use source cache.
+WARNING:conda_build.source:No hash (md5, sha1, sha256) provided for phyddle-0.0.8.tar.gz.  Source download forced.  Add hash to recipe to use source cache.
+Downloading source to cache: phyddle-0.0.8.tar.gz
+INFO:conda_build.source:Downloading source to cache: phyddle-0.0.8.tar.gz
+Downloading https://files.pythonhosted.org/packages/4b/9e/408cb02b063226ecd474f2bb600371b6ae723c05ddda651eba7429e6b955/phyddle-0.0.8.tar.gz
+INFO:conda_build.source:Downloading https://files.pythonhosted.org/packages/4b/9e/408cb02b063226ecd474f2bb600371b6ae723c05ddda651eba7429e6b955/phyddle-0.0.8.tar.gz
+Success
+INFO:conda_build.source:Success
+Extracting download
+source tree in: /Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work
+export PREFIX=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+export BUILD_PREFIX=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_build_env
+export SRC_DIR=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work
+Using pip 23.2.1 from $PREFIX/lib/python3.9/site-packages/pip (python 3.9)
+Non-user install because user site-packages disabled
+Ignoring indexes: https://pypi.org/simple
+Created temporary directory: /private/tmp/pip-build-tracker-m8n4od4_
+Initialized build tracking at /private/tmp/pip-build-tracker-m8n4od4_
+Created build tracker: /private/tmp/pip-build-tracker-m8n4od4_
+Entered build tracker: /private/tmp/pip-build-tracker-m8n4od4_
+Created temporary directory: /private/tmp/pip-install-dfxi0u0f
+Created temporary directory: /private/tmp/pip-ephem-wheel-cache-01titoub
+Processing $SRC_DIR
+  Added file://$SRC_DIR to build tracker '/private/tmp/pip-build-tracker-m8n4od4_'
+  Created temporary directory: /private/tmp/pip-modern-metadata-oda_nlmy
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Source in $SRC_DIR has version 0.0.8, which satisfies requirement phyddle==0.0.8 from file://$SRC_DIR
+  Removed phyddle==0.0.8 from file://$SRC_DIR from build tracker '/private/tmp/pip-build-tracker-m8n4od4_'
+Created temporary directory: /private/tmp/pip-unpack-1wp3om7_
+Building wheels for collected packages: phyddle
+  Created temporary directory: /private/tmp/pip-wheel-71lvknzh
+  Destination directory: /private/tmp/pip-wheel-71lvknzh
+  Building wheel for phyddle (pyproject.toml): started
+  Running command Building wheel for phyddle (pyproject.toml)
+  Building wheel for phyddle (pyproject.toml): finished with status 'done'
+  Created wheel for phyddle: filename=phyddle-0.0.8-py3-none-any.whl size=59277 sha256=17e58a1a3cca95e875882c57d1c6ea2963505aa74a7d8b77a2e528eb83519fdf
+  Stored in directory: /private/tmp/pip-ephem-wheel-cache-01titoub/wheels/40/c9/41/bfc61435ab0b851664ab072780d44ba26115fc5a347d9cc3d0
+Successfully built phyddle
+Installing collected packages: phyddle
+
+  changing mode of $PREFIX/bin/phyddle to 755
+Successfully installed phyddle-0.0.8
+Removed build tracker: '/private/tmp/pip-build-tracker-m8n4od4_'
+
+Resource usage statistics from building phyddle:
+   Process count: 3
+   CPU time: Sys=0:00:00.2, User=0:00:00.4
+   Memory: 51.9M
+   Disk usage: 73.0K
+   Time elapsed: 0:00:08.2
+
+
+Packaging phyddle
+INFO:conda_build.build:Packaging phyddle
+Packaging phyddle-development-py39_0
+INFO:conda_build.build:Packaging phyddle-development-py39_0
+compiling .pyc files...
+number of files: 29
+Fixing permissions
+INFO :: Time taken to mark (prefix)
+        0 replacements in 0 files was 0.11 seconds
+Files containing CONDA_PREFIX
+-----------------------------
+bin/phyddle (text): Patching
+Importing conda-verify failed.  Please be sure to test your packages.  conda install conda-verify to make this message go away.
+WARNING:conda_build.build:Importing conda-verify failed.  Please be sure to test your packages.  conda install conda-verify to make this message go away.
+TEST START: /Users/mlandis/opt/miniconda3/conda-bld/osx-64/phyddle-development-py39_0.tar.bz2
+Adding in variants from /var/folders/s3/5zk1rpb13nd8zp4f5j0mn_mh0000gn/T/tmpkkdksl9r/info/recipe/conda_build_config.yaml
+INFO:conda_build.variants:Adding in variants from /var/folders/s3/5zk1rpb13nd8zp4f5j0mn_mh0000gn/T/tmpkkdksl9r/info/recipe/conda_build_config.yaml
+Renaming work directory '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work' to '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64'
+INFO:conda_build.utils:Renaming work directory '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work' to '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64'
+shutil.move(work)=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work, dest=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64)
+INFO:conda_build.utils:shutil.move(work)=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work, dest=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64)
+Reloading output folder: /Users/mlandis/opt/miniconda3/conda-bld
+Users/mlandis/opt/miniconda3/conda-bld/osx-64 (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch (c.. Checked  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/osx-64      921.0 B @  15.1MB/s  0.0s
+Users/mlandis/opt/miniconda3/conda-bld/noarch      127.0 B @   3.0MB/s  0.0s
+
+## Package Plan ##
+
+  environment location: /Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p
+
+
+The following NEW packages will be INSTALLED:
+
+    absl-py:                   1.4.0-pyhd8ed1ab_0           conda-forge
+    aiohttp:                   3.8.5-py39hdc70f33_0         conda-forge
+    aiosignal:                 1.3.1-pyhd8ed1ab_0           conda-forge
+    astunparse:                1.6.3-pyhd8ed1ab_0           conda-forge
+    async-timeout:             4.0.3-pyhd8ed1ab_0           conda-forge
+    atk-1.0:                   2.38.0-h1d18e73_1            conda-forge
+    attrs:                     23.1.0-pyh71513ae_1          conda-forge
+    blinker:                   1.6.2-pyhd8ed1ab_0           conda-forge
+    brotli:                    1.0.9-hb7f2c08_9             conda-forge
+    brotli-bin:                1.0.9-hb7f2c08_9             conda-forge
+    brotlipy:                  0.7.0-py39ha30fb19_1005      conda-forge
+    bzip2:                     1.0.8-h0d85af4_4             conda-forge
+    c-ares:                    1.19.1-h0dc2134_0            conda-forge
+    ca-certificates:           2023.7.22-h8857fd0_0         conda-forge
+    cached-property:           1.5.2-hd8ed1ab_1             conda-forge
+    cached_property:           1.5.2-pyha770c72_1           conda-forge
+    cachetools:                5.3.1-pyhd8ed1ab_0           conda-forge
+    cairo:                     1.16.0-h09dd18c_1016         conda-forge
+    certifi:                   2023.7.22-pyhd8ed1ab_0       conda-forge
+    cffi:                      1.15.1-py39h131948b_3        conda-forge
+    charset-normalizer:        3.2.0-pyhd8ed1ab_0           conda-forge
+    click:                     8.1.6-unix_pyh707e725_0      conda-forge
+    colorama:                  0.4.6-pyhd8ed1ab_0           conda-forge
+    contourpy:                 1.1.0-py39h8ee36c8_0         conda-forge
+    cryptography:              41.0.3-py39he8b0a07_0        conda-forge
+    cycler:                    0.11.0-pyhd8ed1ab_0          conda-forge
+    dataclasses:               0.8-pyhc8e2a94_3             conda-forge
+    dendropy:                  4.6.1-pyhdfd78af_0           bioconda
+    expat:                     2.5.0-hf0c8a7f_1             conda-forge
+    flatbuffers:               23.5.26-he965462_1           conda-forge
+    font-ttf-dejavu-sans-mono: 2.37-hab24e00_0              conda-forge
+    font-ttf-inconsolata:      3.000-h77eed37_0             conda-forge
+    font-ttf-source-code-pro:  2.038-h77eed37_0             conda-forge
+    font-ttf-ubuntu:           0.83-hab24e00_0              conda-forge
+    fontconfig:                2.14.2-h5bb23bf_0            conda-forge
+    fonts-conda-ecosystem:     1-0                          conda-forge
+    fonts-conda-forge:         1-0                          conda-forge
+    fonttools:                 4.42.0-py39hdc70f33_0        conda-forge
+    freetype:                  2.12.1-h3f81eb7_1            conda-forge
+    fribidi:                   1.0.10-hbcb3906_0            conda-forge
+    frozenlist:                1.4.0-py39hdc70f33_0         conda-forge
+    gast:                      0.4.0-pyh9f0ad1d_0           conda-forge
+    gdk-pixbuf:                2.42.10-hff535ac_2           conda-forge
+    gettext:                   0.21.1-h8a4c099_0            conda-forge
+    giflib:                    5.2.1-hb7f2c08_3             conda-forge
+    google-auth:               2.22.0-pyh1a96a4e_0          conda-forge
+    google-auth-oauthlib:      1.0.0-pyhd8ed1ab_1           conda-forge
+    google-pasta:              0.2.0-pyh8c360ce_0           conda-forge
+    graphite2:                 1.3.13-h2e338ed_1001         conda-forge
+    graphviz:                  8.1.0-hc7f41f9_0             conda-forge
+    grpcio:                    1.54.3-py39h73e1029_0        conda-forge
+    gtk2:                      2.24.33-h7c1209e_2           conda-forge
+    gts:                       0.7.6-h53e17e3_4             conda-forge
+    h5py:                      3.9.0-nompi_py39h95d806b_101 conda-forge
+    harfbuzz:                  7.3.0-h413ba03_0             conda-forge
+    hdf5:                      1.14.1-nompi_hedada53_100    conda-forge
+    icu:                       72.1-h7336db1_0              conda-forge
+    idna:                      3.4-pyhd8ed1ab_0             conda-forge
+    importlib-metadata:        6.8.0-pyha770c72_0           conda-forge
+    importlib-resources:       6.0.1-pyhd8ed1ab_0           conda-forge
+    importlib_metadata:        6.8.0-hd8ed1ab_0             conda-forge
+    importlib_resources:       6.0.1-pyhd8ed1ab_0           conda-forge
+    jax:                       0.4.14-pyhd8ed1ab_1          conda-forge
+    jaxlib:                    0.4.14-cpu_py39h7d52e87_1    conda-forge
+    joblib:                    1.3.2-pyhd8ed1ab_0           conda-forge
+    keras:                     2.12.0-pyhd8ed1ab_0          conda-forge
+    keras-preprocessing:       1.1.2-pyhd8ed1ab_0           conda-forge
+    kiwisolver:                1.4.4-py39h92daf61_1         conda-forge
+    krb5:                      1.21.2-hb884880_0            conda-forge
+    lcms2:                     2.15-h2dcdeff_1              conda-forge
+    lerc:                      4.0.0-hb486fe8_0             conda-forge
+    libabseil:                 20230125.3-cxx17_h000cb23_0  conda-forge
+    libaec:                    1.0.6-hf0c8a7f_1             conda-forge
+    libblas:                   3.9.0-17_osx64_openblas      conda-forge
+    libbrotlicommon:           1.0.9-hb7f2c08_9             conda-forge
+    libbrotlidec:              1.0.9-hb7f2c08_9             conda-forge
+    libbrotlienc:              1.0.9-hb7f2c08_9             conda-forge
+    libcblas:                  3.9.0-17_osx64_openblas      conda-forge
+    libcurl:                   8.2.1-h5f667d7_0             conda-forge
+    libcxx:                    16.0.6-hd57cbcb_0            conda-forge
+    libdeflate:                1.18-hac1461d_0              conda-forge
+    libedit:                   3.1.20191231-h0678c8f_2      conda-forge
+    libev:                     4.33-haf1e3a3_1              conda-forge
+    libexpat:                  2.5.0-hf0c8a7f_1             conda-forge
+    libffi:                    3.4.2-h0d85af4_5             conda-forge
+    libgd:                     2.3.3-h3d994df_6             conda-forge
+    libgfortran:               5.0.0-12_3_0_h97931a8_1      conda-forge
+    libgfortran5:              12.3.0-hbd3c1fe_1            conda-forge
+    libglib:                   2.76.4-hc62aa5d_0            conda-forge
+    libgrpc:                   1.54.3-hfaa49da_0            conda-forge
+    libiconv:                  1.17-hac89ed1_0              conda-forge
+    libjpeg-turbo:             2.1.5.1-hb7f2c08_0           conda-forge
+    liblapack:                 3.9.0-17_osx64_openblas      conda-forge
+    libnghttp2:                1.52.0-he2ab024_0            conda-forge
+    libopenblas:               0.3.23-openmp_h429af6e_0     conda-forge
+    libpng:                    1.6.39-ha978bb4_0            conda-forge
+    libprotobuf:               3.21.12-hbc0c0cd_0           conda-forge
+    librsvg:                   2.56.3-hec3db73_0            conda-forge
+    libsqlite:                 3.42.0-h58db7d2_0            conda-forge
+    libssh2:                   1.11.0-hd019ec5_0            conda-forge
+    libtiff:                   4.5.1-hf955e92_0             conda-forge
+    libtool:                   2.4.7-hf0c8a7f_0             conda-forge
+    libwebp:                   1.3.1-hc961f54_0             conda-forge
+    libwebp-base:              1.3.1-h0dc2134_0             conda-forge
+    libxcb:                    1.15-hb7f2c08_0              conda-forge
+    libxml2:                   2.11.5-hd95e348_0            conda-forge
+    libzlib:                   1.2.13-h8a1eda9_5            conda-forge
+    llvm-openmp:               16.0.6-hff08bdf_0            conda-forge
+    markdown:                  3.4.4-pyhd8ed1ab_0           conda-forge
+    markupsafe:                2.1.3-py39hdc70f33_0         conda-forge
+    matplotlib:                3.7.2-py39h6e9494a_0         conda-forge
+    matplotlib-base:           3.7.2-py39h6e39af2_0         conda-forge
+    ml_dtypes:                 0.2.0-py39h11b3245_1         conda-forge
+    multidict:                 6.0.4-py39ha30fb19_0         conda-forge
+    munkres:                   1.0.7-py_1                   bioconda
+    ncurses:                   6.4-hf0c8a7f_0               conda-forge
+    numpy:                     1.25.2-py39h892e69a_0        conda-forge
+    oauthlib:                  3.2.2-pyhd8ed1ab_0           conda-forge
+    openjpeg:                  2.5.0-h13ac156_2             conda-forge
+    openssl:                   3.1.2-h8a1eda9_0             conda-forge
+    opt_einsum:                3.3.0-pyhd8ed1ab_1           conda-forge
+    packaging:                 23.1-pyhd8ed1ab_0            conda-forge
+    pandas:                    2.0.3-py39h11b3245_1         conda-forge
+    pango:                     1.50.14-hbce5e75_1           conda-forge
+    pcre2:                     10.40-h1c4e4bc_0             conda-forge
+    phyddle:                   development-py39_0           local
+    pillow:                    10.0.0-py39he6683de_0        conda-forge
+    pip:                       23.2.1-pyhd8ed1ab_0          conda-forge
+    pixman:                    0.40.0-hbcb3906_0            conda-forge
+    platformdirs:              3.5.1-pyhd8ed1ab_0           conda-forge
+    pooch:                     1.7.0-pyha770c72_3           conda-forge
+    protobuf:                  4.21.12-py39h7a8716b_0       conda-forge
+    pthread-stubs:             0.4-hc929b4f_1001            conda-forge
+    pyasn1:                    0.4.8-py_0                   conda-forge
+    pyasn1-modules:            0.2.7-py_0                   conda-forge
+    pycparser:                 2.21-pyhd8ed1ab_0            conda-forge
+    pydot:                     1.4.2-py39h6e9494a_3         conda-forge
+    pyjwt:                     2.8.0-pyhd8ed1ab_0           conda-forge
+    pyopenssl:                 23.2.0-pyhd8ed1ab_1          conda-forge
+    pyparsing:                 3.0.9-pyhd8ed1ab_0           conda-forge
+    pypdf:                     3.15.1-pyhd8ed1ab_0          conda-forge
+    pysocks:                   1.7.1-pyha2e5f31_6           conda-forge
+    python:                    3.9.17-h07e1443_0_cpython    conda-forge
+    python-dateutil:           2.8.2-pyhd8ed1ab_0           conda-forge
+    python-flatbuffers:        23.5.26-pyhd8ed1ab_0         conda-forge
+    python-graphviz:           0.20.1-pyh22cad53_0          conda-forge
+    python-tzdata:             2023.3-pyhd8ed1ab_0          conda-forge
+    python_abi:                3.9-3_cp39                   conda-forge
+    pytz:                      2023.3-pyhd8ed1ab_0          conda-forge
+    pyu2f:                     0.1.5-pyhd8ed1ab_0           conda-forge
+    re2:                       2023.03.02-h096449b_0        conda-forge
+    readline:                  8.2-h9e318b2_1               conda-forge
+    requests:                  2.31.0-pyhd8ed1ab_0          conda-forge
+    requests-oauthlib:         1.3.1-pyhd8ed1ab_0           conda-forge
+    rsa:                       4.9-pyhd8ed1ab_0             conda-forge
+    scikit-learn:              1.3.0-py39hcb35850_0         conda-forge
+    scipy:                     1.11.1-py39hded996c_0        conda-forge
+    setuptools:                68.0.0-pyhd8ed1ab_0          conda-forge
+    six:                       1.16.0-pyh6c4a22f_0          conda-forge
+    snappy:                    1.1.10-h225ccf5_0            conda-forge
+    tensorboard:               2.12.3-pyhd8ed1ab_0          conda-forge
+    tensorboard-data-server:   0.7.0-py39hbeae22c_0         conda-forge
+    tensorflow:                2.12.1-cpu_py39hb0a6171_0    conda-forge
+    tensorflow-base:           2.12.1-cpu_py39h905e513_0    conda-forge
+    tensorflow-estimator:      2.12.1-cpu_py39h8a426f1_0    conda-forge
+    termcolor:                 2.3.0-pyhd8ed1ab_0           conda-forge
+    threadpoolctl:             3.2.0-pyha21a80b_0           conda-forge
+    tk:                        8.6.12-h5dbffcc_0            conda-forge
+    tornado:                   6.3.2-py39hdc70f33_0         conda-forge
+    tqdm:                      4.66.1-pyhd8ed1ab_0          conda-forge
+    typing-extensions:         4.5.0-hd8ed1ab_0             conda-forge
+    typing_extensions:         4.5.0-pyha770c72_0           conda-forge
+    tzdata:                    2023c-h71feb2d_0             conda-forge
+    unicodedata2:              15.0.0-py39ha30fb19_0        conda-forge
+    urllib3:                   1.26.15-pyhd8ed1ab_0         conda-forge
+    werkzeug:                  2.3.7-pyhd8ed1ab_0           conda-forge
+    wheel:                     0.41.1-pyhd8ed1ab_0          conda-forge
+    wrapt:                     1.15.0-py39ha30fb19_0        conda-forge
+    xorg-libxau:               1.0.11-h0dc2134_0            conda-forge
+    xorg-libxdmcp:             1.1.3-h35c211d_0             conda-forge
+    xz:                        5.2.6-h775f41a_0             conda-forge
+    yarl:                      1.9.2-py39hdc70f33_0         conda-forge
+    zipp:                      3.16.2-pyhd8ed1ab_0          conda-forge
+    zlib:                      1.2.13-h8a1eda9_5            conda-forge
+    zstd:                      1.5.2-h829000d_7             conda-forge
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working...
+
+done
+export PREFIX=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p
+export SRC_DIR=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/test_tmp
+import: 'phyddle'
+import: 'phyddle'
++ phyddle --help
+usage: phyddle [-h] [-c] [-p] [-s] [-v] [-f] [--make_cfg] [--use_parallel]
+               [--num_proc] [--sim_dir] [--fmt_dir] [--trn_dir] [--est_dir]
+               [--plt_dir] [--log_dir] [--sim_command] [--sim_logging]
+               [--start_idx] [--end_idx] [--sim_more] [--sim_batch_size]
+               [--encode_all_sim] [--num_char] [--num_states] [--min_num_taxa]
+               [--max_num_taxa] [--downsample_taxa] [--tree_width]
+               [--tree_encode] [--brlen_encode] [--char_encode] [--param_est]
+               [--param_data] [--char_format] [--tensor_format]
+               [--save_phyenc_csv] [--trn_objective] [--num_epochs]
+               [--trn_batch_size] [--prop_test] [--prop_val] [--prop_cal]
+               [--cpi_coverage] [--cpi_asymmetric] [--loss] [--optimizer]
+               [--metrics] [--est_prefix] [--plot_train_color]
+               [--plot_label_color] [--plot_test_color] [--plot_val_color]
+               [--plot_aux_color] [--plot_est_color]
+
+Software to fiddle around with deep learning for phylogenetic models
+
+optional arguments:
+  -h, --help           show this help message and exit
+  -c , --cfg           Config file name
+  -p , --proj          Project name(s) for pipeline step(s)
+  -s , --step          Pipeline step(s) defined with (S)imulate, (F)ormat,
+                       (T)rain, (E)stimate, (P)lot, or (A)ll
+  -v , --verbose       Verbose output to screen?
+  -f, --force          Arguments override config file settings
+  --make_cfg           Write default config file to 'config_default.py'?'
+  --use_parallel       Use parallelization? (recommended)
+  --num_proc           Number of cores for multiprocessing (-N for all but N)
+  --sim_dir            Directory for raw simulated data
+  --fmt_dir            Directory for tensor-formatted simulated data
+  --trn_dir            Directory for trained networks and training output
+  --est_dir            Directory for new datasets and estimates
+  --plt_dir            Directory for plotted results
+  --log_dir            Directory for logs of analysis metadata
+  --sim_command        Simulation command to run single job (see
+                       documentation)
+  --sim_logging        Simulation logging style
+  --start_idx          Start replicate index for simulated training dataset
+  --end_idx            End replicate index for simulated training dataset
+  --sim_more           Add more simulations with auto-generated indices
+  --sim_batch_size     Number of replicates per simulation command
+  --encode_all_sim     Encode all simulated replicates into tensor?
+  --num_char           Number of characters
+  --num_states         Number of states per character
+  --min_num_taxa       Minimum number of taxa allowed when formatting
+  --max_num_taxa       Maximum number of taxa allowed when formatting
+  --downsample_taxa    Downsampling strategy taxon count
+  --tree_width         Width of phylo-state tensor
+  --tree_encode        Encoding strategy for tree
+  --brlen_encode       Encoding strategy for branch lengths
+  --char_encode        Encoding strategy for character data
+  --param_est          Model parameters to estimate
+  --param_data         Model parameters treated as data
+  --char_format        File format for character data
+  --tensor_format      File format for training example tensors
+  --save_phyenc_csv    Save encoded phylogenetic tensor encoding to csv?
+  --trn_objective      Objective of training procedure
+  --num_epochs         Number of training epochs
+  --trn_batch_size     Training batch sizes
+  --prop_test          Proportion of data used as test examples (assess
+                       trained network performance)
+  --prop_val           Proportion of data used as validation examples
+                       (diagnose network overtraining)
+  --prop_cal           Proportion of data used as calibration examples
+                       (calibrate CPIs)
+  --cpi_coverage       Expected coverage percent for calibrated prediction
+                       intervals (CPIs)
+  --cpi_asymmetric     Use asymmetric (True) or symmetric (False) adjustments
+                       for CPIs?
+  --loss               Loss function for optimization
+  --optimizer          Method used for optimizing neural network
+  --metrics            Recorded training metrics
+  --est_prefix         Predict results for this dataset
+  --plot_train_color   Plotting color for training data elements
+  --plot_label_color   Plotting color for training label elements
+  --plot_test_color    Plotting color for test data elements
+  --plot_val_color     Plotting color for validation data elements
+  --plot_aux_color     Plotting color for auxiliary data elements
+  --plot_est_color     Plotting color for new estimation elements
++ exit 0
+
+Resource usage statistics from testing phyddle:
+   Process count: 4
+   CPU time: Sys=0:00:00.5, User=0:00:02.2
+   Memory: 64.6M
+   Disk usage: 32B
+   Time elapsed: 0:00:22.4
+
+
+TEST END: /Users/mlandis/opt/miniconda3/conda-bld/osx-64/phyddle-development-py39_0.tar.bz2
+Renaming work directory '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work' to '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64_main_build_loop'
+INFO:conda_build.utils:Renaming work directory '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work' to '/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64_main_build_loop'
+shutil.move(work)=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work, dest=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64_main_build_loop)
+INFO:conda_build.utils:shutil.move(work)=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work, dest=/Users/mlandis/opt/miniconda3/conda-bld/phyddle_1692232840758/work_moved_phyddle-development-py39_0_osx-64_main_build_loop)
+# Automatic uploading is disabled
+# If you want to upload package(s) to anaconda.org later, type:
+
+
+# To have conda build upload to anaconda.org automatically, use
+# conda config --set anaconda_upload yes
+anaconda upload \
+    /Users/mlandis/opt/miniconda3/conda-bld/osx-64/phyddle-development-py39_0.tar.bz2
+anaconda_upload is not set.  Not uploading wheels: []
+
+INFO :: The inputs making up the hashes for the built packages are as follows:
+{
+  "phyddle-development-py39_0": {
+    "recipe": {}
+  }
+}
+
+
+####################################################################################
+Resource usage summary:
+
+Total time: 0:06:02.9
+CPU usage: sys=0:00:00.7, user=0:00:02.5
+Maximum memory usage observed: 64.6M
+Total disk usage observed (not including envs): 73.1K
