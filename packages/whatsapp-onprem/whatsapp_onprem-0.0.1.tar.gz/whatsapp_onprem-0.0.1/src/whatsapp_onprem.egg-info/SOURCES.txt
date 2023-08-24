@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/whatsapp_onprem.egg-info/PKG-INFO
+src/whatsapp_onprem.egg-info/SOURCES.txt
+src/whatsapp_onprem.egg-info/dependency_links.txt
+src/whatsapp_onprem.egg-info/requires.txt
+src/whatsapp_onprem.egg-info/top_level.txt

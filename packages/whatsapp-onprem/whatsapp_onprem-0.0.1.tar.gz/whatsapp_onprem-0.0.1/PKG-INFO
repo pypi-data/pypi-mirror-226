@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: whatsapp_onprem
+Version: 0.0.1
+Summary: WhatsAppPrem is a powerful Python module that empowers you to seamlessly integrate WhatsApp messaging within your on-premises environment.
+Home-page: https://github.com/Shlok221B/whatsapp-onprem
+Author: Shlok Sawant
+License: UNKNOWN
+Keywords: whatsapp,whatsapp on premises,whatsapp business api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
