@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bp-help
+Version: 0.1
+Home-page: 
+Author: Kasper Munch
+Author-email: kasmunch@birc.au.dk
+License-File: LICENSE
+Requires-Dist: pygments
+Requires-Dist: textual
+Requires-Dist: cloudpickle
+Requires-Dist: rich
+Requires-Dist: art
+
