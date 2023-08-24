@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "dependencyhealth"
+version = "0.1.0"
+description = "Python Client Library for Dependency Health API"
+authors = ["Alex Goncharov"]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.test.dependencies]
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
