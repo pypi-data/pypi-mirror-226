@@ -1,0 +1,6 @@
+README.md
+setup.py
+vsm1000.egg-info/PKG-INFO
+vsm1000.egg-info/SOURCES.txt
+vsm1000.egg-info/dependency_links.txt
+vsm1000.egg-info/top_level.txt
