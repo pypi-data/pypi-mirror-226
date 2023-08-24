@@ -1,0 +1,3 @@
+[ckan.plugins]
+cloudstorage_api=ckanext.cloudstorage_api.plugin:CloudstorageAPIPlugin
+
