@@ -1,0 +1,12 @@
+videometer/HelpFunctions.py,sha256=VL5zbdI7XhHHgZPizha3ceiWkOGH7BUqHyF79fufBDc,10064
+videometer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+videometer/setupHelper.py,sha256=ydlT07IF7HWFVeSr-bs8ouriRb7e-Dd7T2cf0qFDSNU,1330
+videometer/videometer.py,sha256=jacRWspPSj7N73kJ45m3xf-0LOg7GK38DgECql79HM8,22966
+videometer/tests/test.py,sha256=lkt1KJghobATSPtZXqlQoHsv3_1rPm9kzUOvUz1MKmw,21840
+videometer/tests/tmp.py,sha256=HHp4_EQYBlQogze0lff7G5-D7N-9yUSgntc1NR4_81w,78
+videometer-0.0.9.dist-info/LICENSE.txt,sha256=rwEBnVHZXQyLJTKmo2X0pfgiwmBnlcZvlRFjmoeYd-s,1716
+videometer-0.0.9.dist-info/METADATA,sha256=XFlM_IWZJcHuL40nRFCTJzBzbl5sa2K9Kk1matN0k6w,3548
+videometer-0.0.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+videometer-0.0.9.dist-info/entry_points.txt,sha256=NCUnYljm__mDeMGIwjl4oTDHZ3kYED-8FlWw_KLxfUQ,56
+videometer-0.0.9.dist-info/top_level.txt,sha256=l-Z6_BFbqsEJPcnAvx4PK0OWQtOFju0GbD5MIrb5KLg,11
+videometer-0.0.9.dist-info/RECORD,,
