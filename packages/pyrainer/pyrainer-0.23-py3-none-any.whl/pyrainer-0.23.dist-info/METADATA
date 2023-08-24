@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyrainer
+Version: 0.23
+Summary: Python client for Rainer
+Author-email: gian <gian@imply.io>
+Project-URL: Homepage, https://github.com/gianm/rainer
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: termcolor >=2.3.0
+Requires-Dist: PyYaml >=6.0
+
