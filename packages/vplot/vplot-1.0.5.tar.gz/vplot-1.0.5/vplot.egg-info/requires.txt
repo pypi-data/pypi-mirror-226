@@ -1,0 +1,5 @@
+setuptools_scm
+numpy>=1.19.2
+matplotlib>=3.3.4
+astropy>=4.1
+vplanet>=2.0.0
