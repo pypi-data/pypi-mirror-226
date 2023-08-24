@@ -1,0 +1,16 @@
+sqlcritic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlcritic/action.py,sha256=P4nF43eJkMlj4-_w5nd08sQhDYODb2wZZ0rF8mTOYXw,2486
+sqlcritic/analyze.py,sha256=58MvUwedDS7mQqqpyGmMy9Ge7JhlkhDJT831X0DU3PA,5323
+sqlcritic/collector.py,sha256=qgY2qam34lB5YK0DABTzQDEmVV_bFkhgAqktSGCL6gY,1358
+sqlcritic/comparison.py,sha256=Fsy3DWi5PnLBS64ywl8WgBgmcVhMRwb2_pvebqxZGGE,2225
+sqlcritic/github.py,sha256=0QfuHmEQdsEUiS4Fd0BeUD66Cx2uBjVLFFFFx3A2OGE,2001
+sqlcritic/notify.py,sha256=XaXIuoy3xBNOdS1WPybQda9tlag-23bNCVAi11qbe2c,1929
+sqlcritic/storage.py,sha256=-2uoXO9TOGkAwjwGAcmuVNXAJchn2g61RNYhEx-t9Rs,988
+sqlcritic/trace.py,sha256=tfHS2oKtRE8PWCSqsP2UDE0EZTmcNEc9BP5QoibxxFc,2992
+sqlcritic/utils.py,sha256=8CXQChb_d4HfQ7cPP18hfFLUvbeL09qd-E6N8FsvQvc,346
+sqlcritic/database/__init__.py,sha256=blPOlbeqcF_4CwPF80XLoirJBuguysS4-TG8_kv-nSA,1325
+sqlcritic/database/postgres.py,sha256=7Qxp-QERH7meTGdwJg6HdBzaVPosXwhkofOJcn5sYxc,2626
+sqlcritic-0.3.0.dist-info/METADATA,sha256=fk8_88dQE8Wiz_qPhiQicITJavp3AyyljD1zC5L3h2o,4024
+sqlcritic-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sqlcritic-0.3.0.dist-info/top_level.txt,sha256=toPUpBIlb7Ve-iGDKH3BCCwcFbGH4dccnsqA8zlyLSk,10
+sqlcritic-0.3.0.dist-info/RECORD,,
