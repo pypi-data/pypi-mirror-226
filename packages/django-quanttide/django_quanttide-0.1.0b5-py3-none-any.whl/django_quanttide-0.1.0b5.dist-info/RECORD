@@ -1,0 +1,12 @@
+django_quanttide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_quanttide/apps.py,sha256=IjEln5T09UBST7ENZNlGpf5f2Kf3jL2KmpsYUY2cZL8,104
+django_quanttide/models/__init__.py,sha256=G5oecTiEMLR5EABw21Pj4tsSyhqylxp-PcMgU6QIbE0,681
+django_quanttide/models/choices.py,sha256=q7RZzUVSHFd8FUxRzaz9jWMeKMnbzRrjP4KvDxkei_8,414
+django_quanttide/models/fields.py,sha256=_5z0wpIKwhKcX6JNpELgMsuSUKp7lzYJfei6FYkwIHo,10397
+django_quanttide/models/models.py,sha256=364SsMfFC2_fE8VEIzqJHB4zpVVNGXD8J27Ogdjo8X4,272
+django_quanttide/models/polymorphic.py,sha256=3hl65WDmBlk1Ec5VAED3b-eK3kvD6dFX42zaqGtxwMM,971
+django_quanttide/serializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_quanttide/serializers/polymorphic.py,sha256=crvakZTN8lIftq4TZI4eOmYsGN_nDSdwkx_NDXukQaY,159
+django_quanttide-0.1.0b5.dist-info/METADATA,sha256=WUlu6l59K7IxEf4OdpSHJI1ClQCbODB88pKsU4urqwA,764
+django_quanttide-0.1.0b5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+django_quanttide-0.1.0b5.dist-info/RECORD,,
