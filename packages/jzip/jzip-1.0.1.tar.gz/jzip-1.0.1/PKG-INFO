@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: jzip
+Version: 1.0.1
+Summary: This package provides utilities to work with gzip compressed base64 content.
+Home-page: https://github.com/iammrj/JZip
+Author: Jilani Shaik
+Author-email: iammrj.java@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# JZip 
+This package provides utilities to work with gzip compressed base64 content.
+### Features
+* Decoding GZip B64 to Plain B64
+* Compressing regular file to GZip B64
+* Creating regular file from GZip B64
+
+### Installation
+  `` pip install jzip ``
+  
+### Usage
+* #### Decoding GZip B64 to Plain B64
+```python
+from jzip import decode_gzip_base64_to_plain_base64
+
+gzip_b64 = """H4sIAJoe5mQC/81W227bOBB9F6B/mJcAMZBSFCVRUlEUyBV7SxMkxi4WaR4Yi7JZyJQhUXHSn9yH/kH3R3YoRXZquwtlt1usEMQzQ/Iccsg55N7lydkrnwSus/f5zz8+uY7r+EChvPvgOm/euI43flxI8I6FEUU5Rf+iMYXSsgaG3a4wcCmm6AWd9/at60idtcNdh+1A6sdj4LhstAG6OSrYMaolWQ1haP2sshpuILS8wNv/t7AJFX4Fqp12JRHqad7elazLpprgStquZyW2dZYPaYveYXuXVTm5lgaS9YK9c5kpcVQ+wA3FKPcZofhBnHbGbTtxbZCvhmhXoqL1PMH7ReqpmYFP4xBst9pUUsxtNn9ynaOx61gSCtW0mx2lLIZxjiAxCeIIaRkjLEH+ceY6+3AI12q+KCTgTsOZQmMEY6Q6HXdoHYZPWwyeEhbhUJ4khNOkxxjPVA34J6Cei6KATM5LjfMSRpUayCLLIbfIrwZh85DENOyxPzS1gbysoKklKA1mJuFXVZlGFHAuJzOh1aQG05iyUqKoCZyXlQQjHwyBQ53B3LpDaCNG4oj1tBsAQ9whJCwhSbjK24vgv+YOofU5SVL+t2s7wvzp6QF8tN8Q8iG8NCRpuNrKf73UwXmOsLTSlA3L8xA8NGjy3fctwpr1A/6SM3l6L3XrE7CaonQjM8AiXKCsoSYTQta8KDC9eKy1hv//NDHepYnxDk3kMf8WkrgpiOwfSCImerLKf16V824HfAK/Yya+qabEnPCIf3dN+VKmO4CL2QHMyiXctWIC5nHR/tjroTZNnqPMNAZ0aUDUfSe0lsJMZtZ+uU4vhMJjl1WP/7mm8JCShK4OSaeXBNr75gCvvkIZg4flGegYryo8sNiIZO09Ztcqi+I5384iTPrDfePZU+iNEe/2eYd0R5XaAkTnurkzrW+jPgbeibltteaRqGVbp94PsriXRk0ERk/1pMxs+r3flD7UteoDmzXn0y9oj3HaeO3C/pW4l/B+f2bM4rXnLZdLouV9VWqBNTD3Kmx9Pxp1QpA1E4kj3nXtcCJrNdX1qEfD98KJMBL2T14zSjkNcBdiljA+2pzLQyVzW9g+rouuPjweURBBvo75mKq2Ra9jabAV88N4K8YY24oFKd2M+dF2P59v92MhC7ZjEd+KRfiyW8VcB99RqELVU9Kv1UfZLtq7KrGO/Ccx/lHnJbT786SUVgVFZbo0sdgP8Qm/d3px5jp/AQibwqLUCwAA"""
+plain_b64 = decode_gzip_base64_to_plain_base64(gzip_b64, encoding='UTF-8')
+print(plain_b64)
+```
+
+* #### Compressing regular file to GZip B64
+```python
+from jzip import compress_file_to_base64
+
+gzip_b64 = compress_file_to_base64("sample.pdf", encoding='UTF-8')
+print(gzip_b64)
+```
+
+
+* #### Creating regular file from GZip B64
+```python
+from jzip import write_to_original_file
+
+gzip_b64 = """H4sIAJoe5mQC/81W227bOBB9F6B/mJcAMZBSFCVRUlEUyBV7SxMkxi4WaR4Yi7JZyJQhUXHSn9yH/kH3R3YoRXZquwtlt1usEMQzQ/Iccsg55N7lydkrnwSus/f5zz8+uY7r+EChvPvgOm/euI43flxI8I6FEUU5Rf+iMYXSsgaG3a4wcCmm6AWd9/at60idtcNdh+1A6sdj4LhstAG6OSrYMaolWQ1haP2sshpuILS8wNv/t7AJFX4Fqp12JRHqad7elazLpprgStquZyW2dZYPaYveYXuXVTm5lgaS9YK9c5kpcVQ+wA3FKPcZofhBnHbGbTtxbZCvhmhXoqL1PMH7ReqpmYFP4xBst9pUUsxtNn9ynaOx61gSCtW0mx2lLIZxjiAxCeIIaRkjLEH+ceY6+3AI12q+KCTgTsOZQmMEY6Q6HXdoHYZPWwyeEhbhUJ4khNOkxxjPVA34J6Cei6KATM5LjfMSRpUayCLLIbfIrwZh85DENOyxPzS1gbysoKklKA1mJuFXVZlGFHAuJzOh1aQG05iyUqKoCZyXlQQjHwyBQ53B3LpDaCNG4oj1tBsAQ9whJCwhSbjK24vgv+YOofU5SVL+t2s7wvzp6QF8tN8Q8iG8NCRpuNrKf73UwXmOsLTSlA3L8xA8NGjy3fctwpr1A/6SM3l6L3XrE7CaonQjM8AiXKCsoSYTQta8KDC9eKy1hv//NDHepYnxDk3kMf8WkrgpiOwfSCImerLKf16V824HfAK/Yya+qabEnPCIf3dN+VKmO4CL2QHMyiXctWIC5nHR/tjroTZNnqPMNAZ0aUDUfSe0lsJMZtZ+uU4vhMJjl1WP/7mm8JCShK4OSaeXBNr75gCvvkIZg4flGegYryo8sNiIZO09Ztcqi+I5384iTPrDfePZU+iNEe/2eYd0R5XaAkTnurkzrW+jPgbeibltteaRqGVbp94PsriXRk0ERk/1pMxs+r3flD7UteoDmzXn0y9oj3HaeO3C/pW4l/B+f2bM4rXnLZdLouV9VWqBNTD3Kmx9Pxp1QpA1E4kj3nXtcCJrNdX1qEfD98KJMBL2T14zSjkNcBdiljA+2pzLQyVzW9g+rouuPjweURBBvo75mKq2Ra9jabAV88N4K8YY24oFKd2M+dF2P59v92MhC7ZjEd+KRfiyW8VcB99RqELVU9Kv1UfZLtq7KrGO/Ccx/lHnJbT786SUVgVFZbo0sdgP8Qm/d3px5jp/AQibwqLUCwAA"""
+write_to_original_file(gzip_b64, "sample.pdf", encoding='UTF-8')
+```
