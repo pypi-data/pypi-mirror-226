@@ -1,0 +1,3 @@
+[console_scripts]
+dkdc = src.main:app
+src = src
