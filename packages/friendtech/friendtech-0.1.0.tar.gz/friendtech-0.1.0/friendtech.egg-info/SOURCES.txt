@@ -1,0 +1,10 @@
+README.md
+setup.py
+friendtech/Contract.py
+friendtech/Platform.py
+friendtech/__init__.py
+friendtech.egg-info/PKG-INFO
+friendtech.egg-info/SOURCES.txt
+friendtech.egg-info/dependency_links.txt
+friendtech.egg-info/requires.txt
+friendtech.egg-info/top_level.txt
