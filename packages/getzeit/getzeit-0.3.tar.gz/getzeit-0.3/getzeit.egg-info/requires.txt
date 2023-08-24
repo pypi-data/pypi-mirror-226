@@ -1,0 +1,8 @@
+browser_cookie3
+requests
+
+[argcomplete]
+argcomplete
+
+[full]
+argcomplete

@@ -1,0 +1,11 @@
+COPYING
+README.md
+pyproject.toml
+getzeit/__init__.py
+getzeit/__main__.py
+getzeit.egg-info/PKG-INFO
+getzeit.egg-info/SOURCES.txt
+getzeit.egg-info/dependency_links.txt
+getzeit.egg-info/entry_points.txt
+getzeit.egg-info/requires.txt
+getzeit.egg-info/top_level.txt
