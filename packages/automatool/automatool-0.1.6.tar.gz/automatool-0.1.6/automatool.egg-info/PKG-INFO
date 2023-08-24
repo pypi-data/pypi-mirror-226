@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: automatool
+Version: 0.1.6
+Summary: Automaton analysis and maniplation tool
+Home-page: https://github.com/lhartmann/python_automatool
+Download-URL: https://github.com/lhartmann/python_automatool/archive/0.1.6.tar.gz
+Author: Lucas Vinicius Hartmann
+Author-email: lucas.hartmann@gmail.com
+License: MIT
+Keywords: discrete events,automaton,state machine
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
