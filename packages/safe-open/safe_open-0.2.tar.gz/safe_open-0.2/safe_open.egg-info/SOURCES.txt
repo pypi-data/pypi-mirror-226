@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+safe_open/__init__.py
+safe_open/safe_open.py
+safe_open/test.py
+safe_open.egg-info/PKG-INFO
+safe_open.egg-info/SOURCES.txt
+safe_open.egg-info/dependency_links.txt
+safe_open.egg-info/top_level.txt
