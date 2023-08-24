@@ -1,0 +1,31 @@
+{
+    "files.exclude": {
+        "**/*.bak": true,
+        "**/__pycache__": true,
+        "**/yarn-error.log": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "python.defaultInterpreterPath": "/rs/bin/python",
+    "python.analysis.extraPaths": [
+        "/rs/radstar"
+    ],
+    "black-formatter.args": ["-l", "99"],
+    "black-formatter.interpreter": ["/usr/local/bin/python"],
+    "pylint.args": ["--rcfile=/rs/project/.vscode/.pylintrc"],
+    "isort.args": [
+        "--profile=black",
+        "--line-length=99",
+        "--from-first",
+        "--py=auto",
+        "--thirdparty=rs"
+    ],
+    "isort.interpreter": ["/usr/local/bin/python"],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "search.useIgnoreFiles": false
+}
