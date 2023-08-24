@@ -1,0 +1,2 @@
+[console_scripts]
+md2notionpage = md2notionpage.cli:main
