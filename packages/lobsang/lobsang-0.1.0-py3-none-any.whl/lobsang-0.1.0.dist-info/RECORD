@@ -1,0 +1,15 @@
+lobsang/__init__.py,sha256=w2UryXPfrvO8q4ApRh8VzHru1XQf7LNsIWAfq8PCXIU,520
+lobsang/chat.py,sha256=PLVFxzFPS73Io7AslkC1YyiL4CCP1iooQ176h3HnKls,5173
+lobsang/messages.py,sha256=1-I6ZaOuzMI2__sI0j_hVkqVLe2dzbkqTmBdD5mQn0E,1946
+lobsang/answers/__init__.py,sha256=wgurrZGn6tpEL15juwdEaZtHv-cLcIxLIqFT6J2xyK4,708
+lobsang/answers/base.py,sha256=cYr9V05OQweWNw8ToGoOINT994vCShG8M6-ZLo2_7dU,1524
+lobsang/answers/json.py,sha256=fYOvxMwrqzYmowGPOXVgkulZcBN6IOFxqNcIr9YQW7o,4719
+lobsang/answers/text.py,sha256=GBXKcwq_9ZKqgAzTalFeqbxR4JsfY-O8gE-Iwe16fX4,945
+lobsang/llms/__init__.py,sha256=KlXULMwKQO9ul4WLgvFX16V5dWfzYX-yDFjDDaSVLBs,171
+lobsang/llms/base.py,sha256=NSkLwG9KbrwGNTD5OvhuiLl8cpvXiwN1Dt46PmzmcmU,562
+lobsang/llms/fake.py,sha256=IiOQFV0Bndgujr7b1Y-Ko4qs5UNXG-sHXBeuuP9Nh-Y,523
+lobsang/llms/openai.py,sha256=7wyGzr2v4IKR8ev860rAZitxFKPhVpv456ExmN1hI1g,1326
+lobsang-0.1.0.dist-info/METADATA,sha256=fdXkpvkYGL6RCMa29SyI93MtFc-jHchnjReHgOIes3g,3085
+lobsang-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+lobsang-0.1.0.dist-info/licenses/LICENSE,sha256=91-fkRXYBKLFjuXKk-CUGERNX8X9mBFGpUWpj5ISKKM,1066
+lobsang-0.1.0.dist-info/RECORD,,
