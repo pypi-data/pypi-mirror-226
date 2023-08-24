@@ -1,0 +1,8 @@
+README.md
+setup.py
+mariekondo/__init__.py
+mariekondo.egg-info/PKG-INFO
+mariekondo.egg-info/SOURCES.txt
+mariekondo.egg-info/dependency_links.txt
+mariekondo.egg-info/requires.txt
+mariekondo.egg-info/top_level.txt
