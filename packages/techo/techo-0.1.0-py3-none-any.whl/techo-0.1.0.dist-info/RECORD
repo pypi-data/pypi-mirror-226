@@ -1,0 +1,10 @@
+techo/__init__.py,sha256=P8hXVgWWBRFCjadRNvCNpcZuoCXMtOsYkeSqqHyD-t8,443
+techo/__version__.py,sha256=pRejCjHshQpNK3G0pRyXcvwkbdI4SkNHfNs-8i9UaB0,486
+techo/cli.py,sha256=2OiH1Cs-jc90aIMqJW-e2Jlq6iJ0UjxpUknIAjmiUS8,563
+techo/message.py,sha256=8pRZQCO4HV2Nkbklml53CYekGP1zhL-p1PPx0AJ5Kh4,797
+techo-0.1.0.dist-info/LICENSE,sha256=uW5CR-6g7Jm9iRTWUHFMyPCJTPiIr5w-2W4jRP16SXk,1066
+techo-0.1.0.dist-info/METADATA,sha256=W9IkTLwsPSruAxe_xTRCIYJOkqH7GJo788AWXiExtb8,1072
+techo-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+techo-0.1.0.dist-info/entry_points.txt,sha256=qRoBFvITjq3O9gS9IHm7Mb1rCumM_7zaKbXpuptyx30,41
+techo-0.1.0.dist-info/top_level.txt,sha256=vbEOsdpaDO6KjPgIFWX-VbFXQz8CJ-4dxAZ6FzOUmqE,6
+techo-0.1.0.dist-info/RECORD,,
