@@ -1,0 +1,7 @@
+psy_llm_chat/__init__.py,sha256=PT_3R0BWrOLg4McBon4XMiWK71KBNP44aAEsu5fqmpE,65
+psy_llm_chat/gpt.py,sha256=G1koeAuXGl_9S2hh-Sl_KFXGwjr011rK44yJhEACtVc,2314
+psy_llm_chat/llama.py,sha256=XtoZOBU0igyd24DOIxObhmF2WpE9JtFAQbASdJzsWzg,11695
+psy_llm_chat-0.1.1.dist-info/METADATA,sha256=kLdToarjaS1KURRZNBxHAsQTsSefLrpuG-Z0hzPO1us,421
+psy_llm_chat-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+psy_llm_chat-0.1.1.dist-info/top_level.txt,sha256=8Tk1DEjtRNIKj5hwtRoSvgaGmfGrNTlfCfdq0uCeexU,13
+psy_llm_chat-0.1.1.dist-info/RECORD,,
