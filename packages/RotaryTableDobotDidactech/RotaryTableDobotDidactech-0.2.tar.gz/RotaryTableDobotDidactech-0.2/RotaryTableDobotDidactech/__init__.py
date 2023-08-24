@@ -1,0 +1,3 @@
+from RotaryTableDobotDidactech.RotaryTableDobot import RotaryTable
+from RotaryTableDobotDidactech.RotaryTableDobot import RotaryTablePosition
+from RotaryTableDobotDidactech import GUI
