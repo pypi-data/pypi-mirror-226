@@ -1,0 +1,16 @@
+LICENSE.txt
+pyproject.toml
+readme.md
+./LICENSE.txt
+CrazyFlyt/__init__.py
+CrazyFlyt/drone_controller.py
+CrazyFlyt/simulator.py
+CrazyFlyt/swarm_controller.py
+CrazyFlyt.egg-info/PKG-INFO
+CrazyFlyt.egg-info/SOURCES.txt
+CrazyFlyt.egg-info/dependency_links.txt
+CrazyFlyt.egg-info/requires.txt
+CrazyFlyt.egg-info/top_level.txt
+CrazyFlyt/models/cf2x/cf2.dae
+CrazyFlyt/models/cf2x/cf2x.urdf
+CrazyFlyt/models/cf2x/cf2x.yaml
