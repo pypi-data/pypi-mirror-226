@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: CausalRec
+Version: 0.0.1.1
+Summary: An implementation to use Causal models to recommend the best.... 
+Home-page: https://github.com/vntuyen/
+Author: Tuyen Vu
+Author-email: tuyen.vu@mymail.unisa.edu.au
+License: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: license.txt
+
+# CausalRec - a python package for ... 
+# Note: 
+This is the first draft to keep the name of the package for upcoming projects
+
+
+An implementation to use Causal models to  .....
+This paper can be found at: .......
+
+# Infrastructure used to run experiments:
+* OS: Windows, Linux, Ubuntu.
+* CPU: 12th Gen Intel(R) Core(TM) i7-1255U   1.70 GHz.
+* RAM: 16 GB.
+

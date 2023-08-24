@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+license.txt
+setup.py
+CausalRec/CausalRec.py
+CausalRec/__init__.py
+CausalRec/binary_evaluation.py
+CausalRec.egg-info/PKG-INFO
+CausalRec.egg-info/SOURCES.txt
+CausalRec.egg-info/dependency_links.txt
+CausalRec.egg-info/requires.txt
+CausalRec.egg-info/top_level.txt

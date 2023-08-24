@@ -1,0 +1,4 @@
+include CausalRec/input/turnover/*.csv
+include CausalRec/input/adult/*.csv
+include CausalRec/input/synthetic/*.csv
+recursive-include package *
