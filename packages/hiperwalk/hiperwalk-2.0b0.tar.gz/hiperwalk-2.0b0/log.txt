@@ -1,0 +1,485 @@
+commit ae0906542289fbbd33c088b5f1b6e880e05579af
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 23 18:23:45 2023 -0300
+
+    Update version to 2.0b0
+
+commit 629590f94b91169a4219aba8facfb74758dd8892
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 23 18:07:38 2023 -0300
+
+    Remove older switcher
+
+commit c8a01a53ec9ae032f1e9c43cb8179c74de383686
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 23 17:42:18 2023 -0300
+
+    Fix HPC unit tests
+
+commit d080cc712798151fc4792b68f3779f86a29a04e6
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Fri Aug 18 00:36:23 2023 -0300
+
+    More fixes to the workflow
+    
+    2 more packages should have been added in a6c3bcd.
+
+commit a6c3bcd23c4d25058d317a815d6bf0cedb7a9de7
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Fri Aug 18 00:12:37 2023 -0300
+
+    Fix the workflow that rebuilds the project website
+    
+    Commit 358fc53 broke the workflow by adding dependencies to packages
+    that are absent in the ubuntu-latest runner image.
+    
+    As these packages are *present* in the Ubuntu ISO, it was noticed
+    that 358fc53 broke the workflow only after push.
+    
+    This commit adds commands to install these missing packages.
+
+commit 7bbddb5aadae3479e8ac8f351bce908b29bb7345
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 17 20:29:56 2023 -0300
+
+    Rename unitary directory to unit
+
+commit cd56eec1af92aadc76ac60f7aeaa791529750f3c
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 17 20:26:27 2023 -0300
+
+    Add unit tests to verify Graph instantiation with different matrix types
+
+commit b1b56c872a26719cfb0e82f0dd6b6951d1c08e32
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 17 20:17:15 2023 -0300
+
+    Accept numpy.ndarray and python list of list as arguments for Graph()
+
+commit 358fc53a03e5051dee1c4ebe8ac3d0f13d6c8692
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Thu Aug 17 19:10:55 2023 -0300
+
+    Always set Gtk version to 3.0
+    
+    The use of Gtk 3 makes animations work on Ubuntu 22.04.
+    
+    (ref.: issue #6)
+
+commit c5800fa7e392e36c199f53bbd46320f8508f6e6a
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Thu Aug 17 14:25:34 2023 -0300
+
+    Fix animation display
+    
+    Commit 90afa5a7 mistakenly added code that interrupts the display of
+    the animation window with an exception.
+
+commit 3b8d6db3f5fd17dee608b8dc6e2e41569863645d
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 16:11:41 2023 -0300
+
+    Change dtype of complete bipartite graph adjacency matrix to np.int8
+
+commit 71acfb8164cf620587cf3d8f644634ee44a1a1c8
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 15:24:53 2023 -0300
+
+    Fix bug on CompleteBipartite.arc()
+
+commit ec3119631780798f82cd595209727eca46506840
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 15:23:05 2023 -0300
+
+    Implement simple unitary tests for complete_bipartite graph
+
+commit c0ffa9e1a91d0a21f7fa93f31eb6c8a0d08268f1
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 15:22:41 2023 -0300
+
+    Rename class for unitary tests on complete graphs
+
+commit 354c1e787fff9ee70616a13640d8b1d82aadd600
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 15:06:10 2023 -0300
+
+    Implement complete bipartite graph
+
+commit d38ec401af55bce430fefbcba6c85a3c0bf259b0
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 13:33:20 2023 -0300
+
+    Add search example on the complete graph using coined quantum walk
+
+commit ad295f04a44864a9c2041122bbdd2bcd0fffbdbd
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 13:21:37 2023 -0300
+
+    Implement simple Complete graph class unitary tests
+
+commit 3b43a1620faf4932a9ba34c1daa502463a2bf6cd
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 13:21:04 2023 -0300
+
+    Fix Complete graph class methods
+
+commit 9082899f11da7cd5782b415d16cb95ec91ae4013
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 13:20:01 2023 -0300
+
+    Remove 'get_entries' auxiliary function
+
+commit c487f7e73e1a7ff834464e41fbde8c0017d7136f
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 11:02:19 2023 -0300
+
+    Rename 'label' parameter to 'number' in arc() methods
+
+commit 77d5c58399d063414f99dab0326db2950f003b2e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 10:52:16 2023 -0300
+
+    Implement complete graph class
+
+commit 1cae77bb47b400dd5b9605ce6d91ff2e0c1be97b
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 09:58:48 2023 -0300
+
+    Remove all references to 'adj_matrix' keyword for plots
+
+commit e3a40efd2d7a0d377af1871efcd6dace1f47940e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 16 09:57:06 2023 -0300
+
+    Change adjacency_matrix from attribute to method in graphs
+
+commit 9eb9fdde0647328f3f8be13a9fc74d637c477ec8
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Tue Aug 15 18:16:54 2023 -0300
+
+    Move default_coin from Graph classes do Coined
+
+commit 69778df74f018d79f072d43a0eaccb77140d56ec
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Tue Aug 15 17:45:54 2023 -0300
+
+    Fix Coined.set_marked()
+    
+    Set marked was not working on grids if vertices were represented using coordinates. In addition, if a single vertex was passed (outside of a list), it would be inserted automatically in a list. This situation is now forbidden. Otherwise, it would be impossible to determine whether (0, 1) referred to vertices with numbers 0 and 1 or to the vertex with coordinates (0, 1).
+
+commit ec840b9cad9a770164b1c3d0956742bd19079266
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Tue Aug 15 15:17:41 2023 -0300
+
+    Fix doctest errors
+
+commit 0086af13d02ed944d02cb010c11e1b496597e355
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 21:09:42 2023 -0300
+
+    Rename vertex_label() to vertex_number()
+
+commit cea224497f485d5aedc50e40b49ca7318ecab69c
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 20:58:33 2023 -0300
+
+    Update arc_number to use *args
+
+commit 0e138d446cb9542087ba2c0705cc9438bfa47a5f
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 15:46:48 2023 -0300
+
+    Rename arc_label to arc_number
+
+commit 5a2714c765756abaed56c846ebbf6f7895c2bdb4
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 15:10:56 2023 -0300
+
+    Change arc_label() method signature
+
+commit 9e2f54e70d3496185e1d331ae1ea7bb4d4f374b2
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 14:30:42 2023 -0300
+
+    Add vertex_label() method to general graphs
+    
+    The method vertex_label now accepts only one argument. The Grid vertex_label() is also updated to receive only one argument
+
+commit 4d7e8622d69eb399d02e991e387d426580884831
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 13:42:25 2023 -0300
+
+    Convert _time_to_tuple() method to static
+
+commit 5bb0262e27c982b65bcf2af608d48f1de037de0e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 11:58:23 2023 -0300
+
+    Update quantum walk state()
+    
+    Each arg may be an entry or list of entries. This allows the user to pass a list as argument without starring it. For example: qw.state(l) instead of qw.state(*l).
+
+commit 9812c44ff402cbe248e1cb790c62830050f6770d
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 14 11:55:22 2023 -0300
+
+    Add plot_success_probability
+
+commit dde7fec62d6900f5e11c1e79587d8639897c1cbe
+Merge: 5a4e4a2 c3cd3e3
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 16:54:50 2023 -0300
+
+    Merge branch 'master' of https://github.com/hiperwalk/hiperwalk
+
+commit c3cd3e34b3964ab9ab57d94e3526491ca33e4ba8
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Fri Aug 11 16:27:37 2023 -0300
+
+    Add workflow for rebuilding the project website
+    
+    If a commit is made to docs/ or hiperwalk/ on master or 2.0a branches,
+    hiperwalk.org should be rebuilt.
+    
+    ref. issue #5
+
+commit 5a4e4a2d5bc5e58804cb2adcb6793ffde04d0b7b
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 16:09:56 2023 -0300
+
+    Rename marked_probability to success_probability
+
+commit 3b2c9200baedfe1a2af91336b181e852a7afba79
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 15:29:07 2023 -0300
+
+    Add quantum search on a grid example
+
+commit ff8fbb3612219ce92855a7a1bf22b42d1ee30165
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 15:24:59 2023 -0300
+
+    Implement marked_probability method for quantum walks
+
+commit 2ea35391ee91439db5908de8425885b2e30c9d42
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 14:43:34 2023 -0300
+
+    Update quantum walk probability
+    
+    The method probability now returns the probability of given vertices
+
+commit cf1979e838702ecab7d3d678a84f287f66be8733
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Fri Aug 11 14:42:41 2023 -0300
+
+    Update quantum walks probility_distribution
+
+commit 8ccef91fe23d2e760c3705c3b30c43f002e9c1a6
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 10 18:58:43 2023 -0300
+
+    Remove redundant doc from Coined.set_marked
+
+commit f29f0ff3dc67a14ae4ae404435062776752b283d
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 10 18:51:10 2023 -0300
+
+    Fix flipflop shift operator on grid
+    
+    For the flipflop shift to work properly, the order in which the adjacency matrix is created cannot change. Otherwise the arc order is changed. Consequently, S^2 != I
+
+commit 89161486e7166e456d6a1908d85349cb22942dec
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 21:32:01 2023 -0300
+
+    Update unitary tests
+
+commit 85c5b6354e8ec4b3f62668c6612a74d234fd8456
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 21:30:42 2023 -0300
+
+    Update ContinuousTime set methods to use default values
+    
+    Previously, there were two distinct behaviors. Coined would create an evolution operator with default values by invoking set_evolution. While ContinuousTime would create an evolution operator using the previously set attributes. Now, both create evolution operator using default values.
+
+commit db4c5eb16eb69e99dcb1c9bfca57f88dabd87535
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 18:59:44 2023 -0300
+
+    Change Coined set methods to update evolution operator
+    
+    Changing the evolution operator guarantees that any Coined instance is coherent.
+
+commit ebc0b8c75bbd3de1ba8f997250bf932baa2ed666
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 18:55:56 2023 -0300
+
+    Remove ContinuousTime get_evolution
+
+commit fcedbe26864252e5fcd8d2ddb33911504552dc48
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 16:16:52 2023 -0300
+
+    Add ContinuousTime._evolution_kwargs
+
+commit 9bce2912b97afec96ac56141af39a16b2585c9e6
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Aug 9 14:41:55 2023 -0300
+
+    Change ContinuousTime set methods to update evolution operator
+    
+    Changing the evolution operator guarantees that any ContinuousTime instance is coherent.
+
+commit c96c0f6e6fb9b9ee440a65f4082055596595499e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Tue Aug 8 15:14:22 2023 -0300
+
+    Remove __update_hamiltonian attribute
+
+commit 747cfd638f957bd23c3da23808acf589bdde0a17
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Tue Aug 8 14:15:26 2023 -0300
+
+    Use numpy instead of scipy for matrix exponential series
+    
+    The change was necessary due to the yet unsolved
+    [scipy issue 18086](https://github.com/scipy/scipy/issues/18086)
+
+commit efce6f60be1afc0b21bc0370b70eb88675e77f7b
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 7 16:23:58 2023 -0300
+
+    Update ContinuousTime get_evolution docs
+
+commit 919af7e7175b9436258f245eb3a75b194a8ecda0
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 7 16:23:21 2023 -0300
+
+    Update set and get hamiltonian
+
+commit 266e328efdaabf0410f29e0b88c287271bf8f88c
+Merge: 25296f2 fc694ba
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Mon Aug 7 15:46:42 2023 -0300
+
+    Merge branch 'master' of https://github.com/hiperwalk/hiperwalk
+
+commit fc694ba7797c0417d2bd330ae9dc1a31fa8946a5
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Mon Aug 7 09:01:18 2023 -0300
+
+    Small fixes on docs
+    
+    1) fix broken link to examples directory (ref. issue #4)
+    2) remove an orphaned quotation mark
+
+commit 25296f27489f480ad43218f8263f1508228cea0e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Thu Aug 3 14:24:47 2023 -0300
+
+    Rename quantum walk models files according to class names
+
+commit a926720d1c18b77557bc2bed3c16b9ebf5e62d3e
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 14:34:31 2023 -0300
+
+    Update docs
+    
+    Highlight that the persistent shift operator is sometimes called moving shift operator
+
+commit c3ec1fe5bc8bc83a5b6bdecec3fc4c1a6c555271
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 12:08:29 2023 -0300
+
+    Update Lattice docs
+
+commit bf048b04d425caa92d087ee11fa8ff3381d7df13
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 12:08:17 2023 -0300
+
+    Fix docs
+
+commit ee03fe30d5f61f812af0b915a16999e00cac67d3
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 11:42:52 2023 -0300
+
+    Fix dtype identification in quantum walk simulation
+
+commit 230f469618b307978d4c4e6360cb9f07159f690f
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 11:09:46 2023 -0300
+
+    Create Lattice abstract class
+
+commit 96d0a3611621d4fe9fe714ffe6b3492de73cff11
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 26 10:27:22 2023 -0300
+
+    Rename Lattice to Grid
+
+commit 357efa90d1a37b647177d53dfc151ff135968302
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Wed Jul 19 00:44:37 2023 -0300
+
+    Give the name 'latest' to the version on master
+
+commit 0e83d894bea20009c3275887e45d735fc7ce5a7e
+Author: Guilherme Gall <gmgall@gmail.com>
+Date:   Mon Jul 17 12:59:42 2023 -0300
+
+    Add logos in documentation
+
+commit 9e2da880cdacd506b6fc61f06543465a268ab88f
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 19:06:58 2023 -0300
+
+    Update Coined auxiliary simulate methods
+
+commit 580c8071c077dbdf92f7b2a503542088a0922443
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 16:13:47 2023 -0300
+
+    Change auxiliary simulate functions to methods
+
+commit 252d38500ea1e1f0be0ad7bb7917c1addb15c09c
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 15:38:56 2023 -0300
+
+    Remove initial_condition parameter
+
+commit e9db56a133b5d20507e967d6c544ba9b93e66626
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 15:32:08 2023 -0300
+
+    Remove adjacency parameter from quantum walks
+
+commit d9dbeaaddf7e399233198d96cd70e83db90a2f17
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 15:18:09 2023 -0300
+
+    Remove get_central_vertex
+
+commit 05f14beb181491a965454285d0a01f05499ba800
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 14:48:25 2023 -0300
+
+    Change ContinuousWalk to ContinuousTime
+
+commit 8798ba5ef082ef74b3e4edb984118df56fb0402b
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 14:46:17 2023 -0300
+
+    Update docs
+
+commit c11def46251d8c51120b4fcd552beba37d388e2a
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 14:39:47 2023 -0300
+
+    Change CoinedWalk to Coined
+
+commit 755ebbf53383f244d9a98695fbcc2b68f7dbf6b8
+Author: Koruja <gbezerra@posgrad.lncc.br>
+Date:   Wed Jul 12 14:19:57 2023 -0300
+
+    Update docs
