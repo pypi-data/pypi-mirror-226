@@ -1,0 +1,13 @@
+mysql-connector-python
+flask
+flask-cors
+connexion[swagger-ui]
+python-jose>=3.2.0
+makefun
+
+[mongo]
+pymongo<4.0,>=3.12
+python-dateutil
+
+[postgresql]
+psycopg2-binary
