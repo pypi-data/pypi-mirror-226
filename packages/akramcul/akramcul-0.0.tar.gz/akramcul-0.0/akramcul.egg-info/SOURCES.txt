@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+akramcul/__init__.py
+akramcul/show.py
+akramcul/sum.py
+akramcul.egg-info/PKG-INFO
+akramcul.egg-info/SOURCES.txt
+akramcul.egg-info/dependency_links.txt
+akramcul.egg-info/not-zip-safe
+akramcul.egg-info/top_level.txt
