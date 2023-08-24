@@ -1,0 +1,3 @@
+[console_scripts]
+zrb-extras=zrb_extras.__main__:hello
+
