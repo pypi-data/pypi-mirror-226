@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: color-make
+Version: 1.0.1
+Summary: 
+License: MIT
+Author: liblaf
+Author-email: i@liblaf.me
+Requires-Python: >=3.11,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: rich (>=13.5.2,<14.0.0)
+Description-Content-Type: text/markdown
+
+# color-make
+
+## Demo
+
+### Echo
+
+![echo](https://github.com/liblaf/color-make/raw/assets/echo.png)
+
+### Error
+
+![error](https://github.com/liblaf/color-make/raw/assets/error.png)
+
+### Warning
+
+![warning](https://github.com/liblaf/color-make/raw/assets/warning.png)
+
+### Info
+
+![info](https://github.com/liblaf/color-make/raw/assets/info.png)
+
+## Shell Completion
+
+### Zsh
+
+```zsh
+compdef color-make=make
+```
+
