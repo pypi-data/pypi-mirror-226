@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ivcorrection
+Version: 0.0.1
+Summary: IV curve correction toolkit
+Home-page: https://github.com/lbj2011/IVcorrection
+Author: baojieli
+Author-email: baojieli@lbl.gov
+License: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# IV curve correction tools (IVcorrection)
+
+<img src="https://github.com/lbj2011/IVcorrection/blob/main/doc_img/logo.png" width="500"/>
+
+This package provides the following purposes:
+ - Calculate IV curve correction coefficients based on IEC 60891:2021 standard
+ - Perform IV curve correction
+
+**The package is still under active development. If there is any problem, please feel free to contact us!**
+
+## Method
+### Step 1: Select the module 
+
+### Step 2: 
+
+## Authors
+Baojie Li (LBNL)
