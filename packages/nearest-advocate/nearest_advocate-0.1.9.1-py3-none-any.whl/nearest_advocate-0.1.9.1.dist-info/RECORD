@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nearest_advocate.py,sha256=TXqZEy_kb7zQ3m2jSUxTjPNZq9GF851WPDitzsl9f-Y,7642
+nearest_advocate_cython.py,sha256=r7Md-yO8jJWdaTtUKKCqbWI9cAGyuSODdWHxe1Rr1mQ,5012
+nearest_advocate_numba.py,sha256=_O9s4yQ8jkiHf-53zaP-5GjZiXe8bK3Ig1COIR92c0w,10628
+nearest_advocate_pseudocode.py,sha256=dW9w0h_KRDa2U2d0NfUSz5ZClUBDecA4UWil6ACQiGg,4761
+nearest_advocate_python.py,sha256=puqa59CwPR0PdxKqwhjs_T98e8-xWq-vNoO0AAGy2Es,7773
+setup.py,sha256=Nm9rfP2wsJBWv-umwSdvU55v0JbrHNGjVdbJPnPl7dw,261
+archive/nearest_advocate_c.pyx,sha256=UTPV3pMJe5CsbkZH56elZa8Css8Ic-Bintx5kMVFJc0,12874
+archive/nearest_advocate_c_int64.pyx,sha256=SG3a8WNSS897uMnhgGnaYr9bwlzaQoEAyume4l-dZdA,7367
+nearest_advocate-0.1.9.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nearest_advocate-0.1.9.1.dist-info/METADATA,sha256=eeWYzTRRqfM-rHQuy2wpH6mpHAEom4Sc1YdoRXoUoEA,5635
+nearest_advocate-0.1.9.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+nearest_advocate-0.1.9.1.dist-info/top_level.txt,sha256=yT378DgJJu8bsCEfHPOPwVCcXqwUDKe0Kqeyc_65MGM,139
+nearest_advocate-0.1.9.1.dist-info/RECORD,,
