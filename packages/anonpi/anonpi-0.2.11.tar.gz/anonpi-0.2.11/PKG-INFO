@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: anonpi
+Version: 0.2.11
+Summary: The "anonpi" module is a powerful Python package that provides a convenient interface for interacting with calling systems. It simplifies the development of applications that require functionalities such as machine detection, IVR (Interactive Voice Response), DTMF (Dual-Tone Multi-Frequency) handling, recording, playback, and more
+Author: Adistar
+Author-email: adityasamalllll6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+file: README.MD
