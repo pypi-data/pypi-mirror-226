@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: checkdocs
+Version: 0.1.0
+Summary: Check if the type hint makes sense with the docstring
+License: MIT
+Author: Gustavo Araujo
+Author-email: gala.gustavoantonio@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Project-URL: Bug Tracker, https://github.com/garaujo94/checkdocs/issues
+Project-URL: Homepage, https://github.com/garaujo94/checkdocs
+Description-Content-Type: text/markdown
+
+# checkdocs
+Just check if the type hint macthes with the docstring.
+
+## Install
+```
+pip install checkdocs
+```
+
+## Using
+```
+checkdocs file [filename] # For check a single file
+checkdocs folder [foldername] # For check all files inside a folder
+```
