@@ -1,0 +1,10 @@
+# This needs to go in your home directory.
+# Not in your project directory !
+
+[pypi]
+username = pypy-USERNAMEGOESHERE
+password = pypi-TOKENGOESHERE
+
+[testpypi]
+username = pypy-TEST-USERNAMEGOESHERE
+password = pypi-TEST-USERNAMEGOESHERE

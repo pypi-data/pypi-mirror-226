@@ -1,0 +1,34 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "python_vscode_template"
+authors = [{name = "David Groves", email = "github@fibrecat.org"}]
+dynamic = ["version", "description"]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+[project.scripts]
+my_script = "python_vscode_template.my_script:main"
+
+[project.urls]
+Home = "https://github.com/davidgroves/Python-VSCode-Template"
+
+[tool.flit.module]
+name = "python_vscode_template"
+
+[tool.mypy]
+mypy_path = "src"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[tool.black]
+line-length = 132
+
+[tool.pylint.format]
+max-line-length = 132

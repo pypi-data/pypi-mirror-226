@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=827846
+    // for the documentation about this file format.
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.isort",
+        "mikoz.black-py",
+        "njpwerner.autodocstring",
+        "bierner.markdown-preview-github-styles",
+        "eamodio.gitlens",
+        "kevinrose.vsc-python-indent",
+        "littlefoxteam.vscode-python-test-adapter",
+        "donjayamanne.python-environment-manager",
+        "wholroyd.jinja",
+        "076923.python-image-preview",
+        "amazonwebservices.aws-toolkit-vscode",
+        "boto3typed.boto3-ide",
+        "danielthielking.aws-cloudformation-yaml",
+        "ms-azuretools.vscode-docker",
+        "aaron-bond.better-comments",
+        "GraphQL.vscode-graphql",
+        "oderwat.indent-rainbow",
+        "bierner.emojisense",
+        "hashicorp.terraform",
+        "adamcowley.neo4j-vscode",
+        "bierner.github-markdown-preview"
+    ]
+}
