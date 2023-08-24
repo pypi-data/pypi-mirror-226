@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: censaurus
+Version: 0.1.dev0
+Summary: A comprehensive, feature-rich, and user-oriented Python package that wraps the U.S. Census Bureau's Data and Geographic APIs
+Author: Ethan Singer
+Author-email: Ethan Singer <singerep@bu.edu>
+Project-URL: Homepage, https://github.com/singerep/censaurus
+Project-URL: Documentation, https://censaurus.readthedocs.io/en/latest/
+Project-URL: Issues, https://github.com/singerep/censaurus/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: Fiona >=1.9.1
+Requires-Dist: geopandas >=0.13.2
+Requires-Dist: httpx >=0.24.1
+Requires-Dist: importlib-resources >=6.0.1
+Requires-Dist: matplotlib >=3.7.1
+Requires-Dist: numpy >=1.25.1
+Requires-Dist: pandas >=2.0.3
+Requires-Dist: python-Levenshtein >=0.21.1
+Requires-Dist: pyvis >=0.3.1
+Requires-Dist: scipy >=1.11.2
+Requires-Dist: setuptools >=68.0.0
+Requires-Dist: Shapely >=2.0.1
+Requires-Dist: thefuzz >=0.19.0
+
+Censaurus
+=========
+
+|docs|
+
+|logo|
+
+Not just another Census data tool. *Seriously.*
+
+``censaurus`` is a comprehensive, feature-rich, and user-oriented Python package that wraps the U.S. Census Bureau's Data and Geographic APIs.
+
+Documentation
+-------------
+
+Check out the documentation of ``censaurus`` `here <https://censaurus.readthedocs.io/en/latest/index.html>`_.
+
+.. |docs| image:: https://readthedocs.org/projects/censaurus/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://docs.readthedocs.io/en/latest/?badge=latest
+
+.. |logo| image:: https://raw.githubusercontent.com/singerep/censaurus/main/docs/source/censaurus_logo.png
+    :alt: censaurus logo
