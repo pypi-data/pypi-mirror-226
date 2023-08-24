@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymol_app
+Version: 0.2
+Summary: Elimineer spelers
+Author-email: Robbert van der Mijn <robbertmijn@gmail.com>
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pygame
+Requires-Dist: numpy
+Project-URL: Documentation, https://github.com/robbertmijn/pymol
+Project-URL: Source, https://github.com/robbertmijn/pymol
+
+# pymol
+ De Mol Eliminatie App
+
