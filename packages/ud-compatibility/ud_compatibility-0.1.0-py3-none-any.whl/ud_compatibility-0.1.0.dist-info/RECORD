@@ -1,0 +1,12 @@
+ud_compatibility/UD-UniMorph.tsv,sha256=1h9ZQI10ilkUZwNPyEv8cczCBOjVpROCOFNHadWN7cg,4688
+ud_compatibility/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ud_compatibility/languages.py,sha256=EU60uknAkx4fN2pCK6KlzypdMaXdKhchWJlKtw-aVBA,1735
+ud_compatibility/marry.py,sha256=npWt83Z56slOpw5VnvABmmT_lTeHbC09Xhp9KNP6kyc,7922
+ud_compatibility/paths.py,sha256=1eg2cF3zNgr0vD6k10ksrzt6EjoXg-8wQNqVLB1u45Y,1308
+ud_compatibility/translator.py,sha256=md-OthYCmx3GAb0bKmNF2vf5gV40bitZ-_ta9z4FsE8,22625
+ud_compatibility/um_reader.py,sha256=wLO-QulHZYUQcEw75y0uYOva1j-Vz674htOOgywzCMs,1201
+ud_compatibility/utils.py,sha256=AHJvuVxJQ1bHd7VzUFs9RzDioKJLXctxJm8DEKAxmSY,1665
+ud_compatibility-0.1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ud_compatibility-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+ud_compatibility-0.1.0.dist-info/METADATA,sha256=cEGIa9oRUgIZrbeScPzewLEYSyT6YtvdOZxN2WR4mA0,3942
+ud_compatibility-0.1.0.dist-info/RECORD,,
