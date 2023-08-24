@@ -1,0 +1,13 @@
+onnxslim/__init__.py,sha256=UeZb3rw3sB3DRhbbO_dYuj1Fw5oKzlAwv2EPONm-w1g,452
+onnxslim/slim.py,sha256=EfyLPs8-RPeiVUGyA3hLkKQCxm2h8ENzjufaKr1lajo,2410
+onnxslim/cli/__init__.py,sha256=46lrrHdHTfAnuwDmOnWzg_ikQH3pG6Cb2qWRu_v__cU,20
+onnxslim/cli/_main.py,sha256=uekucejtgftml5FlFGFPt1u21kzs0leybkI6S8OHCb0,818
+onnxslim/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+onnxslim/utils/font.py,sha256=AdHhZCam8CGVCwp6RPzELiV_cypg3sxDdSRdBRJ07dk,87
+onnxslim-0.0.1.dist-info/LICENSE,sha256=oHZXw-yrBwdNVGu4JtlZhMgmQHKIZ7BJJlJdhu1HKvI,1062
+onnxslim-0.0.1.dist-info/METADATA,sha256=pHfLpNE5Fk5ImwVc-K3LEtLSUjPRLeZeUwM9ofwkCWU,836
+onnxslim-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+onnxslim-0.0.1.dist-info/entry_points.txt,sha256=O2QgceCVeGeRhnxRSDRcGiFd0ZNfElwrTiRo1W2V7KA,47
+onnxslim-0.0.1.dist-info/top_level.txt,sha256=EWFTb99i0kc6cC9akqNKp88ipzg17_VZzYN7z1kQNlA,9
+onnxslim-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+onnxslim-0.0.1.dist-info/RECORD,,
