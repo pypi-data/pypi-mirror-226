@@ -1,0 +1,9 @@
+user_context/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_context/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_context/src/getIdByJwtToken.py,sha256=Q9nKBCBWS0YEVQc1MxxZFS4H1pJuKIvH1rceSRGe3vI,865
+user_context/src/user.py,sha256=wX01kxFW97Qo0FmJbPnSBmnXUug9Ty7nW38k2pvj8U4,55
+user_context/src/userContext.py,sha256=5ubCc7ScAXLl_BrRhgnG1M_oS6WRu7c3TsDlXVc_6pA,1148
+user_context_local-0.0.5.dist-info/METADATA,sha256=YRByPVeu9ntEX5-dGMY8AX_O-7EwOA3NGeXNJOh7vek,483
+user_context_local-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+user_context_local-0.0.5.dist-info/top_level.txt,sha256=tNZN5OE0iZGbuLYLxXB0Z3CTExULakZHbGiMghUBLek,13
+user_context_local-0.0.5.dist-info/RECORD,,
