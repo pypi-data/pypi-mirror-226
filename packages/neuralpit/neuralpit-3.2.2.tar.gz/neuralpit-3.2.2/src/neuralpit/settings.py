@@ -1,0 +1,25 @@
+import os
+from .utils.paramstore import SSMParameterStore
+from .resource import ssm
+
+TARGET = os.environ.get('TARGET')
+paramStore = SSMParameterStore(prefix=os.environ.get(f'{TARGET}/LAMBDA_AI'),ssm_client=ssm)
+
+DOCUMENT_BUCKET = paramStore.get('DOCUMENT_BUCKET')
+QDRANT_SERVER_URL = paramStore.get('QDRANT_SERVER_URL')
+QDRANT_SERVER_PORT = paramStore.get('QDRANT_SERVER_PORT')
+CONVERSATION_TABLE = paramStore.get('CONVERSATION_TABLE')
+CONVERSATION_DOCUMENT_TABLE = paramStore.get('CONVERSATION_DOCUMENT_TABLE')
+CONVERSATION_HISTORY_TABLE = paramStore.get('CONVERSATION_HISTORY_TABLE')
+CONVERSATION_DATASOURCE_TABLE = paramStore.get('CONVERSATION_DATASOURCE_TABLE')
+OPENAI_KEY_TABLE = paramStore.get('OPENAI_KEY_TABLE')
+OPENAI_TRACKER_STREAM = paramStore.get('OPENAI_TRACKER_STREAM')
+LLM_PROFILE = dict(
+    MODEL = 'gpt-3.5-turbo-16k',
+    MAX_TOKEN = 16384,
+    MAX_DOCUMENT_TOKEN = 14*1024 + 512,
+    MAX_HISTORY_TOKEN = 1024,
+    MAX_QUESTION_TOKEN = 512,
+    QUICK_SUMMARY_PAGE_COUNT = 4,
+    MAX_DOCUMENT_RETREIVER = 50
+)
