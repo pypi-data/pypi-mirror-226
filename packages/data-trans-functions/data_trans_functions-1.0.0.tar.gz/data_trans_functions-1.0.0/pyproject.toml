@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "data-trans-functions"
+version = "1.0.0"
+description = "Implementation of three functions used in data transformation: matrix transpose, time series windowing and cross-correlation."
+authors = ["Tadas <tadas222@gmail.com>"]
+readme = "README.md"
+packages = [{include = "data_trans_functions"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
