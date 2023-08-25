@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: bay_lang
+Version: 0.0.1
+Summary: Bay Lang
+Home-page: https://bayrell.org/ru/docs/bay-lang/
+Author: Ildar Bikmamatov
+Author-email: support@bayrell.org
+License: Apache License Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+
+# bay-lang-python
+
+Bay Lang for python3
+
+Coming soon. Arrival 2024, or later...
+
+Python version: https://github.com/bayrell/bay-lang-python
+
+NodeJS version: https://github.com/bayrell/bay-lang-nodejs
+
+
