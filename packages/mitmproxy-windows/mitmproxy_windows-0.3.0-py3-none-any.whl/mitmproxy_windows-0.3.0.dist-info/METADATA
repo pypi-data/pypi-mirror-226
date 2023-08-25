@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mitmproxy-windows
+Version: 0.3.0
+Project-URL: Source, https://github.com/mitmproxy/mitmproxy-rs
+License-Expression: LGPL-3.0-or-later
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# mitmproxy-windows
+
+This package contains the following precompiled binaries for Windows:
+ 
+ - `windows-redirector.exe`: A Rust executable that redirects traffic to mitmproxy via a Windows named pipe.
+ - A vendored copy of [WinDivert](https://reqrypt.org/windivert.html), used by the redirector.
