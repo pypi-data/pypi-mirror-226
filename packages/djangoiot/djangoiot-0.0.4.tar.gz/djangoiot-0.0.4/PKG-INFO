@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: djangoiot
+Version: 0.0.4
+Summary: Enable IoT in you django app
+Home-page: https://github.com/tomvictor/djangoiot
+Author: Tom Victor
+Author-email: vjtomvictor@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
+Provides-Extra: test
+Provides-Extra: lint
+Provides-Extra: doc
+Provides-Extra: dev
+License-File: LICENSE.txt
+
+djangoiot

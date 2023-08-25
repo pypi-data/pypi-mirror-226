@@ -1,0 +1,17 @@
+LICENSE.txt
+README.rst
+setup.py
+djangoiot/__init__.py
+djangoiot/admin.py
+djangoiot/apps.py
+djangoiot/goiotbackend
+djangoiot/models.py
+djangoiot/tests.py
+djangoiot/views.py
+djangoiot.egg-info/PKG-INFO
+djangoiot.egg-info/SOURCES.txt
+djangoiot.egg-info/dependency_links.txt
+djangoiot.egg-info/not-zip-safe
+djangoiot.egg-info/requires.txt
+djangoiot.egg-info/top_level.txt
+djangoiot/migrations/__init__.py
