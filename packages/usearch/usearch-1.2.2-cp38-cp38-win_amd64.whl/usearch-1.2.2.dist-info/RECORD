@@ -1,0 +1,13 @@
+usearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+usearch/client.py,sha256=DcqPCZi15fMPd4Y9jXWSoRCp1fbjiOcnFmOO3lFe8f4,4241
+usearch/compiled.cp38-win_amd64.pyd,sha256=b0aHEa9lLetXjwEbQoPI-nekbo2AwZ7zFTScat584FQ,505344
+usearch/eval.py,sha256=AVGAO7n14UAz4rFwU29Bkz7A5gr3sY-bpuLjoaerdUs,15036
+usearch/index.py,sha256=oiv3GDE5ortG6KIZpqlqcwAqJnsHzTm9HA0xxqJ3YGg,44306
+usearch/io.py,sha256=dmx9xq04E691BDE8-kASLZ93iCi5rEdxhEk61BKm0gI,3274
+usearch/numba.py,sha256=qkdzziRfE1p7VPi7rxUcllli6iiyx2eR9krc3o3UTvY,4100
+usearch/server.py,sha256=RVl5pXZQXs80MzmYaTMU9Wg9pH0maWmh3tiF22pj4OI,3858
+usearch-1.2.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+usearch-1.2.2.dist-info/METADATA,sha256=7Sx7GjC5Hup0UQXoMNuKvCSvzfE8CMF5APe2aR8PJ_A,20681
+usearch-1.2.2.dist-info/WHEEL,sha256=KplWMgwSZbeAOumvxNxIrVbNPnn_LVzfBH7l38jDCVM,100
+usearch-1.2.2.dist-info/top_level.txt,sha256=zFbid1SmQjk8RsbEgpqF7tTjgWdFvE2z0e1LQ2hKdPg,8
+usearch-1.2.2.dist-info/RECORD,,
