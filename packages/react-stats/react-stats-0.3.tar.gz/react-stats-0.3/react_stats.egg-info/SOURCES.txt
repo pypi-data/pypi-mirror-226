@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+get_stats/__init__.py
+get_stats/exts.py
+get_stats/languages.json
+get_stats/make_stats.py
+react_stats.egg-info/PKG-INFO
+react_stats.egg-info/SOURCES.txt
+react_stats.egg-info/dependency_links.txt
+react_stats.egg-info/entry_points.txt
+react_stats.egg-info/requires.txt
+react_stats.egg-info/top_level.txt

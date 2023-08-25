@@ -1,0 +1,2 @@
+[console_scripts]
+getstats = get_stats.make_stats:main
