@@ -1,0 +1,8 @@
+setup.py
+trifectadb/__init__.py
+trifectadb/base.py
+trifectadb.egg-info/PKG-INFO
+trifectadb.egg-info/SOURCES.txt
+trifectadb.egg-info/dependency_links.txt
+trifectadb.egg-info/requires.txt
+trifectadb.egg-info/top_level.txt
