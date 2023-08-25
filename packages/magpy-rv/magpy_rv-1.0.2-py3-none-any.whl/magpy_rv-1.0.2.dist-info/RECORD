@@ -1,0 +1,14 @@
+magpy_rv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magpy_rv/auxiliary.py,sha256=A7rFPMoT3tgfBzHVgq1ePlRylcyT0YPIhrer54nwC5Y,12084
+magpy_rv/gp_likelihood.py,sha256=wbXfrVmwYkp5KgdyS3s_koCglzQrraBohdLrvW3BUWQ,17272
+magpy_rv/kernels.py,sha256=Wedd0eSGG3VkEzh53SYhLBBVg-dIC6HCDpnycJp-HpA,30579
+magpy_rv/mcmc.py,sha256=drM4LEb2x-PNOqahrMiPzEEsbZTJ4JgJpEJUk-PC4qc,36720
+magpy_rv/mcmc_aux.py,sha256=ktRMpVC6ZPjAwNaovQgamE5E8_wV32Yo53JG2eRkifo,7618
+magpy_rv/models.py,sha256=98m0HH4CCuWFHPsT7LYcXYPhDTjFrGb7_hbn4S6CeWE,19056
+magpy_rv/parameters.py,sha256=gV0LAScUJSBtVM79Lqkf6XqyizbDBCQ29LYCRJStoIQ,16663
+magpy_rv/plotting.py,sha256=QZ2GoZKJl8Bi4XnIYzIGC3wTd0gNRCjFEQIPrTybdVM,56564
+magpy_rv/saving.py,sha256=yPL7dxLaIw9T83M0-8ZAueuYOtPlPO5BNPe1vbOD5lc,21171
+magpy_rv-1.0.2.dist-info/METADATA,sha256=WCuuTdVcEZL0pkRqkJOas7LwfzFIs2tpP06ueRsOSQI,4336
+magpy_rv-1.0.2.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+magpy_rv-1.0.2.dist-info/licenses/LICENSE,sha256=88gBM6T-6XmzKJfChleJAkGcZnMLqotVF2pPmCBF81o,1074
+magpy_rv-1.0.2.dist-info/RECORD,,
