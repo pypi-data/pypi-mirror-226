@@ -1,0 +1,6 @@
+grex-1.0.0.dist-info/METADATA,sha256=m2Y7NbvcxIqPRlErpm26TBZ53eWsd9nae0xqaqUtiT0,11131
+grex-1.0.0.dist-info/WHEEL,sha256=MtRL2CKXupdNMradwf02g57mBc4jXr8Tdznm7qUYiNQ,127
+grex-1.0.0.dist-info/license_files/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+grex/__init__.py,sha256=AO9R4vvdgYeHPPlwf9myGQB-2wI3zNW2mNcstRjePPo,99
+grex/grex.cpython-312-s390x-linux-gnu.so,sha256=KMlzG8DaAbwb0k7evsiAfSdRom8aZmQPICeOlyS_xYE,8849592
+grex-1.0.0.dist-info/RECORD,,
