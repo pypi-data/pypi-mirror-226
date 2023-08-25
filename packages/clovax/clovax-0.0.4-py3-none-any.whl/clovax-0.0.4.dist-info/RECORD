@@ -1,0 +1,9 @@
+clovax/__init__.py,sha256=s22ZsKaYoDIFJ1_IApg3DpdRrpiuCUrKEiGUhrt96yE,142
+clovax/chat.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clovax/clovax.py,sha256=VmcMaVpFqTaibhyEGPWd_0NW4O18zAL7gDCNezvM_xc,6811
+clovax/errors.py,sha256=Ku2MzbZyHPCqv7O1jL9u4ws0ag79WX8JOI0iXgYWSeE,528
+clovax-0.0.4.dist-info/LICENSE,sha256=42pmuXR1saG7Svu39S4iwAXAMxP0kv6c7kO10R_aiFw,1066
+clovax-0.0.4.dist-info/METADATA,sha256=tH3d5zVK7gzJnS0GrBoinn43b57OIy57XZDtz5w38rY,2074
+clovax-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+clovax-0.0.4.dist-info/top_level.txt,sha256=d0KMRfT_Q7N5CRNsRTBTBiV3U7eR5SLS_osAcCQgENI,7
+clovax-0.0.4.dist-info/RECORD,,
