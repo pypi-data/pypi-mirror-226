@@ -1,0 +1,9 @@
+cryptography
+defusedxml
+lxml
+pyconfig
+requests
+six
+
+[PKCS11]
+PyKCS11
