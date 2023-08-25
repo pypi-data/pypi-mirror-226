@@ -1,0 +1,10 @@
+gw2api/__init__.py,sha256=JV6wdEDYmnO13hElpRRMR7uVVtla-DVYUdFb2mje6fM,3128
+gw2api/objects/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gw2api/objects/base_object.py,sha256=vNupXUVWix0ma4HzBJeSYRASlGDyvLLfWeYq0Hgcaf0,4052
+gw2api/objects/api_version_1/__init__.py,sha256=gxnMMkt18PyjRjSg6IstNqmRlRUFfQ8u4D4bdQZ26B0,5112
+gw2api/objects/api_version_2/__init__.py,sha256=M3kgbn00rLkLwn0ts6k2EYHuMhS7G90szqTrkAYuSY4,57322
+GuildWars2_API_Client-0.6.0.dist-info/LICENSE,sha256=oVXM0ayqJm_meaIUn1sb1XrQjeTAtQUSzsgYiqLSBwI,1060
+GuildWars2_API_Client-0.6.0.dist-info/METADATA,sha256=wOxqzgQzXEa7weKVmZpT0KoZOUAAwJWfYujsKzeFx3o,5272
+GuildWars2_API_Client-0.6.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+GuildWars2_API_Client-0.6.0.dist-info/top_level.txt,sha256=0f6N3463rEyjCAokvEK4a0Pw4jiSb65BPE5ShVoRtXE,7
+GuildWars2_API_Client-0.6.0.dist-info/RECORD,,
