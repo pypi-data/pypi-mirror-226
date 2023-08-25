@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: campbells
+Version: 0.1.0
+Summary: A condensed web scraping library.
+Keywords: HTML XML parse soup
+Author-Email: Louis Maddox <louismmx@gmail.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: SGML
+Classifier: Topic :: Text Processing :: Markup :: XML
+Project-URL: Homepage, https://github.com/lmmx/campbells
+Project-URL: Repository, https://github.com/lmmx/campbells.git
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.1.1
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: html5lib>=1.1; extra == "html5lib"
+Requires-Dist: lxml>=4.9.3; extra == "lxml"
+Provides-Extra: html5lib
+Provides-Extra: lxml
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+# Campbells 🥫
+
+A condensed web scraping library.
+
+[Install](#installation) •
+[Examples](#examples)
+
+</div>
+
+Adapted from [beautifulsoup4][bs4]'s inner package, then linted, refactored, reduced, and seasoned to taste.
+
+[bs4]: https://beautiful-soup-4.readthedocs.io/
+
+## Installation
+
+**Campbells** is available on PyPi:
+
+``` bash
+pip install campbells
+```
+
+The dependencies needed to use `html5lib` and `lxml` parsers are not installed by default.
+They can be installed with:
+
+- `pip install campbells[html5lib]` to be able to use
+  [html5lib](https://html5lib.readthedocs.io/en/latest/).
+  - **Pros:** closest to how browsers parses web pages, very lenient, creates valid HTML5.
+  - **Cons:** slowest parser.
+- `pip install campbells[lxml]` to be able to use
+  [lxml](https://lxml.de/).
+  - **Pros:** fastest parser.
+  - **Cons:** heavier dependency (C extension).
