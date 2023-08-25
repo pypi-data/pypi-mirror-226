@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+neoscr/__init__.py
+neoscr/_modidx.py
+neoscr/cli.py
+neoscr/core.py
+neoscr/utils.py
+neoscr.egg-info/PKG-INFO
+neoscr.egg-info/SOURCES.txt
+neoscr.egg-info/dependency_links.txt
+neoscr.egg-info/entry_points.txt
+neoscr.egg-info/not-zip-safe
+neoscr.egg-info/requires.txt
+neoscr.egg-info/top_level.txt

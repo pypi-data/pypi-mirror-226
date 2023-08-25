@@ -1,0 +1,7 @@
+fastcore
+pandas
+requests
+
+[dev]
+nbdev
+jupyter
