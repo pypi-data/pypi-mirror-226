@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: DiscPy
+Version: 0.1.2
+Summary: A Python wrapper for the Discuit API.
+Home-page: https://github.com/Chaaronn/DiscPy
+Author: Matt Voce
+Author-email: mattvoce117@gmail.com
+License: MIT License
+Description: This is a wrapper for discuit.net/api. See the GitHub for full docs
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
