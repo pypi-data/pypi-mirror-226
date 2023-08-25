@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: lipid-librarian
+Version: 0.1.2b0
+Summary: A Lipidomics Database Explorer Package
+Author: Felix Niedermeier, Konstantinos Mechteridis, Konstantin Pelz
+Project-URL: Bug Reports, https://github.com/lipitum/lipid_librarian/issues
+Project-URL: Source, https://github.com/lipitum/lipid_librarian/
+Keywords: lipids,bioinformatics,development
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: importlib-metadata
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tables
+Requires-Dist: jsons
+Requires-Dist: json2html
+Requires-Dist: SQLAlchemy
+Requires-Dist: PyMySQL
+Requires-Dist: networkx
+Requires-Dist: ratelimit
+Requires-Dist: func-timeout
+Requires-Dist: liputils
+Requires-Dist: sparql-dataframe
+Requires-Dist: pygoslin
+Requires-Dist: linex2
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: rpy2 ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Lipid Librarian
+
+## Build and Installation Instructions
+
+To build the project you need to have sqlite3 installed and available in your Path.
+Optionally, to rebuild the LipidOntology data files, R needs to be installed and available in your Path.
+
+### Virtual Environment
+
+    make install
+
+### Docker Container
+
+    docker build -t lipid-librarian .
+
+### Global Python Environment
+
+TODO
+
+### Rebuild LipidOntology Data Files
+
+You can reuse the Makefile targets including the virtual environment created by `make install`:
+
+    make install
+    source venv/bin/activate
+    pip install -r requirements.dev.txt
+    python scripts/convert_lipidontology.py
+
+## Run Lipid Librarian
+
+### CLI
+
+In case you installed Lipid Librarian into a virtual environment, make sure you activate it before with `source venv/bin/activate`.
+
+    lipid-librarian "PC(18:1_20:0)" "410.243;0.01" "PC(56:8)"
+    lipid-librarian .path/to/file
+    cat .path/to/file | lipid-librarian
+
+### Docker
+
+    docker run lipid-librarian "PC(18:1_20:0)" "410.243;0.01" "PC(56:8)"
+
+### Import Python Package
+
+```python
+from lipid_librarian.LipidQuery import *
+
+query1 = LipidQuery("PC(18:1_20:0)").query()
+query2 = LipidQuery("410.243;0.01").query()
+query3 = LipidQuery("PC(56:8)").query()
+
+for lipid in query1:
+    print(repr(lipid))
+
+for lipid in query2:
+    print(format(lipid, 'json'))
+
+for lipid in query3:
+    print(format(lipid, 'html'))
+```
