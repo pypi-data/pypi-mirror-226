@@ -1,0 +1,2 @@
+[console_scripts]
+algpred2 = algpred2.python_scripts.algpred2:main
