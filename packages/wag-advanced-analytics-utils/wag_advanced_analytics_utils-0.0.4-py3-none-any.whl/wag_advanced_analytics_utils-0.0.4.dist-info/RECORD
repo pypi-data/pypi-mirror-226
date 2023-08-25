@@ -1,0 +1,9 @@
+wag_advanced_analytics_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wag_advanced_analytics_utils/athena_data_provider.py,sha256=gW_aeNhwapx1NR1fJ_lczMkrB2DxXOOfBtxmo3k_puU,2600
+wag_advanced_analytics_utils/logger.py,sha256=_EK5wWzuT_HaBDh1nS6s2IMGnbDXXandyyT2iTdH69M,3780
+wag_advanced_analytics_utils/metrics.py,sha256=1oi_fJg-9XIrDi4-2kKPJFOUC9F-9u9hpvxkxHJOgzE,2270
+wag_advanced_analytics_utils/s3_client.py,sha256=xNw_09KeK4a_dlw1nv9033zyPk86FP72PdO_U2EqmPE,1025
+wag_advanced_analytics_utils-0.0.4.dist-info/METADATA,sha256=wvc9pVv6wyXVPf-groid7n9wkhUQFEOnJFjqqn4MSDY,2882
+wag_advanced_analytics_utils-0.0.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+wag_advanced_analytics_utils-0.0.4.dist-info/licenses/LICENSE,sha256=wuJc6SkaE_G-4alxueHO8BhgWRmEJAlJaPkoFuI9kqk,1070
+wag_advanced_analytics_utils-0.0.4.dist-info/RECORD,,
