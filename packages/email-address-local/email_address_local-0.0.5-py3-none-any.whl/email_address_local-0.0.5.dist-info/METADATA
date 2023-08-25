@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: email-address-local
+Version: 0.0.5
+Summary: Email Address Local PyPI Package
+Home-page: https://github.com/circles
+Author: Circles
+Author-email: info@circles.life
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Email Address Local PyPI Package
