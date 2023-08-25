@@ -1,0 +1,6 @@
+#!python
+
+import bay_lang
+
+print("Bay lang")
+print("Version: " + str(bay_lang.__version__))
