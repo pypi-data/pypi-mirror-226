@@ -1,0 +1,11 @@
+pypi_api_installer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypi_api_installer/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypi_api_installer/tools/check_library_exist.py,sha256=mewh9lPjZ0UJV8FixTVtYO9w_xG-A2hLwPKTOclK780,313
+pypi_api_installer/tools/get_all_library_releases.py,sha256=vJO84BOUoyzVnZWluEKevqTKx_7_rgovQMQsF8kDs6M,393
+pypi_api_installer/tools/install_library.py,sha256=Vqv8Pnk2t2wBxYSAI7JZQoQhqtefhqomCew7Q6vog34,671
+pypi_api_installer/tools/uncompress_library.py,sha256=HOePZ40fI73gkGajlWsWn3VgpSgGq03sZr2z6c2XwVM,187
+pypi_api_installer-1.0.dist-info/LICENSE,sha256=wSBZDZIl5_jGUdNAgvaCO_PvCzL768-Sl6saWxpTOLQ,1071
+pypi_api_installer-1.0.dist-info/METADATA,sha256=OQwcP3AVJwTjSfRCD13k4Lh7uKEqttvQDIaDzNWUgXk,771
+pypi_api_installer-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pypi_api_installer-1.0.dist-info/top_level.txt,sha256=lhno0mlboD6M9LKZEHpjjUERFiQ8gLO6iD6tN9QxyAQ,19
+pypi_api_installer-1.0.dist-info/RECORD,,
