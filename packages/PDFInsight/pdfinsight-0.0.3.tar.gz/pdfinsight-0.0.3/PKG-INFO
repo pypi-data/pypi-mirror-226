@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: PDFInsight
+Version: 0.0.3
+Summary: Text Mining & Classification Toolkit
+Author-email: erjieyong <erjieyong@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Dist: PyMuPDF>=1.22.5
+Requires-Dist: pandas>=1.5.3
+Project-URL: Bug Tracker, https://github.com/erjieyong/PDFInsight/issues
+Project-URL: Homepage, https://github.com/erjieyong/PDFInsight
+
+# PDFInsight
+Text Mining &amp; Classification Toolkit
+
+Extract and categorise text-based PDFs into the following categories
+- table of contents
+- header
+- heading
+- tables
+- content
+- footnote
+- footer
+- page number
+- unsure (text that cannot be categorised)
+
+## Example
+```
+import pdfinsight
+df = pdfinsight.pdf_extractor("sample.pdf")
+```
+
+## Installation
+`pip install PDFInsight`
+
+## References
+[https://github.com/pymupdf/PyMuPDF](https://github.com/pymupdf/PyMuPDF)
