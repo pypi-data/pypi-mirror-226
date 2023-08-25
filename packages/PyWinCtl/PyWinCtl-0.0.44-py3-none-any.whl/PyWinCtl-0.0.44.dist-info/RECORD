@@ -1,0 +1,14 @@
+ewmhlib/Props.py,sha256=cPIk5VMuEcKrOPK3ZvnROu6O1kYaXjIx4Wk1fHzy6ec,4121
+ewmhlib/Structs.py,sha256=GXUxM-NcltNBBMGin6rhvhcbruJUp3nEbscRyIcCd8Y,2584
+ewmhlib/__init__.py,sha256=Ip1vevObnPSDAXJAGFSJ12AXbUqzWeltKOiTI5jtYpw,1063
+ewmhlib/_ewmhlib.py,sha256=LYuGmwoObA6nQi9q4dObDHdBroXjEJIgQfXSl7u8SWo,152723
+pywinctl/__init__.py,sha256=_o6n-4E4vKzStnBvM3wlGblurzAd3NaRolqOmtrehIs,34224
+pywinctl/_pywinctl_linux.py,sha256=zl1v1ceiO619Ru5utFMuAv8v9G1XEoFdf5qPzCZ6ScY,39536
+pywinctl/_pywinctl_macos.py,sha256=MTCez7ThthGW1zyyH5n-V523dcSdYEZBuZLYzZCrBSM,112659
+pywinctl/_pywinctl_win.py,sha256=c4JwCp0c_OGJ8mfOml-UOYLiYuEKAIygbdLda664IZQ,70547
+PyWinCtl-0.0.44.dist-info/AUTHORS.txt,sha256=QN5DYj0AYYeBORE_e8eGJ5lt8o5ur1_842kVfwFEkIQ,1346
+PyWinCtl-0.0.44.dist-info/LICENSE.txt,sha256=TcYaEuUtOrqHCkpod2-h3ZOe8yXGm3Bzh-_M6swpxWA,3146
+PyWinCtl-0.0.44.dist-info/METADATA,sha256=qp4JnKguRVtQqhG3yqXl5YCxnA-ydyVIHSoGGAVLJE8,16035
+PyWinCtl-0.0.44.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+PyWinCtl-0.0.44.dist-info/top_level.txt,sha256=iE_0d4xz5foIr2jolNzcCRg1966AYmIUbCMrHqxt5Pw,17
+PyWinCtl-0.0.44.dist-info/RECORD,,
