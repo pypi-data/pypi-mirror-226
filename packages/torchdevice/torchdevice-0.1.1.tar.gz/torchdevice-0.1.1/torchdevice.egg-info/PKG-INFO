@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: torchdevice
+Version: 0.1.1
+Summary: Setup CUDA_VISIBLE_DEVICES
+Home-page: https://github.com/speedcell4/torchdevice
+Author: speedcell4
+Author-email: speedcell4@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+
+UNKNOWN
+
