@@ -1,0 +1,11 @@
+borg_drone/__init__.py,sha256=h_yV9aciuQSwoV5MLV81d4WP9_yB5985-glHhJb_MNU,60
+borg_drone/__main__.py,sha256=MLrL8cWvoTYBoiV5vkHbdeZ_ajyUaK7y9tEKBdPOxgI,5388
+borg_drone/command.py,sha256=CcesTqJk_tZUqqImXtoiVWT2uH4U3sQoT-AZ1E5yvmE,8557
+borg_drone/config.py,sha256=5BrWNG6Ydeb-D_aSKc4xFXpvhW33u6Z5EeTbYgFzons,10804
+borg_drone/example.yml,sha256=f9tkiMgKmSL9X3Uimjj7PvGHt8HPx6eDQ6Q8KTg9Kps,2005
+borg_drone/types.py,sha256=E1BcoHLeomk7T0VpxvKy3xelTUcJU6-jsg60hWClUJM,416
+borg_drone/util.py,sha256=2GUulDJ7rYLuqxFVA4TLrYgc7yLWiiD4FzyJZXCWOv4,4759
+borg_drone-0.2.0.post0.dist-info/entry_points.txt,sha256=hsQtj4bTnWLjpE5-gLSlIgL6euSAMJLomesDHMS8Ouw,55
+borg_drone-0.2.0.post0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+borg_drone-0.2.0.post0.dist-info/METADATA,sha256=-AQc2LYyRXkpkLOXWgEtQmxXnAD1KxeTeoXFvbAI_3U,4917
+borg_drone-0.2.0.post0.dist-info/RECORD,,
