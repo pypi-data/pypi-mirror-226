@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: firebase-scrypt
+Version: 0.1.0
+Summary: Python implementation of Firebase's scrypt password hashing algorithm.
+Author-email: Jaakko Laurila <JaakkoL@users.noreply.github.com>, Nicholas Hairs <info@nicholashairs.com>
+Maintainer-email: Nicholas Hairs <info@nicholashairs.com>
+License: MIT License
+        
+        Copyright (c) 2021 Jaakko Laurila
+        Copyright (c) 2023 Nicholas Hairs
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/nhairs/firebase-scrypt-python
+Keywords: firebase,scrypt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Typing :: Typed
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+License-File: NOTICE
+Requires-Dist: pycryptodome >=3.9
+Provides-Extra: dev
+Requires-Dist: validate-pyproject[all] ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: mkdocs-material >=8.5 ; extra == 'dev'
+Requires-Dist: mkdocs-awesome-pages-plugin ; extra == 'dev'
+Requires-Dist: mdx-truly-sane-lists ; extra == 'dev'
+Requires-Dist: bpython ; extra == 'dev'
+
+# firebase-scrypt-python
+
+[![PyPi](https://img.shields.io/pypi/v/firebase-scrypt.svg)](https://pypi.python.org/pypi/firebase-scrypt/)
+[![PyPI - Status](https://img.shields.io/pypi/status/firebase-scrypt)](https://pypi.python.org/pypi/firebase-scrypt/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/firebase-scrypt.svg)](https://github.com/nhairs/firebase-scrypt-python)
+[![License](https://img.shields.io/github/license/nhairs/firebase-scrypt.svg)](https://github.com/nhairs/firebase-scrypt-python)
+
+Python implementation of Firebase's scrypt password hashing algorithm. Based on [firebase/scrypt](https://github.com/firebase/scrypt).
+
+This is a fork of [Jaakkol/firebase-scrypt-python](https://github.com/JaakkoL/firebase-scrypt-python) to allow packaging for PyPI.
+
+## Installation
+### Install via pip
+```shell
+pip3 install firebase-scrypt
+```
+
+## Usage
+
+```python
+
+import firebase_scrypt
+
+# Sample Password hash parameters from Firebase Console.
+salt_separator = "Bw=="
+signer_key = "jxspr8Ki0RYycVU8zykbdLGjFQ3McFUH0uiiTvC8pVMXAn210wjLNmdZJzxUECKbm0QsEmYUSDzZvpjeJ9WmXA=="
+rounds= 8
+mem_cost=14
+
+# Exported user user accounts salt and password hash.
+salt = "42xEC+ixf3L2lw=="
+password_hash="lSrfV15cpx95/sZS2W9c9Kp6i/LVgQNDNC/qzrCnh1SAyZvqmZqAjTdn3aoItz+VHjoZilo78198JAdRuid5lQ=="
+
+# User's plain text password
+password = "user1password"
+
+is_valid = firebase_scrypt.verify_password(
+    password=password,
+    known_hash=password_hash,
+    salt=salt,
+    salt_separator=salt_separator,
+    signer_key=signer_key,
+    rounds=rounds,
+    mem_cost=mem_cost
+)
+
+is_valid # True / False
+
+```
+
+## Bugs, Feature Requests etc
+TLDR: Please [submit an issue on github](https://github.com/nhairs/firebase-scrypt/issues).
+
+In the case of bug reports, please help me help you by following best practices [1](https://marker.io/blog/write-bug-report/) [2](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
+
+In the case of feature requests, please provide background to the problem you are trying to solve so to help find a solution that makes the most sense for the library as well as your usecase.
+
+## Development
+The only development dependencies are bash and docker. All actions are run within docker for ease of use. See `./dev.sh help` for commands. Typical commands are `format`, `lint`, `test`, `repl`, `build`.
+
+## Licence
+This project is licenced under the MIT Licence - see [`LICENCE`](https://github.com/nahirs/firebase-scrypt-python/blob/master/LICENCE).
+
+This project may include other open source licenced software - see [`NOTICE`](https://github.com/nhairs/firebase-scrypt-python/blob/master/NOTICE).
+
+
+## Authors
+- Nicholas Hairs - [www.nicholashairs.com](https://www.nicholashairs.com)
+- [Jaakko Laurila](https://github.com/JaakkoL)
