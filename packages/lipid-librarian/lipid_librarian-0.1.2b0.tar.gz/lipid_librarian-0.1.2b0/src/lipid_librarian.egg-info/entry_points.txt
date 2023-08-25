@@ -1,0 +1,2 @@
+[console_scripts]
+lipid-librarian = lipid_librarian.cli:main
