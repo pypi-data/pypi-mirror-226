@@ -1,0 +1,11 @@
+nonebot_plugin_templates/__init__.py,sha256=l3kQt_aQ41NNS-S89FedBeQzxmYY0PgkIejs_LgrzLg,611
+nonebot_plugin_templates/template_types.py,sha256=TJD_8CkP_GSuhQVP_DO_VNy17_R-15rRTbWQryskmZ0,5861
+nonebot_plugin_templates/templates/cards.html,sha256=xUapFBQOWeKA4f311rO6CS7jRDZPFMlO2-kuPbPpklk,4545
+nonebot_plugin_templates/templates/colorlist.html,sha256=7hu6HrMxeh9vCdDRFjUKgdWYCug30vKo8K_pXKcMlUg,4336
+nonebot_plugin_templates/templates/grid.html,sha256=qvEOGvg6OuHkluCXsQ1vCKczgUr_bkvNj9kEeswjyzI,2210
+nonebot_plugin_templates/templates/menus.html,sha256=tk4FFPhG1_OoAsZBbRiv5m1cTdNzVlC4ae5VGwVfikA,3623
+nonebot_plugin_templates/templates/PingFang.ttf,sha256=3fBRqXcX016Q0pfqsfu3W6tIEgmDWGzypwvp_T360sg,10968356
+nonebot_plugin_templates/templates_render.py,sha256=q2ABu4QcbtoTRarg8oHxPJikkNe_Seh2VBdX5IGfcoY,7621
+nonebot_plugin_templates-0.1.6.dist-info/METADATA,sha256=RZlp5GM8LuUC614-eJkpzLSdMmG15gd8XzaV6zaVJWQ,4072
+nonebot_plugin_templates-0.1.6.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+nonebot_plugin_templates-0.1.6.dist-info/RECORD,,
