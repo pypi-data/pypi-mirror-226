@@ -1,0 +1,2 @@
+[console_scripts]
+replit-ffmpeg = replit_ffmpeg.installer:main

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+replit_ffmpeg/__init__.py
+replit_ffmpeg/__main__.py
+replit_ffmpeg/installer.py
+replit_ffmpeg.egg-info/PKG-INFO
+replit_ffmpeg.egg-info/SOURCES.txt
+replit_ffmpeg.egg-info/dependency_links.txt
+replit_ffmpeg.egg-info/entry_points.txt
+replit_ffmpeg.egg-info/requires.txt
+replit_ffmpeg.egg-info/top_level.txt
