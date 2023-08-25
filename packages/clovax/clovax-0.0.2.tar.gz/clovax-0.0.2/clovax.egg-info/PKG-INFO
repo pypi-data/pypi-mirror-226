@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: clovax
+Version: 0.0.2
+Summary: Unofficial CLOVA X API
+Home-page: https://github.com/mirusu400/CLOVA-X-API
+Author: mirusu400
+Author-email: mirusu400@naver.com
+Keywords: ClovaX,Naver,CLOVA,CLOVA X,CLOVA X API
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Naver Clova X Unofficial API
+
+
+## Install
+
+```
+pip install clovax
+```
+
+## Usage
+
+```python
+from clovax import ClovaX
+
+c = ClovaX()
+c.get_cookie("[Your netscape cookie file]")
+log = c.start("test")
+print(log)
+```
+
+### How can I get cookie file?
+
+1. Install [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
+2. Export cookie
+3. Set cookie file path to `get_cookie` function
