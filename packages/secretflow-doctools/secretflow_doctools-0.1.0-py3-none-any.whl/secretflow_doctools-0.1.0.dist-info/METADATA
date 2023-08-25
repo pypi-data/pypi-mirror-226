@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: secretflow-doctools
+Version: 0.1.0
+Summary: Documentation toolchain for SecretFlow
+Author-email: Tony Wu <tonywu6@protonmail.com>
+License-File: LICENSE
+Requires-Python: <3.11,>=3.8.15
+Requires-Dist: aiofiles~=23.1.0
+Requires-Dist: asyncstdlib>=3.10.8
+Requires-Dist: click>=8.1.5
+Requires-Dist: importlib-resources>=6.0.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: more-itertools>=9.1.0
+Requires-Dist: pathspec>=0.11.1
+Requires-Dist: pexpect>=4.8.0
+Requires-Dist: pydantic<2.0.0,>=1.10.12
+Requires-Dist: python-dotenv~=1.0.0
+Requires-Dist: requests-unixsocket>=0.3.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: ruamel-yaml>=0.17.32
+Requires-Dist: sphinx>=6.2.1
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: termcolor>=2.3.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: twisted>=22.10.0
+Requires-Dist: typing-extensions>=4.7.1
+Requires-Dist: urllib3<2.0.0
+Requires-Dist: watchfiles>=0.19.0
+Description-Content-Type: text/markdown
+
+# @secretflow/doctools
+
+[SecretFlow] 文档构建工具。
+
+[SecretFlow]: https://secretflow.org.cn/
+
+## 安装
+
+```bash
+pip install secretflow-doctools
+```
+
+## 使用
+
+`secretflow_doctools` 以 Sphinx 插件的形式提供，在你的 `conf.py` 中添加插件：
+
+```python
+extensions = [
+    # ...
+    "secretflow_doctools",
+]
+```
+
+Sphinx 命令：
+
+```bash
+python -m sphinx -b mdx source build/mdx
+```
+
+其中：
+
+- `-b mdx` —— 生成 [MDX] (Markdown + JSX) 文件，即本插件的主要功能
+- `source` —— 文档源文件根目录（包含 `conf.py` 文件的目录）
+- `build/mdx` —— 输出目录，可以是任意目录
+
+[MDX]: https://mdxjs.com/
+
+其余 CLI 选项和 `sphinx-build` 一致
+
+或者使用 Makefile：
+
+```bash
+make mdx
+```
