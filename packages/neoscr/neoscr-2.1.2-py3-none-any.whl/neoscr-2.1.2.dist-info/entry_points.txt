@@ -1,0 +1,8 @@
+[console_scripts]
+build_package = neoscr.cli:build_package
+install_package = neoscr.cli:install_package
+neoscr = neoscr.cli:consulta_scr
+
+[nbdev]
+neoscr = neoscr._modidx:d
+
