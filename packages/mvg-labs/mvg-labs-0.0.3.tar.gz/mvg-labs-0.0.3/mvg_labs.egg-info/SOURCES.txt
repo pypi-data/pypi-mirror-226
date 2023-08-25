@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+mvg_labs/__init__.py
+mvg_labs.egg-info/PKG-INFO
+mvg_labs.egg-info/SOURCES.txt
+mvg_labs.egg-info/dependency_links.txt
+mvg_labs.egg-info/requires.txt
+mvg_labs.egg-info/top_level.txt
