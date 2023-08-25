@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+nd_kafka/__init__.py
+nd_kafka/base.py
+nd_kafka/consumer.py
+nd_kafka/producer.py
+nd_kafka_md.egg-info/PKG-INFO
+nd_kafka_md.egg-info/SOURCES.txt
+nd_kafka_md.egg-info/dependency_links.txt
+nd_kafka_md.egg-info/top_level.txt
