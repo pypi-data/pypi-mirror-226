@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: OverDose
+Version: 0.0.2
+Summary: Overdose of drugs in the US
+Home-page: https://github.com/i-inose/OverDose
+Author: Izuru Inose
+Author-email: i.inose0304@gmail.com
+Project-URL: Bug Tracker, https://github.com/i-inose/OverDose
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# How to install overdose
+$ pip install overdose
+
+# How to run overdose
+$ overdose
+
+## Graph
+
+<img src='https://github.com/i-inose/OverDose/blob/main/result.png?raw=true' height=480, width=640>
+
+
+"Cocaine (T40.5)," "Heroin (T40.1)," and "Opioids (T40.0-T40.4,T40.6)" are up since 2019.
+"Opioids (T40.0-T40.4,T40.6)" are particularly prolific.
