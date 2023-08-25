@@ -1,0 +1,147 @@
+Metadata-Version: 2.1
+Name: upyuns3client
+Version: 0.1.3
+Summary: UpYun Storage SDK for Python S3 Support
+Home-page: https://github.com/evansuner/upyuns3client
+Author: Evan
+Author-email: zhidong.s@outlook.com
+License: License :: OSI Approved :: MIT License
+Keywords: upyun,python,sdk,s3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+[toc]
+
+# 又拍云存储-s3 支持
+
+## 接口说明
+
+### 获取服务列表
+
+list_buckets
+
+参数
+| 参数 | 必选 | 类型 | 说明 |
+| ---- | ---- | ---- | ---- |
+| None | None | None | None |
+
+### 获取目录列表
+
+list_folders
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+
+### 获取目录文件列表
+
+list_files
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+| folder | 是   | str  | 又拍云服务目录 |
+
+### 删除文件
+
+delete_file
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+| file   | 是   | str  | 又拍云文件名称 |
+
+### 删除目录
+
+delete_folder
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+| folder | 是   | str  | 又拍云服务目录 |
+
+### 创建目录
+
+create_folder
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+| folder | 是   | str  | 又拍云服务目录 |
+
+### 上传文件
+
+upload_file
+
+参数
+| 参数        | 必选 | 类型 | 说明                                                         |
+| ----------- | ---- | ---- | ------------------------------------------------------------ |
+| bucket      | 是   | str  | 又拍云服务名称                                               |
+| file_path   | 是   | str  | 本地文件路径                                                 |
+| object_name | 否   | str  | 如果object为None，则又拍云的存储文件名称为file_path文件名，并且存放位置是根目录 |
+
+### 获取文件信息
+
+get_file_info
+
+参数
+| 参数        | 必选 | 类型 | 说明               |
+| ----------- | ---- | ---- | ------------------ |
+| bucket      | 是   | str  | 又拍云服务名称     |
+| object_name | 是   | str  | 又拍云存储文件名称 |
+
+### 获取随机文件
+
+get_random_file
+
+参数
+| 参数   | 必选 | 类型 | 说明           |
+| ------ | ---- | ---- | -------------- |
+| bucket | 是   | str  | 又拍云服务名称 |
+| folder | 是   | str  | 又拍云服务目录 |
+
+### 下载文件
+
+download_file
+
+参数
+| 参数        | 必选 | 类型 | 说明                     |
+| ----------- | ---- | ---- | ------------------------ |
+| bucket      | 是   | str  | 又拍云服务名称           |
+| object_name | 是   | str  | 又拍云存储文件名称       |
+| file_path   | 否   | str  | 本地存储的文件路径及名称 |
+
+### 生成预签名URL
+
+generate_presigned_url
+
+| 参数        | 必选 | 类型 | 说明                                                 |
+| ----------- | ---- | ---- | ---------------------------------------------------- |
+| bucket      | 是   | str  | 又拍云服务名称                                       |
+| object_name | 是   | str  | 又拍云存储文件名称                                   |
+| expiration  | 否   | int  | 过期时间，单位秒，最大不能超过604800，默认不填3600秒 |
+
+## 代码示例
+
+```python
+from upyuns3client.upyuns3client import UpYunS3Client
+ak = "xxxxx"
+sk = "xxxxx"
+client = UpYunS3Client(ak, sk)
+client.generate_presigned_url(
+    bucket="test-bucket", object_name="test.png", expiration=3600
+)
+```
+

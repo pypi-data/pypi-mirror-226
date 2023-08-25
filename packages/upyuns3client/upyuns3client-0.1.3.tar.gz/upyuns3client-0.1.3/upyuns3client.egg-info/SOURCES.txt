@@ -1,0 +1,10 @@
+README.md
+setup.py
+tests/test_upyuns3client.py
+upyuns3client/__init__.py
+upyuns3client/upyuns3client.py
+upyuns3client.egg-info/PKG-INFO
+upyuns3client.egg-info/SOURCES.txt
+upyuns3client.egg-info/dependency_links.txt
+upyuns3client.egg-info/requires.txt
+upyuns3client.egg-info/top_level.txt
