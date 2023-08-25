@@ -1,0 +1,15 @@
+geopandas
+matplotlib
+numpy
+scipy
+scikit-learn
+pandas
+s3fs
+pyubx2
+tilemapbase
+dotmap
+nepy
+simplekml
+
+[dev]
+setuptools_scm
