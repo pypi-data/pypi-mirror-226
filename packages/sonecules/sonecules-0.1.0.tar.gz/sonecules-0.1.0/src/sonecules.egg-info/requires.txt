@@ -1,0 +1,23 @@
+mesonic
+numpy
+pandas
+pya
+pytsmod
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[all]
+mesonic[sc3nb]
+setuptools
+pytest
+pytest-cov
+
+[examples]
+ipympl
+
+[testing]
+mesonic[sc3nb]
+setuptools
+pytest
+pytest-cov
