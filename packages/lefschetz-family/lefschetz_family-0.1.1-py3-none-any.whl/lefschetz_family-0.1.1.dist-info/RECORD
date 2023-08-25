@@ -1,0 +1,17 @@
+lefschetz_family/Context.py,sha256=l6lRT4CDMPhWzykMmrh16QeLxs17cSmrrBWf8wWP6Ro,2085
+lefschetz_family/Util.py,sha256=2eWtAV-P3MI1EWebY5OcgMNtiOT_7Vrp5RKrm3EVfio,9053
+lefschetz_family/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lefschetz_family/delaunay.py,sha256=i-zL0ohQvd94gEbGUVuard4xq9CzWuwYK34Amlxz2Es,3028
+lefschetz_family/delaunay_dual.py,sha256=vdQ6nmrgMaFx2m0Uyx5OkwzmayPIZfvKGFrx6TL1wmA,12127
+lefschetz_family/elliptic_singularity.py,sha256=ISGe2Kooq6CZs9DBZbbfj-awqiIshvQYE5CYiehafj4,4739
+lefschetz_family/elliptic_surface.py,sha256=rtlsC-YOR1g-iNqUEXbZh05oOi3zeY3VPvf1ZFZ0WjM,27699
+lefschetz_family/exceptionalDivisorComputer.py,sha256=sD0hBXcV-tgRdwyBf7Nxeuz2KWT28Qd7fXh9pUnC6xM,10353
+lefschetz_family/hypersurface.py,sha256=EAddZk5WL6qtuclWUS3mHK3RUVNpeskAC8uGLyV8Zsc,31165
+lefschetz_family/integrator.py,sha256=XB-7R0FMliov3Nt2P1F0frsIecBeAKcEehy0xAbIQfk,5779
+lefschetz_family/rootsBraid.py,sha256=376ZDoUIn0jck9Zhl-XmF2635HZaBxYn3o06EeXIb8k,19637
+lefschetz_family/translator.py,sha256=uUm8SJD8aXyPLQ_cNwiLgxQD-YbuEtxfHZJkaeYAZTs,5786
+lefschetz_family/voronoi.py,sha256=XllZxGXZoep4pobW6BMaqbcI7Ta77DR3WZ2eDVp8pzA,12848
+lefschetz_family-0.1.1.dist-info/METADATA,sha256=ZLHFhr-mZSbMi1mE4RhTyRHCxDQJsVwDm5iPjK-R0bw,12989
+lefschetz_family-0.1.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+lefschetz_family-0.1.1.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+lefschetz_family-0.1.1.dist-info/RECORD,,
