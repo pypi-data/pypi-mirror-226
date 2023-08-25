@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: imgdt
+Version: 0.0.2
+Summary: Small package to setup a dataset of images
+Home-page: https://github.com/MikiTwenty/Python/tree/main/Libraries/imgdt
+Author: MikiTwenty
+Author-email: terminetor.xx@gmail.com
+License: MIT
+Keywords: python,dataset,transformer,images
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Small package to setup a dataset of images
