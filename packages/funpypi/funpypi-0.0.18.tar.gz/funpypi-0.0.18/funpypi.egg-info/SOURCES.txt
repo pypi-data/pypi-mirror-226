@@ -1,0 +1,9 @@
+README.md
+setup.py
+funpypi/__init__.py
+funpypi/setuptool.py
+funpypi/version.py
+funpypi.egg-info/PKG-INFO
+funpypi.egg-info/SOURCES.txt
+funpypi.egg-info/dependency_links.txt
+funpypi.egg-info/top_level.txt
