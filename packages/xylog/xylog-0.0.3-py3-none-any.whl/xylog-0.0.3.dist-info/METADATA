@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: xylog
+Version: 0.0.3
+Summary: Easy to use python logging
+Author: lixianyang
+Author-email: lixianyang1223@foxmail.com
+Requires-Dist: colorlog
+
