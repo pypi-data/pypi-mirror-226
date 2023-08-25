@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zxing-tkinter-utils
+Version: 1.0.0
+Summary: tkinter实用工具
+License: MIT
+Description-Content-Type: text/markdown
+
+# 目标
+
+优化tkinter开发体验。
+
+# App
+
+一个窗口，有一些预设值：
+
+- 大小不可改变。
+- 窗口位置居中。
