@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pypi_api_installer/__init__.py
+pypi_api_installer.egg-info/PKG-INFO
+pypi_api_installer.egg-info/SOURCES.txt
+pypi_api_installer.egg-info/dependency_links.txt
+pypi_api_installer.egg-info/requires.txt
+pypi_api_installer.egg-info/top_level.txt
+pypi_api_installer/tools/__init__.py
+pypi_api_installer/tools/check_library_exist.py
+pypi_api_installer/tools/get_all_library_releases.py
+pypi_api_installer/tools/install_library.py
+pypi_api_installer/tools/uncompress_library.py
