@@ -1,0 +1,11 @@
+dataflows_aws/VERSION,sha256=tzgfrc-RDBSMSCmxQZquOQqvaFNuaBlL0P0X4M9j2_I,7
+dataflows_aws/__init__.py,sha256=SIHbqHH9cL5QRvr3MILSUpOfzZKk5R19onf-BpLjZeo,116
+dataflows_aws/config.py,sha256=UwNxbMkTWAgJDGltt-UPYfuw2OaAbLBMpXBtk36HUCo,153
+dataflows_aws/processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataflows_aws/processors/change_acl_on_s3.py,sha256=XxWkgnMyhMOUc7BPBu2y85x6n5uBtb7TVezDn1pJKkA,848
+dataflows_aws/processors/dump_to_s3.py,sha256=2Cu545TMKyB2LivaqkeFQPlWWVKzz1bBuwNozHlKQ6g,3887
+dataflows_aws-0.2.4.dist-info/LICENSE.md,sha256=cS_UdXfQ9_oNg_IwVRnSQ-aqixJK5WcSVs7uzUBcVAg,1082
+dataflows_aws-0.2.4.dist-info/METADATA,sha256=Cl-ChCbAw8GxMI-b9rFBnmvX5akGPo09I5h48RS20Q0,5449
+dataflows_aws-0.2.4.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+dataflows_aws-0.2.4.dist-info/top_level.txt,sha256=nHJMe9DkhREqeeejGudt0B58HwA63VBnMntTAcDbFo8,14
+dataflows_aws-0.2.4.dist-info/RECORD,,
