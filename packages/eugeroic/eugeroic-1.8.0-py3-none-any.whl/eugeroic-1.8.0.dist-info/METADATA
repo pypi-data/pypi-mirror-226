@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: eugeroic
+Version: 1.8.0
+Summary: Prevent your computer from sleeping
+Home-page: https://github.com/sixty-north/eugeroic
+Author: Sixty North AS
+Author-email: systems+eugeroic@sixty-north.com
+License: MIT License
+Keywords: macos sleep
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pyobjc-framework-Cocoa >=9.2 ; platform_system == "Darwin"
+Requires-Dist: dbus-next >=0.2.3 ; platform_system == "Linux"
+Requires-Dist: backports.strenum >=1.1.1 ; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: better-apidoc ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: hypothesis ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+# Eugeroic
+
+Tools in Python for keeping a computer display awake.
+
+eugeroic
+:  (_adjective_) keeping one awake. Of a wakefulness promoting agent.
+
+
+Sometimes you need to perform a task without the screensaver kicking in, or the display being
+suspended entirely. This may be because you are capturing the screen, or because you are running
+presentation software, or because you are running a long-running task that you want to monitor
+without interaction. This module provides a context manager and a decorator that can be used to
+keep the display awake while the block or function is running.
+
+## Installation
+
+    $ pip install eugeroic
+
+
+## Examples
+
+The `wakefulness` context manager keeps the computer awake while the block is running:
+
+    # Keep the computer awake while capturing the screen.
+
+    from eugeroic import wakefulness
+    
+    with wakefulness("Capture the screen"):
+        capture_screen(seconds=500)
+
+
+The `stay_awake` decorator keeps the computer awake while the decorated function is running:
+
+    # Keep the computer awake while capturing the screen.
+
+    from eugeroic import stay_awake
+    
+    @stay_awake("Capture the screen")
+    def capture_screen(seconds):
+        ...
+
+
+How it works
+============
+
+On Windows calls to `SetThreadExecutionState` are used.
+
+On macOS IOKit Power Management functions are used.
+
+On Linux, an attempt is made to communicate with the desktop environment through D-Bus messages.
+
+Note that while every attempt is made to keep the computer and display awake, there is no guarantee
+that the display will not be suspended. For example, on macOS, the display will be suspended if the
+user locks the screen. On Linux, the display will be suspended if the user switches to a different
+virtual terminal. On Windows, the display will be suspended if the user locks the screen or switches
+to a different user account.  In particular, on Linux, there is no guarantee that the required D-Bus
+messages will be handled by the desktop environment.  In practice though, _Eugeroic_ usually works.
+
+MIT License
+
+Copyright (c) 2023 Sixty North AS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
