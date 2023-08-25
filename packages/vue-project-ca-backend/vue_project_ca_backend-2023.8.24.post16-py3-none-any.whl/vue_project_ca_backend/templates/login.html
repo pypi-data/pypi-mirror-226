@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/vue.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <title>login</title>
+    <style>
+        #code-img {
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" id="login-form">
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">密&nbsp; &nbsp;码</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="verify-code">验证码</label>
+        <input type="text" name="code" id="verify-code">
+        <span id="verify-code-value"></span>
+        <br>
+        <input type="button" value="提交" id="button">
+    </form>
+</body>
+<script>
+    var code_token;
+
+    function GetVerifyCode(){
+        $.ajax({
+            url: "/verifycode",
+            type: "get",
+            async: true,
+        }).done(function (res) {
+            if (res.code === 200) {
+                code = res.data.code;
+                code_token = res.data.code_token;
+                strs = '<img id="code-img" src = "data:image/png;base64,' + code + '">';
+                $("#verify-code-value").html(strs);
+                $("#code-img").click(function(){
+                    GetVerifyCode();
+                });
+                return;
+            }
+            console.log("获取异常");
+        }).fail(function (res) {
+            console.log("获取验证码异常");
+        });
+    }
+
+    function loginSys(){
+        let data = $("#login-form").serialize();
+        data = data + "&sign-in=&code_token=" + code_token;
+        $.ajax({
+            url: "/sign-in",
+            type: "post",
+            data: data,
+        }).done(function (res) {
+            console.log(res);
+            if (res.code === 200) {
+                token = res.data;
+                localStorage.setItem("TOKEN", token)
+                location.href = "/";
+            }
+            console.log("获取异常");
+        }).fail(function (res) {
+            console.log("获取验证码异常");
+        });
+    }
+
+    $(function () {
+        GetVerifyCode();
+        $("#button").click(function(){loginSys()});
+    });
+</script>
+
+</html>

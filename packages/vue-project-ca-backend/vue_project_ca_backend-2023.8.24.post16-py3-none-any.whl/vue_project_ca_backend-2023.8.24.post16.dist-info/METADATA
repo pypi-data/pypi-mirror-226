@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: vue-project-ca-backend
+Version: 2023.8.24.post16
+Summary: ca授权
+Home-page: https://gitee.com/bean_jun/vue-project-ca-backend
+Author: Bean-jun
+Author-email: 1342104001@qq.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: Flask >=2.3.2
+Requires-Dist: Flask-Caching >=2.0.2
+Requires-Dist: Flask-Mail >=0.9.1
+Requires-Dist: Flask-RESTful >=0.3.9
+Requires-Dist: Flask-SQLAlchemy >=3.0.5
+Requires-Dist: marshmallow >=3.19.0
+Requires-Dist: Pillow >=9.5.0
+Requires-Dist: PyJWT >=2.6.0
+Requires-Dist: pycryptodome >=3.17
+Requires-Dist: redis >=4.5.4
+Requires-Dist: APScheduler >=3.10.1
+Requires-Dist: Flask-Limiter >=3.3.1
+
+<h1 style="text-align:center">项目CA授权</h1>
+
+
+## 一、使用说明
+
+1. 安装包
+
+    ```pip install vue-project-ca-backend```
+
+2. 创建main文件
+
+    新建一个main.py文件，写入以下内容：
+
+    ```python
+    import os
+    import sys
+
+    # 添加对python embeddable的支持
+    sys.path.insert(0, os.getcwd())
+
+    from vue_project_ca_backend import create_app
+
+
+    app = create_app("config")
+
+    if __name__ == "__main__":
+        # 注册定时器 不在app内部注册，避免多进程部署时任务重复执行的bug
+        from vue_project_ca_backend.base.plugins.timer_helper import scheduler
+        scheduler.start()
+
+        from config import PORT, HOST
+        app.run(HOST, PORT)
+    ```
+
+3. 创建config文件
+
+    新建一个config.py文件，写入以下内容
+
+    ```python
+    import os
+
+    # develop or release
+    MODE = "develop"
+
+    DEBUG = False
+    HOST = "0.0.0.0"
+    PORT = 7256
+
+    SECRET_KEY = "SECRETKEY"
+
+    # 数据库连接
+    SQLALCHEMY_DATABASE_URI = "sqlite:///project.db"
+
+    # redis连接
+    REDIS_URL = "redis://:@127.0.0.1:6379/0"
+
+    # 项目目录&文件上传目录
+    BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+    UPLOADS_FOLDER = os.path.join(BASE_PATH, "uploads")
+
+    # Email
+    MAIL_SERVER = "smtp.163.com"
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = "xxxx@163.com"
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD", "")
+    MAIL_RECV_LIST = ["1342104001@qq.com"]
+
+    # 日志
+    LOG_FOLDER = os.path.join(BASE_PATH, "logs")
+    LOG_MAX_BYTES = 1000 << 11
+    LOG_BACKUP_COUNT = 10
+    LOG_SEND_EMAIL = False
+
+    # 验证登录接口白名单
+    VALIDATE_LOGIN_INTERFACE_WHITE = ("health_check",
+                                    "verifycode",
+                                    "register",
+                                    "sign-in",
+                                    "sign-out")
+
+    # 限流
+    DEFAULT_LIMITS = ["1000/day", "60/hour"]
+
+    # 缓存白名单
+    CACHE_WHITE_LIST = ["static", "verifycode", "register", "sign-in", "sign-out", "userinfo"]
+    CACHE_TIME = 120  # 秒
+    ```
+
+4. 启动项目
+
+    脚本测试启动
+
+    ```python main.py```
+
+    搭配gunicorn启动
+
+    ```gunicorn -w 4 main:app```
+
+
+
