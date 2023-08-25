@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: pynibs
+Version: 0.2023.8
+Summary: A python toolbox to conduct non-invasive brain stimulation experiments (NIBS).
+Author: Konstantin Weise, Ole Numssen, Benjamin Kalloch
+Author-email: kweise@cbs.mpg.de
+License: GPL3
+Project-URL: Home, https://gitlab.gwdg.de/tms-localization/pynibs
+Project-URL: Docs, https://pynibs.readthedocs.io/
+Project-URL: Twitter, https://www.twitter.com/num_ole
+Project-URL: Download, https://pypi.org/project/pynibs/
+Keywords: NIBS,non-invasive brain stimulation,TMS,FEM
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dill
+Requires-Dist: h5py
+Requires-Dist: lmfit
+Requires-Dist: matplotlib
+Requires-Dist: numpy !=1.22.3,<1.24
+Requires-Dist: nibabel
+Requires-Dist: pandas
+Requires-Dist: pygpc
+Requires-Dist: pyyaml
+Requires-Dist: scipy
+Requires-Dist: scikit-learn <=1.0
+Requires-Dist: packaging
+Requires-Dist: lxml
+Requires-Dist: tqdm
+Requires-Dist: pillow
+Requires-Dist: fslpy
+Requires-Dist: mkl
+Requires-Dist: trimesh
+Requires-Dist: meshio
+Requires-Dist: tvb-gdist
+Requires-Dist: ortools <=9.1.9490
+Requires-Dist: seaborn
+Requires-Dist: icecream
+Requires-Dist: uncertainties
+Requires-Dist: asteval
+Requires-Dist: pytz
+Requires-Dist: scikit-image
+Requires-Dist: tables
+
+# pyNIBS
+Preprocessing, postprocessing, and analyses routines for non-invasive brain stimulation experiments.
+
+[![Latest Release](https://gitlab.gwdg.de/tms-localization/pynibs/-/badges/release.svg)](https://gitlab.gwdg.de/tms-localization/pynibs)
+[![Documentation](https://readthedocs.org/projects/pynibs/badge/)](https://pynibs.readthedocs.io/)
+[![pipeline status](https://gitlab.gwdg.de/tms-localization/pynibs/badges/master/pipeline.svg)](https://gitlab.gwdg.de/tms-localization/pynibs/commits/master)
+[![coverage report](https://gitlab.gwdg.de/tms-localization/pynibs/badges/master/coverage.svg)](https://tms-localization.pages.gwdg.de/pynibs)
+
+![](https://gitlab.gwdg.de/uploads/-/system/project/avatar/9753/Fig_4.png?width=128)
+
+`pyNIBS` provides the functions to allow **cortical mappings** with transcranial magnetic stimulation (TMS) via **functional analysis**. `pyNIBS` is developed to work with [SimNIBS](http://www.simnibs.org), i.e. SimNIBS' meshes and FEM results can directly be used.
+ Currently, [SimNIBS 3.2.6](https://github.com/simnibs/simnibs/releases/tag/v3.2.6) and [SimNIBS 4.0.1](https://github.com/simnibs/simnibs/releases/tag/v4.0.0) is supported.
+
+See the [documentation](https://pynibs.readthedocs.io/) for package details and our [protocol](https://doi.org/10.1038/s41596-022-00776-6) publication for a extensive usage examples. Free view only version of the paper: https://t.co/uv7CmVw6tp.
+
+## Installation
+Via PiP:
+
+``` bash
+pip install pynibs
+```
+
+Or clone the source repository and install via `setup.py`:
+
+``` bash
+git clone https://gitlab.gwdg.de/tms-localization/pynibs
+cd pynibs
+python setup.py develop
+```
+
+To import CED Signal EMG data use the `export to .mat` feature of Signal. 
+To read `.cfs` files exported with CED Signal you might need to [manually](HOW_TO_INSTALL_BIOSIG.txt) compile the libbiosig package.
+
+
+## Bugs
+For sure. Please open an [issue](https://gitlab.gwdg.de/tms-localization/pynibs/-/issues) or feel free to file a PR.
+
+
+## Citation
+Please cite _Numssen, O., Zier, A. L., Thielscher, A., Hartwigsen, G., Knösche, T. R., & Weise, K. (2021). Efficient high-resolution TMS mapping of the human motor cortex by nonlinear regression. NeuroImage, 245, 118654. doi:[10.1016/j.neuroimage.2021.118654](https://doi.org/10.1016/j.neuroimage.2021.118654)_ when using this toolbox in your research.
+
+
+## References
+  - Weise*, K., Numssen*, O., Thielscher, A., Hartwigsen, G., & Knösche, T. R. (2020). A novel approach to localize cortical TMS effects. *NeuroImage*, 209, 116486. doi: [10.1016/j.neuroimage.2019.116486](https://doi.org/10.1016/j.neuroimage.2019.116486)
+  - Numssen, O., Zier, A. L., Thielscher, A., Hartwigsen, G., Knösche, T. R., & Weise, K. (2021). Efficient high-resolution TMS mapping of the human motor cortex by nonlinear regression. *NeuroImage*, 245, 118654. doi:[10.1016/j.neuroimage.2021.118654](https://doi.org/10.1016/j.neuroimage.2021.118654)
+  - Weise*, K., Numssen*, O., Kalloch, B., Zier, A. L., Thielscher, A., Hartwigsen°, G., Knösche°, T. R. (2023). Precise transcranial magnetic stimulation motor-mapping. *Nature Protocols*. doi:[10.1038/s41596-022-00776-6](https://doi.org/10.1038/s41596-022-00776-6) 
+  - Jing, Y., Numssen, O., Weise, K., Kalloch, B., Buchberger, L., Haueisen, J., Hartwigsen, G., Knösche, T. (2023). Modeling the Effects of Transcranial Magnetic Stimulation on Spatial Attention. *bioRxiv*. doi: [10.1101/2023.01.11.523548](https://doi.org/10.1101/2023.01.11.523548)
