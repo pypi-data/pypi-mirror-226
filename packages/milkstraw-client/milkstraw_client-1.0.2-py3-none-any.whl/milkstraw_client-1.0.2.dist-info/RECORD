@@ -1,0 +1,10 @@
+milkstraw_client/__init__.py,sha256=AgxNpFTBFmfUBZ02PhPiz85qDUy073HyA0my9r266-w,475
+milkstraw_client/_api_client.py,sha256=730qNaKH9Li7UKrAL-jVcA9H1Xvhqecm2zWFMfmg3nQ,1969
+milkstraw_client/generated_data.py,sha256=EN55kIZh5Hidn7Gzamgz-i_0RdrO7tvQTxck7KuSQH4,4096
+milkstraw_client/model.py,sha256=KSHzXrsI5r3tlePgnjcwKCCL6cUacNsxe2vBySGLpBg,4032
+milkstraw_client/source_data.py,sha256=Xn5ML1DHmzx129ayxgMgOpBMUuzff6Z6YFVbLtpSbWA,3713
+milkstraw_client-1.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+milkstraw_client-1.0.2.dist-info/METADATA,sha256=wKqglggwLM0qkDLWchYEYAgeLP2B1EEqfxnJQvlkr3g,19235
+milkstraw_client-1.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+milkstraw_client-1.0.2.dist-info/top_level.txt,sha256=XPSjVdHlfXMMlxntX90Q7cabpbgxWjUfdg21sIIjlCA,17
+milkstraw_client-1.0.2.dist-info/RECORD,,
