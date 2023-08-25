@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: asfquart
+Version: 0.0.0
+Summary: ASF Quart Framework
+Author: ASF Infrastructure Team
+Author-email: users@infra.apache.org
+License: Apache Software License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+
+  # asfquart - a Quart framework for the ASF
+
+  This repository will house the future [Quart](https://github.com/pallets/quart/) framework for use 
+  within ASF web applications. Nothing much to see here yet...
+
+  
