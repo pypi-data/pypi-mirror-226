@@ -1,0 +1,14 @@
+numpy
+cvxpy
+pandas
+scipy
+pybedtools
+pysam
+pararead
+logmuse
+
+[mosek]
+mosek
+
+[ortools]
+ortools
