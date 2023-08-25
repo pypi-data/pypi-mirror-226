@@ -1,0 +1,9 @@
+README.md
+setup.py
+zxing_tkinter_utils/__init__.py
+zxing_tkinter_utils/core.py
+zxing_tkinter_utils/example.py
+zxing_tkinter_utils.egg-info/PKG-INFO
+zxing_tkinter_utils.egg-info/SOURCES.txt
+zxing_tkinter_utils.egg-info/dependency_links.txt
+zxing_tkinter_utils.egg-info/top_level.txt
