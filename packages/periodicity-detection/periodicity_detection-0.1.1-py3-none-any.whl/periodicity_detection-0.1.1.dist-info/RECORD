@@ -1,0 +1,17 @@
+periodicity_detection/__init__.py,sha256=Z-U0Telk5Rl2qBSNbDzBENWRwGkdsKM9s2HWPPjTjTI,3697
+periodicity_detection/__main__.py,sha256=DxzA_V6I14jUym9FVtjgYIc4t4PV5MXk3HTh5uklgVs,6556
+periodicity_detection/_version.py,sha256=TA9ao-BUvDxb0dBg4VIDqDuszeiHUxTTwMSHc_3drmw,27
+periodicity_detection/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+periodicity_detection/methods/__init__.py,sha256=voXOq7TJz5v1-E-2mmXGT-x1MdQqxg6sWuNFKj4rVZM,302
+periodicity_detection/methods/autocorrelation.py,sha256=mZ6yQyogcfVWd68uy3pmzhOfrkYbwS0mVrv8Ox7EiQA,1347
+periodicity_detection/methods/autoperiod.py,sha256=M4s7FHdSUQ2sm7DUra2ZF4_HJZSr3VEnMmm1HWHh2o4,17872
+periodicity_detection/methods/fft.py,sha256=cYasl8FrkzLfVoI297dTY_T4_ZPr1G9cZoFgLS47cfQ,1447
+periodicity_detection/methods/find_length.py,sha256=auBoSG2Crwwes5Vef5sG0hovT8zVOywkDYWKNAIMLJg,1699
+periodicity_detection/methods/findfrequency.py,sha256=hw9ehTcB9FgFQ9Q9ts-6FCSfFmP5j6AIE04S_Zoapok,10761
+periodicity_detection/methods/number_peaks.py,sha256=GzeJLRTwvDHM6MJ3HEtYic5JKyo7ha2trSlLgxklYLI,2746
+periodicity_detection-0.1.1.dist-info/LICENSE,sha256=e5M8mMv7AnzWuFC2o988poAgOEEKk27awpyPoYyYDYQ,1079
+periodicity_detection-0.1.1.dist-info/METADATA,sha256=g5w1IJTWy0WlbH_HcX0Y5nRWKVr9klfeF0eb3c_TxTM,6362
+periodicity_detection-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+periodicity_detection-0.1.1.dist-info/entry_points.txt,sha256=8fSXgobZRSJHpqYAz1Ouy0igaTkZDKhBMrVH2dXLBcU,67
+periodicity_detection-0.1.1.dist-info/top_level.txt,sha256=k_CiRDhv0zTKpMBmiciAxiWjJqUeGBrk6gYSa1e2SyI,22
+periodicity_detection-0.1.1.dist-info/RECORD,,
