@@ -1,0 +1,12 @@
+fexpress-0.0.4.dist-info/METADATA,sha256=KnidEnuwISo8QtrPA99WlXZroYhcFsoRf-4tdwovGdQ,5394
+fexpress-0.0.4.dist-info/WHEEL,sha256=AqVGELKyWWi5VRFuY2fsfQtkJ3pLyJIkacc0rC7ZCSA,94
+fexpress/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fexpress/prompt.py,sha256=yyVtfiJxgcWLpwVgzCkuOXJqnVMxfn48LcyEK6pPbcg,2487
+fexpress/sdk/event.py,sha256=wtYOgISw5l4ZBfLIxwOfMEQix4lxsZTjg8VqJOO8T_Q,7829
+fexpress/sdk/event_scope_config.py,sha256=p69IgziPwXJ6ykAQbK5nr9QDMrxbmuCGGEzhaknuoP4,1844
+fexpress/sdk/observation_dates_config.py,sha256=ID3oXqQo27cWrhEQYP8jngrf27-olciIAUUKd15xcbM,9111
+fexpress/sdk/query_config.py,sha256=SV5uwmrpHnXQt_0AWMOzbzja-6sYgWukhA-dSr6qNkY,1626
+fexpress/sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fexpress/__init__.py,sha256=YVRoh0GKvO7nFPfjTnAj5EiHMz-6ZhnBfMW_nO7ZePQ,2075
+fexpress/fexpress.cp38-win_amd64.pyd,sha256=FO-x6bqHPO5YGujF6vgyIYlgAUTkHiiSC6xfZBU6DBg,3994624
+fexpress-0.0.4.dist-info/RECORD,,
