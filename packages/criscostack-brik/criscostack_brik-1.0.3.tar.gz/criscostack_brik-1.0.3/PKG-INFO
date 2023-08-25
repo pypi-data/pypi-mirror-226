@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: criscostack-brik
+Version: 1.0.3
+Summary: CLI to manage Multi-tenant deployments for Criscostack apps
+Project-URL: Changelog, https://github.com/criscostack/brik/releases
+Project-URL: Documentation, https://criscostackframework.com/docs/user/en/brik
+Project-URL: Homepage, https://criscostack.io/brik
+Project-URL: Source, https://github.com/criscostack/brik
+Author-email: Criscostack Technologies Pvt Ltd <developers@criscostack.io>
+License-Expression: GPL-3.0-only
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: System :: Installation/Setup
+Requires-Python: >=3.7
+Requires-Dist: click>=7.0
+Requires-Dist: gitpython~=3.1.30
+Requires-Dist: honcho
+Requires-Dist: jinja2~=3.0.3
+Requires-Dist: python-crontab~=2.6.0
+Requires-Dist: requests
+Requires-Dist: semantic-version~=2.8.2
+Requires-Dist: setuptools>40.9.0
+Requires-Dist: tomli; python_version < '3.11'
+Description-Content-Type: text/markdown
+
+
+
+Brik is a command-line utility that helps you to install, update, and manage multiple sites for Criscostack/Criscoerp applications for development and production.
