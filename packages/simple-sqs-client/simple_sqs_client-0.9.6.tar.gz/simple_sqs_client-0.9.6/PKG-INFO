@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: simple_sqs_client
+Version: 0.9.6
+Summary: Very simple SQS Client
+Home-page: https://github.com/a-laurowski/simple_sqs_client
+Author: Aleksander Laurowski
+Author-email: aleksander.laurowski191@gmail.com
+Project-URL: Documentation, https://github.com/a-laurowski/simple_sqs_client/blob/main/README.md
+Project-URL: Bug Reports, https://github.com/a-laurowski/simple_sqs_client/issues
+Project-URL: Source Code, https://github.com/a-laurowski/simple_sqs_client
+Keywords: simple_sqs_client
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Very Sipmle SQS Client
+
+## Requirements
+- Python 3+
+## Installing
+`pip install simple-sqs-client`
+
+## Usage
+### SQSClientBuilder
+
+You can use SQSClientBuilder which is more flexible approach and allows you to fill the connection parameters in different moment of code execution if necessary.
+Just keep the variable holding the builder in the scope
+``` 
+with SQSClientBuilder() \
+            .with_region(AWS_SQS_REGION) \
+            .with_queue_url(AWS_SQS_QUEUE_REACT_URL) \
+            .with_aws_credentials(
+        aws_access_key_id=AWS_SQS_ACCESS_KEY_ID,
+        aws_secret_access_key=AWS_SQS_SECRET_ACCESS_KEY
+    ).build() as sqs_client:
+    event = {message: "hello world"}
+    sqs_client.send_message(body=json_util.dumps(event))
+```
+
+### Direct
+You can also create Client using its constructor
+```
+  SQSClient(region_name, aws_access_key_id, aws_secret_access_key, queue_url)
+```
