@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: AutoReqs
+Version: 0.1.3
+Summary: A better way to get the requirements.txt automatically
+Author: Jelte2357
+Author-email: Jelte.dijkmans@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# `AutoRequirements`: A Python package for making requirements.txt automatically
+
+I saw there was not a singular good way to automatically make a correct requirements.txt that wouldnt fail, so I made it myself, while restricting myself to only use the standard included packages.
+
+
+
+The code is not that well written, but it is fast enough.
+
+
+
+Run the program in the folder of your program with 
+
+```shell
+AutoRequirements
+```
+
+or 
+
+    AutoReqs
+
+
