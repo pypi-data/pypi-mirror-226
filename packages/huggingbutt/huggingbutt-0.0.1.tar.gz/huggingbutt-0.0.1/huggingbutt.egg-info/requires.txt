@@ -1,0 +1,6 @@
+protobuf==3.20
+tqdm
+requests
+stable_baselines3==2.1.0
+mlagents-envs>=0.30.0
+toml
