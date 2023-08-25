@@ -1,0 +1,10 @@
+WqUtils/Utils.py,sha256=5rCtSyMBSETtUzG1qdK5rBzylKmMFIvq7M2AXhbwubY,5333
+WqUtils/__init__.py,sha256=xjLvC1XO31tSqFeyhyDDWC4_L9pxf0x-1pv2mdcVKek,334
+WqUtils/DB_Utils/ExecPgSql.py,sha256=LIFANIrbGJrZrFF52JdMMItAZdDULeb9WfVDy7KK0u8,8422
+WqUtils/DB_Utils/SqlServer_DB.py,sha256=SlCP7Mx5VmI-AbchSVcDc1W4x3vSZJouryYTJC0OkxE,6606
+WqUtils/DB_Utils/__init__.py,sha256=U1spx2Yz0uxJA1A_7-Yb-ZKoy47wJM1VZEuZ4vIB00M,267
+WqUtils/DB_Utils/db_config.toml,sha256=NhgnJTJJEaSmlOCElG7c-DxKKy_vTAuqNwDHZtCx3Lk,54
+WqUtils-0.1.9.dist-info/METADATA,sha256=8bq0TkWMNwmbV6TTTeFBQ6twDzD0Y-yhoC_grWdbXBQ,355
+WqUtils-0.1.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+WqUtils-0.1.9.dist-info/top_level.txt,sha256=XpUtbHzxrhqE5cOFUxWQrZAlMz2b2ww_pX2dKJrr9cs,8
+WqUtils-0.1.9.dist-info/RECORD,,
