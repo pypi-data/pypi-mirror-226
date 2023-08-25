@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+2.0.15
+------
+
+* handle empty trades df (#59)
