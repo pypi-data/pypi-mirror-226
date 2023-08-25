@@ -1,0 +1,14 @@
+- project:
+    templates:
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+      - check-requirements
+    check:
+      jobs:
+        - tempest-integrated-networking
+        - neutron-tempest-plugin-dynamic-routing:
+            voting: false
+    gate:
+      jobs:
+        - tempest-integrated-networking
