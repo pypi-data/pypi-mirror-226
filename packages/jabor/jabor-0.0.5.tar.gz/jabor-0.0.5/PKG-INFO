@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: jabor
+Version: 0.0.5
+Summary: a collective utilities for python
+Home-page: https://github.com/jaborsm/jabor
+Author: Jabor AlMusalam
+Author-email: jabor@jabor.me
+License: MIT License
+Project-URL: Bug Tracker, https://github.com/jaborsm/jabor/issues
+Project-URL: Source Code, https://github.com/jaborsm/jabor
+Keywords: python utils
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# jabor
+
+Extra utilities tools to assist developers in django projects
+
+
+## Installation
+
+Install jabor
+
+```bash
+  pip install jabor
+```
+    
+## Support
+
+For support, email jabor@jabor.me
+
+
+## Usage/Examples
+
+```python
+from jabor.utils import dateuntill
+
+dateuntill(2020-08-01)
+> 6 days
+```
+
+
+
