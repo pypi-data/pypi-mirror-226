@@ -1,0 +1,3 @@
+[console_scripts]
+AutoReqs = AutoRequirements.AutoRequirements:main
+AutoRequirements = AutoRequirements.AutoRequirements:main
