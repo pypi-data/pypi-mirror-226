@@ -1,0 +1,11 @@
+AutoRequirements/AutoRequirements.py,sha256=KZ4xL9aDrJswBJw_RDz5uaYeog3pkiGtwwbmn160VRc,5655
+AutoRequirements/__init__.py,sha256=h1RzO47hft819Hbx_gTd4EUpPY8z0VQb7ta_jvxtoZ4,33
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=kvuTjOws-A_RypGtMFxlrmCMZZWMC5-IXr1keesJSuc,232
+tests/test_AutoRequirements.py,sha256=6xP0abVDVEk9NdOFWCOz14yMhRuEXbnKAAvq5vLkl7U,652
+AutoReqs-0.1.3.dist-info/LICENSE,sha256=WCt3ek8U96eCTSmnx63GbQWIQZ52m73Lvsb-BaeQSkY,1087
+AutoReqs-0.1.3.dist-info/METADATA,sha256=2bw1d7hUj6bIRigOUWpIxqmhs-iB2oz7Oyy6VrFXHY4,1257
+AutoReqs-0.1.3.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+AutoReqs-0.1.3.dist-info/entry_points.txt,sha256=G7pJw_ToDivqQBA0rZhLC29I4fEdzMK4fpcnAzn5eQE,126
+AutoReqs-0.1.3.dist-info/top_level.txt,sha256=xPMHwpRBXQPemvFsXpJ3CenL8ZCLe1FEYyuX6APe9Fk,23
+AutoReqs-0.1.3.dist-info/RECORD,,
