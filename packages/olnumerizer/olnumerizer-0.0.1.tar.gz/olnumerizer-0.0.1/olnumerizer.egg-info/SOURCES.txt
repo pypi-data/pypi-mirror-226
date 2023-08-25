@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+number_to_olchiki/__init__.py
+number_to_olchiki/main.py
+number_to_olchiki/olchiki_words.py
+number_to_olchiki/utils.py
+olnumerizer.egg-info/PKG-INFO
+olnumerizer.egg-info/SOURCES.txt
+olnumerizer.egg-info/dependency_links.txt
+olnumerizer.egg-info/top_level.txt
