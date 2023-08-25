@@ -1,0 +1,5 @@
+chily-0.8.0.dist-info/METADATA,sha256=Q90y-I87rxNg0i6iYfNdqCfQBNu4PQrk42hIHd8mnZs,5518
+chily-0.8.0.dist-info/WHEEL,sha256=kk-ZyjrR_ZyLMxjQapf831MWYeeTUlcU4zc-qZwNxPI,125
+chily/__init__.py,sha256=IHgXeyQAiRo9B3oOnajw3XcyFjb58iTScLZ4d17Ld0c,103
+chily/chily.cpython-38-s390x-linux-gnu.so,sha256=Xmo5yuNhxcjRzKOluuLKV2LfMm5Ah-sanowNhBMVPFY,2896112
+chily-0.8.0.dist-info/RECORD,,
