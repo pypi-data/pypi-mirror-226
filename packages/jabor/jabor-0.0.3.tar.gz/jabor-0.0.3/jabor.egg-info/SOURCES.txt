@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jabor.egg-info/PKG-INFO
+jabor.egg-info/SOURCES.txt
+jabor.egg-info/dependency_links.txt
+jabor.egg-info/top_level.txt
