@@ -1,0 +1,4 @@
+[console_scripts]
+dran = _cli:main
+dran-auto = _auto:main
+dran-gui = _gui:main
