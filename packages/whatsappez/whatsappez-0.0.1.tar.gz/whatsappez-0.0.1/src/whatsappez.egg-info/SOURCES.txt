@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/whatsappez.py
+src/whatsappez.egg-info/PKG-INFO
+src/whatsappez.egg-info/SOURCES.txt
+src/whatsappez.egg-info/dependency_links.txt
+src/whatsappez.egg-info/requires.txt
+src/whatsappez.egg-info/top_level.txt
