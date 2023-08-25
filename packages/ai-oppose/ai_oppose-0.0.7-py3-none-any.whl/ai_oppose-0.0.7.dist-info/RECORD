@@ -1,0 +1,10 @@
+ai_oppose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_oppose/functions.py,sha256=mSdCDyAaf-rTnH7pV1ifkgFU4o7kwlGjN5MUGu--TCo,13988
+ai_oppose/test.py,sha256=hG-lRaHDjeKWP1nBiLWKsfxhMv-33jVI4raOOevDgOQ,255
+ai_oppose/data/egodepletion_literature.csv,sha256=YVyoqEYUxcLI8CcdgZHTebZ7P44u7gag6zJrPvp0qCw,133084
+ai_oppose/data/humorXdating_literature.csv,sha256=g3q0SHHhY--vm78MRF2ba9ZK-x89symlDZDrYZsEGVk,148429
+ai_oppose/data/powerpose_literature.csv,sha256=JeiPePVgLgYAJs7Jfh-Bn4FPwXwk9ISBG5ijrZTq0OE,134550
+ai_oppose-0.0.7.dist-info/METADATA,sha256=DR7ACJpY-liVrEV86pMr0iiz6XQTTnO1naZ9yH5pq4Q,775
+ai_oppose-0.0.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ai_oppose-0.0.7.dist-info/top_level.txt,sha256=iybj9LZRhFT3t6i0QYL3kz_TSAy_Zp_OhP9Nq_oVyRw,10
+ai_oppose-0.0.7.dist-info/RECORD,,
