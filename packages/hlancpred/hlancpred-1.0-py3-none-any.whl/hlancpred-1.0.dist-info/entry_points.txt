@@ -1,0 +1,2 @@
+[console_scripts]
+hlancpred = hlancpred.python_scripts.hlancpred:main
