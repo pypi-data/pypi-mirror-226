@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/oltea_dummy_pack/__init__.py
+src/oltea_dummy_pack/__main__.py
+src/oltea_dummy_pack/mama.py
+src/oltea_dummy_pack/rares.py
+src/oltea_dummy_pack.egg-info/PKG-INFO
+src/oltea_dummy_pack.egg-info/SOURCES.txt
+src/oltea_dummy_pack.egg-info/dependency_links.txt
+src/oltea_dummy_pack.egg-info/top_level.txt
+tests/test_oltea.py
+tests/test_rares.py
