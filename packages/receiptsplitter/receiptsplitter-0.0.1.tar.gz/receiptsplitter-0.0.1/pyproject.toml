@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "receiptsplitter"
+version = "0.0.1"
+authors = [
+  { name="Elli Greaves" },
+]
+license = { text = "BSD-3-Clause-Clear license" }
+description = "App for splitting the cost on a receipt"
+readme = "README.md"
+requires-python = ">=3.10,<4"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+receiptsplitter = "receiptsplitter:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Grvs44/receiptsplitter"

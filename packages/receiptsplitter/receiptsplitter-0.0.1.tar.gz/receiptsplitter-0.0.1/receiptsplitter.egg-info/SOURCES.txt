@@ -1,0 +1,8 @@
+LICENSE
+pyproject.toml
+receiptsplitter.py
+receiptsplitter.egg-info/PKG-INFO
+receiptsplitter.egg-info/SOURCES.txt
+receiptsplitter.egg-info/dependency_links.txt
+receiptsplitter.egg-info/entry_points.txt
+receiptsplitter.egg-info/top_level.txt
