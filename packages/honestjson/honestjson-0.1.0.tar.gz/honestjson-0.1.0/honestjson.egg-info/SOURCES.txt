@@ -1,0 +1,8 @@
+README.md
+setup.py
+honestjson/__init__.py
+honestjson/main.py
+honestjson.egg-info/PKG-INFO
+honestjson.egg-info/SOURCES.txt
+honestjson.egg-info/dependency_links.txt
+honestjson.egg-info/top_level.txt
