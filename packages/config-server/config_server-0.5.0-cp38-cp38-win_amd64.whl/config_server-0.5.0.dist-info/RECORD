@@ -1,0 +1,7 @@
+config_server.cp38-win_amd64.pyd,sha256=klcBQtAcKunIzssRufsZe4aOfcwF2-2Tu21HwFp6ElE,481792
+config_server.pyi,sha256=T8QrXZLP1xMx_iqKPpx1fjsVHU4ZfiFEeqg_-PWKV3g,1115
+config_server/static/index.html,sha256=vCoCZj1uG2hz9jXg5P_WSW5PkigbIJOl4XtGSBXfm4Q,1992602
+config_server-0.5.0.dist-info/METADATA,sha256=hUq_2_INSy-uDveT5yVs3i51dF52mpWNjUCiZDa_LKg,13232
+config_server-0.5.0.dist-info/WHEEL,sha256=FtcSLSAeXoeXPlduBTFr-S8eHHAZGYE19fuDFnzXa6s,95
+config_server-0.5.0.dist-info/top_level.txt,sha256=bLRSAzsmh78QVIGcUYvkkBssHkk27ww8eRQCVW4neGg,14
+config_server-0.5.0.dist-info/RECORD,,
