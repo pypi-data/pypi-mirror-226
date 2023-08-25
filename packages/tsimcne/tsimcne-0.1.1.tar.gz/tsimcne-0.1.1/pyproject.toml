@@ -1,0 +1,31 @@
+[project]
+name = "tsimcne"
+version = "0.1.1"
+description = "Visualization tool for unsupervised image visualization (ICLR 2023)"
+authors = [
+    { name = "Jan Niklas Böhm", email = "jan-niklas.boehm@uni-tuebingen.de" },
+]
+dependencies = [
+    "torch",
+    "torchvision",
+    "lightning",
+    "numpy",
+    "pillow",
+]
+requires-python = ">=3.9"
+readme = "readme.md"
+
+[project.license]
+text = "EUPL"
+
+[project.urls]
+homepage = "https://github.com/berenslab/t-simcne"
+
+[tool.pdm.build]
+package-dir = "tsimcne"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
