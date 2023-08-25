@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pypi_api_installer
+Version: 1.1
+Summary: A python library with a set of tools for installing packages from pypi dynamically
+Home-page: https://github.com/SKbarbon/pypi_api_installer
+Author: SKbarbon
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pypi_api_installer
+A python library with a set of tools for installing python packages from [PYPI](https://pypi.org/) dynamicly and without using `pip` or any other shell tools.
+
+## installation ⬇️
+Use this `pip` command to install the package:
+```zsh
+pip install pypi_api_installer
+```
+
+# usage 🙌
