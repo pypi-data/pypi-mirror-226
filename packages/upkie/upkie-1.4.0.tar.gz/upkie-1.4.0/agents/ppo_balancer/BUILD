@@ -1,0 +1,89 @@
+# -*- python -*-
+#
+# Copyright 2022 Stéphane Caron
+
+load("//tools/lint:lint.bzl", "add_lint_tests")
+load("@pip_upkie//:requirements.bzl", "requirement")
+
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "config",
+    srcs = glob(["*.gin"]),
+)
+
+py_library(
+    name = "rewards",
+    srcs = [
+        "standing_reward.py",
+    ],
+    deps = [
+        "//upkie/envs",
+    ] + select({
+        # Selecting the right CPU architecture for the Raspberry Pi is
+        # currently a tough nut to crack for Bazel. We only enable compiled
+        # dependencies on the host side for now.
+        # Followed in: https://github.com/tasts-robots/upkie/issues/1
+        "//:pi32_config": [],
+        "//:pi64_config": [],
+        "//conditions:default": [
+            requirement("numpy"),
+        ],
+    }),
+)
+
+py_library(
+    name = "settings",
+    srcs = ["settings.py"],
+    data = [
+        ":config",
+    ],
+    deps = [
+        requirement("gin-config"),
+    ],
+)
+
+py_library(
+    name = "utils",
+    srcs = ["utils.py"],
+)
+
+py_binary(
+    name = "ppo_balancer",
+    srcs = ["main.py"],
+    main = "main.py",
+    data = glob([
+        "policies/*.zip",
+    ]),
+    deps = [
+        "//upkie/envs",
+        ":rewards",  # needed by gin config
+        ":settings",
+        "@mpacklog//:python",
+        requirement("gin-config"),
+        requirement("loop_rate_limiters"),
+        requirement("stable_baselines3"),
+    ],
+)
+
+py_binary(
+    name = "train",
+    srcs = ["train.py"],
+    data = [
+        "//spines:bullet",
+    ],
+    deps = [
+        "//upkie/envs",
+        "//upkie/utils:spdlog",
+        ":rewards",
+        ":settings",
+        ":utils",
+        "@mpacklog//:python",
+        "@rules_python//python/runfiles",
+        requirement("gin-config"),
+        requirement("stable_baselines3"),
+        requirement("torch"),
+    ],
+)
+
+add_lint_tests()

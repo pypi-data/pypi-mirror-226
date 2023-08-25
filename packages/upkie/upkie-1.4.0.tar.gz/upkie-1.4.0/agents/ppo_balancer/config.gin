@@ -1,0 +1,43 @@
+# -*- python -*-
+#
+# Copyright 2023 Inria
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import settings
+import standing_reward
+
+Settings.agent_frequency = 200
+Settings.batch_size = 64
+Settings.clip_range = 0.2
+Settings.clip_range_vf = None
+Settings.effective_time_horizon = 0.5
+Settings.ent_coef = 0.0
+Settings.gae_lambda = 0.95
+Settings.learning_rate = 3e-4
+Settings.max_episode_duration = 10.0
+Settings.max_grad_norm = 0.5
+Settings.n_epochs = 10
+Settings.n_steps = 2048
+Settings.sde_sample_freq = -1
+Settings.spine_frequency = 1000
+Settings.target_kl = None
+Settings.total_timesteps = 5e5
+Settings.use_sde = False
+Settings.vf_coef  = 0.5
+
+StandingReward.lookahead_duration = 0.2
+StandingReward.max_pitch = 1.5707963267948966
+StandingReward.max_position = 0.5
+StandingReward.pitch_weight = 1.0
+StandingReward.position_weight = 1.0
