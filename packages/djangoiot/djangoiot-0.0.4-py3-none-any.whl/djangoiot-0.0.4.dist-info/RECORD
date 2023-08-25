@@ -1,0 +1,13 @@
+djangoiot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoiot/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+djangoiot/apps.py,sha256=j55XxEbIEVPhyUESm2Qt3guCi5jFuKKk0iICxow06h8,912
+djangoiot/goiotbackend,sha256=fTYdgSg5OYschyull-L1cTv-PNFD64on9wX4dwFNmF0,8434530
+djangoiot/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+djangoiot/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+djangoiot/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+djangoiot/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoiot-0.0.4.dist-info/LICENSE.txt,sha256=DvY3r0gOJfr4ZdC3U9IIlwvMP6Uqh3jdcQqdJk7lM-Q,1049
+djangoiot-0.0.4.dist-info/METADATA,sha256=R3zoRte7unc0rPeGBfbEk0DCN9x6-5NnQ0-QCPTs-cI,2104
+djangoiot-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+djangoiot-0.0.4.dist-info/top_level.txt,sha256=ytaA1krtD66XcSuK8noQ6jDMMV70P1Zig6oqWIY9Cqs,10
+djangoiot-0.0.4.dist-info/RECORD,,
