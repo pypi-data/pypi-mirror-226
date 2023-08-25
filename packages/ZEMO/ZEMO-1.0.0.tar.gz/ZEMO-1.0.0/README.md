@@ -1,0 +1,66 @@
+# Zernike moments: Digital images
+
+The Zernike moment's package program is developed for square digital images mimicking some part of Matlab code provided by Christian Wolf. Zernike moments are unique due to orthogonality and a complete set of Zernike polynomials. Zernike moments are used in image analysis to characterize the shape and structure of objects. The following articles and their references give a detailed description of the Zernike polynomials and Zernike moments.
+
+## Description
+
+The code includes the following functions:
+
+**zernike_order_list**: Generates a list of Zernike polynomial orders.
+
+**robust_fact_quot**: Calculates the robust factor quotient between two lists of values.
+
+**zernike_bf**: Generates Zernike basis functions for a given size and order.
+
+**zernike_mom**: Calculates the Zernike moments of an input image using precomputed Zernike basis functions.
+
+**zernike_rec**: Reconstructs an image from Zernike moments(Inverse trasformation).
+
+## Installation
+Install the ZEMO library using pip:
+```bash
+pip install ZEMO
+```
+## Usage
+
+1. The standard way to import ZEMO library:
+```python
+import ZEMO 
+from ZEMO import zemo
+```
+2. Generates Zernike basis functions for a given `size`, `order`, and optional `withneg` parameter for a **square images** of size **SZ**.
+   If withneg is 1, then the basis functions with negative repetition are included.
+```python
+ZBFSTR = zemo.zernike_bf(SZ,order,withneg)
+```
+
+3. Calculates Zernike moments of an input image (images) using precomputed Zernike basis functions. **I** is the input image.
+```python
+Z = zemo.zernike_mom(I,ZBFSTR)
+```
+
+4. Reconstructs an image from Zernike moments using precomputed Zernike basis functions.
+```python
+I = zemo.zernike_rec(Z,SZ,ZBFSTR)
+```
+
+Here is an example of face (Hossein Safari) image:
+```python
+from ZEMO import dataset
+dataset.Face_Data()
+```
+Due to the slightly large size of the "dataset", the command "dataset.Face_Data()" will take a few moments.
+
+You can see some examples of the ZEMO code in https://github.com/hmddev1/ZEMO
+
+## How to Cite
+[Raboonik, A., Safari, H., Alipour, N., & Wheatland, M. S. 2017, ApJ, 834, 11](https://iopscience.iop.org/article/10.3847/1538-4357/834/1/11/meta)
+
+[Alipour, N., Mohammadi, F., Safari, H. 2019, ApJS, 243, 20](https://iopscience.iop.org/article/10.3847/1538-4365/ab289b/meta)
+
+## Authors
+
+[Hossein Safari](https://scholar.google.com/citations?user=nCc1FV8AAAAJ&hl=en) (https://orcid.org/0000-0003-2326-3201), [Nasibe Alipour](https://scholar.google.com/citations?user=PfzZOI0AAAAJ&hl=en) (https://orcid.org/0000-0003-3643-5121), [Hamed Ghaderi](https://github.com/hmddev1) (https://orcid.org/0009-0005-7934-2752), [Pardis Garavand](https://www.linkedin.com/in/pardis-garavand-25b30527b/)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

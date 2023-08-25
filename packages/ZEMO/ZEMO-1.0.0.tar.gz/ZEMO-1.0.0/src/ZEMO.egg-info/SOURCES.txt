@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ZEMO/__init__.py
+src/ZEMO/dataset.py
+src/ZEMO/zemo.py
+src/ZEMO.egg-info/PKG-INFO
+src/ZEMO.egg-info/SOURCES.txt
+src/ZEMO.egg-info/dependency_links.txt
+src/ZEMO.egg-info/top_level.txt
