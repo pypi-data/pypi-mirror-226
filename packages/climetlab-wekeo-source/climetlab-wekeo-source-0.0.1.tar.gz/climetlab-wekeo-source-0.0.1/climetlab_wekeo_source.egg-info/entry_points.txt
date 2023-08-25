@@ -1,0 +1,2 @@
+[climetlab.sources]
+wekeo = climetlab_wekeo_source:WekeoSource

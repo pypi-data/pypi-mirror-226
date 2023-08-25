@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: climetlab-wekeo-source
+Version: 0.0.1
+Summary: WEkEO external source plugin
+Home-page: https://github.com/ecmwf/climetlab-wekeo-source
+Author: Germano Guerrini
+Author-email: germano.guerrini@gmail.com
+License: MIT License
+Keywords: meteorology
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+# climetlab-wekeo-source
+
+This is a data source plugin for CliMetLab. It allows accessing data from the WEkEO HDA API.
+
+# Installing
+
+``` pip install climetlab-wekeo-source```
+
+# Usage
+
+See https://climetlab.readthedocs.io/en/latest/contributing/sources.html
