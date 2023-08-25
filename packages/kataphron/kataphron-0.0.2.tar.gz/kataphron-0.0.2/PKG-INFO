@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kataphron
+Version: 0.0.2
+Summary: Kataphron Python package
+Author: Bocianski
+Author-email: szyper999@gmail.com
+Keywords: python,kataphron,warhammer40k
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+My first Python package about Cult Mechanicum

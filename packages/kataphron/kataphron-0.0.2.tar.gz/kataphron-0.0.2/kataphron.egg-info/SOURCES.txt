@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+kataphron/__init__.py
+kataphron/info.py
+kataphron.egg-info/PKG-INFO
+kataphron.egg-info/SOURCES.txt
+kataphron.egg-info/dependency_links.txt
+kataphron.egg-info/top_level.txt
+tests/__init__.py
+tests/test_info.py
