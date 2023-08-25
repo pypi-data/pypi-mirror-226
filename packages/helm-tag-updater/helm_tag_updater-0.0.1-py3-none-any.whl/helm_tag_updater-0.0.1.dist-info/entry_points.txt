@@ -1,0 +1,3 @@
+[console_scripts]
+APPLICATION-NAME=helm_tag_updater:main
+
